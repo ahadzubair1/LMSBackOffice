@@ -32,12 +32,12 @@ namespace LMSBackOfficeWebApplication
 
         public void ShowBonusTypes()
         {
-            //dtBonusTypes = LMSBackOfficeDAL.Setup_DataAccess.GetAllBonusTypes();
-            // if (dtBonusTypes.Rows.Count > 0)
-            //{
-            //    gvwBonusType.DataSource = dtBonusTypes;
-            //    gvwBonusType.DataBind();
-            //}
+            dtBonusTypes = LMSBackOfficeDAL.Setup_DataAccess.GetAllBonusTypes();
+            if (dtBonusTypes.Rows.Count > 0)
+            {
+                gvwBonusType.DataSource = dtBonusTypes;
+                gvwBonusType.DataBind();
+            }
 
 
         }

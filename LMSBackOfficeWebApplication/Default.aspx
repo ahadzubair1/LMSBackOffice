@@ -1850,9 +1850,10 @@
                                 </div>
                             </div>
                         </li>
-                        <asp:GridView ID="gvwBonusType" runat="server"></asp:GridView>
+                       
                         <li class="list-group-item">
                             <div class="d-grid">
+                                 <asp:GridView ID="gvwBonusType" runat="server"></asp:GridView>
                                 <button class="btn btn-light-danger" id="layoutreset">Reset Layout</button>
                             </div>
                         </li>
