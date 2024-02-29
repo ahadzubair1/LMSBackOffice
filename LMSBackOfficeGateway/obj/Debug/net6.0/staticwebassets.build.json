@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XqY1CIE2JY5YuX+5SZaKmjA2WX0KX+uplsdXOyDXA10=",
+  "Source": "LMSBackOfficeGateway",
+  "BasePath": "_content/LMSBackOfficeGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
