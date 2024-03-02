@@ -152,7 +152,7 @@ namespace LMSBackofficeDAL
 				SqlConnection con = null;
 				try
 				{
-                    con = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=sa;Password=capslock2019;Connect Timeout=30000");
+                    con = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000");
                     //con = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ToString());
 					SqlCommand cmd = new SqlCommand("USP_InsertVisitorAnalytics", con);
 					cmd.CommandType = CommandType.StoredProcedure;
