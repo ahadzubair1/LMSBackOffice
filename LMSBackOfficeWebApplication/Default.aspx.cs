@@ -40,7 +40,7 @@ namespace LMSBackOfficeWebApplication
             }
 
 
-            LMSBackofficeDAL.UtilMethods.SendEmail("Ahad Zubair", "ahadzubair@gmail.com", "0501271NNNN");
+            //LMSBackofficeDAL.UtilMethods.SendEmail("Ahad Zubair", "ahadzubair@gmail.com", "0501271NNNN");
 
         }
     }
