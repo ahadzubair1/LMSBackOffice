@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMSBackOfficeWebApplication.SiteMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMSBackOfficeWebApplication.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -76,6 +76,9 @@
                                     <input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . ." />
                                 </form>
                             </div>
+                        </li>
+                        <li class="pc-h-item pc-sidebar-collapse">
+                            <a class="btn btn-primary" role="button" href="#">Top Up</a>
                         </li>
                     </ul>
                 </div>
