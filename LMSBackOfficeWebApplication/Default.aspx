@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LMSBackOfficeWebApplication._Default" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LMSBackOfficeWebApplication._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -57,21 +57,25 @@
                         <li class="pc-item pc-caption">
                             <label>Navigation</label>
                         </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
+                        <li class="pc-item">
+                            <a href="" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-status-up"></use>
                                     </svg>
                                 </span>
                                 <span class="pc-mtext">Dashboard</span>
-                                <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                                <span class="pc-badge">2</span>
                             </a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="index.html">Default</a></li>
-                                <li class="pc-item"><a class="pc-link" href="analytics.html">Analytics</a></li>
-                            </ul>
+                        </li>
+                        <li class="pc-item">
+                            <a href="" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-document-filter"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">KYC</span>
+                            </a>
                         </li>
 
                         <li class="pc-item pc-hasmenu">
@@ -1850,10 +1854,10 @@
                                 </div>
                             </div>
                         </li>
-                       
+
                         <li class="list-group-item">
                             <div class="d-grid">
-                                 <asp:GridView ID="gvwBonusType" runat="server"></asp:GridView>
+                                <asp:GridView ID="gvwBonusType" runat="server"></asp:GridView>
                                 <button class="btn btn-light-danger" id="layoutreset">Reset Layout</button>
                             </div>
                         </li>
