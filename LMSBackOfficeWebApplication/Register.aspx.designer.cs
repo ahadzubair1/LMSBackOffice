@@ -15,13 +15,13 @@ namespace LMSBackOfficeWebApplication
     {
 
         /// <summary>
-        /// successMessage1 control.
+        /// ResponseMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl successMessage1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResponseMessage;
 
         /// <summary>
         /// myForm control.
@@ -102,16 +102,7 @@ namespace LMSBackOfficeWebApplication
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect countries;
-
-        /// <summary>
-        /// successMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden successMessage;
+        protected global::System.Web.UI.WebControls.DropDownList countries;
 
         /// <summary>
         /// btnSubmit control.

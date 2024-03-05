@@ -8,6 +8,11 @@
         
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="./Content/css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <!-- Include Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
         <link href="./Content/css/icons.css" rel="stylesheet" />
  <link href="./Content/css/typography.css" rel="stylesheet" />
     </head>
@@ -71,9 +76,9 @@
         </div>
       </div>
       <div class="col-md-4">
-          <div id="successMessage1" runat="server" style="display: none;">
-                <h3 style="color:#e012ee">Successfully registered!</h3>
-            </div>
+         <div class="col-md-12">
+             <h4  id="ResponseMessage" runat="server" style="display: none;"></h4>
+         </div>
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">
             <label for="" class="text-white">Full Name</label>
@@ -105,23 +110,9 @@
           </div>
           <div class="mb-3">
             <label for="" class="text-white">Country</label>
-            <select id="countries" name="countries" class="form-control" runat="server">
-              <option value="">Select a country</option>
-              <option value="Afghanistan">Afghanistan</option>
-              <option value="Albania">Albania</option>
-              <option value="Algeria">Algeria</option>
-              <option value="Andorra">Andorra</option>
-              <option value="Angola">Angola</option>
-              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-              <option value="Argentina">Argentina</option>
-              <option value="Armenia">Armenia</option>
-              <option value="Aruba">Aruba</option>
-              <option value="Australia">Australia</option>
-              <option value="Austria">Austria</option>
-              <option value="Azerbaijan">Azerbaijan</option>
-            </select>
+              <asp:DropDownList id="countries" name="countries" class="form-control"  runat="server"></asp:DropDownList>
+
           </div>
-            <input type="hidden" id="successMessage" value="false" runat="server" />
   <div class="mb-3">
       <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Register" id="btnSubmit" runat="server" onserverclick="btnSubmit_Click" />
   </div>
@@ -134,16 +125,7 @@
   </div>
   <span class="arrow-down vp-gradient"><i class="icon-arrow-1"></i></span>
 </section>
-     <script>
-        // Check if the registration was successful
-         if (document.getElementById("successMessage").value === "true") {
-             document.getElementById("successMessage1").style.display = "block"
-            // Redirect to the login page after 5 seconds
-            setTimeout(function() {
-                window.location.href = "Login.aspx";
-            }, 6000); // 5000 milliseconds = 5 seconds
-        }
-     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -7,75 +7,22 @@ using System.Net.Http;
 
 namespace LMSBackOfficeDAL
 {
-	public class Members_DataAccess
+	public class ReferralCodes_DataAccess
 	{
-        /* MAJOR API REQUIRED INSIDE CHECKOUT SYSTEM FOR
-		  IN-ORDER, 
-		  OUT-ORDER, 
-		  OUT-TRANSACTION, 
-		  ADDRESS-SYNCING, 
-		  REBATE, BALANCE-HISTORY 
-		  CALL-BACK (timer is callout/callback)
-		  Utility-Class for Redis
-		  From Redis to Method till MQ
-		 */
-
-        /// <summary>
-        /// METHOD TO GET ALL THE MEMBERS INORDERS REQUESTS
-        /// </summary>
-        /// <returns></returns>
-        //public static DataTable GetAllMembers()
-        //{
-        //	DataSet dsInOrders = null;
-        //	try
-        //	{
-        //    	//var Constring = new System.Configuration.ConfigurationManager.ConnectionStrings["MerchantCheckOutConnectionString"].ConnectionString;
-        //		//var  Constring = new SqlConnection(ConfigurationSettings.AppSettings["MerchantCheckOutConnectionString"]);
-        //		//var Constring = new SqlConnection(ConfigurationManager.ConnectionStrings["MerchantCheckOutConnectionString"].ConnectionString);
-        //		SqlConnection Connection = new SqlConnection("Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000");
-        //		Connection.Open();
-        //		SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_FetchInOrders", Connection);
-
-        //		//Set the command type as StoredProcedure.
-        //		DataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-        //		DataAdapter.SelectCommand.CommandTimeout = 0;
-
-        //		//Create a new DataSet to hold the records.
-        //		dsInOrders = new DataSet();
-
-        //		//Fill the DataSet 
-        //		DataAdapter.Fill(dsInOrders, "dtInOrders");
-
-        //		//Dispose of the DataAdapter.
-        //		DataAdapter.Dispose();
-        //		//Close the connection.
-        //		Connection.Close();
-
-        //		return dsInOrders.Tables["dtInOrders"];
-        //	}
-        //	catch (Exception ex)
-        //	{
-        //		dsInOrders.Dispose();
-        //		throw new Exception("Error Occrred During IN-Order :   " + ex.Message);
-        //	}
-        //}
-
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static string AddMember(string name, string username,string email, string password, string refCode, string phone, string country)
+        public static void AddMemberReferralCodes(string userId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+           /* using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("USP_AddMember", connection))
+                using (SqlCommand command = new SqlCommand("USP_AddMemberReferralCodes", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
+                    Guid newGuid = Guid.NewGuid();
                     // Add parameters
-                    Random rand = new Random();
-                    int randomNumber = rand.Next(100000, 999999); // Adjust range as needed
-                    string memberCode = "MEM_" + randomNumber.ToString("D6");
                     command.Parameters.Add("@IN_Member_FullName", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@IN_Member_Email", SqlDbType.NVarChar).Value = email;
                     command.Parameters.Add("@IN_Member_Password", SqlDbType.NVarChar).Value = password;
-                    command.Parameters.Add("@IN_Member_Code", SqlDbType.NVarChar).Value =  memberCode; 
+                   // command.Parameters.Add("@IN_Member_ReferralCode", SqlDbType.NVarChar).Value = refCode;
                     command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
                     command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;
                     command.Parameters.Add("@IN_Member_UserName", SqlDbType.NVarChar).Value = username;
@@ -93,7 +40,7 @@ namespace LMSBackOfficeDAL
                         return ex.Message;
                     }
                 }
-            }
+            }*/
         }
 
         /// <summary>
