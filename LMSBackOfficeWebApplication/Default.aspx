@@ -274,7 +274,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">All Earnings</h6>
+                                        <h6 class="mb-0">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -333,7 +333,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Page Views</h6>
+                                        <h6 class="mb-0">Membership</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -432,7 +432,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Total Task</h6>
+                                        <h6 class="mb-0">KYC Status</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -474,7 +474,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Download</h6>
+                                        <h6 class="mb-0">Direct Referrals</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -494,7 +494,7 @@
                     <div class="col-lg-9">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Monthly Revenue</h5>
+                                <h5 class="mb-0">Network Bonus</h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>
