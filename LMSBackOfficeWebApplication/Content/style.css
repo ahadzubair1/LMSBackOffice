@@ -20216,6 +20216,7 @@ pre[class*=language-] > code {
   align-items: center;
   color: var(--pc-sidebar-color);
   padding: 8px 0px;
+  text-decoration: none;
 }
 .pc-sidebar .card.pc-user-card .pc-user-links a i {
   font-size: 18px;

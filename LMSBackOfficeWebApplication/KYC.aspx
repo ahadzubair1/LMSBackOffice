@@ -1,4 +1,4 @@
-<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LMSBackOfficeWebApplication._Default" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="KYC.aspx.cs" Inherits="LMSBackOfficeWebApplication.KYC" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -58,7 +58,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="pc-item">
-                            <a href="" class="pc-link">
+                            <a href="Default.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-status-up"></use>
@@ -219,13 +219,12 @@
                             <div class="col-md-12">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                    <li class="breadcrumb-item" aria-current="page">Home</li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">KYC</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-12">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Home</h2>
+                                    <h2 class="mb-0">KYC</h2>
                                 </div>
                             </div>
                         </div>
