@@ -101,6 +101,16 @@
                             <a href="Bonus.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
+                                        <use xlink:href="#custom-presentation-chart"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">AI Copy Trading</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <a href="Bonus.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
