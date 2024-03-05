@@ -98,7 +98,7 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <a href="AIcopyTrading.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-presentation-chart"></use>
@@ -242,9 +242,9 @@
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card m-0 h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -263,18 +263,18 @@
                                 <p class="card-text">
                                     Please upload a clear picture of your passport
                                 </p>
-                                <form action="" class="dropzone dz-clickable">
-                                    <div class="dz-default dz-message d-flex align-items-center justify-content-center flex-column gap-3 position-relative">
+                                <form action="" class="dropzone dz-clickable position-relative">
+                                    <div class="dz-default dz-message d-flex align-items-center justify-content-center flex-column gap-3">
                                         <i data-feather="share" class="d-block"></i>
                                         <input class="dz-button" type="file">
-                                        <p>Upload files</p>
+                                        <p>Upload passport</p>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card">
+                    <div class="col-md-8">
+                        <div class="card m-0 h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -294,22 +294,34 @@
                                 <p class="card-text">
                                     Please upload your National Identity Card
                                 </p>
-                                <form action="" class="dropzone dz-clickable">
-                                    <div class="dz-default dz-message d-flex align-items-center justify-content-center flex-column gap-3 position-relative">
-                                        <i data-feather="share" class="d-block"></i>
-                                        <input class="dz-button" type="file">
-                                        <p>Upload files</p>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="dz-default dropzone dz-clickable dz-message d-flex align-items-center justify-content-center flex-column gap-3 position-relative">
+                                                <i data-feather="share" class="d-block"></i>
+                                                <input class="dz-button" type="file">
+                                                <p>Upload Identity Card Front Side</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="dz-default dropzone dz-clickable dz-message d-flex align-items-center justify-content-center flex-column gap-3 position-relative">
+                                                <i data-feather="share" class="d-block"></i>
+                                                <input class="dz-button" type="file">
+                                                <p>Upload Identity Card Back Side</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 d-flex justify-content-end">
-                        <button type="button" class="btn btn-shadow btn-primary">Submit for Review</button>
-                    </div>
                 </div>
-                <!-- [ Main Content ] end -->
+                <div class="col-md-12 d-flex justify-content-end">
+                    <button type="button" class="btn btn-shadow btn-primary">Submit for Review</button>
+                </div>
             </div>
+            <!-- [ Main Content ] end -->
+        </div>
         </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">

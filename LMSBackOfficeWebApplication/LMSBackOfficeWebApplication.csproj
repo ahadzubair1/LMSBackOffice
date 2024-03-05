@@ -322,6 +322,7 @@
     <Content Include="Content\css\bootstrap.min.css.map" />
     <Content Include="Content\css\bootstrap.rtl.css.map" />
     <Content Include="Content\css\bootstrap.rtl.min.css.map" />
+    <Content Include="AIcopyTrading.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -424,6 +425,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AIcopyTrading.aspx.cs">
+      <DependentUpon>AIcopyTrading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIcopyTrading.aspx.designer.cs">
+      <DependentUpon>AIcopyTrading.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

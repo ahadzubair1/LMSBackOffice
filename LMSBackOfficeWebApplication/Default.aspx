@@ -98,7 +98,7 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <a href="AIcopyTrading.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-presentation-chart"></use>
