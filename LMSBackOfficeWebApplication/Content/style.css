@@ -20052,7 +20052,7 @@ pre[class*=language-] > code {
   font-weight: 500;
 }
 .pc-sidebar .pc-micon {
-  margin-right: 15px;
+  margin-right: 5px;
   height: 24px;
   width: 24px;
   display: inline-block;
@@ -20508,6 +20508,7 @@ pre[class*=language-] > code {
   right: 0;
   z-index: 1025;
   display: flex;
+  top: 0;
 }
 .pc-header ul {
   margin-bottom: 0;
