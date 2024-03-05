@@ -78,27 +78,30 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-dollar-square"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Bonus</span>
+                                <span class="pc-mtext">Bonus  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-user-add"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Membership</span>
+                                <span class="pc-mtext">Membership  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="AIcopyTrading.aspx" class="pc-link">
+                            <%--<a href="AIcopyTrading.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-presentation-chart"></use>
@@ -108,33 +111,36 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Network</span>
+                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-keyboard"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Wallet</span>
+                                <span class="pc-mtext">Wallet  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="Bonus.aspx" class="pc-link">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Downloads</span>
+                                <span class="pc-mtext">Downloads  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
                             </a>
                         </li>
                     </ul>
