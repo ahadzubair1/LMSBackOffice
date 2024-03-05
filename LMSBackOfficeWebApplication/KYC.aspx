@@ -303,14 +303,14 @@
                                 <div class="col-6">
                                     <div class="d-grid">
                                         <button class="preset-btn btn-img btn active" data-value="true" onclick="layout_caption_change('true');" data-bs-toggle="tooltip" title="Caption Show">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-on.svg" alt="img" class="img-fluid">
+                                            <img src="" alt="img" class="img-fluid">
                                         </button>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="d-grid">
                                         <button class="preset-btn btn-img btn" data-value="false" onclick="layout_caption_change('false');" data-bs-toggle="tooltip" title="Caption Hide">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-off.svg" alt="img" class="img-fluid">
+                                            <img src="" alt="img" class="img-fluid">
                                         </button>
                                     </div>
                                 </div>
@@ -324,14 +324,14 @@
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn active" data-value="false" onclick="layout_rtl_change('false');" data-bs-toggle="tooltip" title="LTR">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/ltr.svg" alt="img" class="img-fluid">
+                                                <img src="" alt="img" class="img-fluid">
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn" data-value="true" onclick="layout_rtl_change('true');" data-bs-toggle="tooltip" title="RTL">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/rtl.svg" alt="img" class="img-fluid">
+                                                <img src="" alt="img" class="img-fluid">
                                             </button>
                                         </div>
                                     </div>
@@ -346,14 +346,14 @@
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn active" data-value="false" onclick="change_box_container('false')" data-bs-toggle="tooltip" title="Full Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/full.svg" alt="img" class="img-fluid">
+                                                <img src="" alt="img" class="img-fluid">
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn" data-value="true" onclick="change_box_container('true')" data-bs-toggle="tooltip" title="Fixed Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/fixed.svg" alt="img" class="img-fluid">
+                                                <img src="" alt="img" class="img-fluid">
                                             </button>
                                         </div>
                                     </div>

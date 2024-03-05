@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-       
+
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="announcementLabel">What's new announcement?</h5>
@@ -106,7 +106,7 @@
                 <!-- [ Main Content ] start -->
                 <div class="row">
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card direct-bonus">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card membership">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card kyc-status">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -311,7 +311,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card direct-referral">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -380,12 +380,12 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
+                                                    <span class="visually-hidden">This is a list item</span>
                                                 </span>
                                             </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Horizontal Layout</span>
+                                                    <span class="text-truncate w-100">This is a list item</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12"><i class="ti ti-paperclip text-sm"></i>2</div>
@@ -395,12 +395,12 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
+                                                    <span class="visually-hidden">This is a list item</span>
                                                 </span>
                                             </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Invoice Generator</span>
+                                                    <span class="text-truncate w-100">This is a list item</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -409,12 +409,12 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
+                                                    <span class="visually-hidden">This is a list item</span>
                                                 </span>
                                             </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Package Upgrades</span>
+                                                    <span class="text-truncate w-100">This is a list item</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -423,12 +423,12 @@
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <span class="p-1 d-block bg-success rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
+                                                    <span class="visually-hidden">This is a list item</span>
                                                 </span>
                                             </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Figma Auto Layout</span>
+                                                    <span class="text-truncate w-100">This is a list item</span>
                                                 </p>
                                             </div>
                                         </div>
