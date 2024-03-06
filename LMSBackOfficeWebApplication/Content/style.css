@@ -24203,6 +24203,8 @@ pre[class*=language-] {
         display: flex;
         align-items: center;
         padding: 16px 24px;
+        background: #edf2ff;
+        box-shadow: 8px 0px 12px 2px #00000030;
     }
 
         .pc-sidebar .m-header .logo-sm {
@@ -24605,7 +24607,7 @@ pre[class*=language-] {
     top: 0;
 }
 body:not([data-pc-theme="dark"]) .pc-header {
-    box-shadow: 8px 0px 12px 2px #00000030;
+    box-shadow: 0 0 12px 2px #00000030;
     background: #edf2ff;
 }
 

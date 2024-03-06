@@ -586,8 +586,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Able pro</h6>
-                                    <small class="text-muted">@ableprodevelop</small>
+                                    <h6 class="mb-0">New Members</h6>
+                                    <small class="text-muted">23 New Members Joined this Week</small>
                                 </div>
                                 <div class="dropdown">
                                     <a
