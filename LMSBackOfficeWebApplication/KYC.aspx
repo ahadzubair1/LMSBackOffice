@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        
+
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -84,6 +84,86 @@
         <!-- [ Main Content ] start -->
         <div class="pc-container">
             <div class="pc-content">
+                <!-- Banner -->
+                <div class="banner kyc">
+                    <div class="banner-caption">
+                        <h2 class="text-white">More Referrals, Huge Bonus!</h2>
+                        <p>Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                    </div>
+                    <div class="leaf">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+                    </div>
+
+                    <div class="leaf leaf1">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+
+                    </div>
+
+                    <div class="leaf leaf2">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px">
+                        </div>
+                    </div>
+                </div>
                 <!-- [ breadcrumb ] start -->
                 <div class="page-header">
                     <div class="page-block">
@@ -105,37 +185,7 @@
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
                 <div class="row mb-4">
-                    <div class="col-md-4">
-                        <div class="card m-0 h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="avtar avtar-s bg-light-primary">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path opacity="0.4" d="M13 9H7" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M22.0002 10.9702V13.0302C22.0002 13.5802 21.5602 14.0302 21.0002 14.0502H19.0402C17.9602 14.0502 16.9702 13.2602 16.8802 12.1802C16.8202 11.5502 17.0602 10.9602 17.4802 10.5502C17.8502 10.1702 18.3602 9.9502 18.9202 9.9502H21.0002C21.5602 9.9702 22.0002 10.4202 22.0002 10.9702Z" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path d="M17.48 10.55C17.06 10.96 16.82 11.55 16.88 12.18C16.97 13.26 17.96 14.05 19.04 14.05H21V15.5C21 18.5 19 20.5 16 20.5H7C4 20.5 2 18.5 2 15.5V8.5C2 5.78 3.64 3.88 6.19 3.56C6.45 3.52 6.72 3.5 7 3.5H16C16.26 3.5 16.51 3.50999 16.75 3.54999C19.33 3.84999 21 5.76 21 8.5V9.95001H18.92C18.36 9.95001 17.85 10.17 17.48 10.55Z" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Passport</h6>
-                                    </div>
-                                </div>
-                                <p class="card-text">
-                                    Please upload a clear picture of your passport
-                                </p>
-                                <form action="" class="dropzone dz-clickable position-relative">
-                                    <div class="dz-default dz-message d-flex align-items-center justify-content-center flex-column gap-3">
-                                        <i data-feather="share" class="d-block"></i>
-                                        <input class="dz-button" type="file">
-                                        <p>Upload passport</p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-12 mb-4">
                         <div class="card m-0 h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -174,11 +224,59 @@
                                         </div>
                                     </div>
                                 </form>
+                                <label class="mt-4">Document Standards:</label>
+                                <ul class="small">
+                                    <li>Allowed formats: JPG, PDF</li>
+                                    <li>Readable, Clear and lit</li>
+                                    <li>Not reflective, not blurry</li>
+                                    <li>No black and white image, not edited</li>
+                                    <li>Place document against a solid colored background</li>
+                                    <li class="text-danger">Note: The uploaded document expiry must be greater than 6 months</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card m-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-primary">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.4" d="M13 9H7" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M22.0002 10.9702V13.0302C22.0002 13.5802 21.5602 14.0302 21.0002 14.0502H19.0402C17.9602 14.0502 16.9702 13.2602 16.8802 12.1802C16.8202 11.5502 17.0602 10.9602 17.4802 10.5502C17.8502 10.1702 18.3602 9.9502 18.9202 9.9502H21.0002C21.5602 9.9702 22.0002 10.4202 22.0002 10.9702Z" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M17.48 10.55C17.06 10.96 16.82 11.55 16.88 12.18C16.97 13.26 17.96 14.05 19.04 14.05H21V15.5C21 18.5 19 20.5 16 20.5H7C4 20.5 2 18.5 2 15.5V8.5C2 5.78 3.64 3.88 6.19 3.56C6.45 3.52 6.72 3.5 7 3.5H16C16.26 3.5 16.51 3.50999 16.75 3.54999C19.33 3.84999 21 5.76 21 8.5V9.95001H18.92C18.36 9.95001 17.85 10.17 17.48 10.55Z" stroke="#4680FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Passport</h6>
+                                    </div>
+                                </div>
+                                <p class="card-text">
+                                    Please upload a clear picture of your passport
+                                </p>
+                                <form action="" class="dropzone dz-clickable position-relative">
+                                    <div class="dz-default dz-message d-flex align-items-center justify-content-center flex-column gap-3">
+                                        <i data-feather="share" class="d-block"></i>
+                                        <input class="dz-button" type="file">
+                                        <p>Upload passport</p>
+                                    </div>
+                                </form>
+                                <label class="mt-4">Document Standards:</label>
+                                <ul class="small">
+                                    <li>Allowed formats: JPG, PDF</li>
+                                    <li>Readable, Clear and lit</li>
+                                    <li>Not reflective, not blurry</li>
+                                    <li>No black and white image, not edited</li>
+                                    <li>Place document against a solid colored background</li>
+                                    <li class="text-danger">Note: The uploaded document expiry must be greater than 6 months</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-12 d-flex justify-content-end pb-5">
                     <button type="button" class="btn btn-shadow btn-primary">Submit for Review</button>
                 </div>
             </div>

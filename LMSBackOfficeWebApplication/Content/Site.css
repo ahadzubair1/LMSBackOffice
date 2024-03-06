@@ -66,7 +66,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 
 
 .banner {
-    height: 200px;
+    height: 250px;
     width: 100%;
     background: radial-gradient(#232f45,#000);
     overflow: hidden;
@@ -76,6 +76,9 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     justify-content: center;
     border-radius: 10px;
 }
+    .banner.kyc {
+        background: radial-gradient(#eb16f4,#000);
+    }
 
 .banner-caption {
     display: flex;
