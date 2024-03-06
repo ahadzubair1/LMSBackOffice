@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.SqlTypes;
 using System.Net.Http;
+using System.Text;
 
 namespace LMSBackOfficeDAL
 {
@@ -79,12 +80,23 @@ namespace LMSBackOfficeDAL
                     command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
                     command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;
                     command.Parameters.Add("@IN_Member_UserName", SqlDbType.NVarChar).Value = username;
-
+                    SqlParameter outParameter = command.Parameters.Add("@OUT_Member_ID", SqlDbType.NVarChar, 36); // Assuming 36 is the maximum length of a GUID represented as a string
+                    outParameter.Direction = ParameterDirection.Output;
+                    
                     try
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
+                        if (outParameter.Value != DBNull.Value && outParameter.Value != null)
+                        {
+                            var memberId = outParameter.Value.ToString();
+                            string codeLeft = GenerateRandomAlphaNumericString(20);
+                            string codeRight = GenerateRandomAlphaNumericString(20);
+                            ReferralCodes_DataAccess.AddMemberReferralCodes(memberId,1, codeLeft);
+                            ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 2, codeRight);
+                        }
                         return "Success";
+
                     }
                     catch (Exception ex)
                     {
@@ -96,6 +108,17 @@ namespace LMSBackOfficeDAL
             }
         }
 
+        private static string GenerateRandomAlphaNumericString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var random = new Random();
+            var stringBuilder = new StringBuilder(length);
+            for (int i = 0; i < length; i++)
+            {
+                stringBuilder.Append(chars[random.Next(chars.Length)]);
+            }
+            return stringBuilder.ToString();
+        }
         /// <summary>
         /// METHOD TO ADD THE INORDERS
         /// </summary>

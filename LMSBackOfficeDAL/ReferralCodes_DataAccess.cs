@@ -10,39 +10,64 @@ namespace LMSBackOfficeDAL
 	public class ReferralCodes_DataAccess
 	{
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static void AddMemberReferralCodes(string userId)
+        public static string AddMemberReferralCodes(string userId,int position, string code)
         {
-           /* using (SqlConnection connection = new SqlConnection(connectionString))
+             using (SqlConnection connection = new SqlConnection(connectionString))
+             {
+                 using (SqlCommand command = new SqlCommand("[USP_AddMemberReferralCode]", connection))
+                 {
+                     command.CommandType = CommandType.StoredProcedure;
+                     // Add parameters
+                     command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = userId;
+                     command.Parameters.Add("@IN_Code", SqlDbType.NVarChar).Value = code;
+                    command.Parameters.Add("@IN_NetworkPosition", SqlDbType.Int).Value = position;
+                    
+                    // command.Parameters.Add("@IN_Member_ReferralCode", SqlDbType.NVarChar).Value = refCode;
+
+                     try
+                     {
+                         connection.Open();
+                         command.ExecuteNonQuery();
+                         return "Success";
+                     }
+                     catch (Exception ex)
+                     {
+                         // Handle exception
+                         Console.WriteLine("Error: " + ex.Message);
+                         return ex.Message;
+                     }
+                 }
+             }
+        }
+
+
+        public static bool CheckParentReferral(string referral)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("USP_AddMemberReferralCodes", connection))
+                using (SqlCommand command = new SqlCommand("[USP_CheckParentReferralCode]", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    Guid newGuid = Guid.NewGuid();
                     // Add parameters
-                    command.Parameters.Add("@IN_Member_FullName", SqlDbType.NVarChar).Value = name;
-                    command.Parameters.Add("@IN_Member_Email", SqlDbType.NVarChar).Value = email;
-                    command.Parameters.Add("@IN_Member_Password", SqlDbType.NVarChar).Value = password;
-                   // command.Parameters.Add("@IN_Member_ReferralCode", SqlDbType.NVarChar).Value = refCode;
-                    command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
-                    command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;
-                    command.Parameters.Add("@IN_Member_UserName", SqlDbType.NVarChar).Value = username;
+                    command.Parameters.Add("@IN_Referralcode", SqlDbType.NVarChar).Value = referral;
+                   
+                    // command.Parameters.Add("@IN_Member_ReferralCode", SqlDbType.NVarChar).Value = refCode;
 
                     try
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
-                        return "Success";
+                        return true;
                     }
                     catch (Exception ex)
                     {
                         // Handle exception
                         Console.WriteLine("Error: " + ex.Message);
-                        return ex.Message;
+                        return false;
                     }
                 }
-            }*/
+            }
         }
-
         /// <summary>
         /// METHOD TO ADD THE INORDERS
         /// </summary>
