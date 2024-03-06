@@ -25,18 +25,22 @@ textarea {
 
 .t-card.direct-bonus {
     border-bottom: 3px solid rgba(70, 128, 255, 0.85);
+    background: #edf2ff;
 }
 
 .t-card.membership {
     border-bottom: 3px solid rgba(229, 138, 0, 0.85);
+    background: #fcf3e6;
 }
 
 .t-card.kyc-status {
     border-bottom: 3px solid rgba(44, 168, 127, 0.85);
+    background: #eaf6f2;
 }
 
 .t-card.direct-referral {
     border-bottom: 3px solid rgba(220, 38, 38, 0.85);
+    background: #fcf3e6;
 }
 
 body:not([data-pc-theme="dark"]) .pc-footer {
@@ -57,6 +61,131 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     .ranks-wrapper .item img {
         width: 100%;
     }
+
+
+
+
+.banner {
+    height: 200px;
+    width: 100%;
+    background: radial-gradient(#232f45,#000);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.banner-caption {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20%;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.banner-caption h2 {
+    font-weight: 700;
+}
+
+.banner img {
+    filter: blur(13px)
+}
+
+.leaf {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+    .leaf div {
+        position: absolute;
+        display: block;
+    }
+
+        .leaf div:nth-child(1) {
+            left: 20%;
+            animation: fall 15s linear infinite;
+            animation-delay: -2s;
+        }
+
+        .leaf div:nth-child(2) {
+            left: 70%;
+            animation: fall 15s linear infinite;
+            animation-delay: -4s;
+        }
+
+        .leaf div:nth-child(3) {
+            left: 10%;
+            animation: fall 20s linear infinite;
+            animation-delay: -7s;
+        }
+
+        .leaf div:nth-child(4) {
+            left: 50%;
+            animation: fall 18s linear infinite;
+            animation-delay: -5s;
+        }
+
+        .leaf div:nth-child(5) {
+            left: 85%;
+            animation: fall 14s linear infinite;
+            animation-delay: -5s;
+        }
+
+        .leaf div:nth-child(6) {
+            left: 15%;
+            animation: fall 16s linear infinite;
+            animation-delay: -10s;
+        }
+
+        .leaf div:nth-child(7) {
+            left: 90%;
+            animation: fall 15s linear infinite;
+            animation-delay: -4s;
+        }
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        top: -10%;
+        transform: translateX (20px) rotate(0deg);
+    }
+
+    20% {
+        opacity: 0.8;
+        transform: translateX (-20px) rotate(45deg);
+    }
+
+    40% {
+        transform: translateX (-20px) rotate(90deg);
+    }
+
+    60% {
+        transform: translateX (-20px) rotate(135deg);
+    }
+
+    80% {
+        transform: translateX (-20px) rotate(180deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: translateX (-20px) rotate(225deg);
+    }
+}
+
+.leaf1 {
+    transform: rotateX(180deg);
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {

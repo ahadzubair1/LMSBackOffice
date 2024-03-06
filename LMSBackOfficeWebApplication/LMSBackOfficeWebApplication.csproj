@@ -136,6 +136,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.rtl.css" />
     <Content Include="Content\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\dropzone.min.css" />
     <Content Include="Content\css\icons.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\typography.css" />
@@ -229,6 +230,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\apexcharts.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -333,6 +335,13 @@
     <Content Include="AIcopyTrading.aspx" />
     <Content Include="RanksRewards.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\custom-font.js" />
+    <Content Include="Scripts\dashboard-default.js" />
+    <Content Include="Scripts\feather.min.js" />
+    <Content Include="Scripts\pcoded.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\simplebar.min.js" />
+    <Content Include="Scripts\site.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />

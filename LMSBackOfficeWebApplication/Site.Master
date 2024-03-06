@@ -610,6 +610,7 @@
         <%: Scripts.Render("~/Scripts/custom-font.js") %>
         <%: Scripts.Render("~/Scripts/pcoded.js") %>
         <%: Scripts.Render("~/Scripts/feather.min.js") %>
+        <%: Scripts.Render("~/Scripts/site.js") %>
         <script>layout_change('light');</script>
 
         <script>layout_theme_contrast_change('false');</script>
