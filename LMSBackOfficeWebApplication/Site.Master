@@ -549,6 +549,17 @@
                             </a>
                         </li>
                         <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="RanksRewards.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-star-bold"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Ranks & Rewards</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
                             <a href="AIcopyTrading.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">

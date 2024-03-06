@@ -22,18 +22,41 @@ textarea {
     max-width: 100%;
     opacity: 0;
 }
+
 .t-card.direct-bonus {
     border-bottom: 3px solid rgba(70, 128, 255, 0.85);
 }
+
 .t-card.membership {
     border-bottom: 3px solid rgba(229, 138, 0, 0.85);
 }
+
 .t-card.kyc-status {
     border-bottom: 3px solid rgba(44, 168, 127, 0.85);
 }
+
 .t-card.direct-referral {
     border-bottom: 3px solid rgba(220, 38, 38, 0.85);
 }
+
+body:not([data-pc-theme="dark"]) .pc-footer {
+    background: #edf2ff;
+}
+
+.ranks-wrapper .cards-w {
+    columns: 4;
+    column-gap: 3rem;
+}
+
+.ranks-wrapper .item {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+    .ranks-wrapper .item img {
+        width: 100%;
+    }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {

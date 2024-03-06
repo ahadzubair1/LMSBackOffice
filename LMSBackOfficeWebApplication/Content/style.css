@@ -24591,7 +24591,7 @@ pre[class*=language-] {
                 }
 
 .pc-header {
-    background: var(--pc-header-background);
+    /*background: var(--pc-header-background);*/
     color: var(--pc-header-color);
     min-height: 74px;
     box-shadow: var(--pc-header-shadow);
@@ -24603,14 +24603,16 @@ pre[class*=language-] {
     z-index: 1025;
     display: flex;
     top: 0;
+}
+body:not([data-pc-theme="dark"]) .pc-header {
     box-shadow: 8px 0px 12px 2px #00000030;
     background: #edf2ff;
 }
 
-    .pc-header ul {
-        margin-bottom: 0;
-        display: inline-flex;
-    }
+.pc-header ul {
+    margin-bottom: 0;
+    display: inline-flex;
+}
 
     .pc-header .m-header {
         height: 74px;
@@ -25206,6 +25208,8 @@ pre[class*=language-] {
 
     .pc-footer a {
         color: var(--bs-body-color);
+        font-size: 13px;
+        text-decoration: none;
     }
 
         .pc-footer a:hover {

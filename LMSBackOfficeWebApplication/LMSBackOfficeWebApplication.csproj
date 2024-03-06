@@ -186,6 +186,14 @@
     <Content Include="Content\images\nft-blog.png" />
     <Content Include="Content\images\Nickolas-Leonida.png" />
     <Content Include="Content\images\pages\img-cunstruct-1-bg.png" />
+    <Content Include="Content\images\Ranks\RANK-01.png" />
+    <Content Include="Content\images\Ranks\RANK-02.png" />
+    <Content Include="Content\images\Ranks\RANK-03.png" />
+    <Content Include="Content\images\Ranks\RANK-04.png" />
+    <Content Include="Content\images\Ranks\RANK-05.png" />
+    <Content Include="Content\images\Ranks\RANK-06.png" />
+    <Content Include="Content\images\Ranks\RANK-07.png" />
+    <Content Include="Content\images\Ranks\RANK-08.png" />
     <Content Include="Content\images\rct-1.png" />
     <Content Include="Content\images\rct-2.png" />
     <Content Include="Content\images\smart-money.png" />
@@ -323,6 +331,7 @@
     <Content Include="Content\css\bootstrap.rtl.css.map" />
     <Content Include="Content\css\bootstrap.rtl.min.css.map" />
     <Content Include="AIcopyTrading.aspx" />
+    <Content Include="RanksRewards.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -432,6 +441,13 @@
     </Compile>
     <Compile Include="AIcopyTrading.aspx.designer.cs">
       <DependentUpon>AIcopyTrading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RanksRewards.aspx.cs">
+      <DependentUpon>RanksRewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RanksRewards.aspx.designer.cs">
+      <DependentUpon>RanksRewards.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -366,7 +366,7 @@
                     <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Project - Able Pro</h5>
+                                <h5 class="mb-0">Project</h5>
                             </div>
                             <div class="card-body">
                                 <div class="mb-4">
