@@ -62,31 +62,89 @@ namespace LMSBackOfficeWebApplication
             string phone = this.phone.Value;
             string countries = this.countries.SelectedValue;
             string username = this.username.Value;
-
+            
             // Process the form data (e.g., save to database, send email, etc.)
             // You can write your logic here
-            string registrationSuccess = Members_DataAccess.AddMember(name, username,email, password, refcode, phone, countries);
-            if (registrationSuccess== "Success")
+            DataTable resultTable = ReferralCodes_DataAccess.CheckParentReferral(refcode);
+            if (resultTable != null && resultTable.Rows.Count > 0)
             {
-                // Display success message
-                this.fullname.Value = "";
-                this.email.Value = "";
-                this.password.Value = "";
-                this.confirmpassword.Value = "";
-                this.refcode.Value = "";
-                this.phone.Value = "";
-                this.username.Value = "";// Assuming you have a server-side control for the success message
-                ResponseMessage.InnerText = "Registration Successfull";
-                ResponseMessage.Style.Add("display", "block");
-                ResponseMessage.Style.Add("color", "#e012ee");
-                Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                DataRow row = resultTable.Rows[0];
+                string referredByParentId = row["Member_ID"].ToString();
+                int Position = (int)row["NetworkPosition"];
+                string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, phone, countries);
+                if (registrationSuccess == "Success")
+                {
+                    // Display success message
+                    this.fullname.Value = "";
+                    this.email.Value = "";
+                    this.password.Value = "";
+                    this.confirmpassword.Value = "";
+                    this.refcode.Value = "";
+                    this.phone.Value = "";
+                    this.username.Value = "";// Assuming you have a server-side control for the success message
+                    ResponseMessage.InnerText = "Registration Successfull";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#e012ee");
+                    Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                }
+                else
+                {
+                    ResponseMessage.InnerText = "Registration Failed";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#ff2600");
+                }
+
+
             }
             else
             {
-                ResponseMessage.InnerText = "Registration Failed";
+                ResponseMessage.InnerText = "Invalid Referral Code";
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
             }
+
+        }
+
+        protected void cvPassword_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            string password = txtPassword.Text;
+
+            // Check for length
+            if (password.Length < 8)
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            // Check for at least 1 uppercase letter
+            if (!password.Any(char.IsUpper))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            // Check for at least 1 lowercase letter
+            if (!password.Any(char.IsLower))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            // Check for at least 1 digit
+            if (!password.Any(char.IsDigit))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            // Check for at least 1 special character
+            if (!password.Any(c => !char.IsLetterOrDigit(c)))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            args.IsValid = true;
         }
 
 

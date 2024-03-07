@@ -28,7 +28,7 @@
             ) *@
 
 
-    @(Html.Grid(Model.dtBonusTypes.Rows.Cast<DataRow>())
+   @* @(Html.Grid(Model.dtBonusTypes.Rows.Cast<DataRow>())
         .Build(columns =>
         {
             foreach (DataColumn column in Model.dtBonusTypes.Columns)
@@ -36,6 +36,6 @@
                 columns.Add(model => model[column.ColumnName]).Titled(column.ColumnName);
             }
         })
-        )
+    )*@
    
 </div>
