@@ -63,21 +63,11 @@
                             </a>
                         </li>
                         <li class="dropdown pc-h-item">
-                            <a
-                                class="pc-head-link dropdown-toggle arrow-none m-0 trig-drp-search"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                role="button"
-                                aria-haspopup="false"
-                                aria-expanded="false">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-search-normal-1"></use>
-                                </svg>
-                            </a>
-                            <div class="dropdown-menu pc-h-dropdown drp-search">
-                                <form class="px-3 py-2">
-                                    <input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . ." />
-                                </form>
+                            <div class="form-group m-0 p-r-10">
+                                <div class="input-group">
+                                    <input type="text" class="form-control shadow-none" placeholder="Search...">
+                                    <button class="btn btn-dark btn-group-vertical"><i data-feather="search"></i></button>
+                                </div>
                             </div>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse">
