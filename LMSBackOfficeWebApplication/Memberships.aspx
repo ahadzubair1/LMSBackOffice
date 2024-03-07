@@ -79,6 +79,86 @@
         <!-- [ Main Content ] start -->
         <div class="pc-container">
             <div class="pc-content">
+                <!-- Banner -->
+                <div class="banner memberships">
+                    <div class="banner-caption">
+                        <h2 class="text-white">More Referrals, Huge Bonus!</h2>
+                        <p>Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                    </div>
+                    <div class="leaf">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+                    </div>
+
+                    <div class="leaf leaf1">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+
+                    </div>
+
+                    <div class="leaf leaf2">
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                        </div>
+
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px">
+                        </div>
+                    </div>
+                </div>
                 <!-- [ breadcrumb ] start -->
                 <div class="page-header">
                     <div class="page-block">
