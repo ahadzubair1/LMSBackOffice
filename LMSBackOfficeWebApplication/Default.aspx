@@ -433,7 +433,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">Network Bonus</h5>
@@ -444,7 +444,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">Referral Links</h5>
@@ -458,27 +458,27 @@
                                                     <span class="text-truncate w-100">https://www.tradiix.com/</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>  RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i> RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                 </div>

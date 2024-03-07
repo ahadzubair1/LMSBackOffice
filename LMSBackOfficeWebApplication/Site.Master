@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -435,6 +436,11 @@
 
         <!-- [ Sidebar Menu ] start -->
         <nav class="pc-sidebar">
+            <div class="anim-bg-wrap">
+                <div class="anim-bg"></div>
+                <div class="anim-bg bg2"></div>
+                <div class="anim-bg bg3"></div>
+            </div>
             <div class="navbar-wrapper">
                 <div class="m-header">
                     <!-- ========   Change your logo from here   ============ -->

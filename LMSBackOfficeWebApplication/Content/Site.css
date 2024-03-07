@@ -4,13 +4,53 @@
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    
 }
-
+.pc-content {
+    background: url(../Content/images/bodybg.jpg);
+    background-size: contain;
+}
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.anim-bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #4680ff26 50%, #edf2ff 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+    .anim-bg.bg2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 4s;
+    }
+
+    .anim-bg.bg3 {
+        animation-duration: 5s;
+    }
+
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
 }
 
 .mw-100 {
