@@ -183,7 +183,7 @@
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
-                <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                <ul class="nav nav-tabs mb-3" id="t_tabs" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Credit Wallet</a>
                     </li>
@@ -199,32 +199,35 @@
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Active Wallet.</h6>
                                 <form>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="points">Points</label>
-                                                <input type="number" class="form-control mw-100" id="points" placeholder="Enter amount" value="1">
+                                                <label class="form-label">Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="fee">Fee</label>
-                                                <input type="number" class="form-control mw-100" id="fee" placeholder="0" readonly>
+                                                <label class="form-label">Fee</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="rec_amnt">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" id="rec_amnt" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label" for="2fa">2FA</label>
-                                                <input type="number" class="form-control mw-100" id="2fa" placeholder="0" readonly>
+                                                <label class="form-label">Receivable Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mb-4">Transfer</button>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <label class="form-label">OTP</label>
+                                            <div class="form-group d-flex align-items-center gap-2">
+                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
+                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Transfer</button>
                                 </form>
                             </div>
                         </div>
@@ -276,32 +279,35 @@
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Active Wallet to Credit Wallet.</h6>
                                 <form>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="points">Points</label>
-                                                <input type="number" class="form-control mw-100" id="points" placeholder="Enter amount" value="1">
+                                                <label class="form-label">Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="fee">Fee</label>
-                                                <input type="number" class="form-control mw-100" id="fee" placeholder="0" readonly>
+                                                <label class="form-label">Fee</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="form-label" for="rec_amnt">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" id="rec_amnt" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label" for="2fa">2FA</label>
-                                                <input type="number" class="form-control mw-100" id="2fa" placeholder="0" readonly>
+                                                <label class="form-label">Receivable Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mb-4">Transfer</button>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <label class="form-label">OTP</label>
+                                            <div class="form-group d-flex align-items-center gap-2">
+                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
+                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Transfer</button>
                                 </form>
                             </div>
                         </div>
