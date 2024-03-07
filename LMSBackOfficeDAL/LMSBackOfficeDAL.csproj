@@ -105,6 +105,7 @@
       <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers">
       <HintPath>..\LMSBackOfficeWebApp\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -129,6 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADOUtility.cs" />
+    <Compile Include="Countries_DataAccess.cs" />
+    <Compile Include="ReferralCodes_DataAccess.cs" />
     <Compile Include="Rewards_DataAccess.cs" />
     <Compile Include="Setup_DataAccess.cs" />
     <Compile Include="Dashboard_DataAccess.cs" />
