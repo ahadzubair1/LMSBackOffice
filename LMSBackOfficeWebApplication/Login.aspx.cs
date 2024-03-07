@@ -23,14 +23,20 @@ namespace LMSBackOfficeWebApplication
 
             // Process the form data (e.g., save to database, send email, etc.)
             // You can write your logic here
-            bool registrationSuccess = Login_DataAccess.AddLogin(username, password);
-            if (registrationSuccess)
+            bool loginSuccess = Login_DataAccess.AddLogin(username, password);
+            if (loginSuccess)
             {
                 this.successMessage.Value = "true";
+                Session["Username"] = username;
+                Response.AddHeader("REFRESH", "2;URL=Default.aspx");
             }
             else
             {
                 this.successMessage.Value = "false";
+                Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                ResponseMessage.InnerText = "Login Failed";
+                ResponseMessage.Style.Add("display", "block");
+                ResponseMessage.Style.Add("color", "#e012ee");
             }
         }
         /* protected void Page_Load(object sender, EventArgs e)

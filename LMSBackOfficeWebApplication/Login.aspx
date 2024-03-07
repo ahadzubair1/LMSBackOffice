@@ -71,6 +71,9 @@
         </div>
       </div>
       <div class="col-md-4">
+          <div class="col-md-12 text-center">
+            <h5  id="ResponseMessage" runat="server" style="display: none;"></h5>
+        </div>
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">
             <label for="" class="text-white">What's your username?</label>
@@ -93,12 +96,6 @@
   </div>
   <span class="arrow-down vp-gradient"><i class="icon-arrow-1"></i></span>
 </section>
-    <script>
-   // Check if the registration was successful
-    if (document.getElementById("successMessage").value === "true") {
-           window.location.href = "Default.aspx";
-   }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
