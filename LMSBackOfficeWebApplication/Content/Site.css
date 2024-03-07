@@ -6,15 +6,61 @@
     padding-right: 15px;
 }
 
+.pc-content {
+    background: url(../Content/images/bodybg.jpg);
+    background-size: contain;
+}
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
 textarea {
     max-width: 280px;
 }
-.mw-100{
+
+body[data-pc-theme="light"] .card-header {
+    background: #232f44;
+}
+
+body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .card .card-header .h5 {
+    color: #fff;
+}
+
+.anim-bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #4680ff26 50%, #edf2ff 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+    .anim-bg.bg2 {
+        animation-direction: alternate-reverse;
+        animation-duration: 4s;
+    }
+
+    .anim-bg.bg3 {
+        animation-duration: 5s;
+    }
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+.mw-100 {
     max-width: 100%;
 }
+
 .dropzone input[type="file"] {
     position: absolute;
     top: 0;
@@ -58,6 +104,9 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     display: block;
     width: 100%;
     margin-bottom: 3rem;
+    border-radius: 40px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 3px solid #fff;
 }
 
     .ranks-wrapper .item img {
@@ -78,8 +127,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     justify-content: center;
     border-radius: 10px;
 }
+
     .banner.kyc {
         background: radial-gradient(#eb16f4,#000);
+    }
+    .banner.memberships {
+        background: radial-gradient(#000,#af168a);
     }
 
 .banner-caption {
@@ -93,9 +146,10 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     position: relative;
     z-index: 2;
 }
-.banner-caption h2 {
-    font-weight: 700;
-}
+
+    .banner-caption h2 {
+        font-weight: 700;
+    }
 
 .banner img {
     filter: blur(13px)
@@ -160,29 +214,29 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     0% {
         opacity: 1;
         top: -10%;
-        transform: translateX (20px) rotate(0deg);
+        transform: translateX(20px) rotate(0deg);
     }
 
     20% {
         opacity: 0.8;
-        transform: translateX (-20px) rotate(45deg);
+        transform: translateX(-20px) rotate(45deg);
     }
 
     40% {
-        transform: translateX (-20px) rotate(90deg);
+        transform: translateX(-20px) rotate(90deg);
     }
 
     60% {
-        transform: translateX (-20px) rotate(135deg);
+        transform: translateX(-20px) rotate(135deg);
     }
 
     80% {
-        transform: translateX (-20px) rotate(180deg);
+        transform: translateX(-20px) rotate(180deg);
     }
 
     100% {
         top: 110%;
-        transform: translateX (-20px) rotate(225deg);
+        transform: translateX(-20px) rotate(225deg);
     }
 }
 
@@ -190,7 +244,20 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     transform: rotateX(180deg);
 }
 
+#t_tabs {
+    border: none;
+}
 
+    #t_tabs .nav-item .nav-link {
+        border: none;
+        border-radius: 10px;
+        color: inherit;
+    }
+
+        #t_tabs .nav-item .nav-link.active {
+            background: #dd12ec;
+            color: #fff;
+        }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {

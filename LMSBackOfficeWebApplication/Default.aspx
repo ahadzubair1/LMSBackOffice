@@ -172,7 +172,6 @@
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                    <li class="breadcrumb-item" aria-current="page">Home</li>
                                 </ul>
                             </div>
                             <div class="col-md-12">
@@ -433,7 +432,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">Network Bonus</h5>
@@ -444,7 +443,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">Referral Links</h5>
@@ -458,27 +457,27 @@
                                                     <span class="text-truncate w-100">https://www.tradiix.com/</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>  RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i> RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                 </div>
@@ -489,7 +488,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h5 class="mb-0">Project overview</h5>
+                                    <h5 class="mb-0">Memberships Purchased</h5>
                                     <div class="dropdown">
                                         <a
                                             class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
@@ -510,7 +509,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
-                                                <p class="text-muted mb-1">Total Tasks</p>
+                                                <p class="text-muted mb-1">New Memberships</p>
                                                 <h5 class="mb-0">34,686</h5>
                                             </div>
                                             <div class="col-6">
@@ -521,7 +520,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
-                                                <p class="text-muted mb-1">Pending Tasks</p>
+                                                <p class="text-muted mb-1">Total Memberships</p>
                                                 <h5 class="mb-0">3,786</h5>
                                             </div>
                                             <div class="col-6">
@@ -532,7 +531,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 d-grid">
                                             <button class="btn btn-primary d-flex align-items-center justify-content-center">
-                                                <i class="ti ti-plus"></i>Add project</button>
+                                                <i class="ti ti-plus"></i>Purchase Membership</button>
                                         </div>
                                     </div>
                                 </div>
