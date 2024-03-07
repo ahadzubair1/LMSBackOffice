@@ -3,662 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <!-- [ Sidebar Menu ] start -->
-        <nav class="pc-sidebar">
-            <div class="navbar-wrapper">
-                <div class="m-header">
-                    <a href="index.html" class="b-brand text-primary text-decoration-none">
-                        <!-- ========   Change your logo from here   ============ -->
-                        <img src="Content/images/logo-v-light.png" class="img-fluid logo-lg" width="140" alt="logo">
-                        <span class="badge bg-light-success rounded-pill ms-2 theme-version">v1.0</span>
-                    </a>
-                </div>
-                <div class="navbar-content">
-                    <div class="card pc-user-card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
-                                </div>
-                                <div class="flex-grow-1 ms-3 me-2">
-                                    <h6 class="mb-0">Jonh Smith</h6>
-                                    <small>Administrator</small>
-                                </div>
-                                <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-sort-outline"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="collapse pc-user-links" id="pc_sidebar_userlink">
-                                <div class="pt-3">
-                                    <a href="#!">
-                                        <i class="ti ti-user"></i>
-                                        <span>My Account</span>
-                                    </a>
-                                    <a href="#!">
-                                        <i class="ti ti-settings"></i>
-                                        <span>Settings</span>
-                                    </a>
-                                    <a href="#!">
-                                        <i class="ti ti-lock"></i>
-                                        <span>Lock Screen</span>
-                                    </a>
-                                    <a href="#!">
-                                        <i class="ti ti-power"></i>
-                                        <span>Logout</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="pc-navbar">
-                        <li class="pc-item pc-caption">
-                            <label>Navigation</label>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-status-up"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-document-filter"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">KYC</span>
-                            </a>
-                        </li>
-
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-document"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Layouts</span>
-                                <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                            </a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Vertical</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Horizontal</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Layouts 2</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Compact</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Tab</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Widget</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-presentation-chart"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-story"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Statistics</span>
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-fatrows"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Data</span>
-                            </a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-presentation-chart"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Chart</span></a>
-                        </li>
-                        <li class="pc-item pc-caption">
-                            <label>UI Components</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-box-1"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link" target="_blank"><span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-box-1"></use>
-                                </svg>
-                            </span><span class="pc-mtext">Components</span></a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-flag"></use>
-                                    </svg>
-                                </span><span class="pc-mtext">Animation</span></a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link"><span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-mouse-circle"></use>
-                                </svg>
-                            </span><span class="pc-mtext">Icons</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Feather</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Font Awesome 5</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Material</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Tabler</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Phosphor</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Custom</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Forms</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-element-plus"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-element-plus"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Forms Elements</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Form Basic</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Form Floating</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Form Options</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Input Groups</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Checkbox</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Radio</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Switch</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Mega option</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-cpu-charge"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Forms Plugins</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item pc-hasmenu">
-                                    <a class="pc-link" href="#">Date<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="">Datepicker</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="">Date Range Picker</a> </li>
-                                        <li class="pc-item"><a class="pc-link" href="">Timepicker</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a class="pc-link" href="#">Select<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="">Choices js</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item"><a class="pc-link" href="">Rating</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Google reCaptcha</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Input Masks</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Clipboard</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Nouislider</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Bootstrap Switch</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Bootstrap Switch</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Typeahead</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-text-block"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Text Editors</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Tinymce</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Quill</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a class="pc-link" href="#">CK editor<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="">classic</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="">Document</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="">Inline</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="">Balloon</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item"><a class="pc-link" href="">Markdown</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-row-vertical"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Form Layouts</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Layouts</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Multicolumn</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Actionbars</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Sticky Action bars</a> </li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-document-upload"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">File upload</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Dropzone</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Uppy</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-password-check"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">wizard</span></a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-kanban"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Form Validation</span></a>
-                        </li>
-                        <li class="pc-item"><a href="" class="pc-link">
-                            <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-crop"></use>
-                                </svg>
-                            </span>
-                            <span class="pc-mtext">Image cropper</span></a></li>
-
-                        <li class="pc-item pc-caption">
-                            <label>table</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-text-align-justify-center"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-text-align-justify-center"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Bootstrap Table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Basic table</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Sizing table</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Border table</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Styling table</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-keyboard"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Vanilla Table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Basic initialization</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Dynamic Import</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Render Column Cells</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Column Manipulation</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Datetime Sorting</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Methods</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Add Rows</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Fetch API</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Filters</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Export</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-graph"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Data table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Advance initialization</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Styling</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">API</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Plug-in</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Data sources</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-add-item"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">DT extensions</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Autofill</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Button<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="">Basic button</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="">Data export</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item"><a class="pc-link" href="">Col reorder</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Fixed columns</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Fixed header</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Key table</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Responsive</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Row reorder</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Scroller</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Select table</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Charts &and; Maps</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-graph"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-graph"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Charts</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Apex Chart</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Peity Chart</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-shapes"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Maps</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Vector Maps</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Gmaps</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Application</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-shopping-bag"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-calendar-1"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Calendar</span></a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-message-2"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Chat</span></a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-notification-status"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Customer</span></a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-shopping-bag"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">E-commerce</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Product</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Product details</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Product List</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Add New Product</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Checkout</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-document-filter"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">File manager</span></a>
-                        </li>
-                        <li class="pc-item">
-                            <a href="" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-direct-inbox"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Mail</span></a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-user-square"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Users</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Account Profile</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Social media</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Pages</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-flag"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-shield"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Authentication</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Authentication 1<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Login</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Register</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Forgot Password</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">check mail</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">reset password</a> </li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">code verification</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Authentication 2<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Login</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Register</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Forgot password</a> </li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">check mail</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">reset password</a> </li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">code verification</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item">
-                                    <a href="" target="_blank" class="pc-link">Authentication 3</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-flag"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Maintenance</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" target="_blank" href="">Error 404</a></li>
-                                <li class="pc-item"><a class="pc-link" target="_blank" href="">Error 500</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Under construction<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Under Construction 1</a></li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Under Construction 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Coming soon<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Coming soon 1</a> </li>
-                                        <li class="pc-item"><a class="pc-link" target="_blank" href="">Coming soon 2</a> </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pc-item"><a href="" class="pc-link" target="_blank">
-                            <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-24-support"></use>
-                                </svg>
-                            </span>
-                            <span class="pc-mtext">Contact us</span>
-                        </a>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-dollar-square"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Price</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="">Price 1</a></li>
-                                <li class="pc-item"><a class="pc-link" href="">Price 2</a></li>
-                            </ul>
-                        </li>
-                        <li class="pc-item"><a href="" class="pc-link" target="_blank"><span class="pc-micon">
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-airplane"></use>
-                            </svg>
-                        </span><span class="pc-mtext">Landing</span></a>
-                        </li>
-
-                        <li class="pc-item pc-caption">
-                            <label>Other</label>
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-notification-status"></use>
-                            </svg>
-                        </li>
-                        <li class="pc-item pc-hasmenu">
-                            <a href="#!" class="pc-link"><span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-level"></use>
-                                </svg>
-                            </span><span class="pc-mtext">Menu levels</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                            <ul class="pc-submenu">
-                                <li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Level 2.2<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                        <li class="pc-item pc-hasmenu">
-                                            <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                            <ul class="pc-submenu">
-                                                <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                                <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="pc-item pc-hasmenu">
-                                    <a href="#!" class="pc-link">Level 2.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                    <ul class="pc-submenu">
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                                        <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                        <li class="pc-item pc-hasmenu">
-                                            <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                                            <ul class="pc-submenu">
-                                                <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                                <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pc-item"><a href="" class="pc-link">
-                            <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-notification-status"></use>
-                                </svg>
-                            </span>
-                            <span class="pc-mtext">Sample page</span></a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- [ Sidebar Menu ] end -->
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -739,6 +83,87 @@
         <!-- [ Main Content ] start -->
         <div class="pc-container">
             <div class="pc-content">
+                <!-- Banner -->
+                <div class="banner">
+                    <div class="banner-caption">
+                        <h2 class="text-white">Get Signup Bonus</h2>
+                        <p class="m-0">Unlock Rewards Now! Sign up and receive your exclusive signup bonus today. Don't miss out on this limited-time offer to enjoy exciting perks and benefits. Join our community and start experiencing the rewards immediately. Sign up now!</p>
+                    </div>
+                    <div class="leaf">
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+                    </div>
+
+                    <div class="leaf leaf1">
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+
+                    </div>
+
+                    <div class="leaf leaf2">
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                        </div>
+
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                        </div>
+                        <div>
+                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                        </div>
+                        <div>
+                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- [ breadcrumb ] start -->
                 <div class="page-header">
                     <div class="page-block">
@@ -752,7 +177,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Home</h2>
+                                    <h2 class="mb-0">Dashboard</h2>
                                 </div>
                             </div>
                         </div>
@@ -762,7 +187,7 @@
                 <!-- [ Main Content ] start -->
                 <div class="row">
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card direct-bonus">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -791,7 +216,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">All Earnings</h6>
+                                        <h6 class="mb-0">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -809,7 +234,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card membership">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -850,7 +275,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Page Views</h6>
+                                        <h6 class="mb-0">Membership</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -868,7 +293,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card kyc-status">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -949,7 +374,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Total Task</h6>
+                                        <h6 class="mb-0">KYC Status</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -967,7 +392,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xxl-3">
-                        <div class="card">
+                        <div class="card t-card direct-referral">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -991,7 +416,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Download</h6>
+                                        <h6 class="mb-0">Direct Referrals</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded">
@@ -1011,7 +436,7 @@
                     <div class="col-lg-9">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Monthly Revenue</h5>
+                                <h5 class="mb-0">Network Bonus</h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>
@@ -1022,77 +447,40 @@
                     <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Project - Able Pro</h5>
+                                <h5 class="mb-0">Referral Links</h5>
                             </div>
                             <div class="card-body">
-                                <div class="mb-4">
-                                    <p class="mb-2">Release v1.2.0<span class="float-end">70%</span></p>
-                                    <div class="progress progress-primary" style="height: 8px">
-                                        <div class="progress-bar" style="width: 70%"></div>
-                                    </div>
-                                </div>
                                 <div class="d-grid gap-2">
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Horizontal Layout</span>
+                                                    <span class="text-truncate w-100">https://www.tradiix.com/</span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12"><i class="ti ti-paperclip text-sm"></i>2</div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Invoice Generator</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>  RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary">
                                         <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Package Upgrades</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i> RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
+                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i> Copy</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="btn btn-link-secondary">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-success rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1 mx-2">
-                                                <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">Figma Auto Layout</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="d-grid mt-3">
-                                    <button class="btn btn-primary d-flex align-items-center justify-content-center">
-                                        <i class="ti ti-plus"></i>Add task</button>
                                 </div>
                             </div>
                         </div>
@@ -1161,8 +549,8 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Able pro</h6>
-                                        <small class="text-muted">@ableprodevelop</small>
+                                        <h6 class="mb-0">New Members</h6>
+                                        <small class="text-muted">23 New Members Joined this Week</small>
                                     </div>
                                     <div class="dropdown">
                                         <a

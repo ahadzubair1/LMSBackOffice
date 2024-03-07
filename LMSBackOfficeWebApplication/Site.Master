@@ -13,9 +13,11 @@
         <link href="Content/fonts/tabler-icons.min.css" rel="stylesheet" />
         <link href="Content/fonts/feather.css" rel="stylesheet" />
         <link href="Content/fonts/fontawesome.css" rel="stylesheet" />
+        <link rel="stylesheet" href="Content/css/dropzone.min.css" asp-append-version="true" />
         <link href="Content/fonts/material.css" rel="stylesheet" />
         <link href="Content/style-preset.css" rel="stylesheet" />
         <link href="Content/style.css" rel="stylesheet" />
+        <link href="Content/dataTables.bootstrap5.min.css" rel="stylesheet" />
     </asp:PlaceHolder>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
@@ -49,7 +51,7 @@
                 <div class="me-auto pc-mob-drp">
                     <ul class="list-unstyled">
                         <!-- ======= Menu collapse Icon ===== -->
-                        <li class="pc-h-item pc-sidebar-collapse">
+                        <li class="pc-h-item pc-sidebar-collapse d-none">
                             <a href="#" class="pc-head-link ms-0" id="sidebar-hide">
                                 <i class="ti ti-menu-2"></i>
                             </a>
@@ -78,7 +80,7 @@
                             </div>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse">
-                            <a class="btn btn-primary" role="button" href="#">Top Up</a>
+                            <a class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                     </ul>
                 </div>
@@ -430,6 +432,168 @@
                 </div>
             </div>
         </header>
+
+        <!-- [ Sidebar Menu ] start -->
+        <nav class="pc-sidebar">
+            <div class="navbar-wrapper">
+                <div class="m-header">
+                    <!-- ========   Change your logo from here   ============ -->
+                    <img src="Content/images/logo-v-light.png" class="img-fluid logo-lg" width="140" alt="logo">
+                    <span class="badge bg-light-success rounded-pill ms-2 theme-version">v1.0</span>
+                </div>
+                <div class="navbar-content">
+                    <div class="card pc-user-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+                                </div>
+                                <div class="flex-grow-1 ms-3 me-2">
+                                    <h6 class="mb-0">Jonh Smith</h6>
+                                    <small>Administrator</small>
+                                </div>
+                                <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-sort-outline"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="collapse pc-user-links" id="pc_sidebar_userlink">
+                                <div class="pt-3">
+                                    <a href="#!">
+                                        <i class="ti ti-user"></i>
+                                        <span>My Account</span>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="ti ti-settings"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="ti ti-lock"></i>
+                                        <span>Lock Screen</span>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="ti ti-power"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="pc-navbar">
+                        <li class="pc-item">
+                            <a href="Default.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-status-up"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <a href="KYC.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-document-filter"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">KYC</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="Wallets.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-keyboard"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Wallets</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-user-add"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Memberships  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-share-bold"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-dollar-square"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Bonuses  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="RanksRewards.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-star-bold"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Ranks & Rewards</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <a href="AIcopyTrading.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-presentation-chart"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">AI Copy Trading</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Bonus.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-direct-inbox"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Downloads  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Support.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-message-2"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Support Tickets  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- [ Sidebar Menu ] end -->
         <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -444,6 +608,7 @@
         <%: Scripts.Render("~/Scripts/custom-font.js") %>
         <%: Scripts.Render("~/Scripts/pcoded.js") %>
         <%: Scripts.Render("~/Scripts/feather.min.js") %>
+        <%: Scripts.Render("~/Scripts/site.js") %>
         <script>layout_change('light');</script>
 
         <script>layout_theme_contrast_change('false');</script>
@@ -456,5 +621,36 @@
 
         <script>preset_change("preset-1");</script>
     </asp:PlaceHolder>
+
+    <!-- Modal -->
+    <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Enter Amount to Add in USD</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter amount you want to add to your credit wallet and choose a payment method.</p>
+                    <form action="/" method="post">
+                        <label class="mb-2">Top Up Amount</label>
+                        <input type="text" name="name" value="" class="form-control w-100" placeholder="Enter amount or select from below" style="max-width: 100%;" />
+                        <div class="d-flex mt-3 justify-content-between gap-2">
+                            <button class="btn btn-light-primary text-nowrap">+ 100</button>
+                            <button class="btn btn-light-primary text-nowrap">+ 500</button>
+                            <button class="btn btn-light-primary text-nowrap">+ 1000</button>
+                            <button class="btn btn-light-primary text-nowrap">+ 5000</button>
+                            <button class="btn btn-light-primary text-nowrap">+ 10000</button>
+                            <button class="btn btn-light-primary text-nowrap">Clear</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Top Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

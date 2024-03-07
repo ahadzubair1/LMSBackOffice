@@ -102,66 +102,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\bootstrap-grid.css" />
-    <Content Include="Content\css\bootstrap-grid.min.css" />
-    <Content Include="Content\css\bootstrap-grid.rtl.css" />
-    <Content Include="Content\css\bootstrap-grid.rtl.min.css" />
-    <Content Include="Content\css\bootstrap-reboot.css" />
-    <Content Include="Content\css\bootstrap-reboot.min.css" />
-    <Content Include="Content\css\bootstrap-reboot.rtl.css" />
-    <Content Include="Content\css\bootstrap-reboot.rtl.min.css" />
-    <Content Include="Content\css\bootstrap-utilities.css" />
-    <Content Include="Content\css\bootstrap-utilities.min.css" />
-    <Content Include="Content\css\bootstrap-utilities.rtl.css" />
-    <Content Include="Content\css\bootstrap-utilities.rtl.min.css" />
-    <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\bootstrap.rtl.css" />
-    <Content Include="Content\css\bootstrap.rtl.min.css" />
-    <Content Include="Content\css\icons.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\css\typography.css" />
-    <Content Include="Content\fonts\icomoon.svg" />
-    <Content Include="Content\images\7.png" />
-    <Content Include="Content\images\74bfa33cdc60f1991bff9c8c91b566cf.png" />
-    <Content Include="Content\images\articles.png" />
-    <Content Include="Content\images\ba6f6fd07961c104f091238cd53c9cf0.png" />
-    <Content Include="Content\images\background-sublime.png" />
-    <Content Include="Content\images\bg-glow.svg" />
-    <Content Include="Content\images\bg-gradient.png" />
-    <Content Include="Content\images\big-money.png" />
-    <Content Include="Content\images\c5048531a4f3b6509542ac2b0aee71e8.png" />
-    <Content Include="Content\images\cardbg.png" />
-    <Content Include="Content\images\crypto-circle.svg" />
-    <Content Include="Content\images\crypto-decryption.png" />
-    <Content Include="Content\images\d723f859f444d4f8bf2720057554ff35.png" />
-    <Content Include="Content\images\finance.png" />
-    <Content Include="Content\images\financially-fit-for-life.png" />
-    <Content Include="Content\images\forex-circle.svg" />
-    <Content Include="Content\images\Kwame-Opoku.png" />
-    <Content Include="Content\images\Levyn-Cornu.png" />
-    <Content Include="Content\images\masterhead-bg.png" />
-    <Content Include="Content\images\Nathan-Williams.png" />
-    <Content Include="Content\images\nft-blog.png" />
-    <Content Include="Content\images\Nickolas-Leonida.png" />
-    <Content Include="Content\images\rct-1.png" />
-    <Content Include="Content\images\rct-2.png" />
-    <Content Include="Content\images\smart-money.png" />
-    <Content Include="Content\images\Steven-Down.png" />
-    <Content Include="Content\images\stock-market.svg" />
-    <Content Include="Content\images\student-1.png" />
-    <Content Include="Content\images\student-2.png" />
-    <Content Include="Content\images\student-3.png" />
-    <Content Include="Content\images\student-4.png" />
-    <Content Include="Content\images\student-5.png" />
-    <Content Include="Content\images\student-6.png" />
-    <Content Include="Content\images\sublime-footer.svg" />
-    <Content Include="Content\images\sublime-lg.svg" />
-    <Content Include="Content\images\tradiix-logo.png" />
-    <Content Include="Content\images\unlock-ichimoku.png" />
-    <Content Include="Content\images\webinar.png" />
-    <Content Include="Register.aspx" />
-    <Content Include="Login.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -180,10 +120,118 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap-grid.min.css" />
+    <Content Include="Content\css\bootstrap-grid.rtl.css" />
+    <Content Include="Content\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\css\bootstrap-reboot.css" />
+    <Content Include="Content\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\css\bootstrap-utilities.css" />
+    <Content Include="Content\css\bootstrap-utilities.min.css" />
+    <Content Include="Content\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.rtl.css" />
+    <Content Include="Content\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\dataTables.bootstrap5.min.css" />
+    <Content Include="Content\css\dropzone.min.css" />
+    <Content Include="Content\css\icons.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\typography.css" />
+    <Content Include="Content\feather.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\fonts\feather.css" />
+    <Content Include="Content\fonts\feather\feathere8ab.svg" />
+    <Content Include="Content\fonts\fontawesome.css" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400.svg" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400.svg" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900.svg" />
+    <Content Include="Content\fonts\icomoon.svg" />
+    <Content Include="Content\fonts\inter\inter.css" />
+    <Content Include="Content\fonts\material.css" />
+    <Content Include="Content\fonts\phosphor\duotone\Phosphor-Duotone.svg" />
+    <Content Include="Content\fonts\phosphor\duotone\style.css" />
+    <Content Include="Content\fonts\tabler-icons.min.css" />
+    <Content Include="Content\fonts\tabler\tabler-icons.svg" />
+    <Content Include="Content\images\7.png" />
+    <Content Include="Content\images\74bfa33cdc60f1991bff9c8c91b566cf.png" />
+    <Content Include="Content\images\application\img-cal-bg.jpg" />
+    <Content Include="Content\images\articles.png" />
+    <Content Include="Content\images\authentication\img-auth-bg.jpg" />
+    <Content Include="Content\images\ba6f6fd07961c104f091238cd53c9cf0.png" />
+    <Content Include="Content\images\background-sublime.png" />
+    <Content Include="Content\images\bg-glow.svg" />
+    <Content Include="Content\images\bg-gradient.png" />
+    <Content Include="Content\images\big-money.png" />
+    <Content Include="Content\images\c5048531a4f3b6509542ac2b0aee71e8.png" />
+    <Content Include="Content\images\cardbg.png" />
+    <Content Include="Content\images\crypto-circle.svg" />
+    <Content Include="Content\images\crypto-decryption.png" />
+    <Content Include="Content\images\d723f859f444d4f8bf2720057554ff35.png" />
+    <Content Include="Content\images\finance.png" />
+    <Content Include="Content\images\financially-fit-for-life.png" />
+    <Content Include="Content\images\forex-circle.svg" />
+    <Content Include="Content\images\Kwame-Opoku.png" />
+    <Content Include="Content\images\layout\img-announcement-1.png" />
+    <Content Include="Content\images\layout\img-announcement-2.png" />
+    <Content Include="Content\images\layout\img-announcement-3.png" />
+    <Content Include="Content\images\layout\img-announcement-4.png" />
+    <Content Include="Content\images\layout\img-profile-card.jpg" />
+    <Content Include="Content\images\Levyn-Cornu.png" />
+    <Content Include="Content\images\logo-v-dark.png" />
+    <Content Include="Content\images\logo-v-light.png" />
+    <Content Include="Content\images\masterhead-bg.png" />
+    <Content Include="Content\images\Nathan-Williams.png" />
+    <Content Include="Content\images\nft-blog.png" />
+    <Content Include="Content\images\Nickolas-Leonida.png" />
+    <Content Include="Content\images\pages\img-cunstruct-1-bg.png" />
+    <Content Include="Content\images\Ranks\RANK-01.png" />
+    <Content Include="Content\images\Ranks\RANK-02.png" />
+    <Content Include="Content\images\Ranks\RANK-03.png" />
+    <Content Include="Content\images\Ranks\RANK-04.png" />
+    <Content Include="Content\images\Ranks\RANK-05.png" />
+    <Content Include="Content\images\Ranks\RANK-06.png" />
+    <Content Include="Content\images\Ranks\RANK-07.png" />
+    <Content Include="Content\images\Ranks\RANK-08.png" />
+    <Content Include="Content\images\rct-1.png" />
+    <Content Include="Content\images\rct-2.png" />
+    <Content Include="Content\images\smart-money.png" />
+    <Content Include="Content\images\Steven-Down.png" />
+    <Content Include="Content\images\stock-market.svg" />
+    <Content Include="Content\images\student-1.png" />
+    <Content Include="Content\images\student-2.png" />
+    <Content Include="Content\images\student-3.png" />
+    <Content Include="Content\images\student-4.png" />
+    <Content Include="Content\images\student-5.png" />
+    <Content Include="Content\images\student-6.png" />
+    <Content Include="Content\images\sublime-footer.svg" />
+    <Content Include="Content\images\sublime-lg.svg" />
+    <Content Include="Content\images\tradiix-logo.png" />
+    <Content Include="Content\images\unlock-ichimoku.png" />
+    <Content Include="Content\images\user\avatar-1.jpg" />
+    <Content Include="Content\images\user\avatar-2.jpg" />
+    <Content Include="Content\images\user\avatar-3.jpg" />
+    <Content Include="Content\images\user\avatar-4.jpg" />
+    <Content Include="Content\images\user\avatar-5.jpg" />
+    <Content Include="Content\images\webinar.png" />
+    <Content Include="Content\images\widget\img-gpay.png" />
+    <Content Include="Content\images\widget\img-paypal.png" />
+    <Content Include="Content\images\widget\img-phonepay.png" />
+    <Content Include="Content\material.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style-preset.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\tabler-icons.min.css" />
+    <Content Include="KYC.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\apexcharts.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -212,6 +260,24 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\fonts\feather\feathere8ab.eot" />
+    <Content Include="Content\fonts\feather\feathere8ab.ttf" />
+    <Content Include="Content\fonts\feather\feathere8ab.woff" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400.eot" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400.woff" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="Content\fonts\fontawesome\fa-brands-400d41d.eot" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400.eot" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400.woff" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="Content\fonts\fontawesome\fa-regular-400d41d.eot" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900.eot" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900.woff" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\fontawesome\fa-solid-900d41d.eot" />
     <Content Include="Content\fonts\Gotham-Black.woff" />
     <Content Include="Content\fonts\Gotham-Black.woff2" />
     <Content Include="Content\fonts\Gotham-Bold.woff" />
@@ -241,6 +307,16 @@
     <Content Include="Content\fonts\icomoon.eot" />
     <Content Include="Content\fonts\icomoon.ttf" />
     <Content Include="Content\fonts\icomoon.woff" />
+    <Content Include="Content\fonts\inter\Inter-italic.var32a8.woff2" />
+    <Content Include="Content\fonts\inter\Inter-roman.var32a8.woff2" />
+    <Content Include="Content\fonts\material\material.woff2" />
+    <Content Include="Content\fonts\phosphor\duotone\Phosphor-Duotone.ttf" />
+    <Content Include="Content\fonts\phosphor\duotone\Phosphor-Duotone.woff" />
+    <Content Include="Content\fonts\tabler\tabler-icons.eot" />
+    <Content Include="Content\fonts\tabler\tabler-icons.ttf" />
+    <Content Include="Content\fonts\tabler\tabler-icons.woff" />
+    <Content Include="Content\fonts\tabler\tabler-icons.woff2" />
+    <Content Include="Content\fonts\tabler\tabler-iconsd41d.eot" />
     <Content Include="Content\css\bootstrap-grid.css.map" />
     <Content Include="Content\css\bootstrap-grid.min.css.map" />
     <Content Include="Content\css\bootstrap-grid.rtl.css.map" />
@@ -257,7 +333,19 @@
     <Content Include="Content\css\bootstrap.min.css.map" />
     <Content Include="Content\css\bootstrap.rtl.css.map" />
     <Content Include="Content\css\bootstrap.rtl.min.css.map" />
+    <Content Include="AIcopyTrading.aspx" />
+    <Content Include="RanksRewards.aspx" />
+    <Content Include="Scripts\dataTables.bootstrap5.min.css" />
+    <Content Include="Scripts\dataTables.min.js" />
+    <Content Include="Wallets.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\custom-font.js" />
+    <Content Include="Scripts\dashboard-default.js" />
+    <Content Include="Scripts\feather.min.js" />
+    <Content Include="Scripts\pcoded.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\simplebar.min.js" />
+    <Content Include="Scripts\site.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -291,20 +379,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -321,6 +395,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="KYC.aspx.cs">
+      <DependentUpon>KYC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KYC.aspx.designer.cs">
+      <DependentUpon>KYC.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,7 +412,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -352,6 +447,27 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AIcopyTrading.aspx.cs">
+      <DependentUpon>AIcopyTrading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AIcopyTrading.aspx.designer.cs">
+      <DependentUpon>AIcopyTrading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RanksRewards.aspx.cs">
+      <DependentUpon>RanksRewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RanksRewards.aspx.designer.cs">
+      <DependentUpon>RanksRewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wallets.aspx.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wallets.aspx.designer.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
