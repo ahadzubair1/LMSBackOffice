@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {}
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
         "projectName": "LMSBackOfficeAPI",
-        "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
-        "packagesPath": "C:\\Users\\ahad_\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\obj\\",
+        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ahad_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-                "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+              "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
               }
             }
           }
@@ -77,11 +72,11 @@
         }
       }
     },
-    "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "projectName": "LMSBackOfficeDAL",
-        "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
