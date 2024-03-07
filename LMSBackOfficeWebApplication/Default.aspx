@@ -87,7 +87,7 @@
                 <div class="banner">
                     <div class="banner-caption">
                         <h2 class="text-white">Get Signup Bonus</h2>
-                        <p>Unlock Rewards Now! Sign up and receive your exclusive signup bonus today. Don't miss out on this limited-time offer to enjoy exciting perks and benefits. Join our community and start experiencing the rewards immediately. Sign up now!</p>
+                        <p class="m-0">Unlock Rewards Now! Sign up and receive your exclusive signup bonus today. Don't miss out on this limited-time offer to enjoy exciting perks and benefits. Join our community and start experiencing the rewards immediately. Sign up now!</p>
                     </div>
                     <div class="leaf">
                         <div>

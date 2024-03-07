@@ -136,6 +136,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.rtl.css" />
     <Content Include="Content\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\dataTables.bootstrap5.min.css" />
     <Content Include="Content\css\dropzone.min.css" />
     <Content Include="Content\css\icons.css" />
     <Content Include="Content\css\style.css" />
@@ -334,6 +335,9 @@
     <Content Include="Content\css\bootstrap.rtl.min.css.map" />
     <Content Include="AIcopyTrading.aspx" />
     <Content Include="RanksRewards.aspx" />
+    <Content Include="Scripts\dataTables.bootstrap5.min.css" />
+    <Content Include="Scripts\dataTables.min.js" />
+    <Content Include="Wallets.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\custom-font.js" />
     <Content Include="Scripts\dashboard-default.js" />
@@ -457,6 +461,13 @@
     </Compile>
     <Compile Include="RanksRewards.aspx.designer.cs">
       <DependentUpon>RanksRewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wallets.aspx.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wallets.aspx.designer.cs">
+      <DependentUpon>Wallets.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

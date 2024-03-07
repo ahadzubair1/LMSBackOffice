@@ -12,7 +12,9 @@ select,
 textarea {
     max-width: 280px;
 }
-
+.mw-100{
+    max-width: 100%;
+}
 .dropzone input[type="file"] {
     position: absolute;
     top: 0;
