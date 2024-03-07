@@ -172,7 +172,6 @@
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                    <li class="breadcrumb-item" aria-current="page">Home</li>
                                 </ul>
                             </div>
                             <div class="col-md-12">
@@ -489,7 +488,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h5 class="mb-0">Project overview</h5>
+                                    <h5 class="mb-0">Memberships Purchased</h5>
                                     <div class="dropdown">
                                         <a
                                             class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
@@ -510,7 +509,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
-                                                <p class="text-muted mb-1">Total Tasks</p>
+                                                <p class="text-muted mb-1">New Memberships</p>
                                                 <h5 class="mb-0">34,686</h5>
                                             </div>
                                             <div class="col-6">
@@ -521,7 +520,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
-                                                <p class="text-muted mb-1">Pending Tasks</p>
+                                                <p class="text-muted mb-1">Total Memberships</p>
                                                 <h5 class="mb-0">3,786</h5>
                                             </div>
                                             <div class="col-6">
@@ -532,7 +531,7 @@
                                     <div class="col-md-6 col-xl-4">
                                         <div class="mt-3 d-grid">
                                             <button class="btn btn-primary d-flex align-items-center justify-content-center">
-                                                <i class="ti ti-plus"></i>Add project</button>
+                                                <i class="ti ti-plus"></i>Purchase Membership</button>
                                         </div>
                                     </div>
                                 </div>

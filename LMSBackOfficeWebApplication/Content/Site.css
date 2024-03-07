@@ -4,8 +4,8 @@
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    
 }
+
 .pc-content {
     background: url(../Content/images/bodybg.jpg);
     background-size: contain;
@@ -15,6 +15,14 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+body[data-pc-theme="light"] .card-header {
+    background: #232f44;
+}
+
+body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .card .card-header .h5 {
+    color: #fff;
 }
 
 .anim-bg {
@@ -38,10 +46,6 @@ textarea {
         animation-duration: 5s;
     }
 
-
-h1 {
-    font-family: monospace;
-}
 
 @keyframes slide {
     0% {
