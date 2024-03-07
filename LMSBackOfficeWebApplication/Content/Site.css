@@ -8,7 +8,7 @@
 body[data-pc-theme="light"] .pc-sidebar .pc-link {
     color: #253148;
 }
-.pc-content {
+body[data-pc-theme="light"] .pc-content {
     background: url(../Content/images/bodybg.jpg);
     background-size: contain;
 }
@@ -73,22 +73,22 @@ body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .
     opacity: 0;
 }
 
-.t-card.direct-bonus {
+body[data-pc-theme="light"] .t-card.direct-bonus {
     border-bottom: 3px solid rgba(70, 128, 255, 0.85);
     background: #edf2ff;
 }
 
-.t-card.membership {
+body[data-pc-theme="light"] .t-card.membership {
     border-bottom: 3px solid rgba(229, 138, 0, 0.85);
     background: #fcf3e6;
 }
 
-.t-card.kyc-status {
+body[data-pc-theme="light"] .t-card.kyc-status {
     border-bottom: 3px solid rgba(44, 168, 127, 0.85);
     background: #eaf6f2;
 }
 
-.t-card.direct-referral {
+body[data-pc-theme="light"] .t-card.direct-referral {
     border-bottom: 3px solid rgba(220, 38, 38, 0.85);
     background: #fcf3e6;
 }
