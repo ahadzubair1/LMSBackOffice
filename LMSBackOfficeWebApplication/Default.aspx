@@ -465,8 +465,9 @@
                                 <h5 class="mb-0">Network Bonus</h5>
                             </div>
                             <div class="card-body">
-                                <h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>
-                                <div id="customer-rate-graph"></div>
+                                <%--<h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>--%>
+                                <%--<div id="customer-rate-graph"></div>--%>
+                                <iframe class="w-100" height="400" src="https://s.tradingview.com/dailyfx/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en#%7B%22symbol%22%3A%22FX_IDC%3AEURUSD%22%2C%22frameElementId%22%3A%22tradingview_4a8b2%22%2C%22interval%22%3A%22D%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22Light%22%2C%22timezone%22%3A%22exchange%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22www.dailyfx.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22FX_IDC%3AEURUSD%22%2C%22page-uri%22%3A%22www.dailyfx.com%2Fcharts%22%7D"></iframe>
                             </div>
                         </div>
                     </div>
