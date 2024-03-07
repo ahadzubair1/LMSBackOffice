@@ -104,6 +104,9 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     display: block;
     width: 100%;
     margin-bottom: 3rem;
+    border-radius: 40px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 3px solid #fff;
 }
 
     .ranks-wrapper .item img {
@@ -127,6 +130,9 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 
     .banner.kyc {
         background: radial-gradient(#eb16f4,#000);
+    }
+    .banner.memberships {
+        background: radial-gradient(#000,#af168a);
     }
 
 .banner-caption {
