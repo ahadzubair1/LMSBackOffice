@@ -76,8 +76,8 @@
         </div>
       </div>
       <div class="col-md-4">
-         <div class="col-md-12">
-             <h4  id="ResponseMessage" runat="server" style="display: none;"></h4>
+         <div class="col-md-12 text-center">
+             <h5  id="ResponseMessage" runat="server" style="display: none;"></h5>
          </div>
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">

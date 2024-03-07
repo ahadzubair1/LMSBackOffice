@@ -70,12 +70,13 @@ namespace LMSBackOfficeDAL
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     // Add parameters
+                    var hashPassword = HashUtility.ComputeSHA512Hash(password);
                     Random rand = new Random();
                     int randomNumber = rand.Next(100000, 999999); // Adjust range as needed
                     string memberCode = "MEM_" + randomNumber.ToString("D6");
                     command.Parameters.Add("@IN_Member_FullName", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@IN_Member_Email", SqlDbType.NVarChar).Value = email;
-                    command.Parameters.Add("@IN_Member_Password", SqlDbType.NVarChar).Value = password;
+                    command.Parameters.Add("@IN_Member_Password", SqlDbType.NVarChar).Value = hashPassword;
                     command.Parameters.Add("@IN_Member_Code", SqlDbType.NVarChar).Value =  memberCode; 
                     command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
                     command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;

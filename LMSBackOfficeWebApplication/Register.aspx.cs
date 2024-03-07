@@ -8,6 +8,7 @@ using System.Data;
 using LMSBackOfficeDAL;
 using System.Xml.Linq;
 using static LMSBackOfficeDAL.Countries_DataAccess;
+using System.Web.Security;
 
 
 namespace LMSBackOfficeWebApplication
@@ -62,89 +63,99 @@ namespace LMSBackOfficeWebApplication
             string phone = this.phone.Value;
             string countries = this.countries.SelectedValue;
             string username = this.username.Value;
-            
-            // Process the form data (e.g., save to database, send email, etc.)
-            // You can write your logic here
-            DataTable resultTable = ReferralCodes_DataAccess.CheckParentReferral(refcode);
-            if (resultTable != null && resultTable.Rows.Count > 0)
-            {
-                DataRow row = resultTable.Rows[0];
-                string referredByParentId = row["Member_ID"].ToString();
-                int Position = (int)row["NetworkPosition"];
-                string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, phone, countries);
-                if (registrationSuccess == "Success")
-                {
-                    // Display success message
-                    this.fullname.Value = "";
-                    this.email.Value = "";
-                    this.password.Value = "";
-                    this.confirmpassword.Value = "";
-                    this.refcode.Value = "";
-                    this.phone.Value = "";
-                    this.username.Value = "";// Assuming you have a server-side control for the success message
-                    ResponseMessage.InnerText = "Registration Successfull";
-                    ResponseMessage.Style.Add("display", "block");
-                    ResponseMessage.Style.Add("color", "#e012ee");
-                    Response.AddHeader("REFRESH", "5;URL=Login.aspx");
-                }
-                else
-                {
-                    ResponseMessage.InnerText = "Registration Failed";
-                    ResponseMessage.Style.Add("display", "block");
-                    ResponseMessage.Style.Add("color", "#ff2600");
-                }
 
-
-            }
-            else
+            string passwordValidation = validatePassword(password, confirmpassword);
+            if (passwordValidation != "Success")
             {
-                ResponseMessage.InnerText = "Invalid Referral Code";
+                ResponseMessage.InnerText = passwordValidation;
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
             }
+            else
+            {
+                // Process the form data (e.g., save to database, send email, etc.)
+                // You can write your logic here
+                DataTable resultTable = ReferralCodes_DataAccess.CheckParentReferral(refcode);
+                if (resultTable != null && resultTable.Rows.Count > 0)
+                {
+                    DataRow row = resultTable.Rows[0];
+                    string referredByParentId = row["Member_ID"].ToString();
+                    int Position = (int)row["NetworkPosition"];
+                    string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, phone, countries);
+                    if (registrationSuccess == "Success")
+                    {
+                        // Display success message
+                        this.fullname.Value = "";
+                        this.email.Value = "";
+                        this.password.Value = "";
+                        this.confirmpassword.Value = "";
+                        this.refcode.Value = "";
+                        this.phone.Value = "";
+                        this.username.Value = "";// Assuming you have a server-side control for the success message
+                        ResponseMessage.InnerText = "Registration Successfull";
+                        ResponseMessage.Style.Add("display", "block");
+                        ResponseMessage.Style.Add("color", "#e012ee");
+                        Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                    }
+                    else
+                    {
+                        ResponseMessage.InnerText = "Registration Failed";
+                        ResponseMessage.Style.Add("display", "block");
+                        ResponseMessage.Style.Add("color", "#ff2600");
+                    }
+
+
+                }
+                else
+                {
+                    ResponseMessage.InnerText = "Invalid Referral Code";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#ff2600");
+                }
+            }
+            
+            
 
         }
 
-        protected void cvPassword_ServerValidate(object source, ServerValidateEventArgs args)
+        protected static string validatePassword(string password,string confirmpassword)
         {
-            string password = txtPassword.Text;
 
             // Check for length
-            if (password.Length < 8)
+            if (password != confirmpassword)
             {
-                args.IsValid = false;
-                return;
+                return "Password and confirm passwords Dont Match";
+            }
+            if (password.Length < 8 || password.Length >16)
+            {
+                return "Password Length should be between 8 to 16 charchaters";
             }
 
             // Check for at least 1 uppercase letter
             if (!password.Any(char.IsUpper))
             {
-                args.IsValid = false;
-                return;
+                return "Password Length should be between 8 to 16 charchaters";
             }
 
             // Check for at least 1 lowercase letter
             if (!password.Any(char.IsLower))
             {
-                args.IsValid = false;
-                return;
+                return "Password Length should be between 8 to 16 charchaters";
             }
 
             // Check for at least 1 digit
             if (!password.Any(char.IsDigit))
             {
-                args.IsValid = false;
-                return;
+                return "Password Length should be between 8 to 16 charchaters";
             }
 
             // Check for at least 1 special character
             if (!password.Any(c => !char.IsLetterOrDigit(c)))
             {
-                args.IsValid = false;
-                return;
+                return "Password Length should be between 8 to 16 charchaters";
             }
 
-            args.IsValid = true;
+            return "Success";
         }
 
 

@@ -28,20 +28,25 @@ namespace LMSBackOfficeDAL
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
         public static bool AddLogin(string username, string password)
         {
+            bool loginSuccess = false;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("USP_CheckLogin", connection))
+                using (SqlCommand command = new SqlCommand("USP_CheckMemberLogin", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     Guid newGuid = Guid.NewGuid();
                     // Add parameters
+                    var hashPassword = HashUtility.ComputeSHA512Hash(password);
                     command.Parameters.Add("@IN_LoginUserName", SqlDbType.NVarChar).Value = username;
-                    command.Parameters.Add("@IN_LoginPassword", SqlDbType.NVarChar).Value = password;
+                    command.Parameters.Add("@IN_LoginPassword", SqlDbType.NVarChar).Value = hashPassword;
                     try
                     {
                         connection.Open();
-                        command.ExecuteNonQuery();
-                        return true;
+                        object result = command.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                        {
+                            loginSuccess = Convert.ToBoolean(result);
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -51,6 +56,7 @@ namespace LMSBackOfficeDAL
                     }
                 }
             }
+            return loginSuccess;
         }
 
 
