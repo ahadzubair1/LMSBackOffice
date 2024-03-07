@@ -306,24 +306,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ahad_\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Reshma\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
       "projectName": "LMSBackOfficeWebApp",
-      "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
-      "packagesPath": "C:\\Users\\ahad_\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+      "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ahad_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -331,18 +326,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
-              "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
+            "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
             },
-            "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-              "projectPath": "D:\\PROJECTS\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+            "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
             }
           }
         }
