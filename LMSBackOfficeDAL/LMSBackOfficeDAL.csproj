@@ -131,6 +131,7 @@
   <ItemGroup>
     <Compile Include="ADOUtility.cs" />
     <Compile Include="Countries_DataAccess.cs" />
+    <Compile Include="HashUtility.cs" />
     <Compile Include="ReferralCodes_DataAccess.cs" />
     <Compile Include="Rewards_DataAccess.cs" />
     <Compile Include="Setup_DataAccess.cs" />
