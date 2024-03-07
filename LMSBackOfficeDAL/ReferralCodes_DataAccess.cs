@@ -41,29 +41,30 @@ namespace LMSBackOfficeDAL
         }
 
 
-        public static bool CheckParentReferral(string referral)
+        public static DataTable CheckParentReferral(string referral)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand("[USP_CheckParentReferralCode]", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    // Add parameters
                     command.Parameters.Add("@IN_Referralcode", SqlDbType.NVarChar).Value = referral;
-                   
-                    // command.Parameters.Add("@IN_Member_ReferralCode", SqlDbType.NVarChar).Value = refCode;
 
                     try
                     {
                         connection.Open();
-                        command.ExecuteNonQuery();
-                        return true;
+                        DataTable resultTable = new DataTable();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                        return resultTable;
                     }
                     catch (Exception ex)
                     {
                         // Handle exception
                         Console.WriteLine("Error: " + ex.Message);
-                        return false;
+                        return null; // Or throw an exception
                     }
                 }
             }

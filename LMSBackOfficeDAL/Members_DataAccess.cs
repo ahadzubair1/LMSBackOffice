@@ -62,7 +62,7 @@ namespace LMSBackOfficeDAL
         //}
 
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static string AddMember(string name, string username,string email, string password, string refCode, string phone, string country)
+        public static string AddMember(string name, string username,string email, string password, string referredByParentId, string phone, string country)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -80,6 +80,7 @@ namespace LMSBackOfficeDAL
                     command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
                     command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;
                     command.Parameters.Add("@IN_Member_UserName", SqlDbType.NVarChar).Value = username;
+                    command.Parameters.Add("@IN_Member_RefferredBy", SqlDbType.NVarChar).Value = referredByParentId;
                     SqlParameter outParameter = command.Parameters.Add("@OUT_Member_ID", SqlDbType.NVarChar, 36); // Assuming 36 is the maximum length of a GUID represented as a string
                     outParameter.Direction = ParameterDirection.Output;
                     
@@ -107,11 +108,10 @@ namespace LMSBackOfficeDAL
                 }
             }
         }
-
+        private static Random random = new Random();
         private static string GenerateRandomAlphaNumericString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            var random = new Random();
             var stringBuilder = new StringBuilder(length);
             for (int i = 0; i < length; i++)
             {
