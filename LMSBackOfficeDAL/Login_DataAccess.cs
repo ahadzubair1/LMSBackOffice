@@ -6,6 +6,7 @@ using System.Data.SqlTypes;
 using System.Net.Http;
 using LMSBackOfficeDAL;
 using LMSBackofficeDAL;
+using System.Web;
 
 
 namespace LMSBackOfficeDAL
@@ -26,7 +27,7 @@ namespace LMSBackOfficeDAL
             return retLogin;
         }
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static bool AddLogin(string username, string password)
+        public static bool CheckLogin(string username, string password)
         {
             bool loginSuccess = false;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -57,6 +58,35 @@ namespace LMSBackOfficeDAL
                 }
             }
             return loginSuccess;
+        }
+
+        public static void AddLogin(string username, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_AddLogin", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    string userIpAddress = HttpContext.Current.Request.UserHostAddress;
+                    Guid newGuid = Guid.NewGuid();
+                    // Add parameters
+                    var hashPassword = HashUtility.ComputeSHA512Hash(password);
+                    command.Parameters.Add("@IN_LoginUserName", SqlDbType.NVarChar).Value = username;
+                    command.Parameters.Add("@IN_LoginPassword", SqlDbType.NVarChar).Value = hashPassword;
+                    command.Parameters.Add("@IN_LoginIP", SqlDbType.NVarChar).Value = userIpAddress;
+                    command.Parameters.Add("@IN_LoginSource", SqlDbType.NVarChar).Value = "Tradixx Backoffice";
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
         }
 
 
