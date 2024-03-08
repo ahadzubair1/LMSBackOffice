@@ -193,12 +193,12 @@
                             <div class="col-md-12">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Memberships</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-12">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Ranks & Rewards</h2>
+                                    <h2 class="mb-0">Memberships</h2>
                                 </div>
                             </div>
                         </div>
@@ -211,24 +211,28 @@
                     <div class="cards-w">
                         <div class="item">
                             <img src="Content/images/Memberships/1.png" alt="" />
+                            <a href="#" class="btn btn-primary">Purchase Now</a>
                         </div>
                         <div class="item">
                             <img src="Content/images/Memberships/2.png" alt="" />
+                            <a href="#" class="btn btn-primary">Purchase Now</a>
                         </div>
                         <div class="item">
                             <img src="Content/images/Memberships/3.png" alt="" />
+                            <a href="#" class="btn btn-primary">Purchase Now</a>
                         </div>
                         <div class="item">
                             <img src="Content/images/Memberships/4.png" alt="" />
+                            <a href="#" class="btn btn-primary">Purchase Now</a>
                         </div>
                         <div class="item">
                             <img src="Content/images/Memberships/5.png" alt="" />
+                            <a href="#" class="btn btn-primary">Purchase Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- [ Main Content ] end -->
-        </div>
         </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">

@@ -274,24 +274,10 @@
                                     <tbody>
                                         <tr>
                                             <td>2024-03-01</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>150</td>
-                                            <td>Initial points</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-02</td>
-                                            <td>110</td>
-                                            <td>60</td>
-                                            <td>170</td>
-                                            <td>Daily bonus</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-03</td>
-                                            <td>115</td>
-                                            <td>65</td>
-                                            <td>180</td>
-                                            <td>Referral bonus</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>Deposit</td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>
@@ -354,24 +340,10 @@
                                     <tbody>
                                         <tr>
                                             <td>2024-03-01</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>150</td>
-                                            <td>Initial points</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-02</td>
-                                            <td>110</td>
-                                            <td>60</td>
-                                            <td>170</td>
-                                            <td>Daily bonus</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-03</td>
-                                            <td>115</td>
-                                            <td>65</td>
-                                            <td>180</td>
-                                            <td>Referral bonus</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>Deposit</td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>

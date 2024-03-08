@@ -560,7 +560,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h5 class="mb-0">Memberships Purchased</h5>
+                                    <h5 class="mb-0">Purchased Memberships</h5>
                                     <div class="dropdown">
                                         <a
                                             class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
@@ -614,7 +614,7 @@
                         <div class="card">
                             <div class="card-body border-bottom pb-0">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h5 class="mb-0">Transactions</h5>
+                                    <h5 class="mb-0">Recent Transactions</h5>
                                     <div class="dropdown">
                                         <a
                                             class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"

@@ -129,7 +129,16 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     border: 3px solid #fff;
     background: #fff;
+    text-align: center;
 }
+
+    .ranks-wrapper.m .item .btn {
+        margin-bottom: 2rem;
+        display: block;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 .ranks-wrapper.m .cards-w {
     columns: 2;
@@ -140,7 +149,8 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     width: 100%;
     transition: all ease 0.3s;
 }
-.ranks-wrapper .item:hover img{
+
+.ranks-wrapper .item:hover img {
     transform: translateY(-10px);
 }
 
