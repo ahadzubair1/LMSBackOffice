@@ -472,13 +472,13 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card">
+                        <div class="card mb-2">
                             <div class="card-header">
                                 <h5 class="mb-0">Referral Links</h5>
                             </div>
                             <div class="card-body">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-link-secondary">
+                                    <a href="#" class="btn btn-link-secondary bg-info-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
@@ -488,20 +488,22 @@
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="btn btn-link-secondary">
+                                    <a href="#" class="btn btn-link-secondary bg-warning-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
+                                                    <span>Left</span>
                                                     <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
-                                    <a href="#" class="btn btn-link-secondary">
+                                    <a href="#" class="btn btn-link-secondary bg-primary-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
+                                                    <span>Right</span>
                                                     <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
@@ -511,8 +513,50 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-primary">
+                                            <i class="ti ti-at f-20"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">New Members</h6>
+                                        <small class="text-muted">23 New Members Joined this Week</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a
+                                            class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
+                                            href="#"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="ti ti-dots-vertical f-18"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">Today</a>
+                                            <a class="dropdown-item" href="#">Weekly</a>
+                                            <a class="dropdown-item" href="#">Monthly</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mt-4">
+                                    <div class="user-group able-user-group">
+                                        <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                                        <span class="avtar bg-light-primary text-primary text-sm">+2</span>
+                                    </div>
+                                    <a href="#" class="avtar avtar-s btn btn-primary rounded-circle">
+                                        <i class="ti ti-plus f-20"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -562,50 +606,6 @@
                                                 <i class="ti ti-plus"></i>Purchase Membership</button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="avtar avtar-s bg-light-primary">
-                                            <i class="ti ti-at f-20"></i>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">New Members</h6>
-                                        <small class="text-muted">23 New Members Joined this Week</small>
-                                    </div>
-                                    <div class="dropdown">
-                                        <a
-                                            class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
-                                            href="#"
-                                            data-bs-toggle="dropdown"
-                                            aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="ti ti-dots-vertical f-18"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="#">Today</a>
-                                            <a class="dropdown-item" href="#">Weekly</a>
-                                            <a class="dropdown-item" href="#">Monthly</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mt-4">
-                                    <div class="user-group able-user-group">
-                                        <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
-                                        <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
-                                        <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
-                                        <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
-                                        <span class="avtar bg-light-primary text-primary text-sm">+2</span>
-                                    </div>
-                                    <a href="#" class="avtar avtar-s btn btn-primary rounded-circle">
-                                        <i class="ti ti-plus f-20"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>

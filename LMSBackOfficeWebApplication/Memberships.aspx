@@ -207,7 +207,7 @@
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
 
-                <div class="ranks-wrapper pb-5">
+                <div class="ranks-wrapper m pb-5">
                     <div class="cards-w">
                         <div class="item">
                             <img src="Content/images/Memberships/1.png" alt="" />

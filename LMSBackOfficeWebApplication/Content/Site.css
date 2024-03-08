@@ -10,9 +10,14 @@ body[data-pc-theme="light"] .pc-sidebar .pc-link {
     color: #fff;
 }
 
+.card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
 body[data-pc-theme="light"] .pc-content {
     background: url(../Content/images/bodybg.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-attachment: fixed;
 }
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
@@ -117,17 +122,33 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     display: block;
     width: 100%;
     margin-bottom: 3rem;
-    border-radius: 40px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    border: 3px solid #fff;
 }
 
-    .ranks-wrapper .item img {
-        width: 100%;
-    }
+.ranks-wrapper.m .item {
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 3px solid #fff;
+    background: #fff;
+}
 
+.ranks-wrapper.m .cards-w {
+    columns: 2;
+    column-gap: 1rem;
+}
 
+.ranks-wrapper .item img {
+    width: 100%;
+    transition: all ease 0.3s;
+}
+.ranks-wrapper .item:hover img{
+    transform: translateY(-10px);
+}
 
+.ranks-wrapper.m .item {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 20px;
+}
 
 .banner {
     height: 250px;
@@ -150,7 +171,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
     .banner.wallets {
-        background: radial-gradient(#000,#af168a);
+        background: radial-gradient(#580b63,#af168a);
     }
 
 .banner-caption {
@@ -170,7 +191,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
 .banner img {
-    filter: blur(13px)
+    filter: blur(30px)
 }
 
 .leaf {
