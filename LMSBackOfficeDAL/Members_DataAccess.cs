@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data.SqlTypes;
 using System.Net.Http;
 using System.Text;
+using LMSBackofficeDAL;
 
 namespace LMSBackOfficeDAL
 {
@@ -62,7 +63,7 @@ namespace LMSBackOfficeDAL
         //}
 
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static string AddMember(string name, string username,string email, string password, string referredByParentId, string phone, string country)
+        public static string AddMember(string name, string username,string email, string password, string referredByParentId,int position, string phone, string country)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -91,11 +92,14 @@ namespace LMSBackOfficeDAL
                         command.ExecuteNonQuery();
                         if (outParameter.Value != DBNull.Value && outParameter.Value != null)
                         {
+                            //UtilMethods.SendEmail(name,"support@tradiix.com", phone);
                             var memberId = outParameter.Value.ToString();
                             string codeLeft = GenerateRandomAlphaNumericString(20);
                             string codeRight = GenerateRandomAlphaNumericString(20);
                             ReferralCodes_DataAccess.AddMemberReferralCodes(memberId,1, codeLeft);
                             ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 2, codeRight);
+                            Network_DataAccess.AddMemberNetwork(memberId, referredByParentId, position);
+                            Wallets_DataAccess.CreateMemberWallets(memberId);
                         }
                         return "Success";
 

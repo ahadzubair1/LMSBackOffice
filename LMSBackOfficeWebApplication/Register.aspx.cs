@@ -81,7 +81,7 @@ namespace LMSBackOfficeWebApplication
                     DataRow row = resultTable.Rows[0];
                     string referredByParentId = row["Member_ID"].ToString();
                     int Position = (int)row["NetworkPosition"];
-                    string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, phone, countries);
+                    string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, Position,phone, countries);
                     if (registrationSuccess == "Success")
                     {
                         // Display success message

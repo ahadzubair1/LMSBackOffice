@@ -193,12 +193,12 @@
                             <div class="col-md-12">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Tradiix Memberships</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-12">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Ranks & Rewards</h2>
+                                    <h2 class="mb-0">Tradiix Memberships</h2>
                                 </div>
                             </div>
                         </div>

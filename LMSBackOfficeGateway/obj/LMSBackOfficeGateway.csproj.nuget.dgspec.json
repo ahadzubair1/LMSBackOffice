@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {}
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
+        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
         "projectName": "LMSBackOfficeGateway",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
+        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
         "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\obj\\",
+        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
