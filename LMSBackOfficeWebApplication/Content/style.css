@@ -24234,8 +24234,18 @@ body[data-pc-theme="dark"] .anim-bg {
         margin: 0 15px 15px;
         box-shadow: none;
         /*background: var(--pc-sidebar-user-background);*/
-        background: #fff;
+        background: #ffffff17;
+        border: 1px solid #ffffff29;
+        color: #fff;
     }
+
+        .pc-sidebar .card.pc-user-card h6, .pc-sidebar .card.pc-user-card a {
+            color: #fff !important;
+        }
+
+            .pc-sidebar .card.pc-user-card a:focus {
+                background: #eff0f24d;
+            }
 
         .pc-sidebar .card.pc-user-card .card-body {
             padding: 20px;
