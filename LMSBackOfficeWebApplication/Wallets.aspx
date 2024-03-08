@@ -215,7 +215,7 @@
                         <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Credit Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Active Wallet</a>
+                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bonus Wallet</a>
                     </li>
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">
@@ -274,24 +274,10 @@
                                     <tbody>
                                         <tr>
                                             <td>2024-03-01</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>150</td>
-                                            <td>Initial points</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-02</td>
-                                            <td>110</td>
-                                            <td>60</td>
-                                            <td>170</td>
-                                            <td>Daily bonus</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-03</td>
-                                            <td>115</td>
-                                            <td>65</td>
-                                            <td>180</td>
-                                            <td>Referral bonus</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>Deposit</td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>
@@ -354,24 +340,10 @@
                                     <tbody>
                                         <tr>
                                             <td>2024-03-01</td>
-                                            <td>100</td>
-                                            <td>50</td>
-                                            <td>150</td>
-                                            <td>Initial points</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-02</td>
-                                            <td>110</td>
-                                            <td>60</td>
-                                            <td>170</td>
-                                            <td>Daily bonus</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2024-03-03</td>
-                                            <td>115</td>
-                                            <td>65</td>
-                                            <td>180</td>
-                                            <td>Referral bonus</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>Deposit</td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>

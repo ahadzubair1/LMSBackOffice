@@ -479,16 +479,16 @@ function layout_change(layout) {
   } else {
     dark_flag = false;
     if (document.querySelector('.pc-sidebar .m-header .logo-lg')) {
-        document.querySelector('.pc-sidebar .m-header .logo-lg').setAttribute('src', 'Content/images/logo-v-light.png');
+        document.querySelector('.pc-sidebar .m-header .logo-lg').setAttribute('src', 'Content/images/logo-v-dark.png');
     }
     if (document.querySelector('.navbar-brand .logo-lg')) {
-        document.querySelector('.navbar-brand .logo-lg').setAttribute('src', 'Content/images/logo-v-light.png');
+        document.querySelector('.navbar-brand .logo-lg').setAttribute('src', 'Content/images/logo-v-dark.png');
     }
     if (document.querySelector('.auth-main.v1 .auth-sidefooter')) {
-        document.querySelector('.auth-main.v1 .auth-sidefooter img').setAttribute('src', 'Content/images/logo-v-light.png');
+        document.querySelector('.auth-main.v1 .auth-sidefooter img').setAttribute('src', 'Content/images/logo-v-dark.png');
     }
     if (document.querySelector('.footer-top .footer-logo')) {
-        document.querySelector('.footer-top .footer-logo').setAttribute('src', 'Content/images/logo-v-light.png');
+        document.querySelector('.footer-top .footer-logo').setAttribute('src', 'Content/images/logo-v-dark.png');
     }
     var control = document.querySelector('.theme-layout .btn.active');
     if (control) {

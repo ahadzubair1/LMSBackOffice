@@ -71,7 +71,7 @@
                             </div>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse">
-                            <a class="btn btn-success btn-shadow" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
+                            <a class="btn btn-primary btn-shadow" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                     </ul>
                 </div>
@@ -389,10 +389,10 @@
                                         </a>
                                         <hr class="border-secondary border-opacity-50" />
                                         <div class="d-grid mb-3">
-                                            <button class="btn btn-primary">
+                                            <a class="btn btn-primary" href="Login.aspx">
                                                 <svg class="pc-icon me-2">
                                                     <use xlink:href="#custom-logout-1-outline"></use></svg>Logout
-                                            </button>
+                                            </a>
                                         </div>
                                         <div
                                             class="card border-0 shadow-none drp-upgrade-card mb-0"
@@ -445,8 +445,8 @@
                                     <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
                                 </div>
                                 <div class="flex-grow-1 ms-3 me-2">
-                                    <h6 class="mb-0">Jonh Smith</h6>
-                                    <small>Administrator</small>
+                                    <h6 class="mb-0">Logged-in User</h6>
+                                    <small>Member</small>
                                 </div>
                                 <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
                                     <svg class="pc-icon">
@@ -527,7 +527,7 @@
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -538,7 +538,7 @@
                                         <use xlink:href="#custom-dollar-square"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Bonuses  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                                <span class="pc-mtext">Bonuses  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -570,7 +570,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Downloads  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -581,7 +581,7 @@
                                         <use xlink:href="#custom-message-2"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Support Tickets  &nbsp;<span class="badge bg-light-warning">Coming Soon</span></span>
+                                <span class="pc-mtext">Support Tickets  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                     </ul>
