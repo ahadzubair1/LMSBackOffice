@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {}
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
         "projectName": "LMSBackOfficeAPI",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
         "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\obj\\",
+        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+              "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
               }
             }
           }
@@ -72,11 +72,11 @@
         }
       }
     },
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "projectName": "LMSBackOfficeDAL",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

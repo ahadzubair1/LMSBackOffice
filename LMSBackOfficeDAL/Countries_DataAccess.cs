@@ -13,7 +13,7 @@ namespace LMSBackOfficeDAL
 	public class Countries_DataAccess
 	{
 
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBO;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
         public static List<Country> GetAllCountries()
         {
             List<Country> allCountriesDB = new List<Country>();
