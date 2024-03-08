@@ -215,7 +215,7 @@
                         <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Credit Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Active Wallet</a>
+                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bonus Wallet</a>
                     </li>
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">

@@ -462,7 +462,7 @@
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Network Bonus</h5>
+                                <h5 class="mb-0">Forex Trading Chart</h5>
                             </div>
                             <div class="card-body">
                                 <%--<h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>--%>

@@ -23979,7 +23979,8 @@ pre[class*=language-] {
     2. Custom css end
 ==========================  **/
 .pc-sidebar {
-    background: var(--pc-sidebar-background);
+    /*background: var(--pc-sidebar-background);*/
+    background: #232f45;
     width: 280px;
     position: fixed;
     top: 0;
@@ -24207,8 +24208,9 @@ pre[class*=language-] {
     }
 
 body[data-pc-theme="light"] .pc-sidebar .m-header {
-    background: #edf2ff;
+    background: #232f45;
 }
+
 body[data-pc-theme="dark"] .anim-bg {
     opacity: 0.05;
 }
@@ -24231,7 +24233,8 @@ body[data-pc-theme="dark"] .anim-bg {
     .pc-sidebar .card.pc-user-card {
         margin: 0 15px 15px;
         box-shadow: none;
-        background: var(--pc-sidebar-user-background);
+        /*background: var(--pc-sidebar-user-background);*/
+        background: #fff;
     }
 
         .pc-sidebar .card.pc-user-card .card-body {
@@ -24615,7 +24618,7 @@ body[data-pc-theme="dark"] .anim-bg {
 
 body:not([data-pc-theme="dark"]) .pc-header {
     box-shadow: 0 0 12px 2px #00000030;
-    background: #edf2ff;
+    background: #232f45;
 }
 
 .pc-header ul {
@@ -24727,7 +24730,7 @@ body:not([data-pc-theme="dark"]) .pc-header {
     .pc-header .pc-head-link > i {
         position: relative;
         z-index: 5;
-        color: var(--pc-header-color);
+        color: #fff;
         transition: all 0.08s cubic-bezier(0.37, 0.24, 0.53, 0.99);
     }
 
