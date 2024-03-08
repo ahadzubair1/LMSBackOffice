@@ -230,6 +230,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Memberships.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\apexcharts.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -418,6 +419,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Memberships.aspx.cs">
+      <DependentUpon>Memberships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Memberships.aspx.designer.cs">
+      <DependentUpon>Memberships.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
