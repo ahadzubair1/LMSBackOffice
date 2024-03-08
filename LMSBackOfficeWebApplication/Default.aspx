@@ -6,7 +6,7 @@
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="announcementLabel">What's new announcement?</h5>
+                <h5 class="offcanvas-title" id="announcementLabel">What's new?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -18,15 +18,15 @@
                             <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Able Pro is Redesigned</h5>
-                        <p class="text-muted">Able Pro is completely renowed with high aesthetics User Interface.</p>
-                        <img src="Content/images/layout/img-announcement-1.png" alt="img" class="img-fluid mb-3" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
                                     <a
                                         class="btn btn-outline-secondary"
-                                        href="https://1.envato.market/zNkqj6"
+                                        href="#"
                                         target="_blank">Check Now</a>
                                 </div>
                             </div>
@@ -36,16 +36,23 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-warning f-12">Offer</div>
-                            <p class="mb-0 text-muted">2 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Able Pro is in best offer price</h5>
-                        <p class="text-muted">Download Able Pro exclusive on themeforest with best price. </p>
-                        <a
-                            href="https://1.envato.market/zNkqj6"
-                            target="_blank">
-                            <img src="Content/images/layout/img-announcement-2.png" alt="img" class="img-fluid" /></a>
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -53,25 +60,45 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-primary f-12">Blog</div>
-                            <p class="mb-0 text-muted">12 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Featured Dashboard Template</h5>
-                        <p class="text-muted">Do you know Able Pro is one of the featured dashboard template selected by Themeforest team.?</p>
-                        <img src="Content/images/layout/img-announcement-3.png" alt="img" class="img-fluid" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-primary f-12">Announcement</div>
-                            <p class="mb-0 text-muted">12 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Buy Once - Get Free Updated lifetime</h5>
-                        <p class="text-muted">Get the lifetime free updates once you purchase the Able Pro.</p>
-                        <img src="Content/images/layout/img-announcement-4.png" alt="img" class="img-fluid" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -438,8 +465,9 @@
                                 <h5 class="mb-0">Network Bonus</h5>
                             </div>
                             <div class="card-body">
-                                <h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>
-                                <div id="customer-rate-graph"></div>
+                                <%--<h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>--%>
+                                <%--<div id="customer-rate-graph"></div>--%>
+                                <iframe class="w-100" height="400" src="https://s.tradingview.com/dailyfx/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en#%7B%22symbol%22%3A%22FX_IDC%3AEURUSD%22%2C%22frameElementId%22%3A%22tradingview_4a8b2%22%2C%22interval%22%3A%22D%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22Light%22%2C%22timezone%22%3A%22exchange%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22www.dailyfx.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22FX_IDC%3AEURUSD%22%2C%22page-uri%22%3A%22www.dailyfx.com%2Fcharts%22%7D"></iframe>
                             </div>
                         </div>
                     </div>
@@ -484,7 +512,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -538,7 +566,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">

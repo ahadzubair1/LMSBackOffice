@@ -5,7 +5,7 @@
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="announcementLabel">What's new announcement?</h5>
+                <h5 class="offcanvas-title" id="announcementLabel">What's new?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -17,15 +17,15 @@
                             <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Able Pro is Redesigned</h5>
-                        <p class="text-muted">Able Pro is completely renowed with high aesthetics User Interface.</p>
-                        <img src="Content/images/layout/img-announcement-1.png" alt="img" class="img-fluid mb-3" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
                                     <a
                                         class="btn btn-outline-secondary"
-                                        href="https://1.envato.market/zNkqj6"
+                                        href="#"
                                         target="_blank">Check Now</a>
                                 </div>
                             </div>
@@ -35,16 +35,23 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-warning f-12">Offer</div>
-                            <p class="mb-0 text-muted">2 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Able Pro is in best offer price</h5>
-                        <p class="text-muted">Download Able Pro exclusive on themeforest with best price. </p>
-                        <a
-                            href="https://1.envato.market/zNkqj6"
-                            target="_blank">
-                            <img src="Content/images/layout/img-announcement-2.png" alt="img" class="img-fluid" /></a>
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -52,25 +59,45 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-primary f-12">Blog</div>
-                            <p class="mb-0 text-muted">12 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Featured Dashboard Template</h5>
-                        <p class="text-muted">Do you know Able Pro is one of the featured dashboard template selected by Themeforest team.?</p>
-                        <img src="Content/images/layout/img-announcement-3.png" alt="img" class="img-fluid" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="align-items-center d-flex flex-wrap gap-2 mb-3">
-                            <div class="badge bg-light-primary f-12">Announcement</div>
-                            <p class="mb-0 text-muted">12 hour ago</p>
+                            <div class="badge bg-light-success f-12">Big News</div>
+                            <p class="mb-0 text-muted">2 min ago</p>
                             <span class="badge dot bg-warning"></span>
                         </div>
-                        <h5 class="mb-3">Buy Once - Get Free Updated lifetime</h5>
-                        <p class="text-muted">Get the lifetime free updates once you purchase the Able Pro.</p>
-                        <img src="Content/images/layout/img-announcement-4.png" alt="img" class="img-fluid" />
+                        <h5 class="mb-3">Forex Today</h5>
+                        <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
+                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <a
+                                        class="btn btn-outline-secondary"
+                                        href="#"
+                                        target="_blank">Check Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,172 +153,5 @@
                 </div>
             </div>
         </footer>
-        <div class="pct-c-btn">
-            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_pc_layout">
-                <i class="ph-duotone ph-gear-six"></i>
-            </a>
-        </div>
-        <div class="offcanvas border-0 pct-offcanvas offcanvas-end" tabindex="-1" id="offcanvas_pc_layout">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Settings</h5>
-                <button type="button" class="btn btn-icon btn-link-danger" data-bs-dismiss="offcanvas" aria-label="Close">
-                    <i
-                        class="ti ti-x"></i>
-                </button>
-            </div>
-            <div class="pct-body customizer-body">
-                <div class="offcanvas-body py-0">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="pc-dark">
-                                <h6 class="mb-1">Theme Mode</h6>
-                                <p class="text-muted text-sm">Choose light or dark mode or Auto</p>
-                                <div class="row theme-color theme-layout">
-                                    <div class="col-4">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn active" data-value="true" onclick="layout_change('light');" data-bs-toggle="tooltip" title="Light">
-                                                <svg class="pc-icon text-warning">
-                                                    <use xlink:href="#custom-sun-1"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn" data-value="false" onclick="layout_change('dark');" data-bs-toggle="tooltip" title="Dark">
-                                                <svg class="pc-icon">
-                                                    <use xlink:href="#custom-moon"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn" data-value="default" onclick="layout_change_default();"
-                                                data-bs-toggle="tooltip" title="Automatically sets the theme based on user's operating system's color scheme.">
-                                                <span class="pc-lay-icon d-flex align-items-center justify-content-center">
-                                                    <i class="ph-duotone ph-cpu"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <h6 class="mb-1">Theme Contrast</h6>
-                            <p class="text-muted text-sm">Choose theme contrast</p>
-                            <div class="row theme-contrast">
-                                <div class="col-6">
-                                    <div class="d-grid">
-                                        <button class="preset-btn btn" data-value="true" onclick="layout_theme_contrast_change('true');" data-bs-toggle="tooltip" title="True">
-                                            <svg class="pc-icon">
-                                                <use xlink:href="#custom-mask"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="d-grid">
-                                        <button class="preset-btn btn active" data-value="false" onclick="layout_theme_contrast_change('false');" data-bs-toggle="tooltip" title="False">
-                                            <svg class="pc-icon">
-                                                <use xlink:href="#custom-mask-1-outline"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <h6 class="mb-1">Custom Theme</h6>
-                            <p class="text-muted text-sm">Choose your primary theme color</p>
-                            <div class="theme-color preset-color">
-                                <a href="#!" data-bs-toggle="tooltip" title="Blue" class="active" data-value="preset-1"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Indigo" data-value="preset-2"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Purple" data-value="preset-3"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Pink" data-value="preset-4"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Red" data-value="preset-5"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Orange" data-value="preset-6"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Yellow" data-value="preset-7"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Green" data-value="preset-8"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Teal" data-value="preset-9"><i class="ti ti-checks"></i></a>
-                                <a href="#!" data-bs-toggle="tooltip" title="Cyan" data-value="preset-10"><i class="ti ti-checks"></i></a>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <h6 class="mb-1">Sidebar Caption</h6>
-                            <p class="text-muted text-sm">Sidebar Caption Hide/Show</p>
-                            <div class="row theme-color theme-nav-caption">
-                                <div class="col-6">
-                                    <div class="d-grid">
-                                        <button class="preset-btn btn-img btn active" data-value="true" onclick="layout_caption_change('true');" data-bs-toggle="tooltip" title="Caption Show">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-on.svg" alt="img" class="img-fluid">
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="d-grid">
-                                        <button class="preset-btn btn-img btn" data-value="false" onclick="layout_caption_change('false');" data-bs-toggle="tooltip" title="Caption Hide">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-off.svg" alt="img" class="img-fluid">
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="pc-rtl">
-                                <h6 class="mb-1">Theme Layout</h6>
-                                <p class="text-muted text-sm">LTR/RTL</p>
-                                <div class="row theme-color theme-direction">
-                                    <div class="col-6">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn-img btn active" data-value="false" onclick="layout_rtl_change('false');" data-bs-toggle="tooltip" title="LTR">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/ltr.svg" alt="img" class="img-fluid">
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn-img btn" data-value="true" onclick="layout_rtl_change('true');" data-bs-toggle="tooltip" title="RTL">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/rtl.svg" alt="img" class="img-fluid">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item pc-box-width">
-                            <div class="pc-container-width">
-                                <h6 class="mb-1">Layout Width</h6>
-                                <p class="text-muted text-sm">Choose Full or Container Layout</p>
-                                <div class="row theme-color theme-container">
-                                    <div class="col-6">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn-img btn active" data-value="false" onclick="change_box_container('false')" data-bs-toggle="tooltip" title="Full Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/full.svg" alt="img" class="img-fluid">
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="d-grid">
-                                            <button class="preset-btn btn-img btn" data-value="true" onclick="change_box_container('true')" data-bs-toggle="tooltip" title="Fixed Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/fixed.svg" alt="img" class="img-fluid">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="list-group-item">
-                            <div class="d-grid">
-                                <asp:GridView ID="gvwBonusType" runat="server"></asp:GridView>
-                                <button class="btn btn-light-danger" id="layoutreset">Reset Layout</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </main>
 </asp:Content>
