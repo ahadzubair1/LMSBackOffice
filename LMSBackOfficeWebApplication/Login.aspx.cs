@@ -29,7 +29,7 @@ namespace LMSBackOfficeWebApplication
                 this.successMessage.Value = "true";
                 Session["Username"] = username;
                 Login_DataAccess.AddLogin(username, password);
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/Dashboard.aspx");
                 
             }
             else

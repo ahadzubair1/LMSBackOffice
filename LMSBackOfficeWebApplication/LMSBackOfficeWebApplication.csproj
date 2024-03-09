@@ -226,7 +226,7 @@
     <Content Include="Content\style.css" />
     <Content Include="Content\tabler-icons.min.css" />
     <Content Include="KYC.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
@@ -403,12 +403,12 @@
     <Compile Include="KYC.aspx.designer.cs">
       <DependentUpon>KYC.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

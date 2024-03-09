@@ -6,7 +6,7 @@
         <title></title>
         <!-- Include common CSS files -->
         
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
         <link href="./Content/css/style.css" rel="stylesheet" />
         <link href="./Content/css/icons.css" rel="stylesheet" />
  <link href="./Content/css/typography.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a href="#master-head">about us</a> </li>
                     <li> <a href="#v-course-list">courses</a> </li>
-                    <li> <a href="">memberships</a> </li>
+                    <li> <a href="#">memberships</a> </li>
                     <li> <a href="#v-educators">educators</a> </li>
                   </ul>
                 </div>
@@ -31,7 +31,7 @@
     <div class="row gap-3 gap-md-0 align-items-center flex-column flex-md-row just-content-center justify-content-md-between">
       <div class="col flex-grow-0 d-flex justify-content-center align-items-center gap-4">
         <i class="icon-fi-br-menu-burger d-md-none"></i>
-        <a href="/"><img src="./Content/images/tradiix-logo.png" alt="Vewards" class="header-logo"></a>
+        <a href="/"><img src="./Content/images/tradiix-logo.png" alt="Vewards" class="header-logo"/></a>
       </div>
       <div class="col flex-grow-1 d-none d-lg-block">
         <div class="header-nav">
@@ -39,7 +39,7 @@
             <li> <a href="index.html">Home</a> </li>
             <li> <a href="#master-head">about us</a> </li>
             <li> <a href="#v-course-list">courses</a> </li>
-            <li> <a href="">memberships</a> </li>
+            <li> <a href="#">memberships</a> </li>
             <li> <a href="#v-educators">educators</a> </li>
           </ul>
         </div>
@@ -67,7 +67,7 @@
         <div class="captionbox">
           <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
           <p>Your journey to a transformed financial future starts here. Welcome to Tradiix, where possibilities become profits!</p>
-          <a href="" target="_blank"><button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</button></a>
+          <button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</button>
         </div>
       </div>
       <div class="col-md-4">
@@ -77,11 +77,11 @@
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">
             <label for="" class="text-white">What's your username?</label>
-            <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server">
+            <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server"/>
           </div>
           <div class="mb-3">
             <label for="" class="text-white">Your password?</label>
-            <input class="form-control" type="password" name="password" id="password" placeholder="password" required="required" runat="server">
+            <input class="form-control" type="password" name="password" id="password" placeholder="password" required="required" runat="server"/>
           </div>
              <input type="hidden" id="successMessage" value="false" runat="server" />
           <div class="mb-3">
@@ -98,4 +98,4 @@
 </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
-</html>
+    </html>
