@@ -311,11 +311,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
       "projectName": "LMSBackOfficeWebApp",
-      "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+      "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
       "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeWebApp\\obj\\",
+      "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -332,11 +332,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
-              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
+            "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
             },
-            "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+            "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+              "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
             }
           }
         }

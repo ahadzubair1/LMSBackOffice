@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8U75Wloy7EMwDsyG1lu3YEAZLMeHIR/h7S3lQlaqn8TyWfbeXKZt/92VMRxi7H7zjGg2tLr9981/MCKc3uxfFQ==",
+  "dgSpecHash": "zJ0ze2jdrTK9E3EV6NpATRcL/MxSwFEkxWNWbjA6x7OWicIdI8d5Sg3aAMfNACICqFaSOPQcFwzhAUsQ09tOMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
+  "projectFilePath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Reshma\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Reshma\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
