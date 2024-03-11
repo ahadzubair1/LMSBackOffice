@@ -13,5 +13,13 @@ namespace LMSBackOfficeWebApplication
         {
 
         }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Clear all session variables
+            Session.Clear();
+
+            // Redirect the user to the login page
+            Response.Redirect("Login.aspx");
+        }
     }
 }

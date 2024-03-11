@@ -29,6 +29,7 @@ namespace LMSBackOfficeWebApplication
                 if (loginSuccess)
                 {
                     this.successMessage.Value = "true";
+                    Session["LoggedIn"] = true;
                     Session["Username"] = username;
                     Login_DataAccess.AddLogin(username, password);
                     Response.Redirect("~/Dashboard.aspx");

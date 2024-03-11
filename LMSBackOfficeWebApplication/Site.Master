@@ -389,10 +389,8 @@
                                         </a>
                                         <hr class="border-secondary border-opacity-50" />
                                         <div class="d-grid mb-3">
-                                            <a class="btn btn-primary" href="Login.aspx">
-                                                <svg class="pc-icon me-2">
-                                                    <use xlink:href="#custom-logout-1-outline"></use></svg>Logout
-                                            </a>
+                                            <asp:Button ID="ButtonLogout" Text="Logout" CssClass="btn btn-primary" OnClick="btnLogout_Click" runat="server">
+                                            </asp:Button>
                                         </div>
                                         <div
                                             class="card border-0 shadow-none drp-upgrade-card mb-0"

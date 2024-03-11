@@ -27,6 +27,11 @@ namespace LMSBackOfficeWebApplication
                 /*gvwBonusType.DataSource = null;*/
                 ShowBonusTypes();
             }
+            if (Session["LoggedIn"] == null || !(bool)Session["LoggedIn"])
+            {
+                // Redirect back to login page if not authenticated
+                Response.Redirect("Login.aspx");
+            }
 
         }
 
