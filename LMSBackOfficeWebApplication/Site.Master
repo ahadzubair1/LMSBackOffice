@@ -389,8 +389,7 @@
                                         </a>
                                         <hr class="border-secondary border-opacity-50" />
                                         <div class="d-grid mb-3">
-                                            <asp:Button ID="ButtonLogout" Text="Logout" CssClass="btn btn-primary" OnClick="btnLogout_Click" runat="server">
-                                            </asp:Button>
+                                            <asp:Button ID="ButtonLogout" Text="Logout" CssClass="btn btn-primary" OnClick="btnLogout_Click" runat="server"></asp:Button>
                                         </div>
                                         <div
                                             class="card border-0 shadow-none drp-upgrade-card mb-0"
@@ -444,7 +443,7 @@
                                 </div>
                                 <div class="flex-grow-1 ms-3 me-2">
                                     <h6 class="mb-0">Logged-In</h6>
-                                    <small style="text-transform:capitalize"><%= Session["Username"] %></small>
+                                    <small style="text-transform: capitalize"><%= Session["Username"] %></small>
                                 </div>
                                 <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
                                     <svg class="pc-icon">
@@ -493,7 +492,7 @@
                                         <use xlink:href="#custom-document-filter"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">KYC</span>
+                                <span class="pc-mtext">KYC  &nbsp;<span class="badge bg-primary-t">Pending</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -525,7 +524,7 @@
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Network</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -536,7 +535,7 @@
                                         <use xlink:href="#custom-dollar-square"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Bonuses  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Bonuses</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -568,7 +567,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Tools</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -579,7 +578,7 @@
                                         <use xlink:href="#custom-message-2"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Support Tickets  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Support Tickets</span>
                             </a>
                         </li>
                     </ul>
