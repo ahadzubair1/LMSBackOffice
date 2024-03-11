@@ -21,10 +21,10 @@ namespace LMSBackOfficeDAL
 			DataSet dsBonusTypes = null;
 			try
 			{
-                //var Constring = new System.Configuration.ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString;
-                //var  Constring = new SqlConnection(ConfigurationSettings.AppSettings["LMSBOConnectionString"]);
-                //var Constring = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString);
-                SqlConnection Connection = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBO;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000");
+                //var Constring = new System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
+                //var  Constring = new SqlConnection(ConfigurationSettings.AppSettings["LMSBackOfficeConnectionString"]);
+                //var Constring = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString);
+                SqlConnection Connection = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000");
 				Connection.Open();
 				SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_GetAllBonusTypes", Connection);
 

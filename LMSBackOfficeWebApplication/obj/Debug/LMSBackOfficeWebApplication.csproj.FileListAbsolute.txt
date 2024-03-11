@@ -226,3 +226,7 @@ C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\obj\De
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CopyComplete
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
+C:\Users\ahad_\Downloads\LMSBackOffice-main\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.AssemblyReference.cache
+C:\Users\ahad_\Downloads\LMSBackOffice-main\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
+C:\Users\ahad_\Downloads\LMSBackOffice-main\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
+C:\Users\ahad_\Downloads\LMSBackOffice-main\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb

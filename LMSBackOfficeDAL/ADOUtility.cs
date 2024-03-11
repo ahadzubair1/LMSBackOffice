@@ -34,7 +34,7 @@ namespace LMSBackOfficeDAL
         /// <returns></returns>
         //public static string GetCoreDatabaseConnectionString()
         //{
-        //    return System.Configuration.ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString;
+        //    return System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         //}
 
 
@@ -87,7 +87,7 @@ namespace LMSBackOfficeDAL
             {
                  DataSet dsAddressInfo = null;
                 SqlConnection Connection = new SqlConnection("Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000");
-                //string Constring = System.Configuration.ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString;
+                //string Constring = System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
                 // SqlConnection Connection = new SqlConnection(Constring);
                 //SqlDataAdapter DataAdapter = new SqlDataAdapter("GetMerchantAddresses", Connection);
 
@@ -129,7 +129,7 @@ namespace LMSBackOfficeDAL
 
     		SqlCommand objCommand = new SqlCommand();
             SqlDataAdapter sda = new SqlDataAdapter();
-            //string Constring = System.Configuration.ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString;
+            //string Constring = System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
             //SqlConnection Connection = new SqlConnection("Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000");
             DataTable dtTbl = new DataTable();
             string sqlString = string.Empty;
@@ -318,7 +318,7 @@ namespace LMSBackOfficeDAL
         {
 
             string Constring = "Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000";
-            //SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString); 
+            //SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString); 
             SqlConnection Connection = new SqlConnection(Constring);
             Connection.Open();
             SqlCommand cmd = new SqlCommand(sql, Connection);
@@ -336,7 +336,7 @@ namespace LMSBackOfficeDAL
 
         //public static DataTable ExecuteQuery(SqlCommand command)
         //{
-        //    SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBOConnectionString"].ConnectionString);
+        //    SqlConnection Connection = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString);
         //    try
         //    {
         //        DataSet dsCR = null;

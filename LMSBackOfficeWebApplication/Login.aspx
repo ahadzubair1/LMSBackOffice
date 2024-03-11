@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Login" Language="C#" CodeBehind="Login.aspx.cs" Inherits="LMSBackOfficeWebApplication.Login" %>
+<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
@@ -11,17 +11,19 @@
         <link href="./Content/css/icons.css" rel="stylesheet" />
  <link href="./Content/css/typography.css" rel="stylesheet" />
     </head>
-    <header class="v-header w-100 py-3">
+   
+<body>
+        <header class="v-header w-100 py-3">
         <div class="mobilenav d-lg-none">
             <div class="collapse" id="navbarToggleExternalContent">
               <div class="bg-dark p-4">
                 <div class="header-nav">
                   <ul class="p-0 m-0">
                     <li> <a href="index.html">Home</a> </li>
-                    <li> <a href="#master-head">about us</a> </li>
-                    <li> <a href="#v-course-list">courses</a> </li>
+                    <li> <a href="#master-head">About Us</a> </li>
+                    <li> <a href="#v-course-list">Courses</a> </li>
                     <li> <a href="#">memberships</a> </li>
-                    <li> <a href="#v-educators">educators</a> </li>
+                    <li> <a href="#v-educators">Educators</a> </li>
                   </ul>
                 </div>
               </div>
@@ -59,7 +61,6 @@
     </div>
   </div>
 </header>
-<body>
     <section id="master-head" class="pb-5"><!-- Master Header -->
   <div class="container py-5 pt-xs-0 position-relative">
     <div class="row align-items-center">
@@ -76,13 +77,22 @@
         </div>
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">
-            <label for="" class="text-white">What's your username?</label>
+            <label for="" class="text-white">What's Your Username?</label>
             <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server"/>
           </div>
           <div class="mb-3">
-            <label for="" class="text-white">Your password?</label>
-            <input class="form-control" type="password" name="password" id="password" placeholder="password" required="required" runat="server"/>
+            <label for="" class="text-white">Your Password?</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server"/>
           </div>
+
+            <div class="mb-3">
+
+                <cc1:CaptchaControl runat="server" ID="ccLink" CaptchaMaxTimeout="180" CaptchaMinTimeout="5" CaptchaLineNoise="Medium" CaptchaFontWarping="Medium" CaptchaLength="5" Arithmetic="true" Width="180px" />
+                <asp:TextBox class="from-control" ID="txtCaptcha" runat="server" CausesValidation="true" Width="182px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="* Valid Value is Required"
+                ControlToValidate="txtCaptcha" Display="Dynamic"></asp:RequiredFieldValidator>
+            </div>
+
              <input type="hidden" id="successMessage" value="false" runat="server" />
           <div class="mb-3">
              <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Login" id="btnSubmit" runat="server" onserverclick="btnLogin_Click" />

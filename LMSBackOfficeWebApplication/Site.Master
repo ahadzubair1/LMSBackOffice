@@ -445,7 +445,7 @@
                                     <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
                                 </div>
                                 <div class="flex-grow-1 ms-3 me-2">
-                                    <h6 class="mb-0">Logged-in User</h6>
+                                    <h6 class="mb-0">Logged-In</h6>
                                     <small>Member</small>
                                 </div>
                                 <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
@@ -479,7 +479,7 @@
 
                     <ul class="pc-navbar">
                         <li class="pc-item">
-                            <a href="Default.aspx" class="pc-link">
+                            <a href="Dashboard.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-status-up"></use>

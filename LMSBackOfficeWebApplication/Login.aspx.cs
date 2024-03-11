@@ -19,26 +19,38 @@ namespace LMSBackOfficeWebApplication
         {
             string username = this.username.Value;
             string password = this.password.Value;
-            
+
 
             // Process the form data (e.g., save to database, send email, etc.)
-            // You can write your logic here
-            bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
-            if (loginSuccess)
+            ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            if (ccLink.UserValidated)
             {
-                this.successMessage.Value = "true";
-                Session["Username"] = username;
-                Login_DataAccess.AddLogin(username, password);
-                Response.Redirect("~/Dashboard.aspx");
-                
+                bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
+                if (loginSuccess)
+                {
+                    this.successMessage.Value = "true";
+                    Session["Username"] = username;
+                    Login_DataAccess.AddLogin(username, password);
+                    Response.Redirect("~/Dashboard.aspx");
+
+                }
+                else
+                {
+                    this.successMessage.Value = "false";
+                    Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                    ResponseMessage.InnerText = "Login Failed: Invalid Credentials";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#e012ee");
+                }
             }
             else
             {
                 this.successMessage.Value = "false";
                 Response.AddHeader("REFRESH", "5;URL=Login.aspx");
-                ResponseMessage.InnerText = "Login Failed";
+                ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#e012ee");
+
             }
         }
         /* protected void Page_Load(object sender, EventArgs e)

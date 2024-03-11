@@ -11,7 +11,7 @@ namespace LMSBackOfficeWebApplication
 {
 
 
-    public partial class _Dashboard
+    public partial class Dashboard
     {
 
         /// <summary>

@@ -16,7 +16,7 @@ using LMSBackofficeDAL;
 
 namespace LMSBackOfficeWebApplication
 {
-    public partial class _Dashboard : Page
+    public partial class Dashboard : Page
     {
         DataTable dtBonusTypes = new DataTable();
         protected void Page_Load(object sender, EventArgs e)

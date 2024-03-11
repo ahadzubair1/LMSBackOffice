@@ -44,7 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MSCaptcha.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -94,11 +101,6 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +227,74 @@
     <Content Include="Content\style-preset.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\tabler-icons.min.css" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-grid.rtl.css" />
+    <Content Include="css\bootstrap-grid.rtl.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap-reboot.rtl.css" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="css\bootstrap-utilities.css" />
+    <Content Include="css\bootstrap-utilities.min.css" />
+    <Content Include="css\bootstrap-utilities.rtl.css" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.rtl.css" />
+    <Content Include="css\bootstrap.rtl.min.css" />
+    <Content Include="css\icons.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\typography.css" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="img\7.png" />
+    <Content Include="img\74bfa33cdc60f1991bff9c8c91b566cf.png" />
+    <Content Include="img\articles.png" />
+    <Content Include="img\ba6f6fd07961c104f091238cd53c9cf0.png" />
+    <Content Include="img\background-sublime.png" />
+    <Content Include="img\bg-glow.svg" />
+    <Content Include="img\bg-gradient.png" />
+    <Content Include="img\big-money.png" />
+    <Content Include="img\c5048531a4f3b6509542ac2b0aee71e8.png" />
+    <Content Include="img\cardbg.png" />
+    <Content Include="img\crypto-circle.svg" />
+    <Content Include="img\crypto-decryption.png" />
+    <Content Include="img\d723f859f444d4f8bf2720057554ff35.png" />
+    <Content Include="img\finance.png" />
+    <Content Include="img\financially-fit-for-life.png" />
+    <Content Include="img\forex-circle.svg" />
+    <Content Include="img\Kwame-Opoku.png" />
+    <Content Include="img\Levyn-Cornu.png" />
+    <Content Include="img\masterhead-bg.png" />
+    <Content Include="img\Nathan-Williams.png" />
+    <Content Include="img\nft-blog.png" />
+    <Content Include="img\Nickolas-Leonida.png" />
+    <Content Include="img\rct-1.png" />
+    <Content Include="img\rct-2.png" />
+    <Content Include="img\smart-money.png" />
+    <Content Include="img\Steven-Down.png" />
+    <Content Include="img\stock-market.svg" />
+    <Content Include="img\student-1.png" />
+    <Content Include="img\student-2.png" />
+    <Content Include="img\student-3.png" />
+    <Content Include="img\student-4.png" />
+    <Content Include="img\student-5.png" />
+    <Content Include="img\student-6.png" />
+    <Content Include="img\sublime-footer.svg" />
+    <Content Include="img\sublime-lg.svg" />
+    <Content Include="img\tradiix-logo.png" />
+    <Content Include="img\unlock-ichimoku.png" />
+    <Content Include="img\webinar.png" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.esm.js" />
+    <Content Include="js\bootstrap.esm.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.6.0.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\script.js" />
     <Content Include="KYC.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="favicon.ico" />
@@ -339,6 +409,57 @@
     <Content Include="Scripts\dataTables.bootstrap5.min.css" />
     <Content Include="Scripts\dataTables.min.js" />
     <Content Include="Wallets.aspx" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="css\bootstrap-utilities.css.map" />
+    <Content Include="css\bootstrap-utilities.min.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\bootstrap.rtl.css.map" />
+    <Content Include="css\bootstrap.rtl.min.css.map" />
+    <Content Include="fonts\Gotham-Black.woff" />
+    <Content Include="fonts\Gotham-Black.woff2" />
+    <Content Include="fonts\Gotham-Bold.woff" />
+    <Content Include="fonts\Gotham-Bold.woff2" />
+    <Content Include="fonts\Gotham-BoldItalic.woff" />
+    <Content Include="fonts\Gotham-BoldItalic.woff2" />
+    <Content Include="fonts\Gotham-Book.woff" />
+    <Content Include="fonts\Gotham-Book.woff2" />
+    <Content Include="fonts\Gotham-BookItalic.woff" />
+    <Content Include="fonts\Gotham-BookItalic.woff2" />
+    <Content Include="fonts\Gotham-Light.woff" />
+    <Content Include="fonts\Gotham-Light.woff2" />
+    <Content Include="fonts\Gotham-LightItalic.woff" />
+    <Content Include="fonts\Gotham-LightItalic.woff2" />
+    <Content Include="fonts\Gotham-Medium.woff" />
+    <Content Include="fonts\Gotham-Medium.woff2" />
+    <Content Include="fonts\Gotham-Thin.woff" />
+    <Content Include="fonts\Gotham-Thin.woff2" />
+    <Content Include="fonts\Gotham-ThinItalic.woff" />
+    <Content Include="fonts\Gotham-ThinItalic.woff2" />
+    <Content Include="fonts\Gotham-UltraItalic.woff" />
+    <Content Include="fonts\Gotham-UltraItalic.woff2" />
+    <Content Include="fonts\Gotham-XLight.woff" />
+    <Content Include="fonts\Gotham-XLight.woff2" />
+    <Content Include="fonts\Gotham-XLightItalic.woff" />
+    <Content Include="fonts\Gotham-XLightItalic.woff2" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.esm.js.map" />
+    <Content Include="js\bootstrap.esm.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\custom-font.js" />
     <Content Include="Scripts\dashboard-default.js" />

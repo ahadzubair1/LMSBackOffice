@@ -1,4 +1,4 @@
-<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication._Dashboard" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -504,7 +504,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>GHhVBEyulLPK9dM2sdTn_R</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>

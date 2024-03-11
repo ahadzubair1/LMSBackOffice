@@ -62,7 +62,7 @@ namespace LMSBackOfficeDAL
         //	}
         //}
 
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBO;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
         public static string AddMember(string name, string username,string email, string password, string referredByParentId,int position, string phone, string country)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
