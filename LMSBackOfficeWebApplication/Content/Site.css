@@ -25,7 +25,13 @@ select,
 textarea {
     max-width: 280px;
 }
-
+.up-elev {
+    box-shadow: 0 -5px 20px -10px #00000094;
+}
+.t-card .avtar.avtar-s {
+    box-shadow: 0 0 10px 1px #fff;
+    border: 2px solid #fff;
+}
 body[data-pc-theme="light"] .card-header {
     background: #232f44;
 }
@@ -307,9 +313,15 @@ body:not([data-pc-theme="dark"]) .pc-footer {
             background: #dd12ec;
             color: #fff;
         }
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
-    }
+
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link::after {
+    background: #de0eed;
+    opacity: 1;
+    z-index: -1;
 }
+    /* Responsive: Portrait tablets and up */
+    @media screen and (min-width: 768px) {
+        .body-content {
+            padding: 0;
+        }
+    }
