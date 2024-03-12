@@ -218,7 +218,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
 .banner img {
-    filter: blur(30px)
+    filter: blur(13px)
 }
 
 .leaf {

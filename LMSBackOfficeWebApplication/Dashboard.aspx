@@ -1,4 +1,4 @@
-<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
+﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -246,7 +246,7 @@
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
-                                    <div class="mt-3 row align-items-center">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
                                         </div>
@@ -345,7 +345,7 @@
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
-                                    <div class="mt-3 row align-items-center">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
                                         </div>
@@ -404,9 +404,9 @@
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
-                                    <div class="mt-3 row align-items-center">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
-                                            <h5 class="font-semibold">Explorer+</h5>
+                                            <h5 class="font-semibold m-0">Explorer+</h5>
                                         </div>
                                         <div class="col-5">
                                             <h5 class="mb-1">$500</h5>
@@ -446,13 +446,12 @@
                                     </div>
                                 </div>
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
-                                    <div class="mt-3 row align-items-center">
-                                        <div class="col-7">
-                                            <div id="download-graph"></div>
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <h1 class="font-semibold m-0">7</h1>
                                         </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">2,067</h5>
-                                            <p class="text-danger mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
+                                        <div class="col-10">
+                                            <p class="mb-0"><span class="text-warning">🌟</span> Earn More Rewards</p>
                                         </div>
                                     </div>
                                 </div>
@@ -478,22 +477,12 @@
                             </div>
                             <div class="card-body">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-link-secondary bg-info-subtle">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-grow-1 mx-2">
-                                                <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">https://www.tradiix.com/</span>
-                                                </p>
-                                            </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
-                                        </div>
-                                    </a>
                                     <a href="#" class="btn btn-link-secondary bg-warning-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -504,7 +493,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>GHhVBEyulLPK9dM2sdTn_R</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
