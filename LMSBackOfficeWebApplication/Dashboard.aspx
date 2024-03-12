@@ -517,7 +517,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
-                                            <svg class="pc-icon"> <use xlink:href="#custom-user"></use> </svg>
+                                            <svg class="pc-icon">
+                                                <use xlink:href="#custom-user"></use>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
@@ -557,7 +559,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
-                                            <svg class="pc-icon"> <use xlink:href="#custom-user"></use> </svg>
+                                            <svg class="pc-icon">
+                                                <use xlink:href="#custom-user"></use>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
@@ -593,8 +597,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card">
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h5 class="mb-0">Purchased Memberships</h5>
@@ -646,8 +650,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-body border-bottom pb-0">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -887,6 +889,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- [ Main Content ] end -->
             </div>

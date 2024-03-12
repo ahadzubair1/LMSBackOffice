@@ -156,6 +156,11 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     margin-bottom: 3rem;
 }
 
+.ranks-wrapper {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
 .mbox {
     border: 3px solid #d014e4;
     border-radius: 10px;
@@ -168,7 +173,31 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     background: radial-gradient(#af168a,#580b63);
     color: white;
     box-shadow: 0 0 0px 2px #fff inset;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px -18px #000000b2;
+    transition: all ease 0.4s;
 }
+
+    .mbox:before {
+        content: "";
+        background: rgba(255, 255, 255, 0.12);
+        width: 30%;
+        height: calc(100% + 300px);
+        position: absolute;
+        left: -30%;
+        top: -120px;
+        transform: rotate(30deg);
+        transition: all ease 0.4s;
+    }
+
+    .mbox:hover:before {
+        left: 100%;
+    }
+
+    .mbox:hover {
+        transform: rotateX(10deg) rotateY(-4deg) rotateZ(-2deg);
+    }
 
     .mbox .featurebox h6 {
         border-bottom: 1px solid #fff;
