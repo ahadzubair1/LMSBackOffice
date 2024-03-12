@@ -1,4 +1,4 @@
-<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
+﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -242,76 +242,17 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Direct Bonus</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Direct Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
                                         </div>
                                         <div class="col-5">
                                             <h5 class="mb-1">$3,020</h5>
                                             <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xxl-3">
-                        <div class="card t-card membership">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 13H12"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 17H16"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Membership</h6>
-                                    </div>
-                                </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
-                                        <div class="col-7">
-                                            <div id="page-views-graph"></div>
-                                        </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">290K+</h5>
-                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
                                         </div>
                                     </div>
                                 </div>
@@ -400,17 +341,76 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">KYC Status</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Network Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">839</h5>
-                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>New</p>
+                                            <h5 class="mb-1">$304.67</h5>
+                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>44.2%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xxl-3">
+                        <div class="card t-card membership">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-warning">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 13H12"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 17H16"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0 font-semibold text-white">Membership</h6>
+                                    </div>
+                                </div>
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
+                                        <div class="col-7">
+                                            <h5 class="font-semibold m-0">Explorer+</h5>
+                                        </div>
+                                        <div class="col-5">
+                                            <h5 class="mb-1">$500</h5>
+                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>1 Year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -442,17 +442,16 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Direct Referrals</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Rewards Achieved</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
-                                        <div class="col-7">
-                                            <div id="download-graph"></div>
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <h1 class="font-semibold m-0">7</h1>
                                         </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">2,067</h5>
-                                            <p class="text-danger mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
+                                        <div class="col-10">
+                                            <p class="mb-0"><span class="text-warning">🌟</span> Earn More Rewards</p>
                                         </div>
                                     </div>
                                 </div>
@@ -478,22 +477,12 @@
                             </div>
                             <div class="card-body">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-link-secondary bg-info-subtle">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-grow-1 mx-2">
-                                                <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">https://www.tradiix.com/</span>
-                                                </p>
-                                            </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
-                                        </div>
-                                    </a>
                                     <a href="#" class="btn btn-link-secondary bg-warning-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -504,7 +493,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>GHhVBEyulLPK9dM2sdTn_R</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>

@@ -13,17 +13,43 @@ body[data-pc-theme="light"] .pc-sidebar .pc-link {
 .card {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+.pct-c-btn{
+    display: none;
+}
+@keyframes bgmove {
+    0% {
+        background-position: top right;
+    }
+
+    50% {
+        background-position: bottom left;
+    }
+
+    100% {
+        background-position: left top;
+    }
+}
 
 body[data-pc-theme="light"] .pc-content {
     background: url(../Content/images/bodybg.jpg);
     background-size: cover;
     background-attachment: fixed;
+    animation: bgmove 50s ease infinite;
 }
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.up-elev {
+    box-shadow: 0 -5px 20px -10px #00000094;
+}
+
+.t-card .avtar.avtar-s {
+    box-shadow: 0 0 10px 1px #fff;
+    border: 2px solid #fff;
 }
 
 body[data-pc-theme="light"] .card-header {
@@ -124,6 +150,25 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     margin-bottom: 3rem;
 }
 
+.mbox {
+    border: 3px solid #d014e4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 1rem 0;
+    background: radial-gradient(#af168a,#580b63);
+    color: white;
+    box-shadow: 0 0 0px 2px #fff inset;
+}
+
+    .mbox .featurebox h6 {
+        border-bottom: 1px solid #fff;
+        padding: 0.7rem 0;
+    }
+
 .ranks-wrapper.m .item {
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -201,7 +246,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
 .banner img {
-    filter: blur(30px)
+    filter: blur(13px)
 }
 
 .leaf {
@@ -307,6 +352,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
             background: #dd12ec;
             color: #fff;
         }
+
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link::after {
+    background: #de0eed;
+    opacity: 1;
+    z-index: -1;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {
