@@ -113,8 +113,14 @@
                 <!-- Banner -->
                 <div class="banner">
                     <div class="banner-caption">
-                        <h2 class="text-white">Get Signup Bonus</h2>
-                        <p class="m-0">Unlock Rewards Now! Sign up and receive your exclusive signup bonus today. Don't miss out on this limited-time offer to enjoy exciting perks and benefits. Join our community and start experiencing the rewards immediately. Sign up now!</p>
+                        <div class="orbit">
+                            <div class="rocket">
+                                <img src="Content/images/fire-lit.gif">
+                                <div class="window"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-white">Welcome!</h2>
+                        <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -188,6 +194,10 @@
                         <div>
                             <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
                         </div>
+                    </div>
+                    <div class="bg-line">
+                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
+                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
                     </div>
                 </div>
 
