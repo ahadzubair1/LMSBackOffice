@@ -532,11 +532,11 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 
 .rocket img {
     rotate: 180deg;
-    width: 30px;
-    height: 90px;
+    width: 20px;
+    height: 40px;
     top: 70px;
     position: absolute;
-    left: 2px;
+    left: 5px;
     filter: none;
 }
 
@@ -847,6 +847,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 .doc-req h5 {
     color: #EF4431;
     margin-bottom: 4px;
+    font-size: 14px;
 }
 
 .doc-req ul {
