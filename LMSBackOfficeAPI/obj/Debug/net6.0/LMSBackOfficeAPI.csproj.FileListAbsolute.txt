@@ -106,3 +106,4 @@ C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeAPI\obj\Debug\net6.0\
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeAPI\obj\Debug\net6.0\LMSBackOfficeAPI.pdb
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeAPI\obj\Debug\net6.0\LMSBackOfficeAPI.genruntimeconfig.cache
 C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeAPI\obj\Debug\net6.0\ref\LMSBackOfficeAPI.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeAPI\bin\Debug\net6.0\Newtonsoft.Json.xml

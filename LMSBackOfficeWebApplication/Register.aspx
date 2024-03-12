@@ -44,7 +44,7 @@
             <li> <a href="index.html">Home</a> </li>
             <li> <a href="#master-head">about us</a> </li>
             <li> <a href="#v-course-list">courses</a> </li>
-            <li> <a href="">memberships</a> </li>
+            <li> <a href="#">memberships</a> </li>
             <li> <a href="#v-educators">educators</a> </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@
         <div class="captionbox">
           <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
           <p>Your journey to a transformed financial future starts here. Welcome to Tradiix, where possibilities become profits!</p>
-          <a href="" target="_blank"><button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</button></a>
+          <a href="#" target="_blank"><button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</button></a>
         </div>
       </div>
       <div class="col-md-4">

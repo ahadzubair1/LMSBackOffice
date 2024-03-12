@@ -188,10 +188,10 @@ namespace LMSBackofficeDAL
 		/// <summary>
 		/// METHOD TO SEND EMAIL ON NEWSLETTER //
 		/// </summary>
-		public static void SendEmail(string senderName, string senderEmail, string senderPhone )
+		public static void SendEmail(string receiverName, string recieverEmail)
 		{
 			string toEmail = string.Empty;
-			string toEmailHash = string.Empty;
+			string fromEmailHash = string.Empty;
 			string fromEmail = string.Empty;
 			string subjectEmail = "NewsLetter Query - Email";
 			string emailHost = string.Empty;
@@ -199,17 +199,17 @@ namespace LMSBackofficeDAL
 			//string phoneNumber = string.Empty;
 			Int16 hostPort = 0;
 
-			senderName = Convert.ToString(senderName);
-			toEmail = ConfigurationManager.AppSettings["ReceiverEmail"].ToString(); //To address
-			toEmailHash = ConfigurationManager.AppSettings["ReceiverHash"].ToString();
+			receiverName = Convert.ToString(receiverName);
+			fromEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString(); //To address
+			fromEmailHash = ConfigurationManager.AppSettings["SenderEmail"].ToString();
 			emailHost = ConfigurationManager.AppSettings["EmailHost"].ToString(); //SMTP
 			hostPort = Convert.ToInt16(ConfigurationManager.AppSettings["HostPort"]);
-			fromEmail = Convert.ToString(senderEmail); //From address    
+			toEmail = Convert.ToString(recieverEmail); //From address    
 			MailMessage message = new MailMessage(fromEmail, toEmail);
 
-			string mailbody = Convert.ToString(subjectEmail + "<br> <strong>Contact #: </strong>  " + Convert.ToString(senderPhone));
+			string mailbody = Convert.ToString(subjectEmail + "<br> <strong>Contact #: </strong>  " );
 			message.Subject = Convert.ToString(subjectEmail);
-			message.Body = "<strong>Email By:</strong> " + senderName.ToUpper() + " (" + fromEmail + ") " + "<br> <strong>Email Subject:</strong> " + message.Subject + "</br><br> <strong>Email Attachments:</strong> " + message.Attachments.Count() + "</br><br> <strong>Email Message:</strong> " + mailbody;
+			message.Body = "<strong>Email By:</strong> " + receiverName.ToUpper() + " (" + fromEmail + ") " + "<br> <strong>Email Subject:</strong> " + message.Subject + "</br><br> <strong>Email Attachments:</strong> " + message.Attachments.Count() + "</br><br> <strong>Email Message:</strong> " + mailbody;
 			message.BodyEncoding = Encoding.UTF8;
 			message.IsBodyHtml = true;
 
@@ -219,7 +219,7 @@ namespace LMSBackofficeDAL
 			client.Host = Convert.ToString(emailHost);
 			client.Port = Convert.ToInt16(hostPort);
 			client.UseDefaultCredentials = false;
-			System.Net.NetworkCredential basicCredential1 = new System.Net.NetworkCredential(toEmail, toEmailHash);
+			System.Net.NetworkCredential basicCredential1 = new System.Net.NetworkCredential(fromEmail, fromEmailHash);
 			client.Credentials = basicCredential1;
 			client.EnableSsl = true;
 			client.DeliveryMethod = SmtpDeliveryMethod.Network;
