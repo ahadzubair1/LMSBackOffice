@@ -20,7 +20,6 @@ namespace LMSBackOfficeWebApplication
 
         protected void TotpUp_Click(object sender, EventArgs e)
         {
-            Label1.Text = "Click from Control";
             decimal amount = 0;
             if (txtAmount.Text != "")
             {
