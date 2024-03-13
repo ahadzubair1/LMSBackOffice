@@ -71,8 +71,7 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LMSBackOfficeWebApplication\bin\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -130,9 +129,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADOUtility.cs" />
+    <Compile Include="CoinPaymentHelper.cs" />
+    <Compile Include="CoinPaymentTransactions_DataAcsess.cs" />
+    <Compile Include="Configurations.cs" />
     <Compile Include="Countries_DataAccess.cs" />
     <Compile Include="HashUtility.cs" />
+    <Compile Include="MemberWallets_DataAcsess.cs" />
+    <Compile Include="Model\Member.cs" />
     <Compile Include="Network_DataAccess.cs" />
+    <Compile Include="PaymentStatus.cs" />
     <Compile Include="ReferralCodes_DataAccess.cs" />
     <Compile Include="Rewards_DataAccess.cs" />
     <Compile Include="Setup_DataAccess.cs" />
@@ -149,6 +154,7 @@
     <Compile Include="SqlHelper.cs" />
     <Compile Include="SupportTickets_DataAccess.cs" />
     <Compile Include="Transactions_DataAccess.cs" />
+    <Compile Include="Transactions_DataAcsess.cs" />
     <Compile Include="UtilMethods.cs" />
     <Compile Include="Wallets_DataAccess.cs" />
   </ItemGroup>

@@ -6,11 +6,14 @@ using System.Data.SqlTypes;
 using System.Net.Http;
 using System.Text;
 using LMSBackofficeDAL;
+using LMSBackOfficeDAL.Model;
+using static LMSBackOfficeDAL.Countries_DataAccess;
+using System.Web;
 
 namespace LMSBackOfficeDAL
 {
-	public class Members_DataAccess
-	{
+    public class Members_DataAccess
+    {
         /* MAJOR API REQUIRED INSIDE CHECKOUT SYSTEM FOR
 		  IN-ORDER, 
 		  OUT-ORDER, 
@@ -63,7 +66,7 @@ namespace LMSBackOfficeDAL
         //}
 
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static string AddMember(string name, string username,string email, string password, string referredByParentId,int position, string phone, string country)
+        public static string AddMember(string name, string username, string email, string password, string referredByParentId, int position, string phone, string country)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -78,14 +81,14 @@ namespace LMSBackOfficeDAL
                     command.Parameters.Add("@IN_Member_FullName", SqlDbType.NVarChar).Value = name;
                     command.Parameters.Add("@IN_Member_Email", SqlDbType.NVarChar).Value = email;
                     command.Parameters.Add("@IN_Member_Password", SqlDbType.NVarChar).Value = hashPassword;
-                    command.Parameters.Add("@IN_Member_Code", SqlDbType.NVarChar).Value =  memberCode; 
+                    command.Parameters.Add("@IN_Member_Code", SqlDbType.NVarChar).Value = memberCode;
                     command.Parameters.Add("@IN_Member_Mobile", SqlDbType.NVarChar).Value = phone;
                     command.Parameters.Add("@IN_Member_CountryOfOrigin", SqlDbType.NVarChar).Value = country;
                     command.Parameters.Add("@IN_Member_UserName", SqlDbType.NVarChar).Value = username;
                     command.Parameters.Add("@IN_Member_RefferredBy", SqlDbType.NVarChar).Value = referredByParentId;
                     SqlParameter outParameter = command.Parameters.Add("@OUT_Member_ID", SqlDbType.NVarChar, 36); // Assuming 36 is the maximum length of a GUID represented as a string
                     outParameter.Direction = ParameterDirection.Output;
-                    
+
                     try
                     {
                         connection.Open();
@@ -96,7 +99,7 @@ namespace LMSBackOfficeDAL
                             var memberId = outParameter.Value.ToString();
                             string codeLeft = GenerateRandomAlphaNumericString(20);
                             string codeRight = GenerateRandomAlphaNumericString(20);
-                            ReferralCodes_DataAccess.AddMemberReferralCodes(memberId,1, codeLeft);
+                            ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 1, codeLeft);
                             ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 2, codeRight);
                             Network_DataAccess.AddMemberNetwork(memberId, referredByParentId, position);
                             Wallets_DataAccess.CreateMemberWallets(memberId);
@@ -257,7 +260,46 @@ namespace LMSBackOfficeDAL
         //}
 
 
+        public static Member GetMemberInfo(string userName)
+        {
+            Member member = null;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_GetMemberByID", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        command.Parameters.Add("@IN_UserName", SqlDbType.NVarChar).Value = userName;
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                member = new Member
+                                {
+                                    Id = reader["Member_ID"].ToString(),
+                                    MemberFullName = reader["Member_FullName"].ToString(),
+                                    UserName = reader["Member_UserName"].ToString(),
+                                    MemberCode = reader["Member_Code"].ToString(),
+                                    Email = reader["Member_Email"].ToString(),
+                                    MemberAddress = reader["Wallet_Address"].ToString(),
+                                    MemberWalletBalance = reader["Wallet_Balance"].ToString(),
+                                    MemberWalletCurrency = reader["Wallet_Currency"].ToString(),
+                                };
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log or handle the exception properly
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
 
+            return member;
+        }
 
     }
 }

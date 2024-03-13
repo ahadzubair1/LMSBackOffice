@@ -52,6 +52,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\MSCaptcha.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -84,9 +87,6 @@
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CoinPaymentSuccess.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -286,6 +287,7 @@
     <Content Include="img\unlock-ichimoku.png" />
     <Content Include="img\webinar.png" />
     <Content Include="index.html" />
+    <Content Include="IPNHandler.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.esm.js" />
@@ -301,6 +303,7 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Memberships.aspx" />
+    <Content Include="MemberTopUp.ascx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\apexcharts.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -510,12 +513,26 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CoinPaymentSuccess.aspx.cs">
+      <DependentUpon>CoinPaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoinPaymentSuccess.aspx.designer.cs">
+      <DependentUpon>CoinPaymentSuccess.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPNHandler.aspx.cs">
+      <DependentUpon>IPNHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPNHandler.aspx.designer.cs">
+      <DependentUpon>IPNHandler.aspx</DependentUpon>
     </Compile>
     <Compile Include="KYC.aspx.cs">
       <DependentUpon>KYC.aspx</DependentUpon>
@@ -547,6 +564,13 @@
     </Compile>
     <Compile Include="Memberships.aspx.designer.cs">
       <DependentUpon>Memberships.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberTopUp.ascx.cs">
+      <DependentUpon>MemberTopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberTopUp.ascx.designer.cs">
+      <DependentUpon>MemberTopUp.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
