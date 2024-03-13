@@ -1,4 +1,4 @@
-<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
+﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -113,8 +113,14 @@
                 <!-- Banner -->
                 <div class="banner">
                     <div class="banner-caption">
-                        <h2 class="text-white">Get Signup Bonus</h2>
-                        <p class="m-0">Unlock Rewards Now! Sign up and receive your exclusive signup bonus today. Don't miss out on this limited-time offer to enjoy exciting perks and benefits. Join our community and start experiencing the rewards immediately. Sign up now!</p>
+                        <div class="orbit">
+                            <div class="rocket">
+                                <img src="Content/images/fire-lit.gif">
+                                <div class="window"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-white">Welcome!</h2>
+                        <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -189,6 +195,10 @@
                             <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
                         </div>
                     </div>
+                    <div class="bg-line">
+                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
+                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
+                    </div>
                 </div>
 
                 <!-- [ breadcrumb ] start -->
@@ -242,76 +252,17 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Direct Bonus</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Direct Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
                                         </div>
                                         <div class="col-5">
                                             <h5 class="mb-1">$3,020</h5>
                                             <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xxl-3">
-                        <div class="card t-card membership">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 13H12"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 17H16"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Membership</h6>
-                                    </div>
-                                </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
-                                        <div class="col-7">
-                                            <div id="page-views-graph"></div>
-                                        </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">290K+</h5>
-                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
                                         </div>
                                     </div>
                                 </div>
@@ -400,17 +351,76 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">KYC Status</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Network Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">839</h5>
-                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>New</p>
+                                            <h5 class="mb-1">$304.67</h5>
+                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>44.2%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xxl-3">
+                        <div class="card t-card membership">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-warning">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 13H12"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 17H16"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0 font-semibold text-white">Membership</h6>
+                                    </div>
+                                </div>
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
+                                        <div class="col-7">
+                                            <h5 class="font-semibold m-0">Explorer+</h5>
+                                        </div>
+                                        <div class="col-5">
+                                            <h5 class="mb-1">$500</h5>
+                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>1 Year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -442,17 +452,16 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Direct Referrals</h6>
+                                        <h6 class="mb-0 font-semibold text-white">Rewards Achieved</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded">
-                                    <div class="mt-3 row align-items-center">
-                                        <div class="col-7">
-                                            <div id="download-graph"></div>
+                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <h1 class="font-semibold m-0">7</h1>
                                         </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">2,067</h5>
-                                            <p class="text-danger mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
+                                        <div class="col-10">
+                                            <p class="mb-0"><span class="text-warning">🌟</span> Earn More Rewards</p>
                                         </div>
                                     </div>
                                 </div>
@@ -478,22 +487,12 @@
                             </div>
                             <div class="card-body">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-link-secondary bg-info-subtle">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-grow-1 mx-2">
-                                                <p class="mb-0 d-grid text-start">
-                                                    <span class="text-truncate w-100">https://www.tradiix.com/</span>
-                                                </p>
-                                            </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
-                                        </div>
-                                    </a>
                                     <a href="#" class="btn btn-link-secondary bg-warning-subtle">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -504,7 +503,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>GHhVBEyulLPK9dM2sdTn_R</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -513,17 +512,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card mb-2">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
-                                            <i class="ti ti-at f-20"></i>
+                                            <svg class="pc-icon">
+                                                <use xlink:href="#custom-user"></use>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">New Members</h6>
-                                        <small class="text-muted">23 New Members Joined this Week</small>
+                                        <h6 class="mb-0">Left Network</h6>
+                                        <small class="text-muted">Total count of left network users</small>
                                     </div>
                                     <div class="dropdown">
                                         <a
@@ -549,15 +550,55 @@
                                         <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
                                         <span class="avtar bg-light-primary text-primary text-sm">+2</span>
                                     </div>
-                                    <a href="#" class="avtar avtar-s btn btn-primary rounded-circle">
-                                        <i class="ti ti-plus f-20"></i>
-                                    </a>
+                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-primary">
+                                            <svg class="pc-icon">
+                                                <use xlink:href="#custom-user"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Right Network</h6>
+                                        <small class="text-muted">Total count of right network users</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a
+                                            class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
+                                            href="#"
+                                            data-bs-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="ti ti-dots-vertical f-18"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item" href="#">Today</a>
+                                            <a class="dropdown-item" href="#">Weekly</a>
+                                            <a class="dropdown-item" href="#">Monthly</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mt-4">
+                                    <div class="user-group able-user-group">
+                                        <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+                                        <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
+                                        <span class="avtar bg-light-primary text-primary text-sm">+2</span>
+                                    </div>
+                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card">
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h5 class="mb-0">Purchased Memberships</h5>
@@ -609,8 +650,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
                         <div class="card">
                             <div class="card-body border-bottom pb-0">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -654,7 +693,7 @@
                                             role="tab"
                                             aria-controls="analytics-tab-2-pane"
                                             aria-selected="false">
-                                            Success</button>
+                                            Memberships</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button
@@ -666,7 +705,7 @@
                                             role="tab"
                                             aria-controls="analytics-tab-3-pane"
                                             aria-selected="false">
-                                            Pending</button>
+                                            Other Transactions</button>
                                     </li>
                                 </ul>
                             </div>
@@ -677,333 +716,93 @@
                                     role="tabpanel"
                                     aria-labelledby="analytics-tab-1"
                                     tabindex="0">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border">AI </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Apple Inc.</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">$210,000</h6>
-                                                            <p class="text-danger mb-0"><i class="ti ti-arrow-down-left"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="10,000 Tracks"><span>SM</span></div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Spotify Music</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">- 10,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-primary" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>MD</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Medium</h6>
-                                                            <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">-26</h6>
-                                                            <p class="text-warning mb-0"><i class="ti ti-arrows-left-right"></i>5%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>U</span> </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Uber</h6>
-                                                            <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-warning" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>OC</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Ola Cabs</h6>
-                                                            <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="overflow-auto">
+                                        <table id="" class="table table-striped" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Transaction Code</th>
+                                                    <th>Username</th>
+                                                    <th>Destination</th>
+                                                    <th>Amount</th>
+                                                    <th>Transaction Type</th>
+                                                    <th>Transaction Date/Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>TRNS_032399</td>
+                                                    <td>user_123</td>
+                                                    <td>None</td>
+                                                    <td>$0</td>
+                                                    <td>Deposit</td>
+                                                    <td>09-02-2024 | 12:33:56</td>
+                                                </tr>
+                                                <!-- Add more rows as needed -->
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>U</span> </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Uber</h6>
-                                                            <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-warning" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>OC</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Ola Cabs</h6>
-                                                            <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border">AI</div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Apple Inc.</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">$210,000</h6>
-                                                            <p class="text-danger mb-0"><i class="ti ti-arrow-down-left"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="10,000 Tracks"><span>SM</span></div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Spotify Music</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">- 10,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-primary" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>MD</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Medium</h6>
-                                                            <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">-26</h6>
-                                                            <p class="text-warning mb-0"><i class="ti ti-arrows-left-right"></i>5%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="overflow-auto">
+                                        <table id="" class="table table-striped" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Transaction Code</th>
+                                                    <th>Username</th>
+                                                    <th>Destination</th>
+                                                    <th>Amount</th>
+                                                    <th>Transaction Type</th>
+                                                    <th>Transaction Date/Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>TRNS_032399</td>
+                                                    <td>user_123</td>
+                                                    <td>None</td>
+                                                    <td>$0</td>
+                                                    <td>Deposit</td>
+                                                    <td>09-02-2024 | 12:33:56</td>
+                                                </tr>
+                                                <!-- Add more rows as needed -->
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel" aria-labelledby="analytics-tab-3" tabindex="0">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="10,000 Tracks"><span>SM</span></div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Spotify Music</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">- 10,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-primary" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>MD</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Medium</h6>
-                                                            <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">-26</h6>
-                                                            <p class="text-warning mb-0"><i class="ti ti-arrows-left-right"></i>5%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border" data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>U</span> </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Uber</h6>
-                                                            <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border">AI </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Apple Inc.</h6>
-                                                            <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">$210,000</h6>
-                                                            <p class="text-danger mb-0"><i class="ti ti-arrow-down-left"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-s border bg-light-warning" data-bs-toggle="tooltip" data-bs-title="143 Posts">
-                                                        <span>OC</span>
-                                                    </div>
-                                                </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <h6 class="mb-0">Ola Cabs</h6>
-                                                            <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                        </div>
-                                                        <div class="col-6 text-end">
-                                                            <h6 class="mb-1">+210,000</h6>
-                                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>10.6%</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="overflow-auto">
+                                        <table id="" class="table table-striped" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Transaction Code</th>
+                                                    <th>Username</th>
+                                                    <th>Destination</th>
+                                                    <th>Amount</th>
+                                                    <th>Transaction Type</th>
+                                                    <th>Transaction Date/Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>TRNS_032399</td>
+                                                    <td>user_123</td>
+                                                    <td>None</td>
+                                                    <td>$0</td>
+                                                    <td>Deposit</td>
+                                                    <td>09-02-2024 | 12:33:56</td>
+                                                </tr>
+                                                <!-- Add more rows as needed -->
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="row g-2">
-                                    <div class="col-md-6">
-                                        <div class="d-grid">
-                                            <button class="btn btn-outline-secondary d-grid">
-                                                <span class="text-truncate w-100">View all Transaction History</span></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="d-grid">
-                                            <button class="btn btn-primary d-grid"><span class="text-truncate w-100">Create new Transaction</span></button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="card-footer text-center">
+                                <a href="" class="btn btn-primary d-grid"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -1090,6 +889,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- [ Main Content ] end -->
             </div>

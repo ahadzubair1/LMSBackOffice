@@ -95,7 +95,7 @@ namespace LMSBackOfficeDAL
                         command.ExecuteNonQuery();
                         if (outParameter.Value != DBNull.Value && outParameter.Value != null)
                         {
-                            //UtilMethods.SendEmail(name,"support@tradiix.com", phone);
+                            // UtilMethods.SendEmail(name, email);
                             var memberId = outParameter.Value.ToString();
                             string codeLeft = GenerateRandomAlphaNumericString(20);
                             string codeRight = GenerateRandomAlphaNumericString(20);

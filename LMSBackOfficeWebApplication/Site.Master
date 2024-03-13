@@ -291,16 +291,6 @@
                                 </div>
                                 <div class="dropdown-body">
                                     <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 225px)">
-                                        <div class="d-flex mb-1">
-                                            <div class="flex-shrink-0">
-                                                <img src="Content/images/user/avatar-2.jpg" alt="user-image" class="user-avtar wid-35" />
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h6 class="mb-1"><%= Session["Username"] %> </h6>
-                                                <span>carson.darrin@company.io</span>
-                                            </div>
-                                        </div>
-                                        <hr class="border-secondary border-opacity-50" />
                                         <div class="card">
                                             <div class="card-body py-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -319,7 +309,7 @@
                                                 <svg class="pc-icon text-muted me-2">
                                                     <use xlink:href="#custom-setting-outline"></use>
                                                 </svg>
-                                                <span>Settings</span>
+                                                <span>Privacy Settings</span>
                                             </span>
                                         </a>
                                         <a href="#" class="dropdown-item">
@@ -338,84 +328,14 @@
                                                 <span>Change Password</span>
                                             </span>
                                         </a>
-                                        <hr class="border-secondary border-opacity-50" />
-                                        <p class="text-span">Team</p>
-                                        <a href="#" class="dropdown-item">
+                                        <a href="Login.aspx" class="dropdown-item">
                                             <span>
                                                 <svg class="pc-icon text-muted me-2">
-                                                    <use xlink:href="#custom-profile-2user-outline"></use>
+                                                    <use xlink:href="#custom-logout"></use>
                                                 </svg>
-                                                <span>UI Design team</span>
+                                                <span>Logout</span>
                                             </span>
-                                            <div class="user-group">
-                                                <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
-                                                <span class="avtar bg-danger text-white">K</span>
-                                                <span class="avtar bg-success text-white">
-                                                    <svg class="pc-icon m-0">
-                                                        <use xlink:href="#custom-user"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="avtar bg-light-primary text-primary">+2</span>
-                                            </div>
                                         </a>
-                                        <a href="#" class="dropdown-item">
-                                            <span>
-                                                <svg class="pc-icon text-muted me-2">
-                                                    <use xlink:href="#custom-profile-2user-outline"></use>
-                                                </svg>
-                                                <span>Friends Groups</span>
-                                            </span>
-                                            <div class="user-group">
-                                                <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
-                                                <span class="avtar bg-danger text-white">K</span>
-                                                <span class="avtar bg-success text-white">
-                                                    <svg class="pc-icon m-0">
-                                                        <use xlink:href="#custom-user"></use>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="dropdown-item">
-                                            <span>
-                                                <svg class="pc-icon text-muted me-2">
-                                                    <use xlink:href="#custom-add-outline"></use>
-                                                </svg>
-                                                <span>Add new</span>
-                                            </span>
-                                            <div class="user-group">
-                                                <span class="avtar bg-primary text-white">
-                                                    <svg class="pc-icon m-0">
-                                                        <use xlink:href="#custom-add-outline"></use>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <hr class="border-secondary border-opacity-50" />
-                                        <div class="d-grid mb-3">
-                                            <asp:Button ID="ButtonLogout" Text="Logout" CssClass="btn btn-primary" OnClick="btnLogout_Click" runat="server">
-                                            </asp:Button>
-                                        </div>
-                                        <div
-                                            class="card border-0 shadow-none drp-upgrade-card mb-0"
-                                            style="background-image: url(Content/images/layout/img-profile-card.jpg)">
-                                            <div class="card-body">
-                                                <div class="user-group">
-                                                    <img src="Content/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
-                                                    <img src="Content/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
-                                                    <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
-                                                    <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
-                                                    <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
-                                                    <span class="avtar bg-light-primary text-primary">+20</span>
-                                                </div>
-                                                <h3 class="my-3 text-dark">245.3k <small class="text-muted">Followers</small></h3>
-                                                <div class="btn btn btn-warning">
-                                                    <svg class="pc-icon me-2">
-                                                        <use xlink:href="#custom-logout-1-outline"></use>
-                                                    </svg>
-                                                    Upgrade to Business
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -447,7 +367,7 @@
                                 </div>
                                 <div class="flex-grow-1 ms-3 me-2">
                                     <h6 class="mb-0">Logged-In</h6>
-                                    <small style="text-transform:capitalize"><%= Session["Username"] %></small>
+                                    <small style="text-transform: capitalize"><%= Session["Username"] %></small>
                                 </div>
                                 <a class="btn btn-icon btn-link-secondary avtar" data-bs-toggle="collapse" href="#pc_sidebar_userlink">
                                     <svg class="pc-icon">
@@ -496,7 +416,7 @@
                                         <use xlink:href="#custom-document-filter"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">KYC</span>
+                                <span class="pc-mtext">KYC  &nbsp;<span class="badge bg-primary-t">Pending</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -528,7 +448,7 @@
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Network  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Network</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -539,7 +459,7 @@
                                         <use xlink:href="#custom-dollar-square"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Bonuses  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Bonuses</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -571,7 +491,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Tools</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -582,7 +502,18 @@
                                         <use xlink:href="#custom-message-2"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Support Tickets  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Support Tickets</span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
+                            <%--<a href="Support.aspx" class="pc-link">--%>
+                            <a href="#" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-password-check"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Academy Portal</span>
                             </a>
                         </li>
                     </ul>

@@ -18,8 +18,8 @@ namespace LMSBackOfficeWebApplication
 
 
 
-         protected void Page_Load(object sender, EventArgs e)
-         {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
             /*if (!IsPostBack)
             {
@@ -55,7 +55,7 @@ namespace LMSBackOfficeWebApplication
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string name = this.fullname.Value; 
+            string name = this.fullname.Value;
             string email = this.email.Value;
             string password = this.password.Value;
             string confirmpassword = this.confirmpassword.Value;
@@ -81,7 +81,7 @@ namespace LMSBackOfficeWebApplication
                     DataRow row = resultTable.Rows[0];
                     string referredByParentId = row["Member_ID"].ToString();
                     int Position = (int)row["NetworkPosition"];
-                    string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, Position,phone, countries);
+                    string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, Position, phone, countries);
                     if (registrationSuccess == "Success")
                     {
                         // Display success message
@@ -92,9 +92,9 @@ namespace LMSBackOfficeWebApplication
                         this.refcode.Value = "";
                         this.phone.Value = "";
                         this.username.Value = "";// Assuming you have a server-side control for the success message
-                        ResponseMessage.InnerText = "Registration Successfull";
-                        ResponseMessage.Style.Add("display", "block");
-                        ResponseMessage.Style.Add("color", "#e012ee");
+                      ResponseMessage.InnerText = "Registration Successfull";
+                       ResponseMessage.Style.Add("display", "block");
+                       ResponseMessage.Style.Add("color", "#e012ee");
                         Response.AddHeader("REFRESH", "5;URL=Login.aspx");
                     }
                     else
@@ -113,12 +113,12 @@ namespace LMSBackOfficeWebApplication
                     ResponseMessage.Style.Add("color", "#ff2600");
                 }
             }
-            
-            
+
+
 
         }
 
-        protected static string validatePassword(string password,string confirmpassword)
+        protected static string validatePassword(string password, string confirmpassword)
         {
 
             // Check for length
@@ -126,7 +126,7 @@ namespace LMSBackOfficeWebApplication
             {
                 return "Password and confirm passwords Dont Match";
             }
-            if (password.Length < 8 || password.Length >16)
+            if (password.Length < 8 || password.Length > 16)
             {
                 return "Password Length should be between 8 to 16 charchaters";
             }
