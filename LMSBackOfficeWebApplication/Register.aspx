@@ -25,7 +25,7 @@
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a href="#master-head">about us</a> </li>
                     <li> <a href="#v-course-list">courses</a> </li>
-                    <li> <a href="">memberships</a> </li>
+                    <li> <a href="#">memberships</a> </li>
                     <li> <a href="#v-educators">educators</a> </li>
                   </ul>
                 </div>

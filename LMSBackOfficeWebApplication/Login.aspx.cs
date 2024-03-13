@@ -23,36 +23,47 @@ namespace LMSBackOfficeWebApplication
 
             // Process the form data (e.g., save to database, send email, etc.)
             ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
-            if (ccLink.UserValidated)
+            try
             {
-                bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
-                if (loginSuccess)
+                if (ccLink.UserValidated)
                 {
-                    this.successMessage.Value = "true";
-                    Session["LoggedIn"] = true;
-                    Session["Username"] = username;
-                    Login_DataAccess.AddLogin(username, password);
-                    Response.Redirect("~/Dashboard.aspx");
+                    bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
+                    if (loginSuccess)
+                    {
+                        this.successMessage.Value = "true";
+                        Session["LoggedIn"] = true;
+                        Session["Username"] = username;
+                        Login_DataAccess.AddLogin(username, password);
+                        Response.Redirect("~/Dashboard.aspx");
 
+                    }
+                    else
+                    {
+                        this.successMessage.Value = "false";
+                        Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                        ResponseMessage.InnerText = "Login Failed: Invalid Credentials";
+                        ResponseMessage.Style.Add("display", "block");
+                        ResponseMessage.Style.Add("color", "#e012ee");
+                    }
                 }
                 else
                 {
                     this.successMessage.Value = "false";
                     Response.AddHeader("REFRESH", "5;URL=Login.aspx");
-                    ResponseMessage.InnerText = "Login Failed: Invalid Credentials";
+                    ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
                     ResponseMessage.Style.Add("display", "block");
                     ResponseMessage.Style.Add("color", "#e012ee");
+
                 }
             }
-            else
+            catch(Exception ex)
             {
                 this.successMessage.Value = "false";
-                Response.AddHeader("REFRESH", "5;URL=Login.aspx");
-                ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
+                ResponseMessage.InnerText = "Error Occurred:"+Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#e012ee");
-
             }
+            
         }
         /* protected void Page_Load(object sender, EventArgs e)
         {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMSBackOfficeWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b08a4bdac1f3c284e22269321bbbc156ae97e54d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83ba44c41b1fd727c08be20b65dd9e837bb6058b")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMSBackOfficeWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMSBackOfficeWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

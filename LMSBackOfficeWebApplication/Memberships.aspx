@@ -201,6 +201,7 @@
                                     <h2 class="mb-0">Memberships</h2>
                                 </div>
                             </div>
+                            <div class="col-md-12"></div>
                         </div>
                     </div>
                 </div>
@@ -221,7 +222,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>99$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="99" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -236,7 +237,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>250$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -251,7 +252,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>500$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -266,7 +267,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1000$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -281,7 +282,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>3000$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="3000" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -296,13 +297,44 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>5000$</span></div>
                                 </div>
-                                <a href="#" class="btn btn-outline-light mt-3">Purchase Now</a>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="5000" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- [ Main Content ] end -->
+        </div>
+        <div class="modal fade modal-animate anim-blur " id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class=" modal-title font-bold fs-4" id="membershipModalLabel">Membership Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+               <form id="membershipForm" method="post">
+                   
+                    <div class="modal-body">
+                        <div class="mb-3 col-12">
+                            <label for="membershipName" class="form-label">Membership Name</label>
+                            <input type="text" style="max-width:100%" class="form-control w-100" id="membershipName" name="membershipName" readonly />
+                         </div>
+                          <div class="mb-3 col-12">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="text" style="max-width:100%" class="form-control w-100" id="amount" name="amount" readonly />
+                          </div>
+                          <div class="mb-3 col-12">
+                            <label for="membershipCode" class="form-label">Membership Code</label>
+                            <input type="text" style="max-width:100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+            </div>
+          </div>
         </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
@@ -315,13 +347,59 @@
                     </div>
                     <div class="col-auto my-1">
                         <ul class="list-inline footer-link mb-0">
-                            <li class="list-inline-item"><a href="">Terms & Conditions</a></li>
-                            <li class="list-inline-item"><a href="" target="_blank">Privacy Policy</a></li>
-                            <li class="list-inline-item"><a href="" target="_blank">Support</a></li>
+                            <li class="list-inline-item"><a href="#">Terms & Conditions</a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank">Privacy Policy</a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank">Support</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+          <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  var membershipButtons = document.querySelectorAll('.membership-btn');
+                  membershipButtons.forEach(function (button) {
+                      button.addEventListener('click', function () {
+                          var amount = this.getAttribute('data-amount');
+                          var membershipCode = this.getAttribute('data-membership-code');
+                          var membershipName = this.getAttribute('data-membership-name');
+                          updateForm(amount, membershipCode, membershipName);
+                      });
+                  });
+
+                  function updateForm(amount, membershipCode, membershipName) {
+                      var amountField = document.getElementById('amount');
+                      var codeField = document.getElementById('membershipCode');
+                      var nameField = document.getElementById('membershipName');
+                      amountField.value = amount;
+                      codeField.value = membershipCode;
+                      nameField.value = membershipName;
+                  }
+                  var membershipForm = document.getElementById('membershipForm');
+                  membershipForm.addEventListener('submit', function (event) {
+                      event.preventDefault(); // Prevent default form submission
+
+                      // Fetch form data
+                      var formData = new FormData(this);
+
+                      // Example AJAX request using Fetch API
+                      fetch('Memberships.aspx.cs', {
+                          method: 'POST',
+                          body: formData
+                      })
+                          .then(response => response.json())
+                          .then(data => {
+                              if (data.success) {
+                                  responseMessage.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
+                              } else {
+                                  responseMessage.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
+                              }
+                          })
+                          .catch(error => {
+                              console.error('Error:', error);
+                          });
+                  });
+              });
+          </script>
         </footer>
     </main>
 </asp:Content>
