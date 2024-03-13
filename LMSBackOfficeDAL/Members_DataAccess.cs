@@ -66,7 +66,7 @@ namespace LMSBackOfficeDAL
         //}
 
         private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
-        public static string AddMember(string name, string username, string email, string password, string referredByParentId, int position, string phone, string country)
+        public static string AddMember(string name, string username, string email, string password, string referredByParentId, int position, string phone, string country,string currentDomainUrl)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -95,7 +95,8 @@ namespace LMSBackOfficeDAL
                         command.ExecuteNonQuery();
                         if (outParameter.Value != DBNull.Value && outParameter.Value != null)
                         {
-                            // UtilMethods.SendEmail(name, email);
+                            
+                            UtilMethods.SendEmailNew(email,name, memberCode, currentDomainUrl);
                             var memberId = outParameter.Value.ToString();
                             string codeLeft = GenerateRandomAlphaNumericString(20);
                             string codeRight = GenerateRandomAlphaNumericString(20);
@@ -126,6 +127,54 @@ namespace LMSBackOfficeDAL
                 stringBuilder.Append(chars[random.Next(chars.Length)]);
             }
             return stringBuilder.ToString();
+        }
+        public static bool CheckUsernameExists(string username)
+        {
+            bool exists = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_CheckUsernameExists", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters
+                    command.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = username;
+                    command.Parameters.Add("@exists", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    exists = Convert.ToBoolean(command.Parameters["@exists"].Value);
+                }
+            }
+
+            return exists;
+        }
+
+        public static bool ActivateMember(string memCode)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("USP_UpdateMemberStatus", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@IN_MemCode", memCode);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    // Handle SQL exceptions
+                    // Log or throw the exception as needed
+                    // Example: throw;
+                    return false;
+                }
+            }
         }
         /// <summary>
         /// METHOD TO ADD THE INORDERS

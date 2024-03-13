@@ -241,6 +241,42 @@ namespace LMSBackofficeDAL
 			}
 
 		}
+        public static void SendEmailNew(string toEmail,string toName,string memberCode,string currentDomainUrl)
+        {
+            string smtpServer = "smtp.gmail.com";
+            int port = 587; // Port number can vary based on your SMTP server configuration
+            string senderEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString();
+            string password = ConfigurationManager.AppSettings["SenderHash"].ToString();
+
+            var smtpClient = new SmtpClient(smtpServer, port)
+            {
+                Credentials = new NetworkCredential(senderEmail, password),
+                EnableSsl = true // Enable SSL/TLS
+            };
+            string activationLink = $"{currentDomainUrl}/Activation.aspx?token={memberCode}";
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(senderEmail),
+                Subject = "Activate Your Account",
+                Body = $@"<p>Please click the following link to activate your account:</p>
+                     <p><a href='{activationLink}'>Activate Now</a></p>"
+            };
+            mailMessage.IsBodyHtml = true;
+            mailMessage.To.Add(toEmail);
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+				Console.WriteLine(ex.ToString());
+				
+            }
+        }
         public static string AddQueryString(string uri, IEnumerable<KeyValuePair<string, string>> queryString)
         {
             if (uri == null)
