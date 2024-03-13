@@ -130,9 +130,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADOUtility.cs" />
+    <Compile Include="CoinPaymentHelper.cs" />
+    <Compile Include="CoinPaymentTransactions_DataAcsess.cs" />
+    <Compile Include="Configurations.cs" />
     <Compile Include="Countries_DataAccess.cs" />
     <Compile Include="HashUtility.cs" />
+    <Compile Include="MemberWallets_DataAcsess.cs" />
+    <Compile Include="Model\Member.cs" />
     <Compile Include="Network_DataAccess.cs" />
+    <Compile Include="PaymentStatus.cs" />
     <Compile Include="ReferralCodes_DataAccess.cs" />
     <Compile Include="Rewards_DataAccess.cs" />
     <Compile Include="Setup_DataAccess.cs" />
@@ -149,6 +155,7 @@
     <Compile Include="SqlHelper.cs" />
     <Compile Include="SupportTickets_DataAccess.cs" />
     <Compile Include="Transactions_DataAccess.cs" />
+    <Compile Include="Transactions_DataAcsess.cs" />
     <Compile Include="UtilMethods.cs" />
     <Compile Include="Wallets_DataAccess.cs" />
   </ItemGroup>

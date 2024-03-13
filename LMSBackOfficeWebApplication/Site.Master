@@ -1,5 +1,8 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMSBackOfficeWebApplication.SiteMaster" %>
 
+<%@ Register Src="~/MemberTopUp.ascx" TagPrefix="uc1" TagName="MemberTopUp" %>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -591,6 +594,7 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <uc1:MemberTopUp runat="server" id="MemberTopUp" />
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/popper.min.js") %>
@@ -616,34 +620,6 @@
     </asp:PlaceHolder>
 
     <!-- Modal -->
-    <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Enter Amount to Add in USD</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Enter amount you want to add to your credit wallet and choose a payment method.</p>
-                    <form action="/" method="post">
-                        <label class="mb-2">Top Up Amount</label>
-                        <input type="text" name="name" value="" class="form-control w-100" placeholder="Enter amount or select from below" style="max-width: 100%;" />
-                        <div class="d-flex mt-3 justify-content-between gap-2">
-                            <button class="btn btn-light-primary text-nowrap">+ 99</button>
-                            <button class="btn btn-light-primary text-nowrap">+ 500</button>
-                            <button class="btn btn-light-primary text-nowrap">+ 1000</button>
-                            <button class="btn btn-light-primary text-nowrap">+ 3000</button>
-                            <button class="btn btn-light-primary text-nowrap">+ 5000</button>
-                            <button class="btn btn-light-primary text-nowrap">Clear</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Top Up</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
 </html>

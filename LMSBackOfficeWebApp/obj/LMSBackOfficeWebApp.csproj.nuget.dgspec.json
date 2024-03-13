@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj": {}
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "projectUniqueName": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
         "projectName": "LMSBackOfficeAPI",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
-        "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\obj\\",
+        "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+              "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+                "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
               }
             }
           }
@@ -38,6 +42,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,6 +69,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -68,15 +95,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectUniqueName": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "projectName": "LMSBackOfficeDAL",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
+        "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -87,17 +114,21 @@
         "net472": {}
       }
     },
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj": {
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+        "projectUniqueName": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
         "projectName": "LMSBackOfficeWebApp",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
-        "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeWebApp\\obj\\",
+        "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeWebApp\\LMSBackOfficeWebApp.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeWebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,11 +142,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
-                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
+              "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj": {
+                "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeAPI\\LMSBackOfficeAPI.csproj"
               },
-              "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
-                "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
+              "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj": {
+                "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeDAL\\LMSBackOfficeDAL.csproj"
               }
             }
           }
@@ -124,6 +155,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -146,6 +182,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -154,7 +208,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,6 +15,7 @@ using System.Security.Cryptography;
 using Newtonsoft.Json;
 using System.Collections;
 using System.Xml.Linq;
+using System.Text.Encodings.Web;
 //using System.Web.UI.WebControls.WebParts;
 //using Microsoft.AspNetCore.Http;
 //using System.Net.Http;
@@ -240,7 +241,42 @@ namespace LMSBackofficeDAL
 			}
 
 		}
+        public static string AddQueryString(string uri, IEnumerable<KeyValuePair<string, string>> queryString)
+        {
+            if (uri == null)
+            {
+                throw new ArgumentNullException("uri");
+            }
 
+            if (queryString == null)
+            {
+                throw new ArgumentNullException("queryString");
+            }
 
-	}
+            int num = uri.IndexOf('#');
+            string text = uri;
+            string value = "";
+            if (num != -1)
+            {
+                value = uri.Substring(num);
+                text = uri.Substring(0, num);
+            }
+
+            bool flag = text.IndexOf('?') != -1;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(text);
+            foreach (KeyValuePair<string, string> item in queryString)
+            {
+                stringBuilder.Append(flag ? '&' : '?');
+                stringBuilder.Append(UrlEncoder.Default.Encode(item.Key));
+                stringBuilder.Append('=');
+                stringBuilder.Append(UrlEncoder.Default.Encode(item.Value));
+                flag = true;
+            }
+
+            stringBuilder.Append(value);
+            return stringBuilder.ToString();
+        }
+
+    }
 }

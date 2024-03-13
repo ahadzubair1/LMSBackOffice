@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {}
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {
+    "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
+        "projectUniqueName": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
         "projectName": "LMSBackOfficeGateway",
-        "projectPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
-        "packagesPath": "C:\\Users\\Reshma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Reshma\\source\\repos\\LMSBackOfficenew\\LMSBackOfficeGateway\\obj\\",
+        "projectPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeGateway\\LMSBackOfficeGateway.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "E:\\IconXRepos\\LMSBackOffice\\LMSBackOfficeGateway\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Reshma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -56,6 +65,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -64,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
