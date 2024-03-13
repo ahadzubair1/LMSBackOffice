@@ -31,7 +31,7 @@
                          <span class="btn btn-light-primary text-nowrap">+ 5000</span>
                          <span class="btn btn-light-primary text-nowrap">Clear</span>
                      </div>
-                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                 <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
                  <%--</form>--%>
              </div>
              <div class="modal-footer">
