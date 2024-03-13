@@ -222,7 +222,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>99$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="99" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="99" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -237,7 +237,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>250$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="80" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -252,7 +252,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>500$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="80" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -267,7 +267,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1000$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="80" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -282,7 +282,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>3000$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="3000" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="3000" data-activation-fee="80" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -297,7 +297,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>5000$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="5000" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="5000" data-activation-fee="80" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
                             </div>
                         </div>
                     </div>
@@ -323,6 +323,10 @@
                             <label for="amount" class="form-label">Amount</label>
                             <input type="text" style="max-width:100%" class="form-control w-100" id="amount" name="amount" readonly />
                           </div>
+                         <div class="mb-3 col-12">
+                           <label for="activationFee" class="form-label">Activation Fee</label>
+                           <input type="text" style="max-width:100%" class="form-control w-100" id="activationFee" name="activationFee" readonly />
+                         </div>
                           <div class="mb-3 col-12">
                             <label for="membershipCode" class="form-label">Membership Code</label>
                             <input type="text" style="max-width:100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
@@ -362,37 +366,36 @@
                           var amount = this.getAttribute('data-amount');
                           var membershipCode = this.getAttribute('data-membership-code');
                           var membershipName = this.getAttribute('data-membership-name');
-                          updateForm(amount, membershipCode, membershipName);
+                          var activationFee = this.getAttribute('data-activation-fee');
+                          updateForm(amount, membershipCode, membershipName, activationFee);
                       });
                   });
 
-                  function updateForm(amount, membershipCode, membershipName) {
+                  function updateForm(amount, membershipCode, membershipName, activationFee) {
                       var amountField = document.getElementById('amount');
                       var codeField = document.getElementById('membershipCode');
                       var nameField = document.getElementById('membershipName');
+                      var feeField = document.getElementById('activationFee');
                       amountField.value = amount;
                       codeField.value = membershipCode;
                       nameField.value = membershipName;
+                      feeField.value = activationFee;
                   }
-                  var membershipForm = document.getElementById('membershipForm');
-                  membershipForm.addEventListener('submit', function (event) {
-                      event.preventDefault(); // Prevent default form submission
+                  document.getElementById('membershipForm').addEventListener('submit', function (event) {
+                      event.preventDefault(); // Prevent default form submission behavior
 
-                      // Fetch form data
+                      // Serialize form data
                       var formData = new FormData(this);
 
-                      // Example AJAX request using Fetch API
-                      fetch('Memberships.aspx.cs', {
+                      // Submit form data via AJAX
+                      fetch('memberships.aspx', {
                           method: 'POST',
                           body: formData
                       })
-                          .then(response => response.json())
+                          .then(response => response.text())
                           .then(data => {
-                              if (data.success) {
-                                  responseMessage.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
-                              } else {
-                                  responseMessage.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
-                              }
+                              // Handle the response if needed
+                              console.log(data);
                           })
                           .catch(error => {
                               console.error('Error:', error);

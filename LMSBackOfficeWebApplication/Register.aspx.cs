@@ -102,10 +102,11 @@ namespace LMSBackOfficeWebApplication
                             this.refcode.Value = "";
                             this.phone.Value = "";
                             this.username.Value = "";// Assuming you have a server-side control for the success message
-                            ResponseMessage.InnerText = "Registration Successfull";
+                            ResponseMessage.InnerText = "Registration Successful";
+                            ResponseMessage1.InnerText = "Check your email to activate";
                             ResponseMessage.Style.Add("display", "block");
                             ResponseMessage.Style.Add("color", "#e012ee");
-                            Response.AddHeader("REFRESH", "5;URL=Login.aspx");
+                            Response.AddHeader("REFRESH", "6;URL=Login.aspx");
                         }
                         else
                         {

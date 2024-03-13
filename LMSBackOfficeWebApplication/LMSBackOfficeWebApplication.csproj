@@ -305,6 +305,7 @@
     <Content Include="Memberships.aspx" />
     <Content Include="MemberTopUp.ascx" />
     <Content Include="Activation.aspx" />
+    <Content Include="PurchaseResponse.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\apexcharts.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -580,6 +581,13 @@
     </Compile>
     <Compile Include="Activation.aspx.designer.cs">
       <DependentUpon>Activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseResponse.aspx.cs">
+      <DependentUpon>PurchaseResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseResponse.aspx.designer.cs">
+      <DependentUpon>PurchaseResponse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

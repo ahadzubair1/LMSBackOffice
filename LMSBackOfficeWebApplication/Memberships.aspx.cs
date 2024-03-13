@@ -1,5 +1,7 @@
-﻿using System;
+﻿using LMSBackOfficeDAL;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,26 +15,35 @@ namespace LMSBackOfficeWebApplication
         {
             if (Request.HttpMethod == "POST")
             {
+                // Process the form submission
+                // For example, you can access form fields using Request.Form collection
                 string amount = Request.Form["amount"];
                 string membershipCode = Request.Form["membershipCode"];
-                string membershipName = Request.Form["membershipName"];
 
-                // Process the form data as needed
-                // For example, you can store the data in a database, send emails, etc.
-
-                // Respond with a JSON message indicating success or failure
-                Response.ContentType = "application/json";
-                if (!string.IsNullOrEmpty(amount) && !string.IsNullOrEmpty(membershipCode))
+                DataTable membershipResult = Memberships_DataAccess.GetMembershipDetails(membershipCode);
+                if (membershipResult != null && membershipResult.Rows.Count > 0)
                 {
-                    // Form data is valid, perform necessary actions
-                    Response.Write("{\"success\": true, \"message\": \"Membership form submitted successfully.\"}");
+                    DataRow row = membershipResult.Rows[0];
+                    string MembershipId = row["Membership_ID"].ToString();
+                    double MembershipAmount = Convert.ToDouble(row["Membership_Amount"]);
+                    double ActivationFees = Convert.ToDouble(row["Membership_ActivationFees"]);
+                }
+
+                 // Assuming the form submission is successful
+                 // You can perform further processing here, such as saving data to a database
+
+                 // After processing, determine whether the submission was successful
+                 bool success = true; // Example: Assuming success
+
+                // Redirect to the appropriate page based on success or failure
+                if (success)
+                {
+                    Response.Redirect("PurchaseResponse.aspx?success=1");
                 }
                 else
                 {
-                    // Form data is invalid
-                    Response.Write("{\"success\": false, \"message\": \"Failed to submit membership form. Please try again.\"}");
+                    Response.Redirect("PurchaseResponse.aspx?success=0");
                 }
-                Response.End();
             }
         }
     }
