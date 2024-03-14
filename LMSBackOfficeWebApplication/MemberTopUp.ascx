@@ -21,15 +21,16 @@
                  Top Up Amount</label>
                      <asp:TextBox ID="txtAmount" runat="server" CssClass="form-control w-100" Width="100%"></asp:TextBox>
                   <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtAmount" ForeColor="Red">Please enter amount or select amount</asp:RequiredFieldValidator>
-                     <%--<input type="text" name="name" id="txtAmount" runat="server" value="" class="form-control w-100" placeholder="Enter amount or select from below"
+                 <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                 <%--<input type="text" name="name" id="txtAmount" runat="server" value="" class="form-control w-100" placeholder="Enter amount or select from below"
                          style="max-width: 100%;" />--%>
                      <div class="d-flex mt-3 justify-content-between gap-2">
-                         <button class="btn btn-light-primary text-nowrap">+ 99</button>
-                         <span class="btn btn-light-primary text-nowrap">+ 500</span>
-                         <span class="btn btn-light-primary text-nowrap">+ 1000</span>
-                         <span class="btn btn-light-primary text-nowrap">+ 3000</span>
-                         <span class="btn btn-light-primary text-nowrap">+ 5000</span>
-                         <span class="btn btn-light-primary text-nowrap">Clear</span>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="99">+ 99</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="500">+ 500</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="1000">+ 1000</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="3000">+ 3000</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="5000">+ 5000</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="0">Clear</a>
                      </div>
                  <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
                  <%--</form>--%>
@@ -47,5 +48,18 @@
     </ContentTemplate>
 </asp:UpdatePanel>
    <!-- Modal -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".topupValue").click(function () {
+            debugger;
+            var value = $(this).attr('data-value');
+            var txtFld = document.getElementById("<%=txtAmount.ClientID%>");
+            txtFld.value = value;
+        });
+       
+
+    });
+</script>
   
 
