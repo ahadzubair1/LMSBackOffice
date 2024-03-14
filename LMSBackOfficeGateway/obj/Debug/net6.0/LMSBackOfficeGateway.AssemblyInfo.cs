@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMSBackOfficeGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+662dd96c1768905a19699893bd91b59a3398ec8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMSBackOfficeGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMSBackOfficeGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
