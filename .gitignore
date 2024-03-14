@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/LMSBackOfficeDAL/obj/Debug/LMSBackOfficeDAL.csproj.FileListAbsolute.txt
+/LMSBackOfficeWebApplication/obj/Debug/LMSBackOfficeWebApplication.csproj.FileListAbsolute.txt
