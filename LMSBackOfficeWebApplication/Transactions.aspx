@@ -38,7 +38,7 @@
                                             <th>Transaction Code</th>
                                             <th>Transaction_Type</th>
                                             <th>Amount</th>
-                                           <%-- <th>Receiver Address</th>--%>
+                                            <%-- <th>Receiver Address</th>--%>
                                             <th>Currency</th>
                                             <th>Fee</th>
                                             <th>Transaction Date</th>
@@ -46,16 +46,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                            {%>
-                                        <tr>
-                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
-                                                {%>
-                                            <td>
-                                                <%=dr[dc.ColumnName]%>
-                                            </td>
-                                            <%} %>
-                                        </tr>
+                                        <%if (dt != null && dt.Rows.Count > 0)
+                                            { %>
+
+                                                <%foreach (System.Data.DataRow dr in this.dt.Rows)
+                                                    {%>
+                                                        <tr>
+                                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                                {%>
+                                                            <td>
+                                                                <%=dr[dc.ColumnName]%>
+                                                            </td>
+                                                            <%} %>
+                                                        </tr>
+                                                <%} %>
+
                                         <%} %>
                                     </tbody>
                                 </table>

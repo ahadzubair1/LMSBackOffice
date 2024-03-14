@@ -33,6 +33,11 @@ namespace LMSBackOfficeWebApplication
             }
             try
             {
+                if(Session["Username"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
+
                 string username = Session["Username"].ToString();
                 var member = Members_DataAccess.GetMemberInfo(username);
 
@@ -57,6 +62,7 @@ namespace LMSBackOfficeWebApplication
 
                     lblMessage.Text = $"Your topup request sent successfully ";
                     lblMessage.ForeColor = Color.Green;
+                    ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ClosePopup()", true);
                 }
                 else
                 {

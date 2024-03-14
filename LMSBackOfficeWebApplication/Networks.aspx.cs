@@ -9,9 +9,9 @@ using System.Web.UI.WebControls;
 
 namespace LMSBackOfficeWebApplication
 {
-    public partial class Transactions : System.Web.UI.Page
+    public partial class Networks : System.Web.UI.Page
     {
-        protected DataTable dt { get; set; }
+        protected DataTable referrelsTable { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -23,10 +23,9 @@ namespace LMSBackOfficeWebApplication
 
                 string userName = Session["Username"].ToString();
                 var member = Members_DataAccess.GetMemberInfo(userName);
-                dt = Transactions_DataAcsess.GetAllTransaction(member.Id);
+                referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
 
             }
-
         }
     }
 }

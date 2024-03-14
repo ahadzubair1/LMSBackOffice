@@ -153,7 +153,6 @@
     <Compile Include="RedixUtil.cs" />
     <Compile Include="SqlHelper.cs" />
     <Compile Include="SupportTickets_DataAccess.cs" />
-    <Compile Include="Transactions_DataAccess.cs" />
     <Compile Include="Transactions_DataAcsess.cs" />
     <Compile Include="UtilMethods.cs" />
     <Compile Include="Wallets_DataAccess.cs" />

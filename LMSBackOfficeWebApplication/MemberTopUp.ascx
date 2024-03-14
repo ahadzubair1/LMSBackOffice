@@ -1,10 +1,54 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MemberTopUp.ascx.cs"  Inherits="LMSBackOfficeWebApplication.MemberTopUp" %>
-
-
+<style type="text/css">
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.progressmodal
+{
+    position: fixed;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: Black;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+}
+.progresscenter
+{
+    z-index: 100011;
+    margin: 300px auto;
+    padding: 10px;
+    width: 130px;
+    background-color: White;
+    border-radius: 10px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+.progresscenter img
+{
+    height: 128px;
+    width: 128px;
+}
+</style>
+<asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+<ProgressTemplate>
+    <div class="progressmodal">
+        <div class="progresscenter">
+            <img alt="" src="img/Spinner.png" />
+        </div>
+    </div>
+</ProgressTemplate>
+</asp:UpdateProgress>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="true" UpdateMode="Conditional">
-   <%-- <Triggers>        
+    <Triggers>        
         <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click" />    
-    </Triggers>   --%> 
+    </Triggers>    
     <ContentTemplate>        
        <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog">
@@ -30,7 +74,7 @@
                          <a class="btn btn-light-primary text-nowrap topupValue" data-value="1000">+ 1000</a>
                          <a class="btn btn-light-primary text-nowrap topupValue" data-value="3000">+ 3000</a>
                          <a class="btn btn-light-primary text-nowrap topupValue" data-value="5000">+ 5000</a>
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="0">Clear</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="">Clear</a>
                      </div>
                  <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
                  <%--</form>--%>
@@ -38,9 +82,9 @@
              <div class="modal-footer">
                  <button type="button" ID="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                  <%--<asp:Button ID="Button1" runat="server" Text="Cancel" CssClass="btn btn-danger"  />--%>
-                 <button type="button" class="btn btn-primary"
-                     id="btnSubmit" runat="server" onserverclick="TotpUp_Click">Top Up</button>
-                 <%--<asp:Button ID="TotpUp" runat="server" Text="Top Up" CssClass="btn btn-primary" OnClick="TotpUp_Click" />--%>
+                 <%--<button type="button" class="btn btn-primary"
+                     id="btnSubmit" runat="server" OnClick="TotpUp_Click" >Top Up</button>--%>
+                 <asp:Button ID="btnSubmit" runat="server" Text="Top Up" CssClass="btn btn-primary" OnClick="TotpUp_Click" />
              </div>
          </div>
      </div>
@@ -52,14 +96,23 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $(".topupValue").click(function () {
-            debugger;
             var value = $(this).attr('data-value');
             var txtFld = document.getElementById("<%=txtAmount.ClientID%>");
             txtFld.value = value;
         });
-       
-
     });
+</script>
+<script type="text/javascript">
+    function ClosePopup() {
+
+        var txtFld = document.getElementById("<%=txtAmount.ClientID%>");
+        txtFld.value = "";
+        $('#modal').modal('hide');
+        //hide the modal
+
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
+      }
 </script>
   
 

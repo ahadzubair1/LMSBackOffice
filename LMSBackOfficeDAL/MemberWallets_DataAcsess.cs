@@ -19,7 +19,7 @@ namespace LMSBackOfficeDAL
                     {
                         command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(userId);
                         command.Parameters.Add("@IN_Balance", SqlDbType.Decimal).Value = amount;
-                        command.Parameters.Add("@@IN_IsActive", SqlDbType.SmallInt).Value = isActive;
+                        command.Parameters.Add("@IN_IsActive", SqlDbType.SmallInt).Value = isActive;
                         connection.Open();
 
                         command.ExecuteNonQuery();
