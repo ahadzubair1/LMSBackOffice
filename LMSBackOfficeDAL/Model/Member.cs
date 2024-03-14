@@ -16,5 +16,6 @@ namespace LMSBackOfficeDAL.Model
         public string MemberAddress { get; set; }
         public string MemberWalletBalance { get; set; }
         public string MemberWalletCurrency { get; set; }
+        public string MemberCurrency { get; set; } = "USD";
     }
 }

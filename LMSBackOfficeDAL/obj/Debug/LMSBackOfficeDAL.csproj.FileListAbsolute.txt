@@ -232,3 +232,9 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Debug\LMSBackOfficeDAL.csproj.C
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Debug\LMSBackO.814DD7B2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Debug\LMSBackOfficeDAL.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Debug\LMSBackOfficeDAL.pdb
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\Microsoft.ScriptManager.WebForms.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\System.Web.Optimization.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\WebGrease.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\Antlr3.Runtime.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\System.Web.Optimization.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Debug\Antlr3.Runtime.pdb
