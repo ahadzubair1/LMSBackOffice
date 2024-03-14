@@ -398,3 +398,10 @@ FodyWeavers.xsd
 /LMSBackOfficeWebApplication/bin/LMSBackOfficeWebApplication.pdb
 /LMSBackOfficeWebApplication/obj/Debug/LMSBackOfficeWebApplication.csproj.AssemblyReference.cache
 /LMSBackOfficeWebApplication/obj/Debug/LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
+FodyWeavers.xsd
+/LMSBackOfficeDAL/obj/Debug/LMSBackOfficeDAL.csproj.FileListAbsolute.txt
+/LMSBackOfficeWebApplication/obj/Debug/LMSBackOfficeWebApplication.csproj.FileListAbsolute.txt
+/LMSBackOfficeWebApplication/bin
+/LMSBackOfficeWebApplication/obj
+/LMSBackOfficeDAL/bin
+/LMSBackOfficeDAL/obj

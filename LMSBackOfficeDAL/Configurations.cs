@@ -14,5 +14,7 @@ namespace LMSBackOfficeDAL
         public static string PrivateKey = ConfigurationManager.AppSettings["PrivateKey"].ToString();
         public static string MerchantId = ConfigurationManager.AppSettings["MerchantId"].ToString();
         public static string IpnSecret = ConfigurationManager.AppSettings["IpnSecret"].ToString();
+        public static string CompanyCryptoWallet = ConfigurationManager.AppSettings["CompanyCryptoWallet"].ToString();
+        public static string ToCurrency = ConfigurationManager.AppSettings["ToCurrency"].ToString();
     }
 }

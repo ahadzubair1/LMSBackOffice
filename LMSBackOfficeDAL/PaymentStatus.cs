@@ -28,4 +28,11 @@ namespace LMSBackOfficeDAL
         /// </summary>
         Cancelled = 50,
     }
+
+    public enum CoinPaymentStatus
+    {
+        Pending = 1,
+        Complete = 2,
+        Cancelled = -1
+    }
 }
