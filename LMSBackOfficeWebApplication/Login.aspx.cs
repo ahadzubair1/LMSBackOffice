@@ -22,7 +22,11 @@ namespace LMSBackOfficeWebApplication
 
 
             // Process the form data (e.g., save to database, send email, etc.)
-            ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            if (ccLink != null)
+            {
+                ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            }
+           // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             try
             {
                 if (ccLink.UserValidated)

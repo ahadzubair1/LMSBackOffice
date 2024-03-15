@@ -71,7 +71,7 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        private IDictionary<string, string> CreateQueryParameters(Member member, decimal amount)
+        private IDictionary<string, string> CreateQueryParameters(MemberInfo member, decimal amount)
         {
             //get store location
             //var storeLocation = $"{HttpContext.Current.U}://{Request.Host}{Request.PathBase}";
