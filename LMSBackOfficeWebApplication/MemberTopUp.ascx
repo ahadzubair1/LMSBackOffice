@@ -45,9 +45,10 @@ body
     </div>
 </ProgressTemplate>
 </asp:UpdateProgress>
-<asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="true" UpdateMode="Conditional">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server"  UpdateMode="Conditional">
     <Triggers>        
-        <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click" />    
+        <%--<asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click"  />--%>   
+        <asp:PostBackTrigger ControlID="btnSubmit"  />
     </Triggers>    
     <ContentTemplate>        
        <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,13 +83,29 @@ body
              <div class="modal-footer">
                  <button type="button" ID="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                  <%--<asp:Button ID="Button1" runat="server" Text="Cancel" CssClass="btn btn-danger"  />--%>
-                 <%--<button type="button" class="btn btn-primary"
-                     id="btnSubmit" runat="server" OnClick="TotpUp_Click" >Top Up</button>--%>
-                 <asp:Button ID="btnSubmit" runat="server" Text="Top Up" CssClass="btn btn-primary" OnClick="TotpUp_Click" />
+                <%-- <button type="button" class="btn btn-primary"
+                     id="btnSubmit" runat="server" onserverclick4="TotpUp_Click" >Top Up</button>--%>
+                 <asp:Button ID="btnSubmit" runat="server" Text="Top Up" CssClass="btn btn-primary" Enabled="True" OnClick="TotpUp_Click" />
              </div>
          </div>
      </div>
  </div>
+        <div class="modal fade modal-animate anim-blur" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title font-bold fs-4" id="messageModalLabel">Message</h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <p id="message"></p>
+                   </div>
+             <div class="modal-footer">
+                 <button type="button" ID="btnOk" class="btn btn-default" data-bs-dismiss="modal" onclick="Close();">Ok</button>      
+             </div>
+         </div>
+     </div>
+        </div>
     </ContentTemplate>
 </asp:UpdatePanel>
    <!-- Modal -->
@@ -102,17 +119,30 @@ body
         });
     });
 </script>
-<script type="text/javascript">
-    function ClosePopup() {
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function ClosePopup(message) {
         var txtFld = document.getElementById("<%=txtAmount.ClientID%>");
         txtFld.value = "";
-        $('#modal').modal('hide');
-        //hide the modal
-
         $('body').removeClass('modal-open');
         $('.modal-backdrop').remove();
-      }
+
+        var messageLabel = document.getElementById("message");
+        messageLabel.innerHTML = message;
+
+  
+        $("#messageModal").modal("show"); 
+    }
+
+    function Close() {
+        debugger;
+        var lblMessage = document.getElementById("<%=lblMessage.ClientID%>");
+        lblMessage.value = "";
+        $('.modal-backdrop').remove();
+        $("#messageModal").removeClass("show"); 
+       // $("#messageModal").addClass("hide"); 
+    }
 </script>
   
 
