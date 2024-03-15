@@ -496,7 +496,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 .orbit {
     height: 300px;
     width: 300px;
-    border: 3px dashed rgba(255, 255, 255, 0.3);
+    border: 2px dotted rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     margin: auto;
     position: absolute;
@@ -504,7 +504,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     right: 0;
     top: 0;
     bottom: 0;
-    animation: spin 10s infinite linear;
+    animation: spin 15s infinite linear;
 }
 
 @keyframes spin {
@@ -761,6 +761,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 5px;
     }
 
 .kyc-step {

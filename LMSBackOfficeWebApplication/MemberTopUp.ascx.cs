@@ -20,7 +20,7 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             string strResponse = Login_DataAccess.GetVisitorInfo();
         }
 
@@ -33,6 +33,11 @@ namespace LMSBackOfficeWebApplication
             }
             try
             {
+                if (Session["Username"] == null)
+                {
+                    Response.Redirect("Login.aspx");
+                }
+
                 string username = Session["Username"].ToString();
                 var member = Members_DataAccess.GetMemberInfo(username);
 
@@ -55,13 +60,16 @@ namespace LMSBackOfficeWebApplication
                                                             member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
                                                             Convert.ToDecimal(amount), string.Empty, string.Empty, false);
 
-                    lblMessage.Text = $"Your topup request sent successfully ";
-                    lblMessage.ForeColor = Color.Green;
+                    string message = $"Your topup request sent successfully ";
+                    //lblMessage.Text = message;
+                    //lblMessage.ForeColor = Color.Green;
+                    ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ClosePopup('" + message + "')", true);
                 }
                 else
                 {
-                    lblMessage.Text = response.Error.ToString();
-                    lblMessage.ForeColor = Color.Red;
+                    //lblMessage.Text = response.Error.ToString();
+                   // lblMessage.ForeColor = Color.Red;
+                    ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ClosePopup('" + response.Error + "')", true);
                 }
             }
             catch (Exception ex)

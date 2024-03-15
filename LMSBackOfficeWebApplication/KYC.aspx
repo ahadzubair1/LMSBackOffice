@@ -280,6 +280,9 @@
                                                             <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
                                                             <label for="checkbox_nic">NIC</label>
                                                         </div>
+                                                        <div class="single-checkbox">
+                                                            <span class="text-danger">Any document is mandatory</span>
+                                                        </div>
                                                     </div>
                                                     <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
                                                     <div class="kyc-step passport" id="kyc_passport">

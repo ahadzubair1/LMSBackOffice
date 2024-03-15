@@ -320,6 +320,7 @@
     <Content Include="img\rct-1.png" />
     <Content Include="img\rct-2.png" />
     <Content Include="img\smart-money.png" />
+    <Content Include="img\Spinner.png" />
     <Content Include="img\Steven-Down.png" />
     <Content Include="img\stock-market.svg" />
     <Content Include="img\student-1.png" />
@@ -351,6 +352,7 @@
     <Content Include="Memberships.aspx" />
     <Content Include="MemberTopUp.ascx" />
     <Content Include="Activation.aspx" />
+    <Content Include="Networks.aspx" />
     <Content Include="PurchaseResponse.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\apexcharts.min.js" />
@@ -630,6 +632,13 @@
     </Compile>
     <Compile Include="MemberTopUp.ascx.designer.cs">
       <DependentUpon>MemberTopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Networks.aspx.cs">
+      <DependentUpon>Networks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Networks.aspx.designer.cs">
+      <DependentUpon>Networks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activation.aspx.cs">

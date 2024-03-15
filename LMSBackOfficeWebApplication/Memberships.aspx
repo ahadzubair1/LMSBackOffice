@@ -216,11 +216,11 @@
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features:</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>99$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Monthly</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>No</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="99" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
@@ -232,8 +232,8 @@
                                     <h6 class="text-white">Membership Features:</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Connector-X</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>250$</span></div>
                                 </div>
@@ -245,10 +245,10 @@
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features:</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer +</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>1</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>500$</span></div>
                                 </div>
@@ -262,10 +262,10 @@
                                     <h6 class="text-white">Membership Features:</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Pioneer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>750</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1000$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>750$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="80" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
                             </div>
@@ -278,9 +278,9 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Elite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>3</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>3000$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1000$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="3000" data-activation-fee="80" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
@@ -292,10 +292,10 @@
                                     <h6 class="text-white">Membership Features:</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Infinite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1500</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>4</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>5000$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1500$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="5000" data-activation-fee="80" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
                             </div>
@@ -306,39 +306,39 @@
             <!-- [ Main Content ] end -->
         </div>
         <div class="modal fade modal-animate anim-blur " id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class=" modal-title font-bold fs-4" id="membershipModalLabel">Membership Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-               <form id="membershipForm" method="post">
-                   
-                    <div class="modal-body">
-                        <div class="mb-3 col-12">
-                            <label for="membershipName" class="form-label">Membership Name</label>
-                            <input type="text" style="max-width:100%" class="form-control w-100" id="membershipName" name="membershipName" readonly />
-                         </div>
-                          <div class="mb-3 col-12">
-                            <label for="amount" class="form-label">Amount</label>
-                            <input type="text" style="max-width:100%" class="form-control w-100" id="amount" name="amount" readonly />
-                          </div>
-                         <div class="mb-3 col-12">
-                           <label for="activationFee" class="form-label">Activation Fee</label>
-                           <input type="text" style="max-width:100%" class="form-control w-100" id="activationFee" name="activationFee" readonly />
-                         </div>
-                          <div class="mb-3 col-12">
-                            <label for="membershipCode" class="form-label">Membership Code</label>
-                            <input type="text" style="max-width:100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
-                          </div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class=" modal-title font-bold fs-4" id="membershipModalLabel">Membership Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </form>
+                    <form id="membershipForm" method="post">
+
+                        <div class="modal-body">
+                            <div class="mb-3 col-12">
+                                <label for="membershipName" class="form-label">Membership Name</label>
+                                <input type="text" style="max-width: 100%" class="form-control w-100" id="membershipName" name="membershipName" readonly />
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="text" style="max-width: 100%" class="form-control w-100" id="amount" name="amount" readonly />
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="activationFee" class="form-label">Activation Fee</label>
+                                <input type="text" style="max-width: 100%" class="form-control w-100" id="activationFee" name="activationFee" readonly />
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="membershipCode" class="form-label">Membership Code</label>
+                                <input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
@@ -358,51 +358,51 @@
                     </div>
                 </div>
             </div>
-          <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                  var membershipButtons = document.querySelectorAll('.membership-btn');
-                  membershipButtons.forEach(function (button) {
-                      button.addEventListener('click', function () {
-                          var amount = this.getAttribute('data-amount');
-                          var membershipCode = this.getAttribute('data-membership-code');
-                          var membershipName = this.getAttribute('data-membership-name');
-                          var activationFee = this.getAttribute('data-activation-fee');
-                          updateForm(amount, membershipCode, membershipName, activationFee);
-                      });
-                  });
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var membershipButtons = document.querySelectorAll('.membership-btn');
+                    membershipButtons.forEach(function (button) {
+                        button.addEventListener('click', function () {
+                            var amount = this.getAttribute('data-amount');
+                            var membershipCode = this.getAttribute('data-membership-code');
+                            var membershipName = this.getAttribute('data-membership-name');
+                            var activationFee = this.getAttribute('data-activation-fee');
+                            updateForm(amount, membershipCode, membershipName, activationFee);
+                        });
+                    });
 
-                  function updateForm(amount, membershipCode, membershipName, activationFee) {
-                      var amountField = document.getElementById('amount');
-                      var codeField = document.getElementById('membershipCode');
-                      var nameField = document.getElementById('membershipName');
-                      var feeField = document.getElementById('activationFee');
-                      amountField.value = amount;
-                      codeField.value = membershipCode;
-                      nameField.value = membershipName;
-                      feeField.value = activationFee;
-                  }
-                  document.getElementById('membershipForm').addEventListener('submit', function (event) {
-                      event.preventDefault(); // Prevent default form submission behavior
+                    function updateForm(amount, membershipCode, membershipName, activationFee) {
+                        var amountField = document.getElementById('amount');
+                        var codeField = document.getElementById('membershipCode');
+                        var nameField = document.getElementById('membershipName');
+                        var feeField = document.getElementById('activationFee');
+                        amountField.value = amount;
+                        codeField.value = membershipCode;
+                        nameField.value = membershipName;
+                        feeField.value = activationFee;
+                    }
+                    document.getElementById('membershipForm').addEventListener('submit', function (event) {
+                        event.preventDefault(); // Prevent default form submission behavior
 
-                      // Serialize form data
-                      var formData = new FormData(this);
+                        // Serialize form data
+                        var formData = new FormData(this);
 
-                      // Submit form data via AJAX
-                      fetch('memberships.aspx', {
-                          method: 'POST',
-                          body: formData
-                      })
-                          .then(response => response.text())
-                          .then(data => {
-                              // Handle the response if needed
-                              console.log(data);
-                          })
-                          .catch(error => {
-                              console.error('Error:', error);
-                          });
-                  });
-              });
-          </script>
+                        // Submit form data via AJAX
+                        fetch('memberships.aspx', {
+                            method: 'POST',
+                            body: formData
+                        })
+                            .then(response => response.text())
+                            .then(data => {
+                                // Handle the response if needed
+                                console.log(data);
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            });
+                    });
+                });
+            </script>
         </footer>
     </main>
 </asp:Content>
