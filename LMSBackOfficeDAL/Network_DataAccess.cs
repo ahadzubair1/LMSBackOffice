@@ -45,8 +45,31 @@ namespace LMSBackOfficeDAL
             }
             return networkSuccess;
         }
-        
 
+
+        public static bool AssignNetworkParent(string memCode)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("USP_UpdateMemberStatus", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@IN_MemCode", memCode);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    // Handle SQL exceptions
+                    // Log or throw the exception as needed
+                    // Example: throw;
+                    return false;
+                }
+            }
+        }
 
     }
 }

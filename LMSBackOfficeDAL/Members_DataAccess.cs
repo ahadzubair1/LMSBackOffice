@@ -9,6 +9,7 @@ using LMSBackofficeDAL;
 using LMSBackOfficeDAL.Model;
 using static LMSBackOfficeDAL.Countries_DataAccess;
 using System.Web;
+using Microsoft.Ajax.Utilities;
 
 namespace LMSBackOfficeDAL
 {
@@ -176,6 +177,46 @@ namespace LMSBackOfficeDAL
                 }
             }
         }
+
+        public static string AddMembershipPurchase(string MemberID, string MembershipID, string MembershipName, decimal amount, decimal activation_fee)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_AddMembershipPurchase", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = MemberID;
+                    command.Parameters.Add("@IN_Membership_ID", SqlDbType.NVarChar).Value = MembershipID;
+                    command.Parameters.Add("@IN_Membership_Name", SqlDbType.NVarChar).Value = MembershipName;
+                    command.Parameters.Add("@IN_Membership_Amount", SqlDbType.NVarChar).Value = amount;
+                    command.Parameters.Add("@IN_Membership_ActivationFee", SqlDbType.NVarChar).Value = activation_fee;
+                    SqlParameter outParameter = command.Parameters.Add("@OUT_Member_ID", SqlDbType.NVarChar, 36); // Assuming 36 is the maximum length of a GUID represented as a string
+                    outParameter.Direction = ParameterDirection.Output;
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        if (outParameter.Value != DBNull.Value && outParameter.Value != null)
+                        {
+                            return "Success";
+                        }
+                        else
+                        {
+                            return "Memeberhsip purchase failed";
+                        }
+                        
+
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                        return ex.Message;
+                    }
+                }
+            }
+        }
         /// <summary>
         /// METHOD TO ADD THE INORDERS
         /// </summary>
@@ -309,9 +350,9 @@ namespace LMSBackOfficeDAL
         //}
 
 
-        public static Member GetMemberInfo(string userName)
+        public static MemberInfo GetMemberInfo(string userName)
         {
-            Member member = null;
+            MemberInfo member = null;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand("USP_GetMemberByID", connection))
@@ -325,7 +366,7 @@ namespace LMSBackOfficeDAL
                         {
                             while (reader.Read())
                             {
-                                member = new Member
+                                member = new MemberInfo
                                 {
                                     Id = reader["Member_ID"].ToString(),
                                     MemberFullName = reader["Member_FullName"].ToString(),

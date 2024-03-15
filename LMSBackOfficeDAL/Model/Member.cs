@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LMSBackOfficeDAL.Model
 {
-    public class Member
+    public class MemberInfo
     {
         public string Id { get; set; }
         public string UserName { get; set; }
