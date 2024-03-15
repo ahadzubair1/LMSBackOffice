@@ -989,3 +989,207 @@ footer .field-row {
         padding: 0;
     }
 }
+
+#orgChartContainer {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 2rem;
+    background: lavender;
+    overflow: auto;
+    position: relative;
+}
+
+.tree-controls {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    left: 0;
+    padding: 0 2rem;
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group-prepend {
+    margin-right: -1px;
+}
+
+.input-group-prepend, .input-group-append {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#orgChart {
+    margin-top: 70px;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 2px 0 2px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+    .tree li a {
+        position: relative;
+        padding: 10px;
+        gap: 5px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        text-transform: capitalize;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0px #4a31b394;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        /* animation: gradientAnimation forwards 2s infinite; */
+        animation-timing-function: linear;
+        width: 100px;
+    }
+
+.platinum {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+#orgChart .user-rank {
+    position: absolute;
+    top: -10px;
+    display: none;
+    right: -7px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    height: 30px;
+    object-fit: cover;
+    padding: 2px;
+    box-shadow: 0 0 0px 1px #fff, -2px 4px 5px 0px #000;
+}
+
+#orgChart .user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 0px 1px #fff, -2px 4px 5px 0px #000;
+}
+
+.tree li a span.user-name {
+    font-size: 12px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.tree li a span {
+    font-weight: 600;
+}
+
+.node-detail {
+    position: absolute;
+    background: #fff;
+    left: calc(100% + 10px);
+    color: initial;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    z-index: 2;
+    text-align: left;
+    box-shadow: 0px 6px 4px -4px #0000004d;
+    border-radius: 4px;
+    display: none;
+}
+
+label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: 700;
+}
+
+.node-detail label {
+    white-space: nowrap;
+    display: block;
+}
+
+#orgChart .child-node, #orgChart .child-node li ul {
+    display: flex;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #521e7a;
+    width: 0;
+    height: 20px;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #521e7a;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #521e7a;
+}
+
+.premium {
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+}
+.na {
+    background: linear-gradient(122deg, #8593E3 -1.92%, #202875 100%);
+}
+.starter {
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(4, 189, 228, 1) 0%, rgba(2, 83, 185, 1) 100.2%);
+}
+.tree li:last-child::before {
+    border-right: 2px solid #521e7a;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}

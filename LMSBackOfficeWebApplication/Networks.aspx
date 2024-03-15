@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Networks.aspx.cs" Inherits="LMSBackOfficeWebApplication.Networks" %>
+
 <asp:Content ID="NetworkContent1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
 
@@ -221,42 +222,113 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Transfer Credit Wallet Points</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Active Wallet.</h6>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Fee</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center">
+                                <div id="orgChartContainer">
+                                    <div class="row mb-4 tree-controls">
                                         <div class="col-md-6">
-                                            <label class="form-label">OTP</label>
-                                            <div class="form-group d-flex align-items-center gap-2">
-                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
-                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" id="searchnode" placeholder="Find a user">
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Transfer</button>
-                                </form>
+                                    <div id="orgChart">
+                                        <div class="tree">
+                                            <ul class="parent-node">
+                                                <li><a href="" class="platinum">
+                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Gold"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Anas AORH7</span><span class="node-detail"><label>Username: AORH7</label><label>Sponsor:EWGRR</label><label>Country: Morocco</label><label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label></span></a>
+                                                    <ul class="child-node">
+                                                        <li>
+                                                            <a href="" position="left" class="platinum">
+                                                                <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver">
+                                                                <img class="user-avatar" src="Content/images/user/avatar-2.jpg">
+                                                                <span class="user-name">Ahmed AEPNJ</span>
+                                                                <span class="node-detail">
+                                                                    <label>Username: AEPNJ</label>
+                                                                    <label>Sponsor: AORH7</label>
+                                                                    <label>Country: Egypt</label>
+                                                                    <label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label>
+                                                                </span>
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="" position="left" class="premium">
+                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Omar MDTA4</span><span class="node-detail"><label>Username: MDTA4</label><label>Sponsor:AORH7</label><label>Country: Morocco</label><label>Spot License: Premium</label><label>Subs. Date: 02/03/2024 01:44:12</label></span></a>
+                                                                    <ul>
+                                                                        <li><a href="" position="left" class="starter">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">ANAS OK7PM</span><span class="node-detail"><label>Username: OK7PM</label><label>Sponsor:AORH7</label><label>Country: Morocco</label><label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 02:05:12</label></span></a>
+                                                                        </li>
+                                                                        <li><a href="" position="right" class="starter">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">bougouttaia HDWGT</span><span class="node-detail"><label>Username: HDWGT</label><label>Sponsor:MDTA4</label><label>Country: Morocco</label><label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 02:05:12</label></span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="" position="right" class="na">
+                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/03/2024 01:44:12</label></span></a>
+                                                                    <ul>
+                                                                        <li><a href="" position="left" class="na">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
+                                                                            </span></a>
+                                                                        </li>
+                                                                        <li><a href="" position="right" class="na">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
+                                                                            </span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" position="right" class="platinum">
+                                                                <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver">
+                                                                <img class="user-avatar" src="Content/images/user/avatar-2.jpg">
+                                                                <span class="user-name">ANAS 5YABF</span>
+                                                                <span class="node-detail">
+                                                                    <label>Username: 5YABF</label>
+                                                                    <label>Sponsor: AORH7</label>
+                                                                    <label>Country: Morocco</label>
+                                                                    <label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label>
+                                                                </span>
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="" position="left" class="na">
+                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/03/2024 00:27:21</label></span></a>
+                                                                    <ul>
+                                                                        <li><a href="" position="left" class="na">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
+                                                                            </span></a>
+                                                                        </li>
+                                                                        <li><a href="" position="right" class="na">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
+                                                                            </span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="" position="right" class="starter">
+                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Abdessamad A7AFX</span><span class="node-detail"><label>Username: A7AFX</label><label>Sponsor:AORH7</label><label>Country: Netherlands </label>
+                                                                        <label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 00:27:21</label></span></a>
+                                                                    <ul>
+                                                                        <li><a href="" position="left" class="na">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/26/2024 02:29:08</label></span></a>
+                                                                        </li>
+                                                                        <li><a href="" position="right" class="starter">
+                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">ANMAR 5NICM</span><span class="node-detail"><label>Username: 5NICM</label><label>Sponsor:AORH7</label><label>Country: Iraq</label><label>Spot License: Starter</label><label>Subs. Date: 02/26/2024 02:29:08</label></span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Active Wallet Transactions</h5>
@@ -285,7 +357,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="referrels" role="tabpanel" aria-labelledby="referrels-tab">
-                     
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">My Referrels</h5>
@@ -300,22 +372,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       <%if (referrelsTable != null && referrelsTable.Rows.Count > 0)
-                                         { %>
+                                        <%if (referrelsTable != null && referrelsTable.Rows.Count > 0)
+                                            { %>
 
-                                             <%foreach (System.Data.DataRow dr in this.referrelsTable.Rows)
-                                                 {%>
-                                                     <tr>
-                                                         <%foreach (System.Data.DataColumn dc in this.referrelsTable.Columns)
-                                                             {%>
-                                                         <td>
-                                                             <%=dr[dc.ColumnName]%>
-                                                         </td>
-                                                         <%} %>
-                                                     </tr>
-                                             <%} %>
+                                        <%foreach (System.Data.DataRow dr in this.referrelsTable.Rows)
+                                            {%>
+                                        <tr>
+                                            <%foreach (System.Data.DataColumn dc in this.referrelsTable.Columns)
+                                                {%>
+                                            <td>
+                                                <%=dr[dc.ColumnName]%>
+                                            </td>
+                                            <%} %>
+                                        </tr>
+                                        <%} %>
 
-                                     <%} %>
+                                        <%} %>
                                     </tbody>
                                 </table>
                             </div>
