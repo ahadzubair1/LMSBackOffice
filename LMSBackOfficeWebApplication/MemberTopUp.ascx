@@ -68,12 +68,13 @@ body
                  <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
                  <%--<input type="text" name="name" id="txtAmount" runat="server" value="" class="form-control w-100" placeholder="Enter amount or select from below"
                          style="max-width: 100%;" />--%>
-                     <div class="d-flex mt-3 justify-content-between gap-2">
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="99">+ 99</a>
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="500">+ 500</a>
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="1000">+ 1000</a>
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="3000">+ 3000</a>
-                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="5000">+ 5000</a>
+                     <div class="d-flex mt-3 justify-content-between">
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="50">$50</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="250">$250</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="500">$500</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="750">$750</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="1000">$1000</a>
+                         <a class="btn btn-light-primary text-nowrap topupValue" data-value="1500">$1500</a>
                          <a class="btn btn-light-primary text-nowrap topupValue" data-value="">Clear</a>
                      </div>
                  <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
