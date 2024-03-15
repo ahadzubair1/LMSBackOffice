@@ -78,7 +78,7 @@
       <div class="col-md-4">
          <div class="col-md-12 text-center">
              <h5  id="ResponseMessage" runat="server" style="display: none;"></h5>
-             <p id="ResponseMessage1" runat="server"></p>
+             <p id="ResponseMessage1" runat="server" class="text-white"></p>
          </div>
         <form class="form" id="myForm" runat="server">
           <div class="mb-3">

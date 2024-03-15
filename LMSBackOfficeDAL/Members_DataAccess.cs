@@ -197,14 +197,7 @@ namespace LMSBackOfficeDAL
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
-                        if (outParameter.Value != DBNull.Value && outParameter.Value != null)
-                        {
-                            return "Success";
-                        }
-                        else
-                        {
-                            return "Memeberhsip purchase failed";
-                        }
+                        return "Success";
                         
 
                     }

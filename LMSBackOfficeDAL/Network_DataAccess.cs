@@ -47,28 +47,104 @@ namespace LMSBackOfficeDAL
         }
 
 
-        public static bool AssignNetworkParent(string memCode)
+        public static DataTable GetNetworkDetails(string memberId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("USP_UpdateMemberStatus", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@IN_MemCode", memCode);
-
-                try
+                using (SqlCommand command = new SqlCommand("USP_GetNetworkDetails", connection))
                 {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    return true;
-                }
-                catch (SqlException ex)
-                {
-                    // Handle SQL exceptions
-                    // Log or throw the exception as needed
-                    // Example: throw;
-                    return false;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = memberId;
+                    try
+                    {
+                        connection.Open();
+                        DataTable resultTable = new DataTable();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                        return resultTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                        return null; // Or throw an exception
+                    }
                 }
             }
+        }
+        public static DataTable GetNetworkFarNode(string memberId)
+        {
+            DataTable networkDetails = GetNetworkDetails(memberId);
+            if (networkDetails != null && networkDetails.Rows.Count > 0)
+            {
+                DataRow NetworkRow = networkDetails.Rows[0];
+                string Network_ID = NetworkRow["Network_Id"].ToString();
+                string Referred_By = NetworkRow["Referred_By"].ToString();
+                string Position = NetworkRow["Position"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand("USP_GetUserNetworkFarNode", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@In_Member_ID", SqlDbType.NVarChar).Value = Referred_By;
+                        command.Parameters.Add("@Position", SqlDbType.Int).Value = Position;
+                        try
+                        {
+                            connection.Open();
+                            DataTable resultTable = new DataTable();
+                            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                            {
+                                adapter.Fill(resultTable);
+                            }
+                            return resultTable;
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle exception
+                            Console.WriteLine("Error: " + ex.Message);
+                            return null;
+                                 // Or throw an exception
+                        }
+                    }
+                }
+            }
+            else
+            {
+                return null;
+            }
+                
+        }
+        public static void AssignNetworkParent(string memberId)
+        {
+            DataTable FarNodeDetails = GetNetworkFarNode(memberId);
+            if (FarNodeDetails != null && FarNodeDetails.Rows.Count > 0)
+            {
+                DataRow FarNodeRow = FarNodeDetails.Rows[0];
+                string ParentId = FarNodeRow["Memeber_ID"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand("USP_AssignNetworkParent", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = memberId;
+                        command.Parameters.Add("@IN_Parent_ID", SqlDbType.NVarChar).Value = ParentId;
+                        try
+                        {
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle exception
+                            Console.WriteLine("Error: " + ex.Message);
+                           
+                        }
+                    }
+                }
+            }
+            
         }
 
     }

@@ -58,7 +58,7 @@ namespace LMSBackOfficeWebApplication
                                                             string.Empty, Configurations.CompanyCryptoWallet, null, "Complete",
                                                             Convert.ToDecimal(amount), string.Empty, string.Empty, false);
                             var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
-                            
+                            Network_DataAccess.AssignNetworkParent(MemberId);
                             if (SuccessPurchase=="Success")
                             {
                                 Response.Redirect("PurchaseResponse.aspx?success=1");
