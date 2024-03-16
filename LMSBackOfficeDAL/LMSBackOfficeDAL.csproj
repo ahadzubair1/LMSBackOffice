@@ -135,7 +135,7 @@
     <Compile Include="Countries_DataAccess.cs" />
     <Compile Include="HashUtility.cs" />
     <Compile Include="MemberWallets_DataAcsess.cs" />
-    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\MemberInfo.cs" />
     <Compile Include="Network_DataAccess.cs" />
     <Compile Include="PaymentStatus.cs" />
     <Compile Include="ReferralCodes_DataAccess.cs" />

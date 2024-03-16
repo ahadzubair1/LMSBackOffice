@@ -216,6 +216,7 @@
     <Content Include="Content\images\bg-glow.svg" />
     <Content Include="Content\images\bg-gradient.png" />
     <Content Include="Content\images\big-money.png" />
+    <Content Include="Content\images\bodybg.jpg" />
     <Content Include="Content\images\c5048531a4f3b6509542ac2b0aee71e8.png" />
     <Content Include="Content\images\cardbg.png" />
     <Content Include="Content\images\crypto-circle.svg" />
@@ -223,8 +224,15 @@
     <Content Include="Content\images\d723f859f444d4f8bf2720057554ff35.png" />
     <Content Include="Content\images\finance.png" />
     <Content Include="Content\images\financially-fit-for-life.png" />
+    <Content Include="Content\images\fire-lit.gif" />
     <Content Include="Content\images\forex-circle.svg" />
     <Content Include="Content\images\Kwame-Opoku.png" />
+    <Content Include="Content\images\kyc\avatar.png" />
+    <Content Include="Content\images\kyc\license.png" />
+    <Content Include="Content\images\kyc\nic.png" />
+    <Content Include="Content\images\kyc\passport.png" />
+    <Content Include="Content\images\kyc\profile-avatar.png" />
+    <Content Include="Content\images\kyc\uae.png" />
     <Content Include="Content\images\layout\img-announcement-1.png" />
     <Content Include="Content\images\layout\img-announcement-2.png" />
     <Content Include="Content\images\layout\img-announcement-3.png" />
@@ -234,6 +242,12 @@
     <Content Include="Content\images\logo-v-dark.png" />
     <Content Include="Content\images\logo-v-light.png" />
     <Content Include="Content\images\masterhead-bg.png" />
+    <Content Include="Content\images\Memberships\1.png" />
+    <Content Include="Content\images\Memberships\2.png" />
+    <Content Include="Content\images\Memberships\3.png" />
+    <Content Include="Content\images\Memberships\4.png" />
+    <Content Include="Content\images\Memberships\5.png" />
+    <Content Include="Content\images\Memberships\6.png" />
     <Content Include="Content\images\Nathan-Williams.png" />
     <Content Include="Content\images\nft-blog.png" />
     <Content Include="Content\images\Nickolas-Leonida.png" />

@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using System.Data.SqlTypes;
-using System.Net.Http;
 using System.Text;
 using LMSBackofficeDAL;
 using LMSBackOfficeDAL.Model;
-using static LMSBackOfficeDAL.Countries_DataAccess;
-using System.Web;
-using Microsoft.Ajax.Utilities;
 
 namespace LMSBackOfficeDAL
 {

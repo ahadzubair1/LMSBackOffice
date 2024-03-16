@@ -13,14 +13,14 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
-        <link href="Content/fonts/tabler-icons.min.css" rel="stylesheet" />
-        <link href="Content/fonts/feather.css" rel="stylesheet" />
-        <link href="Content/fonts/fontawesome.css" rel="stylesheet" />
-        <link rel="stylesheet" href="Content/css/dropzone.min.css" asp-append-version="true" />
+        <link href="/Content/fonts/tabler-icons.min.css" rel="stylesheet" />
+        <link href="/Content/fonts/feather.css" rel="stylesheet" />
+        <link href="/Content/fonts/fontawesome.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/Content/css/dropzone.min.css" asp-append-version="true" />
         <link href="Content/fonts/material.css" rel="stylesheet" />
-        <link href="Content/style-preset.css" rel="stylesheet" />
-        <link href="Content/style.css" rel="stylesheet" />
-        <link href="Content/dataTables.bootstrap5.min.css" rel="stylesheet" />
+        <link href="/Content/style-preset.css" rel="stylesheet" />
+        <link href="/Content/style.css" rel="stylesheet" />
+        <link href="/Content/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     </asp:PlaceHolder>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />

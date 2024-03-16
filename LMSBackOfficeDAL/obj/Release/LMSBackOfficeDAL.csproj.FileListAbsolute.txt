@@ -171,10 +171,10 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Release\LMSBackOfficeDAL.csproj
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Release\LMSBackO.814DD7B2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Release\LMSBackOfficeDAL.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\obj\Release\LMSBackOfficeDAL.pdb
-E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\Microsoft.ScriptManager.WebForms.dll
-E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\System.Web.Optimization.dll
-E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\WebGrease.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\Antlr3.Runtime.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\Newtonsoft.Json.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\System.Web.Optimization.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\Antlr3.Runtime.pdb
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\Microsoft.ScriptManager.WebForms.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\System.Web.Optimization.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeDAL\bin\Release\WebGrease.dll
