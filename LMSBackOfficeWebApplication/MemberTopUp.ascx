@@ -47,8 +47,8 @@ body
 </asp:UpdateProgress>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server"  UpdateMode="Conditional">
     <Triggers>        
-        <%--<asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click"  />--%>   
-        <asp:PostBackTrigger ControlID="btnSubmit"  />
+        <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click"  />   
+        <%--<asp:PostBackTrigger ControlID="btnSubmit"  />--%>
     </Triggers>    
     <ContentTemplate>        
        <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
