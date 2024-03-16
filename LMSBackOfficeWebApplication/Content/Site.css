@@ -1048,7 +1048,7 @@ footer .field-row {
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 2px 0 2px;
+    padding: 12px 2px 0 2px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -1068,11 +1068,9 @@ footer .field-row {
         justify-content: center;
         border-radius: 10px;
         box-shadow: 0 3px 6px 0px #4a31b394;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        /* animation: gradientAnimation forwards 2s infinite; */
         animation-timing-function: linear;
         width: 100px;
+        overflow: hidden;
     }
 
 .platinum {
@@ -1098,7 +1096,7 @@ footer .field-row {
     height: 30px;
     border-radius: 100%;
     object-fit: cover;
-    box-shadow: 0 0 0px 1px #fff, -2px 4px 5px 0px #000;
+    box-shadow: 0 2px 3px 2px #fff inset, -2px 2px 15px -6px #000;
 }
 
 .tree li a span.user-name {
@@ -1192,4 +1190,71 @@ label:not(.form-check-label):not(.custom-file-label) {
     border-radius: 0 5px 0 0;
     -webkit-border-radius: 0 5px 0 0;
     -moz-border-radius: 0 5px 0 0;
+}
+
+.card__line {
+    position: absolute;
+    animation: 1s 1s linear infinite;
+}
+
+.card__line_left {
+    animation-name: to-top;
+    background: linear-gradient(to bottom, #2bd9e9, transparent);
+    left: 0;
+    bottom: -100%;
+    width: 0.2em;
+    height: 100%;
+}
+
+.card__line_right {
+    animation-name: to-bottom;
+    background: linear-gradient(to bottom, transparent, #2bd9e9);
+    right: 0;
+    top: -100%;
+    width: 0.2em;
+    height: 100%;
+}
+
+.card__line_top {
+    animation-delay: 1.5s;
+    animation-name: to-right;
+    background: linear-gradient(to right, transparent, #2bd9e9);
+    width: 100%;
+    height: 0.2em;
+    top: 0;
+    left: -100%;
+}
+
+.card__line_bottom {
+    animation-delay: 1.5s;
+    animation-name: to-left;
+    background: linear-gradient(to right, #2bd9e9, transparent);
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 0.2em;
+}
+
+@keyframes to-top {
+    to {
+        bottom: 200%;
+    }
+}
+
+@keyframes to-bottom {
+    to {
+        top: 200%;
+    }
+}
+
+@keyframes to-left {
+    to {
+        right: 200%;
+    }
+}
+
+@keyframes to-right {
+    to {
+        left: 200%;
+    }
 }
