@@ -124,80 +124,78 @@
                     </div>
                     <div class="leaf">
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                     </div>
 
                     <div class="leaf leaf1">
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
-
                     </div>
 
                     <div class="leaf leaf2">
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
-                        </div>
-
-                        <div>
-                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                     </div>
                     <div class="bg-line">
-                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
-                        <img src="https://www.yudiz.com/codepen/photography-banner/wave.svg" alt="Line">
+                        <img src="~Content/images/wave.svg" alt="Line">
+                        <img src="~Content/images/wave.svg" alt="Line">
                     </div>
                 </div>
 
@@ -1012,14 +1010,14 @@
                                 <div class="col-6">
                                     <div class="d-grid">
                                         <button class="preset-btn btn-img btn active" data-value="true" onclick="layout_caption_change('true');" data-bs-toggle="tooltip" title="Caption Show">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-on.svg" alt="img" class="img-fluid">
+                                            <%--<img src="https://ableproadmin.com/assets/images/customizer/caption-on.svg" alt="img" class="img-fluid">--%>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="d-grid">
                                         <button class="preset-btn btn-img btn" data-value="false" onclick="layout_caption_change('false');" data-bs-toggle="tooltip" title="Caption Hide">
-                                            <img src="https://ableproadmin.com/assets/images/customizer/caption-off.svg" alt="img" class="img-fluid">
+                                            <%--<img src="https://ableproadmin.com/assets/images/customizer/caption-off.svg" alt="img" class="img-fluid">--%>
                                         </button>
                                     </div>
                                 </div>
@@ -1033,14 +1031,14 @@
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn active" data-value="false" onclick="layout_rtl_change('false');" data-bs-toggle="tooltip" title="LTR">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/ltr.svg" alt="img" class="img-fluid">
+                                                <%--<img src="https://ableproadmin.com/assets/images/customizer/ltr.svg" alt="img" class="img-fluid">--%>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn" data-value="true" onclick="layout_rtl_change('true');" data-bs-toggle="tooltip" title="RTL">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/rtl.svg" alt="img" class="img-fluid">
+                                                <%--<img src="https://ableproadmin.com/assets/images/customizer/rtl.svg" alt="img" class="img-fluid">--%>
                                             </button>
                                         </div>
                                     </div>
@@ -1055,14 +1053,14 @@
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn active" data-value="false" onclick="change_box_container('false')" data-bs-toggle="tooltip" title="Full Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/full.svg" alt="img" class="img-fluid">
+                                                <%--<img src="https://ableproadmin.com/assets/images/customizer/full.svg" alt="img" class="img-fluid">--%>
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="d-grid">
                                             <button class="preset-btn btn-img btn" data-value="true" onclick="change_box_container('true')" data-bs-toggle="tooltip" title="Fixed Width">
-                                                <img src="https://ableproadmin.com/assets/images/customizer/fixed.svg" alt="img" class="img-fluid">
+                                                <%--<img src="https://ableproadmin.com/assets/images/customizer/fixed.svg" alt="img" class="img-fluid">--%>
                                             </button>
                                         </div>
                                     </div>
