@@ -20,7 +20,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                       <%-- <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -42,7 +42,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -66,7 +66,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -88,7 +88,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
