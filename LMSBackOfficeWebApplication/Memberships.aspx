@@ -227,21 +227,6 @@
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
-                                <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
-                                <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Connector-X</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>250$</span></div>
-                                </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="80" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mbox">
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features:</h6>
