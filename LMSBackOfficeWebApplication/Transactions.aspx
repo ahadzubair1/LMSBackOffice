@@ -31,7 +31,6 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Active Wallet Transactions</h5>
                                 <table id="" class="table table-striped" style="width: 100%">
                                     <thead>
                                         <tr>

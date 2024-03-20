@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" MasterPageFile="~/Site.Master" EnableEventValidation="true"  CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships"%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships" EnableEventValidation="false" %>
 
-<asp:Content ID="MembershipContent1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -114,76 +114,78 @@
                     </div>
                     <div class="leaf">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                     </div>
 
                     <div class="leaf leaf1">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
-
                     </div>
 
                     <div class="leaf leaf2">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
-                        </div>
-
-                        <div>
-                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                    </div>
+                    <div class="bg-line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
                     </div>
                 </div>
                 <!-- [ breadcrumb ] start -->
@@ -219,8 +221,8 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Monthly</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>No</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>0$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
@@ -230,14 +232,14 @@
                                 <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features:</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Connector-X</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>1</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>250$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="80" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="80" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -245,12 +247,12 @@
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features:</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer+</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>1</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>500$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="80" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
                             </div>
@@ -265,7 +267,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>750</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>750$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="750" data-activation-fee="80" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
                             </div>
@@ -280,7 +282,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>3</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1000$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="80" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
@@ -295,7 +297,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>4</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>1500$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1500" data-activation-fee="80" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
                             </div>

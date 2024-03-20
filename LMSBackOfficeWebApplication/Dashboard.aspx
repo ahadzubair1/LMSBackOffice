@@ -20,7 +20,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                       <%-- <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -42,7 +42,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -66,7 +66,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -88,7 +88,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                        <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />
+                        <%--<img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -194,8 +194,8 @@
                         </div>
                     </div>
                     <div class="bg-line">
-                        <img src="~Content/images/wave.svg" alt="Line">
-                        <img src="~Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
                     </div>
                 </div>
 
@@ -259,8 +259,8 @@
                                             <div id="all-earnings-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$3,020</h5>
-                                            <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i>30.6%</p>
+                                            <h5 class="mb-1">$0</h5>
+                                            <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
                                         </div>
                                     </div>
                                 </div>
@@ -358,8 +358,8 @@
                                             <div id="total-task-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$304.67</h5>
-                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>44.2%</p>
+                                            <h5 class="mb-1">$</h5>
+                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
                                         </div>
                                     </div>
                                 </div>
@@ -417,7 +417,7 @@
                                             <h5 class="font-semibold m-0">Explorer+</h5>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$500</h5>
+                                            <h5 class="mb-1">None</h5>
                                             <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>1 Year</p>
                                         </div>
                                     </div>
@@ -456,7 +456,7 @@
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
                                     <div class="row align-items-center">
                                         <div class="col-2">
-                                            <h1 class="font-semibold m-0">7</h1>
+                                            <h1 class="font-semibold m-0">0</h1>
                                         </div>
                                         <div class="col-10">
                                             <p class="mb-0"><span class="text-warning">🌟</span> Earn More Rewards</p>
@@ -621,7 +621,7 @@
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
                                                 <p class="text-muted mb-1">New Memberships</p>
-                                                <h5 class="mb-0">34,686</h5>
+                                                <h5 class="mb-0">0</h5>
                                             </div>
                                             <div class="col-6">
                                                 <div id="total-tasks-graph"></div>
@@ -632,7 +632,7 @@
                                         <div class="mt-3 row align-items-center">
                                             <div class="col-6">
                                                 <p class="text-muted mb-1">Total Memberships</p>
-                                                <h5 class="mb-0">3,786</h5>
+                                                <h5 class="mb-0">0</h5>
                                             </div>
                                             <div class="col-6">
                                                 <div id="pending-tasks-graph"></div>
@@ -835,7 +835,7 @@
                                                     <p class="mb-0">Income</p>
                                                 </div>
                                             </div>
-                                            <h6 class="mb-0">$23,876 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$763,43</small></h6>
+                                            <h6 class="mb-0">$0 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$0</small></h6>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -850,7 +850,7 @@
                                                     <p class="mb-0">Rent</p>
                                                 </div>
                                             </div>
-                                            <h6 class="mb-0">$23,876 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$763,43</small></h6>
+                                            <h6 class="mb-0">$0 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$0</small></h6>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -865,7 +865,7 @@
                                                     <p class="mb-0">Download</p>
                                                 </div>
                                             </div>
-                                            <h6 class="mb-0">$23,876 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$763,43</small></h6>
+                                            <h6 class="mb-0">$0 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$0</small></h6>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -880,7 +880,7 @@
                                                     <p class="mb-0">Views</p>
                                                 </div>
                                             </div>
-                                            <h6 class="mb-0">$23,876 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$763,43</small></h6>
+                                            <h6 class="mb-0">$0 <small class="text-muted"><i class="ti ti-chevrons-up"></i>+$0</small></h6>
                                         </div>
                                     </div>
                                 </div>

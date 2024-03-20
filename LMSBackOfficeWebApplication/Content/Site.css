@@ -178,7 +178,13 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     box-shadow: 0 10px 40px -18px #000000b2;
     transition: all ease 0.4s;
 }
-
+    .mbox img{
+        margin-right: 60px;
+        transition: all ease 0.4s;
+    }
+    .mbox:hover img {
+        transform: rotate(5deg) scale(0.9);
+    }
     .mbox:before {
         content: "";
         background: rgba(255, 255, 255, 0.12);
@@ -1063,19 +1069,15 @@ footer .field-row {
         font-size: 12px;
         text-transform: capitalize;
         display: inline-flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         border-radius: 10px;
-        box-shadow: 0 3px 6px 0px #4a31b394;
+        box-shadow: 0 2px 6px 0px #0000004a;
+        background-color: #374256;
         animation-timing-function: linear;
-        width: 100px;
         overflow: hidden;
     }
 
-.platinum {
-    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
-}
 
 #orgChart .user-rank {
     position: absolute;
@@ -1176,15 +1178,6 @@ label:not(.form-check-label):not(.custom-file-label) {
     border-left: 2px solid #521e7a;
 }
 
-.premium {
-    background-image: linear-gradient(to right, #00b09b, #96c93d);
-}
-.na {
-    background: linear-gradient(122deg, #8593E3 -1.92%, #202875 100%);
-}
-.starter {
-    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(4, 189, 228, 1) 0%, rgba(2, 83, 185, 1) 100.2%);
-}
 .tree li:last-child::before {
     border-right: 2px solid #521e7a;
     border-radius: 0 5px 0 0;
@@ -1199,28 +1192,28 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .card__line_left {
     animation-name: to-top;
-    background: linear-gradient(to bottom, #2bd9e9, transparent);
+    background: linear-gradient(to bottom, #d711e6, transparent);
     left: 0;
     bottom: -100%;
-    width: 0.2em;
+    width: 0.3em;
     height: 100%;
 }
 
 .card__line_right {
     animation-name: to-bottom;
-    background: linear-gradient(to bottom, transparent, #2bd9e9);
+    background: linear-gradient(to bottom, transparent, #d711e6);
     right: 0;
     top: -100%;
-    width: 0.2em;
+    width: 0.3em;
     height: 100%;
 }
 
 .card__line_top {
     animation-delay: 1.5s;
     animation-name: to-right;
-    background: linear-gradient(to right, transparent, #2bd9e9);
+    background: linear-gradient(to right, transparent, #d711e6);
     width: 100%;
-    height: 0.2em;
+    height: 0.3em;
     top: 0;
     left: -100%;
 }
@@ -1228,11 +1221,11 @@ label:not(.form-check-label):not(.custom-file-label) {
 .card__line_bottom {
     animation-delay: 1.5s;
     animation-name: to-left;
-    background: linear-gradient(to right, #2bd9e9, transparent);
+    background: linear-gradient(to right, #d711e6, transparent);
     bottom: 0;
     right: -100%;
     width: 100%;
-    height: 0.2em;
+    height: 0.3em;
 }
 
 @keyframes to-top {
