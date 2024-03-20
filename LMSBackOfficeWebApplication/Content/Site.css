@@ -1071,7 +1071,7 @@ footer .field-row {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 2px;
+        border-radius: 10px;
         box-shadow: 0 2px 6px 0px #0000004a;
         background-color: #374256;
         animation-timing-function: linear;
@@ -1192,28 +1192,28 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .card__line_left {
     animation-name: to-top;
-    background: linear-gradient(to bottom, #fff, transparent);
+    background: linear-gradient(to bottom, #d711e6, transparent);
     left: 0;
     bottom: -100%;
-    width: 0.1em;
+    width: 0.3em;
     height: 100%;
 }
 
 .card__line_right {
     animation-name: to-bottom;
-    background: linear-gradient(to bottom, transparent, #fff);
+    background: linear-gradient(to bottom, transparent, #d711e6);
     right: 0;
     top: -100%;
-    width: 0.1em;
+    width: 0.3em;
     height: 100%;
 }
 
 .card__line_top {
     animation-delay: 1.5s;
     animation-name: to-right;
-    background: linear-gradient(to right, transparent, #fff);
+    background: linear-gradient(to right, transparent, #d711e6);
     width: 100%;
-    height: 0.1em;
+    height: 0.3em;
     top: 0;
     left: -100%;
 }
@@ -1221,11 +1221,11 @@ label:not(.form-check-label):not(.custom-file-label) {
 .card__line_bottom {
     animation-delay: 1.5s;
     animation-name: to-left;
-    background: linear-gradient(to right, #fff, transparent);
+    background: linear-gradient(to right, #d711e6, transparent);
     bottom: 0;
     right: -100%;
     width: 100%;
-    height: 0.1em;
+    height: 0.3em;
 }
 
 @keyframes to-top {
