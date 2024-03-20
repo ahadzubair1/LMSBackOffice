@@ -343,35 +343,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Active Wallet Transactions</h5>
-                                <table id="" class="table table-striped" style="width: 100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Active Wallet Points</th>
-                                            <th>Credit Wallet Points</th>
-                                            <th>Total Points</th>
-                                            <th>Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2024-03-01</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>Deposit</td>
-                                        </tr>
-                                        <!-- Add more rows as needed -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                     <div class="tab-pane fade" id="referrels" role="tabpanel" aria-labelledby="referrels-tab">
 

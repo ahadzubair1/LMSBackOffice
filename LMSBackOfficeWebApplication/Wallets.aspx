@@ -225,73 +225,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Credit Wallet Points</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Active Wallet.</h6>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Fee</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6">
-                                            <label class="form-label">OTP</label>
-                                            <div class="form-group d-flex align-items-center gap-2">
-                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
-                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Transfer</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Active Wallet Transactions</h5>
-                                <table id="" class="table table-striped" style="width: 100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Credit Wallet Points</th>
-                                            <th>Bonus Wallet Points</th>
-                                            <th>Total Points</th>
-                                            <th>Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2024-03-01</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>Deposit</td>
-                                        </tr>
-                                        <!-- Add more rows as needed -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Transfer Active Wallet Points</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Active Wallet to Credit Wallet.</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Bonus Wallet.</h6>
                                 <form>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -329,6 +263,72 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Credit Wallet Transactions</h5>
+                                <table id="" class="table table-striped" style="width: 100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Credit Wallet Points</th>
+                                            <th>Bonus Wallet Points</th>
+                                            <th>Total Points</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-03-01</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>Deposit</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Transfer Bonus Wallet Points</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Bonus Wallet to Credit Wallet.</h6>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Fee</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Receivable Amount</label>
+                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <label class="form-label">OTP</label>
+                                            <div class="form-group d-flex align-items-center gap-2">
+                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
+                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Transfer</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Bonus Wallet Transactions</h5>
                                 <table id="" class="table table-striped" style="width: 100%">
                                     <thead>
                                         <tr>
