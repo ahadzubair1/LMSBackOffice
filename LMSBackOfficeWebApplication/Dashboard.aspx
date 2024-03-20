@@ -194,8 +194,8 @@
                         </div>
                     </div>
                     <div class="bg-line">
-                        <img src="~Content/images/wave.svg" alt="Line">
-                        <img src="~Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
                     </div>
                 </div>
 
