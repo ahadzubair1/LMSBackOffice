@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships" EnableEventValidation="false"%>
+﻿<%@ Page Language="C#"  AutoEventWireup="true" MasterPageFile="~/Site.Master" EnableEventValidation="true"  CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships"%>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="MembershipContent1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">

@@ -11,7 +11,7 @@ namespace LMSBackOfficeWebApplication
 {
 
 
-    public partial class Wallets
+    public partial class CancelTransaction
     {
     }
 }

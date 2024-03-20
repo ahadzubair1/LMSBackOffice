@@ -152,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CancelTransaction.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="CoinPaymentSuccess.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -475,6 +477,7 @@
     <Content Include="RanksRewards.aspx" />
     <Content Include="Scripts\dataTables.bootstrap5.min.css" />
     <Content Include="Scripts\dataTables.min.js" />
+    <Content Include="SuccessHandler.aspx" />
     <Content Include="Transactions.aspx" />
     <Content Include="Wallets.aspx" />
     <Content Include="css\bootstrap-grid.css.map" />
@@ -579,6 +582,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CancelTransaction.aspx.cs">
+      <DependentUpon>CancelTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CancelTransaction.aspx.designer.cs">
+      <DependentUpon>CancelTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoinPaymentSuccess.aspx.cs">
       <DependentUpon>CoinPaymentSuccess.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -689,6 +706,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessHandler.aspx.cs">
+      <DependentUpon>SuccessHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessHandler.aspx.designer.cs">
+      <DependentUpon>SuccessHandler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transactions.aspx.cs">
       <DependentUpon>Transactions.aspx</DependentUpon>

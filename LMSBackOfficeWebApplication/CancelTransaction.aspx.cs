@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace LMSBackOfficeWebApplication
 {
-    public partial class Wallets : System.Web.UI.Page
+    public partial class CancelTransaction : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
 
-            }
         }
     }
 }

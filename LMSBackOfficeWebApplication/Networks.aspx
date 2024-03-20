@@ -381,8 +381,7 @@
                                         <tr>
                                             <th>Member Name</th>
                                             <th>MemberShip</th>
-                                            <th>MemberShip Expiry</th>
-                                            <th>Amount</th>
+                                            <th>MemberShip Expiry</th>                                  
                                             <th>Status</th>
                                         </tr>
                                     </thead>

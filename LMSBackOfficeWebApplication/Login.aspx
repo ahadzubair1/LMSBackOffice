@@ -11,6 +11,9 @@
     <link href="./Content/css/style.css" rel="stylesheet" />
     <link href="./Content/css/icons.css" rel="stylesheet" />
     <link href="./Content/css/typography.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <style>
         .theGlobe {
             text-align: center;
@@ -24,9 +27,53 @@
             transform: translateY(-50%);
         }
     </style>
+
+        <script type="text/javascript">
+         
+            function ShowMessage(message) {
+                debugger;
+                var messageLabel = document.getElementById("bodyMessage");
+                messageLabel.innerHTML = message;
+                var myModal = document.getElementById("messageModal");
+                var modal = bootstrap.Modal.getOrCreateInstance(myModal)
+                modal.show();
+
+               // $("#messageModal").modal("show");
+              //  $('body').addClass('modal-open');
+              //  $("#messageModal").removeClass("hide"); 
+            }
+
+            function Close() {
+                var lblMessage = document.getElementById("bodyMessage");
+                lblMessage.innerHTML = "";
+
+                $("#exampleModal").modal('hide');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
+                $("#messageModal").removeClass("show");
+                // $("#messageModal").addClass("hide"); 
+            }
+        </script>
 </head>
 
 <body>
+
+    <div class="modal fade modal-animate anim-blur" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="color:#000 !important;">
+            <div class="modal-header">
+                <h1 class="modal-title font-bold fs-4" id="messageModalLabel">Message</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="bodyMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal" onclick="Close();">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     <header class="v-header w-100 py-3">
         <div class="mobilenav d-lg-none">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -103,7 +150,16 @@
 
                         <div class="mb-3">
 
-                            <cc1:CaptchaControl runat="server" ID="ccLink" CaptchaMaxTimeout="180" CaptchaMinTimeout="5" CaptchaLineNoise="Medium" CaptchaFontWarping="Medium" CaptchaLength="5" Arithmetic="true" Width="180px" />
+                            <cc1:CaptchaControl runat="server" ID="ccLink" 
+                                CaptchaMaxTimeout="180" 
+                                CaptchaMinTimeout="5" 
+                                CaptchaLineNoise="Medium" 
+                                CaptchaFontWarping="Medium" 
+                                CaptchaLength="5" 
+                                Arithmetic="true" 
+                                 ErrorInputTooFast="Image text was typed too quickly. " ErrorInputTooSlow="Image text was typed too slowly."
+                                 EnableViewState="false"
+                                Width="180px" />
                             <asp:TextBox class="from-control" ID="txtCaptcha" runat="server" CausesValidation="true" Width="182px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="* Valid Value is Required"
                                 ControlToValidate="txtCaptcha" Display="Dynamic"></asp:RequiredFieldValidator>
@@ -122,7 +178,7 @@
         </div>
         <span class="arrow-down vp-gradient"><i class="icon-arrow-1"></i></span>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
     <script>
 
         "use strict"; // Paul Slaymaker, paul25882@gmail.com
@@ -329,7 +385,7 @@
         drawTiles();
 
         start();
-
     </script>
+
 </body>
 </html>
