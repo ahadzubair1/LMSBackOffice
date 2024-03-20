@@ -267,8 +267,8 @@
                                     <thead>
                                         <tr>
                                             <th>Date</th>
-                                            <th>Active Wallet Points</th>
                                             <th>Credit Wallet Points</th>
+                                            <th>Bonus Wallet Points</th>
                                             <th>Total Points</th>
                                             <th>Description</th>
                                         </tr>
@@ -333,8 +333,8 @@
                                     <thead>
                                         <tr>
                                             <th>Date</th>
-                                            <th>Active Wallet Points</th>
                                             <th>Credit Wallet Points</th>
+                                            <th>Bonus Wallet Points</th>
                                             <th>Total Points</th>
                                             <th>Description</th>
                                         </tr>

@@ -217,7 +217,7 @@
                         <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Network</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrels</a>
+                        <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrals</a>
                     </li>
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">
