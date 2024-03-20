@@ -226,7 +226,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Credit Wallet Points</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Bonus Wallet.</h6>
-                                <form>
+                               <%-- <form>--%>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -257,7 +257,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Transfer</button>
-                                </form>
+                              <%--  </form>--%>
                             </div>
                         </div>
                         <div class="card">
@@ -292,7 +292,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Bonus Wallet Points</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Bonus Wallet to Credit Wallet.</h6>
-                                <form>
+                              <%--  <form>--%>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -323,7 +323,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Transfer</button>
-                                </form>
+                                <%--</form>--%>
                             </div>
                         </div>
                         <div class="card">

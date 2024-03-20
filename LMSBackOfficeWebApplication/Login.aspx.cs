@@ -34,11 +34,24 @@ namespace LMSBackOfficeWebApplication
                     bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
                     if (loginSuccess)
                     {
-                        this.successMessage.Value = "true";
-                        Session["LoggedIn"] = true;
-                        Session["Username"] = username;
-                        Login_DataAccess.AddLogin(username, password);
-                        Response.Redirect("~/Dashboard.aspx");
+                        var memberInfo = Members_DataAccess.GetMemberInfo(username);
+                        var isMembershipValid = Members_DataAccess.IsMembershipExpired(memberInfo.Id);
+                        if(!isMembershipValid)
+                        {
+                            var message = "Your annual memships is expired, please renew your membership for continue";
+                            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "showmessage()", true);
+                           // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
+                            // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
+                            ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "ShowMessage('" + message + "');", true);
+                        }
+                        else
+                        {
+                            this.successMessage.Value = "true";
+                            Session["LoggedIn"] = true;
+                            Session["Username"] = username;
+                            Login_DataAccess.AddLogin(username, password);
+                            Response.Redirect("~/Dashboard.aspx");
+                        }                    
 
                     }
                     else
@@ -69,6 +82,7 @@ namespace LMSBackOfficeWebApplication
             }
             
         }
+
         /* protected void Page_Load(object sender, EventArgs e)
         {
                         

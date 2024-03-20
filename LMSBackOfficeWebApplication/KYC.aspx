@@ -231,7 +231,7 @@
                                                 </div>
                                             </div>
                                             <div class="secondary-data">
-                                                <form action="">
+                                              <%--  <form action="">--%>
                                                     <div class="form-item">
                                                         <label for="Username">Username</label>
                                                         <input type="text" name="Username" class="kyc-input" disabled
@@ -258,14 +258,14 @@
                                                             <option value="">Advanced</option>
                                                         </select>
                                                     </div>
-                                                </form>
+                                               <%-- </form>--%>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="kyc-grid w-100">
-                                        <form action="">
+                                       <%-- <form action="">--%>
                                             <div class="kyc-form-wrapper">
                                                 <header>
                                                     <h4 class="heading">KYC Registration <span class="kyc-type">standard</span></h4>
@@ -378,7 +378,7 @@
                                                     </div>
                                                 </footer>
                                             </div>
-                                        </form>
+                                       <%-- </form>--%>
                                     </div>
                                 </div>
                             </div>

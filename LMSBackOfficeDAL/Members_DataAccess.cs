@@ -407,5 +407,30 @@ namespace LMSBackOfficeDAL
             return dt;
         }
 
+        public static bool IsMembershipExpired(string memberId)
+        {
+            bool exists = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_CheckMembershipExpired", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters
+                    command.Parameters.Add("@MemberID", SqlDbType.NVarChar, 50).Value = memberId;
+                    command.Parameters.Add("@Expired", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    exists = Convert.ToBoolean(command.Parameters["@Expired"].Value);
+                }
+            }
+
+            return exists;
+        }
+
     }
 }
