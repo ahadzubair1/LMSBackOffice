@@ -94,7 +94,7 @@ namespace LMSBackOfficeWebApplication
             if (Session["Checkout"] != null)
             {
                 var checkout = Session["Checkout"] as CheckoutModel;
-                checkout.TotalAmount = 1;
+                checkout.TotalAmount = checkout.TotalAmount;
                 checkout.ToWalletAddress = txtWalletAddress.Text;
                 checkout.Currency = DropDownList1.SelectedValue.ToString();
                 var queryParameters = CreateQueryParameters(checkout);
