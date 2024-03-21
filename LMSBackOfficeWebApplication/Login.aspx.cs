@@ -47,7 +47,7 @@ namespace LMSBackOfficeWebApplication
                         Response.AddHeader("REFRESH", "5;URL=Login.aspx");
                         ResponseMessage.InnerText = "Login Failed: Invalid Credentials";
                         ResponseMessage.Style.Add("display", "block");
-                        ResponseMessage.Style.Add("color", "#e012ee");
+                        ResponseMessage.Style.Add("color", "#ff2600");
                     }
                 }
                 else
@@ -56,7 +56,7 @@ namespace LMSBackOfficeWebApplication
                     Response.AddHeader("REFRESH", "5;URL=Login.aspx");
                     ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
                     ResponseMessage.Style.Add("display", "block");
-                    ResponseMessage.Style.Add("color", "#e012ee");
+                    ResponseMessage.Style.Add("color", "#ff2600");
 
                 }
             }
@@ -65,7 +65,7 @@ namespace LMSBackOfficeWebApplication
                 this.successMessage.Value = "false";
                 ResponseMessage.InnerText = "Error Occurred:"+Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
-                ResponseMessage.Style.Add("color", "#e012ee");
+                ResponseMessage.Style.Add("color", "#ff2600");
             }
             
         }

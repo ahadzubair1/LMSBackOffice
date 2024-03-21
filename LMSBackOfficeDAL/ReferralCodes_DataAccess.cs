@@ -9,7 +9,7 @@ namespace LMSBackOfficeDAL
 {
 	public class ReferralCodes_DataAccess
 	{
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static string AddMemberReferralCodes(string userId,int position, string code)
         {
              using (SqlConnection connection = new SqlConnection(connectionString))
