@@ -239,7 +239,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="80" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -254,7 +254,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="80" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -269,7 +269,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="750" data-activation-fee="80" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="750" data-activation-fee="50" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -284,7 +284,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="80" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="50" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -299,7 +299,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1500" data-activation-fee="80" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1500" data-activation-fee="50" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
                             </div>
                         </div>
                     </div>
