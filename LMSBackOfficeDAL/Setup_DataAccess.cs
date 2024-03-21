@@ -24,7 +24,7 @@ namespace LMSBackOfficeDAL
                 //var Constring = new System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
                 //var  Constring = new SqlConnection(ConfigurationSettings.AppSettings["LMSBackOfficeConnectionString"]);
                 //var Constring = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString);
-                SqlConnection Connection = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000");
+                SqlConnection Connection = new SqlConnection(DatabaseConnection.GetConnectionString());
 				Connection.Open();
 				SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_GetAllBonusTypes", Connection);
 

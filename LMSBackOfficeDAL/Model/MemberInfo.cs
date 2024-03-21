@@ -21,6 +21,7 @@ namespace LMSBackOfficeDAL.Model
 
     public class CheckoutModel
     {
+        public string MemberCode { get; set; }
         public string MemberFullName { get; set; }
         public string Email { get; set; }
         public decimal TotalAmount { get; set; }

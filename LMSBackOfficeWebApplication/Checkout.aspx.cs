@@ -20,6 +20,18 @@ namespace LMSBackOfficeWebApplication
             {
                 string strResponse = Login_DataAccess.GetVisitorInfo();
 
+                if (Session["MembershipExpired"] != null)
+                {
+                    var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
+                    if (IsMembershipExpired)
+                    {
+                         Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "HideSideBar();", true);
+                        // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
+                        // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
+                        //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "HideSideBar();", true);
+                    }
+                }
+
                 if (Session["Checkout"] != null)
                 {
                     var checkout = Session["Checkout"] as CheckoutModel;
@@ -27,7 +39,7 @@ namespace LMSBackOfficeWebApplication
                     lblAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
                     lblTotalAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
 
-                    txtMemberCode.Text = checkout.MemberFullName;
+                    txtMemberCode.Text = checkout.MemberCode;
                     txtMemberFullName.Text = checkout.MemberFullName;
                     txtEmail.Text = checkout.Email;
                     //txtCurrency.Text = checkout.Currency;

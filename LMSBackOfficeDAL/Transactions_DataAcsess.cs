@@ -6,7 +6,7 @@ namespace LMSBackOfficeDAL
 {
     public class Transactions_DataAcsess
     {
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = DatabaseConnection.GetConnectionString();
 
         public static DataTable GetAllTransaction(string memberId)
         {

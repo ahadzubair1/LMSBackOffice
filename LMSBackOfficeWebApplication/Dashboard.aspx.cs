@@ -13,6 +13,8 @@ using System.Data;
 using System.Data.SqlClient;
 using LMSBackOfficeDAL;
 using LMSBackofficeDAL;
+using LMSBackOfficeDAL.Model;
+using System.Net.PeerToPeer;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -24,8 +26,24 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
-                /*gvwBonusType.DataSource = null;*/
-                ShowBonusTypes();
+                if (Session["MembershipExpired"] != null)
+                {
+                    var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
+                    if (IsMembershipExpired)
+                    {                       
+                        var message = "Your annual memships is expired, please renew your membership for continue";
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "ShowMessage('" + message + "')", true);
+                        // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
+                        // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
+                        //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "ShowMessage('" + message + "');", true);
+                    }
+                    else
+                    {
+                        /*gvwBonusType.DataSource = null;*/
+                        ShowBonusTypes();
+                    }
+                }
+               
             }
             if (Session["LoggedIn"] == null || !(bool)Session["LoggedIn"])
             {
@@ -64,5 +82,7 @@ namespace LMSBackOfficeWebApplication
             //LMSBackofficeDAL.UtilMethods.SendEmail("Ahad Zubair", "ahadzubair@gmail.com", "0501271NNNN");
 
         }
+
+
     }
 }
