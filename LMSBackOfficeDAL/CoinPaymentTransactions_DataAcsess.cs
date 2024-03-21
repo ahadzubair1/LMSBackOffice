@@ -6,7 +6,7 @@ namespace LMSBackOfficeDAL
 {
     public class CoinPaymentTransactions_DataAcsess
     {
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = DatabaseConnection.GetConnectionString();
 
         public static string AddCoinPaymentTransactions(string memberId,string transactionCode,string cpTransactionId, string transactionType,
                                                         string fromCurrency, string toCurrency, string memberAddress,  string status, decimal amount,

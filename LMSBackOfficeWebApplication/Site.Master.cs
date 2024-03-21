@@ -50,6 +50,7 @@ namespace LMSBackOfficeWebApplication
             var checkout = new CheckoutModel
             {
                 MemberFullName = member.MemberFullName,
+                MemberCode = member.MemberCode,
                 Email = member.Email,
                 TotalAmount = 50,
                 Currency = Configurations.ToCurrency,
