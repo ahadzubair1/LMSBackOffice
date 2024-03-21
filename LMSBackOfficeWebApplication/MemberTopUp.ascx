@@ -138,6 +138,7 @@ body
     }
 
     function Close() {
+        debugger;
         var lblMessage = document.getElementById("<%=lblMessage.ClientID%>");
         lblMessage.value = "";
          var txtFld = document.getElementById("<%=txtAmount.ClientID%>");

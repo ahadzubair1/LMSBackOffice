@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.16.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.16\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -321,6 +324,7 @@
     <Content Include="css\icons.css" />
     <Content Include="css\style.css" />
     <Content Include="css\typography.css" />
+    <Content Include="ExternalLib\log4net.dll" />
     <Content Include="fonts\icomoon.svg" />
     <Content Include="img\7.png" />
     <Content Include="img\74bfa33cdc60f1991bff9c8c91b566cf.png" />
@@ -734,6 +738,7 @@
     </Compile>
     <Compile Include="Utitlity\CryptoUtil.cs" />
     <Compile Include="Utitlity\HttpUrlCaller.cs" />
+    <Compile Include="Utitlity\WriteLog.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

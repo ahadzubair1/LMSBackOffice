@@ -1,6 +1,8 @@
 ﻿using LMSBackOfficeDAL;
 using LMSBackOfficeWebApplication;
 using LMSBackOfficeWebApplication.Ipns;
+using LMSBackOfficeWebApplication.Utitlity;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,28 +20,41 @@ namespace Coinpayments.Example
         {
             var req = IpnBase.Parse<IpnApi>(context.Request.Form);
 
-            var hmac = context.Request.Headers["HMAC"];
-            if (hmac == null || !req.SigIsValid(hmac))
+            var requestString = JsonConvert.SerializeObject(req);
+            WriteLog.LogInfo(requestString);
+
+            try
             {
-                response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
-                return;
-            }
+                var hmac = context.Request.Headers["HMAC"];
+                WriteLog.LogInfo(hmac);
+                if (hmac == null || !req.SigIsValid(hmac))
+                {
+                    response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
+                    return;
+                }
 
-            if (req.SuccessStatusLax() && req.IpnType == "api")
+                if (req.SuccessStatusLax() && req.IpnType == "api")
+                {
+                    // TODO: Process payment as needed, release product
+                    //Update Balance in UserWallet table 
+                    string username = HttpContext.Current.Session["Username"].ToString();
+                    var member = Members_DataAccess.GetMemberInfo(username);
+                    MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(req.Amount1), 0);
+
+                    //Update Transaction on success
+                    Transactions_DataAcsess.UpdateTransaction(member.Id, req.Fee, CoinPaymentStatus.Complete.ToString());
+
+                    CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.SendTx, req.StatusText);
+                }
+
+                WriteLog.LogInfo($"Status Code Is : {req.StatusText}" );
+                WriteLog.LogInfo($"Reponse text : 1");
+               // response(context, HttpStatusCode.OK, "1");
+            }
+            catch (Exception ex)
             {
-                // TODO: Process payment as needed, release product
-                //Update Balance in UserWallet table 
-                string username = HttpContext.Current.Session["Username"].ToString();
-                var member = Members_DataAccess.GetMemberInfo(username);
-                MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(req.Amount1), 0);
-
-                //Update Transaction on success
-                Transactions_DataAcsess.UpdateTransaction(member.Id, req.Fee, CoinPaymentStatus.Complete.ToString());
-
-                CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.SendTx,req.StatusText);
+                WriteLog.LogError(ex);
             }
-
-            response(context, HttpStatusCode.OK, "1");
         }
 
 

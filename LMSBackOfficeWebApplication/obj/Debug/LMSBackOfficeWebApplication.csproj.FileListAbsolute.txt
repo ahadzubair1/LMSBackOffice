@@ -364,3 +364,5 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeW
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackO.65EEADC2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\log4net.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\log4net.xml

@@ -17,8 +17,7 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
+
                 if (Request.HttpMethod == "POST" && String.IsNullOrEmpty(Request.Headers["X-Requested-With"]))
                 {
                     // Process the form submission
@@ -82,7 +81,7 @@ namespace LMSBackOfficeWebApplication
                     }
 
                 }
-            }
+            
         }
     }
 }

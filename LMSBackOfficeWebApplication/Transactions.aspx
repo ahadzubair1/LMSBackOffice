@@ -25,7 +25,21 @@
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
-
+                <div class="col-md-8 order-md-1">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="keyword">Keyword</label>
+                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                         <div class="col-md-2 mb-3">
+                              <label for="button"></label>
+ <button class="btn btn-primary btn-lg btn-block" type="submit">Search</button>
+ </div>
+                    </div>
+                   
+                    
+                    
+                </div>
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
@@ -48,17 +62,17 @@
                                         <%if (dt != null && dt.Rows.Count > 0)
                                             { %>
 
-                                                <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                                    {%>
-                                                        <tr>
-                                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
-                                                                {%>
-                                                            <td>
-                                                                <%=dr[dc.ColumnName]%>
-                                                            </td>
-                                                            <%} %>
-                                                        </tr>
-                                                <%} %>
+                                        <%foreach (System.Data.DataRow dr in this.dt.Rows)
+                                            {%>
+                                        <tr>
+                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                {%>
+                                            <td>
+                                                <%=dr[dc.ColumnName]%>
+                                            </td>
+                                            <%} %>
+                                        </tr>
+                                        <%} %>
 
                                         <%} %>
                                     </tbody>
@@ -70,7 +84,6 @@
                 </div>
             </div>
             <!-- [ Main Content ] end -->
-        </div>
         </div>
      <!-- [ Main Content ] end -->
         <footer class="pc-footer">
