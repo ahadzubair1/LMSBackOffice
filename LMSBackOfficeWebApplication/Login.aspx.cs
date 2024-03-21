@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using LMSBackOfficeDAL;
 using Microsoft.Ajax.Utilities;
+using LMSBackOfficeWebApplication.Utitlity;
+using log4net;
 
 
 namespace LMSBackOfficeWebApplication
@@ -19,7 +21,7 @@ namespace LMSBackOfficeWebApplication
         {
             string username = this.username.Value;
             string password = this.password.Value;
-
+            ILog logger = log4net.LogManager.GetLogger("InfoLog");
 
             // Process the form data (e.g., save to database, send email, etc.)
             if (ccLink != null)
@@ -45,6 +47,8 @@ namespace LMSBackOfficeWebApplication
                         this.successMessage.Value = "true";
                         Session["LoggedIn"] = true;
                         Session["Username"] = username;
+                        WriteLog.LogInfo($"logged in as {username}");
+                        logger.Info($"logged in as {username}");
                         Session["MembershipExpired"] = isMembershipExpired;
                         Login_DataAccess.AddLogin(username, password);
                         Response.Redirect("~/Dashboard.aspx");

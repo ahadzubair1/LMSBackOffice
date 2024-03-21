@@ -1,7 +1,9 @@
 ﻿using LMSBackofficeDAL;
 using LMSBackOfficeDAL;
 using LMSBackOfficeDAL.Model;
+using LMSBackOfficeWebApplication.Utitlity;
 using Microsoft.Ajax.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
@@ -18,32 +20,44 @@ namespace LMSBackOfficeWebApplication
         {
             if (!IsPostBack)
             {
-                string strResponse = Login_DataAccess.GetVisitorInfo();
-
-                if (Session["MembershipExpired"] != null)
+                try
                 {
-                    var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
-                    if (IsMembershipExpired)
+
+
+                    string strResponse = Login_DataAccess.GetVisitorInfo();
+
+                    if (Session["MembershipExpired"] != null)
                     {
-                         Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "HideSideBar();", true);
-                        // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
-                        // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
-                        //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "HideSideBar();", true);
+                        var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
+                        if (IsMembershipExpired)
+                        {
+                            Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "HideSideBar();", true);
+                            // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
+                            // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
+                            //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "HideSideBar();", true);
+                        }
+                    }
+
+                    if (Session["Checkout"] != null)
+                    {
+                        var checkout = Session["Checkout"] as CheckoutModel;
+                        var checkoutString = JsonConvert.SerializeObject(checkout);
+
+                        WriteLog.LogInfo(checkoutString);
+
+                        lblAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
+                        lblTotalAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
+                        DropDownList1.SelectedValue = "TRX";
+                        txtMemberCode.Text = checkout.MemberCode;
+                        txtMemberFullName.Text = checkout.MemberFullName;
+                        txtEmail.Text = checkout.Email;
+                        //txtCurrency.Text = checkout.Currency;
+                        txtWalletAddress.Text = checkout.ToWalletAddress;
                     }
                 }
-
-                if (Session["Checkout"] != null)
+                catch (Exception ex)
                 {
-                    var checkout = Session["Checkout"] as CheckoutModel;
-
-                    lblAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
-                    lblTotalAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
-
-                    txtMemberCode.Text = checkout.MemberCode;
-                    txtMemberFullName.Text = checkout.MemberFullName;
-                    txtEmail.Text = checkout.Email;
-                    //txtCurrency.Text = checkout.Currency;
-                   // txtWalletAddress.Text = checkout.ToWalletAddress;
+                    WriteLog.LogError(ex);
                 }
             }
         }
@@ -54,7 +68,7 @@ namespace LMSBackOfficeWebApplication
             string authority = HttpContext.Current.Request.Url.Authority;
             var path = storeLocation.Split('/');
             var completeurl = $"{path[0]}://{path[2]}";
-            
+
             string host = HttpContext.Current.Request.Url.Host;
             string orderNo = Guid.NewGuid().ToString();
             Uri uri = new Uri(storeLocation);
@@ -72,7 +86,7 @@ namespace LMSBackOfficeWebApplication
                 ["amountf"] = model.TotalAmount.ToString("N2"),
                 ["item_name"] = "totup",
 
-               
+
                 //IPN, success and cancel URL
                 ["success_url"] = $"{completeurl}/SuccessHandler.aspx?orderNumber={orderNo}", // order summery page
                 ["ipn_url"] = $"{completeurl}/IPNHandler.ashx",
