@@ -13,15 +13,15 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
-   </asp:PlaceHolder>
-  <link href="/Content/fonts/tabler-icons.min.css" rel="stylesheet" />
-        <link href="/Content/fonts/feather.css" rel="stylesheet" />
-        <link href="/Content/fonts/fontawesome.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/Content/css/dropzone.min.css" asp-append-version="true" />
-        <link href="Content/fonts/material.css" rel="stylesheet" />
-        <link href="/Content/style-preset.css" rel="stylesheet" />
-        <link href="/Content/style.css" rel="stylesheet" />
-        <link href="/Content/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </asp:PlaceHolder>
+    <link href="/Content/fonts/tabler-icons.min.css" rel="stylesheet" />
+    <link href="/Content/fonts/feather.css" rel="stylesheet" />
+    <link href="/Content/fonts/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/css/dropzone.min.css" asp-append-version="true" />
+    <link href="Content/fonts/material.css" rel="stylesheet" />
+    <link href="/Content/style-preset.css" rel="stylesheet" />
+    <link href="/Content/style.css" rel="stylesheet" />
+    <link href="/Content/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <script type="text/javascript">
@@ -513,16 +513,16 @@
                                 <span class="pc-mtext">AI Copy Trading</span>
                             </a>
                         </li>
-                         <li class="pc-item">
-     <a href="Transactions.aspx" class="pc-link">
-         <span class="pc-micon">
-             <svg class="pc-icon">
-                 <use xlink:href="#custom-presentation-chart"></use>
-             </svg>
-         </span>
-         <span class="pc-mtext">Transactions</span>
-     </a>
- </li>
+                        <li class="pc-item">
+                            <a href="Transactions.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-presentation-chart"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Transactions</span>
+                            </a>
+                        </li>
                         <li class="pc-item">
                             <%--<a href="Bonus.aspx" class="pc-link">--%>
                             <a href="#" class="pc-link">
@@ -531,7 +531,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Tools</span>
+                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -546,14 +546,13 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <%--<a href="Support.aspx" class="pc-link">--%>
-                            <a href="#" class="pc-link">
+                            <a href="#" class="pc-link d-flex align-items-center justify-content-between">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-password-check"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Academy Portal</span>
+                                <span class="pc-mtext">Academy Portal  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                     </ul>
@@ -612,6 +611,6 @@
     </asp:PlaceHolder>
 
     <!-- Modal -->
-            
+    
 </body>
 </html>

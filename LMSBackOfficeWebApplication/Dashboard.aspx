@@ -358,7 +358,7 @@
                                             <div id="total-task-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$</h5>
+                                            <h5 class="mb-1">$0</h5>
                                             <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
                                         </div>
                                     </div>
