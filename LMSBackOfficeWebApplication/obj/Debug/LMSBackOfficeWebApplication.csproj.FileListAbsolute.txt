@@ -364,3 +364,9 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeW
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackO.65EEADC2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\log4net.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\log4net.xml
+D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.AssemblyReference.cache
+D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
+D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
+D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb

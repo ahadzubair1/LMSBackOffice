@@ -405,3 +405,4 @@ FodyWeavers.xsd
 /LMSBackOfficeWebApplication/obj
 /LMSBackOfficeDAL/bin
 /LMSBackOfficeDAL/obj
+/LMSBackOfficeWebApplication/Checkout.aspx.cs

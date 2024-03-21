@@ -57,7 +57,7 @@ namespace LMSBackOfficeWebApplication
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+            sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -77,7 +77,7 @@ namespace LMSBackOfficeWebApplication
             {
                 string memberId = rootNode["Member_ID"].ToString();
                 // Generate HTML for the root node and its children recursively
-                sb.Append(GenerateNodeHtml(dataTable, memberId));
+                sb.Append(GenerateNodeHtml(dataTable, memberId,1));
             }
             sb.AppendLine("    </ul>");
             sb.AppendLine("</li>");
@@ -87,57 +87,9 @@ namespace LMSBackOfficeWebApplication
             return sb.ToString();
         }
 
-        private string GenerateNodeHtmlTest(DataTable dataTable, string parentId)
-        {
-            StringBuilder sb = new StringBuilder();
+      
 
-            // Get the current node and its children
-            DataRow[] childRows = dataTable.Select($"Parent_MemberId = '{parentId}'");
-            if (childRows.Length > 0)
-            {
-                foreach (DataRow row in childRows)
-                {
-                    string memberUserName = row["Member_UserName"].ToString();
-                    string position = row["Position"].ToString();
-                    string country = row["CountryOfOrigin"].ToString(); // Add country data
-
-                    // Start the list item for the current node
-                    sb.AppendLine("<li>");
-                    // Generate HTML for the current node
-                    sb.AppendLine("<a href=\"#\" class=\"platinum\">");
-                    sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
-                        <span class=""user-name"">{memberUserName}</span>
-                        <span class=""node-detail"">
-                            <label>Username: {memberUserName}</label>
-                            <label>Position: {position}</label>
-                            <label>Country: {country}</label>
-                        </span>
-                    </a>");
-                    // Check if there are child nodes for the current node
-                    string memberId = row["Member_ID"].ToString();
-                    string childHtml = GenerateNodeHtml(dataTable, memberId);
-                    if (!string.IsNullOrEmpty(childHtml))
-                    {
-                        // Start the child node
-                        sb.AppendLine("<ul class=\"child-node\">");
-                        sb.AppendLine(childHtml);
-                        // End the child node
-                        sb.AppendLine("</ul>");
-
-                    }
-                    // End the list item for the current node
-                    sb.AppendLine("</li>");
-                }
-
-            }
-
-            return sb.ToString();
-        }
-
-
-        private string GenerateNodeHtml(DataTable dataTable, string parentId)
+        private string GenerateNodeHtml(DataTable dataTable, string parentId,int Level)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -154,7 +106,7 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+                sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -169,7 +121,7 @@ namespace LMSBackOfficeWebApplication
                 string memberId = leftChildRows[0]["Member_ID"].ToString();
                 if(Int32.Parse(leftChildRows[0]["Level"].ToString())<=3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId,Level+1);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -188,26 +140,7 @@ namespace LMSBackOfficeWebApplication
             }
             else
             {
-
-                // Start the list item for the current node
-                sb.AppendLine("<li>");
-                // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
-                sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
-                        <span class=""user-name"">No Member</span>
-                        <span class=""node-detail"">
-                            <label>Username: No User</label>
-                            <label>Position: NA</label>
-                            <label>Country: NA</label>
-                        </span>
-                    </a>");
- 
-                
-                // End the list item for the current node
-                sb.AppendLine("</li>");
-
+                getDummyChilds(sb,Level);
 
             }
 
@@ -223,7 +156,7 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+                sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -238,7 +171,7 @@ namespace LMSBackOfficeWebApplication
                 string memberId = RightChildRows[0]["Member_ID"].ToString();
                 if (Int32.Parse(RightChildRows[0]["Level"].ToString()) <= 3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level+1);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -256,12 +189,96 @@ namespace LMSBackOfficeWebApplication
             }
             else
             {
+                
+                getDummyChilds(sb,Level);
 
-                // Start the list item for the current node
+                //// Start the list item for the current node
+                //sb.AppendLine("<li>");
+                //// Generate HTML for the current node
+                //sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+                //sb.AppendLine($@"
+                //        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                //        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+                //        <span class=""user-name"">No Member</span>
+                //        <span class=""node-detail"">
+                //            <label>Username: No User</label>
+                //            <label>Position: NA</label>
+                //            <label>Country: NA</label>
+                //        </span>
+                //    </a>");
+
+
+                //// End the list item for the current node
+                //sb.AppendLine("</li>");
+
+
+            }
+
+            return sb.ToString();
+        }
+
+        private static void getDummyChilds(StringBuilder sb,int level)
+        {
+
+
+            // Start the list item for the current node
+            sb.AppendLine("<li>");
+            // Generate HTML for the current node
+            dummychild(sb);
+            if (level == 1)
+            {
+                sb.AppendLine("<ul >");
+                    sb.AppendLine("<li>");               
+                        dummychild(sb);
+                           sb.AppendLine(" <ul >");
+                                sb.AppendLine("  <li>");
+                                    dummychild(sb);
+                                sb.AppendLine("  </li>");
+                                sb.AppendLine("   <li>");
+                                    dummychild(sb);
+                                sb.AppendLine("  </li>");
+                            sb.AppendLine(" </ul ");
+                    sb.AppendLine("</li>");
+                    sb.AppendLine("<li>");
+
+                dummychild(sb);
+                //
+                sb.AppendLine(" <ul >");
+                sb.AppendLine("  <li>");
+                dummychild(sb);
+                sb.AppendLine("  </li>");
+                sb.AppendLine("   <li>");
+                dummychild(sb);
+                sb.AppendLine("  </li>");
+                sb.AppendLine(" </ul ");
+                //
+                sb.AppendLine("</li>");
+                sb.AppendLine("        </ul ");
+            }
+
+            if (level == 2)
+            {
+                sb.AppendLine("        <ul >");
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
-                sb.AppendLine($@"
+                dummychild(sb);
+                sb.AppendLine("</li>");
+                sb.AppendLine("<li>");
+
+                dummychild(sb);
+                sb.AppendLine("</li>");
+                sb.AppendLine("        </ul ");
+            }
+
+
+            // End the list item for the current node
+            sb.AppendLine("</li>");
+        }
+
+        private static void dummychild(StringBuilder sb)
+        {
+            sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
+            sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">No Member</span>
@@ -271,15 +288,6 @@ namespace LMSBackOfficeWebApplication
                             <label>Country: NA</label>
                         </span>
                     </a>");
-
-
-                // End the list item for the current node
-                sb.AppendLine("</li>");
-
-
-            }
-
-            return sb.ToString();
         }
     }
 }
