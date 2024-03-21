@@ -36,6 +36,7 @@ body
     width: 128px;
 }
 </style>
+
 <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
 <ProgressTemplate>
     <div class="progressmodal">
@@ -45,10 +46,10 @@ body
     </div>
 </ProgressTemplate>
 </asp:UpdateProgress>
-<asp:UpdatePanel ID="UpdatePanel1" runat="server"  UpdateMode="Conditional">
+<asp:UpdatePanel ID="UpdatePanel1" runat="server" >
     <Triggers>        
-        <asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click"  />   
-        <%--<asp:PostBackTrigger ControlID="btnSubmit"  />--%>
+        <%--<asp:AsyncPostBackTrigger ControlID="btnSubmit" EventName="Click"  />--%>   
+        <asp:PostBackTrigger ControlID="btnSubmit"  />
     </Triggers>    
     <ContentTemplate>        
        <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,7 +65,7 @@ body
                      <label class="mb-2">
                 
                  Top Up Amount</label>
-                     <asp:TextBox ID="txtAmount" runat="server" CssClass="form-control w-100" Width="100%"></asp:TextBox>
+                     <asp:TextBox ID="txtAmount" runat="server" CssClass="form-control w-100" Width="100%" MaxLength="4"></asp:TextBox>
                   <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtAmount" ForeColor="Red">Please enter amount or select amount</asp:RequiredFieldValidator>
                  <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
                  <%--<input type="text" name="name" id="txtAmount" runat="server" value="" class="form-control w-100" placeholder="Enter amount or select from below"
@@ -82,7 +83,7 @@ body
                  <%--</form>--%>
              </div>
              <div class="modal-footer">
-                 <button type="button" ID="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" ID="Button1" class="btn btn-danger" onclick="Close();">Cancel</button>
                  <%--<asp:Button ID="Button1" runat="server" Text="Cancel" CssClass="btn btn-danger"  />--%>
                 <%-- <button type="button" class="btn btn-primary"
                      id="btnSubmit" runat="server" onserverclick4="TotpUp_Click" >Top Up</button>--%>
@@ -137,9 +138,13 @@ body
     }
 
     function Close() {
-        debugger;
         var lblMessage = document.getElementById("<%=lblMessage.ClientID%>");
         lblMessage.value = "";
+         var txtFld = document.getElementById("<%=txtAmount.ClientID%>");
+        txtFld.value = "";
+
+        $("#exampleModal").modal('hide');
+         $('body').removeClass('modal-open');
         $('.modal-backdrop').remove();
         $("#messageModal").removeClass("show"); 
        // $("#messageModal").addClass("hide"); 

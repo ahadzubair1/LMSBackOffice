@@ -18,4 +18,14 @@ namespace LMSBackOfficeDAL.Model
         public string MemberWalletCurrency { get; set; }
         public string MemberCurrency { get; set; } = "USD";
     }
+
+    public class CheckoutModel
+    {
+        public string MemberCode { get; set; }
+        public string MemberFullName { get; set; }
+        public string Email { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Currency { get; set; }
+        public string ToWalletAddress { get; set; }
+    }
 }

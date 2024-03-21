@@ -11,6 +11,7 @@
     <link href="./Content/css/style.css" rel="stylesheet" />
     <link href="./Content/css/icons.css" rel="stylesheet" />
     <link href="./Content/css/typography.css" rel="stylesheet" />
+
     <style>
         .theGlobe {
             text-align: center;
@@ -24,6 +25,8 @@
             transform: translateY(-50%);
         }
     </style>
+
+       
 </head>
 
 <body>
@@ -103,7 +106,16 @@
 
                         <div class="mb-3">
 
-                            <cc1:CaptchaControl runat="server" ID="ccLink" CaptchaMaxTimeout="180" CaptchaMinTimeout="5" CaptchaLineNoise="Medium" CaptchaFontWarping="Medium" CaptchaLength="5" Arithmetic="true" Width="180px" />
+                            <cc1:CaptchaControl runat="server" ID="ccLink" 
+                                CaptchaMaxTimeout="180" 
+                                CaptchaMinTimeout="5" 
+                                CaptchaLineNoise="Medium" 
+                                CaptchaFontWarping="Medium" 
+                                CaptchaLength="5" 
+                                Arithmetic="true" 
+                                 ErrorInputTooFast="Image text was typed too quickly. " ErrorInputTooSlow="Image text was typed too slowly."
+                                 EnableViewState="false"
+                                Width="180px" />
                             <asp:TextBox class="from-control" ID="txtCaptcha" runat="server" CausesValidation="true" Width="182px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="* Valid Value is Required"
                                 ControlToValidate="txtCaptcha" Display="Dynamic"></asp:RequiredFieldValidator>
@@ -122,7 +134,7 @@
         </div>
         <span class="arrow-down vp-gradient"><i class="icon-arrow-1"></i></span>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
     <script>
 
         "use strict"; // Paul Slaymaker, paul25882@gmail.com
@@ -329,7 +341,7 @@
         drawTiles();
 
         start();
-
     </script>
+
 </body>
 </html>

@@ -125,11 +125,26 @@
                                 </div>
                             </div>
                         </div>
-                        <iframe src="https://app.ctrader.com/" class="w-100 mt-4 vh-100" title="AI Copy Trading"></iframe>
                     </div>
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
+                <div class="ranks-wrapper pb-5">
+                    <div class="cards-w">
+                        <div class="item">
+                            <img src="Content/images/Copy-Trading/Explorer-EA.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="Content/images/Copy-Trading/Pioneer-EA.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="Content/images/Copy-Trading/Elite-EA.png" alt="" />
+                        </div>
+                        <div class="item">
+                            <img src="Content/images/Copy-Trading/Infinite-EA.png" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- [ Main Content ] end -->
         </div>

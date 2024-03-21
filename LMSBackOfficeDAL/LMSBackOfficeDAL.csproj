@@ -133,6 +133,7 @@
     <Compile Include="CoinPaymentTransactions_DataAcsess.cs" />
     <Compile Include="Configurations.cs" />
     <Compile Include="Countries_DataAccess.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="HashUtility.cs" />
     <Compile Include="MemberWallets_DataAcsess.cs" />
     <Compile Include="Model\MemberInfo.cs" />

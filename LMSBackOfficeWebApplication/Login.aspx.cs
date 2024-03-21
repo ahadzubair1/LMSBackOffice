@@ -26,20 +26,28 @@ namespace LMSBackOfficeWebApplication
             {
                 ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             }
-           // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             try
             {
+                bool isMembershipExpired = false;
                 if (ccLink.UserValidated)
                 {
                     bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
                     if (loginSuccess)
                     {
+                        var memberInfo = Members_DataAccess.GetMemberInfo(username);
+                        var isMembershipValid = Members_DataAccess.IsMembershipExpired(memberInfo.Id);
+                        if (!isMembershipValid)
+                        {
+                            isMembershipExpired = true;
+                        }
+
                         this.successMessage.Value = "true";
                         Session["LoggedIn"] = true;
                         Session["Username"] = username;
+                        Session["MembershipExpired"] = isMembershipExpired;
                         Login_DataAccess.AddLogin(username, password);
                         Response.Redirect("~/Dashboard.aspx");
-
                     }
                     else
                     {
@@ -60,15 +68,16 @@ namespace LMSBackOfficeWebApplication
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 this.successMessage.Value = "false";
-                ResponseMessage.InnerText = "Error Occurred:"+Convert.ToString(ex.Message);
+                ResponseMessage.InnerText = "Error Occurred:" + Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
             }
-            
+
         }
+
         /* protected void Page_Load(object sender, EventArgs e)
         {
                         

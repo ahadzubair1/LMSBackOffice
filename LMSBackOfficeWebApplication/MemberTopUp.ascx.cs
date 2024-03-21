@@ -24,7 +24,7 @@ namespace LMSBackOfficeWebApplication
             string strResponse = Login_DataAccess.GetVisitorInfo();
         }
 
-        protected void TotpUp_Click(object sender, EventArgs e)
+        protected void TotpUp_Click1(object sender, EventArgs e)
         {
             decimal amount = 0;
             if (txtAmount.Text != "")
@@ -44,7 +44,7 @@ namespace LMSBackOfficeWebApplication
                 var api = new CoinPayment.CoinPaymentService();
                 var orderId = Guid.NewGuid().ToString();
                 string storeLocation = HttpContext.Current.Request.Url.AbsolutePath;
-                string ipn_url = $"{storeLocation}/CoinPayments/IPNHandler";
+                string ipn_url = $"{storeLocation}/IPNHandler.ascx";
                 var response = api.CreateTransaction(amount, "USD", Configurations.ToCurrency, Configurations.CompanyCryptoWallet, member.MemberFullName,
                                                     member.Email, ipn_url, null, orderId).GetAwaiter().GetResult();
                 if (response.IsSuccess)
@@ -68,7 +68,7 @@ namespace LMSBackOfficeWebApplication
                 else
                 {
                     //lblMessage.Text = response.Error.ToString();
-                   // lblMessage.ForeColor = Color.Red;
+                    // lblMessage.ForeColor = Color.Red;
                     ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ClosePopup('" + response.Error + "')", true);
                 }
             }
@@ -79,38 +79,28 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        private IDictionary<string, string> CreateQueryParameters(MemberInfo member, decimal amount)
+        protected void TotpUp_Click(object sender, EventArgs e)
         {
-            //get store location
-            //var storeLocation = $"{HttpContext.Current.U}://{Request.Host}{Request.PathBase}";
-            string storeLocation = HttpContext.Current.Request.Url.AbsolutePath;
-            var queryParameters = new Dictionary<string, string>()
+            decimal amount = 0;
+            if (txtAmount.Text != "")
             {
-                //ipn settings
-                ["ipn_version"] = "1.0",
-                ["cmd"] = "_pay_auto",
-                ["ipn_type"] = "simple",
-                ["ipn_mode"] = "hmac",
-                ["merchant"] = Configurations.MerchantId,
-                ["allow_extra"] = "0",
-                ["currency"] = "USD",
-                ["amountf"] = amount.ToString("N2"),
-                ["item_name"] = "totup",
+                amount = Convert.ToDecimal(txtAmount.Text);
+            }
+            string username = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(username);
 
-                //IPN, success and cancel URL
-                ["success_url"] = $"{storeLocation}/CoinPayments/SuccessHandler?orderNumber={Guid.NewGuid().ToString()}", // order summery page
-                ["ipn_url"] = $"{storeLocation}/CoinPayments/IPNHandler",
-                ["cancel_url"] = $"{storeLocation}/CoinPayments/CancelOrder",
-
-                //order identifier                
-                ["custom"] = Guid.NewGuid().ToString(),
-
-                //billing info
-                ["first_name"] = member.MemberFullName,
-                ["email"] = member.Email,
-
+            var checkout = new CheckoutModel
+            {
+                MemberFullName = member.MemberFullName,
+                Email = member.Email,
+                TotalAmount = amount,
+                Currency = Configurations.ToCurrency,
+                ToWalletAddress = Configurations.CompanyCryptoWallet
             };
-            return queryParameters;
-        }
+
+            Session["Checkout"] = checkout;           
+
+            Response.Redirect("Checkout.aspx");
+        }        
     }
 }

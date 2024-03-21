@@ -118,76 +118,78 @@
                     </div>
                     <div class="leaf">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                     </div>
 
                     <div class="leaf leaf1">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px">
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
-
                     </div>
 
                     <div class="leaf leaf2">
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px"></img>
-                        </div>
-
-                        <div>
-                            <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/7/Money-PNG-Photos.png" height="75px" width="75px">
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
                         </div>
                         <div>
-                            <img src="https://www.pngmart.com/files/15/Banknote-Vector-Money-PNG.png" height="75px" width="75px">
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
                         </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                    </div>
+                    <div class="bg-line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
                     </div>
                 </div>
                 <!-- [ breadcrumb ] start -->
@@ -215,7 +217,7 @@
                         <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Network</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrels</a>
+                        <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrals</a>
                     </li>
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">
@@ -235,139 +237,10 @@
                                     </div>
                                     <div id="orgChart">
                                         <div class="tree">
-                                            <ul class="parent-node">
-                                                <li><a href="" class="platinum">
-                                                    <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Gold"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Anas AORH7</span><span class="node-detail"><label>Username: AORH7</label><label>Sponsor:EWGRR</label><label>Country: Morocco</label><label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label></span></a>
-                                                    <ul class="child-node">
-                                                        <li>
-                                                            <a href="" position="left" class="platinum">
-                                                                <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver">
-                                                                <img class="user-avatar" src="Content/images/user/avatar-2.jpg">
-                                                                <span class="user-name">Ahmed AEPNJ</span>
-                                                                <span class="node-detail">
-                                                                    <label>Username: AEPNJ</label>
-                                                                    <label>Sponsor: AORH7</label>
-                                                                    <label>Country: Egypt</label>
-                                                                    <label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label>
-                                                                </span>
-                                                            </a>
-                                                            <ul>
-                                                                <li><a href="" position="left" class="premium">
-                                                                    <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Omar MDTA4</span><span class="node-detail"><label>Username: MDTA4</label><label>Sponsor:AORH7</label><label>Country: Morocco</label><label>Spot License: Premium</label><label>Subs. Date: 02/03/2024 01:44:12</label></span></a>
-                                                                    <ul>
-                                                                        <li><a href="" position="left" class="starter">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">ANAS OK7PM</span><span class="node-detail"><label>Username: OK7PM</label><label>Sponsor:AORH7</label><label>Country: Morocco</label><label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 02:05:12</label></span></a>
-                                                                        </li>
-                                                                        <li><a href="" position="right" class="starter">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">bougouttaia HDWGT</span><span class="node-detail"><label>Username: HDWGT</label><label>Sponsor:MDTA4</label><label>Country: Morocco</label><label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 02:05:12</label></span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li><a href="" position="right" class="na">
-                                                                    <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/03/2024 01:44:12</label></span></a>
-                                                                    <ul>
-                                                                        <li><a href="" position="left" class="na">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
-                                                                            </span></a>
-                                                                        </li>
-                                                                        <li><a href="" position="right" class="na">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
-                                                                            </span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" position="right" class="platinum">
-                                                                <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver">
-                                                                <img class="user-avatar" src="Content/images/user/avatar-2.jpg">
-                                                                <span class="user-name">ANAS 5YABF</span>
-                                                                <span class="node-detail">
-                                                                    <label>Username: 5YABF</label>
-                                                                    <label>Sponsor: AORH7</label>
-                                                                    <label>Country: Morocco</label>
-                                                                    <label>Spot License: Platinum</label><label>Subs. Date: 02/02/2024 23:59:02</label>
-                                                                </span>
-                                                            </a>
-                                                            <ul>
-                                                                <li><a href="" position="left" class="na">
-                                                                    <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/03/2024 00:27:21</label></span></a>
-                                                                    <ul>
-                                                                        <li><a href="" position="left" class="na">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
-                                                                            </span></a>
-                                                                        </li>
-                                                                        <li><a href="" position="right" class="na">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: </label>
-                                                                            </span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li><a href="" position="right" class="starter">
-                                                                    <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                    <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">Abdessamad A7AFX</span><span class="node-detail"><label>Username: A7AFX</label><label>Sponsor:AORH7</label><label>Country: Netherlands </label>
-                                                                        <label>Spot License: Starter</label><label>Subs. Date: 02/03/2024 00:27:21</label></span></a>
-                                                                    <ul>
-                                                                        <li><a href="" position="left" class="na">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">No User</span><span class="node-detail"><label>Username: NA</label><label>Sponsor:</label><label>Country: AE</label><label>Spot License: NA</label><label>Subs. Date: 02/26/2024 02:29:08</label></span></a>
-                                                                        </li>
-                                                                        <li><a href="" position="right" class="starter">
-                                                                            <div aria-hidden="true"><span class="card__line card__line_left"></span><span class="card__line card__line_right"></span><span class="card__line card__line_top"></span><span class="card__line card__line_bottom"></span></div>
-                                                                            <img class="user-rank" src="Content/images/user/avatar-2.jpg" data-toggle="tooltip" data-placement="top" title="Silver"><img class="user-avatar" src="Content/images/user/avatar-2.jpg"><span class="user-name">ANMAR 5NICM</span><span class="node-detail"><label>Username: 5NICM</label><label>Sponsor:AORH7</label><label>Country: Iraq</label><label>Spot License: Starter</label><label>Subs. Date: 02/26/2024 02:29:08</label></span></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                                   <asp:Literal ID="litGeneratedHtml" runat="server"></asp:Literal>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Active Wallet Transactions</h5>
-                                <table id="" class="table table-striped" style="width: 100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Active Wallet Points</th>
-                                            <th>Credit Wallet Points</th>
-                                            <th>Total Points</th>
-                                            <th>Description</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2024-03-01</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>Deposit</td>
-                                        </tr>
-                                        <!-- Add more rows as needed -->
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>
@@ -381,8 +254,7 @@
                                         <tr>
                                             <th>Member Name</th>
                                             <th>MemberShip</th>
-                                            <th>MemberShip Expiry</th>
-                                            <th>Amount</th>
+                                            <th>MemberShip Expiry</th>                                  
                                             <th>Status</th>
                                         </tr>
                                     </thead>

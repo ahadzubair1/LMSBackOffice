@@ -13,18 +13,48 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
-   </asp:PlaceHolder>
-  <link href="/Content/fonts/tabler-icons.min.css" rel="stylesheet" />
-        <link href="/Content/fonts/feather.css" rel="stylesheet" />
-        <link href="/Content/fonts/fontawesome.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/Content/css/dropzone.min.css" asp-append-version="true" />
-        <link href="Content/fonts/material.css" rel="stylesheet" />
-        <link href="/Content/style-preset.css" rel="stylesheet" />
-        <link href="/Content/style.css" rel="stylesheet" />
-        <link href="/Content/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </asp:PlaceHolder>
+    <link href="/Content/fonts/tabler-icons.min.css" rel="stylesheet" />
+    <link href="/Content/fonts/feather.css" rel="stylesheet" />
+    <link href="/Content/fonts/fontawesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Content/css/dropzone.min.css" asp-append-version="true" />
+    <link href="Content/fonts/material.css" rel="stylesheet" />
+    <link href="/Content/style-preset.css" rel="stylesheet" />
+    <link href="/Content/style.css" rel="stylesheet" />
+    <link href="/Content/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript">
 
+        //function HideSideBar(message) {
+        //    debugger;
+        //    if ($("#sidebar") != null || $("#sidebar") != undefined) {
+        //        $("#sidebar").hide();
+        //    }
+        //}
+
+        function ShowMessage(message) {
+            debugger;
+            var messageLabel = document.getElementById("bodyMessage");
+            messageLabel.innerHTML = message;
+
+            $("#sidebar").hide();
+            $("#membershipExpiryeModal").modal("show");
+            $('body').addClass('modal-open');
+            $("#membershipExpiryeModal").removeClass("hide");
+        }
+
+        function Close() {
+            var lblMessage = document.getElementById("bodyMessage");
+            lblMessage.innerHTML = "";
+
+            $("#membershipExpiryeModal").modal('hide');
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+            $("#membershipExpiryeModal").removeClass("show");
+            // $("#messageModal").addClass("hide"); 
+        }
+    </script>
 </head>
 <body>
 
@@ -46,6 +76,7 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
+            
         </asp:ScriptManager>
 
         <header class="pc-header">
@@ -397,7 +428,7 @@
                         </div>
                     </div>
 
-                    <ul class="pc-navbar">
+                    <ul class="pc-navbar" id="sidebar">
                         <li class="pc-item">
                             <a href="Dashboard.aspx" class="pc-link">
                                 <span class="pc-micon">
@@ -482,16 +513,16 @@
                                 <span class="pc-mtext">AI Copy Trading</span>
                             </a>
                         </li>
-                         <li class="pc-item">
-     <a href="Transactions.aspx" class="pc-link">
-         <span class="pc-micon">
-             <svg class="pc-icon">
-                 <use xlink:href="#custom-presentation-chart"></use>
-             </svg>
-         </span>
-         <span class="pc-mtext">Transactions</span>
-     </a>
- </li>
+                        <li class="pc-item">
+                            <a href="Transactions.aspx" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-presentation-chart"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Transactions</span>
+                            </a>
+                        </li>
                         <li class="pc-item">
                             <%--<a href="Bonus.aspx" class="pc-link">--%>
                             <a href="#" class="pc-link">
@@ -500,7 +531,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Tools</span>
+                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -515,14 +546,13 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <%--<a href="Support.aspx" class="pc-link">--%>
-                            <a href="#" class="pc-link">
+                            <a href="#" class="pc-link d-flex align-items-center justify-content-between">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-password-check"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Academy Portal</span>
+                                <span class="pc-mtext">Academy Portal  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                     </ul>
@@ -535,6 +565,25 @@
             </asp:ContentPlaceHolder>
         </div>
         <uc1:MemberTopUp runat="server" id="MemberTopUp" />
+
+                    <div class="modal fade modal-animate anim-blur" id="membershipExpiryeModal" tabindex="-1" aria-labelledby="membershipExpiryeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="color:#000 !important;">
+            <div class="modal-header">
+                <h1 class="modal-title font-bold fs-4" id="membershipExpiryeModalLabel">Membership Expired</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="bodyMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <%--<button type="button" class="btn btn-default" data-bs-dismiss="modal" onclick="Close();">Close</button>--%>
+                <asp:Button ID="Close" runat="server" Text="Close" CssClass="btn btn-secondary" OnClick="Close_Click" CausesValidation="false" />
+                <asp:Button ID="Renew" runat="server" Text="Renew Membership" CssClass="btn btn-primary" OnClick="Renew_Click" CausesValidation="false" />
+            </div>
+        </div>
+    </div>
+</div>
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/popper.min.js") %>
@@ -557,6 +606,8 @@
         <script>layout_rtl_change('false');</script>
 
         <script>preset_change("preset-1");</script>
+
+         
     </asp:PlaceHolder>
 
     <!-- Modal -->
