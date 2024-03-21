@@ -11,9 +11,7 @@
     <link href="./Content/css/style.css" rel="stylesheet" />
     <link href="./Content/css/icons.css" rel="stylesheet" />
     <link href="./Content/css/typography.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
     <style>
         .theGlobe {
             text-align: center;
@@ -28,52 +26,10 @@
         }
     </style>
 
-        <script type="text/javascript">
-         
-            function ShowMessage(message) {
-                debugger;
-                var messageLabel = document.getElementById("bodyMessage");
-                messageLabel.innerHTML = message;
-                var myModal = document.getElementById("messageModal");
-                var modal = bootstrap.Modal.getOrCreateInstance(myModal)
-                modal.show();
-
-               // $("#messageModal").modal("show");
-              //  $('body').addClass('modal-open');
-              //  $("#messageModal").removeClass("hide"); 
-            }
-
-            function Close() {
-                var lblMessage = document.getElementById("bodyMessage");
-                lblMessage.innerHTML = "";
-
-                $("#exampleModal").modal('hide');
-                $('body').removeClass('modal-open');
-                $('.modal-backdrop').remove();
-                $("#messageModal").removeClass("show");
-                // $("#messageModal").addClass("hide"); 
-            }
-        </script>
+       
 </head>
 
 <body>
-
-    <div class="modal fade modal-animate anim-blur" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="color:#000 !important;">
-            <div class="modal-header">
-                <h1 class="modal-title font-bold fs-4" id="messageModalLabel">Message</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p id="bodyMessage"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-bs-dismiss="modal" onclick="Close();">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
     <header class="v-header w-100 py-3">
         <div class="mobilenav d-lg-none">
             <div class="collapse" id="navbarToggleExternalContent">

@@ -26,9 +26,10 @@ namespace LMSBackOfficeWebApplication
             {
                 ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             }
-           // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             try
             {
+                bool isMembershipExpired = false;
                 if (ccLink.UserValidated)
                 {
                     bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
@@ -36,23 +37,17 @@ namespace LMSBackOfficeWebApplication
                     {
                         var memberInfo = Members_DataAccess.GetMemberInfo(username);
                         var isMembershipValid = Members_DataAccess.IsMembershipExpired(memberInfo.Id);
-                        if(!isMembershipValid)
+                        if (!isMembershipValid)
                         {
-                            var message = "Your annual memships is expired, please renew your membership for continue";
-                            //Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "showmessage()", true);
-                           // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
-                            // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
-                            ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "ShowMessage('" + message + "');", true);
+                            isMembershipExpired = true;
                         }
-                        else
-                        {
-                            this.successMessage.Value = "true";
-                            Session["LoggedIn"] = true;
-                            Session["Username"] = username;
-                            Login_DataAccess.AddLogin(username, password);
-                            Response.Redirect("~/Dashboard.aspx");
-                        }                    
 
+                        this.successMessage.Value = "true";
+                        Session["LoggedIn"] = true;
+                        Session["Username"] = username;
+                        Session["MembershipExpired"] = isMembershipExpired;
+                        Login_DataAccess.AddLogin(username, password);
+                        Response.Redirect("~/Dashboard.aspx");
                     }
                     else
                     {
@@ -60,7 +55,7 @@ namespace LMSBackOfficeWebApplication
                         Response.AddHeader("REFRESH", "5;URL=Login.aspx");
                         ResponseMessage.InnerText = "Login Failed: Invalid Credentials";
                         ResponseMessage.Style.Add("display", "block");
-                        ResponseMessage.Style.Add("color", "#e012ee");
+                        ResponseMessage.Style.Add("color", "#ff2600");
                     }
                 }
                 else
@@ -69,18 +64,18 @@ namespace LMSBackOfficeWebApplication
                     Response.AddHeader("REFRESH", "5;URL=Login.aspx");
                     ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
                     ResponseMessage.Style.Add("display", "block");
-                    ResponseMessage.Style.Add("color", "#e012ee");
+                    ResponseMessage.Style.Add("color", "#ff2600");
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 this.successMessage.Value = "false";
-                ResponseMessage.InnerText = "Error Occurred:"+Convert.ToString(ex.Message);
+                ResponseMessage.InnerText = "Error Occurred:" + Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
-                ResponseMessage.Style.Add("color", "#e012ee");
+                ResponseMessage.Style.Add("color", "#ff2600");
             }
-            
+
         }
 
         /* protected void Page_Load(object sender, EventArgs e)

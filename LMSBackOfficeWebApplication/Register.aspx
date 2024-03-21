@@ -129,7 +129,9 @@
                             </div>
                             <div class="mb-3 col-md-12">
                                 <label for="" class="text-white">Country</label>
-                                <asp:DropDownList ID="countries" name="countries" class="form-control" runat="server"></asp:DropDownList>
+                                <asp:DropDownList id="countries" name="countries" class="form-control" required="required" runat="server">
+                                    <asp:ListItem Text="Select Country" Value="" Selected="True" />
+                                </asp:DropDownList>
                             </div>
                             <div class="col-md-6">
                                 <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Register" id="btnSubmit" runat="server" onserverclick="btnSubmit_Click" />

@@ -220,7 +220,7 @@
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
                 <div class="row">
-                    <div class="col-md-6 col-xxl-3">
+                    <div class="col-md-3">
                         <div class="card t-card direct-bonus">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -267,7 +267,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xxl-3">
+                    <div class="col-md-3">
                         <div class="card t-card kyc-status">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -366,7 +366,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xxl-3">
+                    <div class="col-md-3">
                         <div class="card t-card membership">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
@@ -425,7 +425,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xxl-3">
+                    <div class="col-md-3">
                         <div class="card t-card direct-referral">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">

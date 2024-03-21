@@ -266,21 +266,30 @@
                                 <table id="" class="table table-striped" style="width: 100%">
                                     <thead>
                                         <tr>
-                                            <th>Date</th>
-                                            <th>Credit Wallet Points</th>
-                                            <th>Bonus Wallet Points</th>
-                                            <th>Total Points</th>
-                                            <th>Description</th>
+                                            <th>Wallet Code</th>
+                                            <th>Wallet Type</th>
+                                            <th>Wallet Address</th>
+                                            <th>Wallet Balance</th>
+                                            <th>Last Transaction Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>2024-03-01</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                            <td>Deposit</td>
-                                        </tr>
+                                        <%if (dt != null && dt.Rows.Count > 0)
+                                          { %>
+
+                                              <%foreach (System.Data.DataRow dr in this.dt.Rows)
+                                                  {%>
+                                                      <tr>
+                                                          <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                              {%>
+                                                          <td>
+                                                              <%=dr[dc.ColumnName]%>
+                                                          </td>
+                                                          <%} %>
+                                                      </tr>
+                                              <%} %>
+
+                                      <%} %>
                                         <!-- Add more rows as needed -->
                                     </tbody>
                                 </table>
