@@ -5,12 +5,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace LMSBackOfficeDAL
 {
     public static class Wallets_DataAccess
     {
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static void CreateMemberWallets(string memberId)
         {
             bool networkSuccess = false;

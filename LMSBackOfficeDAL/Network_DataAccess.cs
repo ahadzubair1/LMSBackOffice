@@ -10,7 +10,7 @@ namespace LMSBackOfficeDAL
 {
 	public class Network_DataAccess
 	{
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static bool AddMemberNetwork(string memberId, string referredByParentId,int Position)
         {
             bool networkSuccess = false;

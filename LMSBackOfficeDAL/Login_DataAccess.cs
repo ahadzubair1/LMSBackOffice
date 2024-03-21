@@ -26,7 +26,7 @@ namespace LMSBackOfficeDAL
 
             return retLogin;
         }
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static bool CheckLogin(string username, string password)
         {
             bool loginSuccess = false;

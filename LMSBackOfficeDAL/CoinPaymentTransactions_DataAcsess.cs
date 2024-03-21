@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace LMSBackOfficeDAL
 {
     public class CoinPaymentTransactions_DataAcsess
     {
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
 
         public static string AddCoinPaymentTransactions(string memberId,string transactionCode,string cpTransactionId, string transactionType,
                                                         string fromCurrency, string toCurrency, string memberAddress,  string status, decimal amount,

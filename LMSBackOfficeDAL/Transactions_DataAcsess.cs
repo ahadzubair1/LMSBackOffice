@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace LMSBackOfficeDAL
 {
     public class Transactions_DataAcsess
     {
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
 
         public static DataTable GetAllTransaction(string memberId)
         {

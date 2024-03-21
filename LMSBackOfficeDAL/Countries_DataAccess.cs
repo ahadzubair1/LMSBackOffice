@@ -13,7 +13,7 @@ namespace LMSBackOfficeDAL
 	public class Countries_DataAccess
 	{
 
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static List<Country> GetAllCountries()
         {
             List<Country> allCountriesDB = new List<Country>();

@@ -9,7 +9,7 @@ namespace LMSBackOfficeDAL
 {
 	public class ReferralCodes_DataAccess
 	{
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static string AddMemberReferralCodes(string userId,int position, string code)
         {
              using (SqlConnection connection = new SqlConnection(connectionString))

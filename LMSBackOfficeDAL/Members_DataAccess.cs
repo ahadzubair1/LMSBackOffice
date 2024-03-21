@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -60,7 +61,7 @@ namespace LMSBackOfficeDAL
         //	}
         //}
 
-        private static string connectionString = DatabaseConnection.GetConnectionString();
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
         public static string AddMember(string name, string username, string email, string password, string referredByParentId, int position, string phone, string country,string currentDomainUrl)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -135,6 +136,31 @@ namespace LMSBackOfficeDAL
 
                     // Add parameters
                     command.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = username;
+                    command.Parameters.Add("@exists", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    exists = Convert.ToBoolean(command.Parameters["@exists"].Value);
+                }
+            }
+
+            return exists;
+        }
+
+        public static bool CheckEmailExists(string email)
+        {
+            bool exists = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_CheckEmailExists", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters
+                    command.Parameters.Add("@email", SqlDbType.NVarChar, 50).Value = email;
                     command.Parameters.Add("@exists", SqlDbType.Bit).Direction = ParameterDirection.Output;
 
                     connection.Open();
@@ -406,31 +432,6 @@ namespace LMSBackOfficeDAL
 
             return dt;
         }
-
-        public static bool IsMembershipExpired(string memberId)
-        {
-            bool exists = false;
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand("USP_CheckMembershipExpired", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Add parameters
-                    command.Parameters.Add("@MemberID", SqlDbType.NVarChar, 50).Value = memberId;
-                    command.Parameters.Add("@Expired", SqlDbType.Bit).Direction = ParameterDirection.Output;
-
-                    connection.Open();
-                    command.ExecuteNonQuery();
-
-                    // Retrieve the output parameter value
-                    exists = Convert.ToBoolean(command.Parameters["@Expired"].Value);
-                }
-            }
-
-            return exists;
-        }       
 
     }
 }

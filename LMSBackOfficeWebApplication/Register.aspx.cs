@@ -39,14 +39,22 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
-                List<Countries_DataAccess.Country> allCountries = Countries_DataAccess.GetAllCountries();
-
-                // Populate select element with countries
-                foreach (Countries_DataAccess.Country country in allCountries)
+                try
                 {
-                    ListItem item = new ListItem(country.CountryName, country.CountryID);
-                    countries.Items.Add(item);
+                    List<Countries_DataAccess.Country> allCountries = Countries_DataAccess.GetAllCountries();
+
+                    // Populate select element with countries
+                    foreach (Countries_DataAccess.Country country in allCountries)
+                    {
+                        ListItem item = new ListItem(country.CountryName, country.CountryID);
+                        countries.Items.Add(item);
+                    }
                 }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                
             }
 
 
@@ -77,52 +85,63 @@ namespace LMSBackOfficeWebApplication
                 // Process the form data (e.g., save to database, send email, etc.)
                 // You can write your logic here
                 bool userExists = Members_DataAccess.CheckUsernameExists(username);
-                if (userExists)
+                bool CheckEmailExists = Members_DataAccess.CheckEmailExists(email);
+                if (CheckEmailExists)
                 {
-                    ResponseMessage.InnerText = "Username already Taken";
+                    ResponseMessage.InnerText = "Email already Exists";
                     ResponseMessage.Style.Add("display", "block");
                     ResponseMessage.Style.Add("color", "#ff2600");
                 }
                 else
                 {
-                    DataTable resultTable = ReferralCodes_DataAccess.CheckParentReferral(refcode);
-                    if (resultTable != null && resultTable.Rows.Count > 0)
+                    if (userExists)
                     {
-                        DataRow row = resultTable.Rows[0];
-                        string referredByParentId = row["Member_ID"].ToString();
-                        int Position = (int)row["NetworkPosition"];
-                        string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, Position, phone, countries, currentDomainUrl);
-                        if (registrationSuccess == "Success")
-                        {
-                            // Display success message
-                            this.fullname.Value = "";
-                            this.email.Value = "";
-                            this.password.Value = "";
-                            this.confirmpassword.Value = "";
-                            this.refcode.Value = "";
-                            this.phone.Value = "";
-                            this.username.Value = "";// Assuming you have a server-side control for the success message
-                            ResponseMessage.InnerText = "Registration Successful";
-                            ResponseMessage1.InnerText = "Check your email to activate";
-                            ResponseMessage.Style.Add("display", "block");
-                            ResponseMessage.Style.Add("color", "#e012ee");
-                            Response.AddHeader("REFRESH", "6;URL=Login.aspx");
-                        }
-                        else
-                        {
-                            ResponseMessage.InnerText = "Registration Failed";
-                            ResponseMessage.Style.Add("display", "block");
-                            ResponseMessage.Style.Add("color", "#ff2600");
-                        }
-                    }
-                    else
-                    {
-                        ResponseMessage.InnerText = "Invalid Referral Code";
+                        ResponseMessage.InnerText = "Username already Taken";
                         ResponseMessage.Style.Add("display", "block");
                         ResponseMessage.Style.Add("color", "#ff2600");
                     }
+                    else
+                    {
+                        DataTable resultTable = ReferralCodes_DataAccess.CheckParentReferral(refcode);
+                        if (resultTable != null && resultTable.Rows.Count > 0)
+                        {
+                            DataRow row = resultTable.Rows[0];
+                            string referredByParentId = row["Member_ID"].ToString();
+                            int Position = (int)row["NetworkPosition"];
+                            string registrationSuccess = Members_DataAccess.AddMember(name, username, email, password, referredByParentId, Position, phone, countries, currentDomainUrl);
+                            if (registrationSuccess == "Success")
+                            {
+                                // Display success message
+                                this.fullname.Value = "";
+                                this.email.Value = "";
+                                this.password.Value = "";
+                                this.confirmpassword.Value = "";
+                                this.refcode.Value = "";
+                                this.phone.Value = "";
+                                this.username.Value = "";// Assuming you have a server-side control for the success message
+                                ResponseMessage.InnerText = "Registration Successful";
+                                ResponseMessage1.InnerText = "Check your email to activate";
+                                ResponseMessage.Style.Add("display", "block");
+                                ResponseMessage.Style.Add("color", "#e012ee");
+                                Response.AddHeader("REFRESH", "6;URL=Login.aspx");
+                            }
+                            else
+                            {
+                                ResponseMessage.InnerText = "Registration Failed";
+                                ResponseMessage.Style.Add("display", "block");
+                                ResponseMessage.Style.Add("color", "#ff2600");
+                            }
+                        }
+                        else
+                        {
+                            ResponseMessage.InnerText = "Invalid Referral Code";
+                            ResponseMessage.Style.Add("display", "block");
+                            ResponseMessage.Style.Add("color", "#ff2600");
+                        }
 
+                    }
                 }
+                
             }
 
 
