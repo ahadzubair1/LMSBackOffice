@@ -25,11 +25,11 @@ namespace LMSBackOfficeWebApplication
             if (Convert.ToInt32(success)==1)
             {
                 // Display message dynamically
-                messageLabel.Text = HttpUtility.UrlDecode("Membership Purchase Successfull");
+                messageLabel.Text = HttpUtility.UrlDecode("You Successfully Purchased Membership");
             }
             else
             {
-                messageLabel.Text = HttpUtility.UrlDecode("Membership Purchase Failed");
+                messageLabel.Text = HttpUtility.UrlDecode("Failed to Purchase Membership");
             }
 
             // Redirect back to memberships page after 5 seconds
