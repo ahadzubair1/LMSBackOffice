@@ -1078,23 +1078,26 @@ footer .field-row {
         box-shadow: 0 2px 6px 0px #0000004a;
         background-color: #374256;
         animation-timing-function: linear;
-        overflow: hidden;
+        
     }
+        .tree li a:hover .node-detail {
+            display:block;
+        }
 
 
-#orgChart .user-rank {
-    position: absolute;
-    top: -10px;
-    display: none;
-    right: -7px;
-    width: 30px;
-    background-color: #fff;
-    border-radius: 100%;
-    height: 30px;
-    object-fit: cover;
-    padding: 2px;
-    box-shadow: 0 0 0px 1px #fff, -2px 4px 5px 0px #000;
-}
+        #orgChart .user-rank {
+            position: absolute;
+            top: -10px;
+            display: none;
+            right: -7px;
+            width: 30px;
+            background-color: #fff;
+            border-radius: 100%;
+            height: 30px;
+            object-fit: cover;
+            padding: 2px;
+            box-shadow: 0 0 0px 1px #fff, -2px 4px 5px 0px #000;
+        }
 
 #orgChart .user-avatar {
     width: 30px;
