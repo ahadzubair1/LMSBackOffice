@@ -114,6 +114,16 @@ namespace LMSBackOfficeWebApplication
                 var queryParameters = CreateQueryParameters(checkout);
                 var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
+                string username = Session["Username"].ToString();
+                var member = Members_DataAccess.GetMemberInfo(username);
+                //Update Balance in UserWallet table 
+                MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+
+                //Add Transaction and Coin PaymentTransaction
+                Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, null, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                        member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
+                                                        Convert.ToDecimal(checkout.TotalAmount), string.Empty, string.Empty, false);
+
                 Response.Redirect(redirectUrl);
             }
         }
