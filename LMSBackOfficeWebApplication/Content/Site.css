@@ -178,13 +178,16 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     box-shadow: 0 10px 40px -18px #000000b2;
     transition: all ease 0.4s;
 }
-    .mbox img{
+
+    .mbox img {
         margin-right: 60px;
         transition: all ease 0.4s;
     }
+
     .mbox:hover img {
         transform: rotate(5deg) scale(0.9);
     }
+
     .mbox:before {
         content: "";
         background: rgba(255, 255, 255, 0.12);
@@ -206,7 +209,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
     .mbox .featurebox h6 {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #ffffff57;
         padding: 0.7rem 0;
     }
 
@@ -1253,4 +1256,10 @@ label:not(.form-check-label):not(.custom-file-label) {
     to {
         left: 200%;
     }
+}
+
+
+.featurebox > div.d-flex {
+    padding: 0.3rem 0;
+    font-size: 13px;
 }

@@ -1,16 +1,14 @@
-﻿using ServiceStack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace LMSBackOfficeWebApplication.Utitlity
+namespace LMSBackOfficeDAL
 {
     public class WriteLog
     {
-        private static string PageName = HttpContext.Current.Handler.GetType().Name;
-        private static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().GetDeclaringTypeName());
+        private static log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public static void LogError(Exception ex)
         {

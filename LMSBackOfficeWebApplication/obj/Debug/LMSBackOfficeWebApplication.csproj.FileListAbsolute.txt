@@ -370,3 +370,5 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.Text.Encoding
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackO.65EEADC2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.xml

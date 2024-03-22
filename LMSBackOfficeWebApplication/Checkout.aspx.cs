@@ -22,8 +22,6 @@ namespace LMSBackOfficeWebApplication
             {
                 try
                 {
-
-
                     string strResponse = Login_DataAccess.GetVisitorInfo();
 
                     if (Session["MembershipExpired"] != null)
@@ -105,26 +103,33 @@ namespace LMSBackOfficeWebApplication
 
         protected void CheckoutBtn_ServerClick(object sender, ImageClickEventArgs e)
         {
-            if (Session["Checkout"] != null)
+            try
             {
-                var checkout = Session["Checkout"] as CheckoutModel;
-                checkout.TotalAmount = checkout.TotalAmount;
-                checkout.ToWalletAddress = txtWalletAddress.Text;
-                checkout.Currency = DropDownList1.SelectedValue.ToString();
-                var queryParameters = CreateQueryParameters(checkout);
-                var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
+                if (Session["Checkout"] != null)
+                {
+                    var checkout = Session["Checkout"] as CheckoutModel;
+                    checkout.TotalAmount = checkout.TotalAmount;
+                    checkout.ToWalletAddress = txtWalletAddress.Text;
+                    checkout.Currency = DropDownList1.SelectedValue.ToString();
+                    var queryParameters = CreateQueryParameters(checkout);
+                    var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
-                string username = Session["Username"].ToString();
-                var member = Members_DataAccess.GetMemberInfo(username);
-                //Update Balance in UserWallet table 
-                MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+                    string username = Session["Username"].ToString();
+                    var member = Members_DataAccess.GetMemberInfo(username);
+                    //Update Balance in UserWallet table 
+                    MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
 
-                //Add Transaction and Coin PaymentTransaction
-                Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, null, "Topup", member.MemberCurrency, Configurations.ToCurrency,
-                                                        member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
-                                                        Convert.ToDecimal(checkout.TotalAmount), string.Empty, string.Empty, false);
+                    //Add Transaction and Coin PaymentTransaction
+                    Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, null, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
+                                                            Convert.ToDecimal(checkout.TotalAmount), string.Empty, string.Empty, false);
 
-                Response.Redirect(redirectUrl);
+                    Response.Redirect(redirectUrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                WriteLog.LogError(ex);
             }
         }
 
