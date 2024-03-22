@@ -417,8 +417,8 @@
                                             <h6 class="font-semibold m-0">Explorer+</h6>
                                         </div>
                                         <div class="col-5">
-                                            <h6 class="mb-1">None</h6>
-                                            <p class="text-warning mb-0">Per Year</p>
+                                            <h6 class="mb-1">$0</h6>
+                                            <p class="text-warning mb-0">Yearly</p>
                                         </div>
                                     </div>
                                 </div>
@@ -595,7 +595,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -800,7 +800,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <%--<div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -886,7 +886,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </div>
                 <!-- [ Main Content ] end -->
