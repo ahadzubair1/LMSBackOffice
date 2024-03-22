@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Web;
 using System.Web.UI;
@@ -50,21 +51,21 @@ namespace LMSBackOfficeWebApplication
             //sb.AppendLine("    <li>");
 
 
-            string memberUserName = rootNodes[0]["Member_UserName"].ToString();
-            string position = rootNodes[0]["Position"].ToString();
-            string country = rootNodes[0]["CountryOfOrigin"].ToString(); // Add country data
-
+            string memberUserName = member.UserName;
+            string position = "";
+            string country = member.Country;// Add country data
+            string sponsor = member.Sponsor;
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
+            sb.AppendLine("<a href=\"#\" class=\"platinum\"    >");
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                            <label>Username: {memberUserName}</label>
-                            <label>Position: {position}</label>
+                            <label>Member: {memberUserName}</label>
+                            <label>Sponsor: {sponsor}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");
@@ -99,21 +100,31 @@ namespace LMSBackOfficeWebApplication
             {
 
 
+
+
+
+
+
+
+
                 string memberUserName = leftChildRows[0]["Member_UserName"].ToString();
-                string position = leftChildRows[0]["Position"].ToString();
-                string country = leftChildRows[0]["CountryOfOrigin"].ToString(); // Add country data
+
+                var member = Members_DataAccess.GetMemberInfo(memberUserName);
+                
+                string country = member.Country;// Add country data
+                string sponsor = member.Sponsor;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
+                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                            <label>Username: {memberUserName}</label>
-                            <label>Position: {position}</label>
+                                <label>Member: {memberUserName}</label>
+                            <label>Sponsor: {sponsor}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");
@@ -150,20 +161,23 @@ namespace LMSBackOfficeWebApplication
 
 
                 string memberUserName = RightChildRows[0]["Member_UserName"].ToString();
-                string position = RightChildRows[0]["Position"].ToString();
-                string country = RightChildRows[0]["CountryOfOrigin"].ToString(); // Add country data
+
+                var member = Members_DataAccess.GetMemberInfo(memberUserName);
+
+                string country = member.Country;// Add country data
+                string sponsor = member.Sponsor;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
+                sb.AppendLine("<a href=\"#\" class=\"platinum\"");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                            <label>Username: {memberUserName}</label>
-                            <label>Position: {position}</label>
+                              <label>Member: {memberUserName}</label>
+                            <label>Sponsor: {sponsor}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");
@@ -277,7 +291,7 @@ namespace LMSBackOfficeWebApplication
 
         private static void dummychild(StringBuilder sb)
         {
-            sb.AppendLine("<a href=\"#\" class=\"platinum\"><div aria-hidden=\"true\"><span class=\"card__line card__line_left\"></span><span class=\"card__line card__line_right\"></span><span class=\"card__line card__line_top\"></span><span class=\"card__line card__line_bottom\"></span></div>");
+            sb.AppendLine("<a href=\"#\" class=\"platinum\">");
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
