@@ -88,7 +88,7 @@ namespace LMSBackOfficeWebApplication
             }
             string username = Session["Username"].ToString();
             var member = Members_DataAccess.GetMemberInfo(username);
-
+            var orderId = Guid.NewGuid().ToString();
             var checkout = new CheckoutModel
             {
                 MemberFullName = member.MemberFullName,
@@ -96,7 +96,8 @@ namespace LMSBackOfficeWebApplication
                 Email = member.Email,
                 TotalAmount = amount,
                 Currency = Configurations.ToCurrency,
-                ToWalletAddress = Configurations.CompanyCryptoWallet
+                ToWalletAddress = Configurations.CompanyCryptoWallet,
+                OrderId = orderId
             };
 
             Session["Checkout"] = checkout;           
