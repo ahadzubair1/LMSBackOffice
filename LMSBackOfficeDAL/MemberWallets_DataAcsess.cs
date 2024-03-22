@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace LMSBackOfficeDAL
 {
     public class MemberWallets_DataAcsess
     {
-        private static string connectionString = "Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000";
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
 
         public static void UpdateMemberWallet(string userId, decimal amount, int isActive)
         {
@@ -60,6 +61,35 @@ namespace LMSBackOfficeDAL
                     }
                 }
             }
+        }
+
+        public static DataTable GetMemberCreditWallets(string memberId)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_GetUserCreditWallet", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@IN_Member_ID", SqlDbType.UniqueIdentifier).Value = Guid.Parse(memberId);
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataAdapter da = new SqlDataAdapter(command))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+
+            return dt;
         }
     }
 }
