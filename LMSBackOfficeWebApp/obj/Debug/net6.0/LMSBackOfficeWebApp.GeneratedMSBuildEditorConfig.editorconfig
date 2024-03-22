@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LMSBackOfficeWebApp
 build_property.RootNamespace = LMSBackOfficeWebApp
-build_property.ProjectDir = D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApp\
+build_property.ProjectDir = E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApp
+build_property.MSBuildProjectDirectory = E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/Error.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/Index.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/MVCGrid/_Grid.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/MVCGrid/_Grid.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVZDR3JpZFxfR3JpZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/MVCGrid/_Pager.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/MVCGrid/_Pager.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVZDR3JpZFxfUGFnZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/Privacy.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/_ViewImports.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/_ViewStart.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Tradiix/Project/Backoffice-13-03-2024/LMSBackOffice/LMSBackOffice/LMSBackOfficeWebApp/Pages/Shared/_Layout.cshtml]
+[E:/IconXRepos/LMSBackOffice/LMSBackOfficeWebApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ynufw96k8v
