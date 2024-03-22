@@ -11,12 +11,12 @@ namespace LMSBackOfficeDAL
 {
 	public static class Setup_DataAccess
 	{
-		
-		/// <summary>
-		/// METHOD TO GET ALL THE BONUS TYPES
-		/// </summary>
-		/// <returns></returns>
-		public static DataTable GetAllBonusTypes()
+        private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
+        /// <summary>
+        /// METHOD TO GET ALL THE BONUS TYPES
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable GetAllBonusTypes()
 		{
 			DataSet dsBonusTypes = null;
 			try
@@ -24,7 +24,7 @@ namespace LMSBackOfficeDAL
                 //var Constring = new System.Configuration.ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
                 //var  Constring = new SqlConnection(ConfigurationSettings.AppSettings["LMSBackOfficeConnectionString"]);
                 //var Constring = new SqlConnection(ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString);
-                SqlConnection Connection = new SqlConnection("Data Source=iconx.c3iqk6wiqyda.me-central-1.rds.amazonaws.com;Initial Catalog=LMSBackOffice;Persist Security Info=True;User ID=iconxadmin;Password=nAn)m!T3$#31;Connect Timeout=30000");
+                SqlConnection Connection = new SqlConnection(connectionString);
 				Connection.Open();
 				SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_GetAllBonusTypes", Connection);
 
