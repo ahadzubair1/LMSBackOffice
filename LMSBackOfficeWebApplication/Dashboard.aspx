@@ -490,7 +490,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span  title="tradiix.com/RDzCDXqqlFLF8KmE4CLb_L" class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -501,7 +501,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
+                                                    <span title="tradiix.com/GHhVBEyulLPK9dM2sdTn_R" class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
