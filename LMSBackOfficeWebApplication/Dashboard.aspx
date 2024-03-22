@@ -414,11 +414,11 @@
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
                                     <div class="row align-items-center">
                                         <div class="col-7">
-                                            <h5 class="font-semibold m-0">Explorer+</h5>
+                                            <h6 class="font-semibold m-0">Explorer+</h6>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">None</h5>
-                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>1 Year</p>
+                                            <h6 class="mb-1">None</h6>
+                                            <p class="text-warning mb-0">Per Year</p>
                                         </div>
                                     </div>
                                 </div>
