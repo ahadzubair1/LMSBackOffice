@@ -15,6 +15,24 @@ namespace LMSBackOfficeWebApplication
     {
 
         /// <summary>
+        /// leftReferralCodeSpan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl leftReferralCodeSpan;
+
+        /// <summary>
+        /// rightReferralCodeSpan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rightReferralCodeSpan;
+
+        /// <summary>
         /// gvwBonusType control.
         /// </summary>
         /// <remarks>
