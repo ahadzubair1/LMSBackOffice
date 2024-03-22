@@ -17,14 +17,14 @@ namespace Coinpayments.Example
     public class IpnHandler : IHttpHandler
     {
         public void ProcessRequest(HttpContext context)
-        {
-            var req = IpnBase.Parse<IpnApi>(context.Request.Form);
-
-            var requestString = JsonConvert.SerializeObject(req);
-            WriteLog.LogInfo(requestString);
-
+        {          
             try
             {
+                var req = IpnBase.Parse<IpnApi>(context.Request.Form);
+
+                var requestString = JsonConvert.SerializeObject(req);
+                WriteLog.LogInfo(requestString);
+
                 var hmac = context.Request.Headers["HMAC"];
                 WriteLog.LogInfo(hmac);
                 if (hmac == null || !req.SigIsValid(hmac))

@@ -739,7 +739,6 @@
     </Compile>
     <Compile Include="Utitlity\CryptoUtil.cs" />
     <Compile Include="Utitlity\HttpUrlCaller.cs" />
-    <Compile Include="Utitlity\WriteLog.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
