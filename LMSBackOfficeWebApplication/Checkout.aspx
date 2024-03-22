@@ -105,7 +105,8 @@
     function HideSideBar(message) {
         debugger;
         if ($("#sidebar") != null || $("#sidebar") != undefined) {
-          //  $("#sidebar").hide();
+            //  $("#sidebar").hide();
+            $("#btnTopup").prop("disabled", true);
         }
     }
     </script>

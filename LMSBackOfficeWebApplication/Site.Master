@@ -104,7 +104,7 @@
                             </div>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse">
-                            <a class="btn btn-primary btn-shadow" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
+                            <a class="btn btn-primary btn-shadow" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                     </ul>
                 </div>
