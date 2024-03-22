@@ -216,13 +216,12 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/1.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Monthly</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>0</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>0$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
@@ -231,11 +230,11 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>1</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>250</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
@@ -246,11 +245,11 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer+</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>1</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
@@ -261,11 +260,11 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/3.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Pioneer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>750</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>2</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>750</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
@@ -276,11 +275,11 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/4.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Elite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>3</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>1000</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
@@ -291,11 +290,11 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/5.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features:</h6>
+                                    <h6 class="text-white">Membership Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Infinite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1500</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Point Value:</span> <span>4</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>1500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>

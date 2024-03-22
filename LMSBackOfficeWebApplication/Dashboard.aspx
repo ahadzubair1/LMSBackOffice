@@ -414,11 +414,11 @@
                                 <div class="bg-body p-3 mt-3 rounded up-elev">
                                     <div class="row align-items-center">
                                         <div class="col-7">
-                                            <h6 class="font-semibold m-0">Explorer+</h6>
+                                            <h5 class="font-semibold m-0">Explorer+</h5>
                                         </div>
                                         <div class="col-5">
-                                            <h6 class="mb-1">$0</h6>
-                                            <p class="text-warning mb-0">Yearly</p>
+                                            <h5 class="mb-1">None</h5>
+                                            <p class="text-warning mb-0"><i class="ti ti-arrow-up-right"></i>1 Year</p>
                                         </div>
                                     </div>
                                 </div>
@@ -490,7 +490,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>tradiix.com/RDzCDXqqlFLF8KmE4CLb_L</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i><span id="leftReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -501,7 +501,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>tradiix.com/GHhVBEyulLPK9dM2sdTn_R</span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i><span id="rightReferralCodeSpan"  runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -595,7 +595,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-8">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -800,7 +800,7 @@
                             </div>
                         </div>
                     </div>
-                    <%--<div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -886,7 +886,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>--%>
+                    </div>
 
                 </div>
                 <!-- [ Main Content ] end -->

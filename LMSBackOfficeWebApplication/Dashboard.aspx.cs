@@ -43,7 +43,55 @@ namespace LMSBackOfficeWebApplication
                         ShowBonusTypes();
                     }
                 }
-               
+                DataTable referralCodesTable = ReferralCodes_DataAccess.FetchReferralCodesForUsername(Session["Username"].ToString());
+                if (referralCodesTable != null && referralCodesTable.Rows.Count >= 2)
+                {
+                    if (referralCodesTable != null && referralCodesTable.Rows.Count >= 2)
+                    {
+                        string leftReferralCode = null;
+                        string rightReferralCode = null;
+
+                        // Iterate through the rows of the DataTable
+                        foreach (DataRow referralCodeRow in referralCodesTable.Rows)
+                        {
+                            // Assuming network position is in the first column (index 0) and code is in the second column (index 1)
+                            int networkPosition = Convert.ToInt32(referralCodeRow[1]);
+                            string code = referralCodeRow[0].ToString();
+
+                            // Check network position and assign the code accordingly
+                            if (networkPosition == 1)
+                            {
+                                leftReferralCode = code;
+                            }
+                            else if (networkPosition == 2)
+                            {
+                                rightReferralCode = code;
+                            }
+
+                            // Break the loop if both left and right referral codes are found
+                            if (leftReferralCode != null && rightReferralCode != null)
+                            {
+                                break;
+                            }
+                        }
+
+                        // Display the referral codes
+                        if (leftReferralCode != null)
+                        {
+                            leftReferralCodeSpan.InnerText = leftReferralCode;
+                        }
+                        if (rightReferralCode != null)
+                        {
+                            rightReferralCodeSpan.InnerText = rightReferralCode;
+                        }
+                    }
+                    else
+                    {
+                        // Handle case when there are not enough referral codes returned
+                        // Or handle when the DataTable is null
+                    }
+                }
+
             }
             if (Session["LoggedIn"] == null || !(bool)Session["LoggedIn"])
             {

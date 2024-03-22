@@ -69,6 +69,35 @@ namespace LMSBackOfficeDAL
                 }
             }
         }
+
+        public static DataTable FetchReferralCodesForUsername(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("[USP_FetchReferralCodesForUsername]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Username", SqlDbType.NVarChar).Value = username;
+
+                    try
+                    {
+                        connection.Open();
+                        DataTable resultTable = new DataTable();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                        return resultTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                        return null; // Or throw an exception
+                    }
+                }
+            }
+        }
         /// <summary>
         /// METHOD TO ADD THE INORDERS
         /// </summary>
