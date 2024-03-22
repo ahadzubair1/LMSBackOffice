@@ -39,10 +39,10 @@ namespace LMSBackOfficeWebApplication
                     {
                         var memberInfo = Members_DataAccess.GetMemberInfo(username);
                         var isMembershipValid = Members_DataAccess.IsMembershipExpired(memberInfo.Id);
-                        if (!isMembershipValid)
-                        {
-                            isMembershipExpired = true;
-                        }
+                        //if (!isMembershipValid)
+                        //{
+                        //    isMembershipExpired = true;
+                        //}
 
                         this.successMessage.Value = "true";
                         Session["LoggedIn"] = true;
