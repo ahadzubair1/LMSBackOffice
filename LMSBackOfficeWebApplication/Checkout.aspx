@@ -84,7 +84,7 @@
               </div>
               <div class="col-md-8 mb-3">
                 <label for="state">Address</label>
-              <asp:TextBox ID="txtWalletAddress" runat="server" CssClass="form-control txtWalletAddress" Width="99%" MaxLength="60"></asp:TextBox>
+              <asp:TextBox ID="txtWalletAddress" runat="server" CssClass="form-control txtWalletAddress" Width="99%" MaxLength="60" ReadOnly="True"></asp:TextBox>
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
@@ -105,7 +105,7 @@
     function HideSideBar(message) {
         debugger;
         if ($("#sidebar") != null || $("#sidebar") != undefined) {
-            $("#sidebar").hide();
+          //  $("#sidebar").hide();
         }
     }
     </script>
