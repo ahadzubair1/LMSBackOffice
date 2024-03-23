@@ -546,7 +546,7 @@
                                         <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
                                         <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
                                         <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
-                                        <span class="avtar bg-light-primary text-primary text-sm">+2</span>
+                                        <span class="avtar bg-light-primary text-primary text-sm">+</span>
                                     </div>
                                     <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
                                 </div>
@@ -588,14 +588,14 @@
                                         <img src="Content/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
                                         <img src="Content/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
                                         <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
-                                        <span class="avtar bg-light-primary text-primary text-sm">+2</span>
+                                        <span class="avtar bg-light-primary text-primary text-sm">+</span>
                                     </div>
                                     <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -800,7 +800,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                   <%-- <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -886,7 +886,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </div>
                 <!-- [ Main Content ] end -->
