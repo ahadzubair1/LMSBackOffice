@@ -297,7 +297,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="card">
+                        <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Bonus Wallet Points</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Bonus Wallet to Credit Wallet.</h6>

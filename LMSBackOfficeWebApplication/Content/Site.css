@@ -204,7 +204,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
     .mbox:hover {
-        transform: rotateX(10deg) rotateY(-4deg) rotateZ(-2deg);
+        transform: scale(0.95);
     }
 
     .mbox .featurebox h6 {

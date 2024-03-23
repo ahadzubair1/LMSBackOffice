@@ -9,16 +9,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">Transactions</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Transactions</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Transactions</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -26,19 +26,17 @@
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
                 <div class="col-md-8 order-md-1">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="keyword">Keyword</label>
-                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control"></asp:TextBox>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter keywords"></asp:TextBox>
                         </div>
-                         <div class="col-md-2 mb-3">
-                              <label for="button"></label>
- <button class="btn btn-primary btn-lg btn-block" type="submit">Search</button>
- </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
                     </div>
-                   
-                    
-                    
+
+
+
                 </div>
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -85,7 +83,7 @@
             </div>
             <!-- [ Main Content ] end -->
         </div>
-     <!-- [ Main Content ] end -->
+        <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
                 <div class="row">

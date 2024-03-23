@@ -19,7 +19,7 @@
             top: 70%;
             z-index: -1;
             right: 0;
-            opacity: 0.3;
+            opacity: 0.6;
             left: 0;
             margin: 0 auto;
             transform: translateY(-50%);
