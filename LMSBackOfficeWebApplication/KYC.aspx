@@ -115,7 +115,7 @@
                 <div class="banner kyc">
                     <div class="banner-caption">
                         <h2 class="text-white">More Referrals, Huge Bonus!</h2>
-                        <p>Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -197,16 +197,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">KYC</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">KYC</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">KYC</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                 <div class="card m-0 h-100">
                     <div class="card-body">
                         <div class="kyc-container">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-md-4">
                                     <div class="profile-column">
                                         <!-- Profile Box -->

@@ -147,13 +147,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 
 .ranks-wrapper .cards-w {
     columns: 4;
-    column-gap: 3rem;
+    column-gap: 0;
 }
 
 .ranks-wrapper .item {
     display: block;
     width: 100%;
-    margin-bottom: 3rem;
 }
 
 .ranks-wrapper {

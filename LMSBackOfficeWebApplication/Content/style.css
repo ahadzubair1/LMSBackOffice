@@ -25224,8 +25224,8 @@ body:not([data-pc-theme="dark"]) .pc-header {
     position: relative;
     z-index: 995;
     margin-left: 280px;
-    margin-top: 74px;
-    padding: 15px 0;
+    margin-top: 3rem;
+    padding: 5px 0;
 }
 
     .pc-footer a {
