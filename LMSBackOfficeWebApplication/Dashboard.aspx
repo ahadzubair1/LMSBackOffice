@@ -795,8 +795,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer text-center">
-                                <a href="" class="btn btn-primary d-grid"><span class="text-truncate w-100">View all Transaction History</span></a>
+                            <div class="card-footer">
+                                <a href="" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>
                     </div>

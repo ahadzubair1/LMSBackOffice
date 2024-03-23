@@ -231,154 +231,152 @@
                                                 </div>
                                             </div>
                                             <div class="secondary-data">
-                                              <%--  <form action="">--%>
-                                                    <div class="form-item">
-                                                        <label for="Username">Username</label>
-                                                        <input type="text" name="Username" class="kyc-input" disabled
-                                                            placeholder="Enter Username" value="user@example.com" />
-                                                    </div>
-                                                    <div class="form-item">
-                                                        <label for="Country">Country</label>
-                                                        <div class="kyc-select-wrap">
-                                                            <span class="country-flag">
-                                                                <img src="Content/images/kyc/uae.png" width="20" alt="uae">
-                                                            </span>
-                                                            <select name="Country" id="Country" class="kyc-select">
-                                                                <option value="">UAE</option>
-                                                                <option value="">U.S</option>
-                                                                <option value="">India</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-item">
-                                                        <label for="Country">KYC Type</label>
-                                                        <select name="kyc-type" id="kyc-type" disabled class="kyc-select">
-                                                            <option value="">Standard</option>
-                                                            <option value="">Basic</option>
-                                                            <option value="">Advanced</option>
+                                                <%--  <form action="">--%>
+                                                <div class="form-item">
+                                                    <label for="Username">Username</label>
+                                                    <input type="text" name="Username" class="kyc-input" disabled
+                                                        placeholder="Enter Username" value="user@example.com" />
+                                                </div>
+                                                <div class="form-item">
+                                                    <label for="Country">Country</label>
+                                                    <div class="kyc-select-wrap">
+                                                        <span class="country-flag">
+                                                            <img src="Content/images/kyc/uae.png" width="20" alt="uae">
+                                                        </span>
+                                                        <select name="Country" id="Country" class="kyc-select">
+                                                            <option value="">UAE</option>
+                                                            <option value="">U.S</option>
+                                                            <option value="">India</option>
                                                         </select>
                                                     </div>
-                                               <%-- </form>--%>
+                                                </div>
+                                                <div class="form-item">
+                                                    <label for="Country">KYC Type</label>
+                                                    <select name="kyc-type" id="kyc-type" disabled class="kyc-select">
+                                                        <option value="">Standard</option>
+                                                        <option value="">Basic</option>
+                                                        <option value="">Advanced</option>
+                                                    </select>
+                                                </div>
+                                                <%-- </form>--%>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="kyc-grid w-100">
-                                       <%-- <form action="">--%>
-                                            <div class="kyc-form-wrapper">
-                                                <header>
-                                                    <h4 class="heading">KYC Registration <span class="kyc-type">standard</span></h4>
-                                                </header>
-                                                <main class="main-content">
-                                                    <div class="kyc-checkboxes">
-                                                        <span class="title">Choose:</span>
-                                                        <div class="single-checkbox">
-                                                            <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
-                                                                value="passport">
-                                                            <label for="checkbox_passport">Passport</label>
-                                                        </div>
-                                                        <div class="single-checkbox">
-                                                            <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
-                                                            <label for="checkbox_nic">NIC</label>
-                                                        </div>
-                                                        <div class="single-checkbox">
-                                                            <span class="text-danger">Any document is mandatory</span>
-                                                        </div>
+                                        <%-- <form action="">--%>
+                                        <div class="kyc-form-wrapper">
+                                            <header>
+                                                <h4 class="heading">KYC Registration <span class="kyc-type">standard</span></h4>
+                                            </header>
+                                            <main class="main-content">
+                                                <div class="kyc-checkboxes">
+                                                    <span class="title">Choose:</span>
+                                                    <div class="single-checkbox">
+                                                        <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
+                                                            value="passport">
+                                                        <label for="checkbox_passport">Passport</label>
                                                     </div>
-                                                    <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
-                                                    <div class="kyc-step passport" id="kyc_passport">
-                                                        <!-- Passport -->
-                                                        <div class="step-heading">
-                                                            Upload your Passport <span class="rule">Mandatory</span>
-                                                        </div>
-                                                        <div class="kyc-inner-grid">
-                                                            <div class="kyc-column">
-                                                                <div class="kyc-uploader">
-                                                                    <div class="content">
-                                                                        <i class="ti ti-cloud-upload"></i>
-                                                                        <span class="title">Upload Passport</span>
-                                                                        <span class="instruction">Max 10 MB in JPG Or PDF only</span>
-                                                                        <button type="button" class="choose-file">choose file</button>
-                                                                    </div>
-                                                                    <input type="file" name="passport_file" id="passport_file"
-                                                                        class="hidden-uploader">
-                                                                </div>
-                                                            </div>
-                                                            <div class="kyc-column flexbox">
-                                                                <div class="doc-req">
-                                                                    <h5>Document Standards:</h5>
-                                                                    <ul>
-                                                                        <li>Allowed formats: JPG, PDF</li>
-                                                                        <li>Readable, Clear and lit</li>
-                                                                        <li>Not reflective, not blurry</li>
-                                                                        <li>No black and white image, not edited</li>
-                                                                        <li>Place document against a solid colored background</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="sample-doc">
-                                                                    <img src="Content/images/kyc/passport.png" width="100" alt="passport example">
-                                                                    example
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="single-checkbox">
+                                                        <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
+                                                        <label for="checkbox_nic">NIC</label>
                                                     </div>
-                                                    <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
-                                                    <div class="kyc-step nic" id="kyc_nic">
-                                                        <!-- NIC -->
-                                                        <div class="step-heading">
-                                                            Upload your National Identity Card <span class="rule">Mandatory</span>
-                                                        </div>
-                                                        <div class="kyc-inner-grid">
-                                                            <div class="kyc-column flexbox">
-                                                                <div class="kyc-uploader">
-                                                                    <div class="content">
-                                                                        <i class="ti ti-cloud-upload"></i>
-                                                                        <span class="title">Upload Front Side</span>
-                                                                        <span class="instruction">Upload the front side</span>
-                                                                        <button type="button" class="choose-file">choose file</button>
-                                                                    </div>
-                                                                    <input type="file" name="passport_file" id="passport_file"
-                                                                        class="hidden-uploader">
+                                                    <div class="single-checkbox">
+                                                        <span class="text-danger">Any document is mandatory</span>
+                                                    </div>
+                                                </div>
+                                                <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
+                                                <div class="kyc-step passport" id="kyc_passport">
+                                                    <!-- Passport -->
+                                                    <div class="step-heading">
+                                                        Upload your Passport <span class="rule">Mandatory</span>
+                                                    </div>
+                                                    <div class="kyc-inner-grid">
+                                                        <div class="kyc-column">
+                                                            <div class="kyc-uploader">
+                                                                <div class="content">
+                                                                    <i class="ti ti-cloud-upload"></i>
+                                                                    <span class="title">Upload Passport</span>
+                                                                    <span class="instruction">Max 10 MB in JPG Or PDF only</span>
+                                                                    <button type="button" class="choose-file">choose file</button>
                                                                 </div>
-                                                                <div class="kyc-uploader">
-                                                                    <div class="content">
-                                                                        <i class="ti ti-cloud-upload"></i>
-                                                                        <span class="title">Upload Back Side</span>
-                                                                        <span class="instruction">Upload the front side</span>
-                                                                        <button type="button" class="choose-file">choose file</button>
-                                                                    </div>
-                                                                    <input type="file" name="nic_file" id="nic_file" class="hidden-uploader">
-                                                                </div>
+                                                                <input type="file" name="passport_file" id="passport_file"
+                                                                    class="hidden-uploader">
                                                             </div>
-                                                            <div class="kyc-column flexbox">
-                                                                <div class="doc-req">
-                                                                    <h5>Document Standards:</h5>
-                                                                    <ul>
-                                                                        <li>Allowed formats: JPG, PDF</li>
-                                                                        <li>Readable, Clear and lit</li>
-                                                                        <li>Not reflective, not blurry</li>
-                                                                        <li>No black and white image, not edited</li>
-                                                                        <li>Place document against a solid colored background</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="sample-doc">
-                                                                    <img src="Content/images/kyc/nic.png" width="100" alt="nic example">
-                                                                    example
-                                                                </div>
+                                                        </div>
+                                                        <div class="kyc-column flexbox">
+                                                            <div class="doc-req">
+                                                                <h5>Document Standards:</h5>
+                                                                <ul>
+                                                                    <li>Allowed formats: JPG, PDF</li>
+                                                                    <li>Readable, Clear and lit</li>
+                                                                    <li>Not reflective, not blurry</li>
+                                                                    <li>No black and white image, not edited</li>
+                                                                    <li>Place document against a solid colored background</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="sample-doc">
+                                                                <img src="Content/images/kyc/passport.png" width="100" alt="passport example">
+                                                                example
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </main>
-                                                <footer>
-                                                    <div class="field-row">
-                                                        <div class="form-item btn-arrow m0">
-                                                            <input type="submit" class="btn btn-primary" value="Submit" />
+                                                </div>
+                                                <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
+                                                <div class="kyc-step nic" id="kyc_nic">
+                                                    <!-- NIC -->
+                                                    <div class="step-heading">
+                                                        Upload your National Identity Card <span class="rule">Mandatory</span>
+                                                    </div>
+                                                    <div class="kyc-inner-grid">
+                                                        <div class="kyc-column flexbox">
+                                                            <div class="kyc-uploader">
+                                                                <div class="content">
+                                                                    <i class="ti ti-cloud-upload"></i>
+                                                                    <span class="title">Upload Front Side</span>
+                                                                    <span class="instruction">Upload the front side</span>
+                                                                    <button type="button" class="choose-file">choose file</button>
+                                                                </div>
+                                                                <input type="file" name="passport_file" id="passport_file"
+                                                                    class="hidden-uploader">
+                                                            </div>
+                                                            <div class="kyc-uploader">
+                                                                <div class="content">
+                                                                    <i class="ti ti-cloud-upload"></i>
+                                                                    <span class="title">Upload Back Side</span>
+                                                                    <span class="instruction">Upload the front side</span>
+                                                                    <button type="button" class="choose-file">choose file</button>
+                                                                </div>
+                                                                <input type="file" name="nic_file" id="nic_file" class="hidden-uploader">
+                                                            </div>
+                                                        </div>
+                                                        <div class="kyc-column flexbox">
+                                                            <div class="doc-req">
+                                                                <h5>Document Standards:</h5>
+                                                                <ul>
+                                                                    <li>Allowed formats: JPG, PDF</li>
+                                                                    <li>Readable, Clear and lit</li>
+                                                                    <li>Not reflective, not blurry</li>
+                                                                    <li>No black and white image, not edited</li>
+                                                                    <li>Place document against a solid colored background</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="sample-doc">
+                                                                <img src="Content/images/kyc/nic.png" width="100" alt="nic example">
+                                                                example
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </footer>
-                                            </div>
-                                       <%-- </form>--%>
+                                                </div>
+                                            </main>
+                                            <footer>
+                                                <div class="field-row">
+                                                    <input type="submit" class="btn btn-primary" value="Submit" />
+                                                </div>
+                                            </footer>
+                                        </div>
+                                        <%-- </form>--%>
                                     </div>
                                 </div>
                             </div>
