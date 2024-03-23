@@ -20,7 +20,7 @@
                         </div>
                         <h5 class="mb-3">Forex Today</h5>
                         <p class="text-muted">Forex Today: The Dollar looks at NFP for fresh oxygen</p>
-                       <%-- <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
+                        <%-- <img src="https://dixdeynibyck7.cloudfront.net/images/content/Forex/DOLLAR_03_L.jpg" alt="img" class="img-fluid mb-3" />--%>
                         <div class="row">
                             <div class="col-12">
                                 <div class="d-grid">
@@ -203,23 +203,23 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">Dashboard</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Dashboard</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
-                <div class="row">
+                <div class="row g-3">
                     <div class="col-md-3">
                         <div class="card t-card direct-bonus">
                             <div class="card-body">
@@ -250,10 +250,10 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold text-white">Direct Bonus</h6>
+                                        <h6 class="mb-0 font-semibold">Direct Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                <div class="bg-body rounded">
                                     <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
@@ -349,10 +349,10 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold text-white">Network Bonus</h6>
+                                        <h6 class="mb-0 font-semibold">Network Bonus</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                <div class="bg-body rounded">
                                     <div class="row align-items-center">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
@@ -408,10 +408,10 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold text-white">Membership</h6>
+                                        <h6 class="mb-0 font-semibold">Membership</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                <div class="bg-body rounded">
                                     <div class="row align-items-center">
                                         <div class="col-7">
                                             <h5 class="font-semibold m-0">None</h5>
@@ -450,10 +450,10 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold text-white">Rewards Achieved</h6>
+                                        <h6 class="mb-0 font-semibold">Rewards Achieved</h6>
                                     </div>
                                 </div>
-                                <div class="bg-body p-3 mt-3 rounded up-elev">
+                                <div class="bg-body rounded">
                                     <div class="row align-items-center">
                                         <div class="col-2">
                                             <h1 class="font-semibold m-0">0</h1>
@@ -501,7 +501,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i><span id="rightReferralCodeSpan"  runat="server"></span></span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i><span id="rightReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -800,7 +800,7 @@
                             </div>
                         </div>
                     </div>
-                   <%-- <div class="col-md-4">
+                    <%-- <div class="col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -887,7 +887,6 @@
                             </div>
                         </div>
                     </div>--%>
-
                 </div>
                 <!-- [ Main Content ] end -->
             </div>

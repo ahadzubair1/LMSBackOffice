@@ -11,7 +11,7 @@ body[data-pc-theme="light"] .pc-sidebar .pc-link {
 }
 
 .card {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -30px, rgba(0, 0, 0, 0.3) 0px 20px 30px -30px;
 }
 
 .pct-c-btn {
@@ -117,23 +117,23 @@ body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .
     }
 
 body[data-pc-theme="light"] .t-card.direct-bonus {
-    border-bottom: 3px solid rgba(70, 128, 255, 0.85);
-    background: #6193ff;
+    border: 3px solid rgba(70, 128, 255, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.membership {
-    border-bottom: 3px solid rgba(229, 138, 0, 0.85);
-    background: #e99b26;
+    border: 3px solid rgba(229, 138, 0, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.kyc-status {
-    border-bottom: 3px solid rgba(44, 168, 127, 0.85);
-    background: #4bb592;
+    border: 3px solid rgba(44, 168, 127, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.direct-referral {
-    border-bottom: 3px solid rgba(220, 38, 38, 0.85);
-    background: #e14646;
+    border: 3px solid rgba(220, 38, 38, 0.85);
+    background: #fff;
 }
 
 body:not([data-pc-theme="dark"]) .pc-footer {

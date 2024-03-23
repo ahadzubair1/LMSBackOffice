@@ -25327,6 +25327,7 @@ body:not([data-pc-theme="dark"]) .pc-header {
         display: inline-flex;
         background: transparent;
         font-size: 13px;
+        margin: 0;
     }
 
         .page-header .breadcrumb a {
@@ -28585,7 +28586,6 @@ body:not([data-pc-theme="dark"]) .pc-header {
 
 .card {
     box-shadow: var(--pc-card-box-shadow);
-    margin-bottom: 24px;
     transition: box-shadow 0.2s ease-in-out;
 }
 
