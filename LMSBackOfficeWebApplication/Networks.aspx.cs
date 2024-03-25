@@ -55,6 +55,8 @@ namespace LMSBackOfficeWebApplication
             string position = "";
             string country = member.Country;// Add country data
             string sponsor = member.Sponsor;
+            string rank = member.MemberRank;
+            string membership = member.MembershipName;
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
@@ -64,8 +66,9 @@ namespace LMSBackOfficeWebApplication
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                            <label>Member: {memberUserName}</label>
                             <label>Sponsor: {sponsor}</label>
+                            <label>Membership: {membership}</label>
+                            <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");
@@ -113,6 +116,8 @@ namespace LMSBackOfficeWebApplication
                 
                 string country = member.Country;// Add country data
                 string sponsor = member.Sponsor;
+                string rank = member.MemberRank;
+                string membership = member.MembershipName;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
@@ -123,8 +128,9 @@ namespace LMSBackOfficeWebApplication
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                                <label>Member: {memberUserName}</label>
                             <label>Sponsor: {sponsor}</label>
+                            <label>Membership: {membership}</label>
+                            <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");
@@ -166,6 +172,8 @@ namespace LMSBackOfficeWebApplication
 
                 string country = member.Country;// Add country data
                 string sponsor = member.Sponsor;
+                string rank = member.MemberRank;
+                string membership = member.MembershipName;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
@@ -176,8 +184,9 @@ namespace LMSBackOfficeWebApplication
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
-                              <label>Member: {memberUserName}</label>
                             <label>Sponsor: {sponsor}</label>
+                            <label>Membership: {membership}</label>
+                            <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
                         </span>
                     </a>");

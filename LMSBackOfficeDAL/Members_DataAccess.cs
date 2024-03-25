@@ -391,6 +391,9 @@ namespace LMSBackOfficeDAL
                                     MemberWalletCurrency = reader["Wallet_Currency"].ToString(),
                                     Sponsor = reader["Sponsor"].ToString(),
                                     Country = reader["MemberCountry"].ToString(),
+                                    MembershipName= reader["Membership_Name"].ToString(),
+                                    MemberRank= reader["Member_RankDesc"].ToString(),
+
                                 };
                             }
                         }
