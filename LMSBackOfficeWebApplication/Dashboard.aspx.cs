@@ -79,10 +79,12 @@ namespace LMSBackOfficeWebApplication
                         if (leftReferralCode != null)
                         {
                             leftReferralCodeSpan.InnerText = leftReferralCode;
+                            leftReferralCodeSpan.Attributes["title"] = leftReferralCode;
                         }
                         if (rightReferralCode != null)
                         {
                             rightReferralCodeSpan.InnerText = rightReferralCode;
+                            rightReferralCodeSpan.Attributes["title"]= rightReferralCode;
                         }
                     }
                     else
