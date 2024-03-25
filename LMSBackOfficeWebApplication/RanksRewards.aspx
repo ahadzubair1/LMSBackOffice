@@ -110,16 +110,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">Ranks & Rewards</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Ranks & Rewards</h2>
-                                </div>
                             </div>
                         </div>
                     </div>

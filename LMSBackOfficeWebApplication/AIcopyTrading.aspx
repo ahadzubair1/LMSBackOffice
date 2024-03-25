@@ -113,16 +113,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">AI Copy Trading</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">AI Copy Trading</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">AI Copy Trading</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,16 +132,16 @@
                 <div class="ranks-wrapper pb-5">
                     <div class="cards-w">
                         <div class="item">
-                            <img src="Content/images/Copy-Trading/Explorer-EA.png" alt="" />
+                            <img src="Content/images/Copy-Trading/Explorer-EA.png" class="p-10" alt="" />
                         </div>
                         <div class="item">
-                            <img src="Content/images/Copy-Trading/Pioneer-EA.png" alt="" />
+                            <img src="Content/images/Copy-Trading/Pioneer-EA.png" class="p-10" alt="" />
                         </div>
                         <div class="item">
-                            <img src="Content/images/Copy-Trading/Elite-EA.png" alt="" />
+                            <img src="Content/images/Copy-Trading/Elite-EA.png" class="p-10" alt="" />
                         </div>
                         <div class="item">
-                            <img src="Content/images/Copy-Trading/Infinite-EA.png" alt="" />
+                            <img src="Content/images/Copy-Trading/Infinite-EA.png" class="p-10" alt="" />
                         </div>
                     </div>
                 </div>

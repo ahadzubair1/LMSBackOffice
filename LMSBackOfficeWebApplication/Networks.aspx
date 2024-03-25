@@ -114,7 +114,7 @@
                 <div class="banner wallets">
                     <div class="banner-caption">
                         <h2 class="text-white">More Referrals, Huge Bonus!</h2>
-                        <p>Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -196,16 +196,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">Networks</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Networks</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Networks</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -224,20 +224,20 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card">
                             <div class="card-body">
-                                <div id="orgChartContainer">
-                                    <div class="row mb-4 tree-controls">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
-                                                </div>
-                                                <input type="text" class="form-control" id="searchnode" placeholder="Find a user">
+                                <div class="row mb-4 tree-controls">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
+                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">
                                         </div>
                                     </div>
+                                </div>
+                                <div id="orgChartContainer">
                                     <div id="orgChart">
                                         <div class="tree">
-                                                   <asp:Literal ID="litGeneratedHtml" runat="server"></asp:Literal>
+                                            <asp:Literal ID="litGeneratedHtml" runat="server"></asp:Literal>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@
                                         <tr>
                                             <th>Member Name</th>
                                             <th>MemberShip</th>
-                                            <th>MemberShip Expiry</th>                                  
+                                            <th>MemberShip Expiry</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>

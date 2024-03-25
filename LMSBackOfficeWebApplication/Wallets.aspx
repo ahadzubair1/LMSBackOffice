@@ -114,7 +114,7 @@
                 <div class="banner wallets">
                     <div class="banner-caption">
                         <h2 class="text-white">More Referrals, Huge Bonus!</h2>
-                        <p>Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -196,16 +196,16 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="page-header-title">
+                                    <h2 class="mb-0">Wallets</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Wallets</a></li>
                                 </ul>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Wallets</h2>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,42 +222,42 @@
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="card">
+                        <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Credit Wallet Points</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Bonus Wallet.</h6>
-                               <%-- <form>--%>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Fee</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
+                                <%-- <form>--%>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Amount</label>
+                                            <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
                                         </div>
                                     </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6">
-                                            <label class="form-label">OTP</label>
-                                            <div class="form-group d-flex align-items-center gap-2">
-                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
-                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
-                                            </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Fee</label>
+                                            <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Transfer</button>
-                              <%--  </form>--%>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Receivable Amount</label>
+                                            <input type="number" class="form-control mw-100" placeholder="0" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <label class="form-label">OTP</label>
+                                        <div class="form-group d-flex align-items-center gap-2">
+                                            <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
+                                            <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Transfer</button>
+                                <%--  </form>--%>
                             </div>
                         </div>
                         <div class="card">
@@ -275,21 +275,21 @@
                                     </thead>
                                     <tbody>
                                         <%if (dt != null && dt.Rows.Count > 0)
-                                          { %>
+                                            { %>
 
-                                              <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                                  {%>
-                                                      <tr>
-                                                          <%foreach (System.Data.DataColumn dc in this.dt.Columns)
-                                                              {%>
-                                                          <td>
-                                                              <%=dr[dc.ColumnName]%>
-                                                          </td>
-                                                          <%} %>
-                                                      </tr>
-                                              <%} %>
+                                        <%foreach (System.Data.DataRow dr in this.dt.Rows)
+                                            {%>
+                                        <tr>
+                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                {%>
+                                            <td>
+                                                <%=dr[dc.ColumnName]%>
+                                            </td>
+                                            <%} %>
+                                        </tr>
+                                        <%} %>
 
-                                      <%} %>
+                                        <%} %>
                                         <!-- Add more rows as needed -->
                                     </tbody>
                                 </table>
@@ -297,41 +297,41 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="card">
+                        <div class="card mb-3">
                             <div class="card-body">
                                 <h5 class="card-title">Transfer Bonus Wallet Points</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Bonus Wallet to Credit Wallet.</h6>
-                              <%--  <form>--%>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Fee</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="form-label">Receivable Amount</label>
-                                                <input type="number" class="form-control mw-100" placeholder="0" readonly>
-                                            </div>
+                                <%--  <form>--%>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Amount</label>
+                                            <input type="number" class="form-control mw-100" placeholder="Enter amount" value="1">
                                         </div>
                                     </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-md-6">
-                                            <label class="form-label">OTP</label>
-                                            <div class="form-group d-flex align-items-center gap-2">
-                                                <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
-                                                <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
-                                            </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Fee</label>
+                                            <input type="number" class="form-control mw-100" placeholder="0" readonly>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Transfer</button>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="form-label">Receivable Amount</label>
+                                            <input type="number" class="form-control mw-100" placeholder="0" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <label class="form-label">OTP</label>
+                                        <div class="form-group d-flex align-items-center gap-2">
+                                            <input type="number" class="form-control mw-100" placeholder="e.g. 1234">
+                                            <button type="submit" class="btn btn-warning text-nowrap">Send OTP</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Transfer</button>
                                 <%--</form>--%>
                             </div>
                         </div>

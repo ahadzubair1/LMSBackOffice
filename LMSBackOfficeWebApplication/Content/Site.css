@@ -11,7 +11,7 @@ body[data-pc-theme="light"] .pc-sidebar .pc-link {
 }
 
 .card {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -30px, rgba(0, 0, 0, 0.3) 0px 20px 30px -30px;
 }
 
 .pct-c-btn {
@@ -117,23 +117,23 @@ body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .
     }
 
 body[data-pc-theme="light"] .t-card.direct-bonus {
-    border-bottom: 3px solid rgba(70, 128, 255, 0.85);
-    background: #6193ff;
+    border: 3px solid rgba(70, 128, 255, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.membership {
-    border-bottom: 3px solid rgba(229, 138, 0, 0.85);
-    background: #e99b26;
+    border: 3px solid rgba(229, 138, 0, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.kyc-status {
-    border-bottom: 3px solid rgba(44, 168, 127, 0.85);
-    background: #4bb592;
+    border: 3px solid rgba(44, 168, 127, 0.85);
+    background: #fff;
 }
 
 body[data-pc-theme="light"] .t-card.direct-referral {
-    border-bottom: 3px solid rgba(220, 38, 38, 0.85);
-    background: #e14646;
+    border: 3px solid rgba(220, 38, 38, 0.85);
+    background: #fff;
 }
 
 body:not([data-pc-theme="dark"]) .pc-footer {
@@ -147,13 +147,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 
 .ranks-wrapper .cards-w {
     columns: 4;
-    column-gap: 3rem;
+    column-gap: 0;
 }
 
 .ranks-wrapper .item {
     display: block;
     width: 100%;
-    margin-bottom: 3rem;
 }
 
 .ranks-wrapper {
@@ -205,7 +204,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
     .mbox:hover {
-        transform: rotateX(10deg) rotateY(-4deg) rotateZ(-2deg);
+        transform: scale(0.95);
     }
 
     .mbox .featurebox h6 {
@@ -586,10 +585,6 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     flex: 2;
 }
 
-.kyc-container {
-    max-width: 1140px;
-    font-family: 'Montserrat', sans-serif;
-}
 
 .profile-content {
     border: 1px solid #B8B3BE;
@@ -966,26 +961,6 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         flex: 1;
     }
 
-
-.btn-arrow {
-    max-width: 140px;
-}
-
-    .btn-arrow:after {
-        content: "\e902";
-        font-family: "icomoon";
-        color: #fff;
-        position: absolute;
-        right: 40px;
-        top: 15px;
-        font-size: 5px;
-        transform: rotate(-90deg);
-    }
-
-.btn-arrow {
-    width: 100%;
-}
-
 footer .field-row {
     justify-content: end;
 }
@@ -1078,8 +1053,11 @@ footer .field-row {
         box-shadow: 0 2px 6px 0px #0000004a;
         background-color: #374256;
         animation-timing-function: linear;
-        overflow: hidden;
     }
+
+        .tree li a:hover .node-detail {
+            display: block;
+        }
 
 
 #orgChart .user-rank {
