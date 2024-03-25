@@ -490,10 +490,11 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i><span data-bs-toggle="tooltip" data-bs-placement="top"  id="leftReferralCodeSpan" runat="server"></span></span>
+                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-left"></i><span class="copyable" data-bs-toggle="tooltip" data-bs-placement="top"  id="leftReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
+                                            <div onclick="copyText(this,event)" class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
+                                            <span id="copiedSpan" class="copied-span">Copied!</span>
                                         </div>
                                     </a>
                                     <a href="#" class="btn btn-link-secondary bg-primary-subtle">
@@ -501,10 +502,10 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i><span data-bs-toggle="tooltip" data-bs-placement="top"  id="rightReferralCodeSpan" runat="server"></span></span>
+                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-right"></i><span data-bs-toggle="tooltip" data-bs-placement="top"  class="copyable" id="rightReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
-                                            <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
+                                            <div onclick="copyText(this,event)" class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
                                         </div>
                                     </a>
                                 </div>
@@ -1078,5 +1079,41 @@
             </div>
         </div>
     </main>
+    <script>
+        function copyText(div, event) {
+            event.preventDefault();
+            // Find the previous sibling of the div, which is the <div> element containing the text
+            var divElement = div.previousElementSibling;
+
+            // Find the first child element of the <div>, which is the <span> containing the copyable text
+            var copyableElement = divElement.querySelector('.copyable');
+
+            // Get the text content of the copyable element
+            var textToCopy = copyableElement.textContent;
+
+            // Create a temporary textarea to hold the text and copy it
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textToCopy;
+
+            // Append the textarea to the document
+            document.body.appendChild(tempTextArea);
+
+            // Select and copy the text from the textarea
+            tempTextArea.select();
+            document.execCommand("copy");
+
+            // Remove the textarea from the document
+            document.body.removeChild(tempTextArea);
+
+            // Show the "copied" span
+            var copiedSpan = document.getElementById("copiedSpan");
+            copiedSpan.style.display = "block";
+
+            // Hide the "copied" span after a short delay
+            setTimeout(function () {
+                copiedSpan.style.display = "none";
+            }, 1000); // 1000 milliseconds = 1 second
+        }
+    </script>
 
 </asp:Content>
