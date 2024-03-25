@@ -102,6 +102,9 @@
                         <div class="mb-3">
                             <label for="" class="text-white">Your Password?</label>
                             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">
+    <i id="eyeIcon" class="fa fa-eye"></i>
+</span>
                         </div>
 
                         <div class="mb-3">
