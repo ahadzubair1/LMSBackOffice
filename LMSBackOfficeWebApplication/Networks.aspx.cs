@@ -25,26 +25,46 @@ namespace LMSBackOfficeWebApplication
                     Response.Redirect("Login.aspx");
                 }
 
-                string userName = Session["Username"].ToString();
-                var member = Members_DataAccess.GetMemberInfo(userName);
-                referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
-                networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
 
-                // Generate HTML only once during the initial load
-                string generatedHtml = GenerateHTML(networkTreeTable);
-                litGeneratedHtml.Text = generatedHtml;
+                string memberIdParam = Request.QueryString["memberkey"];
+
+                if (!string.IsNullOrEmpty(memberIdParam))
+                {
+
+                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
+                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
+
+                    // Generate HTML only once during the initial load
+                    string generatedHtml = GenerateHTML(networkTreeTable, memberIdParam);
+                    litGeneratedHtml.Text = generatedHtml;
+                }
+                else
+                {
+
+                    string userName = Session["Username"].ToString();
+                    var member = Members_DataAccess.GetMemberInfo(userName);
+                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
+                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+
+                    // Generate HTML only once during the initial load
+                    string generatedHtml = GenerateHTML(networkTreeTable, member.Id);
+                    litGeneratedHtml.Text = generatedHtml;
+                }
+
+
+
             }
         }
 
-        private string GenerateHTML(DataTable dataTable)
+        private string GenerateHTML(DataTable dataTable, string memberId)
         {
             StringBuilder sb = new StringBuilder();
 
 
-            string userName = Session["Username"].ToString();
-            var member = Members_DataAccess.GetMemberInfo(userName);
+            //string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(networkTreeTable.Rows[0]["Member_UserName"].ToString());
             // Get root nodes (Position = 0)
-            DataRow[] rootNodes = dataTable.Select($"Member_Id = '{member.Id}'");
+            DataRow[] rootNodes = dataTable.Select($"Member_Id = '{memberId}'");
 
             // Start the parent node
             sb.AppendLine("<ul class=\"parent-node\">");
@@ -60,7 +80,8 @@ namespace LMSBackOfficeWebApplication
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine("<a href=\"#\" class=\"platinum\"    >");
+            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class=""platinum"">");
+
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -79,9 +100,9 @@ namespace LMSBackOfficeWebApplication
 
             foreach (DataRow rootNode in rootNodes)
             {
-                string memberId = rootNode["Member_ID"].ToString();
+                //string memberId = rootNode["Member_ID"].ToString();
                 // Generate HTML for the root node and its children recursively
-                sb.Append(GenerateNodeHtml(dataTable, memberId,1));
+                sb.Append(GenerateNodeHtml(dataTable, memberId, 1));
             }
             sb.AppendLine("    </ul>");
             sb.AppendLine("</li>");
@@ -91,9 +112,9 @@ namespace LMSBackOfficeWebApplication
             return sb.ToString();
         }
 
-      
 
-        private string GenerateNodeHtml(DataTable dataTable, string parentId,int Level)
+
+        private string GenerateNodeHtml(DataTable dataTable, string parentId, int Level)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -113,7 +134,7 @@ namespace LMSBackOfficeWebApplication
                 string memberUserName = leftChildRows[0]["Member_UserName"].ToString();
 
                 var member = Members_DataAccess.GetMemberInfo(memberUserName);
-                
+
                 string country = member.Country;// Add country data
                 string sponsor = member.Sponsor;
                 string rank = member.MemberRank;
@@ -122,7 +143,8 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -136,9 +158,9 @@ namespace LMSBackOfficeWebApplication
                     </a>");
                 // Check if there are child nodes for the current node
                 string memberId = leftChildRows[0]["Member_ID"].ToString();
-                if(Int32.Parse(leftChildRows[0]["Level"].ToString())<=3)
+                if (Int32.Parse(leftChildRows[0]["Level"].ToString()) <= 3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId,Level+1);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -149,7 +171,7 @@ namespace LMSBackOfficeWebApplication
 
                     }
                 }
-                
+
                 // End the list item for the current node
                 sb.AppendLine("</li>");
 
@@ -157,7 +179,7 @@ namespace LMSBackOfficeWebApplication
             }
             else
             {
-                getDummyChilds(sb,Level);
+                getDummyChilds(sb, Level);
 
             }
 
@@ -178,7 +200,8 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\"");
+
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -194,7 +217,7 @@ namespace LMSBackOfficeWebApplication
                 string memberId = RightChildRows[0]["Member_ID"].ToString();
                 if (Int32.Parse(RightChildRows[0]["Level"].ToString()) <= 3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level+1);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -212,8 +235,8 @@ namespace LMSBackOfficeWebApplication
             }
             else
             {
-                
-                getDummyChilds(sb,Level);
+
+                getDummyChilds(sb, Level);
 
                 //// Start the list item for the current node
                 //sb.AppendLine("<li>");
@@ -240,7 +263,7 @@ namespace LMSBackOfficeWebApplication
             return sb.ToString();
         }
 
-        private static void getDummyChilds(StringBuilder sb,int level)
+        private static void getDummyChilds(StringBuilder sb, int level)
         {
 
 
@@ -251,18 +274,18 @@ namespace LMSBackOfficeWebApplication
             if (level == 1)
             {
                 sb.AppendLine("<ul >");
-                    sb.AppendLine("<li>");               
-                        dummychild(sb);
-                           sb.AppendLine(" <ul >");
-                                sb.AppendLine("  <li>");
-                                    dummychild(sb);
-                                sb.AppendLine("  </li>");
-                                sb.AppendLine("   <li>");
-                                    dummychild(sb);
-                                sb.AppendLine("  </li>");
-                            sb.AppendLine(" </ul ");
-                    sb.AppendLine("</li>");
-                    sb.AppendLine("<li>");
+                sb.AppendLine("<li>");
+                dummychild(sb);
+                sb.AppendLine(" <ul >");
+                sb.AppendLine("  <li>");
+                dummychild(sb);
+                sb.AppendLine("  </li>");
+                sb.AppendLine("   <li>");
+                dummychild(sb);
+                sb.AppendLine("  </li>");
+                sb.AppendLine(" </ul ");
+                sb.AppendLine("</li>");
+                sb.AppendLine("<li>");
 
                 dummychild(sb);
                 //
