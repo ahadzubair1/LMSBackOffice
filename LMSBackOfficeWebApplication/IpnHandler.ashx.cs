@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.PeerToPeer;
 using System.Web;
 
 namespace Coinpayments.Example
@@ -33,18 +34,31 @@ namespace Coinpayments.Example
                     return;
                 }
 
-                if (req.SuccessStatusLax() && req.IpnType == "api")
+                if (req.SuccessStatusLax() && req.IpnType == "simple")
                 {
-                    // TODO: Process payment as needed, release product
-                    //Update Balance in UserWallet table 
-                    string username = HttpContext.Current.Session["Username"].ToString();
-                    var member = Members_DataAccess.GetMemberInfo(username);
-                    MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(req.Amount1), 0);
+                    string memberId = string.Empty;
+                    if(HttpContext.Current.Session["Username"] != null)
+                    {
+                        string username = HttpContext.Current.Session["Username"].ToString();
+                        var member = Members_DataAccess.GetMemberInfo(username);
+                        memberId = member.Id;
+                    }
+                    else
+                    {
+                        var custom = req.Custom.Split('|');
+                        if(custom.Length > 1)
+                        {
+                            memberId = custom[1];
+                        }
+                    }
+                    WriteLog.LogInfo($"Current LoggedIn user Id : {memberId}");
+                    
+                    MemberWallets_DataAcsess.UpdateMemberWallet(memberId, Convert.ToDecimal(req.Amount1), 1);
 
                     //Update Transaction on success
-                    Transactions_DataAcsess.UpdateTransaction(member.Id, req.Fee, CoinPaymentStatus.Complete.ToString());
+                    var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberId, req.Fee, CoinPaymentStatus.Complete.ToString());
 
-                    CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.SendTx, req.StatusText);
+                    CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, transactionCode, req.SendTx, req.Status, req.StatusText);
                 }
 
                 WriteLog.LogInfo($"Status Code Is : {req.StatusText}" );

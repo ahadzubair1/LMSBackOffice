@@ -21,7 +21,6 @@ namespace LMSBackOfficeDAL
 
                     command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = memberId;
                     command.Parameters.Add("@IN_Transaction_Code", SqlDbType.NVarChar).Value = transactionCode;
-                    command.Parameters.Add("@IN_CPTransactionID", SqlDbType.NVarChar).Value = cpTransactionId;
                     command.Parameters.Add("@IN_Transaction_Type", SqlDbType.NVarChar).Value = transactionType;
                     command.Parameters.Add("@IN_Transaction_Amount", SqlDbType.Decimal).Value = amount;
                     command.Parameters.Add("@IN_Transaction_SenderAddress", SqlDbType.NVarChar).Value = memberAddress;
@@ -30,8 +29,6 @@ namespace LMSBackOfficeDAL
                     command.Parameters.Add("@IN_Transaction_Status", SqlDbType.NVarChar).Value = status;
                     command.Parameters.Add("@IN_Private_Key", SqlDbType.NVarChar).Value = Configurations.PrivateKey;
                     command.Parameters.Add("@IN_Public_Key", SqlDbType.NVarChar).Value = Configurations.PublicKey;
-                    command.Parameters.Add("@IN_Success_RedirectUrl", SqlDbType.NVarChar).Value = successRedirectUrl;
-                    command.Parameters.Add("@IN_Redirect_Url", SqlDbType.NVarChar).Value = redirectUrl;
                     command.Parameters.Add("@Is_ProcessCompleted", SqlDbType.Bit).Value = isCompleted;
                    
 
@@ -54,7 +51,7 @@ namespace LMSBackOfficeDAL
         }
 
 
-        public static void UpdateCoinPaymentTransaction(string transactionId, string status)
+        public static void UpdateCoinPaymentTransaction(string transactionId, string transactionCode, string transactionHash, int statusCode, string status)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -63,7 +60,10 @@ namespace LMSBackOfficeDAL
                     command.CommandType = CommandType.StoredProcedure;
                     try
                     {
+                        command.Parameters.Add("@TransactionCode", SqlDbType.NVarChar).Value = transactionCode;
                         command.Parameters.Add("@CPTransactionID", SqlDbType.NVarChar).Value = transactionId;
+                        command.Parameters.Add("@IN_TransactionHash", SqlDbType.NVarChar).Value = transactionHash;
+                        command.Parameters.Add("@IN_TransactionStatusCode", SqlDbType.NVarChar).Value = statusCode.ToString();
                         command.Parameters.Add("@IN_Status", SqlDbType.NVarChar).Value = status;
                         connection.Open();
 

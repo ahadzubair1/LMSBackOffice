@@ -55,9 +55,9 @@ namespace LMSBackOfficeWebApplication
                                 double newBalance = Balance - TotalAmount;
                                 var orderId = Guid.NewGuid().ToString();
                                 MemberWallets_DataAcsess.UpdateMemberWallet(MemberId, Convert.ToDecimal(newBalance), 0);
-                                Transactions_DataAcsess.AddTransactions(MemberId, orderId, string.Empty, "Membership Purchase", "USD", Configurations.ToCurrency,
-                                                                string.Empty, Configurations.CompanyCryptoWallet, null, "Complete",
-                                                                Convert.ToDecimal(amount), string.Empty, string.Empty, false);
+                                Transactions_DataAcsess.AddTransactions(MemberId, orderId, "Membership Purchase", "USD", Configurations.ToCurrency,
+                                                                string.Empty, Configurations.CompanyCryptoWallet, "Complete",
+                                                                Convert.ToDecimal(amount));
                                 var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
                                 Network_DataAccess.AssignNetworkParent(MemberId);
                                 if (SuccessPurchase == "Success")

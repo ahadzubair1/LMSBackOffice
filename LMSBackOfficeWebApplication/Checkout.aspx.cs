@@ -30,9 +30,6 @@ namespace LMSBackOfficeWebApplication
                         if (IsMembershipExpired)
                         {
                             Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "HideSideBar();", true);
-                            // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
-                            // ScriptManager.RegisterStartupScript(this.Page, typeof(Page), "text", "ShowMessage('" + message + "')", true);
-                            //ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "MyFun1", "HideSideBar();", true);
                         }
                     }
 
@@ -60,7 +57,7 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        private IDictionary<string, string> CreateQueryParameters(CheckoutModel model)
+        private IDictionary<string, string> CreateQueryParameters(CheckoutModel model, string memberId)
         {
             string storeLocation = HttpContext.Current.Request.Url.AbsoluteUri;
             string authority = HttpContext.Current.Request.Url.Authority;
@@ -91,7 +88,7 @@ namespace LMSBackOfficeWebApplication
                 ["cancel_url"] = $"{completeurl}/CancelTransaction.aspx",
 
                 //order identifier                
-                ["custom"] = Guid.NewGuid().ToString(),
+                ["custom"] = $"{orderNo}|{memberId}",
 
                 //billing info
                 ["first_name"] = model.MemberFullName,
@@ -111,20 +108,23 @@ namespace LMSBackOfficeWebApplication
                     checkout.TotalAmount = checkout.TotalAmount;
                     checkout.ToWalletAddress = txtWalletAddress.Text;
                     checkout.Currency = DropDownList1.SelectedValue.ToString();
-                    var queryParameters = CreateQueryParameters(checkout);
-                    var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
                     string username = Session["Username"].ToString();
                     var member = Members_DataAccess.GetMemberInfo(username);
+                    var queryParameters = CreateQueryParameters(checkout, member.Id);
+
+                    var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
+
+                  
                     //Update Balance in UserWallet table 
                     MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
 
                     //Add Transaction and Coin PaymentTransaction
-                    Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, null, "Topup", member.MemberCurrency, Configurations.ToCurrency,
-                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
-                                                            Convert.ToDecimal(checkout.TotalAmount), string.Empty, string.Empty, false);
+                    Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
+                                                            Convert.ToDecimal(checkout.TotalAmount));
 
-                    Response.Redirect(redirectUrl);
+                    Response.Redirect(redirectUrl, false);
                 }
             }
             catch (Exception ex)
@@ -133,19 +133,7 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            if (Session["Checkout"] != null)
-            {
-                var checkout = Session["Checkout"] as CheckoutModel;
-
-                var queryParameters = CreateQueryParameters(checkout);
-                var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
-
-                Response.Redirect(redirectUrl);
-            }
-        }
-
+        
         //protected void CheckoutBtn_ServerClick(object sender, ImageClickEventArgs e)
         //{
         //    if (Session["Checkout"] != null)
