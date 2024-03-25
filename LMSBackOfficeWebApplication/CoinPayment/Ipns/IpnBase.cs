@@ -31,7 +31,7 @@ namespace LMSBackOfficeWebApplication.Ipns
         public bool SigIsValid(string hmacSent)
         {
             var calcHmac = CryptoUtil.CalcSignature(Source, Configurations.IpnSecret);
-
+            WriteLog.LogInfo($"calcHmac is {calcHmac}");
             return hmacSent == calcHmac && Merchant == Configurations.MerchantId;
         }
 

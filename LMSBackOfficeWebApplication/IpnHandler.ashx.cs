@@ -27,13 +27,14 @@ namespace Coinpayments.Example
                 WriteLog.LogInfo(requestString);
 
                 var hmac = context.Request.Headers["HMAC"];
-                WriteLog.LogInfo(hmac);
+                WriteLog.LogInfo($"Hmac is {hmac}");
                 if (hmac == null || !req.SigIsValid(hmac))
-                {
+                {                   
                     response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
                     return;
                 }
 
+                WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
                 if (req.SuccessStatusLax() && req.IpnType == "simple")
                 {
                     string memberId = string.Empty;
