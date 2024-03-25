@@ -20,6 +20,9 @@ namespace LMSBackOfficeDAL.Model
 
         public string Sponsor { get; set; }
         public string Country { get; set; }
+
+        public string MembershipName { get; set; }
+        public string MemberRank { get; set; }
     }
 
     public class CheckoutModel
