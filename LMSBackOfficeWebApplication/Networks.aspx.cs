@@ -25,14 +25,34 @@ namespace LMSBackOfficeWebApplication
                     Response.Redirect("Login.aspx");
                 }
 
-                string userName = Session["Username"].ToString();
-                var member = Members_DataAccess.GetMemberInfo(userName);
-                referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
-                networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
 
-                // Generate HTML only once during the initial load
-                string generatedHtml = GenerateHTML(networkTreeTable);
-                litGeneratedHtml.Text = generatedHtml;
+                string memberIdParam = Request.QueryString["memberkey"];
+
+                if (!string.IsNullOrEmpty(memberIdParam))
+                {
+
+                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
+                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
+
+                    // Generate HTML only once during the initial load
+                    string generatedHtml = GenerateHTML(networkTreeTable);
+                    litGeneratedHtml.Text = generatedHtml;
+                }
+                else
+                {
+
+                    string userName = Session["Username"].ToString();
+                    var member = Members_DataAccess.GetMemberInfo(userName);
+                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
+                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+
+                    // Generate HTML only once during the initial load
+                    string generatedHtml = GenerateHTML(networkTreeTable);
+                    litGeneratedHtml.Text = generatedHtml;
+                }
+
+
+
             }
         }
 
