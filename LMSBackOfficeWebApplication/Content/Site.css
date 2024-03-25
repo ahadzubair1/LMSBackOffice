@@ -168,7 +168,6 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     align-content: center;
     justify-content: center;
     padding: 2rem;
-    margin: 1rem 0;
     background: radial-gradient(#af168a,#580b63);
     color: white;
     box-shadow: 0 0 0px 2px #fff inset;

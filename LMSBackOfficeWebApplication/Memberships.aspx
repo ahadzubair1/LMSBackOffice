@@ -212,7 +212,7 @@
                 <div class="ranks-wrapper m pb-5">
                     <div class="row g-3">
                         <div class="col-md-4">
-                            <div class="mbox mb-4">
+                            <div class="mbox">
                                 <img src="Content/images/Memberships/1.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features</h6>
@@ -221,10 +221,43 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>0$</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
-                            <div class="mbox mb-4">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mbox">
+                                <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
+                                <div class="featurebox">
+                                    <h6 class="text-white">Membership Features</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>0$</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
+                                </div>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mbox">
+                                <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
+                                <div class="featurebox">
+                                    <h6 class="text-white">Membership Features</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>500</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
+                                </div>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mbox">
                                 <img src="Content/images/Memberships/3.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features</h6>
@@ -240,18 +273,6 @@
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
-                                <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
-                                <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
-                                </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
-                            </div>
-                            <div class="mbox mb-4">
                                 <img src="Content/images/Memberships/4.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features</h6>
@@ -264,23 +285,9 @@
                                 </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="50" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
                             </div>
-
                         </div>
                         <div class="col-md-4">
-                            <div class="mbox mb-4">
-                                <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
-                                <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>500</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
-                                </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
-                            </div>
-                            <div class="mbox mb-4">
+                            <div class="mbox">
                                 <img src="Content/images/Memberships/5.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
                                     <h6 class="text-white">Membership Features</h6>
