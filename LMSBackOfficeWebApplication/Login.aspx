@@ -11,6 +11,9 @@
     <link href="./Content/css/style.css" rel="stylesheet" />
     <link href="./Content/css/icons.css" rel="stylesheet" />
     <link href="./Content/css/typography.css" rel="stylesheet" />
+    <link href="./Content/fonts/tabler-icons.min.css" rel="stylesheet" />
+    <link href="./Content/fonts/feather.css" rel="stylesheet" />
+    <link href="./Content/fonts/fontawesome.css" rel="stylesheet" />
 
     <style>
         .theGlobe {
@@ -26,7 +29,7 @@
         }
     </style>
 
-       
+
 </head>
 
 <body>
@@ -99,25 +102,26 @@
                             <label for="" class="text-white">What's Your Username?</label>
                             <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server" />
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 position-relative">
                             <label for="" class="text-white">Your Password?</label>
                             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
                             <span class="toggle-password" onclick="togglePasswordVisibility()">
-    <i id="eyeIcon" class="fa fa-eye"></i>
-</span>
+                                <i id="eyeIcon" class="fa fa-eye"></i>
+                                <%--<i class="fas fa-eye-slash"></i>--%>
+                            </span>
                         </div>
 
                         <div class="mb-3">
 
-                            <cc1:CaptchaControl runat="server" ID="ccLink" 
-                                CaptchaMaxTimeout="180" 
-                                CaptchaMinTimeout="5" 
-                                CaptchaLineNoise="Medium" 
-                                CaptchaFontWarping="Medium" 
-                                CaptchaLength="5" 
-                                Arithmetic="true" 
-                                 ErrorInputTooFast="Image text was typed too quickly. " ErrorInputTooSlow="Image text was typed too slowly."
-                                 EnableViewState="false"
+                            <cc1:CaptchaControl runat="server" ID="ccLink"
+                                CaptchaMaxTimeout="180"
+                                CaptchaMinTimeout="5"
+                                CaptchaLineNoise="Medium"
+                                CaptchaFontWarping="Medium"
+                                CaptchaLength="5"
+                                Arithmetic="true"
+                                ErrorInputTooFast="Image text was typed too quickly. " ErrorInputTooSlow="Image text was typed too slowly."
+                                EnableViewState="false"
                                 Width="180px" />
                             <asp:TextBox class="from-control" ID="txtCaptcha" runat="server" CausesValidation="true" Width="182px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="* Valid Value is Required"
@@ -137,7 +141,7 @@
         </div>
         <span class="arrow-down vp-gradient"><i class="icon-arrow-1"></i></span>
     </section>
-   
+
     <script>
 
         "use strict"; // Paul Slaymaker, paul25882@gmail.com
