@@ -490,7 +490,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i><span id="leftReferralCodeSpan" runat="server"></span></span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-left"></i>https://tradiix.com/Register/<span id="leftReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -501,7 +501,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i><span id="rightReferralCodeSpan"  runat="server"></span></span>
+                                                    <span class="text-truncate w-100"><i data-feather="arrow-up-right"></i>https://tradiix.com/Register/<span id="rightReferralCodeSpan"  runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
