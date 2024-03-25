@@ -2,6 +2,7 @@
 using LMSBackOfficeWebApplication;
 using LMSBackOfficeWebApplication.Ipns;
 using LMSBackOfficeWebApplication.Utitlity;
+using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace Coinpayments.Example
                 }
 
                 WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
-                if (req.SuccessStatusLax())
+                if (req.Status >= 100 || req.Status == 2 || req.Status == 1)
                 {
                     string memberId = string.Empty;
                     if(HttpContext.Current.Session["Username"] != null)
@@ -73,6 +74,7 @@ namespace Coinpayments.Example
 
         private void response(HttpContext context, HttpStatusCode statusCode, string text)
         {
+            WriteLog.LogInfo($"Error message : {text}");
             context.Response.StatusCode = (int)statusCode;
             context.Response.ContentType = "text/plain";
             context.Response.Write(text);
