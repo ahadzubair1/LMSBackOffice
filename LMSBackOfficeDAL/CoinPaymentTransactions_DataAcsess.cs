@@ -43,7 +43,7 @@ namespace LMSBackOfficeDAL
                     catch (Exception ex)
                     {
                         // Handle exception
-                        Console.WriteLine("Error: " + ex.Message);
+                        WriteLog.LogError(ex);
                         return ex.Message;
                     }
                 }
@@ -72,7 +72,7 @@ namespace LMSBackOfficeDAL
                     catch (Exception ex)
                     {
                         // Log or handle the exception properly
-                        Console.WriteLine("Error: " + ex.Message);
+                        WriteLog.LogError(ex);
                     }
                 }
             }

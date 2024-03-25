@@ -236,3 +236,5 @@ D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOffi
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApp\obj\Debug\net6.0\LMSBackOfficeWebApp.pdb
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApp\obj\Debug\net6.0\LMSBackOfficeWebApp.genruntimeconfig.cache
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApp\obj\Debug\net6.0\ref\LMSBackOfficeWebApp.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApp\bin\Debug\net6.0\log4net.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApp\bin\Debug\net6.0\log4net.xml
