@@ -107,7 +107,6 @@
                             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
                             <span class="toggle-password" onclick="togglePasswordVisibility()">
                                 <i id="eyeIcon" class="fa fa-eye"></i>
-                                <%--<i class="fas fa-eye-slash"></i>--%>
                             </span>
                         </div>
 
@@ -143,7 +142,20 @@
     </section>
 
     <script>
+         function togglePasswordVisibility() {
+        var passwordField = document.getElementById('password');
+        var eyeIcon = document.getElementById('eyeIcon');
 
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        } else {
+            passwordField.type = "password";
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        }
+    }
         "use strict"; // Paul Slaymaker, paul25882@gmail.com
         const body = document.getElementsByTagName("body").item(0);
         body.style.background = "#000";

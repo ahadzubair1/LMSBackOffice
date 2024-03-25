@@ -27,14 +27,15 @@ namespace Coinpayments.Example
                 WriteLog.LogInfo(requestString);
 
                 var hmac = context.Request.Headers["HMAC"];
-                WriteLog.LogInfo(hmac);
+                WriteLog.LogInfo($"Hmac is {hmac}");
                 if (hmac == null || !req.SigIsValid(hmac))
-                {
+                {                   
                     response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
                     return;
                 }
 
-                if (req.SuccessStatusLax() && req.IpnType == "simple")
+                WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
+                if (req.SuccessStatusLax())
                 {
                     string memberId = string.Empty;
                     if(HttpContext.Current.Session["Username"] != null)
@@ -54,16 +55,14 @@ namespace Coinpayments.Example
                     WriteLog.LogInfo($"Current LoggedIn user Id : {memberId}");
                     
                     MemberWallets_DataAcsess.UpdateMemberWallet(memberId, Convert.ToDecimal(req.Amount1), 1);
-
+                    WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
                     //Update Transaction on success
                     var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberId, req.Fee, CoinPaymentStatus.Complete.ToString());
 
                     CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, transactionCode, req.SendTx, req.Status, req.StatusText);
                 }
-
-                WriteLog.LogInfo($"Status Code Is : {req.StatusText}" );
-                WriteLog.LogInfo($"Reponse text : 1");
-               // response(context, HttpStatusCode.OK, "1");
+               
+                response(context, HttpStatusCode.OK, "1");
             }
             catch (Exception ex)
             {
