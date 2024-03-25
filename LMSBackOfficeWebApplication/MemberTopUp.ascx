@@ -83,7 +83,7 @@ body
                  <%--</form>--%>
              </div>
              <div class="modal-footer">
-                 <button type="button" ID="Button1" class="btn btn-danger" onclick="Close();">Cancel</button>
+                 <button type="button" ID="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                  <%--<asp:Button ID="Button1" runat="server" Text="Cancel" CssClass="btn btn-danger"  />--%>
                 <%-- <button type="button" class="btn btn-primary"
                      id="btnSubmit" runat="server" onserverclick4="TotpUp_Click" >Top Up</button>--%>
