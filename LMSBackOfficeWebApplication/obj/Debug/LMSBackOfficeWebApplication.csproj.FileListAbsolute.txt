@@ -263,8 +263,8 @@ D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOffi
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 D:\Tradiix\Project\Backoffice-13-03-2024\LMSBackOffice\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
-E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.AssemblyReference.cache
-E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\LMSBackOfficeWebApplication.dll.config
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\LMSBackOfficeWebApplication.pdb
@@ -367,8 +367,8 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.Web.Optimizat
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\Antlr3.Runtime.pdb
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\Microsoft.AspNet.FriendlyUrls.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.Text.Encodings.Web.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.AssemblyReference.cache
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.csproj.CoreCompileInputs.cache
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackO.65EEADC2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
-C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.dll
-C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\log4net.xml

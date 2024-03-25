@@ -11,6 +11,28 @@ body{
 .text-left{
   text-align: left;
 }
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+.input-group > input {
+    border-radius: .25rem !important;
+}
+
+    .toggle-password i {
+        font-size: 18px;
+    }
+
+/* Example using Font Awesome for eye icons */
+.fa-eye:before {
+    content: "\f06e";
+}
+
+.fa-eye-slash:before {
+    content: "\f070";
+}
 .v-header{
   background: rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);

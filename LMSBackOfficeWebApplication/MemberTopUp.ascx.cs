@@ -56,9 +56,9 @@ namespace LMSBackOfficeWebApplication
                     MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(amount), 0);
 
                     //Add Transaction and Coin PaymentTransaction
-                    Transactions_DataAcsess.AddTransactions(member.Id, orderId, response.Result.TxnId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
-                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, null, CoinPaymentStatus.Pending.ToString(),
-                                                            Convert.ToDecimal(amount), string.Empty, string.Empty, false);
+                    Transactions_DataAcsess.AddTransactions(member.Id, orderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
+                                                            Convert.ToDecimal(amount));
 
                     string message = $"Your topup request sent successfully ";
                     //lblMessage.Text = message;

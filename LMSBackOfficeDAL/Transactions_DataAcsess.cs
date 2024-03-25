@@ -38,9 +38,9 @@ namespace LMSBackOfficeDAL
             return dt;
         }
 
-        public static string AddTransactions(string memberId, string orderId, string coinpaymentTransactionId,
-                                            string transactionType, string fromCurrency, string toCurrency, string memberAddress, string toAddress, string fee, 
-                                            string status, decimal amount, string redirectUrl, string successRedirectUrl, bool isCompleted)
+        public static string AddTransactions(string memberId, string orderId,
+                                            string transactionType, string fromCurrency, string toCurrency, string memberAddress, string toAddress, 
+                                            string status, decimal amount)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -72,8 +72,8 @@ namespace LMSBackOfficeDAL
                         {
                             //UtilMethods.SendEmail(name,"support@tradiix.com", phone);
                             var transactionId = outParameter.Value.ToString();
-                           CoinPaymentTransactions_DataAcsess.AddCoinPaymentTransactions(memberId,transactionCode, coinpaymentTransactionId, transactionType,
-                                                                    fromCurrency, toCurrency, memberAddress, status, amount, redirectUrl, successRedirectUrl, isCompleted);     
+                           CoinPaymentTransactions_DataAcsess.AddCoinPaymentTransactions(memberId,transactionCode, null, transactionType,
+                                                                    fromCurrency, toCurrency, memberAddress, status, amount, null, null, false);     
                         }
                         return "Success";
 
@@ -90,8 +90,9 @@ namespace LMSBackOfficeDAL
 
 
 
-        public static void UpdateTransaction(string memberId, string fee, string status)
+        public static string UpdateTransaction(string memberId, string fee, string status)
         {
+            string transactionCode = string.Empty;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand("USP_UpdateTransaction", connection))
@@ -102,17 +103,25 @@ namespace LMSBackOfficeDAL
                         command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(memberId);
                         command.Parameters.Add("@IN_Status", SqlDbType.NVarChar).Value = status;
                         command.Parameters.Add("@IN_Fee", SqlDbType.Decimal).Value = Convert.ToDecimal(fee);
+                        SqlParameter outParameter = command.Parameters.Add("@RetTransactionCode", SqlDbType.NVarChar, 250); // Assuming 36 is the maximum length of a GUID represented as a string
+                        outParameter.Direction = ParameterDirection.Output;
+
+
                         connection.Open();
 
                         command.ExecuteNonQuery();
+                        if (outParameter.Value != DBNull.Value && outParameter.Value != null)
+                        {
+                            transactionCode = outParameter.Value.ToString();
+                        }
                     }
                     catch (Exception ex)
                     {
-                        // Log or handle the exception properly
-                        Console.WriteLine("Error: " + ex.Message);
+                        WriteLog.LogError(ex);
                     }
                 }
             }
+            return transactionCode;
         }
     }
 }
