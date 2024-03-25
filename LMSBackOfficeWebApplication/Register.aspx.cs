@@ -39,6 +39,11 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
+                // Fetch referral code from URL
+                string referralCode = Request.QueryString["referralcode"];
+
+                // Populate textbox with referral code
+                refcode.Value = referralCode;
                 try
                 {
                     List<Countries_DataAccess.Country> allCountries = Countries_DataAccess.GetAllCountries();

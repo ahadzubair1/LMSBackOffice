@@ -94,8 +94,8 @@ namespace LMSBackOfficeDAL
 
                             UtilMethods.SendEmailNew(email, name, memberCode, currentDomainUrl);
                             var memberId = outParameter.Value.ToString();
-                            string codeLeft = GenerateRandomAlphaNumericString(20);
-                            string codeRight = GenerateRandomAlphaNumericString(20);
+                            string codeLeft = GenerateRandomAlphaNumericString(20)+"_L";
+                            string codeRight = GenerateRandomAlphaNumericString(20)+"_R";
                             ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 1, codeLeft);
                             ReferralCodes_DataAccess.AddMemberReferralCodes(memberId, 2, codeRight);
                             Network_DataAccess.AddMemberNetwork(memberId, referredByParentId, position);
