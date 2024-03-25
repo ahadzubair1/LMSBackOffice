@@ -35,7 +35,7 @@ namespace LMSBackOfficeWebApplication
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
 
                     // Generate HTML only once during the initial load
-                    string generatedHtml = GenerateHTML(networkTreeTable);
+                    string generatedHtml = GenerateHTML(networkTreeTable,memberIdParam);
                     litGeneratedHtml.Text = generatedHtml;
                 }
                 else
@@ -47,7 +47,7 @@ namespace LMSBackOfficeWebApplication
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
 
                     // Generate HTML only once during the initial load
-                    string generatedHtml = GenerateHTML(networkTreeTable);
+                    string generatedHtml = GenerateHTML(networkTreeTable, member.Id);
                     litGeneratedHtml.Text = generatedHtml;
                 }
 
@@ -56,15 +56,15 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        private string GenerateHTML(DataTable dataTable)
+        private string GenerateHTML(DataTable dataTable,string memberId )
         {
             StringBuilder sb = new StringBuilder();
 
 
-            string userName = Session["Username"].ToString();
-            var member = Members_DataAccess.GetMemberInfo(userName);
+            //string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(networkTreeTable.Rows[0]["Member_UserName"].ToString());
             // Get root nodes (Position = 0)
-            DataRow[] rootNodes = dataTable.Select($"Member_Id = '{member.Id}'");
+            DataRow[] rootNodes = dataTable.Select($"Member_Id = '{memberId}'");
 
             // Start the parent node
             sb.AppendLine("<ul class=\"parent-node\">");
@@ -80,7 +80,8 @@ namespace LMSBackOfficeWebApplication
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine("<a href=\"#\" class=\"platinum\"    >");
+            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class=""platinum"">");
+
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -99,7 +100,7 @@ namespace LMSBackOfficeWebApplication
 
             foreach (DataRow rootNode in rootNodes)
             {
-                string memberId = rootNode["Member_ID"].ToString();
+                //string memberId = rootNode["Member_ID"].ToString();
                 // Generate HTML for the root node and its children recursively
                 sb.Append(GenerateNodeHtml(dataTable, memberId,1));
             }
@@ -142,7 +143,8 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -198,7 +200,8 @@ namespace LMSBackOfficeWebApplication
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
-                sb.AppendLine("<a href=\"#\" class=\"platinum\"");
+
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
