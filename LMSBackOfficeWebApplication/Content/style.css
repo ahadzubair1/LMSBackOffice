@@ -3273,6 +3273,18 @@ textarea.form-control-lg {
     border-bottom-left-radius: 0;
 }
 
+.copied-span {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .valid-feedback {
     display: none;
     width: 100%;
@@ -33608,6 +33620,7 @@ div:where(.swal2-container) button:where(.swal2-close):focus {
         opacity: 1;
     }
 
+
     .modal.fade.modal-animate.anim-newspaper .modal-dialog {
         transform: scale(0) rotate(720deg);
         opacity: 0;
@@ -33618,6 +33631,7 @@ div:where(.swal2-container) button:where(.swal2-close):focus {
         transform: none;
         opacity: 1;
     }
+
 
     .modal.fade.modal-animate.anim-fall {
         perspective: 1300px;
