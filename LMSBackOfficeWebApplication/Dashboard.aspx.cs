@@ -61,11 +61,11 @@ namespace LMSBackOfficeWebApplication
                             // Check network position and assign the code accordingly
                             if (networkPosition == 1)
                             {
-                                leftReferralCode = "https://tradiix.com/Register/"+code;
+                                leftReferralCode = "https://tradiix.com/Register?referralcode=" + code;
                             }
                             else if (networkPosition == 2)
                             {
-                                rightReferralCode = "https://tradiix.com/Register/" +code;
+                                rightReferralCode = "https://tradiix.com/Register?referralcode=" + code;
                             }
 
                             // Break the loop if both left and right referral codes are found
