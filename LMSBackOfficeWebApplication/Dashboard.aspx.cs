@@ -26,6 +26,11 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
+                if (Session["Username"] == null)
+                {
+                    // Session has expired, redirect to login page
+                    Response.Redirect("~/Login.aspx");
+                }
                 if (Session["MembershipExpired"] != null)
                 {
                     var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
