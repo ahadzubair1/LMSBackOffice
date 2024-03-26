@@ -34,6 +34,31 @@ namespace LMSBackOfficeDAL
             }
         }
 
+        public static void UpdateMemberCreditWallet(string userId, decimal amount, int isActive)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("[USP_UpdateMemberCreditWallet]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    try
+                    {
+                        command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(userId);
+                        command.Parameters.Add("@IN_Balance", SqlDbType.Decimal).Value = amount;
+                        command.Parameters.Add("@IN_IsActive", SqlDbType.SmallInt).Value = isActive;
+                        connection.Open();
+
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Log or handle the exception properly
+                        WriteLog.LogError(ex);
+                    }
+                }
+            }
+        }
+
         public static DataTable GetMemberWalletBalance(string username)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

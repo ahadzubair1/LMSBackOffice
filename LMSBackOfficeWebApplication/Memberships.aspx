@@ -242,7 +242,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
                                     <%--<div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>--%>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="0" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">

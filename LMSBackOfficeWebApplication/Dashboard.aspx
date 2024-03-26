@@ -259,7 +259,7 @@
                                             <div id="all-earnings-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$0</h5>
+                                            <h5 class="mb-1">$<span id="directBonus" runat="server"></span></h5>
                                             <p class="text-primary mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
                                         </div>
                                     </div>

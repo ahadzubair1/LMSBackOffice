@@ -24646,6 +24646,7 @@ body:not([data-pc-theme="dark"]) .pc-header {
 .pc-header ul {
     margin-bottom: 0;
     display: inline-flex;
+    gap: 10px;
 }
 
 .pc-header .m-header {
@@ -24716,6 +24717,8 @@ body:not([data-pc-theme="dark"]) .pc-header {
     display: flex;
     align-items: center;
     position: relative;
+    color: #fff;
+    gap: 5px;
 }
 
 .pc-header .pc-head-link {

@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json.Linq;
+using System.Net.PeerToPeer;
+using static ServiceStack.Diagnostics.Events;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -14,6 +16,8 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            decimal balanceAmount = Wallets_DataAccess.FetchCdtWalletBalanceForUsername(Session["username"].ToString());
+            creditbalance.InnerText = balanceAmount.ToString();
             if (!IsPostBack)
             {
                 if (Session["MembershipExpired"] != null)

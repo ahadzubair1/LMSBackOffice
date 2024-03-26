@@ -26,6 +26,11 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
+                if (Session["Username"] == null)
+                {
+                    // Session has expired, redirect to login page
+                    Response.Redirect("~/Login.aspx");
+                }
                 if (Session["MembershipExpired"] != null)
                 {
                     var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
@@ -43,6 +48,8 @@ namespace LMSBackOfficeWebApplication
                         ShowBonusTypes();
                     }
                 }
+                decimal DirectBonus = DirectBonus_DataAccess.FetchDirectBonusForUsername(Session["Username"].ToString());
+                directBonus.InnerText = DirectBonus.ToString();
                 DataTable referralCodesTable = ReferralCodes_DataAccess.FetchReferralCodesForUsername(Session["Username"].ToString());
                 if (referralCodesTable != null && referralCodesTable.Rows.Count >= 2)
                 {
