@@ -196,6 +196,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
+                                        <div>
+                                            <input id="agreement1" type="checkbox" name="agreement" value="" />
+                                            <label for="agreement1">Yes, I have read</label>
+                                        </div>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -249,6 +256,13 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
+                                        <div>
+                                            <input id="agreement2" type="checkbox" name="agreement" value="" />
+                                            <label for="agreement2">Yes, I have read</label>
+                                        </div>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -304,6 +318,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
+                                        <div>
+                                            <input id="agreement3" type="checkbox" name="agreement" value="" />
+                                            <label for="agreement3">Yes, I have read</label>
+                                        </div>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -357,6 +378,13 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
+                                        <div>
+                                            <input id="agreement3" type="checkbox" name="agreement" value="" />
+                                            <label for="agreement3">Yes, I have read</label>
+                                        </div>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
                                     </div>
                                 </div>
                             </div>
