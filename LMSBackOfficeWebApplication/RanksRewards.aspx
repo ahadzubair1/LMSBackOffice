@@ -138,7 +138,7 @@
                 </div>--%>
 
                 <!-- Banner -->
-                <div class="banner memberships">
+                <div class="banner ranks">
                     <div class="banner-caption">
                         <h2 class="text-white">Ranks & Rewards</h2>
                         <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
@@ -235,13 +235,13 @@
                 </div>
                 <!-- [ breadcrumb ] end -->
 
-                <div class="card mb-5">
+                <div class="card">
                     <div class="card-header">
                         <h5>Classification of Ranks</h5>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Rank</th>
