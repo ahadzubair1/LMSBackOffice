@@ -267,8 +267,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         background: radial-gradient(#4c1ca2,#311a5a);
     }
 
+    .banner.ranks {
+        background: radial-gradient(#804902,#281a5a);
+    }
+
     .banner.wallets {
-        background: radial-gradient(#580b63,#af168a);
+        background: radial-gradient(#580b63,#580644);
     }
 
 .banner-caption {
@@ -1010,10 +1014,6 @@ footer .field-row {
     display: flex;
 }
 
-#orgChart {
-    margin-top: 70px;
-}
-
 .tree ul {
     padding-top: 20px;
     position: relative;
@@ -1052,12 +1052,27 @@ footer .field-row {
         box-shadow: 0 2px 6px 0px #0000004a;
         background-color: #374256;
         animation-timing-function: linear;
+        flex-direction: column;
+        min-width: 90px;
     }
 
-        .tree li a:hover .node-detail {
-            display: block;
-        }
+        
 
+.premium {
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+}
+
+.platinum {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.starter {
+    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+}
+
+.na {
+    background: linear-gradient(122deg, #8593E3 -1.92%, #202875 100%);
+}
 
 #orgChart .user-rank {
     position: absolute;
@@ -1088,15 +1103,18 @@ footer .field-row {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
+    font-weight: 600;
 }
 
-.tree li a span {
-    font-weight: 600;
+.tree li a span > span {
+    display: flex;
+    white-space: nowrap;
+    gap: 5px;
 }
 
 .node-detail {
     position: absolute;
-    background: #fff;
+    background: ghostwhite;
     left: calc(100% + 10px);
     color: initial;
     display: flex;
@@ -1105,8 +1123,16 @@ footer .field-row {
     z-index: 2;
     text-align: left;
     box-shadow: 0px 6px 4px -4px #0000004d;
-    border-radius: 4px;
-    display: none;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transition: all ease 0.3s;
+}
+.tree li a:hover .node-detail {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
 
 label:not(.form-check-label):not(.custom-file-label) {
@@ -1143,7 +1169,7 @@ label:not(.form-check-label):not(.custom-file-label) {
     right: 50%;
     border-top: 2px solid #521e7a;
     width: 50%;
-    height: 20px;
+    height: 12px;
 }
 
 .tree li:first-child::after {

@@ -106,28 +106,9 @@
         <!-- [ Main Content ] start -->
         <div class="pc-container">
             <div class="pc-content">
-                <!-- [ breadcrumb ] start -->
-                <div class="page-header">
-                    <div class="page-block">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Ranks & Rewards</h2>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-end">
-                                <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
 
-                <div class="ranks-wrapper pb-5">
+                <%--<div class="ranks-wrapper pb-5">
                     <div class="cards-w">
                         <div class="item">
                             <img src="Content/images/Ranks/RANK-01.png" alt="" />
@@ -152,6 +133,191 @@
                         </div>
                         <div class="item">
                             <img src="Content/images/Ranks/RANK-08.png" alt="" />
+                        </div>
+                    </div>
+                </div>--%>
+
+                <!-- Banner -->
+                <div class="banner ranks">
+                    <div class="banner-caption">
+                        <h2 class="text-white">Ranks & Rewards</h2>
+                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                    </div>
+                    <div class="leaf">
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                    </div>
+
+                    <div class="leaf leaf1">
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                    </div>
+
+                    <div class="leaf leaf2">
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Green-Leaves-PNG-File.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Transparent-Autumn-Leaves-Falling-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Realistic-Autumn-Fall-Leaves-PNG.png" height="75" width="75">
+                        </div>
+                        <div>
+                            <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
+                        </div>
+                    </div>
+                    <div class="bg-line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                        <img src="Content/images/wave.svg" alt="Line">
+                    </div>
+                </div>
+
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Classification of Ranks</h5>
+                    </div>
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Partnership Level</th>
+                                        <th>Personal</th>
+                                        <th>Team A / Team B Volume</th>
+                                        <th>Reward</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-active">
+                                        <td>Partner</td>
+                                        <td>$500</td>
+                                        <td>1/1</td>
+                                        <td>$2k/$2k</td>
+                                        <td>$50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Executive</td>
+                                        <td>$500</td>
+                                        <td>1/1</td>
+                                        <td>$5k/$5k</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td>VIP</td>
+                                        <td>$500</td>
+                                        <td>1/1</td>
+                                        <td>$10k/$10k</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pioneer</td>
+                                        <td>$750</td>
+                                        <td>2/2</td>
+                                        <td>$25k/$25k</td>
+                                        <td>$300</td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td>Elite</td>
+                                        <td>$750</td>
+                                        <td>2/2</td>
+                                        <td>$50k/$50k</td>
+                                        <td>$500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ambassador</td>
+                                        <td>$1000</td>
+                                        <td>3/3</td>
+                                        <td>$100k/$100k</td>
+                                        <td>$1,000</td>
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td>Infinite Influencer</td>
+                                        <td>$1000</td>
+                                        <td>3/3</td>
+                                        <td>$250k/$250k</td>
+                                        <td>Retreat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Legacy Creator</td>
+                                        <td>$1500</td>
+                                        <td>4/4</td>
+                                        <td>$500k/$500k</td>
+                                        <td>$5,000</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td>Royal Legacy</td>
+                                        <td>$1500</td>
+                                        <td>4/4</td>
+                                        <td>$1MIL/$1MIL</td>
+                                        <td>$10,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Terms & Conditions Apply</div>
                         </div>
                     </div>
                 </div>
