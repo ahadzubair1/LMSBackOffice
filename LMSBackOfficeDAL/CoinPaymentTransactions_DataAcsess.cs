@@ -51,7 +51,7 @@ namespace LMSBackOfficeDAL
         }
 
 
-        public static void UpdateCoinPaymentTransaction(string transactionId, string transactionCode, string transactionHash, int statusCode, string status)
+        public static void UpdateCoinPaymentTransaction(string transactionId, string transactionOrderId, string transactionHash, int statusCode, string status)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -60,9 +60,10 @@ namespace LMSBackOfficeDAL
                     command.CommandType = CommandType.StoredProcedure;
                     try
                     {
-                        command.Parameters.Add("@TransactionCode", SqlDbType.NVarChar).Value = transactionCode;
+                        var code = Transactions_DataAcsess.GetTransactionCode(transactionOrderId);
+                        command.Parameters.Add("@TransactionCode", SqlDbType.NVarChar).Value = code;
                         command.Parameters.Add("@CPTransactionID", SqlDbType.NVarChar).Value = transactionId;
-                        command.Parameters.Add("@IN_TransactionHash", SqlDbType.NVarChar).Value = transactionHash;
+                       // command.Parameters.Add("@IN_TransactionHash", SqlDbType.NVarChar).Value = transactionHash;
                         command.Parameters.Add("@IN_TransactionStatusCode", SqlDbType.NVarChar).Value = statusCode.ToString();
                         command.Parameters.Add("@IN_Status", SqlDbType.NVarChar).Value = status;
                         connection.Open();
