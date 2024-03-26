@@ -18,5 +18,10 @@ namespace LMSBackOfficeWebApplication
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             log4net.Config.XmlConfigurator.Configure();
         }
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            // Set session timeout to 20 minutes
+            Session.Timeout = 20;
+        }
     }
 }

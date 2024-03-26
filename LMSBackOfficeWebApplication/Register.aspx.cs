@@ -169,25 +169,25 @@ namespace LMSBackOfficeWebApplication
             // Check for at least 1 uppercase letter
             if (!password.Any(char.IsUpper))
             {
-                return "Password Length should be between 8 to 16 charchaters";
+                return "Password must contain atleast 1 Uppercase";
             }
 
             // Check for at least 1 lowercase letter
             if (!password.Any(char.IsLower))
             {
-                return "Password Length should be between 8 to 16 charchaters";
+                return "Password must contain atleast 1 Lowercase";
             }
 
             // Check for at least 1 digit
             if (!password.Any(char.IsDigit))
             {
-                return "Password Length should be between 8 to 16 charchaters";
+                return "Password must contain atleast 1 digit";
             }
 
             // Check for at least 1 special character
             if (!password.Any(c => !char.IsLetterOrDigit(c)))
             {
-                return "Password Length should be between 8 to 16 charchaters";
+                return "Password must contain atleast one special character";
             }
 
             return "Success";
