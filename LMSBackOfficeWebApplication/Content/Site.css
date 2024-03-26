@@ -1074,16 +1074,28 @@ footer .field-row {
 
 
 
-.premium {
+.pioneer {
     background-image: linear-gradient(to right, #00b09b, #96c93d);
 }
 
-.platinum {
+.infinite {
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
-.starter {
+.connector-x {
     background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+}
+
+.partner {
+    background: linear-gradient(122deg, #CA3C3C -1.92%, #1913d2 100%);
+}
+
+.elite {
+    background: linear-gradient(122deg, #FB3B00 -1.92%, #aa5f00 100%);
+}
+
+.explorer {
+    background: linear-gradient(122deg, #0C9AE0 -1.92%, #c91526 100%);
 }
 
 .na {
