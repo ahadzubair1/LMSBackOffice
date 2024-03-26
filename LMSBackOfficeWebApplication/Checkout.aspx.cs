@@ -88,7 +88,7 @@ namespace LMSBackOfficeWebApplication
                 ["cancel_url"] = $"{completeurl}/CancelTransaction.aspx",
 
                 //order identifier                
-                ["custom"] = $"{orderNo}|{memberId}",
+                ["custom"] = $"{model.OrderId}|{memberId}",
 
                 //billing info
                 ["first_name"] = model.MemberFullName,
@@ -124,7 +124,10 @@ namespace LMSBackOfficeWebApplication
                                                             member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
                                                             Convert.ToDecimal(checkout.TotalAmount));
 
-                    Response.Redirect(redirectUrl, false);
+                    //Response.Redirect(redirectUrl, false);
+                    Response.Write("<script type='text/javascript'>");
+                    Response.Write("window.open('" + redirectUrl + "','_blank');");
+                    Response.Write("</script>");
                 }
             }
             catch (Exception ex)

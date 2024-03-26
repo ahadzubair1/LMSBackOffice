@@ -248,8 +248,8 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">My Referrels</h5>
-                                <table id="" class="table table-striped" style="width: 100%">
+                                <h5 class="card-title">My Referrals</h5>
+                                <table id="" class="table table-striped table-hover w-100">
                                     <thead>
                                         <tr>
                                             <th>Member Name</th>

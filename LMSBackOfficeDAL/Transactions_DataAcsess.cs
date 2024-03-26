@@ -90,7 +90,7 @@ namespace LMSBackOfficeDAL
 
 
 
-        public static string UpdateTransaction(string memberId, string fee, string status)
+        public static string UpdateTransaction(string memberId, string transactionOrderId, string fee, string status)
         {
             string transactionCode = string.Empty;
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -101,9 +101,10 @@ namespace LMSBackOfficeDAL
                     try
                     {
                         command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(memberId);
+                        command.Parameters.Add("@IN_TransactionOrderID", SqlDbType.NVarChar).Value = transactionOrderId;
                         command.Parameters.Add("@IN_Status", SqlDbType.NVarChar).Value = status;
                         command.Parameters.Add("@IN_Fee", SqlDbType.Decimal).Value = Convert.ToDecimal(fee);
-                        SqlParameter outParameter = command.Parameters.Add("@RetTransactionCode", SqlDbType.NVarChar, 250); // Assuming 36 is the maximum length of a GUID represented as a string
+                        SqlParameter outParameter = command.Parameters.Add("@OUT_TransactionCode", SqlDbType.NVarChar, 250); // Assuming 36 is the maximum length of a GUID represented as a string
                         outParameter.Direction = ParameterDirection.Output;
 
 
@@ -121,6 +122,32 @@ namespace LMSBackOfficeDAL
                     }
                 }
             }
+            return transactionCode;
+        }
+
+        public static string GetTransactionCode(string transactionOrderId)
+        {
+            string transactionCode = string.Empty; ;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "select Transaction_Code from Transactions where Transaction_OrderID='" + transactionOrderId + "'";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandType = CommandType.Text;
+
+                    try
+                    {
+                        connection.Open();
+                        transactionCode = Convert.ToString(command.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        WriteLog.LogError(ex);
+                    }
+                }
+            }
+
             return transactionCode;
         }
     }

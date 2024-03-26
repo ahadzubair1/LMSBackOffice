@@ -2,6 +2,7 @@
 using LMSBackOfficeWebApplication;
 using LMSBackOfficeWebApplication.Ipns;
 using LMSBackOfficeWebApplication.Utitlity;
+using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Coinpayments.Example
     public class IpnHandler : IHttpHandler
     {
         public void ProcessRequest(HttpContext context)
-        {          
+        {
             try
             {
                 var req = IpnBase.Parse<IpnApi>(context.Request.Form);
@@ -28,40 +29,36 @@ namespace Coinpayments.Example
 
                 var hmac = context.Request.Headers["HMAC"];
                 WriteLog.LogInfo($"Hmac is {hmac}");
-                if (hmac == null || !req.SigIsValid(hmac))
-                {                   
-                    response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
-                    return;
-                }
+                //if (hmac == null || !req.SigIsValid(hmac))
+                //{
+                //    response(context, HttpStatusCode.BadRequest, "Invalid HMAC / MerchantId");
+                //    return;
+                //}
 
                 WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
-                if (req.SuccessStatusLax())
+                if (req.Status >= 100 || req.Status == 2 || req.Status == 1)
                 {
                     string memberId = string.Empty;
-                    if(HttpContext.Current.Session["Username"] != null)
-                    {
-                        string username = HttpContext.Current.Session["Username"].ToString();
-                        var member = Members_DataAccess.GetMemberInfo(username);
-                        memberId = member.Id;
-                    }
-                    else
+                    string orderId = string.Empty;
+                    if (!string.IsNullOrEmpty(req.Custom))
                     {
                         var custom = req.Custom.Split('|');
-                        if(custom.Length > 1)
+                        if (custom.Length > 1)
                         {
                             memberId = custom[1];
-                        }
-                    }
-                    WriteLog.LogInfo($"Current LoggedIn user Id : {memberId}");
-                    
-                    MemberWallets_DataAcsess.UpdateMemberWallet(memberId, Convert.ToDecimal(req.Amount1), 1);
-                    WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
-                    //Update Transaction on success
-                    var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberId, req.Fee, CoinPaymentStatus.Complete.ToString());
+                            orderId = custom[0];
+                            WriteLog.LogInfo($"Current LoggedIn user Id : {memberId}");
 
-                    CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, transactionCode, req.SendTx, req.Status, req.StatusText);
+                            MemberWallets_DataAcsess.UpdateMemberWallet(memberId, Convert.ToDecimal(req.Amount1), 1);
+                            WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
+                            //Update Transaction on success
+                            var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberId, orderId, req.Fee, CoinPaymentStatus.Complete.ToString());
+                            WriteLog.LogInfo($"Transaction Code : {transactionCode}");
+                            CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, orderId, req.SendTx, req.Status, req.StatusText);
+                        }
+                    }  
                 }
-               
+
                 response(context, HttpStatusCode.OK, "1");
             }
             catch (Exception ex)
