@@ -4,10 +4,17 @@
     <style>
         input, select, textarea {
             max-width: 100% !important;
-            }
+        }
 
-        .button-position{
-            float:right;
+        .button-position {
+            float: right;
+        }
+
+        thead, tbody, tfoot, tr, td, th {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            padding: 0.5rem 0.5rem;
         }
     </style>
     <main>
@@ -63,48 +70,48 @@
                             <div class="card-body">
                                 <div class="col-md-12 order-md-1">
                                     <div class="row g-3 mb-3">
-                                        <div class="col-md-12" style="float:right;">
+                                        <div class="col-md-12" style="float: right;">
                                             <asp:Button ID="btnExportToExcel" runat="server" Text="Export To Excel" CssClass="btn btn-primary button-position" OnClick="btnExportToExcel_Click" CausesValidation="false" />
                                         </div>
-                                <asp:GridView ID="gv_tickets" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px"
-                                    CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True">
-                                    <AlternatingRowStyle BackColor="Gainsboro" />
-                                    <Columns>
-                                        <asp:BoundField DataField="TicketTitle" HeaderText="Title">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="TicketCode" HeaderText="Ticket Code">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="TicketType" HeaderText="Ticket Type">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="Description" HeaderText="Description">
-                                            <ControlStyle Width="250px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="TicketPriority" HeaderText="Priority">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="CreatedDate" HeaderText="Created Date">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                        <asp:BoundField DataField="Status" HeaderText="Status">
-                                            <ControlStyle Width="100px" />
-                                        </asp:BoundField>
-                                    </Columns>
-                                    <EmptyDataTemplate>
-                                        No record found<br />
-                                    </EmptyDataTemplate>
-                                    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                    <HeaderStyle BackColor="#232f45" Font-Bold="True" ForeColor="White" Height="35" />
-                                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                                    <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
-                                    <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                    <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                    <SortedDescendingHeaderStyle BackColor="#000065" />
-                                </asp:GridView>
+                                        <asp:GridView ID="gv_tickets" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px"
+                                            CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True">
+                                            <AlternatingRowStyle BackColor="Gainsboro" />
+                                            <Columns>
+                                                <asp:BoundField DataField="TicketTitle" HeaderText="Title">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="TicketCode" HeaderText="Ticket Code">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="TicketType" HeaderText="Ticket Type">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="Description" HeaderText="Description">
+                                                    <ControlStyle Width="250px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="TicketPriority" HeaderText="Priority">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="CreatedDate" HeaderText="Created Date">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="Status" HeaderText="Status">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                            </Columns>
+                                            <EmptyDataTemplate>
+                                                No record found<br />
+                                            </EmptyDataTemplate>
+                                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                            <HeaderStyle BackColor="#232f45" Font-Bold="True" ForeColor="White" Height="35" />
+                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" />
+                                            <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+                                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                            <SortedDescendingHeaderStyle BackColor="#000065" />
+                                        </asp:GridView>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +153,7 @@
                         <div class="mb-3 col-12">
                             <label for="membershipCode" class="form-label">Description</label>
                             <input type="text" style="max-width: 100%" class="form-control w-100" id="txtDescription" name="description" />
-                       <%--     <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control w-100"></asp:TextBox>
+                            <%--     <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control w-100"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please write description"></asp:RequiredFieldValidator>--%>
                             <%--<input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />--%>
                         </div>
@@ -189,7 +196,7 @@
                 "TicketTitle": $('#txtTitle').val(),
                 "TicketType": $('#<%=ddlTicketType.ClientID%> option:selected').text(),
                 "Priority": $('#<%=ddlPriority.ClientID%> option:selected').text(),
-                "Description": $('#txtDescription').val() 
+                "Description": $('#txtDescription').val()
             };
 
             SaveTicket(model);
