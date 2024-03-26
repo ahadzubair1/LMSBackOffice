@@ -80,10 +80,10 @@ namespace LMSBackOfficeWebApplication
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class=""platinum"">");
+            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class={membership.ToLower()}"">");
 
             sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
@@ -144,9 +144,9 @@ namespace LMSBackOfficeWebApplication
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}"">");
                 sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
@@ -201,9 +201,9 @@ namespace LMSBackOfficeWebApplication
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""platinum"">");
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}"">");
                 sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
@@ -241,9 +241,9 @@ namespace LMSBackOfficeWebApplication
                 //// Start the list item for the current node
                 //sb.AppendLine("<li>");
                 //// Generate HTML for the current node
-                //sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+                //sb.AppendLine("<a href=\"#\" class=\"elite\">");
                 //sb.AppendLine($@"
-                //        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                //        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                 //        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                 //        <span class=""user-name"">No Member</span>
                 //        <span class=""node-detail"">
@@ -323,9 +323,9 @@ namespace LMSBackOfficeWebApplication
 
         private static void dummychild(StringBuilder sb)
         {
-            sb.AppendLine("<a href=\"#\" class=\"platinum\">");
+            sb.AppendLine("<a href=\"#\" class=\"elite\">");
             sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""Platinum"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
                         <span class=""user-name"">No Member</span>
                         <span class=""node-detail"">
