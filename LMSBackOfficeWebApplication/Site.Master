@@ -107,7 +107,7 @@
                             <a class="btn btn-primary btn-shadow" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse">
-                            <i class="ti ti-wallet h4 text-white"></i><span>Wallet Balance: $0</span>
+                            <i class="ti ti-wallet h6 text-white"></i><span>Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span>
                         </li>
                     </ul>
                 </div>

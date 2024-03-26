@@ -106,7 +106,7 @@
                             <label for="" class="text-white">Your Password?</label>
                             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
                             <span class="toggle-password" onclick="togglePasswordVisibility()">
-                                <i id="eyeIcon" class="fa fa-eye"></i>
+                                <i id="eyeIcon" class="fa fa-eye-slash"></i>
                             </span>
                         </div>
 
@@ -148,12 +148,12 @@
 
         if (passwordField.type === "password") {
             passwordField.type = "text";
-            eyeIcon.classList.remove('fa-eye');
-            eyeIcon.classList.add('fa-eye-slash');
-        } else {
-            passwordField.type = "password";
             eyeIcon.classList.remove('fa-eye-slash');
             eyeIcon.classList.add('fa-eye');
+        } else {
+            passwordField.type = "password";
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
         }
     }
         "use strict"; // Paul Slaymaker, paul25882@gmail.com

@@ -33,7 +33,7 @@ namespace LMSBackOfficeWebApplication
             }
 
             // Redirect back to memberships page after 5 seconds
-            Response.AppendHeader("Refresh", "10;url=memberships.aspx");
+            Response.AppendHeader("Refresh", "4;url=memberships.aspx");
 
 
         }
