@@ -60,6 +60,7 @@ namespace LMSBackOfficeWebApplication
                                                                 Convert.ToDecimal(amount));
                                 var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
                                 Network_DataAccess.AssignNetworkParent(MemberId);
+                                DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
                                 if (SuccessPurchase == "Success")
                                 {
                                     Response.Redirect("PurchaseResponse.aspx?success=1");

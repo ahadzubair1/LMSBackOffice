@@ -48,6 +48,8 @@ namespace LMSBackOfficeWebApplication
                         ShowBonusTypes();
                     }
                 }
+                decimal DirectBonus = DirectBonus_DataAccess.FetchDirectBonusForUsername(Session["Username"].ToString());
+                directBonus.InnerText = DirectBonus.ToString();
                 DataTable referralCodesTable = ReferralCodes_DataAccess.FetchReferralCodesForUsername(Session["Username"].ToString());
                 if (referralCodesTable != null && referralCodesTable.Rows.Count >= 2)
                 {

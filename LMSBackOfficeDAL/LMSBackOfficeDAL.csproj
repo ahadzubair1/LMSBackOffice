@@ -141,6 +141,7 @@
     <Compile Include="Model\MemberInfo.cs" />
     <Compile Include="Network_DataAccess.cs" />
     <Compile Include="PaymentStatus.cs" />
+    <Compile Include="DirectBonus_DataAccess.cs" />
     <Compile Include="ReferralCodes_DataAccess.cs" />
     <Compile Include="Rewards_DataAccess.cs" />
     <Compile Include="Setup_DataAccess.cs" />
