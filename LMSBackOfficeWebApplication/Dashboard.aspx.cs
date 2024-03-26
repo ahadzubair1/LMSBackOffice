@@ -21,6 +21,7 @@ namespace LMSBackOfficeWebApplication
     public partial class Dashboard : Page
     {
         DataTable dtBonusTypes = new DataTable();
+        protected DataTable dt { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -107,6 +108,9 @@ namespace LMSBackOfficeWebApplication
                 // Redirect back to login page if not authenticated
                 Response.Redirect("Login.aspx");
             }
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+            dt = Transactions_DataAcsess.GetAllTransaction(member.Id);
 
         }
 

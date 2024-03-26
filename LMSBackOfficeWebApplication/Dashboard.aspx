@@ -682,7 +682,7 @@
                                             aria-selected="true">
                                             All Transaction</button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
+                                    <li class="nav-item d-none" role="presentation">
                                         <button
                                             class="nav-link"
                                             id="analytics-tab-2"
@@ -694,7 +694,7 @@
                                             aria-selected="false">
                                             Memberships</button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
+                                    <li class="nav-item d-none" role="presentation">
                                         <button
                                             class="nav-link"
                                             id="analytics-tab-3"
@@ -716,29 +716,38 @@
                                     aria-labelledby="analytics-tab-1"
                                     tabindex="0">
                                     <div class="overflow-auto">
-                                        <table id="" class="table table-striped" style="width: 100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>Transaction Code</th>
-                                                    <th>Username</th>
-                                                    <th>Destination</th>
-                                                    <th>Amount</th>
-                                                    <th>Transaction Type</th>
-                                                    <th>Transaction Date/Time</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>TRNS_032399</td>
-                                                    <td>user_123</td>
-                                                    <td>None</td>
-                                                    <td>$0</td>
-                                                    <td>Deposit</td>
-                                                    <td>09-02-2024 | 12:33:56</td>
-                                                </tr>
-                                                <!-- Add more rows as needed -->
-                                            </tbody>
-                                        </table>
+                                        <table id="" class="table table-striped table-hover" style="width: 100%">
+    <thead>
+        <tr>
+            <th>Transaction Code</th>
+            <th>Transaction_Type</th>
+            <th>Amount</th>
+            <%-- <th>Receiver Address</th>--%>
+            <th>Currency</th>
+            <th>Fee</th>
+            <th>Transaction Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%if (dt != null && dt.Rows.Count > 0)
+            { %>
+
+        <%foreach (System.Data.DataRow dr in this.dt.Rows)
+            {%>
+        <tr>
+            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                {%>
+            <td>
+                <%=dr[dc.ColumnName]%>
+            </td>
+            <%} %>
+        </tr>
+        <%} %>
+
+        <%} %>
+    </tbody>
+</table>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
