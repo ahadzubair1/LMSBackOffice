@@ -43,7 +43,7 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <table id="" class="table table-striped" style="width: 100%">
+                                <table id="" class="table table-striped table-hover" style="width: 100%">
                                     <thead>
                                         <tr>
                                             <th>Transaction Code</th>

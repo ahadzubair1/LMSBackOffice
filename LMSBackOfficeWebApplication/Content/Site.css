@@ -977,20 +977,36 @@ footer .field-row {
     }
 }
 
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: -10000px 0;
+    }
+}
+
 #orgChartContainer {
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 2rem;
     background: lavender;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
     overflow: auto;
     position: relative;
+    animation: animatedBackground 500s linear infinite;
 }
 
 .tree-controls {
     position: absolute;
-    top: 20px;
+    top: 30px;
     width: 100%;
     left: 0;
+    z-index: 2;
     padding: 0 2rem;
 }
 
