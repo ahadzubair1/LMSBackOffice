@@ -535,13 +535,13 @@
                         </li>
                         <li class="pc-item">
                             <%--<a href="Support.aspx" class="pc-link">--%>
-                            <a href="#" class="pc-link">
+                            <a href="Tickets.aspx" class="pc-link">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-message-2"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Support Tickets&nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Support Tickets</span>
                             </a>
                         </li>
                         <li class="pc-item">

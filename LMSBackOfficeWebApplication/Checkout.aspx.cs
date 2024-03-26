@@ -80,7 +80,7 @@ namespace LMSBackOfficeWebApplication
                 ["currency"] = "USD",
                 ["amountf"] = model.TotalAmount.ToString("N2"),
                 ["item_name"] = "totup",
-
+                ["address"] = Configurations.CompanyCryptoWallet,
 
                 //IPN, success and cancel URL
                 ["success_url"] = $"{completeurl}/SuccessHandler.aspx?orderNumber={orderNo}", // order summery page

@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Xml.Linq;
 using System.Text.Encodings.Web;
+using LMSBackOfficeDAL;
 //using System.Web.UI.WebControls.WebParts;
 //using Microsoft.AspNetCore.Http;
 //using System.Net.Http;
@@ -277,6 +278,42 @@ namespace LMSBackofficeDAL
 				
             }
         }
+
+        public static void SendEmail(string toEmail, string subject, string body)
+        {
+            string smtpServer = "smtp.gmail.com";
+            int port = 587; // Port number can vary based on your SMTP server configuration
+            string senderEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString();
+            string password = ConfigurationManager.AppSettings["SenderHash"].ToString();
+
+            var smtpClient = new SmtpClient(smtpServer, port)
+            {
+                Credentials = new NetworkCredential(senderEmail, password),
+                EnableSsl = true // Enable SSL/TLS
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(senderEmail),
+                Subject = subject,
+                Body = body
+            };
+            mailMessage.IsBodyHtml = true;
+            mailMessage.To.Add(toEmail);
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+                Console.WriteLine(ex.ToString());
+				WriteLog.LogError(ex);
+            }
+        }
+
         public static string AddQueryString(string uri, IEnumerable<KeyValuePair<string, string>> queryString)
         {
             if (uri == null)
