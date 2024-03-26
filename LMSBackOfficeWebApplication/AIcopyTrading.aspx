@@ -128,28 +128,245 @@
                     </div>
                 </div>
                 <!-- [ breadcrumb ] end -->
-                <!-- [ Main Content ] start -->
-                <div class="ranks-wrapper pb-5">
-                    <div class="cards-w">
-                        <div class="item">
-                            <img src="Content/images/Copy-Trading/Explorer-EA.png" class="p-10" alt="" />
+
+                <ul class="nav nav-tabs mb-3" id="t_tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active text-uppercase" id="explorer-tab" data-bs-toggle="tab" href="#explorer" role="tab" aria-controls="explorer" aria-selected="true">Explorer AI Copy Trading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false">Pioneer AI Copy Trading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content pb-5" id="myTabContent">
+                    <div class="tab-pane fade show active" id="explorer" role="tabpanel" aria-labelledby="explorer-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card p-4 mb-4">
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <img src="Content/images/Copy-Trading/Explorer-EA.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <div class="col-md-4 d-flex flex-column">
+                                            <div class="card h-100 mb-3">
+                                                <div class="card-body">
+                                                    <h5>Trading Statistics (Medium):</h5>
+                                                    <div class="f-list">
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                        <span>Average Max Drawdown<span>3.82%</span></span>
+                                                        <span>Equity Required<span>20%</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Master Trader Details:</h5>
+                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Risk Settings:</h5>
+                                                    <h6 class="font-bold">Low</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>10%</span></span>
+                                                        <span>Average Annual Growth<span>28%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Medium</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>20%</span></span>
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Aggressive</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>30%</span></span>
+                                                        <span>Average Annual Growth<span>84%*</span></span>
+                                                    </div>
+                                                    <p class="small">*Excluding Compounding</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="item">
-                            <img src="Content/images/Copy-Trading/Pioneer-EA.png" class="p-10" alt="" />
+                    </div>
+                    <div class="tab-pane fade" id="pioneer" role="tabpanel" aria-labelledby="pioneer-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card p-4 mb-4">
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <img src="Content/images/Copy-Trading/Pioneer-EA.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <div class="col-md-4 d-flex flex-column">
+                                            <div class="card h-100 mb-3">
+                                                <div class="card-body">
+                                                    <h5>Trading Statistics (Medium):</h5>
+                                                    <div class="f-list">
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                        <span>Average Max Drawdown<span>3.82%</span></span>
+                                                        <span>Equity Required<span>20%</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Master Trader Details:</h5>
+                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Risk Settings:</h5>
+                                                    <h6 class="font-bold">Low</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>10%</span></span>
+                                                        <span>Average Annual Growth<span>28%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Medium</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>20%</span></span>
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Aggressive</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>30%</span></span>
+                                                        <span>Average Annual Growth<span>84%*</span></span>
+                                                    </div>
+                                                    <p class="small">*Excluding Compounding</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="item">
-                            <img src="Content/images/Copy-Trading/Elite-EA.png" class="p-10" alt="" />
+                    </div>
+                    <div class="tab-pane fade" id="elite" role="tabpanel" aria-labelledby="elite-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card p-4 mb-4">
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <img src="Content/images/Copy-Trading/Elite-EA.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <div class="col-md-4 d-flex flex-column">
+                                            <div class="card h-100 mb-3">
+                                                <div class="card-body">
+                                                    <h5>Trading Statistics (Medium):</h5>
+                                                    <div class="f-list">
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                        <span>Average Max Drawdown<span>3.82%</span></span>
+                                                        <span>Equity Required<span>20%</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Master Trader Details:</h5>
+                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Risk Settings:</h5>
+                                                    <h6 class="font-bold">Low</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>10%</span></span>
+                                                        <span>Average Annual Growth<span>28%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Medium</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>20%</span></span>
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Aggressive</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>30%</span></span>
+                                                        <span>Average Annual Growth<span>84%*</span></span>
+                                                    </div>
+                                                    <p class="small">*Excluding Compounding</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="item">
-                            <img src="Content/images/Copy-Trading/Infinite-EA.png" class="p-10" alt="" />
+                    </div>
+                    <div class="tab-pane fade" id="infinite" role="tabpanel" aria-labelledby="infinite-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card p-4 mb-4">
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <img src="Content/images/Copy-Trading/Infinite-EA.png" class="img-fluid" alt="" />
+                                        </div>
+                                        <div class="col-md-4 d-flex flex-column">
+                                            <div class="card h-100 mb-3">
+                                                <div class="card-body">
+                                                    <h5>Trading Statistics (Medium):</h5>
+                                                    <div class="f-list">
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                        <span>Average Max Drawdown<span>3.82%</span></span>
+                                                        <span>Equity Required<span>20%</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Master Trader Details:</h5>
+                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5>Risk Settings:</h5>
+                                                    <h6 class="font-bold">Low</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>10%</span></span>
+                                                        <span>Average Annual Growth<span>28%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Medium</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>20%</span></span>
+                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                    </div>
+                                                    <h6 class="font-bold">Aggressive</h6>
+                                                    <div class="f-list">
+                                                        <span>Equity Required<span>30%</span></span>
+                                                        <span>Average Annual Growth<span>84%*</span></span>
+                                                    </div>
+                                                    <p class="small text-gray-500">*Excluding Compounding</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- [ Main Content ] end -->
         </div>
-        </div>
-    <!-- [ Main Content ] end -->
+        <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
                 <div class="row">
