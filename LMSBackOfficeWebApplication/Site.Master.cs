@@ -16,6 +16,11 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null)
+            {
+                // Session has expired, redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
             decimal balanceAmount = Wallets_DataAccess.FetchCdtWalletBalanceForUsername(Session["username"].ToString());
             creditbalance.InnerText = balanceAmount.ToString();
             if (!IsPostBack)

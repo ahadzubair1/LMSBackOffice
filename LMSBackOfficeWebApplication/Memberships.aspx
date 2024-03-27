@@ -259,7 +259,7 @@
                                         <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
         
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_EXPLORERPLUS" data-membership-name="Explorer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_PARTNER" data-membership-name="Partner">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
