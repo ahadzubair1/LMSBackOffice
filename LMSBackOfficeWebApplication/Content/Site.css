@@ -392,6 +392,8 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         border: none;
         border-radius: 10px;
         color: inherit;
+        font-size: 14px;
+        text-transform: capitalize !important;
     }
 
         #t_tabs .nav-item .nav-link.active {
@@ -1306,3 +1308,6 @@ label:not(.form-check-label):not(.custom-file-label) {
         background: #d014e41a;
         padding: 10px;
     }
+.cursor-pointer{
+    cursor: pointer;
+}

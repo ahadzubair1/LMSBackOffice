@@ -24105,11 +24105,17 @@ pre[class*=language-] {
 
         .pc-sidebar .pc-navbar > .pc-item.active > .pc-link {
             font-weight: 500;
-            color: var(--pc-sidebar-active-color);
+            color: #fff;
         }
 
+            .pc-sidebar .pc-navbar > .pc-item.active > .pc-link span {
+                position: relative;
+                z-index: 2;
+            }
+
             .pc-sidebar .pc-navbar > .pc-item.active > .pc-link:after {
-                background: var(--pc-sidebar-active-color);
+                background: #de0eed;
+                opacity: 1;
             }
 
         .pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link:after {

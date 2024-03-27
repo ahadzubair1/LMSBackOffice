@@ -548,7 +548,7 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="https://academy.tradiix.com/" target="_blank" class="pc-link d-flex align-items-center justify-content-between">
+                            <a href="https://academy.tradiix.com/" target="_blank" class="pc-link d-flex align-items-center">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-password-check"></use>

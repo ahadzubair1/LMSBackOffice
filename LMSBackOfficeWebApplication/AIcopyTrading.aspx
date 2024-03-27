@@ -137,10 +137,12 @@
                         <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false">Pioneer AI Copy Trading</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>
+                        <%--<a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>--%>
+                        <a class="nav-link text-uppercase cursor-pointer">Elite AI Copy Trading <span class="badge bg-primary-t">Pending</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>
+                        <%--<a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>--%>
+                        <a class="nav-link text-uppercase cursor-pointer">Infinite AI Copy Trading <span class="badge bg-primary-t">Pending</span></a>
                     </li>
                 </ul>
 
@@ -229,7 +231,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p>The Pioneer is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
                                                 </div>
                                             </div>
                                         </div>
