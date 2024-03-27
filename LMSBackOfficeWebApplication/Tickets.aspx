@@ -16,6 +16,13 @@
             border-width: 0;
             padding: 0.5rem 0.5rem;
         }
+        .errormessage{
+            color:red;
+        }
+        .gvheader{
+            text-transform:uppercase;
+            font-size:13px;
+        }
     </style>
     <main>
         <!-- [ Main Content ] start -->
@@ -103,7 +110,7 @@
                                                 No record found<br />
                                             </EmptyDataTemplate>
                                             <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                            <HeaderStyle BackColor="#232f45" Font-Bold="True" ForeColor="White" Height="35" />
+                                            <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="35" />
                                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" />
                                             <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
                                             <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
@@ -134,7 +141,7 @@
                         <div class="mb-3 col-12">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" style="max-width: 100%" class="form-control w-100" id="txtTitle" name="title" />
-
+                             <span class="errormessage" id="titleerror"></span>
                         </div>
                         <div class="mb-3 col-12">
                             <label for="amount" class="form-label">Ticket Type</label>
@@ -151,11 +158,12 @@
                             </asp:DropDownList>
                         </div>
                         <div class="mb-3 col-12">
-                            <label for="membershipCode" class="form-label">Description</label>
-                            <input type="text" style="max-width: 100%" class="form-control w-100" id="txtDescription" name="description" />
-                            <%--     <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control w-100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please write description"></asp:RequiredFieldValidator>--%>
+                            <label for="description" class="form-label">Description</label>
+                            <%--<textarea style="max-width: 100%" class="form-control w-100" id="txtDescription" name="description" />--%>
+                            <textarea class="form-control" rows="4" id="txtDescription" name="description"></textarea>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please write description"></asp:RequiredFieldValidator>--%>
                             <%--<input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />--%>
+                        <span class="errormessage" id="descriptionerror"></span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -192,11 +200,38 @@
 
     <script type="text/javascript">
         function Submit() {
+            debugger
+            var isValid = false;
+            var error = document.getElementById("descriptionerror");
+            var titleError = document.getElementById("titleerror");
+            var title = $('#txtTitle').val();
+            if (title == "") {
+                titleError.innerHTML = "Please enter title";
+                titleError.style.visibility = 'visible';
+                return false;
+
+            }
+            else {
+                titleError.innerHTML = "";
+                titleError.style.visibility = 'hidden';
+            }
+
+            var description = $('#txtDescription').val();
+            if (description == "") {                
+                error.innerHTML = "Please enter description";
+                error.style.visibility = 'visible';
+                return false;
+
+            }
+            else {
+                error.innerHTML = "";
+                error.style.visibility = 'hidden';
+            }
             var model = {
                 "TicketTitle": $('#txtTitle').val(),
                 "TicketType": $('#<%=ddlTicketType.ClientID%> option:selected').text(),
                 "Priority": $('#<%=ddlPriority.ClientID%> option:selected').text(),
-                "Description": $('#txtDescription').val()
+                "Description": description
             };
 
             SaveTicket(model);
