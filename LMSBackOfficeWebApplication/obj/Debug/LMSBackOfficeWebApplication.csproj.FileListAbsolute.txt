@@ -372,3 +372,15 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeW
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackO.65EEADC2.Up2Date
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.dll
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\obj\Debug\LMSBackOfficeWebApplication.pdb
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\ClosedXML.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\DocumentFormat.OpenXml.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\ExcelNumberFormat.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\Irony.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\SixLabors.Fonts.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.IO.Packaging.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\XLParser.dll
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\ClosedXML.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\DocumentFormat.OpenXml.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\ExcelNumberFormat.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\SixLabors.Fonts.xml
+E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.IO.Packaging.xml

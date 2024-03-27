@@ -1,6 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.cs" Inherits="LMSBackOfficeWebApplication.Transactions" %>
 
 <asp:Content ID="TransactionContent" ContentPlaceHolderID="MainContent" runat="server">
+        <style>
+        .button-position{
+            float:right;
+        }
+    </style>
     <main>
         <!-- [ Main Content ] start -->
         <div class="pc-container">
@@ -31,7 +36,7 @@
                             <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter keywords"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary" type="submit">Search</button>
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="btnSearch_Click" CausesValidation="false" />
                         </div>
                     </div>
 
@@ -43,7 +48,14 @@
 
                         <div class="card">
                             <div class="card-body">
-                                <table id="" class="table table-striped table-hover" style="width: 100%">
+                                <div class="col-md-12 order-md-1">
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-12" style="float: right;">
+                                            <asp:Button ID="btnExportToExcel" runat="server" Text="Export To Excel" CssClass="btn btn-primary button-position" OnClick="btnExportToExcel_Click" CausesValidation="false" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <table id="" class="table table-striped" style="width: 100%">
                                     <thead>
                                         <tr>
                                             <th>Transaction Code</th>

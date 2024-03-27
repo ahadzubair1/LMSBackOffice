@@ -9,7 +9,7 @@ namespace LMSBackOfficeDAL
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
 
-        public static DataTable GetAllTransaction(string memberId)
+        public static DataTable GetAllTransaction(string memberId, string searchString = null)
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -19,6 +19,7 @@ namespace LMSBackOfficeDAL
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.Add("@IN_Member_ID", SqlDbType.UniqueIdentifier).Value = Guid.Parse(memberId);
+                    command.Parameters.Add("@IN_SearchText", SqlDbType.NVarChar).Value = searchString;
                     try
                     {
                         connection.Open();

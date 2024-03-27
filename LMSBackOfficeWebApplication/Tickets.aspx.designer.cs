@@ -11,7 +11,7 @@ namespace LMSBackOfficeWebApplication
 {
 
 
-    public partial class Transactions
+    public partial class Tickets
     {
 
         /// <summary>
@@ -40,5 +40,32 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnExportToExcel;
+
+        /// <summary>
+        /// gv_tickets control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv_tickets;
+
+        /// <summary>
+        /// ddlTicketType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTicketType;
+
+        /// <summary>
+        /// ddlPriority control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPriority;
     }
 }

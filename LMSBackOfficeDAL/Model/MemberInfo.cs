@@ -35,4 +35,11 @@ namespace LMSBackOfficeDAL.Model
         public string ToWalletAddress { get; set; }
         public string OrderId { get; set; }
     }
+
+    public enum TicketStatus
+    {
+        Pending=1,
+        Resolved=2,
+        Cancelled=3
+    }
 }
