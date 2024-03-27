@@ -80,7 +80,7 @@ namespace LMSBackOfficeWebApplication
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class={membership.ToLower()}"">");
+            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class={membership.ToLower()}>");
 
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
@@ -144,7 +144,7 @@ namespace LMSBackOfficeWebApplication
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}"">");
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -201,7 +201,7 @@ namespace LMSBackOfficeWebApplication
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}"">");
+                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>");
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -323,7 +323,7 @@ namespace LMSBackOfficeWebApplication
 
         private static void dummychild(StringBuilder sb)
         {
-            sb.AppendLine("<a href=\"#\" class=\"elite\">");
+            sb.AppendLine("<a href=\"#\" class=\"na\">");
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
