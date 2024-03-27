@@ -200,10 +200,10 @@
                                     </div>
                                     <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
                                         <div>
-                                            <input id="agreement1" type="checkbox" name="agreement" value="" />
+                                            <input id="agreement1" type="checkbox" name="agreement" value="" onchange="toggleButton()" />
                                             <label for="agreement1">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled" disabled>Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -264,7 +264,7 @@
                                             <input id="agreement2" type="checkbox" name="agreement" value="" />
                                             <label for="agreement2">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -416,4 +416,20 @@
             </div>
         </footer>
     </main>
+    <script>
+        const buttons = document.querySelectorAll('.continueButton');
+        buttons.forEach(button => {
+            const checkbox = button.previousElementSibling.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function () {
+                toggleButton(checkbox, button);
+            });
+        });
+        function toggleButton(checkbox, button) {
+            if (checkbox.checked) {
+                button.classList.remove('disabled');
+            } else {
+                button.classList.add('disabled');
+            }
+        }
+    </script>
 </asp:Content>
