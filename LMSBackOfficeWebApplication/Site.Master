@@ -470,7 +470,7 @@
                                         <use xlink:href="#custom-user-add"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Memberships&nbsp;<span class="badge bg-primary-t">In progress</span></span>
+                                <span class="pc-mtext">Memberships</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -548,13 +548,13 @@
                             </a>
                         </li>
                         <li class="pc-item">
-                            <a href="#" class="pc-link d-flex align-items-center justify-content-between">
+                            <a href="https://academy.tradiix.com/" target="_blank" class="pc-link d-flex align-items-center justify-content-between">
                                 <span class="pc-micon">
                                     <svg class="pc-icon">
                                         <use xlink:href="#custom-password-check"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Academy Portal  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Academy Portal </span>
                             </a>
                         </li>
                     </ul>
