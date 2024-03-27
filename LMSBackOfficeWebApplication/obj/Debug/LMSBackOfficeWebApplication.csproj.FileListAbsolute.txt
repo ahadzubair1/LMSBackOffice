@@ -384,3 +384,15 @@ E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\DocumentFormat.OpenX
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\ExcelNumberFormat.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\SixLabors.Fonts.xml
 E:\IconXRepos\LMSBackOffice\LMSBackOfficeWebApplication\bin\System.IO.Packaging.xml
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\ClosedXML.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\DocumentFormat.OpenXml.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\ExcelNumberFormat.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\Irony.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\SixLabors.Fonts.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\System.IO.Packaging.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\XLParser.dll
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\ClosedXML.xml
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\DocumentFormat.OpenXml.xml
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\ExcelNumberFormat.xml
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\SixLabors.Fonts.xml
+C:\Users\Reshma\source\repos\LMSBackOfficenew\LMSBackOfficeWebApplication\bin\System.IO.Packaging.xml

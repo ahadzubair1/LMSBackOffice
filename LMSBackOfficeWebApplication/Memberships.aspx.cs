@@ -17,11 +17,13 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
                 if (Request.HttpMethod == "POST" && String.IsNullOrEmpty(Request.Headers["X-Requested-With"]))
                 {
                     // Process the form submission
                     // For example, you can access form fields using Request.Form collection
+
                     string amount = Request.Form["amount"];
                     string membershipCode = Request.Form["membershipCode"];
                     bool success = false;
@@ -82,7 +84,13 @@ namespace LMSBackOfficeWebApplication
                     }
 
                 }
-            
+
+
+            }
+            catch(Exception ex)
+            {
+                Response.Redirect("PurchaseResponse.aspx?success=0");
+            }
         }
     }
 }
