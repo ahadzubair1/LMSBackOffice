@@ -1331,11 +1331,27 @@ label:not(.form-check-label):not(.custom-file-label) {
     }
 }
 
-.wallet-balance{
+.wallet-balance {
     font-size: 14px;
     gap: 15px !important;
 }
+
     .wallet-balance i {
         color: #dd12ec !important;
         margin-right: 5px;
     }
+
+.text-tr {
+    color: #d014e4;
+}
+
+.btn-tr {
+    background: #d014e4;
+    border: 1px solid #d014e4;
+    color: #fff;
+}
+.btn-tr:hover {
+    background: transparent;
+    border: 1px solid #d014e4;
+    color: #fff;
+}

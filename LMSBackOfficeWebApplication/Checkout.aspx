@@ -75,18 +75,8 @@
                                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control mw-100" ReadOnly="True"></asp:TextBox>
 
                             </div>
-                            <%--<div class="row">
-              <div class="col-md-2 mb-3">
-                <label for="currency">Currency</label>
-                  <asp:TextBox ID="txtCurrency" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
-              </div>
-              <div class="col-md-9 mb-3">
-                <label for="walletaddress">Company Address</label>
-                  <asp:TextBox ID="txtWalletAddress" runat="server" CssClass="form-control txtWalletAddress" Width="99%" MaxLength="60" ReadOnly="True"></asp:TextBox>
-              
-              </div>
-            </div>--%>
-                            <div class="row">
+                        
+                          <%--  <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="country">Payment Mode</label>
                                     <asp:DropDownList ID="DropDownList1" runat="server" CssClass="custom-select d-block mw-100">
@@ -106,7 +96,7 @@
                                         Please provide a valid state.
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
 
                             <hr class="mb-4">
                             <%--<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>--%>
@@ -118,15 +108,46 @@
             </div>
         </div>
     </div>
+          <div class="modal fade modal-animate anim-blur" id="topupExistsModel" tabindex="-1" aria-labelledby="topupExistsModelLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content" style="color: #000 !important;">
+                  <div class="modal-header">
+                      <h1 class="modal-title font-bold fs-4" id="topupExistsModelLabel">Message</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p id="topupErrorMessage"></p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="CloseTopupPopup();">Close</button>                    
+                  </div>
+              </div>
+          </div>
+      </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
 
         function HideSideBar(message) {
-            debugger;
             if ($("#sidebar") != null || $("#sidebar") != undefined) {
                 //  $("#sidebar").hide();
                 $("#btnTopup").prop("disabled", true);
             }
+        }
+
+        function ShowTopupMessage(message) {
+            var messageLabel = document.getElementById("topupErrorMessage");
+            messageLabel.innerHTML = message;
+
+            $("#topupExistsModel").modal("show");
+            $('body').addClass('modal-open');
+            $("#membershipExpiryeModal").removeClass("hide");
+        }
+
+        function CloseTopupPopup() {
+            $("#topupExistsModel").modal('hide');
+            $('body').removeClass('modal-open');
+            $('.modal-backdrop').remove();
+            $("#topupExistsModel").removeClass("show");
         }
     </script>
 </asp:Content>
