@@ -1330,3 +1330,12 @@ label:not(.form-check-label):not(.custom-file-label) {
         transform: rotate(360deg);
     }
 }
+
+.wallet-balance{
+    font-size: 14px;
+    gap: 15px !important;
+}
+    .wallet-balance i {
+        color: #dd12ec !important;
+        margin-right: 5px;
+    }

@@ -95,19 +95,20 @@
                                 <i class="ti ti-menu-2"></i>
                             </a>
                         </li>
-                        <li class="dropdown pc-h-item">
+                        <%--<li class="dropdown pc-h-item">
                             <div class="form-group m-0 p-r-10">
                                 <div class="input-group">
                                     <input type="text" class="form-control shadow-none" placeholder="Search...">
                                     <button class="btn btn-dark btn-group-vertical"><i data-feather="search"></i></button>
                                 </div>
                             </div>
-                        </li>
+                        </li>--%>
                         <li class="pc-h-item pc-sidebar-collapse">
                             <a class="btn btn-primary btn-shadow" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
-                        <li class="pc-h-item pc-sidebar-collapse">
-                            <i class="ti ti-wallet h6 text-white"></i><span>Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span>
+                        <li class="pc-h-item pc-sidebar-collapse wallet-balance">
+                            <span><i class="ti ti-wallet h6"></i><span class="text-cyan-100">Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span></span>
+                            <span><i class="ti ti-wallet h6"></i><span class="text-blue-100">Bonus Wallet Balance: $<span id="bonusbalance" runat="server"></span></span></span>
                         </li>
                     </ul>
                 </div>
