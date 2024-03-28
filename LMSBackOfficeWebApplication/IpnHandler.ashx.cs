@@ -1,4 +1,6 @@
-﻿using LMSBackOfficeDAL;
+﻿using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using LMSBackOfficeDAL;
 using LMSBackOfficeWebApplication;
 using LMSBackOfficeWebApplication.Ipns;
 using LMSBackOfficeWebApplication.Utitlity;
@@ -6,6 +8,7 @@ using Microsoft.Ajax.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Net;
 using System.Net.PeerToPeer;
@@ -36,27 +39,37 @@ namespace Coinpayments.Example
                 //}
 
                 WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
+                WriteLog.LogInfo($"Transaction ID : {req.TxnId}");
                 if (req.Status >= 100 || req.Status == 2 || req.Status == 1)
                 {
-                    string memberId = string.Empty;
-                    string orderId = string.Empty;
-                    if (!string.IsNullOrEmpty(req.Custom))
+                    var memberInfo = GetMemberOrderInfo(req.Custom);
+                    if (memberInfo != null)
                     {
-                        var custom = req.Custom.Split('|');
-                        if (custom.Length > 1)
-                        {
-                            memberId = custom[1];
-                            orderId = custom[0];
-                            WriteLog.LogInfo($"Current LoggedIn user Id : {memberId}");
+                        WriteLog.LogInfo($"Current LoggedIn user Id : {memberInfo.MemberId}");
 
-                            MemberWallets_DataAcsess.UpdateMemberWallet(memberId, Convert.ToDecimal(req.Amount1), 1);
-                            WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
-                            //Update Transaction on success
-                            var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberId, orderId, req.Fee, CoinPaymentStatus.Complete.ToString());
-                            WriteLog.LogInfo($"Transaction Code : {transactionCode}");
-                            CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, orderId, req.SendTx, req.Status, req.StatusText);
-                        }
-                    }  
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 1);
+                        WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
+                        //Update Transaction on success
+                        var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberInfo.MemberId, memberInfo.OrderId, req.Fee, CoinPaymentStatus.Complete.ToString());
+                        WriteLog.LogInfo($"Transaction Code : {transactionCode}");
+                        CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, memberInfo.OrderId, req.SendTx, req.Status, req.StatusText);
+
+                    }
+                }
+
+                if (req.Status == -1)//When transaction is timeout or cancelled
+                {
+                    var memberInfo = GetMemberOrderInfo(req.Custom);
+                    if(memberInfo != null)
+                    {
+                        //deduct amount
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 0);
+
+                        var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberInfo.MemberId, memberInfo.OrderId, req.Fee, req.StatusText);
+                        WriteLog.LogInfo($"Transaction Code : {transactionCode}");
+                        CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, memberInfo.OrderId, req.SendTx, req.Status, req.StatusText);
+                    }
+                    
                 }
 
                 response(context, HttpStatusCode.OK, "1");
@@ -65,6 +78,23 @@ namespace Coinpayments.Example
             {
                 WriteLog.LogError(ex);
             }
+        }
+
+        public MemberOrder GetMemberOrderInfo(string customString)
+        {
+            MemberOrder memberOrder = null;
+            if (!string.IsNullOrEmpty(customString))
+            {
+                var custom = customString.Split('|');
+                if (custom.Length > 1)
+                {
+                    memberOrder = new MemberOrder();
+                    memberOrder.OrderId = custom[0];
+                    memberOrder.MemberId = custom[1];
+                }
+            }
+
+            return memberOrder;
         }
 
 
@@ -82,5 +112,11 @@ namespace Coinpayments.Example
                 return false;
             }
         }
+    }
+
+    public class MemberOrder
+    {
+        public string MemberId { get; set; }
+        public string OrderId { get; set; }
     }
 }
