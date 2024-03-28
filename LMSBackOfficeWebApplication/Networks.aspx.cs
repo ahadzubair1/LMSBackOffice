@@ -31,7 +31,7 @@ namespace LMSBackOfficeWebApplication
                 if (!string.IsNullOrEmpty(memberIdParam))
                 {
 
-                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
+                    BindGridView(memberIdParam);
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
 
                     // Generate HTML only once during the initial load
@@ -43,16 +43,13 @@ namespace LMSBackOfficeWebApplication
 
                     string userName = Session["Username"].ToString();
                     var member = Members_DataAccess.GetMemberInfo(userName);
-                    referrelsTable = Members_DataAccess.GetReferrelsByMemberId(member.Id);
+                    BindGridView(member.Id);
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
 
                     // Generate HTML only once during the initial load
                     string generatedHtml = GenerateHTML(networkTreeTable, member.Id);
                     litGeneratedHtml.Text = generatedHtml;
                 }
-
-
-
             }
         }
 
@@ -112,7 +109,12 @@ namespace LMSBackOfficeWebApplication
             return sb.ToString();
         }
 
-
+        public  void BindGridView(string memberIdParam)
+        {
+            referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
+            gvReferrelsTable.DataSource = referrelsTable;
+            gvReferrelsTable.DataBind();
+        }
 
         private string GenerateNodeHtml(DataTable dataTable, string parentId, int Level)
         {
@@ -334,6 +336,14 @@ namespace LMSBackOfficeWebApplication
                             <label>Country: NA</label>
                         </span>
                     </a>");
+        }
+
+        protected void gvReferrelsTable_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+            gvReferrelsTable.PageIndex = e.NewPageIndex;
+            BindGridView(member.Id); //bindgridview will get the data source and bind it again
         }
     }
 }

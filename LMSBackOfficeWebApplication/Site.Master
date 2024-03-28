@@ -107,8 +107,8 @@
                             <a class="btn btn-tr btn-shadow btn-sm" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse wallet-balance">
-                            <span><i class="ti ti-wallet h6"></i><span class="text-cyan-100">Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span></span>
-                            <span><i class="ti ti-wallet h6"></i><span class="text-blue-100">Bonus Wallet Balance: $<span id="bonusbalance" runat="server"></span></span></span>
+                            <span><i class="ti ti-wallet h6"></i><span class="text-yellow-300">Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span></span>
+                            <span><i class="ti ti-wallet h6"></i><span class="text-info">Bonus Wallet Balance: 0</span>
                         </li>
                     </ul>
                 </div>
@@ -454,6 +454,16 @@
                             </a>
                         </li>
                         <li class="pc-item">
+                            <a href="https://academy.tradiix.com/" target="_blank" class="pc-link d-flex align-items-center">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-password-check"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Academy Portal </span>
+                            </a>
+                        </li>
+                        <li class="pc-item">
                             <%--<a href="Bonus.aspx" class="pc-link">--%>
                             <a href="Wallets.aspx" class="pc-link">
                                 <span class="pc-micon">
@@ -547,16 +557,7 @@
                                 <span class="pc-mtext">Support Tickets</span>
                             </a>
                         </li>
-                        <li class="pc-item">
-                            <a href="https://academy.tradiix.com/" target="_blank" class="pc-link d-flex align-items-center">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-password-check"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">Academy Portal </span>
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </div>

@@ -765,25 +765,27 @@
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <%if (dt != null && dt.Rows.Count > 0)
-                                                    { %>
+                                           <tbody>
+                                                <% if (dt != null && dt.Rows.Count > 0) { %>
 
-                                                <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                                    {%>
+                                                <% int rowCount = 0;
+                                                   foreach (System.Data.DataRow dr in this.dt.Rows)
+                                                   {
+                                                       if (rowCount >= 5) break; // Break loop after the fifth row
+                                                       rowCount++;
+                                                %>
                                                 <tr>
-                                                    <%foreach (System.Data.DataColumn dc in this.dt.Columns)
-                                                        {%>
+                                                    <% foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                       { %>
                                                     <td>
-                                                        <%=dr[dc.ColumnName]%>
+                                                        <%= dr[dc.ColumnName] %>
                                                     </td>
-                                                    <%} %>
+                                                    <% } %>
                                                 </tr>
-                                                <%} %>
+                                                <% } %>
 
-                                                <%} %>
-                                            </tbody>
-                                        </table>
+                                                <% } %>
+                                            </tbody>                     </table>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
@@ -842,7 +844,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a href="Transactions" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
+                                <a href="Transactions.aspx" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>
                     </div>

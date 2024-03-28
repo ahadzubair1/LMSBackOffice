@@ -1,4 +1,7 @@
-﻿using LMSBackOfficeDAL;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LMSBackofficeDAL;
+using LMSBackOfficeDAL;
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
@@ -17,8 +20,11 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
+                if (Session["Username"] == null)
+                {
+                    // Session has expired, redirect to login page
+                    Response.Redirect("~/Login.aspx");
+                }
                 if (Request.HttpMethod == "POST" && String.IsNullOrEmpty(Request.Headers["X-Requested-With"]))
                 {
                     // Process the form submission
@@ -56,15 +62,19 @@ namespace LMSBackOfficeWebApplication
                             {
                                 double newBalance = Balance - TotalAmount;
                                 var orderId = Guid.NewGuid().ToString();
+                                var member = Members_DataAccess.GetMemberInfo(Session["Username"].ToString());
                                 MemberWallets_DataAcsess.UpdateMemberCreditWallet(MemberId, Convert.ToDecimal(newBalance), 0);
                                 Transactions_DataAcsess.AddTransactions(MemberId, orderId, "Membership Purchase", "USD", Configurations.ToCurrency,
                                                                 string.Empty, Configurations.CompanyCryptoWallet, "Complete",
                                                                 Convert.ToDecimal(amount));
+
                                 var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
                                 Network_DataAccess.AssignNetworkParent(MemberId);
                                 DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
                                 if (SuccessPurchase == "Success")
                                 {
+                                    UtilMethods.SendEmailMembership(member.MemberFullName, MembershipName, DateTime.Now.ToString(), member.Country);
+                                    UtilMethods.SendEmailMembershipToUser(member.Email, member.MemberFullName, MembershipName);
                                     Response.Redirect("PurchaseResponse.aspx?success=1");
                                 }
                             }
@@ -86,11 +96,6 @@ namespace LMSBackOfficeWebApplication
                 }
 
 
-            }
-            catch(Exception ex)
-            {
-                Response.Redirect("PurchaseResponse.aspx?success=0");
-            }
         }
     }
 }

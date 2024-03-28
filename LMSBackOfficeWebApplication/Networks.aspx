@@ -1,6 +1,28 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Networks.aspx.cs" Inherits="LMSBackOfficeWebApplication.Networks" %>
 
 <asp:Content ID="NetworkContent1" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        thead, tbody, tfoot, tr, td, th {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            padding: 0.5rem 0.5rem;
+        }
+
+        .errormessage {
+            color: red;
+        }
+
+        .gvheader {
+            text-transform: uppercase;
+            font-size: 13px;
+            padding: 10px !important;
+        }
+
+        .pagerstyle {
+            padding: 0;
+        }
+    </style>
     <main>
 
 
@@ -245,46 +267,57 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="referrels" role="tabpanel" aria-labelledby="referrels-tab">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">My Referrals</h5>
+                                        <div id = "dvGrid">
+                                        <asp:GridView ID="gvReferrelsTable" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" PageSize="10"
+                                            CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True" OnPageIndexChanging="gvReferrelsTable_PageIndexChanging">
+                                            <AlternatingRowStyle BackColor="Gainsboro" />
+                                            <Columns>
+                                                <asp:BoundField DataField="MemberFullName" HeaderText="Member Name" ControlStyle-CssClass="gvheader">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                                <asp:BoundField DataField="Subscription" HeaderText="Subscription" ControlStyle-CssClass="gvheader">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">My Referrals</h5>
-                                <table id="" class="table table-striped table-hover w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Member Name</th>
-                                            <th>MemberShip</th>
-                                            <th>MemberShip Expiry</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <%if (referrelsTable != null && referrelsTable.Rows.Count > 0)
-                                            { %>
+                                                <asp:BoundField DataField="PurchasedDate" HeaderText="Purchased Date" ControlStyle-CssClass="gvheader">
+                                                    <ControlStyle Width="250px" />
+                                                </asp:BoundField>
 
-                                        <%foreach (System.Data.DataRow dr in this.referrelsTable.Rows)
-                                            {%>
-                                        <tr>
-                                            <%foreach (System.Data.DataColumn dc in this.referrelsTable.Columns)
-                                                {%>
-                                            <td>
-                                                <%=dr[dc.ColumnName]%>
-                                            </td>
-                                            <%} %>
-                                        </tr>
-                                        <%} %>
-
-                                        <%} %>
-                                    </tbody>
-                                </table>
+                                                <asp:BoundField DataField="MembershipStatus" HeaderText="Status">
+                                                    <ControlStyle Width="100px" />
+                                                </asp:BoundField>
+                                            </Columns>
+                                            <EmptyDataTemplate>
+                                                No record found<br />
+                                            </EmptyDataTemplate>
+                                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                            <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="45" />
+                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" CssClass="pagerstyle" />
+                                            <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+                                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                            <SortedDescendingHeaderStyle BackColor="#000065" />
+                                        </asp:GridView>
                             </div>
-                        </div>
+                                    </div>
+                                </div>
+                            </ContentTemplate>
+
+                        </asp:UpdatePanel>
+
                     </div>
                 </div>
             </div>
             <!-- [ Main Content ] end -->
         </div>
-        </div>
+    
      <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
@@ -305,4 +338,26 @@
             </div>
         </footer>
     </main>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+                     BlockUI("dvGrid");
+                     $.blockUI.defaults.css = {};
+                 });
+                 function BlockUI(elementID) {
+                     var prm = Sys.WebForms.PageRequestManager.getInstance();
+                     prm.add_beginRequest(function () {
+                         $("#" + elementID).block({
+                             message: '<div align = "center">' + '<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Floading-gif&psig=AOvVaw3TT7ZHlYDOoSpu6JC6kqMr&ust=1711716871551000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiA7LKAl4UDFQAAAAAdAAAAABAY"/></div>',
+                             css: {},
+                             overlayCSS: { backgroundColor: '#000000', opacity: 0.6, border: '3px solid #63B2EB' }
+                         });
+                     });
+                     prm.add_endRequest(function () {
+                         $("#" + elementID).unblock();
+                     });
+                 };
+    </script>
 </asp:Content>

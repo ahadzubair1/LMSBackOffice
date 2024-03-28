@@ -42,12 +42,9 @@ namespace LMSBackOfficeWebApplication
 
                         lblAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
                         lblTotalAmount.Text = $"{checkout.TotalAmount.ToString()} USD";
-                        DropDownList1.SelectedValue = "TRX";
                         txtMemberCode.Text = checkout.MemberCode;
                         txtMemberFullName.Text = checkout.MemberFullName;
                         txtEmail.Text = checkout.Email;
-                        //txtCurrency.Text = checkout.Currency;
-                        txtWalletAddress.Text = checkout.ToWalletAddress;
                     }
                 }
                 catch (Exception ex)
@@ -106,28 +103,39 @@ namespace LMSBackOfficeWebApplication
                 {
                     var checkout = Session["Checkout"] as CheckoutModel;
                     checkout.TotalAmount = checkout.TotalAmount;
-                    checkout.ToWalletAddress = txtWalletAddress.Text;
-                    checkout.Currency = DropDownList1.SelectedValue.ToString();
+                    // checkout.ToWalletAddress = txtWalletAddress.Text;
+                    // checkout.Currency = DropDownList1.SelectedValue.ToString();
 
                     string username = Session["Username"].ToString();
                     var member = Members_DataAccess.GetMemberInfo(username);
-                    var queryParameters = CreateQueryParameters(checkout, member.Id);
 
-                    var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
+                    var isTopupAlreadyCreated = Transactions_DataAcsess.CheckTopupAlreadyRequested(member.Id);
+                    if (isTopupAlreadyCreated)
+                    {
+                        string message = $"You already have been requested a topup, please wait while its being completed.";
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "ShowTopupMessage('" + message + "');", true);
+                    }
+                    else
+                    {
 
-                  
-                    //Update Balance in UserWallet table 
-                   // MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+                        var queryParameters = CreateQueryParameters(checkout, member.Id);
 
-                    //Add Transaction and Coin PaymentTransaction
-                    Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
-                                                            member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
-                                                            Convert.ToDecimal(checkout.TotalAmount));
+                        var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
-                    //Response.Redirect(redirectUrl, false);
-                    Response.Write("<script type='text/javascript'>");
-                    Response.Write("window.open('" + redirectUrl + "','_blank');");
-                    Response.Write("</script>");
+
+                        //Update Balance in UserWallet table 
+                        MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+
+                        //Add Transaction and Coin PaymentTransaction
+                        Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                                member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
+                                                                Convert.ToDecimal(checkout.TotalAmount));
+
+                        //Response.Redirect(redirectUrl, false);
+                        Response.Write("<script type='text/javascript'>");
+                        Response.Write("window.open('" + redirectUrl + "','_blank');");
+                        Response.Write("</script>");
+                    }
                 }
             }
             catch (Exception ex)
@@ -136,7 +144,7 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
-        
+
         //protected void CheckoutBtn_ServerClick(object sender, ImageClickEventArgs e)
         //{
         //    if (Session["Checkout"] != null)
