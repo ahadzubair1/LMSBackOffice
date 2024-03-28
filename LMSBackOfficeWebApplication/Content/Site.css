@@ -1308,6 +1308,25 @@ label:not(.form-check-label):not(.custom-file-label) {
         background: #d014e41a;
         padding: 10px;
     }
-.cursor-pointer{
+
+.cursor-pointer {
     cursor: pointer;
+}
+
+.bonus-icon {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: 30px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
