@@ -358,7 +358,7 @@
                                             <div id="total-task-graph"></div>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$0</h5>
+                                            <h5 class="mb-1"><asp:Label runat="server" Text="0$" ID ="lblNetworkBonus"></asp:Label></h5>
                                             <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
                                         </div>
                                     </div>
@@ -414,11 +414,11 @@
                                 <div class="bg-body rounded">
                                     <div class="row align-items-center">
                                         <div class="col-7">
-                                            <h5 class="font-semibold m-0">None</h5>
+                                            <h5 class="font-semibold m-0"><asp:Label runat="server" Text="None" ID ="lblMembership"></asp:Label></h5>
                                         </div>
                                         <div class="col-5">
-                                            <h5 class="mb-1">$0</h5>
-                                            <p class="text-warning mb-0">1 Year</p>
+                                           <h5 class="mb-1">&nbsp;</h5>
+<p class="text-warning mb-0">&nbsp;</p>
                                         </div>
                                     </div>
                                 </div>
@@ -450,17 +450,18 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold">Rewards Achieved</h6>
+                                        <h6 class="mb-0 font-semibold">Rank Achieved</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
                                     <div class="row align-items-center">
-                                        <div class="col-2">
-                                            <h1 class="font-semibold m-0">0</h1>
+                                        <div class="col-7">
+                                                   <h5 class="font-semibold m-0"><asp:Label ID="lblrank" runat="server" Text="Earn More Rewards" ></asp:Label></h5>
                                         </div>
-                                        <div class="col-10">
-                                            <p class="mb-0"><span class="text-warning">🌟</span> Earn More Rewards</p>
-                                        </div>
+                                        <div class="col-5">
+     <h5 class="mb-1">&nbsp;</h5>
+     <p class="text-warning mb-0">&nbsp;</p>
+ </div>
                                     </div>
                                 </div>
                             </div>
@@ -549,7 +550,7 @@
                                         <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
                                         <span class="avtar bg-light-primary text-primary text-sm">+</span>
                                     </div>
-                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
+                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning"><asp:Label runat="server" Text="0 users" ID ="lblLeftNetworkUsers"></asp:Label></span>
                                 </div>
                             </div>
                         </div>
@@ -591,7 +592,7 @@
                                         <img src="Content/images/user/avatar-5.jpg" alt="user-image" class="avtar" />
                                         <span class="avtar bg-light-primary text-primary text-sm">+</span>
                                     </div>
-                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning">0 Users</span>
+                                    <span class="badge rounded-pill text-bg-light text-dark bg-warning"><asp:Label runat="server" Text="0 users" ID ="lblRightNetworkUsers"></asp:Label></span>
                                 </div>
                             </div>
                         </div>
@@ -669,13 +670,13 @@
                                         <tbody>
                                             <tr>
                                                 <td>Rank Volume</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                            </tr>
+                                                <td><asp:Label Id="lblRankVolumeleft" runat="server" Text="0"></asp:Label></td>
+                                                <td><asp:Label Id="lblRankVolumeright" runat="server" Text="0"></asp:Label></td>
+                                             </tr>
                                             <tr>
                                                 <td>Network Volume</td>
-                                                <td>0</td>
-                                                <td>0</td>
+                                                   <td><asp:Label Id="lblNetworkVolumeLeft" runat="server" Text="0"></asp:Label></td>
+                                                <td><asp:Label Id="lblNetworkVolumeRight" runat="server" Text="0"></asp:Label></td>
                                             </tr>
                                         </tbody>
                                     </table>
