@@ -217,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Bonuses.aspx" />
     <Content Include="CancelTransaction.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="CoinPaymentSuccess.aspx" />
@@ -661,6 +662,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Bonuses.aspx.cs">
+      <DependentUpon>Bonuses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bonuses.aspx.designer.cs">
+      <DependentUpon>Bonuses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CancelTransaction.aspx.cs">
       <DependentUpon>CancelTransaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
