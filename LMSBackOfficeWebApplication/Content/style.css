@@ -24365,7 +24365,7 @@ body[data-pc-theme="dark"] .anim-bg {
     .pc-sidebar {
         left: -280px;
         box-shadow: none;
-        background: var(--bs-body-bg);
+        /*background: var(--bs-body-bg);*/
         top: 0;
         transition: all 0.2s ease-in-out;
     }
