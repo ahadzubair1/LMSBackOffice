@@ -252,8 +252,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-active">
-                                        <td>Partner</td>
+                                    <tr class="table-active" data-toggle="tooltip" data-placement="top" title="You have earned this rank">
+                                        <td><svg class="pc-icon mx-1 text-tr"> <use xlink:href="#custom-star-bold"></use> </svg>Partner</td>
                                         <td>$500</td>
                                         <td>1/1</td>
                                         <td>$2k/$2k</td>
@@ -266,8 +266,8 @@
                                         <td>$5k/$5k</td>
                                         <td>$100</td>
                                     </tr>
-                                    <tr class="table-success">
-                                        <td>VIP</td>
+                                    <tr class="table-success" data-toggle="tooltip" data-placement="top" title="You have earned this rank">
+                                        <td><svg class="pc-icon mx-1 text-tr"> <use xlink:href="#custom-star-bold"></use>  </svg>VIP</td>
                                         <td>$500</td>
                                         <td>1/1</td>
                                         <td>$10k/$10k</td>
@@ -301,8 +301,8 @@
                                         <td>$250k/$250k</td>
                                         <td>Retreat</td>
                                     </tr>
-                                    <tr>
-                                        <td>Legacy Creator</td>
+                                    <tr data-toggle="tooltip" data-placement="top" title="You have earned this rank">
+                                        <td><svg class="pc-icon mx-1 text-tr"> <use xlink:href="#custom-star-bold"></use>  </svg>Legacy Creator</td>
                                         <td>$1500</td>
                                         <td>4/4</td>
                                         <td>$500k/$500k</td>
