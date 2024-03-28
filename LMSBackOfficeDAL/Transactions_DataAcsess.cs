@@ -151,5 +151,30 @@ namespace LMSBackOfficeDAL
 
             return transactionCode;
         }
+
+        public static bool CheckTopupAlreadyRequested(string memberId)
+        {
+            bool exists = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_CheckTopupAlreadyExists", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters
+                    command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier, 50).Value = Guid.Parse(memberId);
+                    command.Parameters.Add("@exists", SqlDbType.Bit).Direction = ParameterDirection.Output;
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    exists = Convert.ToBoolean(command.Parameters["@exists"].Value);
+                }
+            }
+
+            return exists;
+        }
     }
 }
