@@ -108,7 +108,7 @@
                         </li>
                         <li class="pc-h-item pc-sidebar-collapse wallet-balance">
                             <span><i class="ti ti-wallet h6"></i><span class="text-yellow-300">Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span></span>
-                            <span><i class="ti ti-wallet h6"></i><span class="text-info">Bonus Wallet Balance: 0</span>
+                            <span><i class="ti ti-wallet h6"></i><span class="text-info">Bonus Wallet Balance: $<span id="bonusbalance" runat="server"></span></span></span>
                         </li>
                     </ul>
                 </div>
