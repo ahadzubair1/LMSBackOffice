@@ -24,7 +24,7 @@ namespace LMSBackOfficeWebApplication
             decimal balanceAmount = Wallets_DataAccess.FetchCdtWalletBalanceForUsername(Session["username"].ToString());
             creditbalance.InnerText = balanceAmount.ToString();
             decimal balanceBonusAmount = Wallets_DataAccess.FetchBonusWalletBalanceForUsername(Session["username"].ToString());
-           // bonusbalance.InnerText = balanceBonusAmount.ToString();
+           bonusbalance.InnerText = balanceBonusAmount.ToString();
             if (!IsPostBack)
             {
                 if (Session["MembershipExpired"] != null)
