@@ -70,5 +70,34 @@ namespace LMSBackOfficeDAL
             return balanceAmount;
         }
 
+        public static decimal FetchBonusWalletBalanceForUsername(string username)
+        {
+            decimal balanceAmount = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("[USP_FetchBonusWalletBalance]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Username", SqlDbType.NVarChar).Value = username;
+
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                        {
+                            balanceAmount = Convert.ToDecimal(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            return balanceAmount;
+        }
+
     }
 }
