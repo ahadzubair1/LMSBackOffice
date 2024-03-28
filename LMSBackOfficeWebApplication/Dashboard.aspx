@@ -806,7 +806,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a href="" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
+                                <a href="Transactions" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>
                     </div>
