@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="C#" CodeBehind="PurchaseResponse.aspx.cs" Inherits="LMSBackOfficeWebApplication.PurchaseResponse" %>
+﻿<%@ Page Title="Tradix: Membership Purchase Response" Language="C#" CodeBehind="PurchaseResponse.aspx.cs" Inherits="LMSBackOfficeWebApplication.PurchaseResponse" %>
 
 <!DOCTYPE html>
 
