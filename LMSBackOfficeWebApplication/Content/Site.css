@@ -392,6 +392,8 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         border: none;
         border-radius: 10px;
         color: inherit;
+        font-size: 14px;
+        text-transform: capitalize !important;
     }
 
         #t_tabs .nav-item .nav-link.active {
@@ -1305,4 +1307,35 @@ label:not(.form-check-label):not(.custom-file-label) {
     .f-list > span:nth-of-type(2n+1) {
         background: #d014e41a;
         padding: 10px;
+    }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.bonus-icon {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: 30px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.wallet-balance{
+    font-size: 14px;
+    gap: 15px !important;
+}
+    .wallet-balance i {
+        color: #dd12ec !important;
+        margin-right: 5px;
     }

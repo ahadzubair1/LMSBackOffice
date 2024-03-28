@@ -24,6 +24,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl creditbalance;
 
         /// <summary>
+        /// bonusbalance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bonusbalance;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

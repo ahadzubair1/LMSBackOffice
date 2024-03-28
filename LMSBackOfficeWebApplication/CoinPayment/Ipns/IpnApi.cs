@@ -46,6 +46,12 @@ namespace LMSBackOfficeWebApplication.Ipns
         public decimal ReceivedAmount { get; set; }
         [DataMember(Name = "received_confirms")]
         public int ReceivedConfirms { get; set; }
+        [DataMember(Name = "deposit_id")]
+        public string DepositID { get; set; }
+        [DataMember(Name = "address")]
+        public string Address { get; set; }
+        [DataMember(Name = "confirms")]
+        public string MyProperty { get; set; }
 
         public bool SuccessStatus()
         {

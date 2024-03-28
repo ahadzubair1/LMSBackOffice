@@ -490,7 +490,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Left</span>
-                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-left"></i><span class="copyable" data-bs-toggle="tooltip" data-bs-placement="top"  id="leftReferralCodeSpan" runat="server"></span></span>
+                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-left"></i><span class="copyable" data-bs-toggle="tooltip" data-bs-placement="top" id="leftReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div onclick="copyText(this,event)" class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -502,7 +502,7 @@
                                             <div class="flex-grow-1 mx-2">
                                                 <p class="mb-0 d-grid text-start">
                                                     <span>Right</span>
-                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-right"></i><span data-bs-toggle="tooltip" data-bs-placement="top"  class="copyable" id="rightReferralCodeSpan" runat="server"></span></span>
+                                                    <span class="text-truncate w-100 "><i data-feather="arrow-up-right"></i><span data-bs-toggle="tooltip" data-bs-placement="top" class="copyable" id="rightReferralCodeSpan" runat="server"></span></span>
                                                 </p>
                                             </div>
                                             <div onclick="copyText(this,event)" class="badge bg-light-secondary f-12 small"><i data-feather="copy"></i>Copy</div>
@@ -596,8 +596,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card mb-4">
+                    <div class="col-lg-8">
+                        <div class="card mb-4 h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h5 class="mb-0">Purchased Memberships</h5>
@@ -649,6 +649,41 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+
+                            <div class="card-header">
+                                <h5 class="mb-0">Network Stats</h5>
+                            </div>
+                            <div class="card-body table-border-style">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Volume</th>
+                                                <th>Left</th>
+                                                <th>Right</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Rank Volume</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Network Volume</td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-body border-bottom pb-0">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -717,37 +752,37 @@
                                     tabindex="0">
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped table-hover" style="width: 100%">
-    <thead>
-        <tr>
-            <th>Transaction Code</th>
-            <th>Transaction_Type</th>
-            <th>Amount</th>
-            <%-- <th>Receiver Address</th>--%>
-            <th>Currency</th>
-            <th>Fee</th>
-            <th>Transaction Date</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <%if (dt != null && dt.Rows.Count > 0)
-            { %>
+                                            <thead>
+                                                <tr>
+                                                    <th>Transaction Code</th>
+                                                    <th>Transaction_Type</th>
+                                                    <th>Amount</th>
+                                                    <%-- <th>Receiver Address</th>--%>
+                                                    <th>Currency</th>
+                                                    <th>Fee</th>
+                                                    <th>Transaction Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%if (dt != null && dt.Rows.Count > 0)
+                                                    { %>
 
-        <%foreach (System.Data.DataRow dr in this.dt.Rows)
-            {%>
-        <tr>
-            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
-                {%>
-            <td>
-                <%=dr[dc.ColumnName]%>
-            </td>
-            <%} %>
-        </tr>
-        <%} %>
+                                                <%foreach (System.Data.DataRow dr in this.dt.Rows)
+                                                    {%>
+                                                <tr>
+                                                    <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                        {%>
+                                                    <td>
+                                                        <%=dr[dc.ColumnName]%>
+                                                    </td>
+                                                    <%} %>
+                                                </tr>
+                                                <%} %>
 
-        <%} %>
-    </tbody>
-</table>
+                                                <%} %>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">

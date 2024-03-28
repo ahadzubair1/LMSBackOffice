@@ -137,10 +137,12 @@
                         <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false">Pioneer AI Copy Trading</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>
+                        <%--<a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>--%>
+                        <a class="nav-link text-uppercase cursor-pointer">Elite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>
+                        <%--<a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>--%>
+                        <a class="nav-link text-uppercase cursor-pointer">Infinite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
                     </li>
                 </ul>
 
@@ -198,10 +200,10 @@
                                     </div>
                                     <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
                                         <div>
-                                            <input id="agreement1" type="checkbox" name="agreement" value="" />
+                                            <input id="agreement1" type="checkbox" name="agreement" value="" onchange="toggleButton()" />
                                             <label for="agreement1">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled" disabled>Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +231,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p>The Pioneer is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -262,7 +264,7 @@
                                             <input id="agreement2" type="checkbox" name="agreement" value="" />
                                             <label for="agreement2">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -414,4 +416,20 @@
             </div>
         </footer>
     </main>
+    <script>
+        const buttons = document.querySelectorAll('.continueButton');
+        buttons.forEach(button => {
+            const checkbox = button.previousElementSibling.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function () {
+                toggleButton(checkbox, button);
+            });
+        });
+        function toggleButton(checkbox, button) {
+            if (checkbox.checked) {
+                button.classList.remove('disabled');
+            } else {
+                button.classList.add('disabled');
+            }
+        }
+    </script>
 </asp:Content>
