@@ -22,7 +22,9 @@ namespace LMSBackOfficeWebApplication
     {
         DataTable dtBonusTypes = new DataTable();
         protected DataTable dt { get; set; }
-        protected void Page_Load(object sender, EventArgs e)
+
+        protected DataTable dtDashboardData {  get; set; }
+            protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
@@ -36,7 +38,7 @@ namespace LMSBackOfficeWebApplication
                 {
                     var IsMembershipExpired = Convert.ToBoolean(Session["MembershipExpired"]);
                     if (IsMembershipExpired)
-                    {                       
+                    {
                         var message = "Your annual memships is expired, please renew your membership for continue";
                         Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "ShowMessage('" + message + "')", true);
                         // ClientScript.RegisterStartupScript(this.GetType(), "UpdateTime", "ShowMessage('" + message + "')", true);
@@ -92,7 +94,7 @@ namespace LMSBackOfficeWebApplication
                         if (rightReferralCode != null)
                         {
                             rightReferralCodeSpan.InnerText = rightReferralCode;
-                            rightReferralCodeSpan.Attributes["title"]= rightReferralCode;
+                            rightReferralCodeSpan.Attributes["title"] = rightReferralCode;
                         }
                     }
                     else
@@ -101,6 +103,7 @@ namespace LMSBackOfficeWebApplication
                         // Or handle when the DataTable is null
                     }
                 }
+
 
             }
             if (Session["LoggedIn"] == null || !(bool)Session["LoggedIn"])
@@ -112,8 +115,45 @@ namespace LMSBackOfficeWebApplication
             var member = Members_DataAccess.GetMemberInfo(userName);
             dt = Transactions_DataAcsess.GetAllTransaction(member.Id);
 
+            PopulateDashboard(member);
+
         }
 
+        private void PopulateDashboard(MemberInfo member)
+        {
+            try
+            {
+                dtDashboardData = Dashboard_DataAccess.GetDashboardDetails(member.Id);
+                if (dtDashboardData.Rows.Count > 0)
+                {
+                    lblLeftNetworkUsers.Text = dtDashboardData.Rows[0]["TotalLeftNetworkUsers"].ToString() + " users";
+                    lblRightNetworkUsers.Text = dtDashboardData.Rows[0]["TotalRightNetworkUser"].ToString() + " users";
+
+                    lblNetworkVolumeRight.Text = dtDashboardData.Rows[0]["NetworkVolumeRight"].ToString();
+                    lblNetworkVolumeLeft.Text = dtDashboardData.Rows[0]["NetworkVolumeLeft"].ToString();
+
+                    lblRankVolumeleft.Text = dtDashboardData.Rows[0]["RankVolumeleft"].ToString();
+                    lblRankVolumeright.Text = dtDashboardData.Rows[0]["RankVolumeRight"].ToString();
+
+                    lblNetworkBonus.Text = dtDashboardData.Rows[0]["NetworkBonus"].ToString();
+
+                    lblMembership.Text = dtDashboardData.Rows[0]["Membership"].ToString();
+
+                    lblrank.Text = dtDashboardData.Rows[0]["CurrentRank"].ToString();
+                }
+                else
+                {
+                    // Handle the case when no data is returned
+                    // For example, clear the labels or show a message
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception
+                // For example, log the error or show an error message to the user
+                //MessageBox.Show("An error occurred while retrieving dashboard data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         public void ShowBonusTypes()
         {

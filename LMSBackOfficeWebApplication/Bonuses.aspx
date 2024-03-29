@@ -222,7 +222,7 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
-                            <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
+                            <div class="tab-pane fade show active overflow-x-auto" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
                                 <table id="" class="table table-striped table-hover w-100">
                                     <thead>
                                         <tr>
@@ -244,7 +244,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="tab-pane fade" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
+                            <div class="tab-pane fade overflow-x-auto" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
                                 <table id="" class="table table-striped table-hover w-100">
                                     <thead>
                                         <tr>
@@ -271,10 +271,11 @@
                 </div>
             </div>
         </div>
+        </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

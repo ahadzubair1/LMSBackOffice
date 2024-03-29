@@ -17,6 +17,7 @@ using System.Collections;
 using System.Xml.Linq;
 using System.Text.Encodings.Web;
 using LMSBackOfficeDAL;
+using static LMSBackOfficeDAL.Countries_DataAccess;
 //using System.Web.UI.WebControls.WebParts;
 //using Microsoft.AspNetCore.Http;
 //using System.Net.Http;
@@ -356,6 +357,75 @@ namespace LMSBackofficeDAL
             var entries = dict.Select(d =>
                 string.Format("\"{0}\": [{1}]", d.Key, string.Join(",", d.Value)));
             return "{" + string.Join(",", entries) + "}";
+        }
+        public static void SendEmailMembership(string MemberName, string MembershipName, string PurchaseDate,string Country)
+        {
+            string smtpServer = "smtp.gmail.com";
+            int port = 587; // Port number can vary based on your SMTP server configuration
+            string senderEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString();
+            string password = ConfigurationManager.AppSettings["SenderHash"].ToString();
+
+            var smtpClient = new SmtpClient(smtpServer, port)
+            {
+                Credentials = new NetworkCredential(senderEmail, password),
+                EnableSsl = true // Enable SSL/TLS
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(senderEmail),
+                Subject = "Membership Purchase",
+                Body = $@"<p>Hi,<br><br>{MemberName} has purchased {MembershipName} Membership on {PurchaseDate} from {Country}</p>"
+            };
+            mailMessage.IsBodyHtml = true;
+			//  mailMessage.To.Add("signup@tradiix.com");
+			mailMessage.To.Add("signup@tradiix.com");
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+                Console.WriteLine(ex.ToString());
+
+            }
+        }
+        public static void SendEmailMembershipToUser(string email, string MemberName, string MembershipName)
+        {
+            string smtpServer = "smtp.gmail.com";
+            int port = 587; // Port number can vary based on your SMTP server configuration
+            string senderEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString();
+            string password = ConfigurationManager.AppSettings["SenderHash"].ToString();
+
+            var smtpClient = new SmtpClient(smtpServer, port)
+            {
+                Credentials = new NetworkCredential(senderEmail, password),
+                EnableSsl = true // Enable SSL/TLS
+            };
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(senderEmail),
+                Subject = "Membership Purchase",
+                Body = $@"<p>Dear {MemberName},<br>You have successfully purchased {MembershipName} Membership from Tradiix.<br><br></p>"
+            };
+            mailMessage.IsBodyHtml = true;
+            mailMessage.To.Add(email);
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+                Console.WriteLine(ex.ToString());
+
+            }
         }
 
     }

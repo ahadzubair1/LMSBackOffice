@@ -3,6 +3,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using System.Web.Helpers;
+using System.Xml.Linq;
 using LMSBackofficeDAL;
 using LMSBackOfficeDAL.Model;
 
@@ -461,6 +463,35 @@ namespace LMSBackOfficeDAL
             }
 
             return exists;
+        }
+
+        public static DataTable GetAllTreeMembersByMemberId(string memberId)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("GetNodesRecursively_tradiix", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.Add("@GenesisNode", SqlDbType.NVarChar).Value = (memberId);
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataAdapter da = new SqlDataAdapter(command))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+
+            return dt;
         }
 
     }
