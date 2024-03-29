@@ -272,6 +272,7 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
+                                                                                    <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Bonus withdrawal requires completed KYC verification.</div>
                             <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
                  <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
     <Columns>
@@ -285,6 +286,7 @@
     <PagerStyle CssClass="custom-pagination" />
 </asp:GridView>
                             </div>
+
                             <div class="tab-pane fade" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
     <asp:GridView ID="gvDirectBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Direct_Bonus_ID" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvDirectBonus_PageIndexChanging" Width="100%" CssClass="table table-bordered table-hover">
                     <Columns>
