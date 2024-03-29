@@ -73,7 +73,7 @@ namespace LMSBackOfficeWebApplication
                                 DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
                                 if (SuccessPurchase == "Success")
                                 {
-                                    UtilMethods.SendEmailMembership(member.MemberFullName, MembershipName, DateTime.Now.ToString(), member.Country);
+                                    UtilMethods.SendEmailMembership(member.MemberFullName, MembershipName, DateTime.Now.ToString(), member.Country,member.Email);
                                     UtilMethods.SendEmailMembershipToUser(member.Email, member.MemberFullName, MembershipName);
                                     Response.Redirect("PurchaseResponse.aspx?success=1");
                                 }

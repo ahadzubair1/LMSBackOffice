@@ -203,7 +203,7 @@
                                             <input id="agreement1" type="checkbox" name="agreement" value="" onchange="toggleButton()" />
                                             <label for="agreement1">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled" disabled>Continue</a>
+                                        <a id="continueLink" class="btn btn-primary continueButton disabled" >Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                                             <input id="agreement2" type="checkbox" name="agreement" value="" />
                                             <label for="agreement2">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary continueButton disabled">Continue</a>
+                                        <a id="continueLink2"  class="btn btn-primary continueButton disabled">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -385,8 +385,8 @@
                                     </div>
                                     <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
                                         <div>
-                                            <input id="agreement3" type="checkbox" name="agreement" value="" />
-                                            <label for="agreement3">Yes, I have read</label>
+                                            <input id="agreement4" type="checkbox" name="agreement" value="" />
+                                            <label for="agreement4">Yes, I have read</label>
                                         </div>
                                         <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
                                     </div>
@@ -418,15 +418,82 @@
                 </div>
             </div>
         </footer>
+        <div class="modal fade modal-animate anim-blur show" id="buyMembership" tabindex="-1" aria-labelledby="membershipExpiryeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="color: #000 !important;">
+                    <div class="modal-header">
+                        <h1 class="modal-title font-bold fs-4" id="membershipExpiryeModalLabel">Membership Expired</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Membership Purchase is Required for Broker Website Access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Attach click event listener to continue link
+            document.getElementById("continueLink").addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Check if membership exists
+                if (MembershipExist) {
+                    // Redirect to a new link
+                    window.location.href = 'https://www.octafx.com/?refid=if6471013';
+                } else {
+                    // Display the modal
+                    var modal = document.getElementById('buyMembership');
+                    modal.style.display = 'block';
+                    var closeButtons = document.getElementsByClassName('btn-close');
+                    for (var i = 0; i < closeButtons.length; i++) {
+                        closeButtons[i].addEventListener('click', function () {
+                            var modal = this.closest('.modal'); // Assuming modal is a parent element of the close button
+                            if (modal) {
+                                modal.style.display = 'none';
+                            }
+                        });
+                    }
+
+                }
+            });
+            document.getElementById("continueLink2").addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Check if membership exists
+                if (MembershipExist) {
+                    // Redirect to a new link
+                    window.location.href = 'https://www.octafx.com/?refid=if6471013';
+                } else {
+                    // Display the modal
+                    var modal = document.getElementById('buyMembership');
+                    modal.style.display = 'block';
+                    var closeButtons = document.getElementsByClassName('btn-close');
+                    for (var i = 0; i < closeButtons.length; i++) {
+                        closeButtons[i].addEventListener('click', function () {
+                            var modal = this.closest('.modal'); // Assuming modal is a parent element of the close button
+                            if (modal) {
+                                modal.style.display = 'none';
+                            }
+                        });
+                    }
+
+                }
+            });
+        });
         const buttons = document.querySelectorAll('.continueButton');
         buttons.forEach(button => {
             const checkbox = button.previousElementSibling.querySelector('input[type="checkbox"]');
-            checkbox.addEventListener('change', function () {
-                toggleButton(checkbox, button);
-            });
+            if (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    toggleButton(checkbox, button);
+                });
+            } else {
+                console.error('Checkbox not found for button:', button);
+            }
         });
+
         function toggleButton(checkbox, button) {
             if (checkbox.checked) {
                 button.classList.remove('disabled');
@@ -434,5 +501,6 @@
                 button.classList.add('disabled');
             }
         }
+        
     </script>
 </asp:Content>

@@ -358,7 +358,7 @@ namespace LMSBackofficeDAL
                 string.Format("\"{0}\": [{1}]", d.Key, string.Join(",", d.Value)));
             return "{" + string.Join(",", entries) + "}";
         }
-        public static void SendEmailMembership(string MemberName, string MembershipName, string PurchaseDate,string Country)
+        public static void SendEmailMembership(string MemberName, string MembershipName, string PurchaseDate,string Country,string email)
         {
             string smtpServer = "smtp.gmail.com";
             int port = 587; // Port number can vary based on your SMTP server configuration
@@ -375,7 +375,7 @@ namespace LMSBackofficeDAL
             {
                 From = new MailAddress(senderEmail),
                 Subject = "Membership Purchase",
-                Body = $@"<p>Hi,<br><br>{MemberName} has purchased {MembershipName} Membership on {PurchaseDate} from {Country}</p>"
+                Body = $@"<p>Hi,<br><br><b>{MemberName}</b> with email:{email} has purchased <b>{MembershipName}</b> Membership on {PurchaseDate} from {Country}</p>"
             };
             mailMessage.IsBodyHtml = true;
 			//  mailMessage.To.Add("signup@tradiix.com");
@@ -410,7 +410,7 @@ namespace LMSBackofficeDAL
             {
                 From = new MailAddress(senderEmail),
                 Subject = "Membership Purchase",
-                Body = $@"<p>Dear {MemberName},<br>You have successfully purchased {MembershipName} Membership from Tradiix.<br><br></p>"
+                Body = $@"<p>Dear {MemberName},<br><br>You have successfully purchased <b>{MembershipName}</b> Membership from Tradiix.<br><br></p>"
             };
             mailMessage.IsBodyHtml = true;
             mailMessage.To.Add(email);

@@ -40,5 +40,36 @@ namespace LMSBackOfficeDAL
                 }
             }
         }
+
+        public static bool CheckMembershipExist(string username)
+        {
+            bool membershipExists = false;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("CheckMembershipExists", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Input parameter
+                    command.Parameters.AddWithValue("@username", username);
+
+                    // Output parameter
+                    SqlParameter membershipExistsParameter = new SqlParameter();
+                    membershipExistsParameter.ParameterName = "@membershipExists";
+                    membershipExistsParameter.SqlDbType = SqlDbType.Bit;
+                    membershipExistsParameter.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(membershipExistsParameter);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    membershipExists = (bool)membershipExistsParameter.Value;
+                }
+            }
+
+            return membershipExists;
+        }
     }
 }
