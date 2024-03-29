@@ -103,17 +103,17 @@
                                 </div>
                             </div>
                         </li>--%>
-                        <li class="pc-h-item pc-sidebar-collapse">
-                            <a class="btn btn-tr btn-shadow btn-sm" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
+                        <li class="pc-h-item">
+                            <a class="btn btn-tr btn-shadow btn-sm text-nowrap" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
-                        <li class="pc-h-item pc-sidebar-collapse wallet-balance">
-                            <span><i class="ti ti-wallet h6"></i><span class="text-yellow-300">Credit Wallet Balance: $<span id="creditbalance" runat="server"></span></span></span>
-                            <span><i class="ti ti-wallet h6"></i><span class="text-info">Bonus Wallet Balance: $<span id="bonusbalance" runat="server"></span></span></span>
+                        <li class="pc-h-item wallet-balance">
+                            <span><i class="ti ti-wallet h6"></i><span class="text-yellow-300">Credit Wallet: $<span id="creditbalance" runat="server"></span></span></span>
+                            <span><i class="ti ti-wallet h6"></i><span class="text-info">Bonus Wallet: $<span id="bonusbalance" runat="server"></span></span></span>
                         </li>
                     </ul>
                 </div>
                 <!-- [Mobile Media Block end] -->
-                <div class="ms-auto">
+                <div class="profile-options">
                     <ul class="list-unstyled">
                         <li class="dropdown pc-h-item">
                             <a
@@ -145,41 +145,6 @@
                                         <use xlink:href="#custom-setting-2"></use>
                                     </svg>
                                     <span>Default</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="dropdown pc-h-item">
-                            <a
-                                class="pc-head-link dropdown-toggle arrow-none me-0"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                role="button"
-                                aria-haspopup="false"
-                                aria-expanded="false">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-setting-2"></use>
-                                </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ti ti-user"></i>
-                                    <span>My Account</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ti ti-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ti ti-headset"></i>
-                                    <span>Support</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ti ti-lock"></i>
-                                    <span>Lock Screen</span>
-                                </a>
-                                <a href="#!" class="dropdown-item">
-                                    <i class="ti ti-power"></i>
-                                    <span>Logout</span>
                                 </a>
                             </div>
                         </li>
