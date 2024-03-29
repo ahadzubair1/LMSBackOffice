@@ -375,11 +375,11 @@ namespace LMSBackofficeDAL
             {
                 From = new MailAddress(senderEmail),
                 Subject = "Membership Purchase",
-                Body = $@"<p>Hi<br>{MemberName} has purchased {MembershipName} on {PurchaseDate} from {Country}</p>"
+                Body = $@"<p>Hi,<br><br>{MemberName} has purchased {MembershipName} Membership on {PurchaseDate} from {Country}</p>"
             };
             mailMessage.IsBodyHtml = true;
 			//  mailMessage.To.Add("signup@tradiix.com");
-			mailMessage.To.Add("reshma.mohan910@gmail.com");
+			mailMessage.To.Add("signup@tradiix.com");
 
             try
             {
@@ -410,7 +410,7 @@ namespace LMSBackofficeDAL
             {
                 From = new MailAddress(senderEmail),
                 Subject = "Membership Purchase",
-                Body = $@"<p>Dear {MemberName}<br>You have successfully purchased {MembershipName} from Tradiix.</p>"
+                Body = $@"<p>Dear {MemberName},<br>You have successfully purchased {MembershipName} Membership from Tradiix.<br><br></p>"
             };
             mailMessage.IsBodyHtml = true;
             mailMessage.To.Add(email);
