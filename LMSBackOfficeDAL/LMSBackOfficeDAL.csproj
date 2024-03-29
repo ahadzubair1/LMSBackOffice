@@ -140,6 +140,7 @@
     <Compile Include="HashUtility.cs" />
     <Compile Include="MemberWallets_DataAcsess.cs" />
     <Compile Include="Model\MemberInfo.cs" />
+    <Compile Include="Bonus_DataAccess.cs" />
     <Compile Include="Network_DataAccess.cs" />
     <Compile Include="PaymentStatus.cs" />
     <Compile Include="DirectBonus_DataAccess.cs" />
