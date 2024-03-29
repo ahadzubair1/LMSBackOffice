@@ -1,6 +1,30 @@
 ﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bonuses.aspx.cs" Inherits="LMSBackOfficeWebApplication.Bonuses" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <style>
+ /* Custom Styles */
+.custom-pagination {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+/* Alternate Row Color */
+.table tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; /* Adjust even row background color as needed */
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff; /* Adjust odd row background color as needed */
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Adjust hover row background color as needed */
+}
+
+
+    </style>
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -110,11 +134,37 @@
             <div class="pc-content">
                 <!-- Banner -->
                 <div class="banner bonuses">
-                    <div class="banner-caption">
-                        <i class="fas fa-haykal bonus-icon"></i>
-                        <h4 class="text-white mt-3">Network Bonus </h4>
-                        <h1 class="text-white">$0</h1>
-                    </div>
+                   <div class="banner-caption">
+        <i class="fas fa-haykal bonus-icon"></i>
+        <h4 id="bonusTitle"  title="Network Bonus" class="text-white mt-3">Network Bonus</h4>
+       
+
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to update banner caption
+        function updateBannerCaption(title) {
+            document.getElementById("bonusTitle").textContent = title;
+        }
+
+        // Function to handle tab click event
+        function handleTabClick(event) {
+            var tabId = event.target.id;
+            var title = tabId === "network-bonus-tab" ? "Network Bonus" : "Direct Bonus";
+            updateBannerCaption(title);
+        }
+
+        // Get the tab elements and add click event listeners
+        document.getElementById("network-bonus-tab").addEventListener("click", handleTabClick);
+        document.getElementById("direct-bonus-tab").addEventListener("click", handleTabClick);
+
+        // Initial call to set the banner caption based on the default active tab
+        var defaultTabId = document.querySelector(".nav-link.active").id;
+        var defaultTitle = defaultTabId === "network-bonus-tab" ? "Network Bonus" : "Direct Bonus";
+        updateBannerCaption(defaultTitle);
+    });
+</script>
+
                     <div class="leaf">
                         <div>
                             <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
@@ -222,49 +272,31 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
-                            <div class="tab-pane fade show active overflow-x-auto" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
-                                <table id="" class="table table-striped table-hover w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Date/Time</th>
-                                            <th>Username</th>
-                                            <th>Subscription</th>
-                                            <th>Position</th>
-                                            <th>Total Earned</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>09-02-2024 | 12:33:56</td>
-                                            <td>user_123</td>
-                                            <td>None</td>
-                                            <td>Left</td>
-                                            <td>$0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                                                    <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Bonus withdrawal requires completed KYC verification.</div>
+                            <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
+                 <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
+    <Columns>
+        <asp:BoundField DataField="LeftNetworkVolume" HeaderText="Left Network Volume" />
+        <asp:BoundField DataField="RightNetworkVolume" HeaderText="Right Network Volume" />
+        <asp:BoundField DataField="BonusVolume" HeaderText="Bonus Volume" />
+        <asp:BoundField DataField="BonusAmount" HeaderText="Bonus Amount" />
+        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
+        <asp:BoundField DataField="BonusNumber" HeaderText="Bonus Number" />
+    </Columns>
+    <PagerStyle CssClass="custom-pagination" />
+</asp:GridView>
                             </div>
-                            <div class="tab-pane fade overflow-x-auto" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
-                                <table id="" class="table table-striped table-hover w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Date/Time</th>
-                                            <th>Username</th>
-                                            <th>Subscription</th>
-                                            <th>Position</th>
-                                            <th>Total Earned</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>09-02-2024 | 12:33:56</td>
-                                            <td>user_123</td>
-                                            <td>None</td>
-                                            <td>Left</td>
-                                            <td>$0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                            <div class="tab-pane fade" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
+    <asp:GridView ID="gvDirectBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Direct_Bonus_ID" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvDirectBonus_PageIndexChanging" Width="100%" CssClass="table table-bordered table-hover">
+                    <Columns>
+                        <asp:BoundField DataField="Bonus_Amount" HeaderText="Bonus Amount" />
+                        <asp:BoundField DataField="Is_Active" HeaderText="Is Active" />
+                        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
+                        
+                    </Columns>
+                    <PagerStyle CssClass="custom-pagination" />
+                </asp:GridView>
                             </div>
                         </div>
                     </div>

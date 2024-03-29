@@ -610,7 +610,7 @@
                                     <div class="dropdown">
                                         <a
                                             class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
-                                            href="#"
+                                            href="Memberships.aspx"
                                             data-bs-toggle="dropdown"
                                             aria-haspopup="true"
                                             aria-expanded="false">

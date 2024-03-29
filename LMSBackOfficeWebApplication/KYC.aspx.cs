@@ -13,6 +13,7 @@ using System.Data;
 using System.Data.SqlClient;
 using LMSBackOfficeDAL;
 using LMSBackofficeDAL;
+using ServiceStack;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -24,10 +25,43 @@ namespace LMSBackOfficeWebApplication
 
             if (!IsPostBack)
             {
+                if (Session["Username"] == null)
+                {
+                    // Session has expired, redirect to login page
+                    Response.Redirect("~/Login.aspx");
+                }
+
+                var user = Session["Username"].ToString();
+                var currentUser = Members_DataAccess.GetMemberInfo(user);
+
+                GetCountries();
+
                 /*gvwBonusType.DataSource = null;*/
                 ShowBonusTypes();
+
+                countries.SelectedValue = currentUser.CountryId;
+                txtUsername.Text = currentUser.Email;
             }
 
+        }
+
+        public void GetCountries()
+        {
+            try
+            {
+                List<Countries_DataAccess.Country> allCountries = Countries_DataAccess.GetAllCountries();
+
+                // Populate select element with countries
+                foreach (Countries_DataAccess.Country country in allCountries)
+                {
+                    ListItem item = new ListItem(country.CountryName, country.CountryID);
+                    countries.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                WriteLog.LogError(ex);
+            }
         }
 
 

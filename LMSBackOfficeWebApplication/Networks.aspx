@@ -286,7 +286,7 @@
                                                     <ControlStyle Width="100px" />
                                                 </asp:BoundField>
 
-                                                <asp:BoundField DataField="PurchasedDate" HeaderText="Purchased Date" ControlStyle-CssClass="gvheader">
+                                                <asp:BoundField DataField="PurchasedDate" HeaderText="Membership Expiry" ControlStyle-CssClass="gvheader">
                                                     <ControlStyle Width="250px" />
                                                 </asp:BoundField>
 

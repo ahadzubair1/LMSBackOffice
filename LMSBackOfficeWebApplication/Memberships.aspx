@@ -319,7 +319,7 @@
                         <h5 class=" modal-title font-bold fs-4" id="membershipModalLabel">Membership Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form id="membershipForm" method="post">
+                   <%-- <form id="membershipForm" method="post">--%>
 
                         <div class="modal-body">
                             <div class="mb-3 col-12">
@@ -341,9 +341,9 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary" id="btnSubmit">Submit</button>
                         </div>
-                    </form>
+                   <%-- </form>--%>
                 </div>
             </div>
         </div>
@@ -389,27 +389,56 @@
                         nameField.value = membershipName;
                         feeField.value = activationFee;
                     }
-                    document.getElementById('membershipForm').addEventListener('submit', function (event) {
+                    document.getElementById('btnSubmit').addEventListener('click', function (event) {
                         event.preventDefault(); // Prevent default form submission behavior
 
-                        // Serialize form data
-                        var formData = new FormData(this);
+                        var model = {
+                            "MemberShipCode": $('#membershipCode').val(),
+                            "Amount": $('#amount').val()
+                        };
 
-                        // Submit form data via AJAX
-                        fetch('memberships.aspx', {
-                            method: 'POST',
-                            body: formData
-                        })
-                            .then(response => response.text())
-                            .then(data => {
-                                // Handle the response if needed
-                                console.log(data);
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                            });
+                        SaveMembership(model);
+
+                        // Serialize form data
+                        //var formData = new FormData(this);
+
+                        //// Submit form data via AJAX
+                        //fetch('memberships.aspx', {
+                        //    method: 'POST',
+                        //    body: formData
+                        //})
+                        //    .then(response => response.text())
+                        //    .then(data => {
+                        //        // Handle the response if needed
+                        //        console.log(data);
+                        //    })
+                        //    .catch(error => {
+                        //        console.error('Error:', error);
+                        //    });
                     });
                 });
+
+                function SaveMembership(ticket) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'Memberships.aspx/PurchaseMemberShip',
+                        data: JSON.stringify({ model: ticket }),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (response) {
+                            if (response.d == "success") {
+                                $('#membershipModal').modal('hide');
+                                window.location.href = "/PurchaseResponse.aspx?success=1";
+                            } else {
+                                window.location.href = "/PurchaseResponse.aspx?success=0";
+                            }
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            // remove lion which variable doesn't exist.
+                            console.log("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + ticket);
+                        }
+                    });
+                }
             </script>
         </footer>
     </main>
