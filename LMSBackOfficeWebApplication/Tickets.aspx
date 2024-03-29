@@ -16,12 +16,14 @@
             border-width: 0;
             padding: 0.5rem 0.5rem;
         }
-        .errormessage{
-            color:red;
+
+        .errormessage {
+            color: red;
         }
-        .gvheader{
-            text-transform:uppercase;
-            font-size:13px;
+
+        .gvheader {
+            text-transform: uppercase;
+            font-size: 13px;
         }
     </style>
     <main>
@@ -53,7 +55,7 @@
                     <div class="row g-3 mb-3">
 
                         <div class="col-md-4">
-                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter title/Ticket Code/Ticket Type"></asp:TextBox>
+                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter Title/Ticket Code/Ticket Type"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
                             <%--<button class="btn btn-primary" type="submit">Search</button>--%>
@@ -80,54 +82,55 @@
                                         <div class="col-md-12" style="float: right;">
                                             <asp:Button ID="btnExportToExcel" runat="server" Text="Export To Excel" CssClass="btn btn-primary button-position" OnClick="btnExportToExcel_Click" CausesValidation="false" />
                                         </div>
-                                        <asp:GridView ID="gv_tickets" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px"
-                                            CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True">
-                                            <AlternatingRowStyle BackColor="Gainsboro" />
-                                            <Columns>
-                                                <asp:BoundField DataField="TicketTitle" HeaderText="Title">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="TicketCode" HeaderText="Ticket Code">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="TicketType" HeaderText="Ticket Type">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="Description" HeaderText="Description">
-                                                    <ControlStyle Width="250px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="TicketPriority" HeaderText="Priority">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="CreatedDate" HeaderText="Created Date">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="Status" HeaderText="Status">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                            </Columns>
-                                            <EmptyDataTemplate>
-                                                No record found<br />
-                                            </EmptyDataTemplate>
-                                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                            <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="35" />
-                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" />
-                                            <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
-                                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                            <SortedDescendingHeaderStyle BackColor="#000065" />
-                                        </asp:GridView>
+                                        <div class="overflow-x-auto">
+                                            <asp:GridView ID="gv_tickets" runat="server" AutoGenerateColumns="False" GridLines="Vertical" AllowPaging="True" CssClass="table table-striped table-hover">
+                                                <AlternatingRowStyle BackColor="Gainsboro" />
+                                                <Columns>
+                                                    <asp:BoundField DataField="TicketTitle" HeaderText="Title">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="TicketCode" HeaderText="Ticket Code">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="TicketType" HeaderText="Ticket Type">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Description" HeaderText="Description">
+                                                        <ControlStyle Width="250px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="TicketPriority" HeaderText="Priority">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="CreatedDate" HeaderText="Created Date">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Status" HeaderText="Status">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                </Columns>
+                                                <EmptyDataTemplate>
+                                                    No record found<br />
+                                                </EmptyDataTemplate>
+                                                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                                <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="35" />
+                                                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" />
+                                                <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+                                                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                                <SortedDescendingHeaderStyle BackColor="#000065" />
+                                            </asp:GridView>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <!-- [ Main Content ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
         </div>
         <div class="modal fade modal-animate anim-blur " id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -141,7 +144,7 @@
                         <div class="mb-3 col-12">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" style="max-width: 100%" class="form-control w-100" id="txtTitle" name="title" />
-                             <span class="errormessage" id="titleerror"></span>
+                            <span class="errormessage" id="titleerror"></span>
                         </div>
                         <div class="mb-3 col-12">
                             <label for="amount" class="form-label">Ticket Type</label>
@@ -163,7 +166,7 @@
                             <textarea class="form-control" rows="4" id="txtDescription" name="description"></textarea>
                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please write description"></asp:RequiredFieldValidator>--%>
                             <%--<input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />--%>
-                        <span class="errormessage" id="descriptionerror"></span>
+                            <span class="errormessage" id="descriptionerror"></span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -178,7 +181,7 @@
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>
@@ -217,7 +220,7 @@
             }
 
             var description = $('#txtDescription').val();
-            if (description == "") {                
+            if (description == "") {
                 error.innerHTML = "Please enter description";
                 error.style.visibility = 'visible';
                 return false;

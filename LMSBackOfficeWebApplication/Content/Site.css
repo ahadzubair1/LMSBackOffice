@@ -1346,6 +1346,9 @@ label:not(.form-check-label):not(.custom-file-label) {
     .pc-container{
         top: 110px;
     }
+    .kyc-inner-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .wallet-balance i {
@@ -1368,3 +1371,7 @@ label:not(.form-check-label):not(.custom-file-label) {
         border: 1px solid #d014e4;
         color: #fff;
     }
+
+#MainContent_gv_tickets th{
+    color: #fff;
+}

@@ -12,4 +12,10 @@ namespace LMSBackOfficeWebApplication.Models
         public string Description { get; set; }
         public string Priority { get; set; }
     }
+
+    public class MemberShipModel
+    {
+        public string Amount { get; set; }
+        public string MemberShipCode { get; set; }
+    }
 }

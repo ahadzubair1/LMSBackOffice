@@ -263,36 +263,38 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Credit Wallet Transactions</h5>
-                                <table id="" class="table table-striped" style="width: 100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Wallet Code</th>
-                                            <th>Wallet Type</th>
-                                            <th>Wallet Address</th>
-                                            <th>Wallet Balance</th>
-                                            <th>Last Transaction Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <%if (dt != null && dt.Rows.Count > 0)
-                                            { %>
+                                <div class="overflow-x-auto">
+                                    <table id="" class="table table-striped" style="width: 100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Wallet Code</th>
+                                                <th>Wallet Type</th>
+                                                <th>Wallet Address</th>
+                                                <th>Wallet Balance</th>
+                                                <th>Last Transaction Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%if (dt != null && dt.Rows.Count > 0)
+                                                { %>
 
-                                        <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                            {%>
-                                        <tr>
-                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                            <%foreach (System.Data.DataRow dr in this.dt.Rows)
                                                 {%>
-                                            <td>
-                                                <%=dr[dc.ColumnName]%>
-                                            </td>
+                                            <tr>
+                                                <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                    {%>
+                                                <td>
+                                                    <%=dr[dc.ColumnName]%>
+                                                </td>
+                                                <%} %>
+                                            </tr>
                                             <%} %>
-                                        </tr>
-                                        <%} %>
 
-                                        <%} %>
-                                        <!-- Add more rows as needed -->
-                                    </tbody>
-                                </table>
+                                            <%} %>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -370,7 +372,7 @@
      <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

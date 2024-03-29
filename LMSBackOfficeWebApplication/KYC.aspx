@@ -234,8 +234,9 @@
                                                 <%--  <form action="">--%>
                                                 <div class="form-item">
                                                     <label for="Username">Username</label>
-                                                    <input type="text" name="Username" class="kyc-input" disabled
-                                                        placeholder="Enter Username" value="user@example.com" />
+                                                    <asp:TextBox ID="txtUsername" runat="server" CssClass="kyc-input" ReadOnly="true"></asp:TextBox>
+                                                  <%--  <input type="text" name="Username" id="txtUsername" class="kyc-input" disabled runat="server"
+                                                        placeholder="Enter Username" value="user@example.com" />--%>
                                                 </div>
                                                 <div class="form-item">
                                                     <label for="Country">Country</label>
@@ -243,11 +244,14 @@
                                                         <span class="country-flag">
                                                             <img src="Content/images/kyc/uae.png" width="20" alt="uae">
                                                         </span>
-                                                        <select name="Country" id="Country" class="kyc-select">
+                                                     <%--   <select name="Country" id="Country" class="kyc-select">
                                                             <option value="">UAE</option>
                                                             <option value="">U.S</option>
                                                             <option value="">India</option>
-                                                        </select>
+                                                        </select>--%>
+                                                          <asp:DropDownList id="countries" name="Country" class="kyc-select" required="required" runat="server">
+      <asp:ListItem Text="Select Country" Value="" Selected="True" />
+  </asp:DropDownList>
                                                     </div>
                                                 </div>
                                                 <div class="form-item">
@@ -263,7 +267,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 mb-5">
                                     <div class="kyc-grid w-100">
                                         <%-- <form action="">--%>
                                         <div class="kyc-form-wrapper">
@@ -386,10 +390,11 @@
                 </div>
             </div>
         </div>
+        </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

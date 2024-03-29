@@ -253,8 +253,8 @@
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
 <%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
-                                            <asp:TextBox runat="server" ID="txtSearch"  ></asp:TextBox>
-                                            <asp:Button runat="server" ID="btnSearch" Text="Search" Enabled="true" OnClick="btnSearch_Click" />
+                                            <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" Placeholder="Search a user"></asp:TextBox>
+                                            <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" Enabled="true" OnClick="btnSearch_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -319,11 +319,12 @@
             </div>
             <!-- [ Main Content ] end -->
         </div>
+        </div>
     
      <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>
