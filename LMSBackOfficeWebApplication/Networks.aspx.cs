@@ -16,6 +16,8 @@ namespace LMSBackOfficeWebApplication
         protected DataTable referrelsTable { get; set; }
         protected DataTable networkTreeTable { get; set; }
 
+        protected DataTable allTreeMembers { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,9 +29,10 @@ namespace LMSBackOfficeWebApplication
 
 
                 string memberIdParam = Request.QueryString["memberkey"];
-
+              
                 if (!string.IsNullOrEmpty(memberIdParam))
                 {
+
 
                     BindGridView(memberIdParam);
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
@@ -43,6 +46,7 @@ namespace LMSBackOfficeWebApplication
 
                     string userName = Session["Username"].ToString();
                     var member = Members_DataAccess.GetMemberInfo(userName);
+
                     BindGridView(member.Id);
                     networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
 
@@ -114,6 +118,25 @@ namespace LMSBackOfficeWebApplication
             referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
             gvReferrelsTable.DataSource = referrelsTable;
             gvReferrelsTable.DataBind();
+
+
+
+ 
+        }
+
+
+        public void LoadAllMembers(string memberIdParam)
+        {
+
+            try {
+                allTreeMembers = Members_DataAccess.GetAllTreeMembersByMemberId(memberIdParam);
+
+            }
+            catch { 
+            
+            }
+            
+
         }
 
         private string GenerateNodeHtml(DataTable dataTable, string parentId, int Level)
@@ -344,6 +367,84 @@ namespace LMSBackOfficeWebApplication
             var member = Members_DataAccess.GetMemberInfo(userName);
             gvReferrelsTable.PageIndex = e.NewPageIndex;
             BindGridView(member.Id); //bindgridview will get the data source and bind it again
+        }
+
+        /*protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            //if (txtSearch.Text == "")
+            //{ }
+            //else
+            //{
+
+
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+
+         //  LoadAllMembers(member.Id);
+           DataTable dt=Members_DataAccess.GetAllTreeMembersByMemberId(member.Id);
+            FindMemberId(dt, txtSearch.Text);
+
+            //}
+        }*/
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string userName = Session["Username"].ToString();
+
+                if (txtSearch.Text.ToLower().Equals(userName.ToString()))//Case when user search logged in member i.e himself
+                    Response.Redirect("/Networks");
+
+                var member = Members_DataAccess.GetMemberInfo(userName);
+
+                // Load all members data only once during the initial page load
+                if (allTreeMembers == null)
+                {
+                    LoadAllMembers(member.Id);
+                }
+
+                // Perform the search operation within the existing data
+                string memberId = FindMemberId(allTreeMembers, txtSearch.Text);
+
+                // Redirect to the found member's network page
+                if (!string.IsNullOrEmpty(memberId))
+                {
+                    Response.Redirect("/Networks?memberkey=" + memberId);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        public string FindMemberId(DataTable dataTable, string searchString)
+        {
+           
+
+            string memberId = "";
+
+            // Check if the DataTable and search string are valid
+            if (dataTable != null && !string.IsNullOrEmpty(searchString))
+            {
+                // Loop through each row in the DataTable
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // Retrieve the value of the Member_UserName column
+                    string memberUserName = row["Member_UserName"].ToString();
+
+                    // Check if the current row's Member_UserName matches the search string
+                    if (memberUserName.Equals(searchString))
+                    {
+                        // If a match is found, retrieve the corresponding Member_ID
+                        memberId = row["Member_ID"].ToString();
+                        //Response.Redirect("/Networks?memberkey="+memberId);
+                        break; // Exit the loop since we found a match
+                    }
+                }
+            }
+
+            return memberId;
         }
     }
 }

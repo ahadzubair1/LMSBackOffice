@@ -252,7 +252,9 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
-                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">
+<%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
+                                            <asp:TextBox runat="server" ID="txtSearch"  ></asp:TextBox>
+                                            <asp:Button runat="server" ID="btnSearch" Text="Search" Enabled="true" OnClick="btnSearch_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +269,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="referrels" role="tabpanel" aria-labelledby="referrels-tab">
-                        <asp:UpdatePanel runat="server">
+                        <asp:UpdatePanel ChildrenAsTriggers="true" runat="server">
                             <ContentTemplate>
                                 <div class="card">
                                     <div class="card-body">
@@ -360,4 +362,14 @@
                      });
                  };
     </script>
+      <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function () {
+              var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
+                if (searchButton) {
+                    searchButton.addEventListener("click", function () {
+                        searchButton.click();
+                    });
+                }
+            });
+      </script>
 </asp:Content>
