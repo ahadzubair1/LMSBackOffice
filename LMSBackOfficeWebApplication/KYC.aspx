@@ -263,7 +263,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 mb-5">
                                     <div class="kyc-grid w-100">
                                         <%-- <form action="">--%>
                                         <div class="kyc-form-wrapper">
@@ -283,7 +283,7 @@
                                                         <label for="checkbox_nic">NIC</label>
                                                     </div>
                                                     <div class="single-checkbox">
-                                                        <span class="text-danger">Any document is mandatory</span>
+                                                        <span class="text-danger">Only One Document Type is Required</span>
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
@@ -386,10 +386,11 @@
                 </div>
             </div>
         </div>
+        </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

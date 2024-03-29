@@ -252,7 +252,9 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
-                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">
+<%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
+                                            <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" Placeholder="Search a user"></asp:TextBox>
+                                            <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" Enabled="true" OnClick="btnSearch_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +269,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="referrels" role="tabpanel" aria-labelledby="referrels-tab">
-                        <asp:UpdatePanel runat="server">
+                        <asp:UpdatePanel ChildrenAsTriggers="true" runat="server">
                             <ContentTemplate>
                                 <div class="card">
                                     <div class="card-body">
@@ -317,11 +319,12 @@
             </div>
             <!-- [ Main Content ] end -->
         </div>
+        </div>
     
      <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>
@@ -360,4 +363,14 @@
                      });
                  };
     </script>
+      <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function () {
+              var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
+                if (searchButton) {
+                    searchButton.addEventListener("click", function () {
+                        searchButton.click();
+                    });
+                }
+            });
+      </script>
 </asp:Content>

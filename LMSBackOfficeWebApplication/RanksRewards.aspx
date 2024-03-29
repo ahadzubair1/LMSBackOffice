@@ -328,7 +328,7 @@
     <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

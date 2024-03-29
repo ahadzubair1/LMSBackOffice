@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.cs" Inherits="LMSBackOfficeWebApplication.Transactions" %>
 
 <asp:Content ID="TransactionContent" ContentPlaceHolderID="MainContent" runat="server">
-        <style>
-        .button-position{
-            float:right;
+    <style>
+        .button-position {
+            float: right;
         }
     </style>
     <main>
@@ -55,38 +55,40 @@
                                         </div>
                                     </div>
                                 </div>
-                                <table id="" class="table table-striped" style="width: 100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Transaction Code</th>
-                                            <th>Transaction_Type</th>
-                                            <th>Amount</th>
-                                            <%-- <th>Receiver Address</th>--%>
-                                            <th>Currency</th>
-                                            <th>Fee</th>
-                                            <th>Transaction Date</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <%if (dt != null && dt.Rows.Count > 0)
-                                            { %>
+                                <div class="overflow-x-auto">
+                                    <table id="" class="table table-striped" style="width: 100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Transaction Code</th>
+                                                <th>Transaction_Type</th>
+                                                <th>Amount</th>
+                                                <%-- <th>Receiver Address</th>--%>
+                                                <th>Currency</th>
+                                                <th>Fee</th>
+                                                <th>Transaction Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%if (dt != null && dt.Rows.Count > 0)
+                                                { %>
 
-                                        <%foreach (System.Data.DataRow dr in this.dt.Rows)
-                                            {%>
-                                        <tr>
-                                            <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                            <%foreach (System.Data.DataRow dr in this.dt.Rows)
                                                 {%>
-                                            <td>
-                                                <%=dr[dc.ColumnName]%>
-                                            </td>
+                                            <tr>
+                                                <%foreach (System.Data.DataColumn dc in this.dt.Columns)
+                                                    {%>
+                                                <td>
+                                                    <%=dr[dc.ColumnName]%>
+                                                </td>
+                                                <%} %>
+                                            </tr>
                                             <%} %>
-                                        </tr>
-                                        <%} %>
 
-                                        <%} %>
-                                    </tbody>
-                                </table>
+                                            <%} %>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,10 +97,11 @@
             </div>
             <!-- [ Main Content ] end -->
         </div>
+        </div>
         <!-- [ Main Content ] end -->
         <footer class="pc-footer">
             <div class="footer-wrapper container-fluid">
-                <div class="row">
+                <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
                             Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com</a>

@@ -25226,11 +25226,6 @@ body:not([data-pc-theme="dark"]) .pc-header {
 }
 
 @media (max-width: 575.98px) {
-    .pc-header .pc-head-link {
-        padding: 0.65rem;
-        margin: 0 5px;
-    }
-
     .pc-header .pc-h-item {
         position: static;
     }
@@ -31032,6 +31027,11 @@ select.dataTable-input {
             margin-top: 24px;
             margin-bottom: 24px;
         }
+
+    .pc-header .header-wrapper {
+        padding: 0 15px;
+        flex-direction: column;
+    }
 }
 
 .user-story-block {
