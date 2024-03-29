@@ -283,7 +283,7 @@
                                                         <label for="checkbox_nic">NIC</label>
                                                     </div>
                                                     <div class="single-checkbox">
-                                                        <span class="text-danger">Any document is mandatory</span>
+                                                        <span class="text-danger">Only One Document Type is Required</span>
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
