@@ -1,6 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
-using LMSBackofficeDAL;
+﻿using LMSBackofficeDAL;
 using LMSBackOfficeDAL;
 using LMSBackOfficeWebApplication.Models;
 using Microsoft.Ajax.Utilities;
@@ -63,42 +61,45 @@ namespace LMSBackOfficeWebApplication
                             Balance = Convert.ToDouble(walletBalance);
                         }
 
-                            if (Balance >= TotalAmount)
+                        if (Balance >= TotalAmount)
+                        {
+                            double newBalance = Balance - TotalAmount;
+                            var member = Members_DataAccess.GetMemberInfo(HttpContext.Current.Session["Username"].ToString());
+                            var orderId = Guid.NewGuid().ToString();
+                            MemberWallets_DataAcsess.UpdateMemberCreditWallet(MemberId, Convert.ToDecimal(newBalance), 0);
+                            Transactions_DataAcsess.AddTransactions(MemberId, orderId, "Membership Purchase", "USD", Configurations.ToCurrency,
+                                                            string.Empty, Configurations.CompanyCryptoWallet, "Complete",
+                                                            Convert.ToDecimal(model.Amount));
+                            var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
+                            Network_DataAccess.AssignNetworkParent(MemberId);
+                            DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
+                            if (SuccessPurchase == "Success")
                             {
-                                double newBalance = Balance - TotalAmount;
-                                var orderId = Guid.NewGuid().ToString();
-                                var member = Members_DataAccess.GetMemberInfo(Session["Username"].ToString());
-                                MemberWallets_DataAcsess.UpdateMemberCreditWallet(MemberId, Convert.ToDecimal(newBalance), 0);
-                                Transactions_DataAcsess.AddTransactions(MemberId, orderId, "Membership Purchase", "USD", Configurations.ToCurrency,
-                                                                string.Empty, Configurations.CompanyCryptoWallet, "Complete",
-                                                                Convert.ToDecimal(amount));
-
-                                var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
-                                Network_DataAccess.AssignNetworkParent(MemberId);
-                                DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
-                                if (SuccessPurchase == "Success")
-                                {
-                                    UtilMethods.SendEmailMembership(member.MemberFullName, MembershipName, DateTime.Now.ToString(), member.Country);
-                                    UtilMethods.SendEmailMembershipToUser(member.Email, member.MemberFullName, MembershipName);
-                                    Response.Redirect("PurchaseResponse.aspx?success=1");
-                                }
-                            }
-                            else
-                            {
-                                Response.Redirect("PurchaseResponse.aspx?success=0");
+                                UtilMethods.SendEmailMembership(member.MemberFullName, MembershipName, DateTime.Now.ToString(), member.Country, member.Email);
+                                UtilMethods.SendEmailMembershipToUser(member.Email, member.MemberFullName, MembershipName);
+                                response = "success";
                             }
                         }
                         else
                         {
-                            Response.Redirect("PurchaseResponse.aspx?success=0");
+                            response = "fail";
                         }
                     }
                     else
                     {
-                        Response.Redirect("PurchaseResponse.aspx?success=0");
+                        response = "fail";
                     }
-
                 }
+                else
+                {
+                    response = "fail";
+                }
+            }
+            catch (Exception ex)
+            {
+                WriteLog.LogError(ex);
+                response = "fail";
+            }
 
             return response;
         }
