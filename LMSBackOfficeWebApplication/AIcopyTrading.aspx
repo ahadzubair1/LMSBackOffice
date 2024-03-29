@@ -170,7 +170,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p class="m-0">The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -193,7 +193,7 @@
                                                         <span>Equity Required<span>30%</span></span>
                                                         <span>Average Annual Growth<span>84%*</span></span>
                                                     </div>
-                                                    <p class="small">*Excluding Compounding</p>
+                                                    <p class="small m-0">*Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,8 +222,8 @@
                                                 <div class="card-body">
                                                     <h5>Trading Statistics (Medium):</h5>
                                                     <div class="f-list">
-                                                        <span>Average Annual Growth<span>56%*</span></span>
-                                                        <span>Average Max Drawdown<span>3.82%</span></span>
+                                                        <span>Average Annual Growth<span>96%*</span></span>
+                                                        <span>Average Max Drawdown<span>7.5%</span></span>
                                                         <span>Equity Required<span>20%</span></span>
                                                     </div>
                                                 </div>
@@ -231,7 +231,9 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Pioneer is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p class="m-0">
+                                                        The Pioneer EA is a trailblazer within the algorithmic trading industry. It is designed and managed by another of our 'master traders' and uses price action and Fibonacci retracements to enter trades. This unique algorithm also implements Martingale trading to combat adverse volatility.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -242,19 +244,19 @@
                                                     <h6 class="font-bold">Low</h6>
                                                     <div class="f-list">
                                                         <span>Equity Required<span>10%</span></span>
-                                                        <span>Average Annual Growth<span>28%*</span></span>
+                                                        <span>Average Annual Growth<span>48%*</span></span>
                                                     </div>
                                                     <h6 class="font-bold">Medium</h6>
                                                     <div class="f-list">
                                                         <span>Equity Required<span>20%</span></span>
-                                                        <span>Average Annual Growth<span>56%*</span></span>
+                                                        <span>Average Annual Growth<span>96%*</span></span>
                                                     </div>
                                                     <h6 class="font-bold">Aggressive</h6>
                                                     <div class="f-list">
                                                         <span>Equity Required<span>30%</span></span>
-                                                        <span>Average Annual Growth<span>84%*</span></span>
+                                                        <span>Average Annual Growth<span>144%*</span></span>
                                                     </div>
-                                                    <p class="small">*Excluding Compounding</p>
+                                                    <p class="small m-0">*Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
