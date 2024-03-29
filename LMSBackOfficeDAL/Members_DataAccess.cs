@@ -393,7 +393,7 @@ namespace LMSBackOfficeDAL
                                     Country = reader["MemberCountry"].ToString(),
                                     MembershipName= reader["Membership_Name"].ToString(),
                                     MemberRank= reader["Member_RankDesc"].ToString(),
-
+                                    CountryId = reader["CountryID"].ToString()
                                 };
                             }
                         }
