@@ -135,7 +135,7 @@ namespace LMSBackOfficeWebApplication
 
 
                         //Update Balance in UserWallet table 
-                        MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+                       // MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 1);
 
                         //Add Transaction and Coin PaymentTransaction
                         Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,

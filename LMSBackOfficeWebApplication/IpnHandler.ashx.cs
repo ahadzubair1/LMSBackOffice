@@ -47,7 +47,7 @@ namespace Coinpayments.Example
                     {
                         WriteLog.LogInfo($"Current LoggedIn user Id : {memberInfo.MemberId}");
 
-                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, 0, 1);
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 1);
                         WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
                         //Update Transaction on success
                         var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberInfo.MemberId, memberInfo.OrderId, req.Fee, CoinPaymentStatus.Complete.ToString());
