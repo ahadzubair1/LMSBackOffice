@@ -99,17 +99,22 @@
                     </div>
                     <form class="form" id="myForm" runat="server">
                         <div class="row">
-                            <div class="mb-3 col-md-12">
+                            <div class="mb-3 col-md-6">
                                 <label for="" class="text-white">Full Name</label>
                                 <input class="form-control" type="text" name="fullname" id="fullname" placeholder="Full Name" required="required" runat="server" />
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                <label for="" class="text-white">UserName</label>
+                                <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server" />
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="" class="text-white">E-mail</label>
                                 <input class="form-control" type="email" name="email" id="email" placeholder="Email" required="required" runat="server" />
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="" class="text-white">UserName</label>
-                                <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server" />
+                                <label for="" class="text-white">Referral Code</label>
+                                <input class="form-control" type="text" name="refcode" id="refcode" placeholder="Referral Code" required="required" runat="server" />
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="" class="text-white">Create Password</label>
@@ -119,17 +124,14 @@
                                 <label for="" class="text-white">Re-enter Password</label>
                                 <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" placeholder="Re-enter Password" required="required" runat="server" />
                             </div>
-                            <div class="mb-3 col-md-6">
-                                <label for="" class="text-white">Referral Code</label>
-                                <input class="form-control" type="text" name="refcode" id="refcode" placeholder="Referral Code" required="required" runat="server" />
-                            </div>
+
                             <div class="mb-3 col-md-6">
                                 <label for="" class="text-white">Phone</label>
                                 <input class="form-control" type="number" name="phone" id="phone" placeholder="Phone Number" required="required" runat="server" />
                             </div>
-                            <div class="mb-3 col-md-12">
+                            <div class="mb-3 col-md-6">
                                 <label for="" class="text-white">Country</label>
-                                <asp:DropDownList id="countries" name="countries" class="form-control" required="required" runat="server">
+                                <asp:DropDownList ID="countries" name="countries" class="form-control" required="required" runat="server">
                                     <asp:ListItem Text="Select Country" Value="" Selected="True" />
                                 </asp:DropDownList>
                             </div>
