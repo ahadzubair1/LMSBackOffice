@@ -65,7 +65,7 @@ namespace LMSBackOfficeWebApplication
                 else
                 {
                     this.successMessage.Value = "false";
-                    Response.AddHeader("REFRESH", "3;URL=Login.aspx");
+                    Response.AddHeader("REFRESH", "1;URL=Login.aspx");
                     ResponseMessage.InnerText = "Login Failed: Wrong Captcha";
                     ResponseMessage.Style.Add("display", "block");
                     ResponseMessage.Style.Add("color", "#ff2600");
@@ -78,7 +78,7 @@ namespace LMSBackOfficeWebApplication
                 ResponseMessage.InnerText = "Error Occurred:" + Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
-                Response.AddHeader("REFRESH", "3;URL=Login.aspx");
+                Response.AddHeader("REFRESH", "1;URL=Login.aspx");
             }
 
         }

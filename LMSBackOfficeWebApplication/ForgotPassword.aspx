@@ -89,12 +89,12 @@
                 <div class="col-md-6">
                 <div class="bg-dark p-3 border-primary rounded">
                     <div class="col-md-12 text-center">
-                        <h5 id="ResponseMessage" runat="server" style="display: none;"></h5>
+                        <h5 id="ResponseMessage1" runat="server" style="display: none;"></h5>
                     </div>
                     <form class="form" id="myForm" runat="server">
                         <div class="mb-3">
                             <label for="" class="text-white">Email Address</label>
-                            <input class="form-control" type="text" name="reg_email" id="reg_email" placeholder="Email Address" required="required" runat="server" />
+                            <input class="form-control" type="text" name="reg_email1" id="reg_email1" placeholder="Email Address" required="required" runat="server" />
                         </div>
                         <div class="mb-3">
                             <cc1:CaptchaControl runat="server" ID="ccLink"
@@ -112,9 +112,8 @@
                                 ControlToValidate="txtCaptcha" Display="Dynamic"></asp:RequiredFieldValidator>
                         </div>
 
-                        <input type="hidden" id="successMessage" value="false" runat="server" />
-                        <div class="mb-3">
-                            <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Send Reset Link" id="btnSubmit" onserverclick="btnSubmit_Reset" runat="server" />
+                       <div class="mb-3">
+                            <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Send Reset Link" id="btnSubmit" runat="server" onserverclick="btnSubmit_Reset" />
                         </div>
                         <div class="mb-3">
                             <a href="Login.aspx" target="_blank" class="text-white">Back to Login</a>
