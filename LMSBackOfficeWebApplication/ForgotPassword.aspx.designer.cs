@@ -15,13 +15,13 @@ namespace LMSBackOfficeWebApplication
     {
 
         /// <summary>
-        /// ResponseMessage control.
+        /// ResponseMessage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResponseMessage;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResponseMessage1;
 
         /// <summary>
         /// myForm control.
@@ -33,13 +33,13 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm myForm;
 
         /// <summary>
-        /// reg_email control.
+        /// reg_email1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText reg_email;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText reg_email1;
 
         /// <summary>
         /// ccLink control.
@@ -67,15 +67,6 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCaptcha;
-
-        /// <summary>
-        /// successMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden successMessage;
 
         /// <summary>
         /// btnSubmit control.
