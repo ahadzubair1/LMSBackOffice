@@ -60,7 +60,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Transaction Code</th>
-                                                <th>Transaction_Type</th>
+                                                <th>Transaction Type</th>
                                                 <th>Amount</th>
                                                 <%-- <th>Receiver Address</th>--%>
                                                 <th>Currency</th>

@@ -1,29 +1,27 @@
 ﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bonuses.aspx.cs" Inherits="LMSBackOfficeWebApplication.Bonuses" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
+
     <style>
- /* Custom Styles */
-.custom-pagination {
-    margin-top: 20px; /* Adjust as needed */
-    text-align: center;
-}
+        /* Custom Styles */
+        .custom-pagination {
+            margin-top: 20px; /* Adjust as needed */
+            text-align: center;
+        }
 
-/* Alternate Row Color */
-.table tbody tr:nth-of-type(even) {
-    background-color: #f8f9fa; /* Adjust even row background color as needed */
-}
+        /* Alternate Row Color */
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f8f9fa; /* Adjust even row background color as needed */
+        }
 
-.table tbody tr:nth-of-type(odd) {
-    background-color: #ffffff; /* Adjust odd row background color as needed */
-}
+        .table tbody tr:nth-of-type(odd) {
+            background-color: #ffffff; /* Adjust odd row background color as needed */
+        }
 
-/* Hover Effect */
-.table tbody tr:hover {
-    background-color: #e9ecef; /* Adjust hover row background color as needed */
-}
-
-
+        /* Hover Effect */
+        .table tbody tr:hover {
+            background-color: #e9ecef; /* Adjust hover row background color as needed */
+        }
     </style>
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
@@ -134,36 +132,46 @@
             <div class="pc-content">
                 <!-- Banner -->
                 <div class="banner bonuses">
-                   <div class="banner-caption">
-        <i class="fas fa-haykal bonus-icon"></i>
-        <h4 id="bonusTitle"  title="Network Bonus" class="text-white mt-3">Network Bonus</h4>
-       
+                    <div class="banner-caption" style="display: flex; flex-direction:row; align-items: center;">
+                        <i class="fas fa-haykal bonus-icon" style="margin-right: 0.5rem;"></i>
+                        <h4 id="bonusTitle" title="Network Bonus" class="text-white mt-3" style="margin-top: 0;">Network Bonus</h4>
+                    </div>
 
-    </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Function to update banner caption
-        function updateBannerCaption(title) {
-            document.getElementById("bonusTitle").textContent = title;
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            // Function to update banner caption
+                            function updateBannerCaption(title) {
+                                document.getElementById("bonusTitle").textContent = title;
+                            }
+
+                            // Function to handle tab click event
+                            function handleTabClick(event) {
+                                var tabId = event.target.id;
+                                if (tabId === "network-bonus-tab") {
+
+                                    updateBannerCaption("Network Bonus" + " - <%= headerTitleNetworkBonusAmount %>");
+                                }
+                                else {
+                                    updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
+                                }
+                            }
+
+                            // Get the tab elements and add click event listeners
+                            document.getElementById("network-bonus-tab").addEventListener("click", handleTabClick);
+                            document.getElementById("direct-bonus-tab").addEventListener("click", handleTabClick);
+
+                            // Initial call to set the banner caption based on the default active tab
+                            var defaultTabId = document.querySelector(".nav-link.active").id;
+                            if (defaultTabId === "network-bonus-tab") {
+
+                                updateBannerCaption("Network Bonus" + " - <%= headerTitleNetworkBonusAmount %>");
         }
+        else {
+            updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
+                            }
+                        });
+                    </script>
 
-        // Function to handle tab click event
-        function handleTabClick(event) {
-            var tabId = event.target.id;
-            var title = tabId === "network-bonus-tab" ? "Network Bonus" : "Direct Bonus";
-            updateBannerCaption(title);
-        }
-
-        // Get the tab elements and add click event listeners
-        document.getElementById("network-bonus-tab").addEventListener("click", handleTabClick);
-        document.getElementById("direct-bonus-tab").addEventListener("click", handleTabClick);
-
-        // Initial call to set the banner caption based on the default active tab
-        var defaultTabId = document.querySelector(".nav-link.active").id;
-        var defaultTitle = defaultTabId === "network-bonus-tab" ? "Network Bonus" : "Direct Bonus";
-        updateBannerCaption(defaultTitle);
-    });
-</script>
 
                     <div class="leaf">
                         <div>
@@ -272,31 +280,31 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
-                                                                                    <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Bonus withdrawal requires completed KYC verification.</div>
+                            <div class="alert alert-secondary small py-1" role="alert" style="color:#dd12ec"><i class="ti ti-alert-circle"></i>&nbsp;<strong>KYC Verification is Must Required for Bonus Withdrawal</strong></div>
                             <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
-                 <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
-    <Columns>
-        <asp:BoundField DataField="LeftNetworkVolume" HeaderText="Left Network Volume" />
-        <asp:BoundField DataField="RightNetworkVolume" HeaderText="Right Network Volume" />
-        <asp:BoundField DataField="BonusVolume" HeaderText="Bonus Volume" />
-        <asp:BoundField DataField="BonusAmount" HeaderText="Bonus Amount" />
-        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
-        <asp:BoundField DataField="BonusNumber" HeaderText="Bonus Number" />
-    </Columns>
-    <PagerStyle CssClass="custom-pagination" />
-</asp:GridView>
+                                <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
+                                    <Columns>
+                                        <asp:BoundField DataField="LeftNetworkVolume" HeaderText="Left Network Volume" />
+                                        <asp:BoundField DataField="RightNetworkVolume" HeaderText="Right Network Volume" />
+                                        <asp:BoundField DataField="BonusVolume" HeaderText="Bonus Volume" />
+                                        <asp:BoundField DataField="BonusAmount" HeaderText="Bonus Amount" />
+                                        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
+                                        <asp:BoundField DataField="BonusNumber" HeaderText="Bonus Number" />
+                                    </Columns>
+                                    <PagerStyle CssClass="custom-pagination" />
+                                </asp:GridView>
                             </div>
 
                             <div class="tab-pane fade" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
-    <asp:GridView ID="gvDirectBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Direct_Bonus_ID" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvDirectBonus_PageIndexChanging" Width="100%" CssClass="table table-bordered table-hover">
-                    <Columns>
-                        <asp:BoundField DataField="Bonus_Amount" HeaderText="Bonus Amount" />
-                        <asp:BoundField DataField="Is_Active" HeaderText="Is Active" />
-                        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
-                        
-                    </Columns>
-                    <PagerStyle CssClass="custom-pagination" />
-                </asp:GridView>
+                                <asp:GridView ID="gvDirectBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Direct_Bonus_ID" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvDirectBonus_PageIndexChanging" Width="100%" CssClass="table table-bordered table-hover">
+                                    <Columns>
+                                        <asp:BoundField DataField="Bonus_Amount" HeaderText="Bonus Amount" />
+                                        <asp:BoundField DataField="Is_Active" HeaderText="Is Active" />
+                                        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
+
+                                    </Columns>
+                                    <PagerStyle CssClass="custom-pagination" />
+                                </asp:GridView>
                             </div>
                         </div>
                     </div>
