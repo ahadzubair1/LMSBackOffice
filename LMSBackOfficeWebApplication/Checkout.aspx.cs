@@ -45,6 +45,17 @@ namespace LMSBackOfficeWebApplication
                         txtMemberCode.Text = checkout.MemberCode;
                         txtMemberFullName.Text = checkout.MemberFullName;
                         txtEmail.Text = checkout.Email;
+
+                        if(checkout.TotalAmount > 250)
+                        {
+                            lblFeeText.Text = "Activation Fees  would also apply";
+                            activationfee.Visible = true;
+                        }
+                        else
+                        {
+                            lblFeeText.Text = "";
+                            activationfee.Visible = false;
+                        }
                     }
                 }
                 catch (Exception ex)
