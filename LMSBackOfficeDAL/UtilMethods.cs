@@ -409,10 +409,46 @@ namespace LMSBackofficeDAL
             {
                 From = new MailAddress(senderEmail),
                 Subject = "Membership Purchase",
-                Body = $@"<p>Dear {MemberName},<br><br>You have successfully purchased <b>{MembershipName}</b> Membership from Tradiix.<br><br></p>"
+                Body = $@"<div><div><div><table border=0 cellpadding=0 cellspacing=0 width=100% align='center' style='max-width:800px;margin:0 auto'><tr><td style='border:4px solid #d014e4'><table border=0 cellpadding=25 cellspacing=0 width=100%><tbody style=background:#232f45><tr><td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%><p style=margin:0><img alt=IconX border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'><tr><td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>Membership Purchase<tr><td colspan=2><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>Dear {MemberName},<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>You have successfully purchased {MembershipName} Membership from Tradiix.<tr><td><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>If you have any questions, feel free to reach out at <a href='mailto:support@tradiix.com' style=color:#d014e4>support@tradiix.com</a>.<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>Looking forward to a successful partnership!<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>Best regards,<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:0 0 10px 0;font-weight:400'>Team Tradiix.<hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>© Tradiix</table><td></table></div></div></div>"
             };
             mailMessage.IsBodyHtml = true;
             mailMessage.To.Add(email);
+
+            try
+            {
+                smtpClient.Send(mailMessage);
+                // Email sent successfully
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log errors, etc.
+                Console.WriteLine(ex.ToString());
+
+            }
+        }
+
+        public static void SendEmailForgotPassword(string toEmail, string toName, string memberCode, string currentDomainUrl)
+        {
+            string smtpServer = "smtp.gmail.com";
+            int port = 587; // Port number can vary based on your SMTP server configuration
+            string senderEmail = ConfigurationManager.AppSettings["SenderEmail"].ToString();
+            string password = ConfigurationManager.AppSettings["SenderHash"].ToString();
+
+            var smtpClient = new SmtpClient(smtpServer, port)
+            {
+                Credentials = new NetworkCredential(senderEmail, password),
+                EnableSsl = true // Enable SSL/TLS
+            };
+            string activationLink = $"{currentDomainUrl}/Activation.aspx?token={memberCode}";
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress(senderEmail),
+                Subject = "Welcome to Tradiix!",
+                Body = $@"<div><div><div><table border=0 cellpadding=0 cellspacing=0 width=100% align=center style='max-width:800px;margin:0 auto'><tr><td style='border:4px solid #d014e4'><table border=0 cellpadding=25 cellspacing=0 width=100%><tbody style='background:#232f45'><tr><td colspan=2 align=left style='padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%'><p style='margin:0'><img alt='IconX' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'><tr><td colspan=2 align=center style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>Activate Your Account<tr><td colspan=2><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>Dear {toName},<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>Welcome to Tradiix! We're thrilled to have you on board.<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>Expect top-notch service and support every step of the way.<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>To get started, Activate your account by clicking on the button below:<tr><td colspan=2 align='center' style='padding:0'><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;margin:0 0 40px 0;font-size:18px;font-weight:400'><a href={activationLink} style='border-radius:8px;background:#d014e4;padding:10px 20px;color:#fff;text-decoration:none;font-family:open sans,Calibri,Tahoma,sans-serif;font-size:20px;margin:0 0 30px 0'>Activate Now</a><tr><td><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>If you have any questions, feel free to reach out at <a href='mailto:support@tradiix.com' style='color:#d014e4'>support@tradiix.com</a>.<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>Looking forward to a successful partnership!<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>Best regards,<p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:0 0 10px 0;font-weight:400'>Team Tradiix.<hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'><p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>© Tradiix</table><td></table></div></div></div>"
+            };
+            mailMessage.IsBodyHtml = true;
+            mailMessage.To.Add(toEmail);
 
             try
             {
