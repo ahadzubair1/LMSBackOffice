@@ -17,7 +17,8 @@ namespace LMSBackOfficeWebApplication
         protected DataTable dtDirectBonusTable { get; set; }
         private string memberId; // Member ID field to store the current member ID
 
-
+        protected string headerTitleDirectBonusAmount { get; set; }
+        protected string headerTitleNetworkBonusAmount { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,19 +27,31 @@ namespace LMSBackOfficeWebApplication
                 var member = Members_DataAccess.GetMemberInfo(userName);
                 memberId = member.Id; // Store the member ID
                 BindGridView(memberId);
+
             }
+
+
         }
 
         private void BindGridView(string memberId)
         {
             dtNetworkBonusTable = Bonus_DataAccess.GetNetworkBonusByMemberId(memberId);
             dtDirectBonusTable = Bonus_DataAccess.GetDirectBonusByMemberId(memberId);  
+            
 
             gvNetworkBonus.DataSource = dtNetworkBonusTable;
             gvNetworkBonus.DataBind();
 
+            if (dtNetworkBonusTable.Rows.Count > 0)
+                headerTitleNetworkBonusAmount += dtNetworkBonusTable.Rows[0]["BonusAmount"].ToString();
+
+
             gvDirectBonus.DataSource = dtDirectBonusTable;
             gvDirectBonus.DataBind();
+
+            if (dtDirectBonusTable.Rows.Count > 0)
+                headerTitleDirectBonusAmount += dtDirectBonusTable.Rows[0]["Bonus_Amount"].ToString();
+                
 
         }
         protected void gvNetworkBonus_PageIndexChanging(object sender, GridViewPageEventArgs e)
