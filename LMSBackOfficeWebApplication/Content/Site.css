@@ -1104,6 +1104,12 @@ footer .field-row {
     background: linear-gradient(122deg, #8593E3 -1.92%, #202875 100%);
 }
 
+.highlighted
+{
+    border:6px solid #ebe011
+}
+
+
 #orgChart .user-rank {
     position: absolute;
     top: -10px;
