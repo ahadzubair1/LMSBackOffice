@@ -51,6 +51,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlInputText fullname;
 
         /// <summary>
+        /// username control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText username;
+
+        /// <summary>
         /// email control.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl email;
 
         /// <summary>
-        /// username control.
+        /// refcode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText username;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText refcode;
 
         /// <summary>
         /// password control.
@@ -85,15 +94,6 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword confirmpassword;
-
-        /// <summary>
-        /// refcode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText refcode;
 
         /// <summary>
         /// phone control.

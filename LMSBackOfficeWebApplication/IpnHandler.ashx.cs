@@ -39,19 +39,22 @@ namespace Coinpayments.Example
                 //}
 
                 WriteLog.LogInfo($"Status is {req.SuccessStatusLax()}");
-                WriteLog.LogInfo($"Transaction ID : {req.TxnId}");
                 if (req.Status >= 100 || req.Status == 2 || req.Status == 1)
                 {
+
+                    WriteLog.LogInfo($"Transaction ID : {req.TxnId}");
                     var memberInfo = GetMemberOrderInfo(req.Custom);
                     if (memberInfo != null)
                     {
-                        WriteLog.LogInfo($"Current LoggedIn user Id : {memberInfo.MemberId}");
+                        WriteLog.LogInfo($"Credit {req.Amount1} to {memberInfo.MemberId} wallet");
 
-                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, 0, 1);
-                        WriteLog.LogInfo($"Status Code Is : {req.StatusText}");
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 1);
+
+                        WriteLog.LogInfo($"Updating transaction to complete for member {memberInfo.MemberId} of Order no  : {memberInfo.OrderId}");
                         //Update Transaction on success
                         var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberInfo.MemberId, memberInfo.OrderId, req.Fee, CoinPaymentStatus.Complete.ToString());
-                        WriteLog.LogInfo($"Transaction Code : {transactionCode}");
+                        
+                        WriteLog.LogInfo($"Updating coinPaymentTransaction to complete for orderno  : {memberInfo.OrderId}");
                         CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, memberInfo.OrderId, req.SendTx, req.Status, req.StatusText);
 
                     }
@@ -72,7 +75,7 @@ namespace Coinpayments.Example
                     
                 }
 
-                response(context, HttpStatusCode.OK, "1");
+                response(context, HttpStatusCode.OK, "Transaction completed successfully");
             }
             catch (Exception ex)
             {

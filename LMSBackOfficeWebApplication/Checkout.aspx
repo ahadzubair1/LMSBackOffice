@@ -53,6 +53,15 @@
                                     <strong>
                                         <asp:Label ID="lblTotalAmount" runat="server" Text=""></asp:Label>
                                     </strong>
+                                    
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between" id="activationfee" runat="server">
+                                    <div>
+                                         <small class="text-muted" style="font-size:80%; color:maroon !important;">
+                                             <asp:Label ID="lblFeeText" runat="server" Text=""></asp:Label>
+                                         </small>
+                                    </div>
+                                   
                                 </li>
                             </ul>
 
@@ -75,8 +84,8 @@
                                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control mw-100" ReadOnly="True"></asp:TextBox>
 
                             </div>
-                        
-                          <%--  <div class="row">
+
+                            <%--  <div class="row">
                                 <div class="col-md-4 mb-3">
                                     <label for="country">Payment Mode</label>
                                     <asp:DropDownList ID="DropDownList1" runat="server" CssClass="custom-select d-block mw-100">
@@ -97,10 +106,23 @@
                                     </div>
                                 </div>
                             </div>--%>
+                             <hr class="mb-4">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div class="text-end d-flex align-items-center gap-3">
+                                        <div>
+                                            <input id="agreement1" type="checkbox" name="agreement" value="" style="vertical-align:middle;" onchange="openCoinPaymentPopup(this)">
+                                            <label for="agreement1" style="font-size:12px; font-weight:normal;color:maroon !important;">Caution : Your Browser Popup Must be  Enabled in Order to Proceed</label>
+                                        </div>
+                                    <%--    <input type="image" src="https://www.coinpayments.net/images/pub/checkout-blue.png" id="CheckoutBtn"
+                                            disabled alt="Checkout" runat="server" onserverclick="CheckoutBtn_ServerClick"
+                                            causesvalidation="false">--%>
+                                        <asp:ImageButton ID="CheckoutImageBtn" CausesValidation="false" runat="server" ImageUrl="https://www.coinpayments.net/images/pub/checkout-blue.png" OnClick="CheckoutBtn_ServerClick" />
+                                    </div>
+                                </div>
 
-                            <hr class="mb-4">
-                            <%--<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>--%>
-                            <input type="image" src="https://www.coinpayments.net/images/pub/checkout-blue.png" id="CheckoutBtn" alt="Checkout" runat="server" onserverclick="CheckoutBtn_ServerClick" causesvalidation="false">
+                            </div>
+                                                       
                             <%--<asp:ImageButton ID="CheckoutBtn" runat="server" ImageUrl="https://www.coinpayments.net/images/pub/checkout-blue.png" OnClick="CheckoutBtn_ServerClick" />--%>
                         </div>
                     </div>
@@ -108,25 +130,27 @@
             </div>
         </div>
     </div>
-          <div class="modal fade modal-animate anim-blur" id="topupExistsModel" tabindex="-1" aria-labelledby="topupExistsModelLabel" aria-hidden="true">
-          <div class="modal-dialog">
-              <div class="modal-content" style="color: #000 !important;">
-                  <div class="modal-header">
-                      <h1 class="modal-title font-bold fs-4" id="topupExistsModelLabel">Message</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                      <p id="topupErrorMessage"></p>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="CloseTopupPopup();">Close</button>                    
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="modal fade modal-animate anim-blur" id="topupExistsModel" tabindex="-1" aria-labelledby="topupExistsModelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="color: #000 !important;">
+                <div class="modal-header">
+                    <h1 class="modal-title font-bold fs-4" id="topupExistsModelLabel">Message</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="CloseTopupPopup();"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="topupErrorMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="CloseTopupPopup();">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
-
+        var button = document.getElementById('<%=CheckoutImageBtn.ClientID%>');
+        button.disabled = true;
+        button.src = 'https://www.coinpayments.net/images/pub/checkout-grey.png';
         function HideSideBar(message) {
             if ($("#sidebar") != null || $("#sidebar") != undefined) {
                 //  $("#sidebar").hide();
@@ -148,6 +172,26 @@
             $('body').removeClass('modal-open');
             $('.modal-backdrop').remove();
             $("#topupExistsModel").removeClass("show");
+        }
+
+        function openCoinPaymentPopup(evt) {
+            //var url = 'https://www.coinpayments.net/index.php?ipn_version=1.0&cmd=_pay_auto&ipn_type=simple&ipn_mode=hmac&merchant=68e5db2609b76a2000db2471a3d68473&allow_extra=0https://www.coinpayments.net/index.php?ipn_version=1.0&cmd=_pay_auto&ipn_type=simple&ipn_mode=hmac&merchant=68e5db2609b76a2000db2471a3d68473&allow_extra=0&currency=USDhttps://www.coinpayments.net/index.php?ipn_version=1.0&cmd=_pay_auto&ipn_type=simple&ipn_mode=hmac&merchant=68e5db2609b76a2000db2471a3d68473&allow_extra=0&currency=USD&amountf=10.00&item_name=totup&address=TAfabv4ii5ceA2dP83PtBgEjhaQSumgGx1';
+            //var newWindow = window.open(url, '_blank');
+            //if (newWindow == null) {
+            //    // Popup blocked, display a message to the user
+            //    alert("Popup blocked. Please disable the popup blocker for this site.");
+            //    return false;
+            //}
+            var button = document.getElementById('<%=CheckoutImageBtn.ClientID%>');
+           
+            if (evt.checked) {
+                button.disabled = false;
+                button.src = 'https://www.coinpayments.net/images/pub/checkout-blue.png';
+               
+            } else {
+                button.disabled = true;                
+                button.src = 'https://www.coinpayments.net/images/pub/checkout-grey.png';
+            }
         }
     </script>
 </asp:Content>

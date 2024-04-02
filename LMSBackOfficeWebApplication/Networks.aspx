@@ -242,12 +242,16 @@
                         <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrals</a>
                     </li>
                 </ul>
+                
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row mb-4 tree-controls">
-                                    <div class="col-md-6">
+                                    
+                                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label></div>
+                                    
+                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
@@ -256,7 +260,9 @@
                                             <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" Placeholder="Search a user"></asp:TextBox>
                                             <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" Enabled="true" OnClick="btnSearch_Click" />
                                         </div>
-                                    </div>
+                                        
+                          
+                                           </div>
                                 </div>
                                 <div id="orgChartContainer">
                                     <div id="orgChart">
