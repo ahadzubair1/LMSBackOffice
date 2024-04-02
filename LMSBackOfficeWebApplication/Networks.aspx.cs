@@ -38,7 +38,7 @@ namespace LMSBackOfficeWebApplication
                 PopulateTreeandGrid();
             }
         }
-         
+
         private void PopulateTreeandGrid()
         {
             string memberIdParam = Request.QueryString["memberkey"];
@@ -91,6 +91,7 @@ namespace LMSBackOfficeWebApplication
             string sponsor = member.Sponsor;
             string rank = member.MemberRank;
             string membership = member.MembershipName;
+            string cretedDate = member.CreatedDate;
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
@@ -112,6 +113,7 @@ namespace LMSBackOfficeWebApplication
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+ <label>Purchase Date: {cretedDate}</label>
                         </span>
                     </a>");
 
@@ -189,6 +191,7 @@ namespace LMSBackOfficeWebApplication
                 string sponsor = member.Sponsor;
                 string rank = member.MemberRank;
                 string membership = member.MembershipName;
+                string createdDate=member.CreatedDate;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
@@ -209,6 +212,8 @@ namespace LMSBackOfficeWebApplication
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+                 <label>Purchase Date: {createdDate}</label>
+
                         </span>
                     </a>");
                 // Check if there are child nodes for the current node
@@ -251,6 +256,7 @@ namespace LMSBackOfficeWebApplication
                 string sponsor = member.Sponsor;
                 string rank = member.MemberRank;
                 string membership = member.MembershipName;
+                string createdDate=member.CreatedDate;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
@@ -277,6 +283,7 @@ namespace LMSBackOfficeWebApplication
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+                 <label>Purchase Date: {createdDate}</label>
                         </span>
                     </a>");
                 // Check if there are child nodes for the current node
@@ -439,9 +446,11 @@ namespace LMSBackOfficeWebApplication
 
             // If a matching memberId is found, redirect to the corresponding member's network page
             if (level == 0)
-            { PopulateTreeandGrid();
-                lblSearchMessage.Text = "Unable to find any user with user name: "+searchUsername;
-                return; }
+            {
+                PopulateTreeandGrid();
+                lblSearchMessage.Text = "Unable to find any user with user name: " + searchUsername;
+                return;
+            }
             if (level != 0 && level <= 4)
             {
                 //Response.Redirect("/Networks?memberkey=" + memberId);
@@ -487,7 +496,7 @@ namespace LMSBackOfficeWebApplication
                 {
 
                 }
-                
+
 
 
 
