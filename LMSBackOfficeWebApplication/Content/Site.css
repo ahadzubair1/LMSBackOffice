@@ -1365,12 +1365,15 @@ label:not(.form-check-label):not(.custom-file-label) {
     border: 1px solid #d014e4;
     color: #fff;
 }
+#MemberTopUp_btnSubmit:hover {
+    color: #d014e4;
+}
 
-    .btn-tr:hover {
-        background: transparent;
-        border: 1px solid #d014e4;
-        color: #fff;
-    }
+.btn-tr:hover {
+    background: transparent;
+    border: 1px solid #d014e4;
+    color: #fff;
+}
 
 #MainContent_gv_tickets th{
     color: #fff;
