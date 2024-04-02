@@ -262,6 +262,32 @@ namespace LMSBackOfficeDAL
             }
         }
 
+        public static bool UpdateMemberPassword(string memCode,string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                var hashPassword = HashUtility.ComputeSHA512Hash(password);
+                SqlCommand command = new SqlCommand("[USP_UpdateMemberPassword]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@IN_MemCode", SqlDbType.NVarChar, 50).Value = memCode;
+                command.Parameters.Add("@IN_Password", SqlDbType.NVarChar, 250).Value = hashPassword;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    // Handle SQL exceptions
+                    // Log or throw the exception as needed
+                    // Example: throw;
+                    return false;
+                }
+            }
+        }
+
 
         public static MemberInfo GetMemberInfo(string userName)
         {

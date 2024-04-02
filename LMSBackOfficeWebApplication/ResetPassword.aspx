@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Forgot Password" Language="C#" CodeBehind="ForgotPassword.aspx.cs" Inherits="LMSBackOfficeWebApplication.ForgotPassword" %>
+﻿<%@ Page Title="Reset Password" Language="C#" CodeBehind="ResetPassword.aspx.cs" Inherits="LMSBackOfficeWebApplication.ResetPassword" %>
 
 <%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
 <!DOCTYPE html>
@@ -27,6 +27,12 @@
             margin: 0 auto;
             transform: translateY(-50%);
         }
+        .toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 29%;
+    top: 32%;
+}
     </style>
 
 
@@ -89,16 +95,25 @@
                 <div class="col-md-6">
                 <div class="bg-dark p-3 border-primary rounded">
                     <div class="col-md-12 text-center">
-                        <h5 id="ResponseMessage1" runat="server" style="display: none;"></h5>
+                        <h5 id="ResponseMessage" runat="server" style="display: none;"></h5>
                     </div>
                     <form class="form" id="myForm" runat="server">
                         <div class="mb-3">
-                            <label for="" class="text-white">Email Address</label>
-                            <input class="form-control" type="text" name="reg_email1" id="reg_email1" placeholder="Email Address" required="required" runat="server" />
+                            <label for="" class="text-white">Password</label>
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">
+                                <i id="eyeIcon" class="fa fa-eye-slash"></i>
+                            </span>
                         </div>
-
+                        <div class="mb-3">
+                            <label for="" class="text-white">Confirm Password</label>
+                            <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required="required" runat="server" />
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">
+                            <i id="eyeIcon1" class="fa fa-eye-slash"></i>
+                        </span>
+                        </div>
                        <div class="mb-3">
-                            <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Send Reset Link" id="btnSubmit" runat="server" onserverclick="btnSubmit_Reset" />
+                            <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Reset Password" id="btnSubmit" runat="server" onserverclick="btnSubmit_Reset" />
                         </div>
                         <div class="mb-3">
                             <a href="Login.aspx" target="_blank" class="text-white">Back to Login</a>

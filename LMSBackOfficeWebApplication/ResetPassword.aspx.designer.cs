@@ -11,17 +11,17 @@ namespace LMSBackOfficeWebApplication
 {
 
 
-    public partial class ForgotPassword
+    public partial class ResetPassword
     {
 
         /// <summary>
-        /// ResponseMessage1 control.
+        /// ResponseMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResponseMessage1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ResponseMessage;
 
         /// <summary>
         /// myForm control.
@@ -33,13 +33,22 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm myForm;
 
         /// <summary>
-        /// reg_email1 control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText reg_email1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+
+        /// <summary>
+        /// confirmpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword confirmpassword;
 
         /// <summary>
         /// btnSubmit control.
