@@ -33,7 +33,7 @@
                 <div class="col-md-8 order-md-1">
                     <div class="row g-3 mb-3">
                         <div class="col-md-6">
-                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter keywords"></asp:TextBox>
+                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter Transaction Code / Status"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
                             <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="btnSearch_Click" CausesValidation="false" />
