@@ -769,7 +769,6 @@
                                                     <th>Amount</th>
                                                     <%-- <th>Receiver Address</th>--%>
                                                     <th>Currency</th>
-                                                    <th>Fee</th>
                                                     <th>Transaction Date</th>
                                                     <th>Status</th>
                                                 </tr>
