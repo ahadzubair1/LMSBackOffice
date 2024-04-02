@@ -95,17 +95,25 @@ namespace LMSBackOfficeWebApplication
             var secretKey = ConfigurationManager.AppSettings["CaptchaSecretKey"];
             var apiUrl = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
             var requestUri = string.Format(apiUrl, secretKey, captchaResponse);
-            var request = (HttpWebRequest)WebRequest.Create(requestUri);
-
-            using (WebResponse response = request.GetResponse())
+            try
             {
-                using (StreamReader stream = new StreamReader(response.GetResponseStream()))
+                var request = (HttpWebRequest)WebRequest.Create(requestUri);
+
+                using (WebResponse response = request.GetResponse())
                 {
-                    JObject jResponse = JObject.Parse(stream.ReadToEnd());
-                    var isSuccess = jResponse.Value<bool>("success");
-                    result = (isSuccess) ? true : false;
+                    using (StreamReader stream = new StreamReader(response.GetResponseStream()))
+                    {
+                        JObject jResponse = JObject.Parse(stream.ReadToEnd());
+                        var isSuccess = jResponse.Value<bool>("success");
+                        result = (isSuccess) ? true : false;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                WriteLog.LogError(ex);
+            }
+           
             return result;
         }
 
