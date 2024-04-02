@@ -988,7 +988,10 @@ footer .field-row {
         background-position: -10000px 0;
     }
 }
-
+.tree-filter a, .tree-filter a i{
+    font-size: 12px;
+    line-height:2;
+}
 #orgChartContainer {
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -1002,7 +1005,11 @@ footer .field-row {
     position: relative;
     animation: animatedBackground 500s linear infinite;
 }
-
+@media (max-width: 768px){
+    #orgChartContainer{
+        padding-top: 150px !important;
+    }
+}
 .tree-controls {
     position: absolute;
     top: 30px;
