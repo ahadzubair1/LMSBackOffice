@@ -9,6 +9,10 @@ using LMSBackOfficeDAL;
 using Microsoft.Ajax.Utilities;
 using LMSBackOfficeWebApplication.Utitlity;
 using log4net;
+using Newtonsoft.Json.Linq;
+using System.Configuration;
+using System.IO;
+using System.Net;
 
 
 namespace LMSBackOfficeWebApplication
@@ -24,15 +28,15 @@ namespace LMSBackOfficeWebApplication
             ILog logger = log4net.LogManager.GetLogger("InfoLog");
 
             // Process the form data (e.g., save to database, send email, etc.)
-            if (ccLink != null)
-            {
-                ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
-            }
+            //if (ccLink != null)
+            //{
+            //    ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
+            //}
             // ccLink.ValidateCaptcha(txtCaptcha.Text.Trim());
             try
             {
                 bool isMembershipExpired = false;
-                if (ccLink.UserValidated)
+                if (IsReCaptchValid())
                 {
                     bool loginSuccess = Login_DataAccess.CheckLogin(username, password);
                     if (loginSuccess)
@@ -61,7 +65,7 @@ namespace LMSBackOfficeWebApplication
                         ResponseMessage.Style.Add("display", "block");
                         ResponseMessage.Style.Add("color", "#ff2600");
                     }
-                }
+               }
                 else
                 {
                     this.successMessage.Value = "false";
@@ -74,6 +78,7 @@ namespace LMSBackOfficeWebApplication
             }
             catch (Exception ex)
             {
+                WriteLog.LogError(ex);
                 this.successMessage.Value = "false";
                 ResponseMessage.InnerText = "Error Occurred:" + Convert.ToString(ex.Message);
                 ResponseMessage.Style.Add("display", "block");
@@ -81,6 +86,27 @@ namespace LMSBackOfficeWebApplication
                 Response.AddHeader("REFRESH", "1;URL=Login.aspx");
             }
 
+        }
+
+        public bool IsReCaptchValid()
+        {
+            var result = false;
+            var captchaResponse = Request.Form["g-recaptcha-response"];
+            var secretKey = ConfigurationManager.AppSettings["CaptchaSecretKey"];
+            var apiUrl = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
+            var requestUri = string.Format(apiUrl, secretKey, captchaResponse);
+            var request = (HttpWebRequest)WebRequest.Create(requestUri);
+
+            using (WebResponse response = request.GetResponse())
+            {
+                using (StreamReader stream = new StreamReader(response.GetResponseStream()))
+                {
+                    JObject jResponse = JObject.Parse(stream.ReadToEnd());
+                    var isSuccess = jResponse.Value<bool>("success");
+                    result = (isSuccess) ? true : false;
+                }
+            }
+            return result;
         }
 
         /* protected void Page_Load(object sender, EventArgs e)

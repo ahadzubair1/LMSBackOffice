@@ -57,6 +57,7 @@ namespace Coinpayments.Example
                         WriteLog.LogInfo($"Updating coinPaymentTransaction to complete for orderno  : {memberInfo.OrderId}");
                         CoinPaymentTransactions_DataAcsess.UpdateCoinPaymentTransaction(req.TxnId, memberInfo.OrderId, req.SendTx, req.Status, req.StatusText);
 
+                        WriteLog.LogInfo($"Transaction {req.TxnId} completed successfully");
                     }
                 }
 

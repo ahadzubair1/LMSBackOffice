@@ -88,7 +88,7 @@ namespace LMSBackOfficeWebApplication
                 ["allow_extra"] = "0",
                 ["currency"] = "USD",
                 ["amountf"] = model.TotalAmount.ToString("N2"),
-                ["item_name"] = "totup",
+                ["item_name"] = "Topup",
                 ["address"] = Configurations.CompanyCryptoWallet,
 
                 //IPN, success and cancel URL
