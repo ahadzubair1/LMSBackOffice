@@ -154,35 +154,52 @@
     </section>
     <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
     <script src="js/jquery.min.js"></script>
-<script type="text/javascript">
-    var your_site_key = '<%= ConfigurationManager.AppSettings["SiteKey"]%>';
-    var renderRecaptcha = function () {
-        grecaptcha.render('ReCaptchContainer', {
-            'sitekey': '6Lc29qspAAAAAI_gVTCyv5rAamSYYj1eQgeAJCvs',
-            'callback': reCaptchaCallback,
-            theme: 'light', //light or dark
-            type: 'image',// image or audio
-            size: 'normal'//normal or compact
-        });
-    };
 
-    var reCaptchaCallback = function (response) {
-        if (response !== '') {
-            document.getElementById('lblMessage').innerHTML = "";
-        }
-    };
-
-    $('input[type="submit"]').on('click', (e) => {
-        var message = 'Please checck the checkbox';
-        if (typeof (grecaptcha) != 'undefined') {
-            var response = grecaptcha.getResponse();
-            (response.length === 0) ? (message = 'Captcha verification failed') : (message = '');
-        }
-        $('#lblMessage').html(message);
-    });
-
-</script>
     
+ <script>
+     function togglePasswordVisibility() {
+         var passwordField = document.getElementById('password');
+         var eyeIcon = document.getElementById('eyeIcon');
 
+         if (passwordField.type === "password") {
+             passwordField.type = "text";
+             eyeIcon.classList.remove('fa-eye-slash');
+             eyeIcon.classList.add('fa-eye');
+         } else {
+             passwordField.type = "password";
+             eyeIcon.classList.remove('fa-eye');
+             eyeIcon.classList.add('fa-eye-slash');
+         }
+     }
+    
+ </script>
+    <script type="text/javascript">
+        var your_site_key = '<%= ConfigurationManager.AppSettings["SiteKey"]%>';
+        var renderRecaptcha = function () {
+            grecaptcha.render('ReCaptchContainer', {
+                'sitekey': '6Lc29qspAAAAAI_gVTCyv5rAamSYYj1eQgeAJCvs',
+                'callback': reCaptchaCallback,
+                theme: 'light', //light or dark
+                type: 'image',// image or audio
+                size: 'normal'//normal or compact
+            });
+        };
+
+        var reCaptchaCallback = function (response) {
+            if (response !== '') {
+                document.getElementById('lblMessage').innerHTML = "";
+            }
+        };
+
+        $('input[type="submit"]').on('click', (e) => {
+            var message = 'Please checck the checkbox';
+            if (typeof (grecaptcha) != 'undefined') {
+                var response = grecaptcha.getResponse();
+                (response.length === 0) ? (message = 'Captcha verification failed') : (message = '');
+            }
+            $('#lblMessage').html(message);
+        });
+
+    </script>
 </body>
 </html>
