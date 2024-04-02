@@ -81,13 +81,14 @@ namespace LMSBackOfficeWebApplication
                 //ipn settings
                 ["ipn_version"] = "1.0",
                 ["cmd"] = "_pay_auto",
-                ["ipn_type"] = "simple",
+                ["ipn_type"] = "deposit",
                 ["ipn_mode"] = "hmac",
+                ["deposit_id"] = Guid.NewGuid().ToString(),
                 ["merchant"] = Configurations.MerchantId,
                 ["allow_extra"] = "0",
                 ["currency"] = "USD",
                 ["amountf"] = model.TotalAmount.ToString("N2"),
-                ["item_name"] = "totup",
+                ["item_name"] = "Topup",
                 ["address"] = Configurations.CompanyCryptoWallet,
 
                 //IPN, success and cancel URL
@@ -128,15 +129,14 @@ namespace LMSBackOfficeWebApplication
                     }
                     else
                     {
-
                         var queryParameters = CreateQueryParameters(checkout, member.Id);
 
                         var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
-
                         //Update Balance in UserWallet table 
-                        MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 0);
+                        // MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(checkout.TotalAmount), 1);
 
+                        WriteLog.LogInfo($"Initiate transation for member {member.Id} of order no {checkout.OrderId}");
                         //Add Transaction and Coin PaymentTransaction
                         Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
                                                                 member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
@@ -154,19 +154,5 @@ namespace LMSBackOfficeWebApplication
                 WriteLog.LogError(ex);
             }
         }
-
-
-        //protected void CheckoutBtn_ServerClick(object sender, ImageClickEventArgs e)
-        //{
-        //    if (Session["Checkout"] != null)
-        //    {
-        //        var checkout = Session["Checkout"] as CheckoutModel;
-
-        //        var queryParameters = CreateQueryParameters(checkout);
-        //        var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
-
-        //        Response.Redirect(redirectUrl);
-        //    }
-        //}
     }
 }

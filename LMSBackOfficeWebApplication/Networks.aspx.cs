@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.PeerToPeer;
 using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DocumentFormat.OpenXml.Drawing;
 using LMSBackOfficeDAL; // Make sure to include the necessary namespace
 
 namespace LMSBackOfficeWebApplication
@@ -14,7 +16,13 @@ namespace LMSBackOfficeWebApplication
     public partial class Networks : System.Web.UI.Page
     {
         protected DataTable referrelsTable { get; set; }
-        protected DataTable networkTreeTable { get; set; }
+        protected DataTable networkTreeTable
+        {
+            get { return ViewState["NetworkTreeTable"] as DataTable; }
+            set { ViewState["NetworkTreeTable"] = value; }
+        }
+
+
 
         protected DataTable allTreeMembers { get; set; }
 
@@ -27,37 +35,42 @@ namespace LMSBackOfficeWebApplication
                     Response.Redirect("Login.aspx");
                 }
 
-
-                string memberIdParam = Request.QueryString["memberkey"];
-              
-                if (!string.IsNullOrEmpty(memberIdParam))
-                {
-
-
-                    BindGridView(memberIdParam);
-                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
-
-                    // Generate HTML only once during the initial load
-                    string generatedHtml = GenerateHTML(networkTreeTable, memberIdParam);
-                    litGeneratedHtml.Text = generatedHtml;
-                }
-                else
-                {
-
-                    string userName = Session["Username"].ToString();
-                    var member = Members_DataAccess.GetMemberInfo(userName);
-
-                    BindGridView(member.Id);
-                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
-
-                    // Generate HTML only once during the initial load
-                    string generatedHtml = GenerateHTML(networkTreeTable, member.Id);
-                    litGeneratedHtml.Text = generatedHtml;
-                }
+                PopulateTreeandGrid();
             }
         }
 
-        private string GenerateHTML(DataTable dataTable, string memberId)
+        private void PopulateTreeandGrid()
+        {
+            string memberIdParam = Request.QueryString["memberkey"];
+
+
+            if (!string.IsNullOrEmpty(memberIdParam))
+            {
+
+
+                BindGridView(memberIdParam);
+                networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(memberIdParam);
+
+                // Generate HTML only once during the initial load
+                string generatedHtml = GenerateHTML(networkTreeTable, memberIdParam, txtSearch.Text.ToLower());
+                litGeneratedHtml.Text = generatedHtml;
+            }
+            else
+            {
+
+                string userName = Session["Username"].ToString();
+                var member = Members_DataAccess.GetMemberInfo(userName);
+
+                BindGridView(member.Id);
+                networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+
+                // Generate HTML only once during the initial load
+                string generatedHtml = GenerateHTML(networkTreeTable, member.Id, txtSearch.Text.ToLower());
+                litGeneratedHtml.Text = generatedHtml;
+            }
+        }
+
+        private string GenerateHTML(DataTable dataTable, string memberId, string searchName)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -78,22 +91,34 @@ namespace LMSBackOfficeWebApplication
             string sponsor = member.Sponsor;
             string rank = member.MemberRank;
             string membership = member.MembershipName;
+            string cretedDate = member.CreatedDate;
             // Start the list item for the current node
             sb.AppendLine("<li>");
             // Generate HTML for the current node
-            sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class={membership.ToLower()}>");
+
+            if (member.UserName.ToLower().Equals(searchName))
+                sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class=""{membership.ToLower()} highlighted"">");
+            else
+                sb.AppendLine($@"<a href=""/Networks?memberkey={memberId}"" class=""{membership.ToLower()}"">");
+
+
 
             sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
                             <label>Sponsor: {sponsor}</label>
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+ <label>Purchase Date: {cretedDate}</label>
                         </span>
                     </a>");
+
+
+
 
 
 
@@ -103,7 +128,7 @@ namespace LMSBackOfficeWebApplication
             {
                 //string memberId = rootNode["Member_ID"].ToString();
                 // Generate HTML for the root node and its children recursively
-                sb.Append(GenerateNodeHtml(dataTable, memberId, 1));
+                sb.Append(GenerateNodeHtml(dataTable, memberId, 1, searchName));
             }
             sb.AppendLine("    </ul>");
             sb.AppendLine("</li>");
@@ -113,7 +138,7 @@ namespace LMSBackOfficeWebApplication
             return sb.ToString();
         }
 
-        public  void BindGridView(string memberIdParam)
+        public void BindGridView(string memberIdParam)
         {
             referrelsTable = Members_DataAccess.GetReferrelsByMemberId(memberIdParam);
             gvReferrelsTable.DataSource = referrelsTable;
@@ -121,25 +146,27 @@ namespace LMSBackOfficeWebApplication
 
 
 
- 
+
         }
 
 
         public void LoadAllMembers(string memberIdParam)
         {
 
-            try {
+            try
+            {
                 allTreeMembers = Members_DataAccess.GetAllTreeMembersByMemberId(memberIdParam);
 
             }
-            catch { 
-            
+            catch
+            {
+
             }
-            
+
 
         }
 
-        private string GenerateNodeHtml(DataTable dataTable, string parentId, int Level)
+        private string GenerateNodeHtml(DataTable dataTable, string parentId, int Level, string SearchName)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -164,12 +191,18 @@ namespace LMSBackOfficeWebApplication
                 string sponsor = member.Sponsor;
                 string rank = member.MemberRank;
                 string membership = member.MembershipName;
+                string createdDate=member.CreatedDate;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>");
+
+
+                if (member.UserName.ToLower().Equals(SearchName))
+                { sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""{membership.ToLower()} highlighted"">"); }
+                else
+                { sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>"); }
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -179,13 +212,15 @@ namespace LMSBackOfficeWebApplication
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+                 <label>Purchase Date: {createdDate}</label>
+
                         </span>
                     </a>");
                 // Check if there are child nodes for the current node
                 string memberId = leftChildRows[0]["Member_ID"].ToString();
                 if (Int32.Parse(leftChildRows[0]["Level"].ToString()) <= 3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1, SearchName);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -221,12 +256,24 @@ namespace LMSBackOfficeWebApplication
                 string sponsor = member.Sponsor;
                 string rank = member.MemberRank;
                 string membership = member.MembershipName;
+                string createdDate=member.CreatedDate;
 
                 // Start the list item for the current node
                 sb.AppendLine("<li>");
                 // Generate HTML for the current node
 
-                sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>");
+
+                if (member.UserName.ToLower().Equals(SearchName))
+                {
+                    sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class=""{membership.ToLower()} highlighted"">");
+
+
+                }
+                else
+                {
+                    sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>");
+
+                }
                 sb.AppendLine($@"
                         <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
                         <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
@@ -236,13 +283,14 @@ namespace LMSBackOfficeWebApplication
                             <label>Membership: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
+                 <label>Purchase Date: {createdDate}</label>
                         </span>
                     </a>");
                 // Check if there are child nodes for the current node
                 string memberId = RightChildRows[0]["Member_ID"].ToString();
                 if (Int32.Parse(RightChildRows[0]["Level"].ToString()) <= 3)
                 {
-                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1);
+                    string childHtml = GenerateNodeHtml(dataTable, memberId, Level + 1, SearchName);
                     if (!string.IsNullOrEmpty(childHtml))
                     {
                         // Start the child node
@@ -389,6 +437,80 @@ namespace LMSBackOfficeWebApplication
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            lblSearchMessage.Text = "";
+            string searchUsername = txtSearch.Text.Trim().ToLower();
+
+            // Search for the username in the networkTreeTable
+            int level = FindMemberLevel(networkTreeTable, searchUsername);
+            string memId = FindMemberId(networkTreeTable, searchUsername);
+
+            // If a matching memberId is found, redirect to the corresponding member's network page
+            if (level == 0)
+            {
+                PopulateTreeandGrid();
+                lblSearchMessage.Text = "Unable to find any user with user name: " + searchUsername;
+                return;
+            }
+            if (level != 0 && level <= 4)
+            {
+                //Response.Redirect("/Networks?memberkey=" + memberId);
+
+                string userName = Session["Username"].ToString();
+                var member = Members_DataAccess.GetMemberInfo(userName);
+                //networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+
+
+                PopulateTreeandGrid();
+                return;
+
+                string generatedHtml = GenerateHTML(networkTreeTable, member.Id, txtSearch.Text.ToLower());
+                litGeneratedHtml.Text = generatedHtml;
+            }
+            else
+            {
+                try
+                {
+                    string userName = Session["Username"].ToString();
+
+                    if (txtSearch.Text.ToLower().Equals(userName.ToString()))//Case when user search logged in member i.e himself
+                        Response.Redirect("/Networks");
+
+                    var member = Members_DataAccess.GetMemberInfo(searchUsername);
+
+                    // Load all members data only once during the initial page load
+                    if (allTreeMembers == null)
+                    {
+                        LoadAllMembers(member.Id);
+                    }
+                    networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+                    // Perform the search operation within the existing data
+                    string memberId = FindMemberId(networkTreeTable, txtSearch.Text);
+
+                    // Redirect to the found member's network page
+                    if (!string.IsNullOrEmpty(memberId))
+                    {
+                        Response.Redirect("/Networks?memberkey=" + memberId);
+                    }
+                }
+                catch
+                {
+
+                }
+
+
+
+
+            }
+
+
+            /* string userName = Session["Username"].ToString();
+             var member = Members_DataAccess.GetMemberInfo(userName);
+             networkTreeTable = NetworkTree_DataAccess.GetNetworkTree(member.Id);
+
+             string generatedHtml = GenerateHTML(networkTreeTable, member.Id, txtSearch.Text.ToLower());
+             litGeneratedHtml.Text = generatedHtml;*/
+            /*
+
             try
             {
                 string userName = Session["Username"].ToString();
@@ -416,35 +538,47 @@ namespace LMSBackOfficeWebApplication
             catch
             {
 
-            }
+            }*/
         }
         public string FindMemberId(DataTable dataTable, string searchString)
         {
-           
-
             string memberId = "";
 
             // Check if the DataTable and search string are valid
             if (dataTable != null && !string.IsNullOrEmpty(searchString))
             {
-                // Loop through each row in the DataTable
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    // Retrieve the value of the Member_UserName column
-                    string memberUserName = row["Member_UserName"].ToString();
+                // Perform a case-insensitive search for the username within the Member_UserName column of the networkTreeTable
+                DataRow[] foundRows = dataTable.Select($"Member_UserName = '{searchString}'", "");
 
-                    // Check if the current row's Member_UserName matches the search string
-                    if (memberUserName.Equals(searchString))
-                    {
-                        // If a match is found, retrieve the corresponding Member_ID
-                        memberId = row["Member_ID"].ToString();
-                        //Response.Redirect("/Networks?memberkey="+memberId);
-                        break; // Exit the loop since we found a match
-                    }
+                // If a matching row is found, retrieve the corresponding Member_ID
+                if (foundRows.Length > 0)
+                {
+                    memberId = foundRows[0]["Member_ID"].ToString();
                 }
             }
 
             return memberId;
         }
+
+        public int FindMemberLevel(DataTable dataTable, string searchString)
+        {
+            int level = 0;
+
+            // Check if the DataTable and search string are valid
+            if (dataTable != null && !string.IsNullOrEmpty(searchString))
+            {
+                // Perform a case-insensitive search for the username within the Member_UserName column of the networkTreeTable
+                DataRow[] foundRows = dataTable.Select($"Member_UserName = '{searchString}'", "");
+
+                // If a matching row is found, retrieve the corresponding Member_ID
+                if (foundRows.Length > 0)
+                {
+                    level = Convert.ToInt32(foundRows[0]["Level"].ToString());
+                }
+            }
+
+            return level;
+        }
+
     }
 }

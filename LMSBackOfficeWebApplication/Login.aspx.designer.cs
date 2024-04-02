@@ -51,31 +51,13 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
 
         /// <summary>
-        /// ccLink control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MSCaptcha.CaptchaControl ccLink;
-
-        /// <summary>
-        /// txtCaptcha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCaptcha;
-
-        /// <summary>
-        /// rfvCaptcha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCaptcha;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMessage;
 
         /// <summary>
         /// successMessage control.

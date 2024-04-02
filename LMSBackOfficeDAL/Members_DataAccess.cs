@@ -232,137 +232,61 @@ namespace LMSBackOfficeDAL
                 }
             }
         }
-        /// <summary>
-        /// METHOD TO ADD THE INORDERS
-        /// </summary>
-        /// <param name="objInOrders"></param>
-        /// <returns></returns>
-        //public static bool AddMembers(InOrders objInOrders)
-        //{
 
-        //	SqlConnection Connection = new SqlConnection("Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000");
-        //	Connection.Open();
-        //	SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_InsertInOrders", Connection);
+        public static DataTable GetMemberDetailsByEmail(string email)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("[USP_GetMemberByEmail]", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Email", SqlDbType.NVarChar).Value = email;
 
+                    try
+                    {
+                        connection.Open();
+                        DataTable resultTable = new DataTable();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                        return resultTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                        return null; // Or throw an exception
+                    }
+                }
+            }
+        }
 
-        //	using (SqlConnection objConn = new SqlConnection(connString))
-        //	{
-        //		objConn.Open();
-        //		try
-        //		{
-        //			if (objLocationBO.LocationID != null)
-        //			{
-        //				objCommand = new SqlCommand("CRE_Update_Location", objConn);
-        //				objCommand.CommandType = CommandType.StoredProcedure;
-        //				objCommand.Parameters.Add(new SqlParameter("@LocationID", objLocationBO.LocationID));
-        //			}
-        //			else
-        //			{
-        //				objCommand = new SqlCommand("CRE_Insert_Location", objConn);
-        //				objCommand.CommandType = CommandType.StoredProcedure;
-        //				objCommand.Parameters.Add(new SqlParameter("@LocationCreationDate", objLocationBO.LocationCreationDate));
-        //			}
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationName", objLocationBO.LocationName));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationCityID", objLocationBO.LocationCityID));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationTrecTransferFee", objLocationBO.LocationTrecTransferFee));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationAnnualMembershipFee", objLocationBO.LocationAnnualMembershipFee));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationHARTransferFee", objLocationBO.LocationHARTransferFee));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationProcessingFee", objLocationBO.LocationProcessingFee));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationTotalFee", objLocationBO.LocationTotalFee));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationIsActive", objLocationBO.LocationIsActive));
-        //			objCommand.Parameters.Add(new SqlParameter("@LocationUpdateDate", objLocationBO.LocationUpdateDate));
+        public static bool UpdateMemberPassword(string memCode,string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                var hashPassword = HashUtility.ComputeSHA512Hash(password);
+                SqlCommand command = new SqlCommand("[USP_UpdateMemberPassword]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@IN_MemCode", SqlDbType.NVarChar, 50).Value = memCode;
+                command.Parameters.Add("@IN_Password", SqlDbType.NVarChar, 250).Value = hashPassword;
 
-        //			retLocationID = Convert.ToInt32(objCommand.ExecuteNonQuery());
-
-        //		}
-        //		catch (Exception ex)
-        //		{
-        //			throw new Exception(ex.Message);
-        //		}
-        //		finally
-        //		{
-        //			objCommand.Dispose();
-        //			objConn.Close();
-        //		}
-        //		if (retLocationID != 0)
-
-        //			return retLocationID;
-        //		else
-        //			return -1;
-
-        //	}
-
-
-        //	//-------------- HERE---------//
-        //	bool addresponse = false;
-        //	try
-        //	{
-
-        //		SqlConnection Connection = new SqlConnection("Data Source=15.184.218.35;Initial Catalog=OTC_TradingSystem;Persist Security Info=True;User ID=sa;Password=TC0qd8UiEqwP*xWB;Connect Timeout=30000");
-        //		Connection.Open();
-        //		SqlDataAdapter DataAdapter = new SqlDataAdapter("USP_InsertInOrders", Connection);
-
-        //		//Set the command type as StoredProcedure.
-        //		DataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-        //		DataAdapter.SelectCommand.CommandTimeout = 0;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Inner_FlowNumber", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@Inner_FlowNumber"].Value = objInOrders.Inner_FlowNumber;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_Quantity", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_Quantity"].Value = objInOrders.Order_Quantity;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_USDTAmount", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_USDTAmount"].Value = objInOrders.Order_USDTAmount;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_USDTAmount", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_USDTAmount"].Value = objInOrders.Order_USDTAmount;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_SourceCurrency", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@Order_SourceCurrency"].Value = objInOrders.Order_SourceCurrency;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_DestinationCurrency", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@Order_DestinationCurrency"].Value = objInOrders.Order_DestinationCurrency;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_Expense", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_Expense"].Value = objInOrders.Order_Expense;
-
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_ExchangeRate", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_ExchangeRate"].Value = objInOrders.Order_ExchangeRate;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_FinalUSDTAmount", SqlDbType.Decimal));
-        //		DataAdapter.SelectCommand.Parameters["@Order_FinalUSDTAmount"].Value = objInOrders.Order_FinalUSDTAmount;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@Order_Status", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@Order_Status"].Value = objInOrders.Order_Status;
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IP_Address", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@IP_Address"].Value = objInOrders.IP_Address;
-
-
-        //		DataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@InOrder_Desc", SqlDbType.NVarChar));
-        //		DataAdapter.SelectCommand.Parameters["@InOrder_Desc"].Value = objInOrders.InOrder_Desc;
-        //		//Create a new DataSet to hold the records.
-        //		retLocationID = Convert.ToInt32(objCommand.ExecuteNonQuery());
-
-
-        //		//Dispose of the DataAdapter.
-        //		DataAdapter.Dispose();
-        //		//Close the connection.
-        //		Connection.Close();
-        //		addresponse = true;
-        //		return addresponse;
-        //		//return dsInOrders.Tables["dtInOrders"];
-        //	}
-        //	catch (Exception ex)
-        //	{
-        //		//dsInOrders.Dispose();
-        //		throw new Exception("Error Occrred During IN-Order :   " + ex.Message);
-        //	}
-
-        //	return addresponse;
-        //}
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    // Handle SQL exceptions
+                    // Log or throw the exception as needed
+                    // Example: throw;
+                    return false;
+                }
+            }
+        }
 
 
         public static MemberInfo GetMemberInfo(string userName)
@@ -395,7 +319,8 @@ namespace LMSBackOfficeDAL
                                     Country = reader["MemberCountry"].ToString(),
                                     MembershipName= reader["Membership_Name"].ToString(),
                                     MemberRank= reader["Member_RankDesc"].ToString(),
-                                    CountryId = reader["CountryID"].ToString()
+                                    CountryId = reader["CountryID"].ToString(),
+                                    CreatedDate= reader["Created_Date"].ToString()
                                 };
                             }
                         }

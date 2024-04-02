@@ -1,6 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RanksRewards.aspx.cs" Inherits="LMSBackOfficeWebApplication.RanksRewards" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+        <style>
+        /* Custom Styles */
+        .custom-pagination {
+            margin-top: 20px; /* Adjust as needed */
+            text-align: center;
+        }
+
+        /* Alternate Row Color */
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f8f9fa; /* Adjust even row background color as needed */
+        }
+
+        .table tbody tr:nth-of-type(odd) {
+            background-color: #ffffff; /* Adjust odd row background color as needed */
+        }
+
+        /* Hover Effect */
+        .table tbody tr:hover {
+            background-color: #e9ecef; /* Adjust hover row background color as needed */
+        }
+    </style>
     <main>
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -241,82 +262,22 @@
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Rank</th>
-                                        <th>Partnership Level</th>
-                                        <th>Personal</th>
-                                        <th>Team A / Team B Volume</th>
-                                        <th>Reward</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="table-active" data-toggle="tooltip" data-placement="top" title="You have earned this rank">
-                                        <td><svg class="pc-icon mx-1 text-tr"> <use xlink:href="#custom-star-bold"></use> </svg>Partner</td>
-                                        <td>$500</td>
-                                        <td>1/1</td>
-                                        <td>$2k/$2k</td>
-                                        <td>$50</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Executive</td>
-                                        <td>$500</td>
-                                        <td>1/1</td>
-                                        <td>$5k/$5k</td>
-                                        <td>$100</td>
-                                    </tr>
-                                    <tr class="table-success" data-toggle="tooltip" data-placement="top" title="You have earned this rank">
-                                        <td>VIP</td>
-                                        <td>$500</td>
-                                        <td>1/1</td>
-                                        <td>$10k/$10k</td>
-                                        <td>$200</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pioneer</td>
-                                        <td>$750</td>
-                                        <td>2/2</td>
-                                        <td>$25k/$25k</td>
-                                        <td>$300</td>
-                                    </tr>
-                                    <tr class="table-warning">
-                                        <td>Elite</td>
-                                        <td>$750</td>
-                                        <td>2/2</td>
-                                        <td>$50k/$50k</td>
-                                        <td>$500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ambassador</td>
-                                        <td>$1000</td>
-                                        <td>3/3</td>
-                                        <td>$100k/$100k</td>
-                                        <td>$1,000</td>
-                                    </tr>
-                                    <tr class="table-danger">
-                                        <td>Infinite Influencer</td>
-                                        <td>$1000</td>
-                                        <td>3/3</td>
-                                        <td>$250k/$250k</td>
-                                        <td>Retreat</td>
-                                    </tr>
-                                    <tr data-toggle="tooltip" data-placement="top" title="You have earned this rank">
-                                        <td>Legacy Creator</td>
-                                        <td>$1500</td>
-                                        <td>4/4</td>
-                                        <td>$500k/$500k</td>
-                                        <td>$5,000</td>
-                                    </tr>
-                                    <tr class="table-info">
-                                        <td>Royal Legacy</td>
-                                        <td>$1500</td>
-                                        <td>4/4</td>
-                                        <td>$1MIL/$1MIL</td>
-                                        <td>$10,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <asp:GridView ID="gvRanks" runat="server" AutoGenerateColumns="False" DataKeyNames="RowNumber" AllowPaging="True" PageSize="10"  Width="100%" CssClass="table table-striped table-hover" OnPageIndexChanging="gvRanks_PageIndexChanging">
+                                <Columns>
+<asp:TemplateField HeaderText="">
+           <ItemTemplate>
+                <svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;" : "display:none;" %>'>
+                    <use xlink:href="#custom-star-bold"></use>
+                </svg>
+            </ItemTemplate>
+        </asp:TemplateField>
+                                    <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" />
+                                    <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" />
+                                    <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" />
+                                    <asp:BoundField DataField="Reward" HeaderText="Reward" />
+                                </Columns>
+                                <PagerStyle CssClass="custom-pagination" />
+                            </asp:GridView>
                             <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Terms & Conditions Apply</div>
                         </div>
                     </div>

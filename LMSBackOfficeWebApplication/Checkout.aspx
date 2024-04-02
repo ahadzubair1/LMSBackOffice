@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="col-md-4 order-md-2 mb-4">
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="text-muted">Your cart</span>
+                                <span class="text-muted">Your Cart</span>
                                 <span class="badge badge-secondary badge-pill">3</span>
                             </h4>
                             <ul class="list-group mb-3">
@@ -53,15 +53,15 @@
                                     <strong>
                                         <asp:Label ID="lblTotalAmount" runat="server" Text=""></asp:Label>
                                     </strong>
-                                    
+
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between" id="activationfee" runat="server">
                                     <div>
-                                         <small class="text-muted" style="font-size:80%; color:maroon !important;">
-                                             <asp:Label ID="lblFeeText" runat="server" Text=""></asp:Label>
-                                         </small>
+                                        <small class="text-muted" style="font-size: 80%; color: maroon !important;">
+                                            <asp:Label ID="lblFeeText" runat="server" Text=""></asp:Label>
+                                        </small>
                                     </div>
-                                   
+
                                 </li>
                             </ul>
 
@@ -85,45 +85,28 @@
 
                             </div>
 
-                            <%--  <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="country">Payment Mode</label>
-                                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="custom-select d-block mw-100">
-                                        <asp:ListItem Value="">Select Payment Mode</asp:ListItem>
-                                        <asp:ListItem Value="ETH">Ethereum (ERC20) - ETH</asp:ListItem>
-                                        <asp:ListItem Value="BTC">BitCoin - BTC</asp:ListItem>
-                                        <asp:ListItem Value="USD">ERC20 - USD</asp:ListItem>
-                                        <asp:ListItem Value="TRX">TRON - TRX</asp:ListItem>
-                                        <asp:ListItem Value="LTCT">LTCT</asp:ListItem>
-                                    </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="DropDownList1" Font-Size="9pt" ForeColor="#CC0000">Please Select Payment Method</asp:RequiredFieldValidator>
-                                </div>
-                                <div class="col-md-8 mb-3">
-                                    <label for="state">Address</label>
-                                    <asp:TextBox ID="txtWalletAddress" runat="server" CssClass="form-control txtWalletAddress mw-100" MaxLength="60" ReadOnly="True"></asp:TextBox>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid state.
-                                    </div>
-                                </div>
-                            </div>--%>
-                             <hr class="mb-4">
+                            <hr class="mb-4">
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     <div class="text-end d-flex align-items-center gap-3">
                                         <div>
-                                            <input id="agreement1" type="checkbox" name="agreement" value="" style="vertical-align:middle;" onchange="openCoinPaymentPopup(this)">
-                                            <label for="agreement1" style="font-size:12px; font-weight:normal;color:maroon !important;">Caution : Your Browser Popup Must be  Enabled in Order to Proceed</label>
+                                            <input id="agreement1" type="checkbox" name="agreement" value="" style="vertical-align: middle;" onchange="openCoinPaymentPopup(this)">
+                                            <label for="agreement1" style="font-size: 12px; font-weight: normal; color: maroon !important;">Caution : Your Browser Popup Must be  Enabled in Order to Proceed</label>
                                         </div>
-                                    <%--    <input type="image" src="https://www.coinpayments.net/images/pub/checkout-blue.png" id="CheckoutBtn"
-                                            disabled alt="Checkout" runat="server" onserverclick="CheckoutBtn_ServerClick"
-                                            causesvalidation="false">--%>
                                         <asp:ImageButton ID="CheckoutImageBtn" CausesValidation="false" runat="server" ImageUrl="https://www.coinpayments.net/images/pub/checkout-blue.png" OnClick="CheckoutBtn_ServerClick" />
                                     </div>
                                 </div>
-
                             </div>
-                                                       
-                            <%--<asp:ImageButton ID="CheckoutBtn" runat="server" ImageUrl="https://www.coinpayments.net/images/pub/checkout-blue.png" OnClick="CheckoutBtn_ServerClick" />--%>
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div class="text-end d-flex align-items-center gap-3">
+                                        <div>
+                                            <label for="agreement1" style="font-size: 12px; font-weight: normal; color: green !important;">
+                                                NOTE: TRON is Supported for now but Provision of More Coins / Cryptocurrencies Will be Provided Soon.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,13 +166,13 @@
             //    return false;
             //}
             var button = document.getElementById('<%=CheckoutImageBtn.ClientID%>');
-           
+
             if (evt.checked) {
                 button.disabled = false;
                 button.src = 'https://www.coinpayments.net/images/pub/checkout-blue.png';
-               
+
             } else {
-                button.disabled = true;                
+                button.disabled = true;
                 button.src = 'https://www.coinpayments.net/images/pub/checkout-grey.png';
             }
         }
