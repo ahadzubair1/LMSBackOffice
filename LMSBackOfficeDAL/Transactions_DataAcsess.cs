@@ -104,7 +104,7 @@ namespace LMSBackOfficeDAL
                         command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(memberId);
                         command.Parameters.Add("@IN_TransactionOrderID", SqlDbType.NVarChar).Value = transactionOrderId;
                         command.Parameters.Add("@IN_Status", SqlDbType.NVarChar).Value = status;
-                        command.Parameters.Add("@IN_Fee", SqlDbType.Decimal).Value = Convert.ToDecimal(fee);
+                        command.Parameters.Add("@IN_Fee", SqlDbType.NVarChar).Value = fee;
                         SqlParameter outParameter = command.Parameters.Add("@OUT_TransactionCode", SqlDbType.NVarChar, 250); // Assuming 36 is the maximum length of a GUID represented as a string
                         outParameter.Direction = ParameterDirection.Output;
 
