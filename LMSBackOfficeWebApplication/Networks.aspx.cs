@@ -16,6 +16,9 @@ namespace LMSBackOfficeWebApplication
     public partial class Networks : System.Web.UI.Page
     {
         protected DataTable referrelsTable { get; set; }
+        protected string leftFarNodeId {  get; set; }
+        protected string rightFarNodeId { get; set; }
+
         protected DataTable networkTreeTable
         {
             get { return ViewState["NetworkTreeTable"] as DataTable; }
@@ -30,12 +33,15 @@ namespace LMSBackOfficeWebApplication
         {
             if (!IsPostBack)
             {
+                divSerachMessage.Visible = false;
+
                 if (Session["Username"] == null)
                 {
                     Response.Redirect("Login.aspx");
                 }
 
                 PopulateTreeandGrid();
+                SetFarNode();
             }
         }
 
@@ -69,7 +75,32 @@ namespace LMSBackOfficeWebApplication
                 litGeneratedHtml.Text = generatedHtml;
             }
         }
+        public void PopulateFarNodes()
+        {
 
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+            //member.Id
+        }
+
+
+        public void SetFarNode()
+        {
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+
+            DataTable leftFarnode = Network_DataAccess.GetFarNodeByMemberPosition(member.Id, 1);
+            if (leftFarnode != null && leftFarnode.Rows.Count > 0)
+            {
+                leftFarNodeId =Convert.ToString( leftFarnode.Rows[0]["MEMBER_ID"]);
+            }
+
+            DataTable rightFarnode = Network_DataAccess.GetFarNodeByMemberPosition(member.Id, 2);
+            if (rightFarnode != null && rightFarnode.Rows.Count > 0)
+            {
+                rightFarNodeId = Convert.ToString(rightFarnode.Rows[0]["Member_Id"]);
+            }
+        }
         private string GenerateHTML(DataTable dataTable, string memberId, string searchName)
         {
             StringBuilder sb = new StringBuilder();
@@ -438,6 +469,8 @@ namespace LMSBackOfficeWebApplication
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             lblSearchMessage.Text = "";
+            divSerachMessage.Visible = false;
+
             string searchUsername = txtSearch.Text.Trim().ToLower();
 
             // Search for the username in the networkTreeTable
@@ -449,6 +482,8 @@ namespace LMSBackOfficeWebApplication
             {
                 PopulateTreeandGrid();
                 lblSearchMessage.Text = "Unable to find any user with user name: " + searchUsername;
+                divSerachMessage.Visible = true;
+
                 return;
             }
             if (level != 0 && level <= 4)

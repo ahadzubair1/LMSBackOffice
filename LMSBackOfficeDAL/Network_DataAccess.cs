@@ -116,7 +116,37 @@ namespace LMSBackOfficeDAL
             }
                 
         }
-        public static void AssignNetworkParent(string memberId)
+
+
+        public static DataTable GetFarNodeByMemberPosition(string memberId, Int32 position)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_GetUserNetworkFarNode", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@IN_Member_ID", SqlDbType.NVarChar).Value = memberId;
+                    command.Parameters.Add("@Position", SqlDbType.Int).Value = position;
+                    try
+                    {
+                        connection.Open();
+                        DataTable resultTable = new DataTable();
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                        return resultTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exception
+                        Console.WriteLine("Error: " + ex.Message);
+                        return null; // Or throw an exception
+                    }
+                }
+            }
+        }
+            public static void AssignNetworkParent(string memberId)
         {
             DataTable FarNodeDetails = GetNetworkFarNode(memberId);
             if (FarNodeDetails != null && FarNodeDetails.Rows.Count > 0)

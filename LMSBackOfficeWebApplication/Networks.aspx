@@ -249,8 +249,9 @@
                             <div class="card-body">
                                 <div class="row mb-4 tree-controls">
                                     
+                                    <div runat="server" id="divSerachMessage" class="col-md-12">
                                             <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label></div>
-                                    
+                                    </div>
                                      <div class="col-md-6">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -263,8 +264,32 @@
                                         
                           
                                            </div>
-                                </div>
-                                <div id="orgChartContainer">
+                                         <div class="col-md-6">
+         <div class="btn-group w-100">
+
+
+             <a href="/networks?id={variable}" class="btn btn-success col fileinput-button dz-clickable">
+                 <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
+                     <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn btn-success col fileinput-button dz-clickable">
+
+
+                 <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
+                 <span>Far Left</span>
+             </a>
+       
+                     <a href="/networks" class="btn btn-primary col start">
+                 <span>Top</span>
+             </a>
+
+    <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn btn-warning col cancel">
+                 <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
+                 <span>Far Right</span>
+             </a>
+         </div>
+     </div>
+                                                                   
+                                    </div>
+                                <div id="orgChartContainer" style="padding-top:100px;">
                                     <div id="orgChart">
                                         <div class="tree">
                                             <asp:Literal ID="litGeneratedHtml" runat="server"></asp:Literal>
@@ -351,32 +376,32 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script type="text/javascript">
-    $(function() {
-                     BlockUI("dvGrid");
-                     $.blockUI.defaults.css = {};
-                 });
-                 function BlockUI(elementID) {
-                     var prm = Sys.WebForms.PageRequestManager.getInstance();
-                     prm.add_beginRequest(function () {
-                         $("#" + elementID).block({
-                             message: '<div align = "center">' + '<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Floading-gif&psig=AOvVaw3TT7ZHlYDOoSpu6JC6kqMr&ust=1711716871551000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiA7LKAl4UDFQAAAAAdAAAAABAY"/></div>',
-                             css: {},
-                             overlayCSS: { backgroundColor: '#000000', opacity: 0.6, border: '3px solid #63B2EB' }
-                         });
-                     });
-                     prm.add_endRequest(function () {
-                         $("#" + elementID).unblock();
-                     });
-                 };
+        $(function () {
+            BlockUI("dvGrid");
+            $.blockUI.defaults.css = {};
+        });
+        function BlockUI(elementID) {
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_beginRequest(function () {
+                $("#" + elementID).block({
+                    message: '<div align = "center">' + '<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Floading-gif&psig=AOvVaw3TT7ZHlYDOoSpu6JC6kqMr&ust=1711716871551000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiA7LKAl4UDFQAAAAAdAAAAABAY"/></div>',
+                    css: {},
+                    overlayCSS: { backgroundColor: '#000000', opacity: 0.6, border: '3px solid #63B2EB' }
+                });
+            });
+            prm.add_endRequest(function () {
+                $("#" + elementID).unblock();
+            });
+        };
     </script>
       <script type="text/javascript">
           document.addEventListener("DOMContentLoaded", function () {
               var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
-                if (searchButton) {
-                    searchButton.addEventListener("click", function () {
-                        searchButton.click();
-                    });
-                }
-            });
+              if (searchButton) {
+                  searchButton.addEventListener("click", function () {
+                      searchButton.click();
+                  });
+              }
+          });
       </script>
 </asp:Content>

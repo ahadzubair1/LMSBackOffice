@@ -94,7 +94,7 @@
                     <form class="form" id="myForm" runat="server">
                         <div class="mb-3">
                             <label for="" class="text-white">Email Address</label>
-                            <input class="form-control" type="text" name="reg_email1" id="reg_email1" placeholder="Email Address" required="required" runat="server" />
+                            <input class="form-control" type="text" name="reg_email1" id="reg_email1" placeholder="Email Address" required="required" runat="server" maxlength="35" minlength="5"/>
                         </div>
 
                        <div class="mb-3">
