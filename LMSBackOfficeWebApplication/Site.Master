@@ -391,9 +391,9 @@
                                    <a href="Login.aspx">
     <i class="ti ti-power"></i>
     <span>Logout</span>
-  <%--  <svg class="pc-icon text-muted me-2">--%>
+
         <use xlink:href="#custom-logout"></use>
-  <%--  </svg> -- %>
+
 </a>
                                   
                                 </div>

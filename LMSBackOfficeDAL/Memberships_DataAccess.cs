@@ -97,7 +97,19 @@ namespace LMSBackOfficeDAL
                     command.ExecuteNonQuery();
 
                     // Retrieve the output parameter value
-                    highestMembershipAmount = (decimal)highestMembershipParameter.Value;
+                    object highestMembershipValue = highestMembershipParameter.Value;
+                    if (highestMembershipValue != DBNull.Value && highestMembershipValue != null)
+                    {
+                        highestMembershipAmount = Convert.ToDecimal(highestMembershipValue);
+                    }
+                    else
+                    {
+                        // Handle null value
+                        // For example, you can assign a default value or throw an exception
+                        highestMembershipAmount = 0; // Assign a default value
+                                                     // Alternatively, throw an exception
+                                                     // throw new InvalidOperationException("Output parameter value is null.");
+                    }
                 }
             }
 
