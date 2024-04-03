@@ -71,5 +71,40 @@ namespace LMSBackOfficeDAL
 
             return membershipExists;
         }
+
+
+        public static decimal GetHighestMembershipAmount(string memberId)
+        {
+            decimal highestMembershipAmount = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("USP_GetHighestMembershipByMemId", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Input parameter
+                    command.Parameters.AddWithValue("@MemberID", memberId); // Assuming username is equivalent to MemberID
+
+                    // Output parameter
+                    SqlParameter highestMembershipParameter = new SqlParameter();
+                    highestMembershipParameter.ParameterName = "@HighestMembership";
+                    highestMembershipParameter.SqlDbType = SqlDbType.Decimal; // Assuming Membership_Amount is of type Decimal
+                    highestMembershipParameter.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(highestMembershipParameter);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the output parameter value
+                    highestMembershipAmount = (decimal)highestMembershipParameter.Value;
+                }
+            }
+
+            return highestMembershipAmount;
+        }
+
+
+
     }
 }

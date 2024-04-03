@@ -422,11 +422,12 @@
             <div class="modal-dialog">
                 <div class="modal-content" style="color: #000 !important;">
                     <div class="modal-header">
-                        <h1 class="modal-title font-bold fs-4" id="membershipExpiryeModalLabel">Membership Expired</h1>
+                        <h1 class="modal-title font-bold fs-4" id="membershipExpiryeModalLabel">
+Ineligible Membership</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Membership Purchase is Required for Broker Website Access</p>
+                        <p>The existing membership does not qualify for accessing the link.</p>
                     </div>
                 </div>
             </div>
@@ -439,7 +440,7 @@
                 event.preventDefault(); // Prevent default link behavior
 
                 // Check if membership exists
-                if (MembershipExist) {
+                if (MembershipExist && HighestMembershipAmount>=50) {
                     // Redirect to a new link
                     window.location.href = 'https://www.octafx.com/?refid=if6471013';
                 } else {
@@ -462,7 +463,7 @@
                 event.preventDefault(); // Prevent default link behavior
 
                 // Check if membership exists
-                if (MembershipExist) {
+                if (MembershipExist && HighestMembershipAmount >= 750) {
                     // Redirect to a new link
                     window.location.href = 'https://www.octafx.com/?refid=if6471013';
                 } else {

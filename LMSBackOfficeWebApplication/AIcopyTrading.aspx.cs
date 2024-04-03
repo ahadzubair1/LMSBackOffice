@@ -21,12 +21,26 @@ namespace LMSBackOfficeWebApplication
                 // Session has expired, redirect to login page
                 Response.Redirect("~/Login.aspx");
             }
-            // Check if membership exists and store the result in the property
-            MembershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
 
-            // Register a startup script to define the MembershipExist variable in JavaScript
-            ClientScript.RegisterStartupScript(this.GetType(), "membershipExistScript", "var MembershipExist = " + MembershipExist.ToString().ToLower() + ";", true);
+            string userName = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(userName);
+
+            // Get membership existence and highest membership amount
+
+            bool membershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
+            decimal highestMembershipAmount = Memberships_DataAccess.GetHighestMembershipAmount(member.Id);
+
+            // Register a startup script to define the MembershipExist and HighestMembershipAmount variables in JavaScript
+            ClientScript.RegisterStartupScript(this.GetType(), "membershipVariablesScript",
+                "var MembershipExist = " + membershipExist.ToString().ToLower() + ";" +
+                "var HighestMembershipAmount = " + highestMembershipAmount.ToString() + ";", true);
+
+
+
         }
+
+
+
 
     }
 }
