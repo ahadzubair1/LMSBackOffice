@@ -242,54 +242,51 @@
                         <a class="nav-link text-uppercase" id="referrels-tab" data-bs-toggle="tab" href="#referrels" role="tab" aria-controls="referrels" aria-selected="false">Direct Referrals</a>
                     </li>
                 </ul>
-                
+
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row mb-4 tree-controls">
-                                    
                                     <div runat="server" id="divSerachMessage" class="col-md-12">
-                                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label></div>
+                                        <div class="alert alert-danger small py-1" role="alert"><i class="ti ti-alert-circle"></i>
+                                            <asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label></div>
                                     </div>
-                                     <div class="col-md-6">
-                                        <div class="input-group">
+                                    <div class="col-md-6">
+                                        <div class="input-group mb-md-0 mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
-<%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
+                                            <%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
                                             <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" Placeholder="Search a user"></asp:TextBox>
                                             <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" Enabled="true" OnClick="btnSearch_Click" />
                                         </div>
-                                        
-                          
-                                           </div>
-                                         <div class="col-md-6">
-         <div class="btn-group w-100">
-
-
-             <a href="/networks?id={variable}" class="btn btn-success col fileinput-button dz-clickable">
-                 <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
-                     <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn btn-success col fileinput-button dz-clickable">
-
-
-                 <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
-                 <span>Far Left</span>
-             </a>
-       
-                     <a href="/networks" class="btn btn-primary col start">
-                 <span>Top</span>
-             </a>
-
-    <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn btn-warning col cancel">
-                 <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
-                 <span>Far Right</span>
-             </a>
-         </div>
-     </div>
-                                                                   
                                     </div>
-                                <div id="orgChartContainer" style="padding-top:100px;">
+                                    <div class="col-md-6">
+                                        <div class="btn-group tree-filter w-100">
+                                            <a href="/networks?id={variable}" class="btn btn-light btn-shadow col fileinput-button dz-clickable">
+                                                <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
+                                                <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn btn-light btn-shadow col fileinput-button dz-clickable">
+
+
+                                                    <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
+                                                    <span>Far Left</span>
+                                                </a>
+
+                                                <a href="/networks" class="btn btn-light btn-shadow col start">
+                                                    <span>Top</span>
+                                                </a>
+
+                                                <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn btn-light btn-shadow col cancel">
+                                                    <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
+                                                    <span>Far Right</span>
+                                                </a>
+                                                </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="orgChartContainer" style="padding-top: 100px;">
                                     <div id="orgChart">
                                         <div class="tree">
                                             <asp:Literal ID="litGeneratedHtml" runat="server"></asp:Literal>
@@ -305,40 +302,40 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">My Referrals</h5>
-                                        <div id = "dvGrid">
-                                        <asp:GridView ID="gvReferrelsTable" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" PageSize="10"
-                                            CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True" OnPageIndexChanging="gvReferrelsTable_PageIndexChanging">
-                                            <AlternatingRowStyle BackColor="Gainsboro" />
-                                            <Columns>
-                                                <asp:BoundField DataField="MemberFullName" HeaderText="Member Name" ControlStyle-CssClass="gvheader">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                                <asp:BoundField DataField="Subscription" HeaderText="Subscription" ControlStyle-CssClass="gvheader">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
+                                        <div id="dvGrid">
+                                            <asp:GridView ID="gvReferrelsTable" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" PageSize="10"
+                                                CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True" OnPageIndexChanging="gvReferrelsTable_PageIndexChanging">
+                                                <AlternatingRowStyle BackColor="Gainsboro" />
+                                                <Columns>
+                                                    <asp:BoundField DataField="MemberFullName" HeaderText="Member Name" ControlStyle-CssClass="gvheader">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    <asp:BoundField DataField="Subscription" HeaderText="Subscription" ControlStyle-CssClass="gvheader">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
 
-                                                <asp:BoundField DataField="PurchasedDate" HeaderText="Membership Expiry" ControlStyle-CssClass="gvheader">
-                                                    <ControlStyle Width="250px" />
-                                                </asp:BoundField>
+                                                    <asp:BoundField DataField="PurchasedDate" HeaderText="Membership Expiry" ControlStyle-CssClass="gvheader">
+                                                        <ControlStyle Width="250px" />
+                                                    </asp:BoundField>
 
-                                                <asp:BoundField DataField="MembershipStatus" HeaderText="Status">
-                                                    <ControlStyle Width="100px" />
-                                                </asp:BoundField>
-                                            </Columns>
-                                            <EmptyDataTemplate>
-                                                No record found<br />
-                                            </EmptyDataTemplate>
-                                            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-                                            <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="45" />
-                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" CssClass="pagerstyle" />
-                                            <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
-                                            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                            <SortedAscendingHeaderStyle BackColor="#0000A9" />
-                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                            <SortedDescendingHeaderStyle BackColor="#000065" />
-                                        </asp:GridView>
-                            </div>
+                                                    <asp:BoundField DataField="MembershipStatus" HeaderText="Status">
+                                                        <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                </Columns>
+                                                <EmptyDataTemplate>
+                                                    No record found<br />
+                                                </EmptyDataTemplate>
+                                                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                                                <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="45" />
+                                                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Right" CssClass="pagerstyle" />
+                                                <RowStyle ForeColor="Black" BackColor="#EEEEEE" />
+                                                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                                                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                                                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                                <SortedDescendingHeaderStyle BackColor="#000065" />
+                                            </asp:GridView>
+                                        </div>
                                     </div>
                                 </div>
                             </ContentTemplate>
@@ -394,14 +391,14 @@
             });
         };
     </script>
-      <script type="text/javascript">
-          document.addEventListener("DOMContentLoaded", function () {
-              var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
               if (searchButton) {
                   searchButton.addEventListener("click", function () {
                       searchButton.click();
                   });
               }
           });
-      </script>
+    </script>
 </asp:Content>
