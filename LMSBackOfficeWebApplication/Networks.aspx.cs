@@ -47,7 +47,7 @@ namespace LMSBackOfficeWebApplication
 
         private void PopulateTreeandGrid()
         {
-            string memberIdParam = Request.QueryString["memberkey"];
+            string memberIdParam = Convert.ToString(Request.QueryString["memberkey"]);
 
 
             if (!string.IsNullOrEmpty(memberIdParam))

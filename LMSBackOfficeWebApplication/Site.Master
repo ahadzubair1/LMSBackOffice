@@ -156,8 +156,8 @@
                             </a>
                         </li>
                         <li class="dropdown pc-h-item">
-                            <a
-                                class="pc-head-link dropdown-toggle arrow-none me-0"
+                            <a 
+                                class="pc-head-link dropdown-toggle arrow-none me-0 disabled"
                                 data-bs-toggle="dropdown"
                                 href="#"
                                 role="button"

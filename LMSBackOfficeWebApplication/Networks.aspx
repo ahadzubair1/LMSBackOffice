@@ -264,7 +264,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="btn-group tree-filter w-100">
-                                            <a href="/networks?id={variable}" class="btn btn-light btn-shadow col fileinput-button dz-clickable">
+<%--                                            <a href="/networks?id={variable}" class="btn btn-light btn-shadow col fileinput-button dz-clickable">--%>
                                                 <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
                                                 <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn btn-light btn-shadow col fileinput-button dz-clickable">
 
