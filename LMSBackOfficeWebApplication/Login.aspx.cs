@@ -19,6 +19,14 @@ namespace LMSBackOfficeWebApplication
 {
     public partial class Login : Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                // Clear session variables only on the initial load of the page
+                Session.Clear();
+            }
+        }
 
 
         protected void btnLogin_Click(object sender, EventArgs e)

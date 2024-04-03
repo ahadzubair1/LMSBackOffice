@@ -388,10 +388,14 @@
                                         <i class="ti ti-lock"></i>
                                         <span>Lock Screen</span>
                                     </a>
-                                    <a href="#!">
-                                        <i class="ti ti-power"></i>
-                                        <span>Logout</span>
-                                    </a>
+                                   <a href="Login.aspx">
+    <i class="ti ti-power"></i>
+    <span>Logout</span>
+  <%--  <svg class="pc-icon text-muted me-2">--%>
+        <use xlink:href="#custom-logout"></use>
+  <%--  </svg> -- %>
+</a>
+                                  
                                 </div>
                             </div>
                         </div>
