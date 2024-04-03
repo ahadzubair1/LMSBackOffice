@@ -152,7 +152,7 @@ namespace LMSBackOfficeDAL
             if (FarNodeDetails != null && FarNodeDetails.Rows.Count > 0)
             {
                 DataRow FarNodeRow = FarNodeDetails.Rows[0];
-                string ParentId = FarNodeRow["Memeber_ID"].ToString();
+                string ParentId = FarNodeRow["Member_ID"].ToString();
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     using (SqlCommand command = new SqlCommand("USP_AssignNetworkParent", connection))
