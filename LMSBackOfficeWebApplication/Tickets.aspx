@@ -55,7 +55,7 @@
                     <div class="row g-3 mb-3">
 
                         <div class="col-md-4">
-                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter Title/Ticket Code/Ticket Type"></asp:TextBox>
+                            <asp:TextBox ID="txtKeyword" runat="server" CssClass="form-control mw-100" placeholder="Enter Ticket Code / Ticket Type"></asp:TextBox>
                         </div>
                         <div class="col-md-2">
                             <%--<button class="btn btn-primary" type="submit">Search</button>--%>
