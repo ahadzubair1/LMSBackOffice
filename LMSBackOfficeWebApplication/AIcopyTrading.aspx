@@ -131,18 +131,18 @@
 
                 <ul class="nav nav-tabs mb-3" id="t_tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active text-uppercase" id="explorer-tab" data-bs-toggle="tab" href="#explorer" role="tab" aria-controls="explorer" aria-selected="true">Explorer AI Copy Trading</a>
+                        <a class="nav-link active text-uppercase" id="explorer-tab" data-bs-toggle="tab" href="#explorer" role="tab" aria-controls="explorer" aria-selected="true" style="font-weight:bold">Explorer AI Copy Trading</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false">Pioneer AI Copy Trading</a>
+                        <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false" style="font-weight:bold">Pioneer AI Copy Trading</a>
                     </li>
                     <li class="nav-item">
                         <%--<a class="nav-link text-uppercase" id="elite-tab" data-bs-toggle="tab" href="#elite" role="tab" aria-controls="elite" aria-selected="false">Elite AI Copy Trading</a>--%>
-                        <a class="nav-link text-uppercase cursor-pointer">Elite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
+                        <a class="nav-link text-uppercase cursor-pointer" style="font-weight:bold">Elite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
                     </li>
                     <li class="nav-item">
                         <%--<a class="nav-link text-uppercase" id="infinite-tab" data-bs-toggle="tab" href="#infinite" role="tab" aria-controls="infinite" aria-selected="false">Infinite AI Copy Trading</a>--%>
-                        <a class="nav-link text-uppercase cursor-pointer">Infinite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
+                        <a class="nav-link text-uppercase cursor-pointer" style="font-weight:bold">Infinite AI Copy Trading <span class="badge bg-primary-t">Coming Up</span></a>
                     </li>
                 </ul>
 
