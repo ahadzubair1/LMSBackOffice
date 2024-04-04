@@ -270,16 +270,16 @@
 
 
                                                     <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
-                                                    <span>Far Left</span>
+                                                    <span><strong>Far Left</strong></span>
                                                 </a>
 
                                                 <a href="/networks" class="btn btn-light btn-shadow col start">
-                                                    <span>Top</span>
+                                                    <span><strong>Top</strong></span>
                                                 </a>
 
                                                 <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn btn-light btn-shadow col cancel">
                                                     <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
-                                                    <span>Far Right</span>
+                                                    <span><strong>Far Right</strong></span>
                                                 </a>
                                                 </a>
                                         </div>
