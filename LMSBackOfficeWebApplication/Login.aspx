@@ -137,11 +137,11 @@
                     <form class="form" id="myForm" runat="server">
                          <asp:ScriptManager runat="server" />
                         <div class="mb-3">
-                            <label for="" class="text-white">What's Your Username?</label>
+                            <label for="" class="text-white">Username</label>
                             <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server" />
                         </div>
                         <div class="mb-3 position-relative">
-                            <label for="" class="text-white">Your Password?</label>
+                            <label for="" class="text-white">Password</label>
                             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required="required" runat="server" />
                             <span class="toggle-password" onclick="togglePasswordVisibility()">
                                 <i id="eyeIcon" class="fa fa-eye-slash"></i>
