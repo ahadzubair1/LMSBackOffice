@@ -79,7 +79,7 @@
                             <li><a href="index.html">Home</a> </li>
                             <li><a href="#master-head">About Us</a> </li>
                             <li><a href="#v-course-list">Courses</a> </li>
-                            <li><a href="#">memberships</a> </li>
+                            <li><a href="#">Partnerships</a> </li>
                             <li><a href="#v-educators">Educators</a> </li>
                         </ul>
                     </div>
@@ -97,10 +97,10 @@
                     <div class="header-nav">
                         <ul class="p-0 m-0">
                             <li><a href="index.html">Home</a> </li>
-                            <li><a href="#master-head">about us</a> </li>
-                            <li><a href="#v-course-list">courses</a> </li>
-                            <li><a href="#">memberships</a> </li>
-                            <li><a href="#v-educators">educators</a> </li>
+                            <li><a href="#master-head">About Us</a> </li>
+                            <li><a href="#v-course-list">Courses</a> </li>
+                            <li><a href="#">Partnerships</a> </li>
+                            <li><a href="#v-educators">Educators</a> </li>
                         </ul>
                     </div>
                 </div>
