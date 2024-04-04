@@ -104,7 +104,7 @@
                             </div>
                         </li>--%>
                         <li class="pc-h-item">
-                            <a class="btn btn-tr btn-shadow btn-sm text-nowrap" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
+                            <a class="btn btn-tr btn-shadow btn-sm text-nowrap" id="btnTopup" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" href="#" title="Credit Wallet Topup"><i class="material-icons-two-tone text-white">attach_money</i> Top Up</a>
                         </li>
                         <li class="pc-h-item wallet-balance">
                             <span><i class="ti ti-wallet h6"></i><span class="text-yellow-300">Credit Wallet: $<span id="creditbalance" runat="server"></span></span></span>
