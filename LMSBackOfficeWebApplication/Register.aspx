@@ -29,6 +29,40 @@
             margin: 0 auto;
             transform: translateY(-50%);
         }
+
+ .typewriter h6 {
+    color: white;
+    font-family: calibri;
+    font-size:smaller;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid #dd12ec; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation: typing 5.5s steps(90, end), blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 130%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #dd12ec
+    }
+}
     </style>
 </head>
 <header class="v-header w-100 py-3">
@@ -38,10 +72,10 @@
                 <div class="header-nav">
                     <ul class="p-0 m-0">
                         <li><a href="index.html">Home</a> </li>
-                        <li><a href="#master-head">about us</a> </li>
-                        <li><a href="#v-course-list">courses</a> </li>
-                        <li><a href="#">memberships</a> </li>
-                        <li><a href="#v-educators">educators</a> </li>
+                        <li><a href="#master-head">About Us</a> </li>
+                        <li><a href="#v-course-list">Courses</a> </li>
+                        <li><a href="#">Services</a> </li>
+                        <li><a href="#v-educators">Educators</a> </li>
                     </ul>
                 </div>
             </div>
@@ -58,10 +92,10 @@
                 <div class="header-nav">
                     <ul class="p-0 m-0">
                         <li><a href="index.html">Home</a> </li>
-                        <li><a href="#master-head">about us</a> </li>
-                        <li><a href="#v-course-list">courses</a> </li>
-                        <li><a href="#">memberships</a> </li>
-                        <li><a href="#v-educators">educators</a> </li>
+                        <li><a href="#master-head">About Us</a> </li>
+                        <li><a href="#v-course-list">Courses</a> </li>
+                        <li><a href="#">Services</a> </li>
+                        <li><a href="#v-educators">Educators</a> </li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +122,7 @@
                 <div class="col-md-6 text-white mb-md-0 mb-5">
                     <div class="captionbox">
                         <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
-                        <p>Your journey to a transformed financial future starts here. Welcome to Tradiix, where possibilities become profits!</p>
+                        <div class="typewriter" style="width:100%"><h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6></div><p></p>
                         <a href="#" target="_blank">
                             <button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</button></a>
                     </div>
