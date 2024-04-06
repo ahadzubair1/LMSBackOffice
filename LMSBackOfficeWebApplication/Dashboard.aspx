@@ -121,7 +121,7 @@
                         </div>
                         <h2 class="text-white">Welcome!</h2>
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p><br/>
-                         <font color="#dd12ec"><strong>Accelerate your earnings with our Fast Track Bonus</strong></font>
+                         <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
                     </div>
                     <div class="leaf">
                         <div>
