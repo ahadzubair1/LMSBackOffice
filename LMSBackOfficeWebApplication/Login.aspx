@@ -79,7 +79,7 @@
                             <li><a href="index.html">Home</a> </li>
                             <li><a href="#master-head">About Us</a> </li>
                             <li><a href="#v-course-list">Courses</a> </li>
-                            <li><a href="#">Partnerships</a> </li>
+                            <li><a href="#">Services</a> </li>
                             <li><a href="#v-educators">Educators</a> </li>
                         </ul>
                     </div>
@@ -99,7 +99,7 @@
                             <li><a href="index.html">Home</a> </li>
                             <li><a href="#master-head">About Us</a> </li>
                             <li><a href="#v-course-list">Courses</a> </li>
-                            <li><a href="#">Partnerships</a> </li>
+                            <li><a href="#">Services</a> </li>
                             <li><a href="#v-educators">Educators</a> </li>
                         </ul>
                     </div>
