@@ -48,7 +48,7 @@
         }
 
         to {
-            width: 130%
+            width: 100%
         }
     }
 
@@ -126,7 +126,7 @@
                 <div class="col-md-8 text-white mb-md-0 mb-5">
                     <div class="captionbox">
                         <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
-                        <div class="typewriter" style="width:130%"><h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6></div><p></p>
+                        <div class="typewriter" style="width:100%"><h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6></div><p></p>
                         <a href="https://www.tradiix.com/" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</a>
                     </div>
                 </div>

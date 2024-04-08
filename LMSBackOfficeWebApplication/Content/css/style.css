@@ -190,6 +190,8 @@ body{
   padding: 4rem;
   text-align: center;
   border: 2px solid #E012EE;
+  display: flex;
+  align-items: center;
 }
 .brbox.one{
   background-image: url(../img/rct-1.png);
