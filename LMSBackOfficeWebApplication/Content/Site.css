@@ -1387,7 +1387,6 @@ label:not(.form-check-label):not(.custom-file-label) {
     background: #d014e4;
     border: 1px solid #d014e4;
     color: #fff;
-    height: 42px;
 }
 #MemberTopUp_btnSubmit:hover {
     color: #d014e4;
