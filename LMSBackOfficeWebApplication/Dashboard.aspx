@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="LMSBackOfficeWebApplication.Dashboard" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -221,9 +221,71 @@
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
                 <div class="row g-3">
+
+                       <div class="col-md-3">
+       <div class="card t-card membership" style="background-color:wheat">
+           <div class="card-body" >
+               <div class="d-flex align-items-center">
+                   <div class="flex-shrink-0">
+                       <div class="avtar avtar-s bg-light-warning">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <path
+                                   d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                   stroke="#E58A00"
+                                   stroke-width="1.5"
+                                   stroke-miterlimit="10"
+                                   stroke-linecap="round"
+                                   stroke-linejoin="round" />
+                               <path
+                                   opacity="0.6"
+                                   d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
+                                   stroke="#E58A00"
+                                   stroke-width="1.5"
+                                   stroke-miterlimit="10"
+                                   stroke-linecap="round"
+                                   stroke-linejoin="round" />
+                               <path
+                                   opacity="0.6"
+                                   d="M8 13H12"
+                                   stroke="#E58A00"
+                                   stroke-width="1.5"
+                                   stroke-miterlimit="10"
+                                   stroke-linecap="round"
+                                   stroke-linejoin="round" />
+                               <path
+                                   opacity="0.6"
+                                   d="M8 17H16"
+                                   stroke="#E58A00"
+                                   stroke-width="1.5"
+                                   stroke-miterlimit="10"
+                                   stroke-linecap="round"
+                                   stroke-linejoin="round" />
+                           </svg>
+                       </div>
+                   </div>
+                   <div class="flex-grow-1 ms-3" style="background-color:wheat">
+                       <h6 class="mb-0 font-semibold">Product</h6>
+                   </div>
+               </div>
+               <div class="bg-body rounded" >
+                   <div class="row align-items-center" style="background-color:wheat">
+                       <div class="col-7" >
+                           <h5 class="font-semibold m-0">
+                               <asp:Label runat="server" Text="None" ID="lblMembership"></asp:Label></h5>
+                       </div>
+                       <div class="col-5">
+                           <h5 class="mb-1">&nbsp;</h5>
+                           <p class="text-warning mb-0">&nbsp;</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
                     <div class="col-md-3">
-                        <div class="card t-card direct-bonus">
-                            <div class="card-body">
+                        <div class="card t-card direct-bonus" style="background-color:#bacefb">
+                            <div class="card-body" >
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
@@ -250,12 +312,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
+                                    <div class="flex-grow-1 ms-3" style="background-color:#bacefb">
                                         <h6 class="mb-0 font-semibold">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center">
+                                    <div class="row align-items-center" style="background-color:#bacefb">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
                                         </div>
@@ -269,7 +331,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card t-card kyc-status">
+                        <div class="card t-card kyc-status" style="background-color:#88e3c5">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -349,12 +411,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
+                                    <div class="flex-grow-1 ms-3" style="background-color:#88e3c5">
                                         <h6 class="mb-0 font-semibold">Network Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center">
+                                    <div class="row align-items-center" style="background-color:#88e3c5">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
                                         </div>
@@ -368,68 +430,9 @@
                             </div>
                         </div>
                     </div>
+                 
                     <div class="col-md-3">
-                        <div class="card t-card membership">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 13H12"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    opacity="0.6"
-                                                    d="M8 17H16"
-                                                    stroke="#E58A00"
-                                                    stroke-width="1.5"
-                                                    stroke-miterlimit="10"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0 font-semibold">Membership</h6>
-                                    </div>
-                                </div>
-                                <div class="bg-body rounded">
-                                    <div class="row align-items-center">
-                                        <div class="col-7">
-                                            <h5 class="font-semibold m-0">
-                                                <asp:Label runat="server" Text="None" ID="lblMembership"></asp:Label></h5>
-                                        </div>
-                                        <div class="col-5">
-                                            <h5 class="mb-1">&nbsp;</h5>
-                                            <p class="text-warning mb-0">&nbsp;</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card t-card direct-referral">
+                        <div class="card t-card direct-referral" style="background-color:#f89b9b">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -452,12 +455,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
+                                    <div class="flex-grow-1 ms-3" style="background-color:#f89b9b">
                                         <h6 class="mb-0 font-semibold">Rank Achieved</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center">
+                                    <div class="row align-items-center" style="background-color:#f89b9b">
                                         <div class="col-7">
                                             <h5 class="font-semibold m-0">
                                                 <asp:Label ID="lblrank" runat="server" Text="Earn More Rewards"></asp:Label></h5>
