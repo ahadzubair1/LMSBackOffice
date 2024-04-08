@@ -194,13 +194,13 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Memberships</h2>
+                                    <h2 class="mb-0">Products & Services</h2>
                                 </div>
                             </div>
                             <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Memberships</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Products & Services</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/1.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Monthly</span></div>
                                                                         <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
@@ -232,7 +232,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                                                         <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
@@ -249,7 +249,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
@@ -266,7 +266,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/3.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Pioneer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>750</span></div>
@@ -281,7 +281,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/4.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Elite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
@@ -296,7 +296,7 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/5.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Membership Features</h6>
+                                    <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Infinite</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1500</span></div>
