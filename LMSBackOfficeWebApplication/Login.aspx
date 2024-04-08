@@ -15,7 +15,7 @@
     <link href="./Content/fonts/tabler-icons.min.css" rel="stylesheet" />
     <link href="./Content/fonts/feather.css" rel="stylesheet" />
     <link href="./Content/fonts/fontawesome.css" rel="stylesheet" />
-   
+
     <style>
         .theGlobe {
             text-align: center;
@@ -29,47 +29,71 @@
             transform: translateY(-50%);
         }
 
-    .typewriter h6 {
-        color: white;
-        font-family: calibri;
-        font-size:medium;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .1em solid #dd12ec; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .1em; /* Adjust as needed */
-        animation: typing 5.5s steps(90, end), blink-caret .5s step-end infinite;
-    }
-
-    /* The typing effect */
-    @keyframes typing {
-        from {
-            width: 0
+        .typewriter h6 {
+            color: white;
+            font-family: calibri;
+            font-size: medium;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .1em solid #dd12ec; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .1em; /* Adjust as needed */
+            animation: typing 5.5s steps(90, end), blink-caret .5s step-end infinite;
         }
 
-        to {
-            width: 100%
-        }
-    }
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
 
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to {
-            border-color: transparent
+            to {
+                width: 100%
+            }
         }
 
-        50% {
-            border-color: #dd12ec
-        }
-    }
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent
+            }
 
+            50% {
+                border-color: #dd12ec
+            }
+        }
+
+        .btn {
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            text-align: center;
+            min-width: 120px;
+        }
+
+            .btn span {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0 auto;
+                text-align: center;
+                left: 0;
+                right: 0;
+            }
+
+        .b-btn {
+            min-width: 180px;
+        }
     </style>
 
 
 </head>
 
 <body>
-    
+
     <header class="v-header w-100 py-3">
         <div class="mobilenav d-lg-none">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -113,8 +137,8 @@
                             </button>
                         </div>
                     </nav>
-                    <a href="Register.Aspx" class="btn btn-outline-light rounded-5 text-capitalize px-4">register</a>
-                    <button data-bs-toggle="modal" data-bs-target="#loginModal" type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 d-none text-capitalize px-4">Login</button>
+                    <a href="Register.Aspx" class="btn btn-outline-light rounded-5 text-capitalize px-4"><span>register</span></a>
+                    <button data-bs-toggle="modal" data-bs-target="#loginModal" type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 d-none text-capitalize px-4"><span>Login</span></button>
                 </div>
             </div>
         </div>
@@ -126,8 +150,11 @@
                 <div class="col-md-8 text-white mb-md-0 mb-5">
                     <div class="captionbox">
                         <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
-                        <div class="typewriter" style="width:100%"><h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6></div><p></p>
-                        <a href="https://www.tradiix.com/" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4">Start Learning</a>
+                        <div class="typewriter" style="width: 100%">
+                            <h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6>
+                        </div>
+                        <p></p>
+                        <a href="https://www.tradiix.com/" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4 b-btn"><span>Start Learning</span></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -135,7 +162,7 @@
                         <h5 id="ResponseMessage" runat="server" style="display: none;"></h5>
                     </div>
                     <form class="form" id="myForm" runat="server">
-                         <asp:ScriptManager runat="server" />
+                        <asp:ScriptManager runat="server" />
                         <div class="mb-3">
                             <label for="" class="text-white">Username</label>
                             <input class="form-control" type="text" name="username" id="username" placeholder="Username" required="required" runat="server" />
@@ -148,7 +175,7 @@
                             </span>
                         </div>
 
-                      <%--  <div class="mb-3">
+                        <%--  <div class="mb-3">
 
                             <cc1:CaptchaControl runat="server" ID="ccLink"
                                 CaptchaMaxTimeout="180"
@@ -166,13 +193,13 @@
                         </div>--%>
 
                         <div>
-                         
-                   <%--         <div class="g-recaptcha" data-type="image" data-sitekey="6Lc29qspAAAAAI_gVTCyv5rAamSYYj1eQgeAJCvs" ></div>
+
+                            <%--         <div class="g-recaptcha" data-type="image" data-sitekey="6Lc29qspAAAAAI_gVTCyv5rAamSYYj1eQgeAJCvs" ></div>
                          <div class="help-block with-errors">
                           <span style="color:#ffffff">Please complete reCAPTCHA</span>
                          </div>--%>
-                             <div id="ReCaptchContainer"></div>
-                            <label id="lblMessage" runat="server" clientidmode="static"></label> 
+                            <div id="ReCaptchContainer"></div>
+                            <label id="lblMessage" runat="server" clientidmode="static"></label>
                         </div>
 
                         <input type="hidden" id="successMessage" value="false" runat="server" />
@@ -399,24 +426,24 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
     <script src="js/jquery.min.js"></script>
 
-    
- <script>
-     function togglePasswordVisibility() {
-         var passwordField = document.getElementById('password');
-         var eyeIcon = document.getElementById('eyeIcon');
 
-         if (passwordField.type === "password") {
-             passwordField.type = "text";
-             eyeIcon.classList.remove('fa-eye-slash');
-             eyeIcon.classList.add('fa-eye');
-         } else {
-             passwordField.type = "password";
-             eyeIcon.classList.remove('fa-eye');
-             eyeIcon.classList.add('fa-eye-slash');
-         }
-     }
-    
- </script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('password');
+            var eyeIcon = document.getElementById('eyeIcon');
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            } else {
+                passwordField.type = "password";
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
+        }
+
+    </script>
     <script type="text/javascript">
         var your_site_key = '<%= ConfigurationManager.AppSettings["SiteKey"]%>';
         var renderRecaptcha = function () {
