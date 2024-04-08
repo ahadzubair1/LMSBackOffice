@@ -63,6 +63,13 @@
         border-color: #dd12ec
     }
 }
+.btn{
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
     </style>
 </head>
 <header class="v-header w-100 py-3">
