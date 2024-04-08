@@ -406,6 +406,16 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     opacity: 1;
     z-index: -1;
 }
+.pc-sidebar .pc-navbar > .pc-item .submenu {
+    margin-left: 3.25rem !important;
+}
+.pc-sidebar .pc-navbar > .pc-item .submenu .nav-link {
+    font-size: 14px;
+    color: #fff;
+}
+.pc-sidebar .pc-navbar > .pc-item .submenu .nav-link:hover {
+    color: #d014e4;
+}
 
 /* Curve Line */
 .bg-line {

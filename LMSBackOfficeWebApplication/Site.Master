@@ -156,7 +156,7 @@
                             </a>
                         </li>
                         <li class="dropdown pc-h-item">
-                            <a 
+                            <a
                                 class="pc-head-link dropdown-toggle arrow-none me-0 disabled"
                                 data-bs-toggle="dropdown"
                                 href="#"
@@ -388,14 +388,14 @@
                                         <i class="ti ti-lock"></i>
                                         <span>Lock Screen</span>
                                     </a>
-                                   <a href="Login.aspx">
-    <i class="ti ti-power"></i>
-    <span>Logout</span>
+                                    <a href="Login.aspx">
+                                        <i class="ti ti-power"></i>
+                                        <span>Logout</span>
 
-        <use xlink:href="#custom-logout"></use>
+                                        <use xlink:href="#custom-logout"></use>
 
-</a>
-                                  
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -493,6 +493,25 @@
                                 </span>
                                 <span class="pc-mtext">AI Copy Trading</span>&nbsp;<span class="badge bg-primary-t">Coming Soon</span>
                             </a>
+                        </li>
+                        <li class="pc-item">
+                            <a href="#submenu1" data-bs-toggle="collapse" class="pc-link">
+                                <span class="pc-micon">
+                                    <svg class="pc-icon">
+                                        <use xlink:href="#custom-shapes"></use>
+                                    </svg>
+                                </span>
+                                <span class="pc-mtext">Forex Broker</span>
+                                <i data-feather="chevron-down"></i>
+                            </a>
+                            <ul class="collapse nav flex-column ms-1 submenu" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0">Broker 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0">Broker 2 </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="pc-item">
                             <a href="Transactions.aspx" class="pc-link">
