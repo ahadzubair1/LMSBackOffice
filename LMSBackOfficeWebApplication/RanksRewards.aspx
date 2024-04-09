@@ -278,7 +278,7 @@
                                 </Columns>
                                 <PagerStyle CssClass="custom-pagination" />
                             </asp:GridView>
-                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i>Terms & Conditions Apply</div>
+                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><strong>Terms & Conditions Apply</strong></div>
                         </div>
                     </div>
                 </div>
