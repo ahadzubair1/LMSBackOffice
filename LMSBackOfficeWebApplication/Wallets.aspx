@@ -264,7 +264,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Credit Wallet Transactions</h5>
                                 <div class="overflow-x-auto">
-                                    <table id="" class="table table-striped" style="width: 100%">
+                                    <table id="" class="table table-striped table-hover" style="width: 100%">
                                         <thead>
                                             <tr>
                                                 <th>Wallet Code</th>
