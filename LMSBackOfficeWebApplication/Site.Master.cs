@@ -9,6 +9,9 @@ using System.Web.UI.WebControls;
 using Newtonsoft.Json.Linq;
 using System.Net.PeerToPeer;
 using static ServiceStack.Diagnostics.Events;
+using System.Web.Services;
+using Irony.Parsing;
+using System.Data;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -41,6 +44,12 @@ namespace LMSBackOfficeWebApplication
                     }
                 }
             }
+            // Check if it's a postback and the action parameter is 'changePassword'
+            //if (Request.HttpMethod == "POST" && Request.Form["action"] == "ChangePassword" && !Request.Url.AbsolutePath.ToLower().Contains("/login.aspx"))
+            //{
+            //    // Call your change password function here
+            //    ChangePassword();
+            //}
         }
         protected void btnLogout_Click(object sender, EventArgs e)
         {
@@ -52,6 +61,18 @@ namespace LMSBackOfficeWebApplication
         }
 
 
+        public void ChangePassword()
+        {
+            // Clear all session variables
+            Session.Clear();
+            Response.Redirect("http://yahoo.com",true);
+            string username = Session["Username"].ToString();
+            var member = Members_DataAccess.GetMemberInfo(username);
+            
+            string MemberCode = member.MemberCode;
+
+            Response.Redirect("ResetPassword.aspx?token=" + MemberCode);
+        }
 
         protected void Renew_Click(object sender, EventArgs e)
         {
