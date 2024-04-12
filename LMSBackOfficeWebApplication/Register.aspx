@@ -88,10 +88,23 @@
         .b-btn {
             min-width: 180px;
         }
-        /* Styling for Mac browsers */
-        @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+
+        @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+            h4, .h4 {
+                font-size: 20px !important;
+                line-height: 1 !important;
+            }
+
+            p {
+                margin: revert !important;
+            }
+
             .btn span {
                 transform: translateY(-34%);
+            }
+
+            #btnSubmit {
+                line-height: 2.4;
             }
         }
     </style>
@@ -103,10 +116,10 @@
                 <div class="header-nav">
                     <ul class="p-0 m-0">
                         <li><a href="index.html">Home</a> </li>
-                        <li><a href="#master-head">About Us</a> </li>
-                        <li><a href="#v-course-list">Courses</a> </li>
-                        <li><a href="#">Services</a> </li>
-                        <li><a href="#v-educators">Educators</a> </li>
+                        <li><a href="index.html#master-head">About Us</a> </li>
+                        <li><a href="index.html#v-course-list">Courses</a> </li>
+                        <li><a href="index.html#earn-box">Services</a> </li>
+                        <li><a href="index.html#v-educators">Educators</a> </li>
                     </ul>
                 </div>
             </div>
@@ -123,10 +136,10 @@
                 <div class="header-nav">
                     <ul class="p-0 m-0">
                         <li><a href="index.html">Home</a> </li>
-                        <li><a href="#master-head">About Us</a> </li>
-                        <li><a href="#v-course-list">Courses</a> </li>
-                        <li><a href="#">Services</a> </li>
-                        <li><a href="#v-educators">Educators</a> </li>
+                        <li><a href="index.html#master-head">About Us</a> </li>
+                        <li><a href="index.html#v-course-list">Courses</a> </li>
+                        <li><a href="index.html#earn-box">Services</a> </li>
+                        <li><a href="index.html#v-educators">Educators</a> </li>
                     </ul>
                 </div>
             </div>

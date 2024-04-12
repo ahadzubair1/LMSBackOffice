@@ -29,7 +29,7 @@
   window.addEventListener('load', showOffcanvasWithDelay);
 
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     // Add smooth scrolling to all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -44,3 +44,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+ 

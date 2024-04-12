@@ -55,6 +55,7 @@ body{
   text-transform: capitalize;
   font-weight: 500;
   transition: all ease 0.3s;
+  display: inline-block;
 }
 .btn{
   font-weight: 500;
@@ -332,6 +333,13 @@ body{
   background-size: cover;
   animation: bgmove 20s linear infinite;
 }
+#v-educators .educator-info .name{
+  font-size: 20px;
+  line-height: 1;
+}
+#v-educators .educator-info p{
+  margin: revert;
+}
 .educator-grid{
   color: #fff;
   background-color: #802FB0;
@@ -348,10 +356,10 @@ body{
   object-fit: cover;
 }
 #v-educators .carousel-control-prev{
-  left: -150px;
+  left: -110px;
 }
 #v-educators .carousel-control-next{
-  right: -150px;
+  right: -110px;
 }
 #v-fundamentals{
   background-image: url(../img/bg-glow.svg);
@@ -454,16 +462,19 @@ body{
 }
 marquee{
   position: fixed;
-  top: 78px;
+  top: 80px;
   color: #fff;
   background: rgba(0, 0, 0, 0.7);
   z-index: 21;
   font-size: 12px;
 }
 @media only screen and (max-width: 767px) {
-  marquee{
-    top: 135px;
-  }
+    .brbox{
+        height: auto !important;
+    }
+    marquee {
+        top: 140px;
+    }
   .btn{
     font-size: 14px;
   }
