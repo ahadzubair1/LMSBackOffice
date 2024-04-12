@@ -87,6 +87,12 @@
         .b-btn {
             min-width: 180px;
         }
+        /* Styling for Mac browsers */
+        @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+            .btn span {
+                transform: translateY(-34%);
+            }
+        }
     </style>
 
 
