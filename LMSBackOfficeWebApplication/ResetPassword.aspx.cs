@@ -13,8 +13,25 @@ namespace LMSBackOfficeWebApplication
 {
     public partial class ResetPassword : System.Web.UI.Page
     {
+        public string token { get; set; } = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+                if (string.IsNullOrEmpty(Request.QueryString["token"]))
+                {
+                    string username = Session["Username"].ToString();
+                    var member = Members_DataAccess.GetMemberInfo(username);
+                    token = member.MemberCode;
+
+                }
+                else
+                {
+                    // Its login is already in btn reset Passowrd
+                }
+
+            }
 
         }
         protected void btnSubmit_Reset(object sender, EventArgs e)
@@ -22,14 +39,26 @@ namespace LMSBackOfficeWebApplication
             string password = this.password.Value;
             string confirmpassword = this.confirmpassword.Value;
             string currentDomainUrl = Request.Url.GetLeftPart(UriPartial.Authority);
-            string activationToken = Request.QueryString["token"];
+                string activationToken = "";
+
+            if (Session["Username"] != null && !string.IsNullOrEmpty(Session["Username"].ToString()))
+            {
+                string username = Session["Username"].ToString();
+                var member = Members_DataAccess.GetMemberInfo(username);
+                activationToken = member.MemberCode;
+            }
+            else
+            {
+
+            activationToken=Request.QueryString["token"];
+            }
             string passwordValidation = validatePassword(password, confirmpassword);
             if (passwordValidation != "Success")
             {
                 ResponseMessage.InnerText = passwordValidation;
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
-                Response.AddHeader("REFRESH", "2;URL=ResetPassword.aspx?token=" + activationToken);
+               Response.AddHeader("REFRESH", "2;URL=ResetPassword.aspx?token=" + activationToken);
             }
             else
             {
@@ -50,7 +79,7 @@ namespace LMSBackOfficeWebApplication
                         ResponseMessage.Style.Add("color", "#e012ee");
                         this.password.Value = "";
                         this.confirmpassword.Value = "";
-                        Response.AddHeader("REFRESH", "2;URL=ResetPassword.aspx?token="+activationToken);
+                      //  Response.AddHeader("REFRESH", "2;URL=ResetPassword.aspx?token="+activationToken);
                     }
                     else
                     {

@@ -55,6 +55,30 @@
             // $("#messageModal").addClass("hide"); 
         }
     </script>
+    <%--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#changePasswordLink').click(function (e) {
+            e.preventDefault(); // Prevent default action of anchor tag
+            
+            // Call server-side method using AJAX
+            $.ajax({
+                type: "POST",
+                url: window.location.href, // Same page URL
+                data: { action: 'ChangePassword' }, // Pass an action parameter
+                success: function (response) {
+                    // Handle success response from server
+                    console.log(response); // Log the response to console
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response from server
+                    console.error(xhr.responseText); // Log the error to console
+                }
+            });
+        });
+    });
+</script>--%>
+
 </head>
 <body>
 
@@ -319,7 +343,7 @@
                                                 <span>Share</span>
                                             </span>
                                         </a>
-                                        <a href="#" class="dropdown-item">
+                                        <a href="ResetPassword.aspx" class="dropdown-item" id="changePasswordLink">
                                             <span>
                                                 <svg class="pc-icon text-muted me-2">
                                                     <use xlink:href="#custom-lock-outline"></use>
@@ -327,6 +351,8 @@
                                                 <span>Change Password</span>
                                             </span>
                                         </a>
+                                    
+
                                         <a href="Login.aspx" class="dropdown-item">
                                             <span>
                                                 <svg class="pc-icon text-muted me-2">
