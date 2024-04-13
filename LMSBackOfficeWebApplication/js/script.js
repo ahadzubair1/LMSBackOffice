@@ -18,15 +18,15 @@
 
 // In your Javascript (external .js resource or <script> tag)
 // Function to show Offcanvas after a delay
-  function showOffcanvasWithDelay() {
+function showOffcanvasWithDelay() {
     var offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasExample'));
-    setTimeout(function() {
-      offcanvas.show();
+    setTimeout(function () {
+        offcanvas.show();
     }, 5000); // 10 seconds delay
-  }
+}
 
-  // Show Offcanvas after page load
-  window.addEventListener('load', showOffcanvasWithDelay);
+// Show Offcanvas after page load
+window.addEventListener('load', showOffcanvasWithDelay);
 
 
 window.addEventListener("load", function () {
@@ -44,4 +44,28 @@ window.addEventListener("load", function () {
         });
     });
 });
- 
+
+const text = `Your journey to a transformed financial future starts here.
+    Welcome to Tradiix, where possibilities become profits!`;
+
+let index = 0;
+let line = 0;
+const speed = 50; // typing speed in milliseconds
+
+function typeWriter() {
+    if (index < text.length) {
+        const char = text.charAt(index);
+        const div = document.getElementById("typewriter");
+
+        if (char === '\n') {
+            line++;
+        }
+
+        div.innerHTML += char;
+
+        index++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
