@@ -134,6 +134,12 @@ namespace LMSBackOfficeWebApplication
 
                         var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
 
+
+                        WriteLog.LogInfo($"Initiate transation for member {member.Id} of order no {checkout.OrderId}");
+                        //Add Transaction and Coin PaymentTransaction
+                        Transactions_DataAcsess.AddTransactions(member.Id, checkout.OrderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,
+                                                                member.MemberAddress, Configurations.CompanyCryptoWallet, CoinPaymentStatus.Pending.ToString(),
+                                                                Convert.ToDecimal(checkout.TotalAmount));
                         Response.Write("<script type='text/javascript'>");
                         Response.Write("window.open('" + redirectUrl + "','_blank');");
                         Response.Write("</script>");
