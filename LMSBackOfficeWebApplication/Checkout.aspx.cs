@@ -1,4 +1,5 @@
-﻿using LMSBackofficeDAL;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using LMSBackofficeDAL;
 using LMSBackOfficeDAL;
 using LMSBackOfficeDAL.Model;
 using LMSBackOfficeWebApplication.Utitlity;
@@ -65,6 +66,7 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
+
         private IDictionary<string, string> CreateQueryParameters(CheckoutModel model, string memberId)
         {
             string storeLocation = HttpContext.Current.Request.Url.AbsoluteUri;
@@ -126,6 +128,17 @@ namespace LMSBackOfficeWebApplication
                     {
                         string message = $"You already have been requested a topup, please wait while its being completed.";
                         Page.ClientScript.RegisterStartupScript(this.GetType(), Guid.NewGuid().ToString(), "ShowTopupMessage('" + message + "');", true);
+
+                        /*Added by Admin as work aroun*/
+                        var queryParameters = CreateQueryParameters(checkout, member.Id);
+
+                        var redirectUrl = UtilMethods.AddQueryString(Configurations.CoinPaymentUrl, queryParameters);
+
+                        Response.Write("<script type='text/javascript'>");
+                        Response.Write("window.open('" + redirectUrl + "','_blank');");
+                        Response.Write("</script>");
+                        /*Till here*/
+
                     }
                     else
                     {
