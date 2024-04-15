@@ -29,38 +29,8 @@
             transform: translateY(-50%);
         }
 
-        .typewriter h6 {
-            color: white;
-            font-family: calibri;
-            font-size: medium;
-            overflow: hidden; /* Ensures the content is not revealed until the animation */
-            border-right: .1em solid #dd12ec; /* The typwriter cursor */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .1em; /* Adjust as needed */
-            animation: typing 5.5s steps(90, end), blink-caret .5s step-end infinite;
-        }
-
-        /* The typing effect */
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-
-        /* The typewriter cursor effect */
-        @keyframes blink-caret {
-            from, to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: #dd12ec
-            }
+        #typewriter {
+            white-space: pre-line;
         }
 
         .btn {
@@ -169,11 +139,8 @@
                 <div class="col-md-8 text-white mb-md-0 mb-5">
                     <div class="captionbox">
                         <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
-                        <div class="typewriter" style="width: 100%">
-                            <h6><small>Your journey to a transformed financial future starts here.Welcome to Tradiix, where possibilities become profits!</small></h6>
-                        </div>
-                        <p></p>
-                        <a href="https://www.tradiix.com/" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4 b-btn"><span>Start Learning</span></a>
+                        <div id="typewriter"></div>
+                        <a href="https://www.tradiix.com/" class="btn btn-primary btn-outline-light text-nowrap rounded-5 mt-4 text-capitalize px-4 b-btn"><span>Start Learning</span></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -445,6 +412,7 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         function togglePasswordVisibility() {
