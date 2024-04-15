@@ -15,6 +15,15 @@ namespace LMSBackOfficeWebApplication
     {
 
         /// <summary>
+        /// lblMembership control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMembership;
+
+        /// <summary>
         /// directBonus control.
         /// </summary>
         /// <remarks>
@@ -31,15 +40,6 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNetworkBonus;
-
-        /// <summary>
-        /// lblMembership control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMembership;
 
         /// <summary>
         /// lblrank control.

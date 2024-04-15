@@ -120,8 +120,10 @@
                             </div>
                         </div>
                         <h2 class="text-white">Welcome!</h2>
-                        <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p><br/>
-                         <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
+                        <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
+                        <br />
+                        <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
+                        <div id="timer" class="partner rounded-5 mt-2 small p-1"></div>
                     </div>
                     <div class="leaf">
                         <div>
@@ -222,70 +224,70 @@
                 <!-- [ Main Content ] start -->
                 <div class="row g-3">
 
-                       <div class="col-md-3">
-       <div class="card t-card membership" style="background-color:wheat">
-           <div class="card-body" >
-               <div class="d-flex align-items-center">
-                   <div class="flex-shrink-0">
-                       <div class="avtar avtar-s bg-light-warning">
-                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                               <path
-                                   d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                   stroke="#E58A00"
-                                   stroke-width="1.5"
-                                   stroke-miterlimit="10"
-                                   stroke-linecap="round"
-                                   stroke-linejoin="round" />
-                               <path
-                                   opacity="0.6"
-                                   d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
-                                   stroke="#E58A00"
-                                   stroke-width="1.5"
-                                   stroke-miterlimit="10"
-                                   stroke-linecap="round"
-                                   stroke-linejoin="round" />
-                               <path
-                                   opacity="0.6"
-                                   d="M8 13H12"
-                                   stroke="#E58A00"
-                                   stroke-width="1.5"
-                                   stroke-miterlimit="10"
-                                   stroke-linecap="round"
-                                   stroke-linejoin="round" />
-                               <path
-                                   opacity="0.6"
-                                   d="M8 17H16"
-                                   stroke="#E58A00"
-                                   stroke-width="1.5"
-                                   stroke-miterlimit="10"
-                                   stroke-linecap="round"
-                                   stroke-linejoin="round" />
-                           </svg>
-                       </div>
-                   </div>
-                   <div class="flex-grow-1 ms-3" style="background-color:wheat">
-                       <h6 class="mb-0 font-semibold">Product</h6>
-                   </div>
-               </div>
-               <div class="bg-body rounded" >
-                   <div class="row align-items-center" style="background-color:wheat">
-                       <div class="col-7" >
-                           <h5 class="font-semibold m-0">
-                               <asp:Label runat="server" Text="None" ID="lblMembership"></asp:Label></h5>
-                       </div>
-                       <div class="col-5">
-                           <h5 class="mb-1">&nbsp;</h5>
-                           <p class="text-warning mb-0">&nbsp;</p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+                    <div class="col-md-3">
+                        <div class="card t-card membership" style="background-color: wheat">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="avtar avtar-s bg-light-warning">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 13H12"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    opacity="0.6"
+                                                    d="M8 17H16"
+                                                    stroke="#E58A00"
+                                                    stroke-width="1.5"
+                                                    stroke-miterlimit="10"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3" style="background-color: wheat">
+                                        <h6 class="mb-0 font-semibold">Product</h6>
+                                    </div>
+                                </div>
+                                <div class="bg-body rounded">
+                                    <div class="row align-items-center" style="background-color: wheat">
+                                        <div class="col-7">
+                                            <h5 class="font-semibold m-0">
+                                                <asp:Label runat="server" Text="None" ID="lblMembership"></asp:Label></h5>
+                                        </div>
+                                        <div class="col-5">
+                                            <h5 class="mb-1">&nbsp;</h5>
+                                            <p class="text-warning mb-0">&nbsp;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-md-3">
-                        <div class="card t-card direct-bonus" style="background-color:#bacefb">
-                            <div class="card-body" >
+                        <div class="card t-card direct-bonus" style="background-color: #bacefb">
+                            <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
@@ -312,12 +314,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3" style="background-color:#bacefb">
+                                    <div class="flex-grow-1 ms-3" style="background-color: #bacefb">
                                         <h6 class="mb-0 font-semibold">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center" style="background-color:#bacefb">
+                                    <div class="row align-items-center" style="background-color: #bacefb">
                                         <div class="col-7">
                                             <div id="all-earnings-graph"></div>
                                         </div>
@@ -331,7 +333,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card t-card kyc-status" style="background-color:#88e3c5">
+                        <div class="card t-card kyc-status" style="background-color: #88e3c5">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -411,12 +413,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3" style="background-color:#88e3c5">
+                                    <div class="flex-grow-1 ms-3" style="background-color: #88e3c5">
                                         <h6 class="mb-0 font-semibold">Network Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center" style="background-color:#88e3c5">
+                                    <div class="row align-items-center" style="background-color: #88e3c5">
                                         <div class="col-7">
                                             <div id="total-task-graph"></div>
                                         </div>
@@ -430,9 +432,9 @@
                             </div>
                         </div>
                     </div>
-                 
+
                     <div class="col-md-3">
-                        <div class="card t-card direct-referral" style="background-color:#f89b9b">
+                        <div class="card t-card direct-referral" style="background-color: #f89b9b">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -455,12 +457,12 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3" style="background-color:#f89b9b">
+                                    <div class="flex-grow-1 ms-3" style="background-color: #f89b9b">
                                         <h6 class="mb-0 font-semibold">Rank Achieved</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
-                                    <div class="row align-items-center" style="background-color:#f89b9b">
+                                    <div class="row align-items-center" style="background-color: #f89b9b">
                                         <div class="col-7">
                                             <h5 class="font-semibold m-0">
                                                 <asp:Label ID="lblrank" runat="server" Text="Earn More Rewards"></asp:Label></h5>
@@ -1176,6 +1178,45 @@
                 copiedSpan.style.display = "none";
             }, 1000); // 1000 milliseconds = 1 second
         }
+
+        // Timer
+
+        function getNextSunday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const daysUntilNextSunday = 7 - dayOfWeek;
+
+            const nextSunday = new Date(today);
+            nextSunday.setDate(today.getDate() + daysUntilNextSunday);
+            nextSunday.setHours(12, 0, 0, 0);
+
+            return nextSunday;
+        }
+
+        function updateTimer() {
+            const targetDate = getNextSunday();
+            const currentDate = new Date();
+
+            const timeDifference = targetDate.getTime() - currentDate.getTime();
+
+            if (timeDifference < 0) {
+                document.getElementById('timer').textContent = "Bonus dispersal is now!";
+                return;
+            }
+
+            const totalSeconds = Math.floor(timeDifference / 1000);
+            const days = Math.floor(totalSeconds / (3600 * 24));
+            const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            document.getElementById('timer').textContent = `Time Until Bonus Dispersal: ${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+
+            setTimeout(updateTimer, 1000);
+        }
+
+        // Start the timer
+        updateTimer();
     </script>
 
 </asp:Content>
