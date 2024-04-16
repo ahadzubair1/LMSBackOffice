@@ -327,7 +327,7 @@
                                             <input id="agreement3" type="checkbox" name="agreement" value="" />
                                             <label for="agreement3">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en" target="_blank" class="btn btn-primary">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -388,7 +388,7 @@
                                             <input id="agreement4" type="checkbox" name="agreement" value="" />
                                             <label for="agreement4">Yes, I have read</label>
                                         </div>
-                                        <a href="https://www.octafx.com/?refid=if6471013" target="_blank" class="btn btn-primary">Continue</a>
+                                        <a href="https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en" target="_blank" class="btn btn-primary">Continue</a>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@ Ineligible Membership</h1>
                 // Check if membership exists
                 if (MembershipExist && HighestMembershipAmount>=50) {
                     // Redirect to a new link
-                    window.location.href = 'https://www.octafx.com/?refid=if6471013';
+                    window.location.href = 'https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en';
                 } else {
                     // Display the modal
                     var modal = document.getElementById('buyMembership');
@@ -465,7 +465,7 @@ Ineligible Membership</h1>
                 // Check if membership exists
                 if (MembershipExist && HighestMembershipAmount >= 750) {
                     // Redirect to a new link
-                    window.location.href = 'https://www.octafx.com/?refid=if6471013';
+                    window.location.href = 'https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en';
                 } else {
                     // Display the modal
                     var modal = document.getElementById('buyMembership');

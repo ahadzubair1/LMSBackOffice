@@ -79,6 +79,13 @@
     });
 </script>--%>
 
+  <script type="text/javascript">
+      function handleClick() {
+          // Call the server-side function asynchronously
+          __doPostBack('<%= AIcopyTradingLi.UniqueID %>', '');
+      }
+  </script>
+
 </head>
 <body>
 
@@ -510,16 +517,17 @@
                                 <span class="pc-mtext">Ranks & Rewards</span>
                             </a>
                         </li>
-                        <li class="pc-item">
-                            <a href="#" class="pc-link">
-                                <span class="pc-micon">
-                                    <svg class="pc-icon">
-                                        <use xlink:href="#custom-presentation-chart"></use>
-                                    </svg>
-                                </span>
-                                <span class="pc-mtext">AI Copy Trading</span>&nbsp;<span class="badge bg-primary-t">Coming Soon</span>
-                            </a>
-                        </li>
+
+                              <li id="AIcopyTradingLi" runat="server" class="pc-item">
+                <a id="AIcopyTradingLink" runat="server" href="#" class="pc-link" onclick="handleClick(); return false;">
+                    <span class="pc-micon">
+                        <svg class="pc-icon">
+                            <use xlink:href="#custom-presentation-chart"></use>
+                        </svg>
+                    </span>
+                    <span class="pc-mtext">AI Copy Trading</span>&nbsp;<span id="comingsoonspan" runat="server" class="badge bg-primary-t">On Purchase</span>
+                </a>
+            </li>
                         <li class="pc-item">
                             <a href="#submenu1" data-bs-toggle="collapse" class="pc-link">
                                 <span class="pc-micon">

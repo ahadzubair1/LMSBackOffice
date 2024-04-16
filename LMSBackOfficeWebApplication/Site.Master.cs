@@ -12,6 +12,9 @@ using static ServiceStack.Diagnostics.Events;
 using System.Web.Services;
 using Irony.Parsing;
 using System.Data;
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LMSBackofficeDAL;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -19,6 +22,12 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check if it's a postback caused by the anchor click
+            if (Request.Form["__EVENTTARGET"] == AIcopyTradingLi.UniqueID)
+            {
+                // Execute server-side code
+                AIcopyTradingLink_Click(sender, e);
+            }
             if (Session["Username"] == null)
             {
                 // Session has expired, redirect to login page
@@ -44,6 +53,12 @@ namespace LMSBackOfficeWebApplication
                     }
                 }
             }
+            bool membershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
+
+            ShowHideAICopyTrading(membershipExist);
+           
+
+
             // Check if it's a postback and the action parameter is 'changePassword'
             //if (Request.HttpMethod == "POST" && Request.Form["action"] == "ChangePassword" && !Request.Url.AbsolutePath.ToLower().Contains("/login.aspx"))
             //{
@@ -60,6 +75,75 @@ namespace LMSBackOfficeWebApplication
             Response.Redirect("Login.aspx");
         }
 
+        private void ShowHideAICopyTrading(bool enableAICopyTrading )
+        {
+            if (!enableAICopyTrading)
+            {
+                
+                AIcopyTradingLink.Attributes["onclick"] = "return false;";
+                AIcopyTradingLink.Style.Add("pointer-events", "none"); // Disable pointer events to prevent click
+                AIcopyTradingLink.Style.Add("color", "gray"); // Optionally change the color to indicate disabled state
+                comingsoonspan.Visible = true;
+            }
+            else
+            {
+       
+                comingsoonspan.Visible = false;
+            }
+
+
+        }
+
+        protected void AIcopyTradingLink_Click(object sender, EventArgs e)
+        {
+            // Server-side code to execute when the anchor is clicked
+            // For example, you can perform any server-side logic here
+
+            var member = Members_DataAccess.GetMemberInfo(HttpContext.Current.Session["Username"].ToString());
+
+            
+            string body = $@"<div>
+            <div>
+                <div>
+                    <table border=0 cellpadding=0 cellspacing=0 width=100% align='center' style='max-width:800px;margin:0 auto;background:#121925'>
+                        <tr>
+                            <td style='border:4px solid #d014e4'>
+                                <table border=0 cellpadding=25 cellspacing=0 width=100%>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%>
+                                                <p style=margin:0>
+                                                    <img alt=IconX border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
+                                                <tr>
+                                                    <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
+                                                        AI Copy Trading Page Access
+                                                <tr>
+                                                    <td colspan=2>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            Dear Admin,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            User: {member.UserName}, Email: {member.Email} has accessed the AI Copy Trading page at {System.DateTime.Now.ToString()}.
+                                                <tr>
+                                                    <td>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            If you have any questions, please feel free to contact us.
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            Best regards,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>
+                                                            Team Tradiix.
+                                                <hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'>
+                                                <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>
+                                                    © Tradiix
+                                </table>
+                            <td>
+                        </table>
+                    </div>
+                </div>
+            </div>";
+
+            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+            Response.Redirect("AICopyTrading.aspx");
+        }
 
         public void ChangePassword()
         {
