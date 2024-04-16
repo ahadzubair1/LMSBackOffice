@@ -1228,7 +1228,7 @@
             "width": "100%",
             "height": 400,
             "symbol": "FX:EURUSD",
-            "interval": "60",
+            "interval": "D",
             "timezone": "Etc/UTC",
             "theme": "light",
             "style": "10",  // Set candle style to "Baseline"
