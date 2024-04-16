@@ -123,7 +123,7 @@
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
                         <br />
                         <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
-                        <div id="timer" class="partner rounded-5 mt-2 small p-1"></div>
+                        <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="leaf">
                         <div>
@@ -282,6 +282,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
 
@@ -330,6 +334,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -430,6 +438,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
 
@@ -474,6 +486,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -724,9 +740,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="nav nav-tabs analytics-tab" id="myTab" role="tablist">
+                                <ul class="nav nav-tabs analytics-tab pb-2" id="t_tabs" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button
+                                        <a href="analytics-tab-1"
                                             class="nav-link active"
                                             id="analytics-tab-1"
                                             data-bs-toggle="tab"
@@ -734,8 +750,7 @@
                                             type="button"
                                             role="tab"
                                             aria-controls="analytics-tab-1-pane"
-                                            aria-selected="true">
-                                            All Transaction</button>
+                                            aria-selected="true">All Transaction</a>
                                     </li>
                                     <li class="nav-item d-none" role="presentation">
                                         <button
@@ -1228,14 +1243,15 @@
             "width": "100%",
             "height": 400,
             "symbol": "FX:EURUSD",
-            "interval": "D",
+            "interval": "240",
             "timezone": "Etc/UTC",
             "theme": "light",
             "style": "10",  // Set candle style to "Baseline"
             "colorScheme": "light", // Set color scheme
             "barColor": "#000", // Set bar color
             "locale": "en",
-            "toolbar_bg": "#f1f3f6",
+            "toolbar_bg": "#dd12ec",
+            "plotBackground": "#dd12ec",
             "enable_publishing": false,
             "withdateranges": true,
             "range": "ytd",

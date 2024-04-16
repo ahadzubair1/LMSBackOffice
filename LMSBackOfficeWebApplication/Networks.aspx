@@ -247,44 +247,43 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row mb-4 tree-controls">
-                                    <div runat="server" id="divSerachMessage" class="col-md-12">
-                                        <div class="alert alert-danger small py-1" role="alert"><i class="ti ti-alert-circle"></i>
-                                            <asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label></div>
-                                    </div>
-                                    <div class="col-md-6">
+                                <div class="mb-4 tree-controls gap-3 d-flex align-items-center">
+
+                                    <div class="flex-column">
                                         <div class="input-group mb-md-0 mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-user fa-sm fa-fw text-gray-400"></i></span>
                                             </div>
                                             <%--                                            <input type="text" class="form-control" id="searchnode" placeholder="Find a user">--%>
                                             <asp:TextBox runat="server" ID="txtSearch" CssClass="form-control" Placeholder="Search a user"></asp:TextBox>
-                                            <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" Enabled="true" OnClick="btnSearch_Click" />
+                                            <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn bg-primary-t text-white" Enabled="true" OnClick="btnSearch_Click" />
+                                        </div>
+                                        <div runat="server" id="divSerachMessage">
+                                            <div class="alert alert-danger small py-1 m-0" role="alert">
+                                                <i class="ti ti-alert-circle"></i>
+                                                <asp:Label ID="lblSearchMessage" runat="server" Text=""></asp:Label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="btn-group tree-filter w-100">
-<%--                                            <a href="/networks?id={variable}" class="btn btn-light btn-shadow col fileinput-button dz-clickable">--%>
-                                                <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
-                                                <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn btn-light btn-shadow col fileinput-button dz-clickable">
+                                    <div class="btn-group tree-filter bg-white p-2 shadow-sm">
+                                        <%-- <a href="/networks?id={variable}" class="btn btn-light btn-shadow col fileinput-button dz-clickable">--%>
+                                        <%--<a href="/networks?memberkey={{ leftFarNodeId }}" class="btn btn-success col fileinput-button dz-clickable">--%>
+                                        <a href="/networks?memberkey=<%= leftFarNodeId %>" class="btn col fileinput-button dz-clickable">
 
 
-                                                    <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
-                                                    <span><strong>Far Left</strong></span>
-                                                </a>
+                                            <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
+                                            <span><strong>Far Left</strong></span>
+                                        </a>
 
-                                                <a href="/networks" class="btn btn-light btn-shadow col start">
-                                                    <span><strong>Top</strong></span>
-                                                </a>
+                                        <a href="/networks" class="btn col start">
+                                            <span><strong>Top</strong></span>
+                                        </a>
 
-                                                <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn btn-light btn-shadow col cancel">
-                                                    <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
-                                                    <span><strong>Far Right</strong></span>
-                                                </a>
-                                                </a>
-                                        </div>
+                                        <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn col cancel">
+                                            <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
+                                            <span><strong>Far Right</strong></span>
+                                        </a>
                                     </div>
-
                                 </div>
                                 <div id="orgChartContainer" style="padding-top: 100px;">
                                     <div id="orgChart">
@@ -394,11 +393,11 @@
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             var searchButton = document.getElementById('<%= btnSearch.ClientID %>');
-              if (searchButton) {
-                  searchButton.addEventListener("click", function () {
-                      searchButton.click();
-                  });
-              }
-          });
+            if (searchButton) {
+                searchButton.addEventListener("click", function () {
+                    searchButton.click();
+                });
+            }
+        });
     </script>
 </asp:Content>
