@@ -12,6 +12,9 @@ using static ServiceStack.Diagnostics.Events;
 using System.Web.Services;
 using Irony.Parsing;
 using System.Data;
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Wordprocessing;
+using LMSBackofficeDAL;
 
 namespace LMSBackOfficeWebApplication
 {
@@ -19,6 +22,12 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check if it's a postback caused by the anchor click
+            if (Request.Form["__EVENTTARGET"] == AIcopyTradingLi.UniqueID)
+            {
+                // Execute server-side code
+                AIcopyTradingLink_Click(sender, e);
+            }
             if (Session["Username"] == null)
             {
                 // Session has expired, redirect to login page
@@ -44,6 +53,12 @@ namespace LMSBackOfficeWebApplication
                     }
                 }
             }
+            bool membershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
+
+            ShowHideAICopyTrading(membershipExist);
+           
+
+
             // Check if it's a postback and the action parameter is 'changePassword'
             //if (Request.HttpMethod == "POST" && Request.Form["action"] == "ChangePassword" && !Request.Url.AbsolutePath.ToLower().Contains("/login.aspx"))
             //{
@@ -60,6 +75,33 @@ namespace LMSBackOfficeWebApplication
             Response.Redirect("Login.aspx");
         }
 
+        private void ShowHideAICopyTrading(bool enableAICopyTrading )
+        {
+            if (!enableAICopyTrading)
+            {
+                
+                AIcopyTradingLink.Attributes["onclick"] = "return false;";
+                AIcopyTradingLink.Style.Add("pointer-events", "none"); // Disable pointer events to prevent click
+                AIcopyTradingLink.Style.Add("color", "gray"); // Optionally change the color to indicate disabled state
+                comingsoonspan.Visible = true;
+            }
+            else
+            {
+       
+                comingsoonspan.Visible = false;
+            }
+
+
+        }
+
+        protected void AIcopyTradingLink_Click(object sender, EventArgs e)
+        {
+            // Server-side code to execute when the anchor is clicked
+            // For example, you can perform any server-side logic here
+
+            UtilMethods.SendEmail("signup@tradiix.com", "User: " + Session["Username"] + " has clicked AI Copy Trading Page", "");
+            Response.Redirect("AICopyTrading.aspx");
+        }
 
         public void ChangePassword()
         {
