@@ -1401,3 +1401,8 @@ label:not(.form-check-label):not(.custom-file-label) {
 #MainContent_gv_tickets th{
     color: #fff;
 }
+
+/* Set width to 100% */
+#tradingview-widget-container {
+    width: 100%;
+}
