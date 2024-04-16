@@ -99,7 +99,49 @@ namespace LMSBackOfficeWebApplication
             // Server-side code to execute when the anchor is clicked
             // For example, you can perform any server-side logic here
 
-            UtilMethods.SendEmail("signup@tradiix.com", "User: " + Session["Username"] + " has clicked AI Copy Trading Page", "");
+            var member = Members_DataAccess.GetMemberInfo(HttpContext.Current.Session["Username"].ToString());
+
+            
+            string body = $@"<div>
+            <div>
+                <div>
+                    <table border=0 cellpadding=0 cellspacing=0 width=100% align='center' style='max-width:800px;margin:0 auto;background:#121925'>
+                        <tr>
+                            <td style='border:4px solid #d014e4'>
+                                <table border=0 cellpadding=25 cellspacing=0 width=100%>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%>
+                                                <p style=margin:0>
+                                                    <img alt=IconX border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
+                                                <tr>
+                                                    <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
+                                                        AI Copy Trading Page Access
+                                                <tr>
+                                                    <td colspan=2>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            Dear Admin,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            User: {member.UserName}, Email: {member.Email} has accessed the AI Copy Trading page at {System.DateTime.Now.ToString()}.
+                                                <tr>
+                                                    <td>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            If you have any questions, please feel free to contact us.
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            Best regards,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>
+                                                            Team Tradiix.
+                                                <hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'>
+                                                <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>
+                                                    © Tradiix
+                                </table>
+                            <td>
+                        </table>
+                    </div>
+                </div>
+            </div>";
+
+            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             Response.Redirect("AICopyTrading.aspx");
         }
 
