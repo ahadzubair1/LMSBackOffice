@@ -1138,8 +1138,7 @@ footer .field-row {
 }
 
 .tree-filter a:hover, .tree-filter a:hover {
-    background-color: transparent;
-    color: #dd12ec;
+    background-color: #f352ff;
     border: 1px solid #dd12ec;
 }
 
@@ -1605,3 +1604,4 @@ label:not(.form-check-label):not(.custom-file-label) {
         animation-timing-function: ease-in;
     }
 }
+

@@ -24101,6 +24101,7 @@ pre[class*=language-] {
             left: 2px;
             bottom: 2px;
             opacity: 0.1;
+            transition: all ease 0.3s;
         }
 
         .pc-sidebar .pc-navbar > .pc-item.active > .pc-link {

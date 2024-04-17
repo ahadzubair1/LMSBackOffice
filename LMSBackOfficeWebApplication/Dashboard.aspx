@@ -740,7 +740,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="nav nav-tabs analytics-tab pb-2" id="t_tabs" role="tablist">
+                                <%--<ul class="nav nav-tabs analytics-tab pb-2" id="t_tabs" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <a href="analytics-tab-1"
                                             class="nav-link active"
@@ -776,15 +776,15 @@
                                             aria-selected="false">
                                             Other Transactions</button>
                                     </li>
-                                </ul>
+                                </ul>--%>
                             </div>
-                            <div class="tab-content" id="myTabContent">
-                                <div
+                            <%--<div class="tab-content" id="myTabContent">--%>
+                                <%--<div
                                     class="tab-pane fade show active"
                                     id="analytics-tab-1-pane"
                                     role="tabpanel"
                                     aria-labelledby="analytics-tab-1"
-                                    tabindex="0">
+                                    tabindex="0">--%>
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped table-hover" style="width: 100%">
                                             <thead>
@@ -822,8 +822,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
+                                <%--</div>--%>
+                                <%--<div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped" style="width: 100%">
                                             <thead>
@@ -849,8 +849,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel" aria-labelledby="analytics-tab-3" tabindex="0">
+                                </div>--%>
+                                <%--<div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel" aria-labelledby="analytics-tab-3" tabindex="0">
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped" style="width: 100%">
                                             <thead>
@@ -876,9 +876,9 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer mt-3">
                                 <a href="Transactions.aspx" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>

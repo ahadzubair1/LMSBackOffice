@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RanksRewards.aspx.cs" Inherits="LMSBackOfficeWebApplication.RanksRewards" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <style>
+    <style>
         /* Custom Styles */
         .custom-pagination {
             margin-top: 20px; /* Adjust as needed */
@@ -14,7 +14,7 @@
         }
 
         .table tbody tr:nth-of-type(odd) {
-            background-color: #ffffff; /* Adjust odd row background color as needed */
+            background-color: #de0eed24; /* Adjust odd row background color as needed */
         }
 
         /* Hover Effect */
@@ -262,15 +262,16 @@
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
-                            <asp:GridView ID="gvRanks" runat="server" AutoGenerateColumns="False" DataKeyNames="RowNumber" AllowPaging="True" PageSize="10"  Width="100%" CssClass="table table-striped table-hover" OnPageIndexChanging="gvRanks_PageIndexChanging">
+                            <asp:GridView ID="gvRanks" runat="server" AutoGenerateColumns="False" DataKeyNames="RowNumber" AllowPaging="True" PageSize="10" Width="100%" CssClass="table table-striped table-hover" OnPageIndexChanging="gvRanks_PageIndexChanging">
                                 <Columns>
-<asp:TemplateField HeaderText="">
-           <ItemTemplate>
-                <svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;" : "display:none;" %>'>
-                    <use xlink:href="#custom-star-bold"></use>
-                </svg>
-            </ItemTemplate>
-        </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="">
+                                        <ItemTemplate>
+                                            <img src="Content/images/Ranks/current-rank.gif" height="75" width="75" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
+                                            <%--<svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
+                                                <use xlink:href="#custom-star-bold"></use>
+                                            </svg>--%>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" />
                                     <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" />
                                     <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" />
