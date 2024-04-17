@@ -109,7 +109,7 @@
                                                     </asp:BoundField>
                                                 </Columns>
                                                 <EmptyDataTemplate>
-                                                    No record found<br />
+                                                    No Record Found<br />
                                                 </EmptyDataTemplate>
                                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                                                 <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="35" />
