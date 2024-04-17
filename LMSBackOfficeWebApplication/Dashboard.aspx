@@ -123,7 +123,7 @@
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
                         <br />
                         <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
-                        <div id="timer" class="partner rounded-5 mt-2 small p-1"></div>
+                        <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="leaf">
                         <div>
@@ -230,7 +230,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
                                                     stroke="#E58A00"
@@ -266,7 +266,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: wheat">
-                                        <h6 class="mb-0 font-semibold">Product</h6>
+                                        <h6 class="mb-0">Product</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -282,6 +282,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
 
@@ -291,7 +295,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     opacity="0.4"
                                                     d="M13 9H7"
@@ -315,7 +319,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #bacefb">
-                                        <h6 class="mb-0 font-semibold">Direct Bonus</h6>
+                                        <h6 class="mb-0">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -330,6 +334,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -338,7 +346,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-success">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M8 2V5"
                                                     stroke="#2ca87f"
@@ -414,7 +422,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #88e3c5">
-                                        <h6 class="mb-0 font-semibold">Network Bonus</h6>
+                                        <h6 class="mb-0">Network Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -430,6 +438,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
 
@@ -439,7 +451,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                                     stroke="#DC2626"
@@ -458,7 +470,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #f89b9b">
-                                        <h6 class="mb-0 font-semibold">Rank Achieved</h6>
+                                        <h6 class="mb-0">Rank Achieved</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -474,6 +486,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="top"></span>
+                            <span class="right"></span>
+                            <span class="bottom"></span>
+                            <span class="left"></span>
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -724,9 +740,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul class="nav nav-tabs analytics-tab" id="myTab" role="tablist">
+                                <%--<ul class="nav nav-tabs analytics-tab pb-2" id="t_tabs" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button
+                                        <a href="analytics-tab-1"
                                             class="nav-link active"
                                             id="analytics-tab-1"
                                             data-bs-toggle="tab"
@@ -734,8 +750,7 @@
                                             type="button"
                                             role="tab"
                                             aria-controls="analytics-tab-1-pane"
-                                            aria-selected="true">
-                                            All Transaction</button>
+                                            aria-selected="true">All Transaction</a>
                                     </li>
                                     <li class="nav-item d-none" role="presentation">
                                         <button
@@ -761,15 +776,15 @@
                                             aria-selected="false">
                                             Other Transactions</button>
                                     </li>
-                                </ul>
+                                </ul>--%>
                             </div>
-                            <div class="tab-content" id="myTabContent">
-                                <div
+                            <%--<div class="tab-content" id="myTabContent">--%>
+                                <%--<div
                                     class="tab-pane fade show active"
                                     id="analytics-tab-1-pane"
                                     role="tabpanel"
                                     aria-labelledby="analytics-tab-1"
-                                    tabindex="0">
+                                    tabindex="0">--%>
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped table-hover" style="width: 100%">
                                             <thead>
@@ -807,8 +822,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
+                                <%--</div>--%>
+                                <%--<div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel" aria-labelledby="analytics-tab-2" tabindex="0">
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped" style="width: 100%">
                                             <thead>
@@ -834,8 +849,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel" aria-labelledby="analytics-tab-3" tabindex="0">
+                                </div>--%>
+                                <%--<div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel" aria-labelledby="analytics-tab-3" tabindex="0">
                                     <div class="overflow-auto">
                                         <table id="" class="table table-striped" style="width: 100%">
                                             <thead>
@@ -861,9 +876,9 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer mt-3">
                                 <a href="Transactions.aspx" class="btn btn-primary"><span class="text-truncate w-100">View all Transaction History</span></a>
                             </div>
                         </div>
@@ -1228,14 +1243,15 @@
             "width": "100%",
             "height": 400,
             "symbol": "FX:EURUSD",
-            "interval": "D",
+            "interval": "240",
             "timezone": "Etc/UTC",
             "theme": "light",
             "style": "10",  // Set candle style to "Baseline"
             "colorScheme": "light", // Set color scheme
             "barColor": "#000", // Set bar color
             "locale": "en",
-            "toolbar_bg": "#f1f3f6",
+            "toolbar_bg": "#dd12ec",
+            "plotBackground": "#dd12ec",
             "enable_publishing": false,
             "withdateranges": true,
             "range": "ytd",

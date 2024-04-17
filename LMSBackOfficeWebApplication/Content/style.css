@@ -163,7 +163,7 @@ $btn-border-radius-lg: 14px; */
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 0.875rem;
+    --bs-body-font-size: 13px !important;
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #131920;
@@ -24076,10 +24076,10 @@ pre[class*=language-] {
 
     .pc-sidebar .pc-link {
         display: block;
-        padding: 14px 20px;
+        padding: 10px;
         color: var(--pc-sidebar-color);
         position: relative;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
         text-decoration: none;
     }
@@ -24101,6 +24101,7 @@ pre[class*=language-] {
             left: 2px;
             bottom: 2px;
             opacity: 0.1;
+            transition: all ease 0.3s;
         }
 
         .pc-sidebar .pc-navbar > .pc-item.active > .pc-link {
@@ -25329,6 +25330,9 @@ body:not([data-pc-theme="dark"]) .pc-header {
 
     .page-header .page-header-title {
         display: inline-block;
+    }
+    .page-header .page-header-title h2{
+        font-size: 20px;
     }
 
     .page-header h5, .page-header .h5 {
@@ -26792,7 +26796,7 @@ body:not([data-pc-theme="dark"]) .pc-header {
         width: 40px;
         height: 40px;
         font-size: 14px;
-        border-radius: 12px;
+        border-radius: 7px;
         text-decoration: none;
     }
 
@@ -34529,15 +34533,18 @@ body {
     white-space: nowrap;
     padding: 0.7rem 0.75rem;
     vertical-align: middle;
+    transition: all ease 0.2s;
 }
-
+.table-hover > tbody > tr:hover > *{
+    color: #fff !important;
+}
 .datatable-table thead th,
 .table thead th {
     border-bottom: 1px solid #e7eaee;
     font-size: 13px;
     color: #262626;
     background: rgba(248, 249, 250, 0.5);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .datatable-table tbody + tbody,

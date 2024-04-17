@@ -109,7 +109,7 @@
                                                     </asp:BoundField>
                                                 </Columns>
                                                 <EmptyDataTemplate>
-                                                    No record found<br />
+                                                    No Record Found<br />
                                                 </EmptyDataTemplate>
                                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                                                 <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="35" />
@@ -164,7 +164,7 @@
                             <label for="description" class="form-label">Description</label>
                             <%--<textarea style="max-width: 100%" class="form-control w-100" id="txtDescription" name="description" />--%>
                             <textarea class="form-control" rows="4" id="txtDescription" name="description"></textarea>
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please write description"></asp:RequiredFieldValidator>--%>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="txtDescription" ErrorMessage="Please Write Description"></asp:RequiredFieldValidator>--%>
                             <%--<input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />--%>
                             <span class="errormessage" id="descriptionerror"></span>
                         </div>
@@ -209,7 +209,7 @@
             var titleError = document.getElementById("titleerror");
             var title = $('#txtTitle').val();
             if (title == "") {
-                titleError.innerHTML = "Please enter title";
+                titleError.innerHTML = "Please Enter Title";
                 titleError.style.visibility = 'visible';
                 return false;
 
@@ -221,7 +221,7 @@
 
             var description = $('#txtDescription').val();
             if (description == "") {
-                error.innerHTML = "Please enter description";
+                error.innerHTML = "Please Enter Description";
                 error.style.visibility = 'visible';
                 return false;
 

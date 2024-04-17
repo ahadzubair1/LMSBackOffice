@@ -18,6 +18,11 @@ body[data-pc-theme="light"] .pc-sidebar .pc-link {
     display: none;
 }
 
+.btn,
+.dropdown-menu {
+    font-size: 13px;
+}
+
 @keyframes bgmove {
     0% {
         background-position: top right;
@@ -49,9 +54,10 @@ textarea {
     box-shadow: 0 -5px 20px -10px #00000094;
 }
 
+
 .t-card .avtar.avtar-s {
     box-shadow: 0 0 10px 1px #fff;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 }
 
 body[data-pc-theme="light"] .card-header {
@@ -161,14 +167,13 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 }
 
 .mbox {
-    border: 3px solid #d014e4;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     padding: 2rem;
-    background: radial-gradient(#af168a,#580b63);
+    background: radial-gradient(#de0eed,#130515);
     color: white;
     box-shadow: 0 0 0px 2px #fff inset;
     position: relative;
@@ -392,7 +397,6 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         border: none;
         border-radius: 10px;
         color: inherit;
-        font-size: 14px;
         text-transform: capitalize !important;
     }
 
@@ -406,16 +410,19 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     opacity: 1;
     z-index: -1;
 }
+
 .pc-sidebar .pc-navbar > .pc-item .submenu {
     margin-left: 3.25rem !important;
 }
-.pc-sidebar .pc-navbar > .pc-item .submenu .nav-link {
-    font-size: 14px;
-    color: #fff;
-}
-.pc-sidebar .pc-navbar > .pc-item .submenu .nav-link:hover {
-    color: #d014e4;
-}
+
+    .pc-sidebar .pc-navbar > .pc-item .submenu .nav-link {
+        font-size: 14px;
+        color: #fff;
+    }
+
+        .pc-sidebar .pc-navbar > .pc-item .submenu .nav-link:hover {
+            color: #d014e4;
+        }
 
 /* Curve Line */
 .bg-line {
@@ -998,28 +1005,167 @@ footer .field-row {
         background-position: -10000px 0;
     }
 }
-.tree-filter a, .tree-filter a i{
-    font-size: 12px;
-    line-height:2;
+
+.t-card {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 49, 49, 0.5);
+    border-right: 1px solid rgba(0, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+    border-left: 1px solid rgba(255, 255, 113, 0.5);
 }
+
+
+    .t-card span {
+        position: absolute;
+        border-radius: 100vmax;
+    }
+
+    .t-card .top {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: linear-gradient( 90deg, transparent 50%, rgba(255, 255, 255, 0.5), rgb(255, 255, 255) );
+    }
+
+    .t-card .bottom {
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: linear-gradient( 90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.5), transparent 50% );
+    }
+
+    .t-card .right {
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 0;
+        background: linear-gradient( 180deg, transparent 30%, rgba(255, 255, 255, 0.5), rgb(255, 255, 255) );
+    }
+
+    .t-card .left {
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        height: 0;
+        background: linear-gradient( 180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.5), transparent 70% );
+    }
+
+    .t-card .top {
+        animation: animateTop 3s ease-in-out infinite;
+    }
+
+    .t-card .bottom {
+        animation: animateBottom 3s ease-in-out infinite;
+    }
+
+    .t-card .right {
+        animation: animateRight 3s ease-in-out infinite;
+    }
+
+    .t-card .left {
+        animation: animateLeft 3s ease-in-out infinite;
+    }
+
+@keyframes animateTop {
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    30%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateBottom {
+    0%, 50% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    76%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateRight {
+    0%, 25% {
+        opacity: 0;
+        height: 0;
+    }
+
+    50% {
+        opacity: 1;
+        height: 100%;
+    }
+
+    55%, 100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateLeft {
+    0%, 75% {
+        opacity: 0;
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+
+.tree-filter a, .tree-filter a {
+    border: 1px solid #950c9f;
+    color: #fff;
+    background-color: #dd12ec;
+}
+
+#MainContent_btnSearch:hover {
+    color: #232f45 !important;
+    border: 1px solid #dd12ec;
+}
+
+.tree-filter a:hover, .tree-filter a:hover {
+    background-color: #f352ff;
+    border: 1px solid #dd12ec;
+}
+
+.tree-filter a, .tree-filter a i {
+    font-size: 12px;
+    line-height: 2;
+}
+
 #orgChartContainer {
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 2rem;
     background: lavender;
     background-color: #e5e5f7;
-    opacity: 0.8;
     background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
     background-size: 10px 10px;
     overflow: auto;
     position: relative;
     animation: animatedBackground 500s linear infinite;
 }
-@media (max-width: 768px){
-    #orgChartContainer{
+
+@media (max-width: 768px) {
+    #orgChartContainer {
         padding-top: 150px !important;
     }
 }
+
 .tree-controls {
     position: absolute;
     top: 30px;
@@ -1121,9 +1267,8 @@ footer .field-row {
     background: linear-gradient(122deg, #8593E3 -1.92%, #202875 100%);
 }
 
-.highlighted
-{
-    border:6px solid #ebe011
+.highlighted {
+    border: 6px solid #ebe011
 }
 
 
@@ -1360,15 +1505,22 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 
 @media (max-width: 767.98px) {
+    .tree-controls {
+        flex-direction: column;
+    }
+
     .wallet-balance {
         gap: 5px !important;
     }
-    .profile-options{
+
+    .profile-options {
         margin: 0 auto;
     }
-    .pc-container{
+
+    .pc-container {
         top: 110px;
     }
+
     .kyc-inner-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1388,6 +1540,7 @@ label:not(.form-check-label):not(.custom-file-label) {
     border: 1px solid #d014e4;
     color: #fff;
 }
+
 #MemberTopUp_btnSubmit:hover {
     color: #d014e4;
 }
@@ -1398,7 +1551,7 @@ label:not(.form-check-label):not(.custom-file-label) {
     color: #fff;
 }
 
-#MainContent_gv_tickets th{
+#MainContent_gv_tickets th {
     color: #fff;
 }
 
@@ -1406,3 +1559,55 @@ label:not(.form-check-label):not(.custom-file-label) {
 #tradingview-widget-container {
     width: 100%;
 }
+
+.analytics-tab .nav-item .nav-link {
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+}
+
+    .analytics-tab .nav-item .nav-link::after {
+        display: none;
+    }
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.flip {
+    backface-visibility: visible !important;
+    animation: flip 2s ease infinite;
+    animation-delay: 1s;
+}
+.current-rank {
+    /* Define the styles for the current rank here */
+    /* For example, you can change the background color */
+    background-color: #FFA500!important; /* Yellow background color */
+    /* You can add more styles as needed */
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: perspective(400px) translateZ(150px) rotateY(170deg);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        transform: perspective(400px) rotateY(360deg) scale(.95);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: perspective(400px) scale(1);
+        animation-timing-function: ease-in;
+    }
+}
+
