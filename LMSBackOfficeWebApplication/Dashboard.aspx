@@ -230,7 +230,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
                                                     stroke="#E58A00"
@@ -266,7 +266,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: wheat">
-                                        <h6 class="mb-0 font-semibold">Product</h6>
+                                        <h6 class="mb-0">Product</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -295,7 +295,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-primary">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     opacity="0.4"
                                                     d="M13 9H7"
@@ -319,7 +319,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #bacefb">
-                                        <h6 class="mb-0 font-semibold">Direct Bonus</h6>
+                                        <h6 class="mb-0">Direct Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -346,7 +346,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-success">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M8 2V5"
                                                     stroke="#2ca87f"
@@ -422,7 +422,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #88e3c5">
-                                        <h6 class="mb-0 font-semibold">Network Bonus</h6>
+                                        <h6 class="mb-0">Network Bonus</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">
@@ -451,7 +451,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <div class="avtar avtar-s bg-light-warning">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
                                                     stroke="#DC2626"
@@ -470,7 +470,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3" style="background-color: #f89b9b">
-                                        <h6 class="mb-0 font-semibold">Rank Achieved</h6>
+                                        <h6 class="mb-0">Rank Achieved</h6>
                                     </div>
                                 </div>
                                 <div class="bg-body rounded">

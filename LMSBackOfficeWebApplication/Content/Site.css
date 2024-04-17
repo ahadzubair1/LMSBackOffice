@@ -54,20 +54,10 @@ textarea {
     box-shadow: 0 -5px 20px -10px #00000094;
 }
 
-@keyframes shadowmove {
-    from {
-        box-shadow: 0 0 10px 1px #fff;
-    }
-
-    to {
-        box-shadow: 0 0 0px 1px #fff;
-    }
-}
 
 .t-card .avtar.avtar-s {
     box-shadow: 0 0 10px 1px #fff;
-    border: 2px solid #fff;
-    animation: shadowmove 1s infinite;
+    border: 1px solid #fff;
 }
 
 body[data-pc-theme="light"] .card-header {
@@ -177,14 +167,13 @@ body:not([data-pc-theme="dark"]) .pc-footer {
 }
 
 .mbox {
-    border: 3px solid #d014e4;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     padding: 2rem;
-    background: radial-gradient(#af168a,#580b63);
+    background: radial-gradient(#de0eed,#130515);
     color: white;
     box-shadow: 0 0 0px 2px #fff inset;
     position: relative;
@@ -1036,21 +1025,21 @@ footer .field-row {
         top: 0;
         left: 0;
         width: 0;
-        height: 2px;
+        height: 3px;
         background: linear-gradient( 90deg, transparent 50%, rgba(255, 255, 255, 0.5), rgb(255, 255, 255) );
     }
 
     .t-card .bottom {
         right: 0;
         bottom: 0;
-        height: 2px;
+        height: 3px;
         background: linear-gradient( 90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.5), transparent 50% );
     }
 
     .t-card .right {
         top: 0;
         right: 0;
-        width: 2px;
+        width: 3px;
         height: 0;
         background: linear-gradient( 180deg, transparent 30%, rgba(255, 255, 255, 0.5), rgb(255, 255, 255) );
     }
@@ -1058,7 +1047,7 @@ footer .field-row {
     .t-card .left {
         left: 0;
         bottom: 0;
-        width: 2px;
+        width: 3px;
         height: 0;
         background: linear-gradient( 180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.5), transparent 70% );
     }
@@ -1165,7 +1154,6 @@ footer .field-row {
     padding: 2rem;
     background: lavender;
     background-color: #e5e5f7;
-    opacity: 0.8;
     background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
     background-size: 10px 10px;
     overflow: auto;
@@ -1580,3 +1568,40 @@ label:not(.form-check-label):not(.custom-file-label) {
     .analytics-tab .nav-item .nav-link::after {
         display: none;
     }
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.flip {
+    backface-visibility: visible !important;
+    animation: flip 2s ease infinite;
+    animation-delay: 1s;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        transform: perspective(400px) translateZ(150px) rotateY(170deg);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        transform: perspective(400px) rotateY(360deg) scale(.95);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: perspective(400px) scale(1);
+        animation-timing-function: ease-in;
+    }
+}
