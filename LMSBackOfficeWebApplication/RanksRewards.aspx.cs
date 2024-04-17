@@ -51,5 +51,23 @@ namespace LMSBackOfficeWebApplication
             // Call the method to rebind the GridView data here
             BinGridView(); // You need to implement this method to bind data to the GridView
         }
+
+        protected void gvRanks_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            // Check if the current row is a DataRow
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                // Find the value of IsCurrentRank in the data item bound to the row
+                DataRowView rowView = (DataRowView)e.Row.DataItem;
+                bool isCurrentRank = Convert.ToBoolean(rowView["IsCurrentRank"]);
+
+                // If IsCurrentRank is true, apply a CSS class to the row
+                if (isCurrentRank)
+                {
+                    // Add the CSS class to the existing CSS classes of the row
+                    e.Row.CssClass += "current-rank";
+                }
+            }
+        }
     }
 }
