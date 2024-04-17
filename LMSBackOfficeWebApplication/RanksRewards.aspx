@@ -8,10 +8,6 @@
             text-align: center;
         }
 
-        /* Alternate Row Color */
-        .table tbody tr:nth-of-type(even) {
-            background-color: #f8f9fa; /* Adjust even row background color as needed */
-        }
 
         .table tbody tr:nth-of-type(odd) {
             background-color: #de0eed24; /* Adjust odd row background color as needed */
@@ -266,7 +262,7 @@
                                 <Columns>
                                     <asp:TemplateField HeaderText="">
                                         <ItemTemplate>
-                                            <img ID="imgCurrentRank" src="Content/images/Ranks/current-rank.gif" height="75" width="75" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
+                                            <img ID="imgCurrentRank" class="flip m-auto" src="Content/images/Ranks/current-rank.gif" height="50" width="50" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
                                             <%--<svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
                                                 <use xlink:href="#custom-star-bold"></use>
                                             </svg>--%>
