@@ -48,7 +48,7 @@ namespace Coinpayments.Example
                     {
                         WriteLog.LogInfo($"Credit {req.Amount1} to {memberInfo.MemberId} wallet");
 
-                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 1);
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 1,memberInfo.OrderId);
 
                         WriteLog.LogInfo($"Updating transaction to complete for member {memberInfo.MemberId} of Order no  : {memberInfo.OrderId}");
                         //Update Transaction on success
@@ -67,7 +67,7 @@ namespace Coinpayments.Example
                     if(memberInfo != null)
                     {
                         //deduct amount
-                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 0);
+                        MemberWallets_DataAcsess.UpdateMemberWallet(memberInfo.MemberId, Convert.ToDecimal(req.Amount1), 0,memberInfo.OrderId);
 
                         var transactionCode = Transactions_DataAcsess.UpdateTransaction(memberInfo.MemberId, memberInfo.OrderId, req.Fee, req.StatusText);
                         WriteLog.LogInfo($"Transaction Code : {transactionCode}");

@@ -53,7 +53,7 @@ namespace LMSBackOfficeWebApplication
                     var StatusCode = (int)response.HttpResponse.StatusCode;
 
                     //Update Balance in UserWallet table 
-                    MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(amount), 0);
+                    MemberWallets_DataAcsess.UpdateMemberWallet(member.Id, Convert.ToDecimal(amount), 0,orderId);
 
                     //Add Transaction and Coin PaymentTransaction
                     Transactions_DataAcsess.AddTransactions(member.Id, orderId, "Topup", member.MemberCurrency, Configurations.ToCurrency,

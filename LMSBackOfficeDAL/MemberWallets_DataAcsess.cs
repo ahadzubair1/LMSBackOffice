@@ -9,7 +9,7 @@ namespace LMSBackOfficeDAL
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
 
-        public static void UpdateMemberWallet(string userId, decimal amount, int isActive)
+        public static void UpdateMemberWallet(string userId, decimal amount, int isActive,string orderId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -21,6 +21,8 @@ namespace LMSBackOfficeDAL
                         command.Parameters.Add("@IN_MemberId", SqlDbType.UniqueIdentifier).Value = Guid.Parse(userId);
                         command.Parameters.Add("@IN_Balance", SqlDbType.Decimal).Value = amount;
                         command.Parameters.Add("@IN_IsActive", SqlDbType.SmallInt).Value = isActive;
+                        command.Parameters.Add("@In_OrderId", SqlDbType.VarChar).Value = orderId;
+
                         connection.Open();
 
                         command.ExecuteNonQuery();
