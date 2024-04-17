@@ -13,7 +13,7 @@ namespace LMSBackOfficeDAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlCommand command = new SqlCommand("USP_UpdateMemberBalance", connection))
+                using (SqlCommand command = new SqlCommand("USP_UpdateMemberBalance_TopUp", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     try
