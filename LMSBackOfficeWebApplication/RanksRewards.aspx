@@ -271,6 +271,7 @@
                                     <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" />
                                     <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" />
                                     <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" />
+                                                                        <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" />
                                     <asp:BoundField DataField="Reward" HeaderText="Reward" />
                                 </Columns>
                                 <PagerStyle CssClass="custom-pagination" />
