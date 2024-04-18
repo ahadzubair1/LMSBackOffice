@@ -149,10 +149,10 @@
                                 var tabId = event.target.id;
                                 if (tabId === "network-bonus-tab") {
 
-                                    updateBannerCaption("Network Bonus" + " - <%= headerTitleNetworkBonusAmount %>");
+                                    updateBannerCaption("Network Bonus" + " : <%= headerTitleNetworkBonusAmount %>");
                                 }
                                 else {
-                                    updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
+                                    updateBannerCaption("Direct Bonus" + " : <%= headerTitleDirectBonusAmount %>");
                                 }
                             }
 
