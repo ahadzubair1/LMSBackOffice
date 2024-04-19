@@ -73,9 +73,9 @@
 
                 </div>
                 <div class="tab-content pb-5" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home">
+                    <div class="tab-pane fade show active mb-5 pb-5" id="home">
 
-                        <div class="card">
+                        <div class="card mb-5 pb-5">
                             <div class="card-body">
                                 <div class="col-md-12 order-md-1">
                                     <div class="row g-3 mb-3">
