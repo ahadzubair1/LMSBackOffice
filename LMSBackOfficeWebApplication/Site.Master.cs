@@ -113,7 +113,7 @@ namespace LMSBackOfficeWebApplication
                                         <tr>
                                             <td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%>
                                                 <p style=margin:0>
-                                                    <img alt=IconX border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
+                                                    <img title='A Global Education & Research Ltd' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
                                                 <tr>
                                                     <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
                                                         AI Copy Trading Page Access
