@@ -107,7 +107,14 @@
                                                     <asp:BoundField DataField="Status" HeaderText="Status">
                                                         <ControlStyle Width="100px" />
                                                     </asp:BoundField>
-                                                </Columns>
+                                                    <asp:BoundField DataField="Remarks" HeaderText="Remarks">
+                                                    <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                                    
+                                                    <asp:BoundField DataField="UpdatedDate" HeaderText="Updated Date">
+                                                    <ControlStyle Width="100px" />
+                                                    </asp:BoundField>
+                                               </Columns>
                                                 <EmptyDataTemplate>
                                                     No Record Found<br />
                                                 </EmptyDataTemplate>
