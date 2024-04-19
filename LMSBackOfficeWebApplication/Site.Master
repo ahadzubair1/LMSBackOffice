@@ -342,12 +342,12 @@
                                                 <span>Privacy Settings</span>
                                             </span>
                                         </a>
-                                        <a href="#" class="dropdown-item">
+                                        <a href="Profile.aspx" class="dropdown-item">
                                             <span>
                                                 <svg class="pc-icon text-muted me-2">
                                                     <use xlink:href="#custom-share-bold"></use>
                                                 </svg>
-                                                <span>Share</span>
+                                                <span>Profile</span>
                                             </span>
                                         </a>
                                         <a href="ResetPassword.aspx" class="dropdown-item" id="changePasswordLink">

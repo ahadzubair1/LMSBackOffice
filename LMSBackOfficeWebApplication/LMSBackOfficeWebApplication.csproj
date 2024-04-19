@@ -391,6 +391,7 @@
     <Content Include="css\typography.css" />
     <Content Include="ExternalLib\log4net.dll" />
     <Content Include="fonts\icomoon.svg" />
+    <Content Include="Profile.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="img\7.png" />
@@ -712,6 +713,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResetPassword.aspx.cs">
       <DependentUpon>ResetPassword.aspx</DependentUpon>
