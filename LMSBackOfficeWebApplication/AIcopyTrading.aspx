@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AIcopyTrading.aspx.cs" Inherits="LMSBackOfficeWebApplication.AIcopyTrading" %>
+<%@ Page Title="Tradix : A Global Education & Research Ltd" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AIcopyTrading.aspx.cs" Inherits="LMSBackOfficeWebApplication.AIcopyTrading" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -193,7 +193,7 @@
                                                         <span>Equity Required<span>30%</span></span>
                                                         <span>Average Annual Growth<span>84%*</span></span>
                                                     </div>
-                                                    <p class="small m-0">*Excluding Compounding</p>
+                                                    <p class="small m-0">* Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,9 +222,9 @@
                                                 <div class="card-body">
                                                     <h5>Trading Statistics (Medium):</h5>
                                                     <div class="f-list">
-                                                        <span>Average Annual Growth<span>96%*</span></span>
-                                                        <span>Average Max Drawdown<span>7.5%</span></span>
-                                                        <span>Equity Required<span>20%</span></span>
+                                                        <span>Average Annual Growth<span>108%*</span></span>
+                                                        <span>Average Max Drawdown<span>10%</span></span>
+                                                        <span>Equity Required<span>1%</span></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -232,8 +232,9 @@
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
                                                     <p class="m-0">
-                                                        The Pioneer EA is a trailblazer within the algorithmic trading industry. It is designed and managed by another of our 'master traders' and uses price action and Fibonacci retracements to enter trades. This unique algorithm also implements Martingale trading to combat adverse volatility.
-                                                    </p>
+                                                        The Pioneer EA master trader makes use of ‘The Algo’ which is a proprietary trading software that uses an algorithmic trading approach, only trading during specific times of day, at certain algorithmic price levels and focuses on trading indices.
+                                                    </p><br />
+                                                    <p style="color:maroon">* Note: The statistics shown are based on recent-past performance and in no way act as a guarantee to future results and an independent financial advisor should be consulted. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -243,20 +244,20 @@
                                                     <h5>Risk Settings:</h5>
                                                     <h6 class="font-bold">Low</h6>
                                                     <div class="f-list">
-                                                        <span>Equity Required<span>10%</span></span>
-                                                        <span>Average Annual Growth<span>48%*</span></span>
+                                                        <span>Risk<span>0.5%</span></span>
+                                                        <span>Average Annual Growth<span>54%*</span></span>
                                                     </div>
                                                     <h6 class="font-bold">Medium</h6>
                                                     <div class="f-list">
-                                                        <span>Equity Required<span>20%</span></span>
-                                                        <span>Average Annual Growth<span>96%*</span></span>
+                                                        <span>Risk<span>1%</span></span>
+                                                        <span>Average Annual Growth<span>108%*</span></span>
                                                     </div>
                                                     <h6 class="font-bold">Aggressive</h6>
                                                     <div class="f-list">
-                                                        <span>Equity Required<span>30%</span></span>
-                                                        <span>Average Annual Growth<span>144%*</span></span>
+                                                        <span>Risk<span>2%</span></span>
+                                                        <span>Average Annual Growth<span>216%*</span></span>
                                                     </div>
-                                                    <p class="small m-0">*Excluding Compounding</p>
+                                                    <p class="small m-0">* Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -317,7 +318,7 @@
                                                         <span>Equity Required<span>30%</span></span>
                                                         <span>Average Annual Growth<span>84%*</span></span>
                                                     </div>
-                                                    <p class="small">*Excluding Compounding</p>
+                                                    <p class="small">* Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -378,7 +379,7 @@
                                                         <span>Equity Required<span>30%</span></span>
                                                         <span>Average Annual Growth<span>84%*</span></span>
                                                     </div>
-                                                    <p class="small text-gray-500">*Excluding Compounding</p>
+                                                    <p class="small text-gray-500">* Excluding Compounding</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -465,7 +466,7 @@ Ineligible Membership</h1>
                 // Check if membership exists
                 if (MembershipExist && HighestMembershipAmount >= 750) {
                     // Redirect to a new link
-                    window.location.href = 'https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en';
+                    window.location.href = 'https://my.fxlvls.com/register?referral=15';
                 } else {
                     // Display the modal
                     var modal = document.getElementById('buyMembership');
