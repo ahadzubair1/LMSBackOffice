@@ -233,6 +233,47 @@ namespace LMSBackOfficeDAL
             }
         }
 
+        public static bool UpdateMember(string memberID, string fullName, string mobile, string email, string countryOfOrigin)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "USP_UpdateMemberData";
+
+                // Add output parameter for rows affected
+                SqlParameter rowsAffectedParam = new SqlParameter("@OUT_RowsAffected", SqlDbType.Int);
+                rowsAffectedParam.Direction = ParameterDirection.Output;
+                command.Parameters.Add(rowsAffectedParam);
+
+                command.Parameters.AddWithValue("@IN_Member_ID", memberID);
+                command.Parameters.AddWithValue("@IN_Member_FullName", fullName);
+                command.Parameters.AddWithValue("@IN_Member_Mobile", mobile);
+                command.Parameters.AddWithValue("@IN_Member_Email", email);
+                command.Parameters.AddWithValue("@IN_Member_CountryOfOrigin", countryOfOrigin);
+
+                try
+                {
+                    connection.Open();
+                    // ExecuteNonQuery since the stored procedure doesn't return a result set
+                    command.ExecuteNonQuery();
+
+                    // Retrieve the value of the output parameter
+                    int rowsAffected = (int)rowsAffectedParam.Value;
+
+                    // Return true if rows were affected, false otherwise
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine("Error: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+
         public static DataTable GetMemberDetailsByEmail(string email)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -312,11 +353,12 @@ namespace LMSBackOfficeDAL
                                     UserName = reader["Member_UserName"].ToString(),
                                     MemberCode = reader["Member_Code"].ToString(),
                                     Email = reader["Member_Email"].ToString(),
+                                    Mobile = reader["Member_Mobile"].ToString(),
                                     MemberAddress = reader["Wallet_Address"].ToString(),
                                     MemberWalletBalance = reader["Wallet_Balance"].ToString(),
                                     MemberWalletCurrency = reader["Wallet_Currency"].ToString(),
                                     Sponsor = reader["Sponsor"].ToString(),
-                                    Country = reader["MemberCountry"].ToString(),
+                                    Country = reader["CountryID"].ToString(),
                                     MembershipName= reader["Membership_Name"].ToString(),
                                     MemberRank= reader["Member_RankDesc"].ToString(),
                                     CountryId = reader["CountryID"].ToString(),

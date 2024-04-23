@@ -13,6 +13,7 @@ namespace LMSBackOfficeDAL.Model
         public string MemberFullName { get; set; }
         public string MemberCode { get; set; }
         public string Email { get; set; }
+        public string Mobile { get; set; }
         public string MemberAddress { get; set; }
         public string MemberWalletBalance { get; set; }
         public string MemberWalletCurrency { get; set; }

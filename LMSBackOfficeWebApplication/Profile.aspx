@@ -1,6 +1,8 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="LMSBackOfficeWebApplication.Profile" %>
+﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" EnableViewState="true" Inherits="LMSBackOfficeWebApplication.Profile" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+
 
     <main>
 
@@ -10,6 +12,11 @@
                 <h5 class="offcanvas-title" id="announcementLabel">What's new?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="col-md-12 text-center">
+ 
+
+</div>
+
             <div class="offcanvas-body">
                 <p class="text-span">Today</p>
                 <div class="card mb-3">
@@ -200,6 +207,7 @@
                             <div class="col-md-6">
                                 <div class="page-header-title">
                                     <h2 class="mb-0">Profile</h2>
+                                                   <h5 id="ResponseMessage" style="display: none;" runat="server" ></h5>
                                 </div>
                             </div>
                             <div class="col-md-6 text-end">
@@ -220,49 +228,73 @@
                                 <div class="col-md-3 border-right mb-4 mb-md-0">
                                     <div class="d-flex flex-column py-4 align-items-center text-center profile-pic">
                                         <img class="rounded-circle" width="150" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                                        <span class="font-weight-bold">Edogaru</span>
-                                        <span>edogaru@mail.com.my</span><span>
+                                        <span class="font-weight-bold"> <h6><asp:Label runat="server" ID ="lblUserName"></asp:Label></h6>
+                                                   </span>
+                                        <span>
+                                             <h6><asp:Label runat="server" ID ="lblEmail"></asp:Label></h6>
+                                                   
+                                        </span><span>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="col-md-5 border-right mb-4 mb-md-0">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="text-right">Profile Settings</h4>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6 form-group">
-                                            <label class="labels">Firs Name</label><input type="text" class="form-control mw-100" placeholder="first name" value="">
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                            <label class="labels">Last Name</label><input type="text" class="form-control mw-100" value="" placeholder="lastname">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 form-group">
-                                            <label class="labels">Mobile Number</label><input type="text" class="form-control mw-100" placeholder="enter phone number" value="">
-                                        </div>
-                                        <div class="col-md-12 form-group">
-                                            <label class="labels">Address Line 1</label><input type="text" class="form-control mw-100" placeholder="enter address line 1" value="">
-                                        </div>
-                                        <div class="col-md-12 form-group">
-                                            <label class="labels">State</label><input type="text" class="form-control mw-100" placeholder="enter address line 2" value="">
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label class="labels">Email ID</label><input type="text" class="form-control mw-100" placeholder="enter email id" value="">
-                                        </div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-md-6 form-group">
-                                            <label class="labels">Country</label><input type="text" class="form-control mw-100" placeholder="country" value="">
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                            <label class="labels">State/Region</label><input type="text" class="form-control mw-100" value="" placeholder="state">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-tr btn-shadow btn-sm text-end profile-button" type="button">Save Profile</button>
-                                    </div>
-                                </div>
+
+                    <div class="col-md-5 border-right mb-4 mb-md-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="text-right">Profile Settings</h4>
+    </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+   <asp:Button runat="server" ID="btnEdit"  Text="Edit" OnClick="btnEdit_Click" />
+   
+</div>
+    <div class="row mt-2">
+        <div class="col-md-12 form-group">
+            <label class="labels">Member Full Name</label>
+            <asp:TextBox class="form-control mw-100" ID="txtfirstName" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ControlToValidate="txtfirstName" ErrorMessage="Member Full Name can not be empty." ValidationGroup="profileValidation" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label class="labels">Mobile Number</label>
+            <asp:TextBox class="form-control mw-100" ID="txtMobileNumber" runat="server"></asp:TextBox>
+        </div>
+<%--        <div class="col-md-12 form-group">
+            <label class="labels">Address Line 1</label>
+            <asp:TextBox class="form-control mw-100" ID="txtAddressLine1" runat="server"></asp:TextBox>
+        </div>--%>
+<%--        <div class="col-md-12 form-group">
+            <label class="labels">State</label>
+            <asp:TextBox class="form-control mw-100" ID="txtAddressLine2" runat="server"></asp:TextBox>
+        </div>--%>
+        <div class="col-md-12">
+            <label class="labels">Email ID</label>
+            <asp:TextBox class="form-control mw-100" ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required." ValidationGroup="profileValidation" />
+            <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email format." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="profileValidation" />
+      <asp:CustomValidator ID="cvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email already exists." ClientValidationFunction="validateEmail" />
+
+            </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12 form-group">
+            <label class="labels">Country</label>
+            <asp:DropDownList ID="countries" name="countries" class="form-control" required="required" runat="server">
+                <asp:ListItem Text="Select Country" Value="" Selected="True" />
+            </asp:DropDownList>
+            <asp:RequiredFieldValidator ID="rfvCountry" runat="server" ControlToValidate="countries" ErrorMessage="Country selection is required." InitialValue="" ValidationGroup="profileValidation" />
+        </div>
+<%--        <div class="col-md-6 form-group">
+            <label class="labels">State/Region</label>
+            <asp:TextBox class="form-control mw-100" ID="txtState" runat="server"></asp:TextBox>
+        </div>--%>
+    </div>
+    <div class="form-group">
+        <asp:Button class="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" id="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
+        <asp:Button class="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Update Profile" runat="server" id="btnUpdate" Enabled="true" ValidationGroup="profileValidation" OnClick="btnUpdate_Click" />
+    </div>
+</div>
+
+
                                 <div class="col-md-4">
                                     <div class="card mb-3">
                                         <div class="card-header">
@@ -271,8 +303,8 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span>
-                                                    <h6>Connector-X</h6>
-                                                    <p>$250 / Year</p>
+  <h6><asp:Label runat="server" ID ="lblMembership"></asp:Label></h6>
+                                                   
                                                 </span>
                                                 <img src="Content/images/Memberships/6.png" width="150" class="img-fluid" alt="" />
                                             </div>
@@ -285,8 +317,8 @@
                                         <div class="card-body">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <span>
-                                                    <h6>Partner</h6>
-                                                    <p>Reward: 50</p>
+                                                    <h6><asp:Label runat="server" ID ="lblRank"></asp:Label></h6>
+                                                   
                                                 </span>
                                                 <img class="flip" src="Content/images/Ranks/current-rank.gif" height="100" width="100">
                                             </div>
