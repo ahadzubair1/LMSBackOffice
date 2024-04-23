@@ -1016,11 +1016,6 @@ footer .field-row {
 }
 
 
-    .t-card span {
-        position: absolute;
-        border-radius: 100vmax;
-    }
-
     .t-card .top {
         top: 0;
         left: 0;
@@ -1584,6 +1579,10 @@ label:not(.form-check-label):not(.custom-file-label) {
 
     .current-rank td:first-child {
         text-align: center;
+    }
+
+    .current-rank td {
+        font-weight: 600;
     }
 
     .current-rank:after {

@@ -10,7 +10,8 @@
 
 
         .table tbody tr:nth-of-type(odd) {
-            background-color: #de0eed24; /* Adjust odd row background color as needed */
+            background-color: #A9C9FF;
+            background-image: linear-gradient(90deg, #A9C9FF 0%, #FFBBEC 100%); /* Adjust odd row background color as needed */
         }
 
         /* Hover Effect */
@@ -262,7 +263,7 @@
                                 <Columns>
                                     <asp:TemplateField HeaderText="">
                                         <ItemTemplate>
-                                            <img ID="imgCurrentRank" class="flip m-auto" src="Content/images/Ranks/current-rank.gif" height="50" width="50" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
+                                            <img id="imgCurrentRank" class="flip m-auto" src="Content/images/Ranks/current-rank.gif" height="50" width="50" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
                                             <%--<svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
                                                 <use xlink:href="#custom-star-bold"></use>
                                             </svg>--%>
@@ -271,7 +272,7 @@
                                     <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" />
                                     <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" />
                                     <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" />
-                                                                        <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" />
+                                    <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" />
                                     <asp:BoundField DataField="Reward" HeaderText="Reward" />
                                 </Columns>
                                 <PagerStyle CssClass="custom-pagination" />
