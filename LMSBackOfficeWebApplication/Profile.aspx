@@ -242,7 +242,7 @@
 
                                 <div class="col-md-5 border-right mb-4 mb-md-0">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="text-right">Profile Settings</h4>
+                                        <h4 class="text-right m-0">Profile Settings <span class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
                                         <asp:Button runat="server" ID="btnEdit" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
                                     </div>
                                     <div class="row mt-2">
@@ -312,7 +312,7 @@
                                             <h6 class="m-0 text-white">My Membership(s)</h6>
                                         </div>
                                         <div class="card-body">
-                                            <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center justify-content-evenly">
                                                 <span>
                                                     <h4>
                                                         <asp:Label runat="server" ID="lblMembership"></asp:Label></h4>
@@ -327,12 +327,12 @@
                                             <h6 class="m-0 text-white">My Rank</h6>
                                         </div>
                                         <div class="card-body">
-                                            <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center justify-content-evenly">
                                                 <span>
                                                     <h4>
                                                         <asp:Label runat="server" ID="lblRank"></asp:Label></h4>
                                                 </span>
-                                                <img class="flip" src="Content/images/Ranks/current-rank.gif" height="100" width="100">
+                                                <img src="Content/images/Ranks/current-rank.gif" height="100" width="100">
                                             </div>
                                         </div>
                                     </div>
