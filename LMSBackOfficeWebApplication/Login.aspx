@@ -17,6 +17,11 @@
     <link href="./Content/fonts/fontawesome.css" rel="stylesheet" />
 
     <style>
+        .btn:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
         .theGlobe {
             text-align: center;
             position: absolute;
