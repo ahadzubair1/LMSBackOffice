@@ -1575,6 +1575,10 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .current-rank {
     position: relative;
+    background-image: radial-gradient(#d014e4 0.5px, #fff 0.5px);
+    background-size: 10px 10px;
+    overflow: auto;
+    animation: animatedBackground 500s linear infinite;
 }
 
     .current-rank td:first-child {
