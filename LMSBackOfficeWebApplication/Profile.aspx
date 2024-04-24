@@ -245,7 +245,7 @@
                                         <h4 class="text-right m-0">Profile Settings <span class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
                                         <asp:Button runat="server" ID="btnEdit" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
                                     </div>
-                                                                        <div class="row mt-2">
+                                    <div class="row mt-2">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">User Name</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtUserName" runat="server"></asp:TextBox>
@@ -282,12 +282,12 @@
                                             <label class="labels">Gender</label>
                                             <div class="d-flex gap-3">
                                                 <div class="d-inline-flex align-items-center gap-1">
-                                                    <asp:RadioButton ID="rbMale" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                    <asp:RadioButton ID="rbMale" CssClass="d-inline-flex align-items-center gap-1" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
 
-                                                    
+
                                                 </div>
                                                 <div class="d-inline-flex align-items-center gap-1">
-<asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                    <asp:RadioButton ID="rbFemale" CssClass="d-inline-flex align-items-center gap-1" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
 
                                                 </div>
                                             </div>
@@ -307,7 +307,7 @@
         </div>--%>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" ID="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
+                                        <asp:Button CssClass="btn btn-warning btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" ID="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
                                         <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Update Profile" runat="server" ID="btnUpdate" Enabled="true" ValidationGroup="profileValidation" OnClick="btnUpdate_Click" />
                                     </div>
                                 </div>
