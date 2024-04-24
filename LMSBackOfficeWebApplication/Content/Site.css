@@ -1646,6 +1646,11 @@ label:not(.form-check-label):not(.custom-file-label) {
     border-radius: 20px;
     color: #fff;
 }
+.profile-pic h6{
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
 
 
 #typewriter {
@@ -1722,3 +1727,4 @@ label:not(.form-check-label):not(.custom-file-label) {
         transform: rotate(360deg);
     }
 }
+
