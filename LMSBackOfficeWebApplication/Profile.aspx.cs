@@ -205,7 +205,7 @@ namespace LMSBackOfficeWebApplication
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            txtEmail.Enabled = true;
+            //txtEmail.Enabled = true;
             txtfirstName.Enabled = true;
             txtMobileNumber.Enabled = true;
             countries.Enabled = true;
