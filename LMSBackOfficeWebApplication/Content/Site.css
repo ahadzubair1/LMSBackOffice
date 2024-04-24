@@ -1575,6 +1575,10 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .current-rank {
     position: relative;
+    background-image: radial-gradient(#d014e4 0.5px, #fff 0.5px);
+    background-size: 10px 10px;
+    overflow: auto;
+    animation: animatedBackground 500s linear infinite;
 }
 
     .current-rank td:first-child {
@@ -1646,11 +1650,12 @@ label:not(.form-check-label):not(.custom-file-label) {
     border-radius: 20px;
     color: #fff;
 }
-.profile-pic h6{
-    color: #fff;
-    margin-bottom: 0;
-    margin-top: 10px;
-}
+
+    .profile-pic h6 {
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
 
 
 #typewriter {
@@ -1728,3 +1733,72 @@ label:not(.form-check-label):not(.custom-file-label) {
     }
 }
 
+
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+
+.criteria-box {
+    background: black;
+    position: relative;
+    overflow: hidden;
+    
+}
+    /* Main styles */
+    .criteria-box:before {
+        content: "";
+        background-image: radial-gradient(#fff 0.5px, #232f45 0.5px);
+        background-size: 10px 10px;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: animatedBackground 500s linear infinite;
+        box-shadow: inset 4px 4px 20px 0px #de0eed, inset -4px -6px 5px 0px #4680ff;
+    }

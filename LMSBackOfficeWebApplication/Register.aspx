@@ -18,6 +18,11 @@
     <link href="./Content/css/icons.css" rel="stylesheet" />
     <link href="./Content/css/typography.css" rel="stylesheet" />
     <style>
+        .btn:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
         .theGlobe {
             text-align: center;
             position: absolute;
@@ -188,7 +193,7 @@
                                 <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Register" id="btnSubmit" runat="server" onserverclick="btnSubmit_Click" />
                             </div>
                             <div class="col-md-6">
-                                <a href="Login.aspx" class="text-white">Already Have an Account?</a>
+                                <a href="Login.aspx" class="text-white d-block">Already Have an Account?</a>
                             </div>
                         </div>
                     </form>

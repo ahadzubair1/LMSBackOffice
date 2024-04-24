@@ -17,6 +17,11 @@
     <link href="./Content/fonts/fontawesome.css" rel="stylesheet" />
 
     <style>
+        .btn:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
         .theGlobe {
             text-align: center;
             position: absolute;
@@ -193,7 +198,7 @@
                             <input type="submit" class="btn w-100 btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize px-4" value="Login" id="btnSubmit" runat="server" onserverclick="btnLogin_Click" />
                         </div>
                         <div class="mb-3">
-                            <a href="ForgotPassword.aspx" target="_blank" class="text-white">Forgot Password?</a>
+                            <a href="ForgotPassword.aspx" target="_blank" class="text-white d-block">Forgot Password?</a>
                         </div>
                     </form>
                 </div>
