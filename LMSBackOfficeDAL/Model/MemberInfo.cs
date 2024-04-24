@@ -27,6 +27,8 @@ namespace LMSBackOfficeDAL.Model
         public string MemberRank { get; set; }
 
         public string CreatedDate { get; set; }
+
+        public string Gender { get; set;}
     }
 
     public class CheckoutModel

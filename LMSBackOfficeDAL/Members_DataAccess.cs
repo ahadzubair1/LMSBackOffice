@@ -233,7 +233,7 @@ namespace LMSBackOfficeDAL
             }
         }
 
-        public static bool UpdateMember(string memberID, string fullName, string mobile, string email, string countryOfOrigin)
+        public static bool UpdateMember(string memberID, string fullName, string mobile, string email, string countryOfOrigin,string gender)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = connection.CreateCommand())
@@ -250,6 +250,7 @@ namespace LMSBackOfficeDAL
                 command.Parameters.AddWithValue("@IN_Member_FullName", fullName);
                 command.Parameters.AddWithValue("@IN_Member_Mobile", mobile);
                 command.Parameters.AddWithValue("@IN_Member_Email", email);
+                command.Parameters.AddWithValue("@IN_Gender", gender);
                 command.Parameters.AddWithValue("@IN_Member_CountryOfOrigin", countryOfOrigin);
 
                 try
@@ -362,7 +363,9 @@ namespace LMSBackOfficeDAL
                                     MembershipName= reader["Membership_Name"].ToString(),
                                     MemberRank= reader["Member_RankDesc"].ToString(),
                                     CountryId = reader["CountryID"].ToString(),
-                                    CreatedDate= reader["Created_Date"].ToString()
+                                    CreatedDate= reader["Created_Date"].ToString(),
+                                    Gender= reader["Member_Gender"].ToString()
+
                                 };
                             }
                         }

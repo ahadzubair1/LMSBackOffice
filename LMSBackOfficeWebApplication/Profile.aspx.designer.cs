@@ -51,6 +51,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.Button btnEdit;
 
         /// <summary>
+        /// txtUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+
+        /// <summary>
         /// txtfirstName control.
         /// </summary>
         /// <remarks>
@@ -114,6 +123,24 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.CustomValidator cvEmail;
 
         /// <summary>
+        /// rbMale control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbMale;
+
+        /// <summary>
+        /// rbFemale control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbFemale;
+
+        /// <summary>
         /// countries control.
         /// </summary>
         /// <remarks>
@@ -157,6 +184,15 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMembership;
+
+        /// <summary>
+        /// imgMembership control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgMembership;
 
         /// <summary>
         /// lblRank control.

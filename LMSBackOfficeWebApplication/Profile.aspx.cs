@@ -39,6 +39,19 @@ namespace LMSBackOfficeWebApplication
            
             return false;
         }
+        protected void rbGender_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbMale.Checked)
+            {
+                // Male option is selected
+                // Perform actions specific to male selection
+            }
+            else if (rbFemale.Checked)
+            {
+                // Female option is selected
+                // Perform actions specific to female selection
+            }
+        }
         private void PopulateMember()
         {
               List<Countries_DataAccess.Country> allCountries = Countries_DataAccess.GetAllCountries();
@@ -60,7 +73,7 @@ namespace LMSBackOfficeWebApplication
                 {
                     
                     MemberId = member.Id;
-
+                    txtUserName.Text = member.UserName;
                     //txtAddressLine1.Text = member.MemberAddress;
                     countries.SelectedValue = member.Country;
                     txtEmail.Text = member.Email;
@@ -70,12 +83,31 @@ namespace LMSBackOfficeWebApplication
                     lblMembership.Text = member.MembershipName;
                     lblRank.Text = member.MemberRank;
                     lblUserName.Text = Session["Username"].ToString();
+                    if (Convert.ToString(member.Gender) == "male")
+                    {
+                        rbMale.Checked = true;
+                    }
+                    else if (Convert.ToString(member.Gender) == "female")
+                    {
+                        rbFemale.Checked = true;
+                    }
 
+                    string imagePath = GetMembershipImagePath(member.MembershipName);
 
+                    // Set the ImageUrl property
+                    imgMembership.ImageUrl = imagePath;
+
+                    txtUserName.Enabled = false;
                     txtEmail.Enabled = false;
                     txtfirstName.Enabled = false;
                     txtMobileNumber.Enabled = false;
                     countries.Enabled = false;
+                    rbFemale.Enabled = false;
+                    rbMale.Enabled = false;
+                    btnCancel.Enabled = false;
+                    btnUpdate.Enabled = false;
+
+                    
 
 
 
@@ -92,6 +124,11 @@ namespace LMSBackOfficeWebApplication
                 string mobile = txtMobileNumber.Text;
             string email = txtEmail.Text;
                 string countryOfOrigin = countries.SelectedValue;
+            string gender = "";
+            if (rbMale.Checked)
+                gender = "male";
+            if (rbFemale.Checked)
+                gender = "female";
 
 
             bool CheckEmailExists = Members_DataAccess.CheckEmailExists(email);
@@ -105,7 +142,7 @@ namespace LMSBackOfficeWebApplication
             }
 
             // Call the data access method to update the member
-            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin);
+            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender);
 
                 if (updateSuccess)
                 {
@@ -130,12 +167,53 @@ namespace LMSBackOfficeWebApplication
 
         }
 
+        // Example method to retrieve the image path from server-side logic
+        private string GetMembershipImagePath(string membership)
+        {
+
+
+            switch (membership)
+            {
+                case "Pioneer":
+                    // Code for handling the "Pioneer" membership
+                    return "Content/images/Memberships/4.png";
+                case "Infinite":
+                    // Code for handling the "Infinite" membership
+                    return "Content/images/Memberships/5.png";
+                case "Connector-X":
+                     return "Content/images/Memberships/6.png";
+                case "Partner":
+                    return "Content/images/Memberships/2.png";
+                case "Elite":
+
+                    return "Content/images/Memberships/1.png";
+                case "Explorer":
+                    return "Content/images/Memberships/1.png";
+                default:
+                    return "Content/images/Memberships/6.png";
+                   
+            }
+
+
+
+            // Your server-side logic to determine the image path goes here
+            // For example, you can fetch it from a database or calculate it based on some condition
+
+            // Return the image path
+
+        }
+
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             txtEmail.Enabled = true;
             txtfirstName.Enabled = true;
             txtMobileNumber.Enabled = true;
             countries.Enabled = true;
+
+            rbFemale.Enabled = true;
+            rbMale.Enabled = true;
+            btnCancel.Enabled = true;
+            btnUpdate.Enabled = true;
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

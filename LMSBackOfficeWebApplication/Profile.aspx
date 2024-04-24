@@ -245,6 +245,12 @@
                                         <h4 class="text-right">Profile Settings</h4>
                                         <asp:Button runat="server" ID="btnEdit" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
                                     </div>
+                                                                        <div class="row mt-2">
+                                        <div class="col-md-12 form-group">
+                                            <label class="labels">User Name</label>
+                                            <asp:TextBox CssClass="form-control mw-100" ID="txtUserName" runat="server"></asp:TextBox>
+                                        </div>
+                                    </div>
                                     <div class="row mt-2">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Member Full Name</label>
@@ -276,12 +282,13 @@
                                             <label class="labels">Gender</label>
                                             <div class="d-flex gap-3">
                                                 <div class="d-inline-flex align-items-center gap-1">
-                                                    <label class="labels p-0 font-normal">Male</label>
-                                                    <input type="radio" name="gender" value="male" />
+                                                    <asp:RadioButton ID="rbMale" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+
+                                                    
                                                 </div>
                                                 <div class="d-inline-flex align-items-center gap-1">
-                                                    <label class="labels p-0 font-normal">Female</label>
-                                                    <input type="radio" name="gender" value="female" />
+<asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+
                                                 </div>
                                             </div>
                                         </div>
@@ -318,7 +325,9 @@
                                                         <asp:Label runat="server" ID="lblMembership"></asp:Label></h4>
 
                                                 </span>
-                                                <img src="Content/images/Memberships/6.png" width="150" class="img-fluid" alt="" />
+                                                <%--<img src="Content/images/Memberships/6.png" width="150" class="img-fluid" alt="" />--%>
+                                                <asp:Image ID="imgMembership" runat="server" CssClass="img-fluid" Width="150" AlternateText="" />
+
                                             </div>
                                         </div>
                                     </div>
