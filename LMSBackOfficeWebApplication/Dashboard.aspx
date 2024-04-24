@@ -685,7 +685,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="card mb-4 h-100" style="background: #232f45; box-shadow: inset 4px 4px 20px 0px #de0eed, inset -4px -6px 5px 0px #4680ff">
+                                <div class="card mb-4 h-100 criteria-box">
                                     <div class="card-body position-relative d-flex align-items-center justify-content-center flex-column">
                                         <div class="svg-frame">
                                             <svg style="--i: 0; --j: 0;">
