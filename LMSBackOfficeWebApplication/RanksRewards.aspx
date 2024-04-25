@@ -9,10 +9,77 @@
         }
 
 
-        .table tbody tr:nth-of-type(odd) {
+        .table tbody tr:nth-child(1) {
             background-color: #A9C9FF;
             background-image: linear-gradient(90deg, #A9C9FF 0%, #FFBBEC 100%); /* Adjust odd row background color as needed */
         }
+
+        .table tbody tr:nth-child(2) {
+            background-color: #FBAB7E;
+            background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        }
+
+        .table tbody tr:nth-child(3) {
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        }
+
+        .table tbody tr:nth-child(4) {
+            background-color: #21D4FD;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        }
+
+        .table tbody tr:nth-child(5) {
+            background-color: #FAACA8;
+            background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+        }
+
+        .table tbody tr:nth-child(6) {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .table tbody tr:nth-child(7) {
+            background-color: #21D4FD;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        }
+
+        .table tbody tr:nth-child(8) {
+            background-color: #FF3CAC;
+            background-image: linear-gradient(19deg, #21D4FD6B 0%, #B721FF63 100%);
+        }
+
+            .table tbody tr:nth-child(8) td {
+                color: #fff;
+            }
+
+        .table tbody tr:nth-child(8) {
+            background-color: #F4D03F;
+            background-image: linear-gradient(132deg, #F4D03F69 0%, #16A0857A 100%);
+        }
+
+        .table tbody tr:nth-child(9) {
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC57 0%, #784BA069 50%, #2B86C566 100%);
+        }
+
+            .table tbody tr:nth-child(9) td {
+                color: #fff;
+            }
+
+        .table tbody tr:nth-child(10) {
+            background-color: #FAD961;
+            background-image: linear-gradient(90deg, #FAD9614D 0%, #F76B1C4F 100%);
+        }
+
+        .table tbody tr td:nth-child(2) {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+
+
 
         /* Hover Effect */
         .table tbody tr:hover {
