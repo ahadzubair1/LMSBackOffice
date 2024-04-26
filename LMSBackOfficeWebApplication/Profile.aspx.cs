@@ -164,7 +164,7 @@ namespace LMSBackOfficeWebApplication
             }
 
             // Call the data access method to update the member
-            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender,dob,nationality,walletAddress,walletType);
+            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender,dob,nationality,walletType, walletAddress);
 
                 if (updateSuccess)
                 {
