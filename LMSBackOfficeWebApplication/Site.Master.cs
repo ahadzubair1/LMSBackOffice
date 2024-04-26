@@ -22,7 +22,7 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if it's a postback caused by the anchor click
+           // Check if it's a postback caused by the anchor click
             if (Request.Form["__EVENTTARGET"] == AIcopyTradingLi.UniqueID)
             {
                 // Execute server-side code
@@ -141,7 +141,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+          //  UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             Response.Redirect("AICopyTrading.aspx");
         }
 

@@ -198,12 +198,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
+                                    <div onclick="AIcopyTradingLink_Click" runat="server" id="divtest" class="text-end pt-4 d-flex align-items-center justify-content-end gap-3">
                                         <div>
                                             <input id="agreement1" type="checkbox" name="agreement" value="" onchange="toggleButton()" />
+                                            <%--<asp:CheckBox ID="chk1" runat="server" CausesValidation="false" AutoPostBack="True" OnCheckedChanged="chk1_CheckedChanged"  />--%>
                                             <label for="agreement1">Yes, I have read</label>
                                         </div>
-                                        <a id="continueLink" class="btn btn-primary continueButton disabled" >Continue</a>
+                                        <%--<a id="continueLink1" class="btn btn-primary continueButton disabled" >Continue1</a>--%>
+                                        <asp:Button ID="btnContinue" Text="Continue" class="btn btn-primary continueButton disabled" CausesValidation="false" runat="server" OnClick="btnContinue_Click"  />
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +269,10 @@
                                             <input id="agreement2" type="checkbox" name="agreement" value="" />
                                             <label for="agreement2">Yes, I have read</label>
                                         </div>
-                                        <a id="continueLink2"  class="btn btn-primary continueButton disabled">Continue</a>
+                                        <%--<asp:CheckBox ID="chk2" runat="server" CausesValidation="false" AutoPostBack="True" OnCheckedChanged="chk2_CheckedChanged" />--%>
+                                           
+                                        <%--<a id="continueLink2"  class="btn btn-primary continueButton disabled">Continue</a>--%>
+                                      <asp:Button ID="btnContinue2" Text="Continue" class="btn btn-primary continueButton disabled" CausesValidation="false" runat="server" OnClick="btnContinue2_Click"  />
                                     </div>
                                 </div>
                             </div>
@@ -442,8 +447,25 @@ Ineligible Membership</h1>
 
                 // Check if membership exists
                 if (MembershipExist && HighestMembershipAmount>=50) {
+
+                    $.ajax({
+                        type: 'POST',
+                        url: window.location.pathname + '/AICopyTradingLink_Click',
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (response) {
+                            // Handle success
+                            // You can optionally remove the 'disabled' class from the button here
+                            //button.classList.remove('disabled');
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle error
+                        }
+                    });
+
                     // Redirect to a new link
                     window.location.href = 'https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en';
+                    
                 } else {
                     // Display the modal
                     var modal = document.getElementById('buyMembership');
@@ -465,6 +487,22 @@ Ineligible Membership</h1>
 
                 // Check if membership exists
                 if (MembershipExist && HighestMembershipAmount >= 750) {
+
+                    $.ajax({
+                        type: 'POST',
+                        url: window.location.pathname + '/AICopyTradingLink_Click',
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (response) {
+                            // Handle success
+                            // You can optionally remove the 'disabled' class from the button here
+                            button.classList.remove('disabled');
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle error
+                        }
+                    });
+
                     // Redirect to a new link
                     window.location.href = 'https://my.fxlvls.com/register?referral=15';
                 } else {
@@ -490,6 +528,7 @@ Ineligible Membership</h1>
             if (checkbox) {
                 checkbox.addEventListener('change', function () {
                     toggleButton(checkbox, button);
+                   
                 });
             } else {
                 console.error('Checkbox not found for button:', button);
@@ -498,11 +537,41 @@ Ineligible Membership</h1>
 
         function toggleButton(checkbox, button) {
             if (checkbox.checked) {
+                
+                if (HighestMembershipAmount>50)
                 button.classList.remove('disabled');
             } else {
                 button.classList.add('disabled');
             }
         }
+
+        function toggleButton1(checkbox, button) {
+            if (checkbox.checked) {
+
+                // Assuming HighestMembershipAmount is a variable accessible in JavaScript
+                if (HighestMembershipAmount > 50) {
+                           button.classList.remove('disabled');
+                    // If condition is met, make an AJAX call to the server-side method
+                    $.ajax({
+                        type: 'POST',
+                        url: window.location.pathname + '/AICopyTradingLink_Click',
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function (response) {
+                            // Handle success
+                            // You can optionally remove the 'disabled' class from the button here
+                            button.classList.remove('disabled');
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle error
+                        }
+                    });
+                }
+            } else {
+                button.classList.add('disabled');
+            }
+        }
+
         
     </script>
 </asp:Content>
