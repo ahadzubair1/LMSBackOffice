@@ -322,7 +322,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h5>Classification of Ranks</h5>
+                        <h4 style="color:white">Classification of Ranks</h4>
                     </div>
                     <div class="card-body table-border-style">
                         <div class="table-responsive">
@@ -336,11 +336,11 @@
                                             </svg>--%>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" />
-                                    <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" />
-                                    <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" />
-                                    <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" />
-                                    <asp:BoundField DataField="Reward" HeaderText="Reward" />
+                                    <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" HeaderStyle-Font-Size="Larger" ItemStyle-Font-Size="Small" />
+                                    <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" HeaderStyle-Font-Size="Larger" />
+                                    <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume"  HeaderStyle-Font-Size="Larger"/>
+                                    <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" HeaderStyle-Font-Size="Larger" />
+                                    <asp:BoundField DataField="Reward" HeaderText="Reward" HeaderStyle-Font-Size="Larger" />
                                 </Columns>
                                 <PagerStyle CssClass="custom-pagination" />
                             </asp:GridView>
