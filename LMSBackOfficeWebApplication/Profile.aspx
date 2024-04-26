@@ -353,7 +353,7 @@
             <asp:TextBox class="form-control mw-100" ID="txtAddressLine2" runat="server"></asp:TextBox>
         </div>--%>
                                         <div class="col-md-12 form-group">
-                                            <label class="labels">Email ID</label>
+                                            <label class="labels">Email Address</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtEmail" runat="server"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvEmail" runat="server" CssClass="profile-input-error" ControlToValidate="txtEmail" ErrorMessage="Email is required." ValidationGroup="profileValidation" />
                                             <asp:RegularExpressionValidator ID="revEmail" runat="server" CssClass="profile-input-error" ControlToValidate="txtEmail" ErrorMessage="Invalid email format." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="profileValidation" />
