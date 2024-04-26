@@ -8,6 +8,58 @@
     </style>
 
 
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize date picker
+            $("#txtDate").datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeYear: true, // Enable year selector
+                onSelect: function (selectedDate) {
+                    $("#txtDate").val(selectedDate);
+
+                    $("#calendarDiv").hide();
+                    // Call a JavaScript function to handle further processing if needed
+                    handleDate(selectedDate);
+                    return false; // Prevent default behavior (postback)
+                }
+            });
+
+            // Show calendar on button click
+            $("#btnShowCalendar").click(function () {
+                $("#calendarDiv").toggle();
+            });
+        });
+
+        // Function to handle the selected date
+        function handleDate(selectedDate) {
+            // Send the selected date to the server using AJAX
+            $.ajax({
+                url: 'YourPage.aspx/ProcessDate',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ selectedDate: selectedDate }),
+                success: function (response) {
+                    // Handle the response from the server if needed
+                    alert("Date successfully sent to server.");
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors if any
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    </script>
+    <script>
+        function showCalendar() {
+            $("#txtDate").datepicker("show");
+        }
+    </script>
+
     <main>
 
 
@@ -238,14 +290,20 @@
                                             <asp:Label runat="server" ID="lblEmail"></asp:Label>
                                         </span><span></span>
                                     </div>
+                                    
+
                                 </div>
 
                                 <div class="col-md-5 border-right mb-4 mb-md-0">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h4 class="text-right m-0">Profile Settings <span class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
-                                        <asp:Button runat="server" ID="btnEdit" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
+                                        
+                                        <asp:Button runat="server" ID="btnEdit"  CausesValidation="false" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
+                                
+
                                     </div>
                                                                         <div class="row mt-2">
+                                                                                                                    <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="profileValidation" runat="server" ForeColor="Red"/> 
                                         <div class="col-md-12 form-group">
                                             <label class="labels">User Name</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtUserName" runat="server"></asp:TextBox>
@@ -253,15 +311,38 @@
                                     </div>
                                     <div class="row mt-2">
                                         <div class="col-md-12 form-group">
-                                            <label class="labels">Member Full Name</label>
+                                            <label class="labels">Full Name</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtfirstName" runat="server"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvFirstName" CssClass="profile-input-error" runat="server" ControlToValidate="txtfirstName" ErrorMessage="Member Full Name can not be empty." ValidationGroup="profileValidation" />
                                         </div>
                                     </div>
+                                    <div class="row mt-2">
+    <div class="col-md-12 form-group">
+<div style="display: flex; flex-direction: column;">
+    <div>
+        <label class="labels">Date of birth</label>
+    </div>
+    <div style="display: flex;">
+        <asp:TextBox ID="txtDate" runat="server"  ClientIDMode="Static" onclick="showCalendar();" />
+             <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
+                                       
+        <span id="calendarIcon" style="cursor: pointer;">
+            <img src="calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
+        </span>
+    </div>
+</div>
+
+
+           
+                                                    <div id="calendarDiv" style="display: none;">
+    <asp:Calendar ID="calDate" runat="server"></asp:Calendar>
+</div>
+        </div>
+</div>
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Mobile Number</label>
-                                            <asp:TextBox CssClass="form-control mw-100" ID="txtMobileNumber" runat="server"></asp:TextBox>
+                                            <asp:TextBox TextMode="Number" CssClass="form-control mw-100" ID="txtMobileNumber" runat="server"></asp:TextBox>
                                         </div>
                                         <%--        <div class="col-md-12 form-group">
             <label class="labels">Address Line 1</label>
@@ -283,16 +364,45 @@
                                             <div class="d-flex gap-3">
                                                 <div class="d-inline-flex align-items-center gap-1">
                                                     <asp:RadioButton ID="rbMale" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
-
-                                                    
                                                 </div>
                                                 <div class="d-inline-flex align-items-center gap-1">
-<asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                <asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
 
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
+                                    
+                                    
+                                    
+                                    <div class="row">
+    <div class="col-md-12 form-group">
+        <label cssclass="labels">Wallet Type</label>
+        <asp:DropDownList ID="ddlWalletType"  name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
+                        <asp:ListItem Text="Select Wallet" Value="" Selected="True" />
+
+            
+                        <asp:ListItem Text="USDT" Value="USDT" />
+                          <asp:ListItem Text="TRC20" Value="TRC20" />
+                         <asp:ListItem Text="TRON" Value="TRON" />
+        </asp:DropDownList>
+    </div>
+                  
+</div>
+           
+                                    
+                                                                        <div class="row mt-2">
+                                        <div class="col-md-12 form-group">
+                                            <label class="labels">Wallet Address</label>
+                                            <asp:TextBox CssClass="form-control mw-100" ID="txtWalletAddress" MaxLength="50" runat="server"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label cssclass="labels">Country</label>
@@ -301,12 +411,20 @@
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="rfvCountry" runat="server" CssClass="profile-input-error" ControlToValidate="countries" ErrorMessage="Country selection is required." InitialValue="" ValidationGroup="profileValidation" />
                                         </div>
-                                        <%--        <div class="col-md-6 form-group">
-            <label class="labels">State/Region</label>
-            <asp:TextBox class="form-control mw-100" ID="txtState" runat="server"></asp:TextBox>
-        </div>--%>
+                  
+                                    </div>
+                                                                        <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label cssclass="labels">Nationality</label>
+                                            <asp:DropDownList ID="nationalities" name="nationalities" CssClass="form-control mw-100"  runat="server">
+                                                <asp:ListItem Text="Select Nationality" Value="" Selected="True" />
+                                            </asp:DropDownList>
+                                            <%--<asp:RequiredFieldValidator ID="rfvNationality" runat="server" CssClass="profile-input-error" ControlToValidate="nationalities" ErrorMessage="Nationality selection is required." InitialValue="" ValidationGroup="profileValidation" />--%>
+                                        </div>
+                  
                                     </div>
                                     <div class="form-group">
+
                                         <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" ID="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
                                         <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Update Profile" runat="server" ID="btnUpdate" Enabled="true" ValidationGroup="profileValidation" OnClick="btnUpdate_Click" />
                                     </div>
@@ -564,3 +682,4 @@
 
     </script>
 </asp:Content>
+ 

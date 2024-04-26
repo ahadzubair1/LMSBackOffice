@@ -3,6 +3,7 @@ using LMSBackOfficeDAL;
 using ServiceStack;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net.PeerToPeer;
 using System.Runtime.Remoting.Lifetime;
@@ -28,6 +29,7 @@ namespace LMSBackOfficeWebApplication
         {
             if(!IsPostBack)
             {
+               
 
                 PopulateMember();
             }
@@ -61,7 +63,12 @@ namespace LMSBackOfficeWebApplication
                     {
                         System.Web.UI.WebControls.ListItem item = new ListItem(country.CountryName, country.CountryID);
                         countries.Items.Add(item);
-                    }
+
+                System.Web.UI.WebControls.ListItem item2 = new ListItem(country.CountryName, country.CountryID);
+                nationalities.Items.Add(item2);
+            }
+
+
 
             if (Session["Username"] != null)
             {
@@ -76,6 +83,15 @@ namespace LMSBackOfficeWebApplication
                     txtUserName.Text = member.UserName;
                     //txtAddressLine1.Text = member.MemberAddress;
                     countries.SelectedValue = member.Country;
+                    countries.Enabled = false;
+
+                    if(member.Nationality!=null)
+                    {
+                        nationalities.SelectedValue = member.Nationality;
+                    }
+                    txtDate.Text = Convert.ToString(member.DOB);
+                    txtDate.Enabled = false;
+
                     txtEmail.Text = member.Email;
                     txtfirstName.Text = member.MemberFullName;
                     txtMobileNumber.Text = member.Mobile;
@@ -120,15 +136,21 @@ namespace LMSBackOfficeWebApplication
             string userName = Session["Username"].ToString();
             var memberToUpdate = Members_DataAccess.GetMemberInfo(userName);
             string memberId = memberToUpdate.Id.ToString();
-                string fullName = txtfirstName.Text;
-                string mobile = txtMobileNumber.Text;
+            string fullName = txtfirstName.Text;
+            string mobile = txtMobileNumber.Text;
             string email = txtEmail.Text;
-                string countryOfOrigin = countries.SelectedValue;
+            DateTime dob = !string.IsNullOrEmpty(txtDate.Text) ? DateTime.ParseExact(txtDate.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture) : new DateTime(1900, 1, 1);
+
+            string countryOfOrigin = countries.SelectedValue;
+            string nationality=nationalities.SelectedValue;
             string gender = "";
             if (rbMale.Checked)
                 gender = "male";
             if (rbFemale.Checked)
                 gender = "female";
+
+            string walletType=ddlWalletType.SelectedValue;
+            string walletAddress=txtWalletAddress.Text;
 
 
             bool CheckEmailExists = Members_DataAccess.CheckEmailExists(email);
@@ -142,7 +164,7 @@ namespace LMSBackOfficeWebApplication
             }
 
             // Call the data access method to update the member
-            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender);
+            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender,dob,nationality,walletAddress,walletType);
 
                 if (updateSuccess)
                 {
@@ -150,6 +172,7 @@ namespace LMSBackOfficeWebApplication
                 ResponseMessage.Style.Add("color", "#e012ee");
                 // Display success message
                 ResponseMessage.InnerText="Member details updated successfully.";
+                PopulateMember();
                 }
                 else
                 {
@@ -206,8 +229,10 @@ namespace LMSBackOfficeWebApplication
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             //txtEmail.Enabled = true;
-            txtfirstName.Enabled = true;
+             txtfirstName.Enabled = true;
             txtMobileNumber.Enabled = true;
+            txtDate.Enabled = true;
+            nationalities.Enabled = true;   
             countries.Enabled = true;
 
             rbFemale.Enabled = true;

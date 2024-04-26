@@ -51,6 +51,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.Button btnEdit;
 
         /// <summary>
+        /// ValidationSummary1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+
+        /// <summary>
         /// txtUserName control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,33 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
+
+        /// <summary>
+        /// txtDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
+
+        /// <summary>
+        /// rfvDOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDOB;
+
+        /// <summary>
+        /// calDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar calDate;
 
         /// <summary>
         /// txtMobileNumber control.
@@ -141,6 +177,24 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.RadioButton rbFemale;
 
         /// <summary>
+        /// ddlWalletType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlWalletType;
+
+        /// <summary>
+        /// txtWalletAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWalletAddress;
+
+        /// <summary>
         /// countries control.
         /// </summary>
         /// <remarks>
@@ -157,6 +211,15 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCountry;
+
+        /// <summary>
+        /// nationalities control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList nationalities;
 
         /// <summary>
         /// btnCancel control.

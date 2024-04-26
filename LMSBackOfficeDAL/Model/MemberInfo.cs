@@ -23,12 +23,19 @@ namespace LMSBackOfficeDAL.Model
         public string Country { get; set; }
         public string CountryId { get; set; }
 
+        public string Nationality { get; set; }
+        public string NationalityId { get; set; }
+
+        public string DOB { get; set; }
+
         public string MembershipName { get; set; }
         public string MemberRank { get; set; }
 
         public string CreatedDate { get; set; }
 
         public string Gender { get; set;}
+
+
     }
 
     public class CheckoutModel

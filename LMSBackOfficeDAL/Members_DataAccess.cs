@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using System.Web.Helpers;
+using System.Windows.Input;
 using System.Xml.Linq;
 using LMSBackofficeDAL;
 using LMSBackOfficeDAL.Model;
@@ -233,7 +234,7 @@ namespace LMSBackOfficeDAL
             }
         }
 
-        public static bool UpdateMember(string memberID, string fullName, string mobile, string email, string countryOfOrigin,string gender)
+        public static bool UpdateMember(string memberID, string fullName, string mobile, string email, string countryOfOrigin,string gender,DateTime DOB,string nationality,string walletType,string walletAddress)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = connection.CreateCommand())
@@ -252,6 +253,11 @@ namespace LMSBackOfficeDAL
                 command.Parameters.AddWithValue("@IN_Member_Email", email);
                 command.Parameters.AddWithValue("@IN_Gender", gender);
                 command.Parameters.AddWithValue("@IN_Member_CountryOfOrigin", countryOfOrigin);
+                command.Parameters.AddWithValue("@IN_Member_DOB", DOB);
+                command.Parameters.AddWithValue("@IN_Member_Nationality", nationality);
+                command.Parameters.AddWithValue("@IN_Member_Address", walletAddress);
+                command.Parameters.AddWithValue("@IN_Member_WalletType", walletType);
+
 
                 try
                 {
@@ -364,7 +370,9 @@ namespace LMSBackOfficeDAL
                                     MemberRank= reader["Member_RankDesc"].ToString(),
                                     CountryId = reader["CountryID"].ToString(),
                                     CreatedDate= reader["Created_Date"].ToString(),
-                                    Gender= reader["Member_Gender"].ToString()
+                                    Gender= reader["Member_Gender"].ToString(),
+                                    NationalityId= reader["NationalityId"].ToString(),
+                                    DOB = reader["Member_DoB"].ToString(),
 
                                 };
                             }
