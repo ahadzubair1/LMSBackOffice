@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" EnableViewState="true" Inherits="LMSBackOfficeWebApplication.Profile" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" EnableViewState="true" Inherits="LMSBackOfficeWebApplication.Profile" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -320,14 +320,14 @@
     <div class="col-md-12 form-group">
 <div style="display: flex; flex-direction: column;">
     <div>
-        <label class="labels">Date of birth</label>
+        <label class="labels">Date of Birth</label>
     </div>
     <div style="display: flex;">
         <asp:TextBox ID="txtDate" runat="server"  ClientIDMode="Static" onclick="showCalendar();" />
              <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
                                        
         <span id="calendarIcon" style="cursor: pointer;">
-            <img src="calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
+            <img src="img/calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
         </span>
     </div>
 </div>
@@ -378,9 +378,9 @@
                                     
                                     <div class="row">
     <div class="col-md-12 form-group">
-        <label cssclass="labels">Wallet Type</label>
+        <label cssclass="labels">Crypto Wallet Type</label>
         <asp:DropDownList ID="ddlWalletType"  name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
-                        <asp:ListItem Text="Select Wallet" Value="" Selected="True" />
+                        <asp:ListItem Text="Select Wallet Type" Value="" Selected="True" />
 
             
                         <asp:ListItem Text="USDT" Value="USDT" />
@@ -394,7 +394,7 @@
                                     
                                                                         <div class="row mt-2">
                                         <div class="col-md-12 form-group">
-                                            <label class="labels">Wallet Address</label>
+                                            <label class="labels">Crypto Wallet Address</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtWalletAddress" MaxLength="50" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
@@ -405,7 +405,7 @@
                                     
                                     <div class="row">
                                         <div class="col-md-12 form-group">
-                                            <label cssclass="labels">Country</label>
+                                            <label cssclass="labels">Country of Residence</label>
                                             <asp:DropDownList ID="countries" name="countries" CssClass="form-control mw-100" required="required" runat="server">
                                                 <asp:ListItem Text="Select Country" Value="" Selected="True" />
                                             </asp:DropDownList>
