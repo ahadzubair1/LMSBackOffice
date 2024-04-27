@@ -363,7 +363,7 @@
                                             <label class="labels">Gender</label>
                                             <div class="d-flex gap-3">
                                                 <div class="d-inline-flex align-items-center gap-1">
-                                                    <asp:RadioButton ID="rbMale" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                    <asp:RadioButton ID="rbMale" runat="server" Text="Male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
                                                 </div>
                                                 <div class="d-inline-flex align-items-center gap-1">
                                                 <asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
