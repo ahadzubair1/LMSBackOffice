@@ -9,7 +9,7 @@
 
 
 
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
@@ -290,20 +290,20 @@
                                             <asp:Label runat="server" ID="lblEmail"></asp:Label>
                                         </span><span></span>
                                     </div>
-                                    
+
 
                                 </div>
 
                                 <div class="col-md-5 border-right mb-4 mb-md-0">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h4 class="text-right m-0">Profile Settings <span class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
-                                        
-                                        <asp:Button runat="server" ID="btnEdit"  CausesValidation="false" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
-                                
+
+                                        <asp:Button runat="server" ID="btnEdit" CausesValidation="false" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
+
 
                                     </div>
-                                                                        <div class="row mt-2">
-                                                                                                                    <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="profileValidation" runat="server" ForeColor="Red"/> 
+                                    <div class="row mt-2">
+                                        <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="profileValidation" runat="server" ForeColor="Red" />
                                         <div class="col-md-12 form-group">
                                             <label class="labels">User Name</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtUserName" runat="server"></asp:TextBox>
@@ -317,28 +317,26 @@
                                         </div>
                                     </div>
                                     <div class="row mt-2">
-    <div class="col-md-12 form-group">
-<div style="display: flex; flex-direction: column;">
-    <div>
-        <label class="labels">Date of birth</label>
-    </div>
-    <div style="display: flex;">
-        <asp:TextBox ID="txtDate" runat="server"  ClientIDMode="Static" onclick="showCalendar();" />
-             <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
-                                       
-        <span id="calendarIcon" style="cursor: pointer;">
-            <img src="calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
-        </span>
-    </div>
-</div>
+                                        <div class="col-md-12 form-group">
+                                            <div style="display: flex; flex-direction: column;">
+                                                <div>
+                                                    <label class="labels">Date of birth</label>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <asp:TextBox ID="txtDate" CssClass="form-control mw-100" runat="server" ClientIDMode="Static" onclick="showCalendar();" />
+                                                    <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
 
+                                                    <%--<span id="calendarIcon" style="cursor: pointer;">
+                                                        <img src="calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
+                                                    </span>--%>
+                                                </div>
+                                            </div>
 
-           
-                                                    <div id="calendarDiv" style="display: none;">
-    <asp:Calendar ID="calDate" runat="server"></asp:Calendar>
-</div>
-        </div>
-</div>
+                                            <div id="calendarDiv" style="display: none;">
+                                                <asp:Calendar ID="calDate" runat="server"></asp:Calendar>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Mobile Number</label>
@@ -362,47 +360,47 @@
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Gender</label>
                                             <div class="d-flex gap-3">
-                                                <div class="d-inline-flex align-items-center gap-1">
-                                                    <asp:RadioButton ID="rbMale" runat="server" Text="male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                <div class="genderinput">
+                                                    <asp:RadioButton ID="rbMale" runat="server" Text="Male" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
                                                 </div>
-                                                <div class="d-inline-flex align-items-center gap-1">
-                                                <asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
+                                                <div class="genderinput">
+                                                    <asp:RadioButton ID="rbFemale" runat="server" Text="Female" GroupName="Gender" AutoPostBack="false" OnCheckedChanged="rbGender_CheckedChanged" />
 
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
-                                    
-                                    
-                                    
-                                    <div class="row">
-    <div class="col-md-12 form-group">
-        <label cssclass="labels">Wallet Type</label>
-        <asp:DropDownList ID="ddlWalletType"  name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
-                        <asp:ListItem Text="Select Wallet" Value="" Selected="True" />
 
-            
-                        <asp:ListItem Text="USDT" Value="USDT" />
-                          <asp:ListItem Text="TRC20" Value="TRC20" />
-                         <asp:ListItem Text="TRON" Value="TRON" />
-        </asp:DropDownList>
-    </div>
-                  
-</div>
-           
-                                    
-                                                                        <div class="row mt-2">
+
+
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label cssclass="labels">Wallet Type</label>
+                                            <asp:DropDownList ID="ddlWalletType" name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
+                                                <asp:ListItem Text="Select Wallet" Value="" Selected="True" />
+
+
+                                                <asp:ListItem Text="USDT" Value="USDT" />
+                                                <asp:ListItem Text="TRC20" Value="TRC20" />
+                                                <asp:ListItem Text="TRON" Value="TRON" />
+                                            </asp:DropDownList>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row mt-2">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Wallet Address</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtWalletAddress" MaxLength="50" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    
-                                    
-                                    
+
+
+
+
+
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label cssclass="labels">Country</label>
@@ -411,17 +409,17 @@
                                             </asp:DropDownList>
                                             <asp:RequiredFieldValidator ID="rfvCountry" runat="server" CssClass="profile-input-error" ControlToValidate="countries" ErrorMessage="Country selection is required." InitialValue="" ValidationGroup="profileValidation" />
                                         </div>
-                  
+
                                     </div>
-                                                                        <div class="row">
+                                    <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label cssclass="labels">Nationality</label>
-                                            <asp:DropDownList ID="nationalities" name="nationalities" CssClass="form-control mw-100"  runat="server">
+                                            <asp:DropDownList ID="nationalities" name="nationalities" CssClass="form-control mw-100" runat="server">
                                                 <asp:ListItem Text="Select Nationality" Value="" Selected="True" />
                                             </asp:DropDownList>
                                             <%--<asp:RequiredFieldValidator ID="rfvNationality" runat="server" CssClass="profile-input-error" ControlToValidate="nationalities" ErrorMessage="Nationality selection is required." InitialValue="" ValidationGroup="profileValidation" />--%>
                                         </div>
-                  
+
                                     </div>
                                     <div class="form-group">
 
@@ -682,4 +680,4 @@
 
     </script>
 </asp:Content>
- 
+
