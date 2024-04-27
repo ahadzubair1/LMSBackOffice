@@ -322,13 +322,15 @@
                                                 <div>
                                                     <label class="labels">Date of birth</label>
                                                 </div>
-                                                <div style="display: flex;">
+                                                <div class="position-relative">
                                                     <asp:TextBox ID="txtDate" CssClass="form-control mw-100" runat="server" ClientIDMode="Static" onclick="showCalendar();" />
                                                     <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
 
-                                                    <%--<span id="calendarIcon" style="cursor: pointer;">
-                                                        <img src="calendar_icon.png" alt="" onclick="showCalendar();" width="20" height="20" />
-                                                    </span>--%>
+                                                    <span id="calendarIcon" onclick="triggerTxtDate()">
+                                                        <svg class="pc-icon">
+                                                            <use xlink:href="#custom-calendar-1"></use>
+                                                        </svg>
+                                                    </span>
                                                 </div>
                                             </div>
 
@@ -375,10 +377,10 @@
 
 
                                     <div class="row">
-    <div class="col-md-12 form-group">
-        <label cssclass="labels">Crypto Wallet Type</label>
-        <asp:DropDownList ID="ddlWalletType"  name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
-                        <asp:ListItem Text="Select Wallet Type" Value="" Selected="True" />
+                                        <div class="col-md-12 form-group">
+                                            <label cssclass="labels">Crypto Wallet Type</label>
+                                            <asp:DropDownList ID="ddlWalletType" name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
+                                                <asp:ListItem Text="Select Wallet Type" Value="" Selected="True" />
 
 
                                                 <asp:ListItem Text="USDT" Value="USDT" />
@@ -677,6 +679,10 @@
             }
         }
 
+
+        function triggerTxtDate() {
+        document.getElementById("txtDate").click();
+    }
 
     </script>
 </asp:Content>
