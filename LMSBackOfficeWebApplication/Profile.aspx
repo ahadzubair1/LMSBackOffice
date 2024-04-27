@@ -342,7 +342,7 @@
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Mobile Number</label>
-                                            <asp:TextBox TextMode="Number" CssClass="form-control mw-100" ID="txtMobileNumber" runat="server"></asp:TextBox>
+                                            <asp:TextBox TextMode="Number" CssClass="form-control mw-100" ID="txtMobileNumber" MaxLength="24" runat="server"></asp:TextBox>
                                         </div>
                                         <%--        <div class="col-md-12 form-group">
             <label class="labels">Address Line 1</label>
