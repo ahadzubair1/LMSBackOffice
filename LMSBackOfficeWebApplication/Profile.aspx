@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" EnableViewState="true" Inherits="LMSBackOfficeWebApplication.Profile" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" EnableViewState="true" Inherits="LMSBackOfficeWebApplication.Profile" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -340,7 +340,7 @@
                                     <div class="row">
                                         <div class="col-md-12 form-group">
                                             <label class="labels">Mobile Number</label>
-                                            <asp:TextBox TextMode="Number" CssClass="form-control mw-100" ID="txtMobileNumber" runat="server"></asp:TextBox>
+                                            <asp:TextBox TextMode="Number" CssClass="form-control mw-100" ID="txtMobileNumber" MaxLength="24" runat="server"></asp:TextBox>
                                         </div>
                                         <%--        <div class="col-md-12 form-group">
             <label class="labels">Address Line 1</label>
@@ -375,10 +375,10 @@
 
 
                                     <div class="row">
-                                        <div class="col-md-12 form-group">
-                                            <label cssclass="labels">Wallet Type</label>
-                                            <asp:DropDownList ID="ddlWalletType" name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
-                                                <asp:ListItem Text="Select Wallet" Value="" Selected="True" />
+    <div class="col-md-12 form-group">
+        <label cssclass="labels">Crypto Wallet Type</label>
+        <asp:DropDownList ID="ddlWalletType"  name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
+                        <asp:ListItem Text="Select Wallet Type" Value="" Selected="True" />
 
 
                                                 <asp:ListItem Text="USDT" Value="USDT" />
@@ -392,7 +392,7 @@
 
                                     <div class="row mt-2">
                                         <div class="col-md-12 form-group">
-                                            <label class="labels">Wallet Address</label>
+                                            <label class="labels">Crypto Wallet Address</label>
                                             <asp:TextBox CssClass="form-control mw-100" ID="txtWalletAddress" MaxLength="50" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
@@ -403,7 +403,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12 form-group">
-                                            <label cssclass="labels">Country</label>
+                                            <label cssclass="labels">Country of Residence</label>
                                             <asp:DropDownList ID="countries" name="countries" CssClass="form-control mw-100" required="required" runat="server">
                                                 <asp:ListItem Text="Select Country" Value="" Selected="True" />
                                             </asp:DropDownList>
@@ -423,7 +423,7 @@
                                     </div>
                                     <div class="form-group">
 
-                                        <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" ID="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
+                                        <asp:Button CssClass="btn btn-danger btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Cancel" runat="server" ID="btnCancel" Enabled="true" OnClick="btnCancel_Click" />
                                         <asp:Button CssClass="btn btn-tr btn-shadow btn-sm text-end profile-button" CausesValidation="true" Text="Update Profile" runat="server" ID="btnUpdate" Enabled="true" ValidationGroup="profileValidation" OnClick="btnUpdate_Click" />
                                     </div>
                                 </div>
