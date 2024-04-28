@@ -1288,7 +1288,7 @@
             const minutes = Math.floor((totalSeconds % 3600) / 60);
             const seconds = totalSeconds % 60;
 
-            document.getElementById('timer').textContent = `Time Until Bonus Dispersal: ${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+            document.getElementById('timer').textContent = `Time Until Bonus Dispersal: ${days} Day(s), ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
 
             setTimeout(updateTimer, 1000);
         }
