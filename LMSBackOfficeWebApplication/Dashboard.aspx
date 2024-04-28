@@ -1262,7 +1262,7 @@
         function getNextSunday() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilNextSunday = 8 - dayOfWeek;
+            const daysUntilNextSunday = 1 - dayOfWeek;
 
             const nextSunday = new Date(today);
             nextSunday.setDate(today.getDate() + daysUntilNextSunday);
