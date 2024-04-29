@@ -1278,7 +1278,7 @@
             const timeDifference = targetDate.getTime() - currentDate.getTime();
 
             if (timeDifference < 0) {
-                document.getElementById('timer').textContent = "Network Bonus dispersal is In Progress !";
+                document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
                 return;
             }
 
