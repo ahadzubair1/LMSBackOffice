@@ -542,3 +542,89 @@ marquee{
 @media only screen and (min-width: 1200px) {
   /* Styles for extra-large screens */
 }
+
+
+
+.tradiix-logo {
+    width: 140px;
+}
+
+.cls-1 {
+    fill: #fff;
+}
+
+.cls-2 {
+    fill: #d014e4;
+}
+
+.cls-3 {
+    fill: #d014e4;
+}
+
+@keyframes move-cls-3 {
+    0%, 50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, -50px);
+    }
+}
+
+@keyframes move-cls-2 {
+    0%, 50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+.cls-3 {
+    animation: move-cls-3 2s infinite alternate;
+}
+
+.cls-2 {
+    animation: move-cls-2 2s infinite alternate;
+}
+
+.cls-1 {
+    fill: #fff; /* Initial color */
+    animation: change-color 2s infinite;
+}
+
+    .cls-1:nth-child(1) {
+        animation-delay: 0s; /* No delay for the first tag */
+    }
+
+    .cls-1:nth-child(2) {
+        animation-delay: 0.2s; /* Delay of 0.2s for the second tag */
+    }
+
+    .cls-1:nth-child(3) {
+        animation-delay: 0.4s; /* Delay of 0.4s for the third tag */
+    }
+
+    .cls-1:nth-child(4) {
+        animation-delay: 0.6s; /* Delay of 0.6s for the fourth tag */
+    }
+
+    .cls-1:nth-child(5) {
+        animation-delay: 0.8s; /* Delay of 0.8s for the fifth tag */
+    }
+
+/* Add more nth-child rules for additional tags */
+@keyframes change-color {
+    0% {
+        fill: #fff; /* Initial color */
+    }
+
+    50% {
+        fill: #d014e4; /* Intermediate color */
+    }
+
+    100% {
+        fill: #fff; /* Final color */
+    }
+}
