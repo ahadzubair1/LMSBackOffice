@@ -3,6 +3,17 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
+<style>        
+    .blink_me {
+    animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+    50% {
+    opacity: 0;
+    }
+    }
+    </style>
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -121,8 +132,7 @@
                         </div>
                         <h2 class="text-white">Welcome!</h2>
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
-                        <br />
-                        <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
+                        <font color="#dd12ec" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
                         <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="leaf">
