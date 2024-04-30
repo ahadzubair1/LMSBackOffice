@@ -1272,7 +1272,7 @@
         function getNextSunday() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilNextSunday = 1 - dayOfWeek;
+            const daysUntilNextSunday = 7 - dayOfWeek; // Change to calculate days until next Sunday
 
             const nextSunday = new Date(today);
             nextSunday.setDate(today.getDate() + daysUntilNextSunday);
@@ -1288,8 +1288,7 @@
             const timeDifference = targetDate.getTime() - currentDate.getTime();
 
             if (timeDifference < 0) {
-                document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
-                return;
+                return false; // Return false if dispersal day has passed
             }
 
             const totalSeconds = Math.floor(timeDifference / 1000);
@@ -1304,7 +1303,10 @@
         }
 
         // Start the timer
-        updateTimer();
+        if (!updateTimer()) {
+            document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
+        }
+
     </script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
