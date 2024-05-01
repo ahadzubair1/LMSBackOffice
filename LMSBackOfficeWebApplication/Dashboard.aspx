@@ -3,6 +3,17 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
+<style>        
+    .blink_me {
+    animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+    50% {
+    opacity: 0;
+    }
+    }
+    </style>
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -121,8 +132,7 @@
                         </div>
                         <h2 class="text-white">Welcome!</h2>
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
-                        <br />
-                        <font color="#dd12ec"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
+                        <font color="#dd12ec" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
                         <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="leaf">
@@ -1262,7 +1272,7 @@
         function getNextSunday() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilNextSunday = 1 - dayOfWeek;
+            const daysUntilNextSunday = 7 - dayOfWeek; // Change to calculate days until next Sunday
 
             const nextSunday = new Date(today);
             nextSunday.setDate(today.getDate() + daysUntilNextSunday);
@@ -1278,8 +1288,7 @@
             const timeDifference = targetDate.getTime() - currentDate.getTime();
 
             if (timeDifference < 0) {
-                document.getElementById('timer').textContent = "Bonuses are being dispersed presently!";
-                return;
+                return false; // Return false if dispersal day has passed
             }
 
             const totalSeconds = Math.floor(timeDifference / 1000);
@@ -1288,13 +1297,16 @@
             const minutes = Math.floor((totalSeconds % 3600) / 60);
             const seconds = totalSeconds % 60;
 
-            document.getElementById('timer').textContent = `Time Until Bonus Dispersal: ${days} Day(s), ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+            document.getElementById('timer').textContent = `Time Until Next Bonus Dispersal: ${days} Day(s), ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
 
             setTimeout(updateTimer, 1000);
         }
 
         // Start the timer
-        updateTimer();
+        if (!updateTimer()) {
+            document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
+        }
+
     </script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script type="text/javascript">
