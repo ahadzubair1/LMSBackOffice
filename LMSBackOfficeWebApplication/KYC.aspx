@@ -291,7 +291,7 @@
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
-                                                <div class="kyc-step passport" id="kyc_passport">
+                                                <div class="kyc-step passport" id="kyc_passport1">
                                                     <!-- Passport -->
                                                     <div class="step-heading">
                                                         Upload your Passport <span class="rule">Mandatory</span>
@@ -303,10 +303,16 @@
                                                                     <i class="ti ti-cloud-upload"></i>
                                                                     <span class="title">Upload Passport</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
-                                                                    <button type="button" class="choose-file">choose file</button>
+
+                                                                      <asp:FileUpload ID="FileUploadControl" runat="server" />
+                                                               
+            <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
+                                                                     <br />
+            <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
+
                                                                 </div>
-                                                                <input type="file" name="passport_file" id="passport_file"
-                                                                    class="hidden-uploader">
+                                                          <%--      <input type="file" name="passport_file" id="passport_file"
+                                                                    class="hidden-uploader">--%>
                                                             </div>
                                                         </div>
                                                         <div class="kyc-column flexbox">
