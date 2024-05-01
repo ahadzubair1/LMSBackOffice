@@ -731,21 +731,18 @@ marquee {
     filter: brightness(200%);
     width: fit-content;
     padding: 2px;
-    border-radius: 100px;
+    background-color: black;
     margin: 15px 0;
 }
 
     .neon .text {
-        background-color: black;
         color: white;
-        font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 2.75rem);
-        font-weight: bold;
-        font-family: sans-serif;
+        font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 2rem);
         position: relative;
         user-select: none;
         display: block;
         padding: 0 15px;
-        border-radius: 100px;
+        color: yellowgreen;
     }
 
         .neon .text::before {

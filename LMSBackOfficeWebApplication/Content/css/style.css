@@ -640,3 +640,58 @@ marquee{
         fill: #fff; /* Final color */
     }
 }
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+    width: fit-content;
+    padding: 2px;
+    background-color: black;
+    margin: 15px 0;
+}
+
+    .neon .text {
+        color: white;
+        font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 2rem);
+        position: relative;
+        user-select: none;
+        display: block;
+        padding: 0 15px;
+        color: yellowgreen;
+    }
+
+        .neon .text::before {
+            content: attr(data-text);
+            position: absolute;
+            color: white;
+            filter: blur(0.02em);
+            mix-blend-mode: difference;
+        }
+
+    .neon .gradient {
+        position: absolute;
+        background: linear-gradient(45deg, #0db1f2, #e012ee, #ec1784, #e012ee, #1272ee);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .neon .spotlight {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient( circle, white, transparent 25% ) center / 25% 25%, radial-gradient( circle, white, black 25% ) center / 12.5% 12.5%;
+        animation: light 7s linear infinite;
+        mix-blend-mode: color-dodge;
+    }
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}

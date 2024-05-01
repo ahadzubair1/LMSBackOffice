@@ -161,7 +161,14 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-white mb-md-0 mb-5">
                     <div class="captionbox">
-                        <h1 style="font-size: clamp(1.25rem, -0.1293rem + 6.8966vw, 3.75rem);">Master the Art of Trading with Tradiix</h1>
+                        <div class="captionbox">
+                            <div class="neon">
+                                <span class="text" data-text="Master the Art of Trading with Tradiix">Master the Art of Trading with Tradiix</span>
+                                <span class="gradient"></span>
+                                <span class="spotlight"></span>
+                            </div>
+                            <div id="typewriter"></div>
+                        </div>
                         <div id="typewriter"></div>
                         <a href="#" target="_blank">
                             <button type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 text-capitalize mt-4 px-4 b-btn"><span>Start Learning</span></button></a>
