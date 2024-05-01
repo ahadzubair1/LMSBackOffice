@@ -60,6 +60,51 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.Label StatusLabel;
 
         /// <summary>
+        /// FileUploadControlNICFront control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadControlNICFront;
+
+        /// <summary>
+        /// StatusLabelNICFront control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabelNICFront;
+
+        /// <summary>
+        /// FileUploadControlNICBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadControlNICBack;
+
+        /// <summary>
+        /// UploadButtonNICBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UploadButtonNICBack;
+
+        /// <summary>
+        /// StatusLabelNICBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabelNICBack;
+
+        /// <summary>
         /// gvwBonusType control.
         /// </summary>
         /// <remarks>

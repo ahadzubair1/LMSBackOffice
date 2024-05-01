@@ -235,7 +235,7 @@
                                                 <div class="form-item">
                                                     <label for="Username">Username</label>
                                                     <asp:TextBox ID="txtUsername" runat="server" CssClass="kyc-input" ReadOnly="true"></asp:TextBox>
-                                                  <%--  <input type="text" name="Username" id="txtUsername" class="kyc-input" disabled runat="server"
+                                                    <%--  <input type="text" name="Username" id="txtUsername" class="kyc-input" disabled runat="server"
                                                         placeholder="Enter Username" value="user@example.com" />--%>
                                                 </div>
                                                 <div class="form-item">
@@ -244,14 +244,14 @@
                                                         <span class="country-flag">
                                                             <img src="Content/images/kyc/uae.png" width="20" alt="uae">
                                                         </span>
-                                                     <%--   <select name="Country" id="Country" class="kyc-select">
+                                                        <%--   <select name="Country" id="Country" class="kyc-select">
                                                             <option value="">UAE</option>
                                                             <option value="">U.S</option>
                                                             <option value="">India</option>
                                                         </select>--%>
-                                                          <asp:DropDownList id="countries" name="Country" class="kyc-select" required="required" runat="server">
-      <asp:ListItem Text="Select Country" Value="" Selected="True" />
-  </asp:DropDownList>
+                                                        <asp:DropDownList ID="countries" name="Country" class="kyc-select" required="required" runat="server">
+                                                            <asp:ListItem Text="Select Country" Value="" Selected="True" />
+                                                        </asp:DropDownList>
                                                     </div>
                                                 </div>
                                                 <div class="form-item">
@@ -277,7 +277,7 @@
                                             <main class="main-content">
                                                 <div class="kyc-checkboxes">
                                                     <span class="title">Choose:</span>
-                                                  <%--  <div class="single-checkbox">
+                                                    <%--  <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
                                                             value="passport">
                                                         <label for="checkbox_passport">Passport</label>
@@ -304,31 +304,30 @@
                                                                     <span class="title">Upload Passport</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
-                                                                      <asp:FileUpload ID="FileUploadControl" runat="server"  onchange="checkFileType();"  />
-                                                               
-            <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
-                                                                     <br />
-            <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
+                                                                    <asp:FileUpload ID="FileUploadControl" runat="server" onchange="checkFileType();" />
+                                                                    <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
+                                                                    <br />
+                                                                    <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
 
                                                                     <script type="text/javascript">
-    function checkFileType() {
-        var fileUpload = document.getElementById("<%= FileUploadControl.ClientID %>");
+                                                                        function checkFileType() {
+                                                                            var fileUpload = document.getElementById("<%= FileUploadControl.ClientID %>");
         var uploadButton = document.getElementById("<%= UploadButton1.ClientID %>");
         var statusLabel = document.getElementById("<%= StatusLabel.ClientID %>");
-        var fileName = fileUpload.value;
-        var ext = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
-        if (ext === "jpeg" || ext === "jpg") {
-            uploadButton.disabled = false;
-            statusLabel.innerText = "";
-        } else {
-            uploadButton.disabled = true;
-            statusLabel.innerText = "Please upload a JPEG or JPG file.";
-        }
-    }
+                                                                            var fileName = fileUpload.value;
+                                                                            var ext = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
+                                                                            if (ext === "jpeg" || ext === "jpg") {
+                                                                                uploadButton.disabled = false;
+                                                                                statusLabel.innerText = "";
+                                                                            } else {
+                                                                                uploadButton.disabled = true;
+                                                                                statusLabel.innerText = "Please upload a JPEG or JPG file.";
+                                                                            }
+                                                                        }
                                                                     </script>
 
                                                                 </div>
-                                                          <%--      <input type="file" name="passport_file" id="passport_file"
+                                                                <%--      <input type="file" name="passport_file" id="passport_file"
                                                                     class="hidden-uploader">--%>
                                                             </div>
                                                         </div>
@@ -358,25 +357,73 @@
                                                     </div>
                                                     <div class="kyc-inner-grid">
                                                         <div class="kyc-column flexbox">
-                                                            <div class="kyc-uploader">
-                                                                <div class="content">
-                                                                    <i class="ti ti-cloud-upload"></i>
-                                                                    <span class="title">Upload Front Side</span>
-                                                                    <span class="instruction">Upload the front side</span>
-                                                                    <button type="button" class="choose-file">choose file</button>
-                                                                </div>
-                                                                <input type="file" name="passport_file" id="passport_file"
-                                                                    class="hidden-uploader">
-                                                            </div>
-                                                            <div class="kyc-uploader">
-                                                                <div class="content">
-                                                                    <i class="ti ti-cloud-upload"></i>
-                                                                    <span class="title">Upload Back Side</span>
-                                                                    <span class="instruction">Upload the front side</span>
-                                                                    <button type="button" class="choose-file">choose file</button>
-                                                                </div>
-                                                                <input type="file" name="nic_file" id="nic_file" class="hidden-uploader">
-                                                            </div>
+                                                                                                               <div class="kyc-uploader">
+                                                        <div class="content">
+                                                            <i class="ti ti-cloud-upload"></i>
+                                                            <span class="title">Upload National Identity Front side</span>
+                                                            <span class="instruction">Max 10 MB in JPG Or PDF only</span>
+
+                                                            <asp:FileUpload ID="FileUploadControlNICFront" runat="server" onchange="checkNICFrontFileType();" />
+                                                         <%--   <asp:Button ID="UploadButtonNICFront" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
+   --%>                                                         <br />
+                                                            <asp:Label ID="StatusLabelNICFront" runat="server" Text=""></asp:Label>
+
+                                                            <script type="text/javascript">
+                                                                function checkNICFrontFileType() {
+                                                                    var fileUploadfront = document.getElementById("<%= FileUploadControlNICFront.ClientID %>");
+                                                                    var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
+var statusLabel = document.getElementById("<%= StatusLabelNICFront.ClientID %>");
+                                                                    var fileName1 = fileUploadfront.value;
+                                                                    var ext1 = fileName1.substring(fileName1.lastIndexOf('.') + 1).toLowerCase();
+                                                                    //var fileName2= fileUploadback.value;
+                                                                    //var ext2 = fileName2.substring(fileName2.lastIndexOf('.') + 1).toLowerCase();
+
+
+                                                                    if (ext1 === "jpeg" || ext1 === "jpg") {
+                                                                        uploadButton.disabled = false;
+                                                                        statusLabel.innerText = "";
+                                                                    } else {
+                                                                        uploadButton.disabled = true;
+                                                                        statusLabel.innerText = "Please upload a JPEG or JPG file.";
+                                                                    }
+                                                                }
+                                                            </script>
+
+                                                        </div>
+                                                   
+                                                    </div>
+                                                   <div class="kyc-uploader">
+                                                        <div class="content">
+                                                            <i class="ti ti-cloud-upload"></i>
+                                                            <span class="title">Upload National Identity Back side</span>
+                                                            <span class="instruction">Max 10 MB in JPG Or PDF only</span>
+
+                                                            <asp:FileUpload ID="FileUploadControlNICBack" runat="server" onchange="checkNICBackFileType();" />
+                                                            <asp:Button ID="UploadButtonNICBack" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
+                                                            <br />
+                                                            <asp:Label ID="StatusLabelNICBack" runat="server" Text=""></asp:Label>
+                                                                                                                        <script type="text/javascript">
+                                                                                                                            function checkNICBackFileType() {
+                                                                                                                                var fileUploadback = document.getElementById("<%= FileUploadControlNICBack.ClientID %>");
+                                                                    var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
+var statusLabel = document.getElementById("<%= StatusLabelNICBack.ClientID %>");
+                                                                                                                                var fileName2 = fileUploadback.value;
+                                                                                                                                var ext1 = fileName2.substring(fileName2.lastIndexOf('.') + 1).toLowerCase();
+
+
+                                                                                                                                if (ext1 === "jpeg" || ext1 === "jpg") {
+                                                                                                                                    uploadButton.disabled = false;
+                                                                                                                                    statusLabel.innerText = "";
+                                                                                                                                } else {
+                                                                                                                                    uploadButton.disabled = true;
+                                                                                                                                    statusLabel.innerText = "Please upload a JPEG or JPG file.";
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        </script>
+
+                                                        </div>
+                                                   
+                                                    </div>
                                                         </div>
                                                         <div class="kyc-column flexbox">
                                                             <div class="doc-req">
@@ -398,9 +445,9 @@
                                                 </div>
                                             </main>
                                             <footer>
-                                                <div class="field-row">
+                                            <%--    <div class="field-row">
                                                     <input type="submit" class="btn btn-primary" value="Submit" />
-                                                </div>
+                                                </div>--%>
                                             </footer>
                                         </div>
                                         <%-- </form>--%>
