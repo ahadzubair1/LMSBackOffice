@@ -743,7 +743,6 @@
     </Compile>
     <Compile Include="KYC.aspx.cs">
       <DependentUpon>KYC.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="KYC.aspx.designer.cs">
       <DependentUpon>KYC.aspx</DependentUpon>

@@ -277,7 +277,7 @@
                                             <main class="main-content">
                                                 <div class="kyc-checkboxes">
                                                     <span class="title">Choose:</span>
-                                                    <div class="single-checkbox">
+                                                  <%--  <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
                                                             value="passport">
                                                         <label for="checkbox_passport">Passport</label>
@@ -285,9 +285,9 @@
                                                     <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
                                                         <label for="checkbox_nic">NIC</label>
-                                                    </div>
+                                                    </div>--%>
                                                     <div class="single-checkbox">
-                                                        <span class="text-danger">Only One Document Type is Required</span>
+                                                        <span class="text-danger">Only One Document Type is Required Passport or NIC</span>
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
