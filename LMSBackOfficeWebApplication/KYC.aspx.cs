@@ -17,13 +17,31 @@ using ServiceStack;
 using System.Xml;
 using System.Text.RegularExpressions;
 using Tesseract;
+using System.Reflection;
 //using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace LMSBackOfficeWebApplication
 {
+    public class KYCDocumentModel
+    {
+        public string Document_ID { get; set; }
+        public string Member_ID { get; set; }
+        public string Document_NICPath { get; set; }
+        public DateTime? Document_NICExpiryDate { get; set; }
+        public string Document_PassportPath { get; set; }
+        public string Document_PassportName { get; set; }
+        public DateTime? Document_PassportExpiryDate { get; set; }
+        public short? Is_Active { get; set; }
+        public DateTime? Created_Date { get; set; }
+        public string Created_By { get; set; }
+        public DateTime? Updated_Date { get; set; }
+        public string Updated_By { get; set; }
+    }
+
     public partial class KYC : System.Web.UI.Page
     {
         DataTable dtBonusTypes = new DataTable();
+        private LMSBackOfficeDAL.Model.MemberInfo currentUser;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -36,7 +54,7 @@ namespace LMSBackOfficeWebApplication
                 }
 
                 var user = Session["Username"].ToString();
-                var currentUser = Members_DataAccess.GetMemberInfo(user);
+                currentUser = Members_DataAccess.GetMemberInfo(user);
 
                 GetCountries();
 
@@ -119,11 +137,19 @@ namespace LMSBackOfficeWebApplication
                     FileUploadControl.SaveAs(path);
                     StatusLabel.Text = "Upload status: File uploaded!";
                     string extractText = this.ExtractTextFromImage(path);
-                    //string extractText = this.ExtractTextFromImagewithHeadings(path);
-                    //string extractText = ExtractPassportData(path);
+            
                     StatusLabel.Text = extractText.Replace(Environment.NewLine, "<br />");
-                    string param1 = "PAKISTAN";
-                    string param2 = "KARACHI";
+
+
+                    var user = Session["Username"].ToString();
+                    currentUser = Members_DataAccess.GetMemberInfo(user);
+
+                    string fullName = currentUser.MemberFullName;
+                    string[] nameParts = fullName.Split(' ');
+                    string firstName = nameParts[0];
+                    string lastName = nameParts[nameParts.Length - 1];
+                    string param1 = firstName;
+                    string param2 = lastName;
 
                     DateTime? maxDate;
                     bool param1Present, param2Present;
@@ -131,14 +157,26 @@ namespace LMSBackOfficeWebApplication
                     if(FindMaxDateAndParams(extractText, param1, param2, out maxDate, out param1Present, out param2Present))
                     {
                         StatusLabel.Text = "KYC Verified";
-                    }else
+
+                        KYCDocumentModel obj = new KYCDocumentModel();
+                        obj.Member_ID = currentUser.Id;
+                        obj.Document_NICPath=obj.Document_PassportPath = path;
+                        obj.Document_NICExpiryDate=obj.Document_PassportExpiryDate = maxDate;
+                        obj.Document_PassportName = "";
+                        obj.Is_Active = 1;
+                        obj.Created_Date = System.DateTime.Now.Date;
+
+                        AddKYCDocument(obj);
+
+
+
+
+                    }
+                    else
                     {
-                        StatusLabel.Text = "KYC Failed";
+                        StatusLabel.Text = "KYC Failed,Please try again";
                     }
 
-                    Console.WriteLine("Maximum available date: " + (maxDate.HasValue ? maxDate.Value.ToString("dd MMM yyyy") : "None"));
-                    Console.WriteLine("Is param1 present: " + param1Present);
-                    Console.WriteLine("Is param2 present: " + param2Present);
 
 
                 }
@@ -172,7 +210,7 @@ namespace LMSBackOfficeWebApplication
                 param1Present = text.Contains(param1);
                 param2Present = text.Contains(param2);
 
-                return (maxDate > System.DateTime.Now && param1Present && param2Present);
+                return (maxDate > System.DateTime.Now && param1Present || param2Present);
             }
             catch (Exception ex)
             {
@@ -381,5 +419,35 @@ namespace LMSBackOfficeWebApplication
             //LMSBackofficeDAL.UtilMethods.SendEmail("Ahad Zubair", "ahadzubair@gmail.com", "0501271NNNN");
 
         }
+
+
+        public static string AddKYCDocument(KYCDocumentModel model)
+        {
+            try
+            {
+                KYC_DataAccess.AddKYCDocument(
+                    new Guid(),
+                    new Guid(model.Member_ID),
+                    model.Document_NICPath,
+                    model.Document_NICExpiryDate,
+                    model.Document_PassportPath,
+                    model.Document_PassportName,
+                    model.Document_PassportExpiryDate,
+                    model.Is_Active,
+                    model.Created_Date,
+                    model.Created_By,
+                    model.Updated_Date,
+                    model.Updated_By);
+
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                WriteLog.LogError(ex);
+                return "fail";
+            }
+        }
+
     }
 }
