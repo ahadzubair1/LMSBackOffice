@@ -304,11 +304,28 @@
                                                                     <span class="title">Upload Passport</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
-                                                                      <asp:FileUpload ID="FileUploadControl" runat="server" />
+                                                                      <asp:FileUpload ID="FileUploadControl" runat="server"  onchange="checkFileType();"  />
                                                                
             <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
                                                                      <br />
             <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
+
+                                                                    <script type="text/javascript">
+    function checkFileType() {
+        var fileUpload = document.getElementById("<%= FileUploadControl.ClientID %>");
+        var uploadButton = document.getElementById("<%= UploadButton1.ClientID %>");
+        var statusLabel = document.getElementById("<%= StatusLabel.ClientID %>");
+        var fileName = fileUpload.value;
+        var ext = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
+        if (ext === "jpeg" || ext === "jpg") {
+            uploadButton.disabled = false;
+            statusLabel.innerText = "";
+        } else {
+            uploadButton.disabled = true;
+            statusLabel.innerText = "Please upload a JPEG or JPG file.";
+        }
+    }
+                                                                    </script>
 
                                                                 </div>
                                                           <%--      <input type="file" name="passport_file" id="passport_file"
@@ -319,7 +336,7 @@
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
-                                                                    <li>Allowed formats: JPG, PDF</li>
+                                                                    <li>Allowed formats: JPG,JPEG</li>
                                                                     <li>Readable, Clear and lit</li>
                                                                     <li>Not reflective, not blurry</li>
                                                                     <li>No black and white image, not edited</li>
@@ -365,7 +382,7 @@
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
-                                                                    <li>Allowed formats: JPG, PDF</li>
+                                                                    <li>Allowed formats: JPG, JPEG</li>
                                                                     <li>Readable, Clear and lit</li>
                                                                     <li>Not reflective, not blurry</li>
                                                                     <li>No black and white image, not edited</li>
