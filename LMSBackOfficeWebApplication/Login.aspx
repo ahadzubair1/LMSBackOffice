@@ -15,6 +15,9 @@
     <link href="./Content/fonts/tabler-icons.min.css" rel="stylesheet" />
     <link href="./Content/fonts/feather.css" rel="stylesheet" />
     <link href="./Content/fonts/fontawesome.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
         .btn:focus {
@@ -164,10 +167,15 @@
                 <div class="col-md-8 text-white mb-md-0 mb-5">
                     <div class="captionbox">
                         <div class="captionbox">
-                            <div class="neon">
+                            <%--<div class="neon">
                                 <span class="text" data-text="Master the Art of Trading with Tradiix">Master the Art of Trading with Tradiix</span>
                                 <span class="gradient"></span>
                                 <span class="spotlight"></span>
+                            </div>--%>
+                            <div class="neon-wrap">
+                                <div class="sign">
+                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>with <span class="fast-flicker">Tradiix</span>
+                                </div>
                             </div>
                             <div id="typewriter"></div>
                         </div>
