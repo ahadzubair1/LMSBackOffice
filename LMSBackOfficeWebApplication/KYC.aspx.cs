@@ -213,7 +213,7 @@ namespace LMSBackOfficeWebApplication
                 param1Present = text.ToLower().Contains(param1.ToLower());
                 param2Present = text.ToLower().Contains(param2.ToLower());
 
-                return (maxDate > System.DateTime.Now && param1Present || param2Present);
+                return (maxDate > System.DateTime.Now && (param1Present || param2Present));
             }
             catch (Exception ex)
             {
