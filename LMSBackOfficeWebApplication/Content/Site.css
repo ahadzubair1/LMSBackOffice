@@ -824,16 +824,16 @@ body:not([data-pc-theme="dark"]) .pc-footer {
             }
 
 .kyc-inner-grid {
-    display: grid;
+    /*display: grid;*/
     /* grid-template-columns: 50% 50%; */
-    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-columns: repeat(2, 1fr);*/
     width: 100%;
-    grid-gap: 10px;
+    /*grid-gap: 10px;*/
 }
 
-    .kyc-inner-grid.three {
+    /*.kyc-inner-grid.three {
         grid-template-columns: 30% 30% 40%;
-    }
+    }*/
 
 .kyc-uploader {
     background: rgb(239,239,254);
@@ -847,6 +847,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     width: 100%;
     position: relative;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
     .kyc-uploader i.ti {
@@ -861,6 +862,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         font-size: 14px;
         font-weight: 600;
         gap: 10px;
+        position: relative;
     }
 
     .kyc-uploader .hidden-uploader {
@@ -871,6 +873,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         height: 100%;
         opacity: 0;
         cursor: pointer;
+        max-width: none;
     }
 
     .kyc-uploader .icon-upload {
@@ -1545,7 +1548,9 @@ label:not(.form-check-label):not(.custom-file-label) {
     border: 1px solid #d014e4;
     color: #fff;
 }
-
+.btn-tr.no-hover:hover {
+    color: inherit;
+}
 #MainContent_gv_tickets th {
     color: #fff;
 }

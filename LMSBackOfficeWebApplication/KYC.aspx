@@ -234,7 +234,7 @@
                                                 <%--  <form action="">--%>
                                                 <div class="form-item">
                                                     <label for="Username">Username</label>
-                                                    <asp:TextBox ID="txtUsername" runat="server" CssClass="kyc-input" ReadOnly="true"></asp:TextBox>
+                                                    <asp:TextBox ID="txtUsername" runat="server" CssClass="kyc-input form-control w-100 mw-100" ReadOnly="true"></asp:TextBox>
                                                     <%--  <input type="text" name="Username" id="txtUsername" class="kyc-input" disabled runat="server"
                                                         placeholder="Enter Username" value="user@example.com" />--%>
                                                 </div>
@@ -249,14 +249,14 @@
                                                             <option value="">U.S</option>
                                                             <option value="">India</option>
                                                         </select>--%>
-                                                        <asp:DropDownList ID="countries" name="Country" class="kyc-select" required="required" runat="server">
+                                                        <asp:DropDownList ID="countries" name="Country" class="kyc-select form-control w-100 mw-100" required="required" runat="server">
                                                             <asp:ListItem Text="Select Country" Value="" Selected="True" />
                                                         </asp:DropDownList>
                                                     </div>
                                                 </div>
                                                 <div class="form-item">
                                                     <label for="Country">KYC Type</label>
-                                                    <select name="kyc-type" id="kyc-type" disabled class="kyc-select">
+                                                    <select name="kyc-type" id="kyc-type" disabled class="kyc-select form-control w-100 mw-100">
                                                         <option value="">Standard</option>
                                                         <option value="">Basic</option>
                                                         <option value="">Advanced</option>
@@ -283,7 +283,7 @@
                                                         <label for="checkbox_passport">Passport</label>
                                                     </div>
                                                     <div class="single-checkbox">
-                                                        <input type="checkbox" checked class="checkbox_each" id="checkbox_nic" name="nic" value="nic" onchange="toggleVisibility('nic', this.checked)">
+                                                        <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic" onchange="toggleVisibility('nic', this.checked)">
                                                         <label for="checkbox_nic">NIC</label>
                                                     </div>
                                                     <script>
@@ -358,7 +358,7 @@
                                                                     class="hidden-uploader">--%>
                                                             </div>
                                                         </div>
-                                                        <div class="kyc-column flexbox space-between">
+                                                        <div class="kyc-column d-flex justify-content-between align-items-center">
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
@@ -379,7 +379,7 @@
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
 
-                                                <div class="kyc-step nic mb-3" runat="server" id="kyc_nic">
+                                                <div class="kyc-step nic mb-3" runat="server" id="kyc_nic" style="display: none;">
                                                     <!-- NIC -->
                                                     <div class="step-heading">
                                                         Upload your National Identity Card <span class="rule">Mandatory</span>
@@ -455,7 +455,7 @@
                                                             </div>
 
                                                         </div>
-                                                        <div class="kyc-column flexbox justify-content-between">
+                                                        <div class="kyc-column d-flex justify-content-between align-items-center">
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
