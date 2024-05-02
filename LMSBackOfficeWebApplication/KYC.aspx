@@ -295,7 +295,6 @@
                                                         passportCheckbox.addEventListener('change', function () {
 
                                                             if (this.checked) {
-                                                                alert('Passport checked');
                                                                 passportDiv.style.display = 'block';
                                                                 nicDiv.style.display = 'none';
                                                                 nicCheckbox.checked = false;
@@ -306,7 +305,6 @@
 
                                                         nicCheckbox.addEventListener('change', function () {
                                                             if (this.checked) {
-                                                                alert('NIC checked');
 
                                                                 nicDiv.style.display = 'block';
                                                                 passportDiv.style.display = 'none';
