@@ -277,7 +277,7 @@
                                             <main class="main-content">
                                                 <div class="kyc-checkboxes">
                                                     <span class="title">Choose:</span>
-                                                    <%--  <div class="single-checkbox">
+                                                      <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
                                                             value="passport">
                                                         <label for="checkbox_passport">Passport</label>
@@ -285,7 +285,33 @@
                                                     <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
                                                         <label for="checkbox_nic">NIC</label>
-                                                    </div>--%>
+                                                    </div>
+                                                    <script>
+                                                        const passportCheckbox = document.getElementById('checkbox_passport');
+                                                        const nicCheckbox = document.getElementById('checkbox_nic');
+                                                        const passportDiv = document.getElementById('kyc_passport1');
+                                                        const nicDiv = document.getElementById('kyc_nic');
+
+                                                        passportCheckbox.addEventListener('change', function () {
+                                                            if (this.checked) {
+                                                                passportDiv.style.display = 'block';
+                                                                nicDiv.style.display = 'none';
+                                                                nicCheckbox.checked = false;
+                                                            } else {
+                                                                passportDiv.style.display = 'none';
+                                                            }
+                                                        });
+
+                                                        nicCheckbox.addEventListener('change', function () {
+                                                            if (this.checked) {
+                                                                nicDiv.style.display = 'block';
+                                                                passportDiv.style.display = 'none';
+                                                                passportCheckbox.checked = false;
+                                                            } else {
+                                                                nicDiv.style.display = 'none';
+                                                            }
+                                                        });
+                                                    </script>
                                                     <div class="single-checkbox">
                                                         <span class="text-danger">Only One Document Type is Required Passport or NIC</span>
                                                     </div>
@@ -350,7 +376,8 @@
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
-                                                <div class="kyc-step nic" id="kyc_nic">
+                                               
+                                                <div class="kyc-step nic"  runat="server" id="kyc_nic" >
                                                     <!-- NIC -->
                                                     <div class="step-heading">
                                                         Upload your National Identity Card <span class="rule">Mandatory</span>
@@ -399,7 +426,8 @@ var statusLabel = document.getElementById("<%= StatusLabelNICFront.ClientID %>")
                                                             <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
                                                             <asp:FileUpload ID="FileUploadControlNICBack" runat="server" onchange="checkNICBackFileType();" />
-                                                            <asp:Button ID="UploadButtonNICBack" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
+                                                                                                                      <asp:Label ID="statusLabelNIC" runat="server" Text=""></asp:Label>
+                                                            <asp:Button ID="UploadButtonNICBack" runat="server" Text="Verify KYC" class="choose-file" OnClientClick=""  CausesValidation="False" OnClick="UploadButtonNICBack_Click" />
                                                             <br />
                                                             <asp:Label ID="StatusLabelNICBack" runat="server" Text=""></asp:Label>
                                                                                                                         <script type="text/javascript">
@@ -443,6 +471,7 @@ var statusLabel = document.getElementById("<%= StatusLabelNICBack.ClientID %>");
                                                         </div>
                                                     </div>
                                                 </div>
+                                                   
                                             </main>
                                             <footer>
                                             <%--    <div class="field-row">

@@ -60,6 +60,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.Label StatusLabel;
 
         /// <summary>
+        /// kyc_nic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl kyc_nic;
+
+        /// <summary>
         /// FileUploadControlNICFront control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUploadControlNICBack;
+
+        /// <summary>
+        /// statusLabelNIC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label statusLabelNIC;
 
         /// <summary>
         /// UploadButtonNICBack control.

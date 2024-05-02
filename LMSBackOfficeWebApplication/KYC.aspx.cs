@@ -62,6 +62,7 @@ namespace LMSBackOfficeWebApplication
                 ShowBonusTypes();
 
                 countries.SelectedValue = currentUser.CountryId;
+                countries.Enabled = false;
                 txtUsername.Text = currentUser.Email;
             }
 
@@ -78,6 +79,8 @@ namespace LMSBackOfficeWebApplication
                     ListItem item = new ListItem(country.CountryName, country.CountryID);
                     countries.Items.Add(item);
                 }
+
+              
             }
             catch (Exception ex)
             {
@@ -449,5 +452,78 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
+        protected void UploadButtonNICBack_Click(object sender, EventArgs e)
+        {
+            if (FileUploadControlNICBack.HasFile && FileUploadControlNICBack.HasFile)
+            {
+                try
+                {
+
+                    var user = Session["Username"].ToString();
+                    currentUser = Members_DataAccess.GetMemberInfo(user);
+
+                    string filenameNICFront = Path.GetFileName(FileUploadControlNICFront.FileName);
+                    string path = Server.MapPath("~/Content//images//kyc/") + filenameNICFront;
+                    FileUploadControl.SaveAs(path);
+                               string extractText = this.ExtractTextFromImage(path);
+
+
+                    string filenameNICBack = Path.GetFileName(FileUploadControlNICBack.FileName);
+                    string path_back = Server.MapPath("~/Content//images//kyc/") + filenameNICBack;
+                    FileUploadControl.SaveAs(path_back);
+                    extractText =extractText+ this.ExtractTextFromImage(path_back);
+
+
+                    StatusLabel.Text = extractText.Replace(Environment.NewLine, "<br />");
+
+
+
+                    string fullName = currentUser.MemberFullName;
+                    string[] nameParts = fullName.Split(' ');
+                    string firstName = nameParts[0];
+                    string lastName = nameParts[nameParts.Length - 1];
+                    string param1 = firstName;
+                    string param2 = lastName;
+
+                    DateTime? maxDate;
+                    bool param1Present, param2Present;
+
+                    if (FindMaxDateAndParams(extractText, param1, param2, out maxDate, out param1Present, out param2Present))
+                    {
+                        statusLabelNIC.Text = "KYC Verified";
+
+                        KYCDocumentModel obj = new KYCDocumentModel();
+                        obj.Member_ID = currentUser.Id;
+                        obj.Document_NICPath = obj.Document_PassportPath = path;
+                        obj.Document_NICExpiryDate = obj.Document_PassportExpiryDate = maxDate;
+                        obj.Document_PassportName = "";
+                        obj.Is_Active = 1;
+                        obj.Created_Date = System.DateTime.Now.Date;
+
+                        AddKYCDocument(obj);
+
+
+
+
+                    }
+                    else
+                    {
+                        statusLabelNIC.Text = "KYC Failed,Please try again";
+                    }
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    statusLabelNIC.Text = "Upload status: The file could not be uploaded. The following error occurred: " + ex.Message;
+                }
+            }
+            else
+            {
+
+                statusLabelNIC.Text = "Upload status: Please select a file to upload.";
+            }
+        }
     }
 }
