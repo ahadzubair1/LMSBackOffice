@@ -381,10 +381,8 @@
                                             <label cssclass="labels">Crypto Wallet Type</label>
                                             <asp:DropDownList ID="ddlWalletType" name="wallettypes" CssClass="form-control mw-100" CausesValidation="false" runat="server">
                                                 <asp:ListItem Text="Select Wallet Type" Value="" Selected="True" />
-
-
-                                                <asp:ListItem Text="USDT" Value="USDT" />
-                                                <asp:ListItem Text="TRC20" Value="TRC20" />
+                                                <asp:ListItem Text="USDT TRC20" Value="TRC20" />
+                                                <asp:ListItem Text="USDT ERC20" Value="ERC20" />
                                                 <asp:ListItem Text="TRON" Value="TRON" />
                                             </asp:DropDownList>
                                         </div>
