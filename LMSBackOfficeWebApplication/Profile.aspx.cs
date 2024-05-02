@@ -133,55 +133,68 @@ namespace LMSBackOfficeWebApplication
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            string userName = Session["Username"].ToString();
-            var memberToUpdate = Members_DataAccess.GetMemberInfo(userName);
-            string memberId = memberToUpdate.Id.ToString();
-            string fullName = txtfirstName.Text;
-            string mobile = txtMobileNumber.Text;
-            string email = txtEmail.Text;
-            DateTime dob = !string.IsNullOrEmpty(txtDate.Text) ? DateTime.ParseExact(txtDate.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture) : new DateTime(1900, 1, 1);
-
-            string countryOfOrigin = countries.SelectedValue;
-            string nationality=nationalities.SelectedValue;
-            string gender = "";
-            if (rbMale.Checked)
-                gender = "male";
-            if (rbFemale.Checked)
-                gender = "female";
-
-            string walletType=ddlWalletType.SelectedValue;
-            string walletAddress=txtWalletAddress.Text;
-
-
-            bool CheckEmailExists = Members_DataAccess.CheckEmailExists(email);
-            if (CheckEmailExists && memberToUpdate.Email.ToLower().ToString()!=email.ToLower().ToString())
+            try
             {
-                ResponseMessage.InnerText = "Email already Exists";
-                ResponseMessage.Style.Add("display", "block");
-                ResponseMessage.Style.Add("color", "#ff2600");
 
-                return;
-            }
 
-            // Call the data access method to update the member
-            bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin,gender,dob,nationality,walletType, walletAddress);
+                string userName = Session["Username"].ToString();
+                var memberToUpdate = Members_DataAccess.GetMemberInfo(userName);
+                string memberId = memberToUpdate.Id.ToString();
+                string fullName = txtfirstName.Text;
+                string mobile = txtMobileNumber.Text;
+                string email = txtEmail.Text;
+                DateTime dob = !string.IsNullOrEmpty(txtDate.Text) ? DateTime.ParseExact(txtDate.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture) : new DateTime(1900, 1, 1);
+
+                string countryOfOrigin = countries.SelectedValue;
+                string nationality = nationalities.SelectedValue;
+                string gender = "";
+                if (rbMale.Checked)
+                    gender = "male";
+                if (rbFemale.Checked)
+                    gender = "female";
+
+                string walletType = ddlWalletType.SelectedValue;
+                string walletAddress = txtWalletAddress.Text;
+
+
+                bool CheckEmailExists = Members_DataAccess.CheckEmailExists(email);
+                if (CheckEmailExists && memberToUpdate.Email.ToLower().ToString() != email.ToLower().ToString())
+                {
+                    ResponseMessage.InnerText = "Email already Exists";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#ff2600");
+
+                    return;
+                }
+
+                // Call the data access method to update the member
+                bool updateSuccess = Members_DataAccess.UpdateMember(memberToUpdate.Id.ToString(), fullName, mobile, email, countryOfOrigin, gender, dob, nationality, walletType, walletAddress);
 
                 if (updateSuccess)
                 {
-                ResponseMessage.Style.Add("display", "block");
-                ResponseMessage.Style.Add("color", "#e012ee");
-                // Display success message
-                ResponseMessage.InnerText="Member details updated successfully.";
-                PopulateMember();
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#e012ee");
+                    // Display success message
+                    ResponseMessage.InnerText = "Member details updated successfully.";
+                    PopulateMember();
                 }
                 else
                 {
+                    // Display error message
+                    ResponseMessage.InnerText = "Failed to update member details. Please try again.";
+                    ResponseMessage.Style.Add("display", "block");
+                    ResponseMessage.Style.Add("color", "#ff2600");
+                }
+            }
+            catch(Exception ex)
+            {
                 // Display error message
                 ResponseMessage.InnerText = "Failed to update member details. Please try again.";
                 ResponseMessage.Style.Add("display", "block");
                 ResponseMessage.Style.Add("color", "#ff2600");
+
             }
-            
+
 
         }
 

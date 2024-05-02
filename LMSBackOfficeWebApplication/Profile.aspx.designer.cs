@@ -105,6 +105,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDOB;
 
         /// <summary>
+        /// revDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDate;
+
+        /// <summary>
         /// calDate control.
         /// </summary>
         /// <remarks>

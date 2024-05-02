@@ -19,6 +19,8 @@
             $("#txtDate").datepicker({
                 dateFormat: 'yy-mm-dd',
                 changeYear: true, // Enable year selector
+                yearRange: "-80:+0",  
+               
                 onSelect: function (selectedDate) {
                     $("#txtDate").val(selectedDate);
 
@@ -323,9 +325,10 @@
                                                     <label class="labels">Date of birth</label>
                                                 </div>
                                                 <div class="position-relative">
-                                                    <asp:TextBox ID="txtDate" CssClass="form-control mw-100" runat="server" ClientIDMode="Static" onclick="showCalendar();" />
+                                                    <asp:TextBox ID="txtDate"  CssClass="form-control mw-100" runat="server" ClientIDMode="Static" onclick="showCalendar();" />
                                                     <asp:RequiredFieldValidator ID="rfvDOB" runat="server" CssClass="profile-input-error" ControlToValidate="txtDate" ErrorMessage="DOB is required." ValidationGroup="profileValidation" />
-
+                                                    
+<asp:RegularExpressionValidator ID="revDate" runat="server" ControlToValidate="txtDate" ErrorMessage="Please enter a date in the format YYYY-dd-MM" ValidationExpression="\d{4}-\d{2}-\d{2}" ValidationGroup="profileValidation" />
                                                     <span id="calendarIcon" onclick="triggerTxtDate()">
                                                         <svg class="pc-icon">
                                                             <use xlink:href="#custom-calendar-1"></use>
