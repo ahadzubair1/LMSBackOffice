@@ -34,6 +34,7 @@ namespace LMSBackOfficeDAL.Model
         public string CreatedDate { get; set; }
 
         public string Gender { get; set;}
+        public bool KYCRequired { get; set; }
 
 
     }

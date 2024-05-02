@@ -33,7 +33,7 @@ namespace LMSBackOfficeDAL
                 using (SqlCommand command = new SqlCommand("USP_AddKYCDocument", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.Add("@Document_ID", SqlDbType.UniqueIdentifier).Value = Document_ID;
+                    //command.Parameters.Add("@Document_ID", SqlDbType.UniqueIdentifier).Value = Document_ID;
                     command.Parameters.Add("@Member_ID", SqlDbType.UniqueIdentifier).Value = Member_ID;
                     command.Parameters.Add("@Document_NICPath", SqlDbType.NVarChar, 2000).Value = Document_NICPath;
                     command.Parameters.Add("@Document_NICExpiryDate", SqlDbType.DateTime).Value = (object)Document_NICExpiryDate ?? DBNull.Value;

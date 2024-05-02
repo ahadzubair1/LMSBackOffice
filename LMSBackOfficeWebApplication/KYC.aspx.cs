@@ -18,6 +18,7 @@ using System.Xml;
 using System.Text.RegularExpressions;
 using Tesseract;
 using System.Reflection;
+using System.Globalization;
 //using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace LMSBackOfficeWebApplication
@@ -155,9 +156,9 @@ namespace LMSBackOfficeWebApplication
                     string param2 = lastName;
 
                     DateTime? maxDate;
-                    bool param1Present, param2Present;
+                    bool param1Present, param2Present,correctdocumenttype;
                     
-                    if(FindMaxDateAndParams(extractText, param1, param2, out maxDate, out param1Present, out param2Present))
+                    if(FindMaxDateAndParams("passport",extractText, param1, param2, out maxDate, out param1Present, out param2Present,out correctdocumenttype))
                     {
                         StatusLabel.Text = "KYC Verified";
 
@@ -193,7 +194,7 @@ namespace LMSBackOfficeWebApplication
                 StatusLabel.Text = "Upload status: Please select a file to upload.";
             }
         }
-        public static bool FindMaxDateAndParams(string text, string param1, string param2, out DateTime? maxDate, out bool param1Present, out bool param2Present)
+        public static bool FindMaxDateAndParams_OLD(string document,string text, string param1, string param2, out DateTime? maxDate, out bool param1Present, out bool param2Present, out bool correctDocumentType)
         {
             List<DateTime> dates = new List<DateTime>();
             Regex dateRegex = new Regex(@"\b\d{2}\s(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s\d{4}\b");
@@ -212,8 +213,9 @@ namespace LMSBackOfficeWebApplication
                 maxDate = dates.Count > 0 ? dates.Max() : (DateTime?)null;
                 param1Present = text.ToLower().Contains(param1.ToLower());
                 param2Present = text.ToLower().Contains(param2.ToLower());
+                correctDocumentType= text.ToLower().Contains(document.ToLower());
 
-                return (maxDate > System.DateTime.Now && (param1Present || param2Present));
+                return (maxDate > System.DateTime.Now && (param1Present || param2Present) && correctDocumentType);
             }
             catch (Exception ex)
             {
@@ -222,6 +224,55 @@ namespace LMSBackOfficeWebApplication
                 maxDate = null;
                 param1Present = false;
                 param2Present = false;
+                correctDocumentType = false;
+                return false;
+            }
+        }
+        public static bool FindMaxDateAndParams(string document, string text, string param1, string param2, out DateTime? maxDate, out bool param1Present, out bool param2Present, out bool correctDocumentType)
+        {
+            List<DateTime> dates = new List<DateTime>();
+
+            // Regular expression to match dates in the format dd MMM yyyy or dd/MM/yyyy
+            Regex dateRegex = new Regex(@"\b(\d{2}\s(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s\d{4})|(\d{2}/\d{2}/\d{4})\b");
+
+            try
+            {
+                // Validate input parameters
+                if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(param1) || string.IsNullOrEmpty(param2) || string.IsNullOrEmpty(document))
+                {
+                    throw new ArgumentException("Input parameters cannot be null or empty.");
+                }
+
+                foreach (Match match in dateRegex.Matches(text))
+                {
+                    DateTime date;
+                    // Try parsing the date using both formats
+                    if (DateTime.TryParseExact(match.Value, new string[] { "dd MMM yyyy", "dd/MM/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
+                    {
+                        dates.Add(date);
+                    }
+                }
+
+                maxDate = dates.Count > 0 ? dates.Max() : (DateTime?)null;
+                param1Present = text.ToLower().Contains(param1.ToLower());
+                param2Present = text.ToLower().Contains(param2.ToLower());
+                correctDocumentType = text.ToLower().Contains(document.ToLower());
+
+                // Return true if the conditions are met
+                return (maxDate > DateTime.Now && (param1Present || param2Present) && correctDocumentType);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine("Error occurred: " + ex.Message);
+
+                // Set out parameters to default values
+                maxDate = null;
+                param1Present = false;
+                param2Present = false;
+                correctDocumentType = false;
+
+                // Return false indicating failure
                 return false;
             }
         }
@@ -244,6 +295,41 @@ namespace LMSBackOfficeWebApplication
         }
 
         private string ExtractTextFromImage(string filePath)
+        {
+            string tessDataPath = Server.MapPath("~/tessdata");
+
+            try
+            {
+                using (Tesseract.TesseractEngine engine = new Tesseract.TesseractEngine(tessDataPath, "eng", Tesseract.EngineMode.Default))
+                {
+                    using (Tesseract.Pix pix = Tesseract.Pix.LoadFromFile(filePath))
+                    {
+                        using (Tesseract.Page page = engine.Process(pix))
+                        {
+                            if (page != null)
+                            {
+                                string text = page.GetText();
+                                // Debug: Print OCR output
+                                Console.WriteLine("OCR Output: " + text);
+                                return text;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Error: OCR failed to recognize text.");
+                                return "";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Error handling: Print and handle exceptions
+                Console.WriteLine("Error: " + ex.Message);
+                return "";
+            }
+        }
+        private string ExtractTextFromImage2(string filePath)
         {
             string tessDataPath = Server.MapPath("~/tessdata");
 
@@ -454,7 +540,7 @@ namespace LMSBackOfficeWebApplication
 
         protected void UploadButtonNICBack_Click(object sender, EventArgs e)
         {
-            if (FileUploadControlNICBack.HasFile && FileUploadControlNICBack.HasFile)
+            if (FileUploadControlNICFront.HasFile && FileUploadControlNICBack.HasFile)
             {
                 try
                 {
@@ -464,17 +550,17 @@ namespace LMSBackOfficeWebApplication
 
                     string filenameNICFront = Path.GetFileName(FileUploadControlNICFront.FileName);
                     string path = Server.MapPath("~/Content//images//kyc/") + filenameNICFront;
-                    FileUploadControl.SaveAs(path);
-                               string extractText = this.ExtractTextFromImage(path);
+                    FileUploadControlNICFront.SaveAs(path);
+                    string extractText = this.ExtractTextFromImage(path);
 
 
                     string filenameNICBack = Path.GetFileName(FileUploadControlNICBack.FileName);
                     string path_back = Server.MapPath("~/Content//images//kyc/") + filenameNICBack;
-                    FileUploadControl.SaveAs(path_back);
+                    FileUploadControlNICBack.SaveAs(path_back);
                     extractText =extractText+ this.ExtractTextFromImage(path_back);
 
 
-                    StatusLabel.Text = extractText.Replace(Environment.NewLine, "<br />");
+//                    StatusLabel.Text = extractText.Replace(Environment.NewLine, "<br />");
 
 
 
@@ -486,9 +572,9 @@ namespace LMSBackOfficeWebApplication
                     string param2 = lastName;
 
                     DateTime? maxDate;
-                    bool param1Present, param2Present;
+                    bool param1Present, param2Present,correctdocumenttype;
 
-                    if (FindMaxDateAndParams(extractText, param1, param2, out maxDate, out param1Present, out param2Present))
+                    if (FindMaxDateAndParams("identity",extractText, param1, param2, out maxDate, out param1Present, out param2Present,out correctdocumenttype))
                     {
                         statusLabelNIC.Text = "KYC Verified";
 

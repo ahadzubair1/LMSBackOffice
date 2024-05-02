@@ -55,7 +55,10 @@ namespace LMSBackOfficeWebApplication
             }
             bool membershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
 
+            var obj = Members_DataAccess.GetMemberInfo(Session["username"].ToString());
+               
             ShowHideAICopyTrading(membershipExist);
+            ShowHideKYC(obj.KYCRequired);
            
 
 
@@ -89,6 +92,24 @@ namespace LMSBackOfficeWebApplication
             {
        
                 comingsoonspan.Visible = false;
+            }
+
+
+        }
+
+
+
+        private void ShowHideKYC(bool isKYCRequired)
+        {
+            if (isKYCRequired)
+            {
+
+                kycPending.Visible=true;
+                  }
+            else
+            {
+
+                kycPending.Visible = false;
             }
 
 

@@ -366,15 +366,16 @@ namespace LMSBackOfficeDAL
                                     MemberWalletCurrency = reader["Wallet_Currency"].ToString(),
                                     Sponsor = reader["Sponsor"].ToString(),
                                     Country = reader["CountryID"].ToString(),
-                                    MembershipName= reader["Membership_Name"].ToString(),
-                                    MemberRank= reader["Member_RankDesc"].ToString(),
+                                    MembershipName = reader["Membership_Name"].ToString(),
+                                    MemberRank = reader["Member_RankDesc"].ToString(),
                                     CountryId = reader["CountryID"].ToString(),
-                                    CreatedDate= reader["Created_Date"].ToString(),
-                                    Gender= reader["Member_Gender"].ToString(),
-                                    NationalityId= reader["NationalityId"].ToString(),
+                                    CreatedDate = reader["Created_Date"].ToString(),
+                                    Gender = reader["Member_Gender"].ToString(),
+                                    NationalityId = reader["NationalityId"].ToString(),
                                     DOB = reader["Member_DoB"].ToString(),
-
+                                    KYCRequired = reader["Is_KYCRequired"] != DBNull.Value && Convert.ToBoolean(reader["Is_KYCRequired"]),
                                 };
+                            
                             }
                         }
                     }

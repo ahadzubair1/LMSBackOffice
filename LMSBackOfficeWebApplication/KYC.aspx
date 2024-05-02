@@ -345,7 +345,7 @@
                                                                             var ext = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
                                                                             if (ext === "jpeg" || ext === "jpg") {
                                                                                 uploadButton.disabled = false;
-                                                                                statusLabel.innerText = "";
+                                                                                statusLabel.innerText = fileName.substring(fileName.lastIndexOf('\\') + 1);
                                                                             } else {
                                                                                 uploadButton.disabled = true;
                                                                                 statusLabel.innerText = "Please upload a JPEG or JPG file.";
@@ -410,7 +410,7 @@
 
                                                                             if (ext1 === "jpeg" || ext1 === "jpg") {
                                                                                 uploadButton.disabled = false;
-                                                                                statusLabel.innerText = "";
+                                                                                statusLabel.innerText = fileName1.substring(fileName1.lastIndexOf('\\')+1).toLowerCase();
                                                                             } else {
                                                                                 uploadButton.disabled = true;
                                                                                 statusLabel.innerText = "Please upload a JPEG or JPG file.";
@@ -441,13 +441,14 @@
 
                                                                             if (ext1 === "jpeg" || ext1 === "jpg") {
                                                                                 uploadButton.disabled = false;
-                                                                                statusLabel.innerText = "";
+                                                                                statusLabel.innerText = fileName2.substring(fileName2.lastIndexOf('\\') + 1).toLowerCase();
                                                                             } else {
                                                                                 uploadButton.disabled = true;
                                                                                 statusLabel.innerText = "Please upload a JPEG or JPG file.";
                                                                             }
                                                                         }
                                                                     </script>
+                                                             
 
                                                                 </div>
 
