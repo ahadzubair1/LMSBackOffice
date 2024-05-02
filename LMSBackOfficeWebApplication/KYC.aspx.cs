@@ -62,7 +62,7 @@ namespace LMSBackOfficeWebApplication
                 ShowBonusTypes();
 
                 countries.SelectedValue = currentUser.CountryId;
-                countries.Enabled = false;
+                //countries.Enabled = false;
                 txtUsername.Text = currentUser.Email;
             }
 

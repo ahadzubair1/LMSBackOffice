@@ -279,11 +279,11 @@
                                                     <span class="title">Choose:</span>
                                                     <div class="single-checkbox">
                                                         <input type="checkbox" class="checkbox_each" id="checkbox_passport" name="passport"
-                                                            value="passport">
+                                                            value="passport" checked onchange="toggleVisibility('passport', this.checked)">
                                                         <label for="checkbox_passport">Passport</label>
                                                     </div>
                                                     <div class="single-checkbox">
-                                                        <input type="checkbox" class="checkbox_each" id="checkbox_nic" name="nic" value="nic">
+                                                        <input type="checkbox" checked class="checkbox_each" id="checkbox_nic" name="nic" value="nic" onchange="toggleVisibility('nic', this.checked)">
                                                         <label for="checkbox_nic">NIC</label>
                                                     </div>
                                                     <script>
@@ -333,9 +333,7 @@
                                                                     <span class="title">Upload Passport</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
-                                                                    <asp:FileUpload ID="FileUploadControl" runat="server" onchange="checkFileType();" />
-                                                                    <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
-                                                                    <br />
+                                                                    <asp:FileUpload ID="FileUploadControl" CssClass="hidden-uploader" runat="server" onchange="checkFileType();" />
                                                                     <asp:Label ID="StatusLabel" runat="server" Text=""></asp:Label>
 
                                                                     <script type="text/javascript">
@@ -360,7 +358,7 @@
                                                                     class="hidden-uploader">--%>
                                                             </div>
                                                         </div>
-                                                        <div class="kyc-column flexbox">
+                                                        <div class="kyc-column flexbox space-between">
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
@@ -376,11 +374,12 @@
                                                                 example
                                                             </div>
                                                         </div>
+                                                        <asp:Button ID="UploadButton1" runat="server" Text="Verify KYC" class="choose-file btn btn-tr no-hover" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
                                                     </div>
                                                 </div>
                                                 <hr style="border: none; border-bottom: 1px solid #B8B3BE;">
 
-                                                <div class="kyc-step nic" runat="server" id="kyc_nic">
+                                                <div class="kyc-step nic mb-3" runat="server" id="kyc_nic">
                                                     <!-- NIC -->
                                                     <div class="step-heading">
                                                         Upload your National Identity Card <span class="rule">Mandatory</span>
@@ -393,17 +392,16 @@
                                                                     <span class="title">Upload National Identity Front side</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
-                                                                    <asp:FileUpload ID="FileUploadControlNICFront" runat="server" onchange="checkNICFrontFileType();" />
+                                                                    <asp:FileUpload ID="FileUploadControlNICFront" runat="server" CssClass="hidden-uploader" onchange="checkNICFrontFileType();" />
                                                                     <%--   <asp:Button ID="UploadButtonNICFront" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" OnClick="UploadButton_Click" CausesValidation="False" />
                                                                     --%>
-                                                                    <br />
-                                                                    <asp:Label ID="StatusLabelNICFront" runat="server" Text=""></asp:Label>
+                                                                    <asp:Label ID="StatusLabelNICFront" CssClass="text-danger" runat="server" Text=""></asp:Label>
 
                                                                     <script type="text/javascript">
                                                                         function checkNICFrontFileType() {
                                                                             var fileUploadfront = document.getElementById("<%= FileUploadControlNICFront.ClientID %>");
-                                                                    var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
-                                                                    var statusLabel = document.getElementById("<%= StatusLabelNICFront.ClientID %>");
+                                                                            var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
+                                                                            var statusLabel = document.getElementById("<%= StatusLabelNICFront.ClientID %>");
                                                                             var fileName1 = fileUploadfront.value;
                                                                             var ext1 = fileName1.substring(fileName1.lastIndexOf('.') + 1).toLowerCase();
                                                                             //var fileName2= fileUploadback.value;
@@ -429,15 +427,14 @@
                                                                     <span class="title">Upload National Identity Back side</span>
                                                                     <span class="instruction">Max 10 MB in JPG Or PDF only</span>
 
-                                                                    <asp:FileUpload ID="FileUploadControlNICBack" runat="server" onchange="checkNICBackFileType();" />
+                                                                    <asp:FileUpload ID="FileUploadControlNICBack" CssClass="hidden-uploader" runat="server" onchange="checkNICBackFileType();" />
 
-                                                                    <br />
                                                                     <asp:Label ID="StatusLabelNICBack" runat="server" Text=""></asp:Label>
                                                                     <script type="text/javascript">
                                                                         function checkNICBackFileType() {
                                                                             var fileUploadback = document.getElementById("<%= FileUploadControlNICBack.ClientID %>");
-                                                                                                                                var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
-                                                                                                                                var statusLabel = document.getElementById("<%= StatusLabelNICBack.ClientID %>");
+                                                                            var uploadButton = document.getElementById("<%= UploadButtonNICBack.ClientID %>");
+                                                                            var statusLabel = document.getElementById("<%= StatusLabelNICBack.ClientID %>");
                                                                             var fileName2 = fileUploadback.value;
                                                                             var ext1 = fileName2.substring(fileName2.lastIndexOf('.') + 1).toLowerCase();
 
@@ -455,9 +452,9 @@
                                                                 </div>
 
                                                             </div>
-                                                           
+
                                                         </div>
-                                                        <div class="kyc-column flexbox">
+                                                        <div class="kyc-column flexbox justify-content-between">
                                                             <div class="doc-req">
                                                                 <h5>Document Standards:</h5>
                                                                 <ul>
@@ -474,16 +471,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                     <asp:Label ID="statusLabelNIC"  runat="server" Text=""></asp:Label>
- <asp:Button ID="UploadButtonNICBack" runat="server" Text="Verify KYC" class="choose-file" OnClientClick="" CausesValidation="False" OnClick="UploadButtonNICBack_Click" />
+                                                    <asp:Label ID="statusLabelNIC" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                                                    <asp:Button ID="UploadButtonNICBack" runat="server" Text="Verify KYC" class="choose-file btn btn-tr no-hover" OnClientClick="" CausesValidation="False" OnClick="UploadButtonNICBack_Click" />
                                                 </div>
 
                                             </main>
-                                            <footer>
+                                            <%--<footer>--%>
                                                 <%--    <div class="field-row">
                                                     <input type="submit" class="btn btn-primary" value="Submit" />
                                                 </div>--%>
-                                            </footer>
+                                            <%--</footer>--%>
                                         </div>
                                         <%-- </form>--%>
                                     </div>
@@ -683,5 +680,19 @@
             </div>
         </div>
     </main>
+
+
+    <script>
+        function toggleVisibility(className, checked) {
+            var elements = document.getElementsByClassName(className);
+            for (var i = 0; i < elements.length; i++) {
+                if (checked) {
+                    elements[i].style.display = 'block';
+                } else {
+                    elements[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 
 </asp:Content>
