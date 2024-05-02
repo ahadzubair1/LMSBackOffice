@@ -210,8 +210,8 @@ namespace LMSBackOfficeWebApplication
                 }
 
                 maxDate = dates.Count > 0 ? dates.Max() : (DateTime?)null;
-                param1Present = text.Contains(param1);
-                param2Present = text.Contains(param2);
+                param1Present = text.ToLower().Contains(param1.ToLower());
+                param2Present = text.ToLower().Contains(param2.ToLower());
 
                 return (maxDate > System.DateTime.Now && param1Present || param2Present);
             }
