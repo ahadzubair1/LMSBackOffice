@@ -3,17 +3,17 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-<style>        
-    .blink_me {
-    animation: blinker 1s linear infinite;
-    }
+        <style>
+            .blink_me {
+                animation: blinker 1s linear infinite;
+            }
 
-    @keyframes blinker {
-    50% {
-    opacity: 0;
-    }
-    }
-    </style>
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+        </style>
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
@@ -124,17 +124,17 @@
                 <!-- Banner -->
                 <div class="banner">
                     <div class="banner-caption">
-                        <div class="orbit">
-                            <div class="rocket">
-                                <img src="Content/images/fire-lit.gif">
-                                <div class="window"></div>
-                            </div>
-                        </div>
                         <h2 class="text-white">Welcome!</h2>
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
                         <font color="#dd12ec" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
                         <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
+                    <div class="orbit">
+    <div class="rocket">
+        <img src="Content/images/fire-lit.gif">
+        <div class="window"></div>
+    </div>
+</div>
                     <div class="leaf">
                         <div>
                             <img src="Content/images/Fall-Autumn-Leaves-Transparent-PNG.png" height="75" width="75">
@@ -1269,20 +1269,20 @@
 
         // Timer
 
-        function getNextSunday() {
+        function getNextMonday() {
             const today = new Date();
             const dayOfWeek = today.getDay();
-            const daysUntilNextSunday = 7 - dayOfWeek; // Change to calculate days until next Sunday
+            const daysUntilNextMonday = dayOfWeek === 0 ? 1 : 8 - dayOfWeek; // Calculate days until next Monday
 
-            const nextSunday = new Date(today);
-            nextSunday.setDate(today.getDate() + daysUntilNextSunday);
-            nextSunday.setHours(12, 0, 0, 0);
+            const nextMonday = new Date(today);
+            nextMonday.setDate(today.getDate() + daysUntilNextMonday);
+            nextMonday.setHours(12, 0, 0, 0); // Set time to 12:00 PM
 
-            return nextSunday;
+            return nextMonday;
         }
 
         function updateTimer() {
-            const targetDate = getNextSunday();
+            const targetDate = getNextMonday();
             const currentDate = new Date();
 
             const timeDifference = targetDate.getTime() - currentDate.getTime();
@@ -1306,6 +1306,7 @@
         if (!updateTimer()) {
             document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
         }
+
 
     </script>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>

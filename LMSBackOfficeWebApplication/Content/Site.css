@@ -2,6 +2,7 @@
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
+    padding-top: 15px !important;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -1906,4 +1907,10 @@ label:not(.form-check-label):not(.custom-file-label) {
     100% {
         fill: #fff; /* Final color */
     }
+}
+.app-update {
+    position: absolute;
+    bottom: -24px;
+    color: #232f45;
+    font-weight: 600;
 }
