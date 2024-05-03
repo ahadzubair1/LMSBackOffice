@@ -684,10 +684,10 @@ body:not([data-pc-theme="dark"]) .pc-footer {
         position: relative;
     }
 
-        .form-item .kyc-select-wrap .kyc-select,
+        /*.form-item .kyc-select-wrap .kyc-select,
         .form-item .kyc-select-wrap .kyc-input {
             padding-left: 40px;
-        }
+        }*/
 
         .form-item .kyc-select-wrap .kyc-input {
             padding-left: 90px;
@@ -697,6 +697,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
             position: absolute;
             left: 18px;
             top: 9px;
+            display: none;
         }
 
         .form-item .kyc-select-wrap.phone .country-flag {
@@ -1910,7 +1911,8 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 .app-update {
     position: absolute;
-    bottom: -24px;
+    bottom: -18px;
+    background: #fff;
     color: #232f45;
     font-weight: 600;
 }
