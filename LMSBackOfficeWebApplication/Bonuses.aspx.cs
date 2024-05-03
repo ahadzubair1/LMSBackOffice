@@ -28,6 +28,15 @@ namespace LMSBackOfficeWebApplication
                 memberId = member.Id; // Store the member ID
                 BindGridView(memberId);
 
+               if( member.KYCRequired)
+                {
+                    kycmessage.Visible = true;
+                }
+               else if(member.KYCRequired==false)
+                {
+                    kycmessage.Visible = false;
+                }
+
             }
 
 

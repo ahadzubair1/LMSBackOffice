@@ -56,6 +56,7 @@ namespace LMSBackOfficeWebApplication
 
                 var user = Session["Username"].ToString();
                 currentUser = Members_DataAccess.GetMemberInfo(user);
+                lbluserVerified.Text = !currentUser.KYCRequired ? "Verified" : "Unverified";
 
                 GetCountries();
 
@@ -173,6 +174,8 @@ namespace LMSBackOfficeWebApplication
                         AddKYCDocument(obj);
 
 
+                        currentUser = Members_DataAccess.GetMemberInfo(user);
+                        lbluserVerified.Text = !currentUser.KYCRequired ? "Verified" : "Unverified";
 
 
                     }
@@ -232,8 +235,8 @@ namespace LMSBackOfficeWebApplication
         {
             List<DateTime> dates = new List<DateTime>();
 
-            // Regular expression to match dates in the format dd MMM yyyy or dd/MM/yyyy
-            Regex dateRegex = new Regex(@"\b(\d{2}\s(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s\d{4})|(\d{2}/\d{2}/\d{4})\b");
+            // Regular expression to match dates in various formats
+            Regex dateRegex = new Regex(@"\b(\d{2}\s(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\s\d{4})|(\d{2}/\d{2}/\d{4})|(\d{2}\s\d{2}\s\d{4})|(\d{4}-\d{2}-\d{2})\b");
 
             try
             {
@@ -246,8 +249,8 @@ namespace LMSBackOfficeWebApplication
                 foreach (Match match in dateRegex.Matches(text))
                 {
                     DateTime date;
-                    // Try parsing the date using both formats
-                    if (DateTime.TryParseExact(match.Value, new string[] { "dd MMM yyyy", "dd/MM/yyyy" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
+                    // Try parsing the date using all supported formats
+                    if (DateTime.TryParseExact(match.Value, new string[] { "dd MMM yyyy", "dd/MM/yyyy", "dd MM yyyy", "yyyy-MM-dd" }, CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
                     {
                         dates.Add(date);
                     }
@@ -276,6 +279,7 @@ namespace LMSBackOfficeWebApplication
                 return false;
             }
         }
+
 
         private string ExtractTextFromImageOld(string filePath)
         {
@@ -590,11 +594,20 @@ namespace LMSBackOfficeWebApplication
 
 
 
+                        currentUser = Members_DataAccess.GetMemberInfo(user);
+                        lbluserVerified.Text = !currentUser.KYCRequired ? "Verified" : "Unverified";
+
+                        string script = "<script type='text/javascript'>toggleVisibility('nic', true);</script>";
+                        ClientScript.RegisterStartupScript(this.GetType(), "ToggleVisibility", script);
+
 
                     }
                     else
                     {
                         statusLabelNIC.Text = "KYC Failed,Please try again";
+
+                        string script = "<script type='text/javascript'>toggleVisibility('nic', true);</script>";
+                        ClientScript.RegisterStartupScript(this.GetType(), "ToggleVisibility", script);
                     }
 
 
@@ -603,12 +616,18 @@ namespace LMSBackOfficeWebApplication
                 catch (Exception ex)
                 {
                     statusLabelNIC.Text = "Upload status: The file could not be uploaded. The following error occurred: " + ex.Message;
+
+                    string script = "<script type='text/javascript'>toggleVisibility('nic', true);</script>";
+                    ClientScript.RegisterStartupScript(this.GetType(), "ToggleVisibility", script);
                 }
             }
             else
             {
 
                 statusLabelNIC.Text = "Upload status: Please select a file to upload.";
+
+                string script = "<script type='text/javascript'>toggleVisibility('nic', true);</script>";
+                ClientScript.RegisterStartupScript(this.GetType(), "ToggleVisibility", script);
             }
         }
     }

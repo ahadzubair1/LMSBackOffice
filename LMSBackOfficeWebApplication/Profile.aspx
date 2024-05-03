@@ -298,7 +298,7 @@
 
                                 <div class="col-md-5 border-right mb-4 mb-md-0">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="text-right m-0">Profile Settings <span class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
+                                        <h4 class="text-right m-0">Profile Settings <span runat="server" id="kycStatus" class="badge text-bg-warning text-sm">KYC Status: Pending</span></h4>
 
                                         <asp:Button runat="server" ID="btnEdit" CausesValidation="false" CssClass="btn btn-shadow btn-tr btn-sm" Text="Edit" OnClick="btnEdit_Click" />
 

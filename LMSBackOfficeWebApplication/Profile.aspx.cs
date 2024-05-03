@@ -78,6 +78,14 @@ namespace LMSBackOfficeWebApplication
 
                 if (member != null)
                 {
+                    if(member.KYCRequired==false)
+                    {
+                        kycStatus.Visible = false;
+                    }
+                    else
+                    {
+                        kycStatus.Visible = true;
+                    }
                     
                     MemberId = member.Id;
                     txtUserName.Text = member.UserName;

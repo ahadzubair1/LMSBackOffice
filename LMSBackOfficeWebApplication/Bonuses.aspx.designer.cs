@@ -15,6 +15,15 @@ namespace LMSBackOfficeWebApplication
     {
 
         /// <summary>
+        /// kycmessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl kycmessage;
+
+        /// <summary>
         /// gvNetworkBonus control.
         /// </summary>
         /// <remarks>

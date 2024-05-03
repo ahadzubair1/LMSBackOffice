@@ -227,7 +227,7 @@
                                                 </div>
                                                 <div class="p-row">
                                                     <div class="profile-name">Logged-in User</div>
-                                                    <div class="profile-status unverified">unverified</div>
+                                                    <div class="profile-status unverified"><asp:Label ID="lbluserVerified"  runat="server"></asp:Label></div>
                                                 </div>
                                             </div>
                                             <div class="secondary-data">
@@ -241,9 +241,9 @@
                                                 <div class="form-item">
                                                     <label for="Country">Country</label>
                                                     <div class="kyc-select-wrap">
-                                                        <span class="country-flag">
+                                                 <%--       <span class="country-flag">
                                                             <img src="Content/images/kyc/uae.png" width="20" alt="uae">
-                                                        </span>
+                                                        </span>--%>
                                                         <%--   <select name="Country" id="Country" class="kyc-select">
                                                             <option value="">UAE</option>
                                                             <option value="">U.S</option>
