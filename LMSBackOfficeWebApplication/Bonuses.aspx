@@ -132,7 +132,7 @@
             <div class="pc-content">
                 <!-- Banner -->
                 <div class="banner bonuses">
-                    <div class="banner-caption" style="display: flex; flex-direction:row; align-items: center;">
+                    <div class="banner-caption" style="display: flex; flex-direction: row; align-items: center;">
                         <i class="fas fa-haykal bonus-icon" style="margin-right: 0.5rem;"></i>
                         <h4 id="bonusTitle" title="Network Bonus" class="text-white mt-3" style="margin-top: 0;">Network Bonus</h4>
                     </div>
@@ -165,9 +165,9 @@
                             if (defaultTabId === "network-bonus-tab") {
 
                                 updateBannerCaption("Network Bonus" + " - <%= headerTitleNetworkBonusAmount %>");
-        }
-        else {
-            updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
+                            }
+                            else {
+                                updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
                             }
                         });
                     </script>
@@ -280,19 +280,21 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
-                            <div id="kycmessage" runat="server" class="alert alert-secondary small py-1" role="alert" style="color:#dd12ec"><i class="ti ti-alert-circle"></i>&nbsp;<strong>KYC Verification is Must Required for Bonus Withdrawal</strong></div>
+                            <div id="kycmessage" runat="server" class="alert alert-secondary small py-1" role="alert" style="color: #dd12ec"><i class="ti ti-alert-circle"></i>&nbsp;<strong>KYC Verification is Must Required for Bonus Withdrawal</strong></div>
                             <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
-                                <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
-                                    <Columns>
-                                        <asp:BoundField DataField="LeftNetworkVolume" HeaderText="Left Network Volume" />
-                                        <asp:BoundField DataField="RightNetworkVolume" HeaderText="Right Network Volume" />
-                                        <asp:BoundField DataField="BonusVolume" HeaderText="Bonus Volume" />
-                                        <asp:BoundField DataField="BonusAmount" HeaderText="Bonus Amount" />
-                                        <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
-                                        <asp:BoundField DataField="BonusNumber" HeaderText="Bonus Number" />
-                                    </Columns>
-                                    <PagerStyle CssClass="custom-pagination" />
-                                </asp:GridView>
+                                <div class="table-responsive">
+                                    <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
+                                        <Columns>
+                                            <asp:BoundField DataField="LeftNetworkVolume" HeaderText="Left Network Volume" />
+                                            <asp:BoundField DataField="RightNetworkVolume" HeaderText="Right Network Volume" />
+                                            <asp:BoundField DataField="BonusVolume" HeaderText="Bonus Volume" />
+                                            <asp:BoundField DataField="BonusAmount" HeaderText="Bonus Amount" />
+                                            <asp:BoundField DataField="Bonus Date" HeaderText="Bonus Date" />
+                                            <asp:BoundField DataField="BonusNumber" HeaderText="Bonus Number" />
+                                        </Columns>
+                                        <PagerStyle CssClass="custom-pagination" />
+                                    </asp:GridView>
+                                </div>
                             </div>
 
                             <div class="tab-pane fade" id="direct-bonus" role="tabpanel" aria-labelledby="direct-bonus-tab">
@@ -305,6 +307,10 @@
                                     </Columns>
                                     <PagerStyle CssClass="custom-pagination" />
                                 </asp:GridView>
+                            </div>
+                            <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
+                                <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
+                                <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
                             </div>
                         </div>
                     </div>
@@ -499,5 +505,32 @@
             </div>
         </div>
     </main>
+
+    <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
+                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
+                    <div class="col-md-12 form-group">
+                        <label class="labels">Amount to withdraw</label>
+                        <input type="text" maxlength="10" readonly class="form-control mw-100" placeholder="Enter amount in USD to withdraw e.g. 5000">
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label class="labels">Crypto Wallet Address</label>
+                        <input type="text" maxlength="50" readonly class="form-control mw-100" value="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="Button2" class="btn btn-tr no-hover">Withdraw Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </asp:Content>
