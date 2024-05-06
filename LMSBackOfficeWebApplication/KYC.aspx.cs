@@ -161,7 +161,7 @@ namespace LMSBackOfficeWebApplication
                     
                     if(FindMaxDateAndParams("passport",extractText, param1, param2, out maxDate, out param1Present, out param2Present,out correctdocumenttype))
                     {
-                        StatusLabel.Text = "KYC Verified";
+                        StatusLabel.Text = "KYC has been Successfully Verified";
 
                         KYCDocumentModel obj = new KYCDocumentModel();
                         obj.Member_ID = currentUser.Id;
@@ -181,7 +181,7 @@ namespace LMSBackOfficeWebApplication
                     }
                     else
                     {
-                        StatusLabel.Text = "KYC Failed,Please try again";
+                        StatusLabel.Text = "KYC Verification-Failed, Please Try Again";
                     }
 
 
@@ -580,7 +580,7 @@ namespace LMSBackOfficeWebApplication
 
                     if (FindMaxDateAndParams("identity",extractText, param1, param2, out maxDate, out param1Present, out param2Present,out correctdocumenttype))
                     {
-                        statusLabelNIC.Text = "KYC Verified";
+                        statusLabelNIC.Text = "KYC has been Successfully Verified";
 
                         KYCDocumentModel obj = new KYCDocumentModel();
                         obj.Member_ID = currentUser.Id;
@@ -604,7 +604,7 @@ namespace LMSBackOfficeWebApplication
                     }
                     else
                     {
-                        statusLabelNIC.Text = "KYC Failed,Please try again";
+                        statusLabelNIC.Text = "KYC Verification-Failed, Please try again";
 
                         string script = "<script type='text/javascript'>toggleVisibility('nic', true);</script>";
                         ClientScript.RegisterStartupScript(this.GetType(), "ToggleVisibility", script);
