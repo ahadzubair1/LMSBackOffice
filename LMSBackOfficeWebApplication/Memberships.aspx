@@ -2,6 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
+     <style>
+    .blink_me {
+        animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+    </style>
+
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="announcementLabel">What's new?</h5>
@@ -235,13 +247,12 @@
                                     <h6 class="text-white">Product Features</h6>
                                     <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
-                                                                        <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>250</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
-                                    <%--<div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>--%>
-                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
-                                </div>
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold" >  <font color="Yellow" class="blink_me">🌟 Promo Code - Coming Soon</font></span></div>
+                                    </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
