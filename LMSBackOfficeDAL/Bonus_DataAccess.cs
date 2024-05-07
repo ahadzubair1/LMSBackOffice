@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data.SqlTypes;
 using System.Net.Http;
 using System.Text;
+using LMSBackOfficeDAL;
 
 namespace LMSBackOfficeDAL
 {
@@ -66,6 +67,48 @@ namespace LMSBackOfficeDAL
                         return null; // Or throw an exception
                     }
                 }
+            }
+        }
+
+
+
+        public static string WithdrawRequest(int transactionId, string memberId, string walletNumber, decimal withdrawalAmount,
+                                     decimal withdrawalBalance, string withdrawalStatus, string tradingPlatform, string withdrawalDescription,
+                                     bool isActive)
+        {
+            try
+            {
+                // Call the stored procedure
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand("USP_InitiateBonusWithDrawl", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Add parameters
+                  
+                        command.Parameters.Add("@Transaction_ID", SqlDbType.Int).Value = transactionId;
+                        command.Parameters.Add("@Member_ID", SqlDbType.VarChar).Value = memberId;
+                        command.Parameters.Add("@Wallet_Number", SqlDbType.VarChar).Value = walletNumber;
+                        command.Parameters.Add("@Withdrawal_Amount", SqlDbType.Decimal).Value = withdrawalAmount;
+                        command.Parameters.Add("@Withdrawal_Balance", SqlDbType.Decimal).Value = withdrawalBalance;
+                        command.Parameters.Add("@Withdrawal_Status", SqlDbType.VarChar).Value = withdrawalStatus;
+                        command.Parameters.Add("@Withdrawal_Description", SqlDbType.VarChar).Value = withdrawalDescription;
+                        command.Parameters.Add("@Is_Active", SqlDbType.Bit).Value = isActive;
+
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                return "Success";
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                    WriteLog.LogError(ex);
+                return ex.Message;
             }
         }
 
