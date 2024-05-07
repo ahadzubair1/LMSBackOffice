@@ -686,7 +686,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mt-3 d-grid">
-                                                    <a href="Memberships.aspx" class="btn btn-primary d-flex align-items-center justify-content-center">
+                                                    <a href="Memberships.aspx" class="btn btn-tr no-hover d-flex align-items-center justify-content-center">
                                                         <i class="ti ti-plus"></i>Purchase Membership</a>
                                                 </div>
                                             </div>

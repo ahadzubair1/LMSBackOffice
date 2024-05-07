@@ -389,8 +389,9 @@
                     </ul>
                 </div>
             </div>
-            <marquee class="app-update">Greetings ! KYC is now live for all Members. Bonus Withdrawal would be there in next 48 hours.Next Network Bonus will be release On coming Monday at 12 PM UAE's Time.</marquee>
-        </header>
+         <marquee class="app-update">Greetings! KYC-Automatic Verification is now live for all Members. Bonus-Amount can be Received within 48 hours of Verified KYC of any Member.Next Network-Bonus will be release On Monday at 12 PM UAE's Time.</marquee>
+      </header>
+
 
         <!-- [ Sidebar Menu ] start -->
         <nav class="pc-sidebar">
