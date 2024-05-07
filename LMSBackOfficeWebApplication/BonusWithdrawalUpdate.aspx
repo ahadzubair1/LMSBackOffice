@@ -111,12 +111,7 @@
                 <div class="page-header">
                     <div class="page-block">
                         <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="page-header-title">
-                                    <h2 class="mb-0">Bonus Withdrawal Status Update</h2>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-end">
+                            <div class="col-md-12 text-center">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Bonus Withdrawal Status Update</a></li>
@@ -127,29 +122,42 @@
                 </div>
                 <!-- [ breadcrumb ] end -->
                 <!-- [ Main Content ] start -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <form method="post" id="bonusForm">
-                            <div class="form-group">
-                                <label for="currentDate" class="form-label">Current Date</label>
-                                <input type="text" class="form-control w-100" id="currentDate" name="" readonly value="07/05/2024" />
-                            </div>
-                            <div class="form-group">
-                                <label for="bonusType" class="form-label">Type of Bonus</label>
-                                <select class="form-control w-100" id="bonusType" name="bonusType">
-                                    <option value="Direct Bonus">Direct Bonus</option>
-                                    <option value="Network Bonus">Network Bonus</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="upload" class="form-label">Upload Excel File</label>
-                                <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="upload" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />
-                            </div>
-                        </form>
-                        <div id="message"></div>
+                <div class="text-center">
+                    <div class="card w-75 d-inline-block m-auto">
+                        <div class="card-header">
+                            <h4 class="m-0 text-white">Bonus Withdrawal Status Update</h4>
+                        </div>
+                        <div class="card-body text-start">
+                            <form method="post" id="bonusForm">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="currentDate" class="form-label">Current Date</label>
+                                            <input type="text" class="form-control mw-100" id="currentDate" name="" readonly value="07/05/2024" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bonusType" class="form-label">Type of Bonus</label>
+                                            <select class="form-control mw-100" id="bonusType" name="bonusType">
+                                                <option value="Direct Bonus">Direct Bonus</option>
+                                                <option value="Network Bonus">Network Bonus</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="upload" class="form-label">Upload Excel File</label>
+                                            <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="upload" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />
+                                            <span class="btn btn-outline-danger m-l-10">Reset</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="Content/images/withdraw.gif" width="170" class="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="message"></div>
+                        </div>
                     </div>
                 </div>
 
