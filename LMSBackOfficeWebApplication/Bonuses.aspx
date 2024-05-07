@@ -309,8 +309,8 @@
                                 </asp:GridView>
                             </div>
                             <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
-                                <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                                <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
+                                <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Initiate Withdraw</button>
+                                <span class="text-dribbble" ><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
                             </div>
                         </div>
                     </div>
