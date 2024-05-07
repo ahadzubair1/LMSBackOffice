@@ -349,10 +349,10 @@
                                 <label for="membershipCode" class="form-label">Membership Code</label>
                                 <input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
                             </div>
-                            <div class="mb-3 col-12 d-flex align-items-center gap-3">
+                            <%--<div class="mb-3 col-12 d-flex align-items-center gap-3">
                                 <input type="text" class="form-control mw-100 text-uppercase" id="promoCode" name="promoCode" placeholder="Enter promo code" />
                                 <button class="btn btn-primary w-50">Apply Promo Code</button>
-                            </div>
+                            </div>--%>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
