@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bonuses.aspx.cs" Inherits="LMSBackOfficeWebApplication.Bonuses" %>
+<%@ Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bonuses.aspx.cs" Inherits="LMSBackOfficeWebApplication.Bonuses" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -510,15 +510,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Bonus Withdrawal</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
-                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
+                    <p class="m-0"><strong>Enter amount you want to withdraw to your crypto wallet.</strong></p>
+                    <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
                     <div class="col-md-12 form-group">
-                        <label class="labels">Amount to withdraw</label>
-                        <input type="text" maxlength="10" readonly class="form-control mw-100" placeholder="Enter amount in USD to withdraw e.g. 5000">
+                        <label class="labels">Amount to Withdraw</label>
+                        <input type="text" maxlength="10" readonly class="form-control mw-100" placeholder="Enter Amount in USD to Withdraw e.g. 5000">
                     </div>
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
