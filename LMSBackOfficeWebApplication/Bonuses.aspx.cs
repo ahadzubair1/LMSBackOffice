@@ -255,6 +255,7 @@ namespace LMSBackOfficeWebApplication
                     {
 
                         statusLabel.Text = "Please try again";
+                        BindGridView(member2.Id);
                     }
                 }
                 else
@@ -262,6 +263,7 @@ namespace LMSBackOfficeWebApplication
 
 
                     statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
+                    BindGridView(member2.Id);
                 }
             }
             catch (Exception ex)

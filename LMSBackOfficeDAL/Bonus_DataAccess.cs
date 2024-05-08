@@ -126,7 +126,7 @@ namespace LMSBackOfficeDAL
                         command.Parameters.Add("@Withdrawal_Status", SqlDbType.VarChar).Value = withdrawalStatus;
                         command.Parameters.Add("@Withdrawal_Description", SqlDbType.VarChar).Value = withdrawalDescription;
                         command.Parameters.Add("@Is_Active", SqlDbType.Bit).Value = isActive;
-
+                        command.Parameters.Add("@BonusType", SqlDbType.VarChar).Value = "direct";
 
                         connection.Open();
                         command.ExecuteNonQuery();
