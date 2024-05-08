@@ -297,7 +297,7 @@
                                     </asp:GridView>
                                     <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                         <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#networkbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                                        <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
+                         <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
                                     </div>
                                 </div>
                             </div>
