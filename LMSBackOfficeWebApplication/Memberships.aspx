@@ -251,7 +251,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>250</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
-                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold"><font color="Yellow" class="blink_me">🌟 Promo Code Enabled Membership</font></span></div>
+                                    <!--<div class="d-flex align-items-center justify-content-between"><span class="font-bold"><font color="Yellow" class="blink_me">🌟 Promo Code Enabled Membership</font></span></div>-->
                                     </div>
                                 <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
