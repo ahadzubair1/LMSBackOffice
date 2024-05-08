@@ -21,8 +21,11 @@ namespace LMSBackOfficeWebApplication
         protected int MaxWithdrawalLimit;
         protected int minWithdrawlLimit;
         protected decimal directWalletBalance;
+        protected decimal networkWalletBalance;
         protected int networkBonus;
         protected DataTable dtNetworkBonusTable { get; set; }
+
+        protected DataTable dtMemberWalletBalances { get; set; }
         protected DataTable dtDirectBonusTable { get; set; }
         public string memberId; // Member ID field to store the current member ID
 
@@ -36,6 +39,7 @@ namespace LMSBackOfficeWebApplication
                 MaxWithdrawalLimit = 5000; // Example value, you can set it as per your requirement
                 minWithdrawlLimit = 50; // Example value, you can set it as per your requirement
                 directWalletBalance = 0; // Example value, you can set it as per your requirement
+                networkWalletBalance = 0;
 
                 networkBonus = 410;
                 string userName = Session["Username"].ToString();
@@ -96,9 +100,15 @@ namespace LMSBackOfficeWebApplication
         {
             // Server-side logic for withdrawal
             // This method will be called only if client-side validation succeeds
+
+            InitiateNetworkWithdrawl();
+
+            txtAmount_network.Text = "";
+            txtFees_network.Text = "";
         }
         private void BindGridView(string memberId)
         {
+            dtMemberWalletBalances = Bonus_DataAccess.GetMemberWalletsByMemberId(memberId);
             dtNetworkBonusTable = Bonus_DataAccess.GetNetworkBonusByMemberId(memberId);
             dtDirectBonusTable = Bonus_DataAccess.GetDirectBonusByMemberId(memberId);  
             
@@ -107,7 +117,7 @@ namespace LMSBackOfficeWebApplication
             gvNetworkBonus.DataBind();
 
             if (dtNetworkBonusTable.Rows.Count > 0)
-                headerTitleNetworkBonusAmount += dtNetworkBonusTable.Rows[0]["BonusAmount"].ToString();
+                headerTitleNetworkBonusAmount += dtMemberWalletBalances.Rows[0]["network_wallet_balance"].ToString();
 
 
             gvDirectBonus.DataSource = dtDirectBonusTable;
@@ -115,11 +125,13 @@ namespace LMSBackOfficeWebApplication
 
             if (dtDirectBonusTable.Rows.Count > 0)
             {
-                headerTitleDirectBonusAmount += dtDirectBonusTable.Rows[0]["Bonus_Amount"].ToString();
-                directWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["Bonus_Amount"].ToString());
+                headerTitleDirectBonusAmount += dtMemberWalletBalances.Rows[0]["direct_wallet_balance"].ToString();
+                directWalletBalance = Convert.ToDecimal(dtMemberWalletBalances.Rows[0]["direct_wallet_balance"].ToString());
+                networkWalletBalance = Convert.ToDecimal(dtMemberWalletBalances.Rows[0]["network_wallet_balance"].ToString());
 
 
-            }   
+
+            }
 
         }
         protected void gvNetworkBonus_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -148,6 +160,8 @@ namespace LMSBackOfficeWebApplication
         protected void btnwithdraw_Direct_Click(object sender, EventArgs e)
         {
             InitiateWithdrawl();
+            txtAmount_direct.Text = "";
+            txtFees_direct.Text = "";
 
         }
 
@@ -166,11 +180,12 @@ namespace LMSBackOfficeWebApplication
                 decimal withdrawalAmount_afterFees = (withdrawalAmount * 1.03m);
                 decimal withdrawlBalnce = directWalletBalance - withdrawalAmount_afterFees;
 
-                dtDirectBonusTable = Bonus_DataAccess.GetDirectBonusByMemberId(member2.Id);
+                dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
 
                 if(dtDirectBonusTable.Rows.Count > 0)
                 {
-                    directWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["Bonus_Amount"].ToString());
+                    directWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["direct_wallet_balance"].ToString());
+                    networkWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["network_wallet_balance"].ToString());
                 }
 
 
@@ -184,6 +199,51 @@ namespace LMSBackOfficeWebApplication
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
                                                     "Bonus Amount withdraw request", true);
+
+
+
+
+
+                    string body = $@"<div>
+            <div>
+                <div>
+                    <table border=0 cellpadding=0 cellspacing=0 width=100% align='center' style='max-width:800px;margin:0 auto;background:#121925'>
+                        <tr>
+                            <td style='border:4px solid #d014e4'>
+                                <table border=0 cellpadding=25 cellspacing=0 width=100%>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%>
+                                                <p style=margin:0>
+                                                    <img title='A Global Education & Research Ltd' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
+                                                <tr>
+                                                    <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
+                                                        Bonus Withdrawl Request
+                                                <tr>
+                                                    <td colspan=2>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            Dear Admin,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
+                                                <tr>
+                                                    <td>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            If you have any questions, please feel free to contact us.
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            Best regards,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>
+                                                            Team Tradiix.
+                                                <hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'>
+                                                <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>
+                                                    © Tradiix
+                                </table>
+                            <td>
+                        </table>
+                    </div>
+                </div>
+            </div>";
+
+                    UtilMethods.SendEmail("Support@Tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
 
 
                     if (result == "Success")
@@ -209,5 +269,114 @@ namespace LMSBackOfficeWebApplication
                 Console.WriteLine(ex.Message);
             }
         }
+
+
+        private void InitiateNetworkWithdrawl()
+        {
+            try
+            {
+                // Provide values to initialize the function
+                string user2 = Session["Username"].ToString();
+
+                //string abc = "ajshdjhdil";
+                var member2 = LMSBackOfficeDAL.Members_DataAccess.GetMemberInfo(user2);
+
+
+                decimal withdrawalAmount = Convert.ToDecimal(txtAmount_network.Text);
+                decimal withdrawalAmount_afterFees = (withdrawalAmount * 1.03m);
+                decimal withdrawlBalnce = networkWalletBalance - withdrawalAmount_afterFees;
+
+                dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
+
+                if (dtDirectBonusTable.Rows.Count > 0)
+                {
+                    networkWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["network_wallet_balance"].ToString());
+                }
+
+
+                if (withdrawalAmount < 5000 && withdrawalAmount > 50 && withdrawalAmount_afterFees < networkWalletBalance)
+                {
+
+
+
+
+                    // Call WithdrawRequest function
+                    string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
+                                                    withdrawlBalnce, "Pending", "Tradiix",
+                                                    "Bonus Amount withdraw request", true);
+
+
+
+
+
+                    string body = $@"<div>
+            <div>
+                <div>
+                    <table border=0 cellpadding=0 cellspacing=0 width=100% align='center' style='max-width:800px;margin:0 auto;background:#121925'>
+                        <tr>
+                            <td style='border:4px solid #d014e4'>
+                                <table border=0 cellpadding=25 cellspacing=0 width=100%>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan=2 align=left style=padding-top:5.25%;padding-right:5.25%;padding-bottom:5.25%;padding-left:5.25%>
+                                                <p style=margin:0>
+                                                    <img title='A Global Education & Research Ltd' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
+                                                <tr>
+                                                    <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
+                                                        Bonus Withdrawl Request
+                                                <tr>
+                                                    <td colspan=2>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            Dear Admin,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
+                                                            User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
+                                                <tr>
+                                                    <td>
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            If you have any questions, please feel free to contact us.
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
+                                                            Best regards,
+                                                        <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;margin:30px 0 10px 0;font-weight:400'>
+                                                            Team Tradiix.
+                                                <hr style='border:0;border-top:1px solid #c7c7c7;line-height:1px;margin:25px 0 20px 0'>
+                                                <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#6a7070;font-size:12px;line-height:1.33;margin:0'>
+                                                    © Tradiix
+                                </table>
+                            <td>
+                        </table>
+                    </div>
+                </div>
+            </div>";
+
+                    UtilMethods.SendEmail("Support@Tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
+
+
+                    if (result == "Success")
+                    {
+                        statusLabel.Text = "Bonus Withdrwl Request has been initiated";
+                        BindGridView(member2.Id);
+                    }
+                    else
+                    {
+
+                        statusLabel.Text = "Please try again";
+                    }
+                }
+                else
+                {
+
+
+                    statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
+
+
     }
 }

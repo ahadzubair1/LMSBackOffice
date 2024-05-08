@@ -298,7 +298,7 @@
                                         <PagerStyle CssClass="custom-pagination" />
                                     </asp:GridView>
                                     <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
-                                        <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
+                                        <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#networkbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
                                         <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
                                     </div>
                                 </div>
@@ -314,11 +314,15 @@
                                     </Columns>
                                     <PagerStyle CssClass="custom-pagination" />
                                 </asp:GridView>
+                                                          <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
+                              <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#directbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
+                              <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
+                          </div>
                             </div>
-                            <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
+<%--                            <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                 <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Initiate Withdraw</button>
                                 <span class="text-dribbble" ><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                 </div>
@@ -514,75 +518,72 @@
         </div>
     </main>
 
-    <div class="modal fade modal-animate anim-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade modal-animate anim-blur" id="networkbonusmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Bonus Withdrawal</h1>
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+               <script type="text/javascript">
+
+
+                   function validateAmount(source, args) {
+                       var amountTextBox = document.getElementById('<%= txtAmount_network.ClientID %>');
+                       var amount = parseFloat(amountTextBox.value) * 1.0;
+                       var amountAfterFees = parseFloat(amountTextBox.value) * 1.03;
+                       var maxWithdrawalLimit = <%= MaxWithdrawalLimit %>;
+                       var minimumWithdrawalLimit = <%= minWithdrawlLimit %>;
+                       var customVariable = <%= networkWalletBalance %>;
+
+                      
+                       args.IsValid = false;
+                       //!isNaN(amount) && amount >= minimumWithdrawalLimit && amount <= maxWithdrawalLimit && amountAfterFees <= customVariable;
+    }
+               </script>
+
+<script type="text/javascript">
+    function calculateFees() {
+        var amount = document.getElementById('<%= txtAmount_network.ClientID %>').value;
+        var fees = parseFloat(amount) * 0.03; // Calculating 3% of the amount
+        document.getElementById('<%= txtFees_network.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_network with 2 decimal places
+    }
+</script>
                 <div class="modal-body">
-                    <p class="m-0"><strong>Enter amount you want to withdraw to your crypto wallet.</strong></p>
-                    <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
+                    <p class="m-0">2nd Modal Enter amount you want to withdraw to your crypto wallet.</p>
+                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
                     <div class="col-md-12 form-group">
-                        <label class="labels">Amount to Withdraw</label>
-                        <input type="text" maxlength="10" readonly class="form-control mw-100" placeholder="Enter Amount in USD to Withdraw e.g. 5000">
+                        <label class="labels">Amount to withdraw</label>
+                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_network"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtAmount_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAmount_network" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
+
+
                     </div>
                     <div class="col-md-12 form-group">
+                        <label class="labels">Fees</label>
+                        <asp:TextBox ID="txtFees_network" Enabled="false" MaxLength="10" runat="server"></asp:TextBox>
+                    </div>
+
+
+                    <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
-                        <input type="text" maxlength="50" readonly class="form-control mw-100" value="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">
+                        <asp:TextBox ID="txtCryptoAddress_network"   MaxLength="100" runat="server"></asp:TextBox>
+
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
+
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="Button1" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" id="Button2" class="btn btn-tr no-hover">Withdraw Now</button>
-                </div>--%>
-                    <script>
-                        function validateNetworkAmount(source, args) {
-                            var amountTextBox = document.getElementById('<%= txtAmout_network.ClientID %>');
-            var amount = parseFloat(amountTextBox.value);
-            var maxWithdrawalLimit = <%= MaxWithdrawalLimit %>;
-            var minimumWithdrawlLimit =<%= minWithdrawlLimit%>;
-            var customVariable = <%= networkBonus %>;
-
-                            args.IsValid = !isNaN(amount) && amount > minimumWithdrawlLimit && amount < maxWithdrawalLimit && amount < customVariable;
-                        }
-                    </script>
-    <div class="modal-body">
-        <p class="m-0">Modal Enter amount you want to withdraw to your crypto wallet.</p>
-        <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
-        <div class="col-md-12 form-group">
-            <label class="labels">Amount to withdraw</label>
-            <asp:TextBox ID="txtAmout_network" MaxLength="10" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtAmout_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation"></asp:RequiredFieldValidator>
-            <%--<asp:RangeValidator ID="RangeValidatorAmount" ControlToValidate="txtAmout_network" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>--%>
-            <asp:CustomValidator ID="CustomValidator1" ControlToValidate="txtAmout_network" ErrorMessage="Amount should be between 50 and the bonus amount, or less than 5000, whichever is smaller." ClientValidationFunction="validateAmount" runat="server" ValidationGroup="withdrawalValidation"></asp:CustomValidator>
-
-
-        </div>
-        <div class="col-md-12 form-group">
-            <label class="labels">Fees</label>
-            <asp:TextBox ID="txtFees_network" Enabled="false" MaxLength="10" runat="server"></asp:TextBox>
-        </div>
-
-
-        <div class="col-md-12 form-group">
-            <label class="labels">Crypto Wallet Address</label>
-            <asp:TextBox ID="txtCryptoAddress_network" MaxLength="100" runat="server"></asp:TextBox>
-
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation"></asp:RequiredFieldValidator>
-
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" id="btncancel_network" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-        <asp:Button runat="server" ID="btnwithdraw_network" CausesValidation="true"  class="btn btn-tr no-hover" Text="Withdraw Now" OnClick="btnWithDraw_network_Click"  ValidationGroup="withdrawalValidation" />
-    </div>
+                    <button type="button" id="btncancel_network" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    <asp:Button runat="server" ID="btnwithdraw_network"   class="btn btn-tr no-hover" CausesValidation="true"  ValidationGroup="withdrawalValidation_network"  Text="Withdraw Now"  OnClick="btnWithDraw_network_Click" />
+                </div>
             </div>
         </div>
     </div>
    
-    <div class="modal fade modal-animate anim-blur" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal-animate anim-blur" id="directbonusmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
         <div class="modal-dialog">
             <div class="modal-content">

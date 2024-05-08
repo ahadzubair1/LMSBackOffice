@@ -60,13 +60,13 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.GridView gvwBonusType;
 
         /// <summary>
-        /// txtAmout_network control.
+        /// txtAmount_network control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAmout_network;
+        protected global::System.Web.UI.WebControls.TextBox txtAmount_network;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -78,13 +78,13 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// CustomValidator1 control.
+        /// RangeValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
 
         /// <summary>
         /// txtFees_network control.
