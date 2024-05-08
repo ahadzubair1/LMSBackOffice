@@ -551,27 +551,27 @@
     }
 </script>
                 <div class="modal-body">
-                    <p class="m-0">2nd Modal Enter amount you want to withdraw to your crypto wallet.</p>
+                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
                     <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
                     <div class="col-md-12 form-group">
                         <label class="labels">Amount to withdraw</label>
-                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_network"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtAmount_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAmount_network" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
+                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_network" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger" ControlToValidate="txtAmount_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAmount_network" CssClass="text-danger" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
 
 
                     </div>
                     <div class="col-md-12 form-group">
                         <label class="labels">Fees</label>
-                        <asp:TextBox ID="txtFees_network" Enabled="false" MaxLength="10" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtFees_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
                     </div>
 
 
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
-                        <asp:TextBox ID="txtCryptoAddress_network"   MaxLength="100" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCryptoAddress_network"   MaxLength="100" runat="server" CssClass="form-control mw-100"></asp:TextBox>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="text-danger" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
 
                     </div>
                 </div>
@@ -631,27 +631,27 @@
     }
 </script>
                 <div class="modal-body">
-                    <p class="m-0">2nd Modal Enter amount you want to withdraw to your crypto wallet.</p>
+                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
                     <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
                     <div class="col-md-12 form-group">
                         <label class="labels">Amount to withdraw</label>
-                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_direct"  ValidationGroup="withdrawalValidation_direct" MaxLength="10" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorAmount" ControlToValidate="txtAmount_direct" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidatorAmount" ControlToValidate="txtAmount_direct" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
+                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_direct" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_direct" MaxLength="10" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorAmount" CssClass="text-danger" ControlToValidate="txtAmount_direct" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidatorAmount" CssClass="text-danger" ControlToValidate="txtAmount_direct" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
 
 
                     </div>
                     <div class="col-md-12 form-group">
                         <label class="labels">Fees</label>
-                        <asp:TextBox ID="txtFees_direct" Enabled="false" MaxLength="10" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtFees_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
                     </div>
 
 
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
-                        <asp:TextBox ID="txtCryptoAddress_direct"   MaxLength="100" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCryptoAddress_direct"   MaxLength="100" runat="server" CssClass="form-control mw-100"></asp:TextBox>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorCryptoAddress" ControlToValidate="txtCryptoAddress_direct" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorCryptoAddress" CssClass="text-danger" ControlToValidate="txtCryptoAddress_direct" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
 
                     </div>
                 </div>
