@@ -256,12 +256,13 @@ User made a request to send his/her payment at following address {txtCryptoAddre
 
                     if (result == "Success")
                     {
-                        statusLabel.Text = "Bonus Withdrwl Request has been initiated";
+                        statusLabel.Visible = true;
+                        statusLabel.Text = "Bonus Withdrawal has been initiated. You will receive the Amount within 48 Hours";
                         BindGridView(member2.Id);
                     }
                     else
                     {
-
+                        statusLabel.Visible = true;
                         statusLabel.Text = "Please try again";
                         BindGridView(member2.Id);
                     }
@@ -269,7 +270,7 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                 else
                 {
 
-
+                    statusLabel.Visible = true;
                     statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
                     BindGridView(member2.Id);
                 }
@@ -364,19 +365,20 @@ User has requested to send his/her payment at {txtCryptoAddress_network.Text}
 
                     if (result == "Success")
                     {
-                        statusLabel.Text = "Bonus Withdrwl Request has been initiated";
+                        statusLabel.Visible = true;
+                        statusLabel.Text = "Bonus Withdrawal has been initiated. You will receive the Amount within 48 Hours";
                         BindGridView(member2.Id);
                     }
                     else
                     {
-
+                        statusLabel.Visible = true;
                         statusLabel.Text = "Please try again";
                     }
                 }
                 else
                 {
 
-
+                    statusLabel.Visible = true;
                     statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
                 }
             }

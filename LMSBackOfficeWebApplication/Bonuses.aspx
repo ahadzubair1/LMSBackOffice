@@ -257,7 +257,7 @@
                                 <div class="page-header-title">
                                     <h2 class="mb-0">Bonuses</h2>
                                 </div>
-                                    <asp:Label ID="statusLabel" CssClass="alert alert-danger d-block py-1 mb-0 mt-2" runat="server"></asp:Label>
+                                    <asp:Label ID="statusLabel" Visible="false"  CssClass="alert alert-danger d-block py-1 mb-0 mt-2" runat="server"></asp:Label>
                             </div>
                             <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
@@ -297,7 +297,7 @@
                                     </asp:GridView>
                                     <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                         <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#networkbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                                        <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
+                                        <span class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
                                     </div>
                                 </div>
                             </div>
@@ -314,8 +314,7 @@
                                 </asp:GridView>
                                                           <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                               <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#directbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                              <span class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</span>
-                          </div>
+                      <span class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>      </div>
                             </div>
 <%--                            <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                 <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Initiate Withdraw</button>
@@ -550,7 +549,7 @@
 </script>
                 <div class="modal-body">
                     <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
-                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
+                   <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
                     <div class="col-md-12 form-group">
                         <label class="labels">Amount to withdraw</label>
                         <asp:TextBox oninput="calculateFees()"    ID="txtAmount_network" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
