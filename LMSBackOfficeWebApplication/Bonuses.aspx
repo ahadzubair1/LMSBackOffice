@@ -521,7 +521,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Bonus Withdrawal</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                <script type="text/javascript">
@@ -549,19 +549,11 @@
     }
 </script>
                 <div class="modal-body">
-                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
-                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
+                    <p class="m-0"><strong>Enter amount you want to withdraw to your crypto wallet.</strong></p>
+                    <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
                     <div class="col-md-12 form-group">
-                        <label class="labels">Amount to withdraw</label>
-                        <asp:TextBox oninput="calculateFees()"    ID="txtAmount_network" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger" ControlToValidate="txtAmount_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAmount_network" CssClass="text-danger" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
-
-
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <label class="labels">Fees</label>
-                        <asp:TextBox ID="txtFees_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
+                        <label class="labels">Amount to Withdraw</label>
+                        <input type="text" maxlength="10" readonly class="form-control mw-100" placeholder="Enter Amount in USD to Withdraw e.g. 5000">
                     </div>
 
 
