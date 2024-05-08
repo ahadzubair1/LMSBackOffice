@@ -257,9 +257,7 @@
                                 <div class="page-header-title">
                                     <h2 class="mb-0">Bonuses</h2>
                                 </div>
-                                <div>
-                                    <asp:Label ID="statusLabel" runat="server"></asp:Label>
-                                </div>
+                                    <asp:Label ID="statusLabel" CssClass="alert alert-danger d-block py-1 mb-0 mt-2" runat="server"></asp:Label>
                             </div>
                             <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
