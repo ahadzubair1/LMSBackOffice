@@ -572,7 +572,7 @@
                     </div>
 
                        <div class="col-md-12 form-group">
-       <label class="labels">Total Amount</label>
+       <label class="labels">Actual Withdrawal Amount</label>
        <asp:TextBox ID="txtTotalWithdrawAmount_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
@@ -598,7 +598,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Bonus Withdrawal</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                <script type="text/javascript">
@@ -659,7 +659,7 @@
                     </div>
                     
                        <div class="col-md-12 form-group">
-       <label class="labels">Total Amount</label>
+       <label class="labels">Actual Withdrawal Amount</label>
        <asp:TextBox ID="txtTotalWithdrawAmount_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
