@@ -47,13 +47,20 @@ namespace LMSBackOfficeWebApplication
                 memberId = member.Id; // Store the member ID
                 BindGridView(memberId);
 
+                txtCryptoAddress_direct.Text = member.MemberAddress;
+                txtCryptoAddress_network.Text = member.MemberAddress;
+
                if( member.KYCRequired)
                 {
                     kycmessage.Visible = true;
+                    btnwithdraw_Direct.Visible = false;
+                    btnwithdraw_network.Visible = false;
                 }
                else if(member.KYCRequired==false)
                 {
                     kycmessage.Visible = false;
+                    btnwithdraw_Direct.Visible = true;
+                    btnwithdraw_network.Visible = true;
                 }
 
             }
@@ -79,7 +86,7 @@ namespace LMSBackOfficeWebApplication
                 // Call WithdrawRequest function
                 string result = Bonus_DataAccess.WithdrawRequest(transactionId, memberka.Id, walletNumber, withdrawalAmount,
                                                 withdrawalBalance, withdrawalStatus, tradingPlatform,
-                                                withdrawalDescription, isActive);
+                                                withdrawalDescription, isActive,"direct");
 
                 // Handle the result, for example:
                 if (result == "Success")
@@ -198,7 +205,7 @@ namespace LMSBackOfficeWebApplication
                     // Call WithdrawRequest function
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
-                                                    "Bonus Amount withdraw request", true);
+                                                    "Direct Bonus Amount withdraw request", true,"direct");
 
 
 
@@ -225,6 +232,7 @@ namespace LMSBackOfficeWebApplication
                                                             Dear Admin,
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
+User made a request to send his/her payment at following address {txtCryptoAddress_direct.Text}
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
@@ -303,9 +311,9 @@ namespace LMSBackOfficeWebApplication
 
 
                     // Call WithdrawRequest function
-                    string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
+                    string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_network.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
-                                                    "Bonus Amount withdraw request", true);
+                                                    "Bonus Amount withdraw request", true,"network");
 
 
 
@@ -332,6 +340,7 @@ namespace LMSBackOfficeWebApplication
                                                             Dear Admin,
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
+User has requested to send his/her payment at {txtCryptoAddress_network.Text}
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>

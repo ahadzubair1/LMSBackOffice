@@ -105,7 +105,7 @@ namespace LMSBackOfficeDAL
 
         public static string WithdrawRequest(int transactionId, string memberId, string walletNumber, decimal withdrawalAmount,
                                      decimal withdrawalBalance, string withdrawalStatus, string tradingPlatform, string withdrawalDescription,
-                                     bool isActive)
+                                     bool isActive,string bonusType)
         {
             try
             {
@@ -126,7 +126,7 @@ namespace LMSBackOfficeDAL
                         command.Parameters.Add("@Withdrawal_Status", SqlDbType.VarChar).Value = withdrawalStatus;
                         command.Parameters.Add("@Withdrawal_Description", SqlDbType.VarChar).Value = withdrawalDescription;
                         command.Parameters.Add("@Is_Active", SqlDbType.Bit).Value = isActive;
-                        command.Parameters.Add("@BonusType", SqlDbType.VarChar).Value = "direct";
+                        command.Parameters.Add("@BonusType", SqlDbType.VarChar).Value = bonusType;
 
                         connection.Open();
                         command.ExecuteNonQuery();
