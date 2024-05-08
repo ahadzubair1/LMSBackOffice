@@ -130,11 +130,12 @@ namespace LMSBackOfficeWebApplication
             gvDirectBonus.DataSource = dtDirectBonusTable;
             gvDirectBonus.DataBind();
 
-            if (dtDirectBonusTable.Rows.Count > 0)
+            if (dtMemberWalletBalances.Rows.Count > 0)
             {
                 headerTitleDirectBonusAmount += dtMemberWalletBalances.Rows[0]["direct_wallet_balance"].ToString();
                 directWalletBalance = Convert.ToDecimal(dtMemberWalletBalances.Rows[0]["direct_wallet_balance"].ToString());
                 networkWalletBalance = Convert.ToDecimal(dtMemberWalletBalances.Rows[0]["network_wallet_balance"].ToString());
+
 
 
 
@@ -251,7 +252,7 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("Support@Tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
 
 
                     if (result == "Success")
@@ -269,9 +270,17 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                 }
                 else
                 {
+                    if(withdrawalAmount_afterFees > directWalletBalance)
+                   statusLabel.Text = "Total Withdrawl Amount should be less than direct wallet balance";
+
+                    else if (withdrawalAmount > 5000 )
+                        statusLabel.Text = "Withdrawl amount should be less than equal to 5000";
+                    else if(withdrawalAmount <50)
+                        statusLabel.Text = "Withdrawl amount should be greater than equal to 50";
+                   else
+                        statusLabel.Text = "Please retry";
 
                     statusLabel.Visible = true;
-                    statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
                     BindGridView(member2.Id);
                 }
             }
@@ -360,7 +369,7 @@ User has requested to send his/her payment at {txtCryptoAddress_network.Text}
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("Support@Tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
@@ -377,9 +386,21 @@ User has requested to send his/her payment at {txtCryptoAddress_network.Text}
                 }
                 else
                 {
+                    if (withdrawalAmount_afterFees > networkWalletBalance)
+                        statusLabel.Text = "Total Withdrawl Amount should be less than network wallet balance";
+
+                    else if (withdrawalAmount > 5000)
+                        statusLabel.Text = "Withdrawl amount should be less than equal to 5000";
+                    else if (withdrawalAmount < 50)
+                        statusLabel.Text = "Withdrawl amount should be greater than equal to 50";
+                    else
+                        statusLabel.Text = "Please retry";
+
+  
+
 
                     statusLabel.Visible = true;
-                    statusLabel.Text = "Withdrawl amount should be greater than 5000 less 50";
+                    BindGridView(member2.Id);
                 }
             }
             catch (Exception ex)

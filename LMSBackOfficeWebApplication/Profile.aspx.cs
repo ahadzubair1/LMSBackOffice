@@ -103,6 +103,7 @@ namespace LMSBackOfficeWebApplication
                     txtEmail.Text = member.Email;
                     txtfirstName.Text = member.MemberFullName;
                     txtMobileNumber.Text = member.Mobile;
+                    txtWalletAddress.Text = member.MemberAddress;
                     lblEmail.Text = member.Email;
                     lblMembership.Text = member.MembershipName;
                     lblRank.Text = member.MemberRank;
@@ -125,6 +126,7 @@ namespace LMSBackOfficeWebApplication
                     txtEmail.Enabled = false;
                     txtfirstName.Enabled = false;
                     txtMobileNumber.Enabled = false;
+                    txtWalletAddress.Enabled = false;
                     countries.Enabled = false;
                     rbFemale.Enabled = false;
                     rbMale.Enabled = false;
@@ -252,6 +254,7 @@ namespace LMSBackOfficeWebApplication
             //txtEmail.Enabled = true;
              txtfirstName.Enabled = true;
             txtMobileNumber.Enabled = true;
+            txtWalletAddress.Enabled = true;
             txtDate.Enabled = true;
             nationalities.Enabled = true;   
             countries.Enabled = true;
