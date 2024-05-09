@@ -164,10 +164,10 @@
                             var defaultTabId = document.querySelector(".nav-link.active").id;
                             if (defaultTabId === "network-bonus-tab") {
 
-                                updateBannerCaption("Network Bonus" + " - <%= headerTitleNetworkBonusAmount %>");
+                                updateBannerCaption("Network Bonus" + " : <%= headerTitleNetworkBonusAmount %>");
                             }
                             else {
-                                updateBannerCaption("Direct Bonus" + " - <%= headerTitleDirectBonusAmount %>");
+                                updateBannerCaption("Direct Bonus" + " : <%= headerTitleDirectBonusAmount %>");
                             }
                         });
                     </script>
@@ -546,7 +546,7 @@
         var amount = document.getElementById('<%= txtAmount_network.ClientID %>').value;
         var fees = parseFloat(amount) * 0.03; // Calculating 3% of the amount
         document.getElementById('<%= txtFees_network.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_network with 2 decimal places
-         document.getElementById('<%=   txtTotalWithdrawAmount_network.ClientID %>').value=(parseFloat(amount) * 1.03).toFixed(2);
+         document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value=(parseFloat(amount) -fees).toFixed(2);
    
 
      }
@@ -572,8 +572,8 @@
                     </div>
 
                        <div class="col-md-12 form-group">
-       <label class="labels">Total Amount</label>
-       <asp:TextBox ID="txtTotalWithdrawAmount_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
+       <label class="labels">Amount after fee deduction</label>
+       <asp:TextBox ID="txtAmountAfterDeduction_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
 
@@ -638,7 +638,7 @@
         var amount = document.getElementById('<%= txtAmount_direct.ClientID %>').value;
         var fees = parseFloat(amount) * 0.03; // Calculating 3% of the amount
         document.getElementById('<%= txtFees_direct.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_direct with 2 decimal places
-               document.getElementById('<%=   txtTotalWithdrawAmount_direct.ClientID %>').value=(parseFloat(amount) * 1.03).toFixed(2);
+               document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value=(parseFloat(amount) * 0.97).toFixed(2);
     }
 </script>
                 <div class="modal-body">
@@ -659,8 +659,8 @@
                     </div>
                     
                        <div class="col-md-12 form-group">
-       <label class="labels">Total Amount</label>
-       <asp:TextBox ID="txtTotalWithdrawAmount_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
+       <label class="labels">Amount after fee deduction</label>
+       <asp:TextBox ID="txtAmountAfterDeduction_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
 

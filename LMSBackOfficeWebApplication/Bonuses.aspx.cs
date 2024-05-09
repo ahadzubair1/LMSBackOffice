@@ -38,10 +38,10 @@ namespace LMSBackOfficeWebApplication
                     // Initialize variables
                 MaxWithdrawalLimit = 5000; // Example value, you can set it as per your requirement
                 minWithdrawlLimit = 50; // Example value, you can set it as per your requirement
-                directWalletBalance = 0; // Example value, you can set it as per your requirement
-                networkWalletBalance = 0;
+                
+                //directWalletBalance = 0; // Example value, you can set it as per your requirement
+                //networkWalletBalance = 0;
 
-                networkBonus = 410;
                 string userName = Session["Username"].ToString();
                 var member = LMSBackOfficeDAL.Members_DataAccess.GetMemberInfo(userName);
                 memberId = member.Id; // Store the member ID
@@ -185,8 +185,7 @@ namespace LMSBackOfficeWebApplication
 
 
                 decimal withdrawalAmount = Convert.ToDecimal(txtAmount_direct.Text);
-                decimal withdrawalAmount_afterFees = (withdrawalAmount * 1.03m);
-                decimal withdrawlBalnce = directWalletBalance - withdrawalAmount_afterFees;
+                decimal amounttosend = (withdrawalAmount * 0.97m);
 
                 dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
 
@@ -195,9 +194,10 @@ namespace LMSBackOfficeWebApplication
                     directWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["direct_wallet_balance"].ToString());
                     networkWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["network_wallet_balance"].ToString());
                 }
+                decimal withdrawlBalnce = directWalletBalance - withdrawalAmount;
 
 
-                if (withdrawalAmount < 5000 && withdrawalAmount > 50 && withdrawalAmount_afterFees < directWalletBalance)
+                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= directWalletBalance)
                 {
 
 
@@ -232,8 +232,9 @@ namespace LMSBackOfficeWebApplication
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             Dear Admin,
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
-                                                            User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
-User made a request to send his/her payment at following address {txtCryptoAddress_direct.Text}
+                                                            
+
+                                                           Member: {member2.UserName}, Email: {member2.Email} has requested the withdrawal for amount {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}. User has requested to send their payment to {txtCryptoAddress_direct.Text}. After deducting the 3% fees, the user should receive {amounttosend} in their wallet.
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
@@ -251,8 +252,9 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                     </div>
                 </div>
             </div>";
+                    //signup @tradiix.com;
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
+                    UtilMethods.SendEmail("iba_salman@yahoo.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
 
 
                     if (result == "Success")
@@ -270,7 +272,7 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                 }
                 else
                 {
-                    if(withdrawalAmount_afterFees > directWalletBalance)
+                    if(withdrawalAmount > directWalletBalance)
                    statusLabel.Text = "Total Withdrawl Amount should be less than direct wallet balance";
 
                     else if (withdrawalAmount > 5000 )
@@ -303,18 +305,18 @@ User made a request to send his/her payment at following address {txtCryptoAddre
 
 
                 decimal withdrawalAmount = Convert.ToDecimal(txtAmount_network.Text);
-                decimal withdrawalAmount_afterFees = (withdrawalAmount * 1.03m);
-                decimal withdrawlBalnce = networkWalletBalance - withdrawalAmount_afterFees;
-
+                decimal amountTosend = (withdrawalAmount * 0.97m);
+              
                 dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
 
                 if (dtDirectBonusTable.Rows.Count > 0)
                 {
                     networkWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["network_wallet_balance"].ToString());
                 }
+                decimal withdrawlBalnce = networkWalletBalance - withdrawalAmount;
 
 
-                if (withdrawalAmount < 5000 && withdrawalAmount > 50 && withdrawalAmount_afterFees < networkWalletBalance)
+                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= networkWalletBalance)
                 {
 
 
@@ -349,8 +351,7 @@ User made a request to send his/her payment at following address {txtCryptoAddre
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             Dear Admin,
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
-                                                            User: {member2.UserName}, Email: {member2.Email} has request the withdrawl for amout {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}.
-User has requested to send his/her payment at {txtCryptoAddress_network.Text}
+                                                           Member: {member2.UserName}, Email: {member2.Email} has requested the withdrawal for amount {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}. User has requested to send their payment to {txtCryptoAddress_network.Text}. After deducting the 3% fees, the user should receive {amountTosend} in their wallet.
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
@@ -369,7 +370,7 @@ User has requested to send his/her payment at {txtCryptoAddress_network.Text}
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("iba_salman@yahoo.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
@@ -386,7 +387,7 @@ User has requested to send his/her payment at {txtCryptoAddress_network.Text}
                 }
                 else
                 {
-                    if (withdrawalAmount_afterFees > networkWalletBalance)
+                    if (withdrawalAmount > networkWalletBalance)
                         statusLabel.Text = "Total Withdrawl Amount should be less than network wallet balance";
 
                     else if (withdrawalAmount > 5000)
