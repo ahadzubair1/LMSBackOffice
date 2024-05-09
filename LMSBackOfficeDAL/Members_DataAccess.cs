@@ -201,7 +201,7 @@ namespace LMSBackOfficeDAL
             }
         }
 
-        public static string AddMembershipPurchase(string MemberID, string MembershipID, string MembershipName, decimal amount, decimal activation_fee)
+        public static string AddMembershipPurchase(string MemberID, string MembershipID, string MembershipName, decimal amount, decimal activation_fee,string desc)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -213,6 +213,7 @@ namespace LMSBackOfficeDAL
                     command.Parameters.Add("@IN_Membership_Name", SqlDbType.NVarChar).Value = MembershipName;
                     command.Parameters.Add("@IN_Membership_Amount", SqlDbType.NVarChar).Value = amount;
                     command.Parameters.Add("@IN_Membership_ActivationFee", SqlDbType.NVarChar).Value = activation_fee;
+                    command.Parameters.Add("@IN_Membership_Desc", SqlDbType.NVarChar).Value = desc;
                     SqlParameter outParameter = command.Parameters.Add("@OUT_Member_ID", SqlDbType.NVarChar, 36); // Assuming 36 is the maximum length of a GUID represented as a string
                     outParameter.Direction = ParameterDirection.Output;
 

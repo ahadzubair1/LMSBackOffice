@@ -19,6 +19,8 @@ namespace LMSBackOfficeWebApplication
 {
     public partial class Memberships : System.Web.UI.Page
     {
+    
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -36,6 +38,7 @@ namespace LMSBackOfficeWebApplication
             string response = string.Empty;
             try
             {
+ 
                 var username = HttpContext.Current.Session["Username"].ToString();
                 DataTable membershipResult = Memberships_DataAccess.GetMembershipDetails(model.MemberShipCode);
                 if (membershipResult != null && membershipResult.Rows.Count > 0)
@@ -43,7 +46,9 @@ namespace LMSBackOfficeWebApplication
                     DataRow row = membershipResult.Rows[0];
                     string MembershipId = row["Membership_ID"].ToString();
                     string MembershipName = row["Membership_Name"].ToString();
-                    double MembershipAmount = Convert.ToDouble(row["Membership_Amount"]);
+                    //double MembershipAmount = Convert.ToDouble(row["Membership_Amount"]);// TODO Manage Promo code by below line
+                    double MembershipActualCost = Convert.ToDouble(row["Membership_Amount"]);
+                    double MembershipAmount = Convert.ToDouble(model.Amount);
                     double ActivationFees = Convert.ToDouble(row["Membership_ActivationFees"]);
                     double TotalAmount = MembershipAmount + ActivationFees;
                     DataTable resultTable = MemberWallets_DataAcsess.GetMemberWalletBalance(username);
@@ -66,11 +71,13 @@ namespace LMSBackOfficeWebApplication
                             double newBalance = Balance - TotalAmount;
                             var member = Members_DataAccess.GetMemberInfo(HttpContext.Current.Session["Username"].ToString());
                             var orderId = Guid.NewGuid().ToString();
+                            string description = MembershipActualCost > MembershipAmount ? "Membership Purchase on Discount" : "Membership Purchase";
                             MemberWallets_DataAcsess.UpdateMemberCreditWallet(MemberId, Convert.ToDecimal(newBalance), 0);
-                            Transactions_DataAcsess.AddTransactions(MemberId, orderId, "Membership Purchase", "USD", Configurations.ToCurrency,
+                            Transactions_DataAcsess.AddTransactions(MemberId, orderId,description, "USD", Configurations.ToCurrency,
                                                             string.Empty, Configurations.CompanyCryptoWallet, "Complete",
                                                             Convert.ToDecimal(model.Amount));
-                            var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees));
+
+                            var SuccessPurchase = Members_DataAccess.AddMembershipPurchase(MemberId, MembershipId, MembershipName, Convert.ToDecimal(MembershipAmount), Convert.ToDecimal(ActivationFees),description);
                             Network_DataAccess.AssignNetworkParent(MemberId);
                             DirectBonus_DataAccess.InsertOrUpdateDirectBonus(MemberId, MembershipAmount);
                             if (SuccessPurchase == "Success")
