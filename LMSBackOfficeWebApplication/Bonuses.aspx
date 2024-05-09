@@ -563,8 +563,6 @@
      }
 </script>
                 <div class="modal-body">
-                  <p class="m-0"><strong>Enter amount you want to withdraw to your crypto wallet.</strong></p>
-                 <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
                     <div class="col-md-12 form-group">
                         <label class="labels"> Amount To Withdraw</label>
                         <asp:TextBox oninput="calculateNetworkFees()"    ID="txtAmount_network" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
@@ -663,9 +661,7 @@
     }
 </script>
                 <div class="modal-body">
-                    <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
-                    <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
-                    <div class="col-md-12 form-group">
+                     <div class="col-md-12 form-group">
                         <label class="labels"> Amount To Withdraw</label>
                         <asp:TextBox oninput="calculateFees()"    ID="txtAmount_direct" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_direct" MaxLength="10" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorAmount" CssClass="text-danger" ControlToValidate="txtAmount_direct" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
