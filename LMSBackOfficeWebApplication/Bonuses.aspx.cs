@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -35,10 +35,10 @@ namespace LMSBackOfficeWebApplication
         {
             if (!IsPostBack)
             {
-                    // Initialize variables
+                // Initialize variables
                 MaxWithdrawalLimit = 5000; // Example value, you can set it as per your requirement
                 minWithdrawlLimit = 50; // Example value, you can set it as per your requirement
-                
+
                 //directWalletBalance = 0; // Example value, you can set it as per your requirement
                 //networkWalletBalance = 0;
 
@@ -50,13 +50,13 @@ namespace LMSBackOfficeWebApplication
                 txtCryptoAddress_direct.Text = member.MemberAddress;
                 txtCryptoAddress_network.Text = member.MemberAddress;
 
-               if( member.KYCRequired)
+                if (member.KYCRequired)
                 {
                     kycmessage.Visible = true;
                     btnwithdraw_Direct.Visible = false;
                     btnwithdraw_network.Visible = false;
                 }
-               else if(member.KYCRequired==false)
+                else if (member.KYCRequired == false)
                 {
                     kycmessage.Visible = false;
                     btnwithdraw_Direct.Visible = true;
@@ -74,7 +74,7 @@ namespace LMSBackOfficeWebApplication
                 string userkaName = Session["Username"].ToString();
                 var memberka = LMSBackOfficeDAL.Members_DataAccess.GetMemberInfo(userkaName);
                 int transactionId = 12345;
-               
+
                 string walletNumber = Convert.ToString("wwwwwwww");
                 decimal withdrawalAmount = Convert.ToDecimal(txtAmount_direct.Text);
                 decimal withdrawalBalance = Convert.ToDecimal(txtFees_direct.Text);
@@ -86,7 +86,7 @@ namespace LMSBackOfficeWebApplication
                 // Call WithdrawRequest function
                 string result = Bonus_DataAccess.WithdrawRequest(transactionId, memberka.Id, walletNumber, withdrawalAmount,
                                                 withdrawalBalance, withdrawalStatus, tradingPlatform,
-                                                withdrawalDescription, isActive,"direct");
+                                                withdrawalDescription, isActive, "direct");
 
                 // Handle the result, for example:
                 if (result == "Success")
@@ -98,7 +98,7 @@ namespace LMSBackOfficeWebApplication
                     //MessageBox.Show("Error: " + result);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -117,8 +117,8 @@ namespace LMSBackOfficeWebApplication
         {
             dtMemberWalletBalances = Bonus_DataAccess.GetMemberWalletsByMemberId(memberId);
             dtNetworkBonusTable = Bonus_DataAccess.GetNetworkBonusByMemberId(memberId);
-            dtDirectBonusTable = Bonus_DataAccess.GetDirectBonusByMemberId(memberId);  
-            
+            dtDirectBonusTable = Bonus_DataAccess.GetDirectBonusByMemberId(memberId);
+
 
             gvNetworkBonus.DataSource = dtNetworkBonusTable;
             gvNetworkBonus.DataBind();
@@ -189,7 +189,7 @@ namespace LMSBackOfficeWebApplication
 
                 dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
 
-                if(dtDirectBonusTable.Rows.Count > 0)
+                if (dtDirectBonusTable.Rows.Count > 0)
                 {
                     directWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["direct_wallet_balance"].ToString());
                     networkWalletBalance = Convert.ToDecimal(dtDirectBonusTable.Rows[0]["network_wallet_balance"].ToString());
@@ -206,7 +206,7 @@ namespace LMSBackOfficeWebApplication
                     // Call WithdrawRequest function
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
-                                                    "Direct Bonus Amount withdraw request", true,"direct");
+                                                    "Direct Bonus Amount withdraw request", true, "direct");
 
 
 
@@ -234,7 +234,7 @@ namespace LMSBackOfficeWebApplication
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             
 
-                                                           Member: {member2.UserName}, Email: {member2.Email} has requested the withdrawal for amount {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}. User has requested to send their payment to {txtCryptoAddress_direct.Text}. After deducting the 3% fees, the user should receive {amounttosend} in their wallet.
+                                                           Member: {member2.UserName}, Email: {member2.Email}, Original Amount (as a Direct Bonus): {withdrawalAmount} at Date: {System.DateTime.Now.ToString()}. Member Crypto Address: {txtCryptoAddress_direct.Text} , Crypto-Wallet-Type: {ddlWalletTypeDB.SelectedItem.Value}. Amount after deducting the 3% fees: {amounttosend} .
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
@@ -254,7 +254,7 @@ namespace LMSBackOfficeWebApplication
             </div>";
                     //signup @tradiix.com;
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
@@ -272,14 +272,14 @@ namespace LMSBackOfficeWebApplication
                 }
                 else
                 {
-                    if(withdrawalAmount > directWalletBalance)
-                   statusLabel.Text = "Total withdrawal amount should be less than the direct wallet balance.";
+                    if (withdrawalAmount > directWalletBalance)
+                        statusLabel.Text = "Total withdrawal amount should be less than the direct wallet balance.";
 
-                    else if (withdrawalAmount > 5000 )
+                    else if (withdrawalAmount > 5000)
                         statusLabel.Text = "Withdrawl amount should be less than equal to 5000";
-                    else if(withdrawalAmount <50)
+                    else if (withdrawalAmount < 50)
                         statusLabel.Text = "Withdrawl amount should be greater than equal to 50";
-                   else
+                    else
                         statusLabel.Text = "Please retry";
 
                     statusLabel.Visible = true;
@@ -306,7 +306,7 @@ namespace LMSBackOfficeWebApplication
 
                 decimal withdrawalAmount = Convert.ToDecimal(txtAmount_network.Text);
                 decimal amountTosend = (withdrawalAmount * 0.97m);
-              
+
                 dtDirectBonusTable = Bonus_DataAccess.GetMemberWalletsByMemberId(member2.Id);
 
                 if (dtDirectBonusTable.Rows.Count > 0)
@@ -325,7 +325,7 @@ namespace LMSBackOfficeWebApplication
                     // Call WithdrawRequest function
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_network.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
-                                                    "Bonus Amount withdraw request", true,"network");
+                                                    "Bonus Amount withdraw request", true, "network");
 
 
 
@@ -351,7 +351,7 @@ namespace LMSBackOfficeWebApplication
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
                                                             Dear Admin,
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
-                                                           Member: {member2.UserName}, Email: {member2.Email} has requested the withdrawal for amount {withdrawalAmount} from Direct Bonus at {System.DateTime.Now.ToString()}. User has requested to send their payment to {txtCryptoAddress_network.Text}. After deducting the 3% fees, the user should receive {amountTosend} in their wallet.
+                                                           Member: {member2.UserName}, Email: {member2.Email}, Original Amount (as a Network Bonus): {withdrawalAmount} at Date: {System.DateTime.Now.ToString()}. Member Crypto Address: {txtCryptoAddress_network.Text} , Crypto-Wallet-Type: {ddlWalletTypeNB.SelectedItem.Value}. Amount after deducting the 3% fees: {amountTosend} .
                                                 <tr>
                                                     <td>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;line-height:1.5;font-weight:400'>
@@ -370,7 +370,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Network Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
@@ -397,7 +397,7 @@ namespace LMSBackOfficeWebApplication
                     else
                         statusLabel.Text = "Please retry";
 
-  
+
 
 
                     statusLabel.Visible = true;
