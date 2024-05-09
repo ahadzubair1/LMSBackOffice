@@ -237,7 +237,7 @@
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
                                     <%--<div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>--%>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-flag="false" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -252,9 +252,9 @@
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
-                                    <!--<div class="d-flex align-items-center justify-content-between"><span class="font-bold"><font color="Yellow" class="blink_me">🌟 Promo Code Enabled Membership</font></span></div>-->
+                                    <div class="d-flex align-items-center justify-content-between"><span class="font-bold"><font color="Yellow" class="blink_me">🌟 Promo Code Enabled Membership</font></span></div>
                                     </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250" data-activation-fee="50" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250"   data-activation-fee="50" data-flag="false" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -324,7 +324,103 @@
             </div>
             <!-- [ Main Content ] end -->
         </div>
-        <div class="modal fade modal-animate anim-blur " id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get all elements with the class membership-btn
+                var purchaseButtons = document.querySelectorAll('.membership-btn');
+               
+                
+
+
+                // Loop through each button
+                purchaseButtons.forEach(function (button) {
+                    // Add a click event listener to each button
+                    button.addEventListener('click', function () {
+                        // Get the data attributes for the clicked button
+                        var amount = button.getAttribute('data-amount');
+
+                        // Check the condition based on the data-amount
+                        if (amount === '250') { // Example condition, adjust as needed
+                            // Show or hide code based on condition
+                            document.getElementById('areaUnderHere').style.display = 'block';
+                        } else {
+                            // Hide the code between <!--Area under Here-->
+                            document.getElementById('areaUnderHere').style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+
+        </script>
+<%--        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Function to apply promo code
+                function applyPromoCode() {
+                    // Get the value of the promo code input
+                    var promoCodeInput = document.getElementById('promoCode').value.trim();
+
+                    // Check if the promo code is MM200
+                    if (promoCodeInput === 'MM200') {
+                        // Change the text of the amount input to 150
+                        document.getElementById('amount').value = '150';
+                    }
+
+                    // Open the modal
+                    var modal = document.getElementById('membershipModal');
+                    var modalInstance = bootstrap.Modal.getInstance(modal);
+                    modalInstance.show();
+                }
+
+                // Add click event listener to the "Apply Promo Code" button
+                var applyPromoButton = document.querySelector('.btn-primary');
+                applyPromoButton.addEventListener('click', function () {
+                    // Execute the function to apply the promo code
+                    applyPromoCode();
+                });
+            });
+
+
+
+
+        </script>--%>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get the button element inside the modal
+                var buttonInsideModal = document.getElementById('buttonInsideModal');
+       
+      
+
+
+                // Add a click event listener to the button
+                buttonInsideModal.addEventListener('click', function (event) {
+                    // Prevent the default behavior of the button (which is closing the modal)
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    var promoCodeInput = document.getElementById('promoCode').value.trim();
+             
+                    // Check if the promo code is MM200
+                    if (promoCodeInput == 'MM200') {
+                        // Change the text of the amount input to 150
+                        alert('Congratulations! Your promo code has been successfully applied.');
+                        document.getElementById('amount').value = '150';
+                      
+                    }
+                    else {
+                        alert('Invalid or Expired Promo Code');
+
+                    }
+
+                    
+
+                    // Add your button click logic here
+                    // For example, you can execute a function or perform any other action
+                });
+            });
+
+        </script>
+             <div class="modal fade modal-animate anim-blur " id="membershipModal" tabindex="-1" aria-labelledby="membershipModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -346,14 +442,21 @@
                                 <label for="activationFee" class="form-label">Activation Fee</label>
                                 <input type="text" style="max-width: 100%" class="form-control w-100" id="activationFee" name="activationFee" readonly />
                             </div>
+                        <!--Area under Here-->
+                            <div id="areaUnderHere" class="mb-3 col-12">
+    <!-- Your code here -->
+
                             <div class="mb-3 col-12">
                                 <label for="membershipCode" class="form-label">Membership Code</label>
                                 <input type="text" style="max-width: 100%" class="form-control w-100" id="membershipCode" name="membershipCode" readonly />
                             </div>
-                            <%--<div class="mb-3 col-12 d-flex align-items-center gap-3">
+                            <div class="mb-3 col-12 d-flex align-items-center gap-3">
                                 <input type="text" class="form-control mw-100 text-uppercase" id="promoCode" name="promoCode" placeholder="Enter promo code" />
-                                <button class="btn btn-primary w-50">Apply Promo Code</button>
-                            </div>--%>
+                                <button id="buttonInsideModal" class="btn btn-primary w-50">Apply Promo Code</button>
+                            </div>
+                                </div>
+                             <!--Till Here-->
+            
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
