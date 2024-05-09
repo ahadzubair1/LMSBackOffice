@@ -105,6 +105,15 @@ namespace LMSBackOfficeWebApplication
         protected global::System.Web.UI.WebControls.TextBox txtAmountAfterDeduction_network;
 
         /// <summary>
+        /// txtTotalWithdrawAmount_network control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalWithdrawAmount_network;
+
+        /// <summary>
         /// txtCryptoAddress_network control.
         /// </summary>
         /// <remarks>
@@ -175,6 +184,15 @@ namespace LMSBackOfficeWebApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAmountAfterDeduction_direct;
+
+        /// <summary>
+        /// txtTotalWithdrawAmount_direct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalWithdrawAmount_direct;
 
         /// <summary>
         /// txtCryptoAddress_direct control.

@@ -598,7 +598,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Withdrawal</h1>
+                    <h1 class="modal-title font-bold fs-4" id="exampleModalLabel">Initiate Bonus Withdrawal</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                <script type="text/javascript">
