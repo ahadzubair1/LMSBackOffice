@@ -374,6 +374,7 @@ namespace LMSBackOfficeDAL
                                     NationalityId = reader["NationalityId"].ToString(),
                                     DOB = reader["Member_DoB"].ToString(),
                                     KYCRequired = reader["Is_KYCRequired"] != DBNull.Value && Convert.ToBoolean(reader["Is_KYCRequired"]),
+                                    MemberCryptoCurrencyType =Convert.ToString( reader["CryptoCurrency_Type"]),
                                 };
                             
                             }

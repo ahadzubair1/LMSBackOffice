@@ -254,7 +254,7 @@ namespace LMSBackOfficeWebApplication
             </div>";
                     //signup @tradiix.com;
 
-                    UtilMethods.SendEmail("signup @tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName+ " ", body);
 
 
                     if (result == "Success")
@@ -273,7 +273,7 @@ namespace LMSBackOfficeWebApplication
                 else
                 {
                     if(withdrawalAmount > directWalletBalance)
-                   statusLabel.Text = "Total Withdrawl Amount should be less than direct wallet balance";
+                   statusLabel.Text = "Total withdrawal amount should be less than the direct wallet balance.";
 
                     else if (withdrawalAmount > 5000 )
                         statusLabel.Text = "Withdrawl amount should be less than equal to 5000";
@@ -370,7 +370,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("signup @tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawl Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")

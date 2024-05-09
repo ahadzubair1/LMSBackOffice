@@ -516,6 +516,17 @@
         </div>
     </main>
 
+       <script>
+    $(document).ready(function () {
+        $('#networkbonusmodal').on('shown.bs.modal', function () {
+            // Set the text of the ASP.NET TextBox using JavaScript
+         document.getElementById('<%=  txtAmount_network.ClientID %>').value= "";
+              document.getElementById('<%= txtFees_network.ClientID %>').value = "";
+            document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value="";
+
+        });
+    });
+       </script>
         <div class="modal fade modal-animate anim-blur" id="networkbonusmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
         <div class="modal-dialog">
@@ -555,7 +566,7 @@
                   <p class="m-0"><strong>Enter amount you want to withdraw to your crypto wallet.</strong></p>
                  <p class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></p>
                     <div class="col-md-12 form-group">
-                        <label class="labels">Amount to withdraw</label>
+                        <label class="labels"> Amount To Withdraw</label>
                         <asp:TextBox oninput="calculateNetworkFees()"    ID="txtAmount_network" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_network" MaxLength="10" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="text-danger" ControlToValidate="txtAmount_network" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAmount_network" CssClass="text-danger" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
@@ -572,7 +583,7 @@
                     </div>
 
                        <div class="col-md-12 form-group">
-       <label class="labels">Amount after fee deduction</label>
+       <label class="labels">Amount After Fee Deduction</label>
        <asp:TextBox ID="txtAmountAfterDeduction_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
@@ -592,7 +603,17 @@
             </div>
         </div>
     </div>
-   
+   <script>
+    $(document).ready(function () {
+        $('#directbonusmodal').on('shown.bs.modal', function () {
+            // Set the text of the ASP.NET TextBox using JavaScript
+         document.getElementById('<%= txtAmount_direct.ClientID %>').value= "";
+              document.getElementById('<%= txtFees_direct.ClientID %>').value = "";
+            document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value="";
+
+        });
+    });
+   </script>
     <div class="modal fade modal-animate anim-blur" id="directbonusmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
         <div class="modal-dialog">
@@ -645,7 +666,7 @@
                     <p class="m-0">Enter amount you want to withdraw to your crypto wallet.</p>
                     <p class="text-dribbble">Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</p>
                     <div class="col-md-12 form-group">
-                        <label class="labels">Amount to withdraw</label>
+                        <label class="labels"> Amount To Withdraw</label>
                         <asp:TextBox oninput="calculateFees()"    ID="txtAmount_direct" CssClass="form-control mw-100"  ValidationGroup="withdrawalValidation_direct" MaxLength="10" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorAmount" CssClass="text-danger" ControlToValidate="txtAmount_direct" ErrorMessage="Amount is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
                         <asp:RangeValidator ID="RangeValidatorAmount" CssClass="text-danger" ControlToValidate="txtAmount_direct" ErrorMessage="Amount should be greater than 50 and less than 5000" MinimumValue="50" MaximumValue="5000" Type="Integer" runat="server" ValidationGroup="withdrawalValidation"></asp:RangeValidator>
@@ -659,7 +680,7 @@
                     </div>
                     
                        <div class="col-md-12 form-group">
-       <label class="labels">Amount after fee deduction</label>
+       <label class="labels">Amount After Fee Deduction</label>
        <asp:TextBox ID="txtAmountAfterDeduction_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 

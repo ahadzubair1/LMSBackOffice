@@ -119,6 +119,9 @@ namespace LMSBackOfficeWebApplication
 
                     string imagePath = GetMembershipImagePath(member.MembershipName);
 
+                    ddlWalletType.SelectedValue = member.MemberCryptoCurrencyType;
+           
+
                     // Set the ImageUrl property
                     imgMembership.ImageUrl = imagePath;
 
@@ -132,8 +135,8 @@ namespace LMSBackOfficeWebApplication
                     rbMale.Enabled = false;
                     btnCancel.Enabled = false;
                     btnUpdate.Enabled = false;
+                    ddlWalletType.Enabled = false;
 
-                    
 
 
 
@@ -263,6 +266,7 @@ namespace LMSBackOfficeWebApplication
             rbMale.Enabled = true;
             btnCancel.Enabled = true;
             btnUpdate.Enabled = true;
+            ddlWalletType.Enabled = true;
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

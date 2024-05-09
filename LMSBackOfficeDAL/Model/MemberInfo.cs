@@ -18,6 +18,7 @@ namespace LMSBackOfficeDAL.Model
         public string MemberWalletBalance { get; set; }
         public string MemberWalletCurrency { get; set; }
         public string MemberCurrency { get; set; } = "USD";
+        public string MemberCryptoCurrencyType { get; set; } 
 
         public string Sponsor { get; set; }
         public string Country { get; set; }
