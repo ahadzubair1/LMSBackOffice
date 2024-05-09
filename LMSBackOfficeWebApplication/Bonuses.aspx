@@ -517,12 +517,12 @@
     </main>
 
        <script>
-    $(document).ready(function () {
-        $('#networkbonusmodal').on('shown.bs.modal', function () {
-            // Set the text of the ASP.NET TextBox using JavaScript
-         document.getElementById('<%=  txtAmount_network.ClientID %>').value= "";
-              document.getElementById('<%= txtFees_network.ClientID %>').value = "";
-            document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value="";
+           $(document).ready(function () {
+               $('#networkbonusmodal').on('shown.bs.modal', function () {
+                   // Set the text of the ASP.NET TextBox using JavaScript
+                   document.getElementById('<%=  txtAmount_network.ClientID %>').value = "";
+            document.getElementById('<%= txtFees_network.ClientID %>').value = "";
+            document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value = "";
 
         });
     });
@@ -546,10 +546,10 @@
                        var minimumWithdrawalLimit = <%= minWithdrawlLimit %>;
                        var customVariable = <%= networkWalletBalance %>;
 
-                      
+
                        args.IsValid = false;
                        //!isNaN(amount) && amount >= minimumWithdrawalLimit && amount <= maxWithdrawalLimit && amountAfterFees <= customVariable;
-    }
+                   }
                </script>
 
 <script type="text/javascript">
@@ -557,7 +557,7 @@
         var amount = document.getElementById('<%= txtAmount_network.ClientID %>').value;
         var fees = parseFloat(amount) * 0.03; // Calculating 3% of the amount
         document.getElementById('<%= txtFees_network.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_network with 2 decimal places
-         document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value=(parseFloat(amount) -fees).toFixed(2);
+        document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value=(parseFloat(amount) -fees).toFixed(2);
    
 
      }
@@ -585,12 +585,25 @@
        <asp:TextBox ID="txtAmountAfterDeduction_network" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
 
+                    <div class="col-md-12 form-group">
+                    <label cssclass="labels">Crypto Wallet Type</label>
+                    <asp:DropDownList ID="ddlWalletTypeNB" name="ddlWalletTypeNB" CssClass="form-control mw-100" CausesValidation="true" runat="server">
+                    <asp:ListItem Text="Select Wallet Type" Value="-1" Selected="True" />
+                    <asp:ListItem Text="USDT TRC20" Value="TRC20" />
+                    <asp:ListItem Text="USDT ERC20" Value="ERC20" />
+                    <asp:ListItem Text="TRON" Value="TRON" />
+                    </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="rfv_List" ValidationGroup="withdrawalValidation_network" runat="server" InitialValue="-1" Display="Dynamic" CssClass="text-danger"  ControlToValidate="ddlWalletTypeNB" ErrorMessage="Select Valid Crypto Wallet Type." />
+                    </div>
+
+  
+
 
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
                         <asp:TextBox ID="txtCryptoAddress_network"   MaxLength="100" runat="server" CssClass="form-control mw-100"></asp:TextBox>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="text-danger" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_network"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="text-danger" ValidationGroup="withdrawalValidation_network" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ></asp:RequiredFieldValidator>
 
                     </div>
                 </div>
@@ -657,7 +670,7 @@
         var amount = document.getElementById('<%= txtAmount_direct.ClientID %>').value;
         var fees = parseFloat(amount) * 0.03; // Calculating 3% of the amount
         document.getElementById('<%= txtFees_direct.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_direct with 2 decimal places
-               document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value=(parseFloat(amount) * 0.97).toFixed(2);
+               document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value = (parseFloat(amount) * 0.97).toFixed(2);
     }
 </script>
                 <div class="modal-body">
@@ -679,6 +692,19 @@
        <label class="labels">Amount After Fee Deduction</label>
        <asp:TextBox ID="txtAmountAfterDeduction_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
    </div>
+
+
+
+                    <div class="col-md-12 form-group">
+                    <label cssclass="labels">Crypto Wallet Type</label>
+                    <asp:DropDownList ID="ddlWalletTypeDB" name="ddlWalletTypeDB" CssClass="form-control mw-100" CausesValidation="true" runat="server">
+                    <asp:ListItem Text="Select Wallet Type" Value="-1" Selected="True" />
+                    <asp:ListItem Text="USDT TRC20" Value="TRC20" />
+                    <asp:ListItem Text="USDT ERC20" Value="ERC20" />
+                    <asp:ListItem Text="TRON" Value="TRON" />
+                    </asp:DropDownList>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" InitialValue="-1" Display="Dynamic" CssClass="text-danger" ControlToValidate="ddlWalletTypeDB" ValidationGroup="withdrawalValidation_direct" ErrorMessage="Select Valid Crypto Wallet Type." />
+                    </div>
 
 
                     <div class="col-md-12 form-group">
