@@ -226,7 +226,7 @@ namespace LMSBackOfficeWebApplication
                                                     <img title='A Global Education & Research Ltd' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
                                                 <tr>
                                                     <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
-                                                        Bonus Withdrawl Request
+                                                        Bonus Withdrawal Request
                                                 <tr>
                                                     <td colspan=2>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
@@ -345,7 +345,7 @@ namespace LMSBackOfficeWebApplication
                                                     <img title='A Global Education & Research Ltd' border=0 src='https://tradiix.com/Content/images/logo-v-dark.png' style='width:150px'>
                                                 <tr>
                                                     <td colspan=2 align='center' style='font-weight:700;font-size:25px;color:#d014e4;font-family:open sans,Calibri,Tahoma,sans-serif'>
-                                                        Bonus Withdrawl Request
+                                                        Bonus Withdrawal Request
                                                 <tr>
                                                     <td colspan=2>
                                                         <p style='font-family:open sans,Calibri,Tahoma,sans-serif;color:#fff;font-size:18px;font-weight:400;line-height:1;margin:0 0 20px 0'>
