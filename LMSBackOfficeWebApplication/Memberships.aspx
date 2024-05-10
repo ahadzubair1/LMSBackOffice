@@ -452,7 +452,7 @@
                             </div>
                             <div class="mb-3 col-12 d-flex align-items-center gap-3">
                                 <input type="text" class="form-control mw-100 text-uppercase" id="promoCode" name="promoCode" placeholder="Enter promo code" />
-                                <button id="buttonInsideModal" class="btn btn-primary w-50">Apply Promo Code</button>
+                                <button id="buttonInsideModal" class="btn btn-primary w-50" maxlength="5">Apply Promo Code</button>
                             </div>
                                 </div>
                              <!--Till Here-->
