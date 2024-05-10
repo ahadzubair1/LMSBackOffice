@@ -524,6 +524,8 @@
             document.getElementById('<%= txtFees_network.ClientID %>').value = "";
             document.getElementById('<%=   txtAmountAfterDeduction_network.ClientID %>').value = "";
 
+                   document.getElementById('<%= txtCryptoAddress_network.ClientID %>').value = "";
+
         });
     });
        </script>
@@ -621,6 +623,9 @@
          document.getElementById('<%= txtAmount_direct.ClientID %>').value= "";
               document.getElementById('<%= txtFees_direct.ClientID %>').value = "";
             document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value="";
+
+
+            document.getElementById('<%=   txtCryptoAddress_direct.ClientID %>').value = "";
 
         });
     });
