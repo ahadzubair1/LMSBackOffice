@@ -144,10 +144,13 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="upload" class="form-label">Upload Excel File</label>
-                                            <input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="upload" required />
+                                            <%--<input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="upload" required />--%>
+                                             <asp:FileUpload ID="fileUpload" runat="server" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />
+                                            <%--<input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />--%>
+                                                <asp:Button ID="btnUpload" runat="server" CausesValidation="false" Text="Upload" class="btn btn-tr no-hover" OnClick="btnUpload_Click" />
+        </div>
                                             <span class="btn btn-outline-danger m-l-10">Reset</span>
                                         </div>
                                     </div>
