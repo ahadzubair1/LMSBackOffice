@@ -432,7 +432,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Network Bonus</h6>
+                                        <h6 class="mb-0" title="Tooltip Text Here">Recent Network Bonus</h6>
                                     </div>
                                 </div>
                                 <div>
