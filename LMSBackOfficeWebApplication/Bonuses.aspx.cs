@@ -197,20 +197,13 @@ namespace LMSBackOfficeWebApplication
                 decimal withdrawlBalnce = directWalletBalance - withdrawalAmount;
 
 
-                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= directWalletBalance)
+                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= directWalletBalance && (txtCryptoAddress_direct.Text.Length==34 || txtCryptoAddress_direct.Text.Length == 42) )
                 {
-
-
-
 
                     // Call WithdrawRequest function
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_direct.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
                                                     "Direct Bonus Amount withdraw request", true, "direct");
-
-
-
-
 
                     string body = $@"<div>
             <div>
@@ -316,21 +309,13 @@ namespace LMSBackOfficeWebApplication
                 decimal withdrawlBalnce = networkWalletBalance - withdrawalAmount;
 
 
-                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= networkWalletBalance)
+                if (withdrawalAmount <= 5000 && withdrawalAmount >= 50 && withdrawalAmount <= networkWalletBalance && (txtCryptoAddress_network.Text.Length == 34 || txtCryptoAddress_network.Text.Length==42) )
                 {
-
-
-
 
                     // Call WithdrawRequest function
                     string result = Bonus_DataAccess.WithdrawRequest(Convert.ToInt32("12345"), member2.Id, txtCryptoAddress_network.Text, withdrawalAmount,
                                                     withdrawlBalnce, "Pending", "Tradiix",
                                                     "Bonus Amount withdraw request", true, "network");
-
-
-
-
-
                     string body = $@"<div>
             <div>
                 <div>
