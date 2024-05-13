@@ -603,15 +603,16 @@
 
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
-                        <asp:TextBox ID="txtCryptoAddress_network"   MaxLength="100" runat="server" CssClass="form-control mw-100"></asp:TextBox>
+                        <asp:TextBox ID="txtCryptoAddress_network"  MaxLength="42" runat="server" CssClass="form-control mw-100"></asp:TextBox>
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="text-danger" ValidationGroup="withdrawalValidation_network" ControlToValidate="txtCryptoAddress_network" ErrorMessage="Crypto Wallet Address is required" runat="server" ></asp:RequiredFieldValidator>
+                         <asp:CustomValidator ID="CustomValidator2" SetFocusOnError="true" ControlToValidate="txtCryptoAddress_network" ClientIDMode="Inherit" Display="Dynamic" CssClass="text-danger" ErrorMessage="Valid Cypto Address is Required" ClientValidationFunction="ValidateAddress();" EnableClientScript="true" runat="server" ValidationGroup="withdrawalValidation_network"></asp:CustomValidator>
 
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="btncancel_network" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                    <asp:Button runat="server" ID="btnwithdraw_network"   class="btn btn-tr no-hover" CausesValidation="true"  ValidationGroup="withdrawalValidation_network"  Text="Withdraw Now"  OnClick="btnWithDraw_network_Click" />
+                    <asp:Button runat="server" ID="btnwithdraw_network" class="btn btn-tr no-hover" CausesValidation="true"  ValidationGroup="withdrawalValidation_network"  Text="Withdraw Now"  OnClick="btnWithDraw_network_Click" />
                 </div>
             </div>
         </div>
@@ -621,14 +622,56 @@
         $('#directbonusmodal').on('shown.bs.modal', function () {
             // Set the text of the ASP.NET TextBox using JavaScript
          document.getElementById('<%= txtAmount_direct.ClientID %>').value= "";
-              document.getElementById('<%= txtFees_direct.ClientID %>').value = "";
-            document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value="";
+              document.getElementById('<%=txtFees_direct.ClientID %>').value = "";
+            document.getElementById('<%=txtAmountAfterDeduction_direct.ClientID %>').value="";
 
 
-            document.getElementById('<%=   txtCryptoAddress_direct.ClientID %>').value = "";
+            document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value = "";
 
         });
     });
+
+
+
+       function ValidateAddress() {
+           var addrLength = document.getElementById('<%=txtCryptoAddress_network.ClientID %>').value.length;
+           var walletType = document.getElementById('<%=ddlWalletTypeNB.ClientID %>').value;
+           
+
+           if (walletType != '-1') {
+              
+               if (walletType == 'TRC20' || walletType == 'TRON' ) {
+                   let trnAddr = document.getElementById('<%=txtCryptoAddress_network.ClientID %>').value;
+                   let resultT = trnAddr.startsWith("T");
+
+                   if (addrLength == 34 && resultT==true) {
+                       return true;
+                   }
+                   else {
+                       alert('Valid Crypto TRON/TRC20 Wallet Address is Required : Starting with "T" having length 34 Characters');
+                       document.getElementById('<%=txtCryptoAddress_network.ClientID %>').value = "";
+                       return false;
+                   }
+               }
+
+               if (walletType == 'ERC20' ) {
+                                      
+                   let ercAddr = document.getElementById('<%=txtCryptoAddress_network.ClientID %>').value;
+                   let result = ercAddr.startsWith("0x");
+
+                   if (addrLength == 42 && result==true) {
+                       return true;
+                   }
+                   else {
+                       alert('Valid Crypto ERC20 Wallet Address is Required : Starting with "0x" having length 42 Characters');
+                       document.getElementById('<%=txtCryptoAddress_network.ClientID %>').value = "";
+                       return false;
+                   }
+               }
+           }
+
+           
+       }
    </script>
     <div class="modal fade modal-animate anim-blur" id="directbonusmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
@@ -656,9 +699,9 @@
                        var amountTextBox = document.getElementById('<%= txtAmount_direct.ClientID %>');
                        var amount = parseFloat(amountTextBox.value) * 1.0;
                        var amountAfterFees = parseFloat(amountTextBox.value) * 1.03;
-        var maxWithdrawalLimit = <%= MaxWithdrawalLimit %>;
-        var minimumWithdrawalLimit = <%= minWithdrawlLimit %>;
-        var customVariable = <%= directWalletBalance %>;
+                        var maxWithdrawalLimit = <%= MaxWithdrawalLimit %>;
+                        var minimumWithdrawalLimit = <%= minWithdrawlLimit %>;
+                        var customVariable = <%= directWalletBalance %>;
 
                        alert('amount');
                        //alert(amount);
@@ -677,6 +720,46 @@
         document.getElementById('<%= txtFees_direct.ClientID %>').value = fees.toFixed(2); // Setting fees in txtFees_direct with 2 decimal places
                document.getElementById('<%=   txtAmountAfterDeduction_direct.ClientID %>').value = (parseFloat(amount) * 0.97).toFixed(2);
     }
+
+
+
+    function ValidateDirectAddress() {
+        var addrLength = document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value.length;
+        var walletType = document.getElementById('<%=ddlWalletTypeDB.ClientID %>').value;
+
+        if (walletType != '-1') {
+
+            if (walletType == 'TRC20' || walletType == 'TRON') {
+                let trnAddr = document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value;
+                let resultT = trnAddr.startsWith("T");
+
+            if (addrLength == 34 && resultT==true) {
+                return true;
+            }
+            else {
+                alert('Valid Crypto TRON/TRC20 Wallet Address is Required : Starting with "T" having length 34 Characters');
+                document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value = "";
+                return false;
+            }
+        }
+
+        if (walletType == 'ERC20' ) {
+                           
+            let ercAddr = document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value;
+            let result = ercAddr.startsWith("0x");
+
+            if (addrLength == 42 && result == true) {
+                return true;
+            }
+            else {
+                alert('Valid Crypto ERC20 Wallet Address is Required : Starting with "0x" having length 42 Characters');
+                document.getElementById('<%=txtCryptoAddress_direct.ClientID %>').value = "";
+                return false;
+            }
+            }
+        }
+      
+    }
 </script>
                 <div class="modal-body">
                      <div class="col-md-12 form-group">
@@ -694,9 +777,9 @@
                     </div>
                     
                        <div class="col-md-12 form-group">
-       <label class="labels">Amount After Fee Deduction</label>
-       <asp:TextBox ID="txtAmountAfterDeduction_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
-   </div>
+                        <label class="labels">Amount After Fee Deduction</label>
+                        <asp:TextBox ID="txtAmountAfterDeduction_direct" Enabled="false" MaxLength="10" runat="server" CssClass="form-control mw-100"></asp:TextBox>
+                        </div>
 
 
 
@@ -714,10 +797,11 @@
 
                     <div class="col-md-12 form-group">
                         <label class="labels">Crypto Wallet Address</label>
-                        <asp:TextBox ID="txtCryptoAddress_direct"   MaxLength="100" runat="server" CssClass="form-control mw-100"></asp:TextBox>
-
+                        <asp:TextBox ID="txtCryptoAddress_direct"  MaxLength="42" runat="server" CssClass="form-control mw-100"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidatorCryptoAddress" CssClass="text-danger" ControlToValidate="txtCryptoAddress_direct" ErrorMessage="Crypto Wallet Address is required" runat="server" ValidationGroup="withdrawalValidation_direct"></asp:RequiredFieldValidator>
-
+                        <asp:CustomValidator ID="CustomValidator3" SetFocusOnError="true" ControlToValidate="txtCryptoAddress_direct" ClientValidationFunction="ValidateDirectAddress();" EnableClientScript="true" CssClass="text-danger" ErrorMessage="Valid Cypto Address is Required"  runat="server" ValidationGroup="withdrawalValidation_direct"></asp:CustomValidator>
+                    
+                    
                     </div>
                 </div>
                 <div class="modal-footer">
