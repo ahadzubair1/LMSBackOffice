@@ -52,6 +52,18 @@ namespace LMSBackOfficeWebApplication
                         }
                     }
                 }
+
+                //HIDE/SHOW BONUS-WITHDRAWAL-STATUS-MENU
+                string loggedInUser = Convert.ToString(Session["Username"]);
+                if (loggedInUser == "tradiix_genesis")
+                {
+                    liBWSU.Visible = true;
+                }
+                else if(loggedInUser !="tradiix_genesis")
+                {
+                    liBWSU.Visible = false;
+
+                }
             }
             bool membershipExist = Memberships_DataAccess.CheckMembershipExist(Session["Username"].ToString());
 

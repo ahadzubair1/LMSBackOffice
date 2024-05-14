@@ -432,7 +432,9 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Network Bonus</h6>
+                                        <h6 class="mb-0"  >Recent Network Bonus</h6>
+                                          
+
                                     </div>
                                 </div>
                                 <div>
@@ -442,8 +444,9 @@
                                         </div>
                                         <div class="col-5 p-0">
                                             <h5 class="mb-1">
-                                                <asp:Label runat="server" Text="0$" ID="lblNetworkBonus"></asp:Label></h5>
-                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right"></i>0%</p>
+                                                <asp:Label runat="server" data-bs-toggle="tooltip" title="
+Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:Label></h5>
+                                            <p class="text-success mb-0"><i class="ti ti-arrow-up-right" ></i>0%</p>
                                         </div>
                                     </div>
                                 </div>
