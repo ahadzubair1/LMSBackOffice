@@ -117,6 +117,8 @@
                                     <li class="breadcrumb-item"><a href="javascript: void(0)">Bonus Withdrawal Status Update</a></li>
                                 </ul>
                             </div>
+                                                      <asp:Label ID="statusLabel" Visible="false" CssClass="alert alert-danger d-block py-1 mb-0 mt-2" runat="server"></asp:Label>
+          
                         </div>
                     </div>
                 </div>
@@ -150,8 +152,9 @@
                                         <div class="form-group">
                                             <%--<input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />--%>
                                                 <asp:Button ID="btnUpload" runat="server" CausesValidation="false" Text="Upload" class="btn btn-tr no-hover" OnClick="btnUpload_Click" />
+                                                <asp:Button ID="btnCancel" runat="server" CausesValidation="false" Text="Cancel" class="btn btn-tr no-hover" OnClick="btnCancel_Click" />
         </div>
-                                            <span class="btn btn-outline-danger m-l-10">Reset</span>
+                                        <%--    <span class="btn btn-outline-danger m-l-10">Reset</span>--%>
                                         </div>
                                     </div>
                                     <div class="col-md-4 text-center">

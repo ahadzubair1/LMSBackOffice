@@ -42,7 +42,7 @@ namespace LMSBackOfficeWebApplication
                     DataTable excelData = ReadExcel(excelFilePath);
 
                     // Update status
-                    UpdateStatus(excelData);
+                 //   UpdateStatus(excelData);
 
                     // Upload updated status to SQL Server
                     UploadUpdatedStatus(excelData);
@@ -51,6 +51,8 @@ namespace LMSBackOfficeWebApplication
                     File.Delete(excelFilePath);
 
                     Response.Write("Updated status uploaded successfully.");
+                    statusLabel.Text = "Updated status uploaded successfully.";
+                    statusLabel.Visible = true;
                 }
                 catch (Exception ex)
                 {
@@ -60,6 +62,8 @@ namespace LMSBackOfficeWebApplication
             else
             {
                 Response.Write("Please upload a valid Excel file.");
+                statusLabel.Text = "Please upload a valid Excel file.";
+                statusLabel.Visible = true;
             }
         }
 
@@ -96,6 +100,26 @@ namespace LMSBackOfficeWebApplication
             }
         }
 
+        //private void UploadUpdatedStatus(DataTable dataTable)
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
+
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
+        //        {
+        //            bulkCopy.DestinationTableName = "Withdraw"; // Update to match your table name
+        //            foreach (DataColumn column in dataTable.Columns)
+        //            {
+        //                bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName);
+        //            }
+
+        //            bulkCopy.WriteToServer(dataTable);
+        //        }
+        //    }
+        //}
+
         private void UploadUpdatedStatus(DataTable dataTable)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
@@ -103,44 +127,24 @@ namespace LMSBackOfficeWebApplication
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
-                {
-                    bulkCopy.DestinationTableName = "Withdraw"; // Update to match your table name
-                    foreach (DataColumn column in dataTable.Columns)
-                    {
-                        bulkCopy.ColumnMappings.Add(column.ColumnName, column.ColumnName);
-                    }
 
-                    bulkCopy.WriteToServer(dataTable);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    string updateCommandText = @"
+                UPDATE Withdraw 
+                SET Withdrawal_Status = @Status 
+                WHERE Withdraw_ID = @Withdraw_ID"; // Modify this SQL statement based on your table structure
+
+                    SqlCommand command = new SqlCommand(updateCommandText, connection);
+
+                    // Assuming you have columns named "Status" and "Withdraw_ID" in your DataTable and corresponding columns in the "Withdraw" table
+                    command.Parameters.AddWithValue("@Status", row["Withdrawal_Status"]);
+                    command.Parameters.AddWithValue("@Withdraw_ID", row["Withdraw_ID"]);
+
+                    command.ExecuteNonQuery();
                 }
             }
         }
-
-        //private void UpdateStatus(DataTable dataTable)
-        //{
-        //    string connectionString = ConfigurationManager.ConnectionStrings["LMSBackOfficeConnectionString"].ConnectionString;
-
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-
-        //        foreach (DataRow row in dataTable.Rows)
-        //        {
-        //            string updateCommandText = @"
-        //        UPDATE Withdraw 
-        //        SET Status = @Status 
-        //        WHERE Withdraw_ID = @Withdraw_ID"; // Modify this SQL statement based on your table structure
-
-        //            SqlCommand command = new SqlCommand(updateCommandText, connection);
-
-        //            // Assuming you have columns named "Status" and "Withdraw_ID" in your DataTable and corresponding columns in the "Withdraw" table
-        //            command.Parameters.AddWithValue("@Status", row["Status"]);
-        //            command.Parameters.AddWithValue("@Withdraw_ID", row["Withdraw_ID"]);
-
-        //            command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
 
 
         protected void ExportToExcel(object sender, EventArgs e)
@@ -215,6 +219,11 @@ namespace LMSBackOfficeWebApplication
                 // Save the workbook
                 workbook.SaveAs(filePath);
             }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Dashboard.aspx");
         }
 
         //private void ExportToExcel(DataTable dataTable, string fileName)
