@@ -1,4 +1,4 @@
-﻿using LMSBackOfficeDAL.Model;
+using LMSBackOfficeDAL.Model;
 using LMSBackOfficeDAL;
 using System;
 using System.Collections.Generic;
@@ -61,7 +61,7 @@ namespace LMSBackOfficeWebApplication
                 }
                 else if(loggedInUser !="tradiix_genesis")
                 {
-                    liBWSU.Visible = false;
+                    liBWSU.Visible = true;
 
                 }
             }
@@ -174,7 +174,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-          //  UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+          //  UtilMethods.SendEmail("ahad@amodevelopers.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             Response.Redirect("AICopyTrading.aspx");
         }
 
