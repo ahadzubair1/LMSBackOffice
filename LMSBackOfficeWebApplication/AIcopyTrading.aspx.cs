@@ -1,4 +1,4 @@
-﻿using LMSBackofficeDAL;
+using LMSBackofficeDAL;
 using LMSBackOfficeDAL;
 using System;
 using System.Collections.Generic;
@@ -62,7 +62,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+            UtilMethods.SendEmail("ahad@amodevelopers.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             Response.Redirect("AICopyTrading.aspx");
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+            UtilMethods.SendEmail("ahad@amodevelopers.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             ;
             //Response.Redirect("https://my.startrader.com/register/index?invitationCode=ZNGHAJG5&language=en");
             Response.Redirect("https://www.octafx.com/?refid=if6471013");
@@ -205,7 +205,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-            UtilMethods.SendEmail("signup@tradiix.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
+            UtilMethods.SendEmail("ahad@amodevelopers.com", "User: " + member.UserName + " accessed AI Copy Trading", body);
             ;
             Response.Redirect("https://my.fxlvls.com/register?referral=15");
         }
