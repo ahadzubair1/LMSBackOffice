@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMSBackOfficeWebApplication.SiteMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LMSBackOfficeWebApplication.SiteMaster" %>
 
 <%@ Register Src="~/MemberTopUp.ascx" TagPrefix="uc1" TagName="MemberTopUp" %>
 
@@ -489,7 +489,7 @@
                                         <use xlink:href="#custom-document-filter"></use>
                                     </svg>
                                 </span>
-                                <span  class="pc-mtext">KYC  &nbsp;<span id="kycPending" runat="server" class="badge bg-primary-t">Pending</span></span>
+                                <span  class="pc-mtext">Identity Verification<span id="kycPending" runat="server" class="badge bg-primary-t">Pending</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -499,7 +499,7 @@
                                         <use xlink:href="#custom-password-check"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Academy Portal </span>
+                                <span class="pc-mtext">Learning Hub</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -510,7 +510,7 @@
                                         <use xlink:href="#custom-keyboard"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Wallets</span>
+                                <span class="pc-mtext">Virtual Vaults</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -520,7 +520,7 @@
                                         <use xlink:href="#custom-user-add"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Products & Services</span>
+                                <span class="pc-mtext">Subscriptions</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -531,7 +531,7 @@
                                         <use xlink:href="#custom-share-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Networks / Partners</span>
+                                <span class="pc-mtext">Network Hierarchy</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -541,7 +541,7 @@
                                         <use xlink:href="#custom-dollar-square"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Bonuses / Team-Bonuses</span>
+                                <span class="pc-mtext">Team Rewards</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -551,7 +551,7 @@
                                         <use xlink:href="#custom-star-bold"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Ranks & Rewards</span>
+                                <span class="pc-mtext">Levels & Incentives</span>
                             </a>
                         </li>
 
@@ -562,7 +562,7 @@
                                         <use xlink:href="#custom-presentation-chart"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">AI Copy Trading</span>&nbsp;<span id="comingsoonspan" runat="server" class="badge bg-primary-t">On Purchase</span>
+                                <span class="pc-mtext">AI-Powered Trade Replication</span>&nbsp;<span id="comingsoonspan" runat="server" class="badge bg-primary-t">On Purchase</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -572,7 +572,7 @@
                                         <use xlink:href="#custom-shapes"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext" title="Recommended Brokers">FX Brokers</span>&nbsp;<span class="badge bg-primary-t">Coming Soon</span>
+                                <span class="pc-mtext" title="Recommended Brokers">Currency Traders</span>&nbsp;<span class="badge bg-primary-t">Coming Soon</span>
                                 <i data-feather="chevron-down"></i>
                             </a>
                             <!-- <ul class="collapse nav flex-column ms-1 submenu" id="submenu1" data-bs-parent="#menu">
@@ -591,7 +591,7 @@
                                         <use xlink:href="#custom-presentation-chart"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Transactions</span>
+                                <span class="pc-mtext">Deals / Exchanges</span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -602,7 +602,7 @@
                                         <use xlink:href="#custom-direct-inbox"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Tools  &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
+                                <span class="pc-mtext">Media Centre &nbsp;<span class="badge bg-primary-t">Coming Soon</span></span>
                             </a>
                         </li>
                         <li class="pc-item">
@@ -613,19 +613,19 @@
                                         <use xlink:href="#custom-message-2"></use>
                                     </svg>
                                 </span>
-                                <span class="pc-mtext">Support Tickets</span>
+                                <span class="pc-mtext">Service Requests</span>
                             </a>
                         </li>
 
                            
-                            <li class="pc-item" runat="server" id="liBWSU" visible="false" >
+                            <li class="pc-item" runat="server" id="liBWSU" visible="true" >
                             <a href="BonusWithdrawalUpdate.aspx" class="pc-link">
                             <span class="pc-micon">
                             <svg class="pc-icon">
                             <use xlink:href="#custom-message-2"></use>
                             </svg>
                             </span>
-                            <span class="pc-mtext">Bonus Withdrawal Status</span>
+                            <span class="pc-mtext">Withdrawal Progress</span>
                             </a>
                             </li>
 
