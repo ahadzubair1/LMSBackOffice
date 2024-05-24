@@ -247,7 +247,7 @@ namespace LMSBackOfficeWebApplication
             </div>";
                     //signup @tradiix.com;
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Direct Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("ahad@amodevelopers.com", "Direct Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
@@ -355,7 +355,7 @@ namespace LMSBackOfficeWebApplication
                 </div>
             </div>";
 
-                    UtilMethods.SendEmail("signup@tradiix.com", "Network Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
+                    UtilMethods.SendEmail("ahad@amodevelopers.com", "Network Bonus Withdrawal Request by User: " + member2.UserName + " ", body);
 
 
                     if (result == "Success")
