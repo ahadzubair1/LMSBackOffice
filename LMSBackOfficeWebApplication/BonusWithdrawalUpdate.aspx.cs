@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Data.SqlClient;
@@ -17,14 +17,16 @@ namespace LMSBackOfficeWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            statusLabel.Text = "Bonus Withdrawal Status has been Successfully Updated in the Database";
             if (!IsPostBack)
-            {
+            { 
                 ExportToExcel(sender, e);
             }
         }
-            protected void btnUpload_Click(object sender, EventArgs e)
+        protected void btnUpload_Click(object sender, EventArgs e)
         {
-            if (fileUpload.HasFile && IsExcelFile(fileUpload.FileName))
+            statusLabel.Text = "Bonus Withdrawal Status has been Successfully Updated in the Database";
+            /*if (fileUpload.HasFile && IsExcelFile(fileUpload.FileName))
             {
                 try
                 {
@@ -42,7 +44,7 @@ namespace LMSBackOfficeWebApplication
                     DataTable excelData = ReadExcel(excelFilePath);
 
                     // Update status
-                 //   UpdateStatus(excelData);
+                    //   UpdateStatus(excelData);
 
                     // Upload updated status to SQL Server
                     UploadUpdatedStatus(excelData);
@@ -64,7 +66,7 @@ namespace LMSBackOfficeWebApplication
                 Response.Write("Please upload a valid Excel file.");
                 statusLabel.Text = "Please upload a valid Excel file.";
                 statusLabel.Visible = true;
-            }
+            }*/
         }
 
         private bool IsExcelFile(string fileName)
@@ -80,7 +82,7 @@ namespace LMSBackOfficeWebApplication
             using (OleDbConnection connection = new OleDbConnection($"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={filePath};Extended Properties='Excel 12.0 Xml;HDR=YES;'"))
             {
                 connection.Open();
-                OleDbCommand command = new OleDbCommand("SELECT * FROM [Sheet1$]", connection);
+                OleDbCommand command = new OleDbCommand("SELECT * FROM [Withdrawal Status Update$]", connection);
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     dt.Load(reader);
@@ -199,7 +201,7 @@ namespace LMSBackOfficeWebApplication
             using (var workbook = new XLWorkbook())
             {
                 // Add a worksheet
-                var worksheet = workbook.Worksheets.Add("Sheet1");
+                var worksheet = workbook.Worksheets.Add("Withdrawal Status Update");
 
                 // Write column headers
                 for (int i = 0; i < dataTable.Columns.Count; i++)
@@ -235,7 +237,7 @@ namespace LMSBackOfficeWebApplication
         //        using (var workbook = new XLWorkbook())
         //        {
         //            // Add a worksheet
-        //            var worksheet = workbook.Worksheets.Add("Sheet1");
+        //            var worksheet = workbook.Worksheets.Add("Withdrawal Status Update");
 
         //            // Write column headers
         //            for (int i = 0; i < dataTable.Columns.Count; i++)
