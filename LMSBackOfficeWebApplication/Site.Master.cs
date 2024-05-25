@@ -55,11 +55,11 @@ namespace LMSBackOfficeWebApplication
 
                 //HIDE/SHOW BONUS-WITHDRAWAL-STATUS-MENU
                 string loggedInUser = Convert.ToString(Session["Username"]);
-                if (loggedInUser == "tradiix_level4_01")
+                if (loggedInUser == "salahayubi")
                 {
                     liBWSU.Visible = true;
                 }
-                else if(loggedInUser !="tradiix_level4_01")
+                else if(loggedInUser != "salahayubi")
                 {
                     liBWSU.Visible = false;
 
