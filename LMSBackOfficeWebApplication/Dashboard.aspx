@@ -126,7 +126,7 @@
                     <div class="banner-caption">
                         <h2 class="text-white">Welcome!</h2>
                         <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
-                        <font color="#dd12ec" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
+                        <font color="#06cfff" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
                         <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="orbit">
@@ -745,7 +745,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                             </svg>
 
                                         </div>
-                                        <h6 class="text-white position-relative" style="background: #de0eed; padding: 5px 10px; border-radius: 70px;">Basic Rank: <span class="pill">Explorer</span></h6>
+                                        <h6 class="text-white position-relative" style="background: #06cfff; padding: 5px 10px; border-radius: 70px;">Basic Rank: <span class="pill">Explorer</span></h6>
                                         <h6 class="text-white position-relative" style="background: #232f45; padding: 5px 10px; border-radius: 70px;">Next Rank: <span class="pill">Connector-X</span></h6>
                                         <div id="typewriter" class="text-center text-white position-relative" style="background: #232f45; padding: 5px 10px; border-radius: 70px;">
                                         </div>
