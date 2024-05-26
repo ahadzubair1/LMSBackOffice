@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -366,7 +366,7 @@ namespace LMSBackOfficeDAL
                                     MemberWalletBalance = reader["Wallet_Balance"].ToString(),
                                     MemberWalletCurrency = reader["Wallet_Currency"].ToString(),
                                     Sponsor = reader["Sponsor"].ToString(),
-                                    Country = reader["CountryID"].ToString(),
+                                    Country = reader["MemberCountry"].ToString(),  //change here
                                     MembershipName = reader["Membership_Name"].ToString(),
                                     MemberRank = reader["Member_RankDesc"].ToString(),
                                     CountryId = reader["CountryID"].ToString(),
