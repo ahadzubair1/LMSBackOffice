@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -135,13 +135,13 @@ namespace LMSBackOfficeWebApplication
 
 
             sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-4.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
+                        <img class=""user-avatar"" src=""Content/images/user/avatar-4.jpg"">
 
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
                             <label>Sponsor: {sponsor}</label>
-                            <label>Membership: {membership}</label>
+                            <label>Subscription: {membership}</label>
                             <label>Rank: {rank}</label>
                             <label>Country: {country}</label>
  <label>Purchase Date: {cretedDate}</label>
@@ -239,8 +239,8 @@ namespace LMSBackOfficeWebApplication
                 else
                 { sb.AppendLine($@"<a href=""/Networks?memberkey={member.Id}"" class={membership.ToLower()}>"); }
                 sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-3.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
+                        <img class=""user-avatar"" src=""Content/images/user/avatar-3.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
                             <label>Sponsor: {sponsor}</label>
@@ -310,8 +310,8 @@ namespace LMSBackOfficeWebApplication
 
                 }
                 sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-1.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
+                        <img class=""user-avatar"" src=""Content/images/user/avatar-1.jpg"">
                         <span class=""user-name"">{memberUserName}</span>
                         <span class=""node-detail"">
                             <label>Sponsor: {sponsor}</label>
@@ -433,8 +433,8 @@ namespace LMSBackOfficeWebApplication
         {
             sb.AppendLine("<a href=\"#\" class=\"na\">");
             sb.AppendLine($@"
-                        <img class=""user-rank"" src=""Content/images/user/avatar-2.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
-                        <img class=""user-avatar"" src=""Content/images/user/avatar-2.jpg"">
+                        <img class=""user-rank"" src=""Content/images/user/avatar-4.jpg"" data-toggle=""tooltip"" data-placement=""top"" title=""elite"">
+                        <img class=""user-avatar"" src=""Content/images/user/avatar-4.jpg"">
                         <span class=""user-name"">No Member</span>
                         <span class=""node-detail"">
                             <label>Username: No User</label>
