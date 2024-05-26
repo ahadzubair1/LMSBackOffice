@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MemberTopUp.ascx.cs"  Inherits="LMSBackOfficeWebApplication.MemberTopUp" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MemberTopUp.ascx.cs"  Inherits="LMSBackOfficeWebApplication.MemberTopUp" %>
 <style type="text/css">
 body
 {
@@ -60,7 +60,7 @@ body
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
              </div>
              <div class="modal-body">
-                 <p>Enter amount you want to add to your credit wallet and choose a payment method.</p>
+                 <p>Enter amount you want to add to your Main Wallet and choose a payment method.</p>
                  <%--<form action="/" method="post">--%>
                      <label class="mb-2">
                 
