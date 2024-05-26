@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Login" Language="C#" CodeBehind="Login.aspx.cs" Inherits="LMSBackOfficeWebApplication.Login" %>
+<%@ Page Title="Login" Language="C#" CodeBehind="Login.aspx.cs" Inherits="LMSBackOfficeWebApplication.Login" %>
 
 <%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
 <!DOCTYPE html>
@@ -154,7 +154,7 @@
                             </button>
                         </div>
                     </nav>
-                    <a href="Register.Aspx" class="btn btn-outline-light rounded-5 text-capitalize px-4"><span>register</span></a>
+                    <a href="Register.Aspx" class="btn btn-primary btn-outline-light rounded-5 text-capitalize px-4"><span>register</span></a>
                     <button data-bs-toggle="modal" data-bs-target="#loginModal" type="button" class="btn btn-primary btn-outline-light text-nowrap rounded-5 d-none text-capitalize px-4"><span>Login</span></button>
                 </div>
             </div>
@@ -174,7 +174,8 @@
                             </div>--%>
                             <div class="neon-wrap">
                                 <div class="sign">
-                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>with <span class="fast-flicker">Tradiix</span>
+                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>
+                                    <!--with <span class="fast-flicker">Tradiix</span>-->
                                 </div>
                             </div>
                             <div id="typewriter"></div>
