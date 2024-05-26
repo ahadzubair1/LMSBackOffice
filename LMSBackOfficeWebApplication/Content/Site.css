@@ -1,4 +1,4 @@
-﻿/* Wrapping element */
+/* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
@@ -66,7 +66,7 @@ body[data-pc-theme="light"] .card-header {
 }
 
 .bg-primary-t {
-    background: #d014e4;
+    background: #06cfff;
 }
 
 body[data-pc-theme="light"] .card .card-header h5, body[data-pc-theme="light"] .card .card-header .h5 {
@@ -174,7 +174,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     align-content: center;
     justify-content: center;
     padding: 2rem;
-    background: radial-gradient(#de0eed,#130515);
+    background: radial-gradient(#06cfff,#130515);
     color: white;
     box-shadow: 0 0 0px 2px #fff inset;
     position: relative;
@@ -402,12 +402,12 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
         #t_tabs .nav-item .nav-link.active {
-            background: #dd12ec;
+            background: #06cfff;
             color: #fff;
         }
 
 .pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link::after {
-    background: #de0eed;
+    background: #06cfff;
     opacity: 1;
     z-index: -1;
 }
@@ -422,7 +422,7 @@ body:not([data-pc-theme="dark"]) .pc-footer {
     }
 
         .pc-sidebar .pc-navbar > .pc-item .submenu .nav-link:hover {
-            color: #d014e4;
+            color: #06cfff;
         }
 
 /* Curve Line */
@@ -1129,17 +1129,17 @@ footer .field-row {
 .tree-filter a, .tree-filter a {
     border: 1px solid #950c9f;
     color: #fff;
-    background-color: #dd12ec;
+    background-color: #06cfff;
 }
 
 #MainContent_btnSearch:hover {
     color: #232f45 !important;
-    border: 1px solid #dd12ec;
+    border: 1px solid #06cfff;
 }
 
 .tree-filter a:hover, .tree-filter a:hover {
     background-color: #f352ff;
-    border: 1px solid #dd12ec;
+    border: 1px solid #06cfff;
 }
 
 .tree-filter a, .tree-filter a i {
@@ -1251,7 +1251,7 @@ footer .field-row {
     background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
 }
 
-.partner {
+.Comrade {
     background: linear-gradient(122deg, #CA3C3C -1.92%, #1913d2 100%);
 }
 
@@ -1259,7 +1259,7 @@ footer .field-row {
     background: linear-gradient(122deg, #FB3B00 -1.92%, #aa5f00 100%);
 }
 
-.explorer {
+.Adventurer {
     background: linear-gradient(122deg, #0C9AE0 -1.92%, #c91526 100%);
 }
 
@@ -1473,7 +1473,7 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 
     .f-list > span:nth-of-type(2n+1) {
-        background: #d014e41a;
+        background: #06cfff1a;
         padding: 10px;
     }
 
@@ -1527,27 +1527,27 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 
 .wallet-balance i {
-    color: #dd12ec !important;
+    color: #06cfff !important;
     margin-right: 5px;
 }
 
 .text-tr {
-    color: #d014e4;
+    color: #06cfff;
 }
 
 .btn-tr {
-    background: #d014e4;
-    border: 1px solid #d014e4;
+    background: #06cfff;
+    border: 1px solid #06cfff;
     color: #fff;
 }
 
 #MemberTopUp_btnSubmit:hover {
-    color: #d014e4;
+    color: #06cfff;
 }
 
 .btn-tr:hover {
     background: transparent;
-    border: 1px solid #d014e4;
+    border: 1px solid #06cfff;
     color: #fff;
 }
 .btn-tr.no-hover:hover {
@@ -1649,7 +1649,7 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 
 .profile-pic {
-    background: #d014e4;
+    background: #06cfff;
     border-radius: 20px;
     color: #fff;
 }
@@ -1802,7 +1802,7 @@ label:not(.form-check-label):not(.custom-file-label) {
         width: 100%;
         height: 100%;
         animation: animatedBackground 500s linear infinite;
-        box-shadow: inset 4px 4px 20px 0px #de0eed, inset -4px -6px 5px 0px #4680ff;
+        box-shadow: inset 4px 4px 20px 0px #06cfff, inset -4px -6px 5px 0px #4680ff;
     }
 
 .pc-sidebar .pc-link {
@@ -1835,11 +1835,11 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 
 .cls-2 {
-    fill: #d014e4;
+    fill: #06cfff;
 }
 
 .cls-3 {
-    fill: #d014e4;
+    fill: #06cfff;
 }
 
 @keyframes move-cls-3 {
@@ -1902,7 +1902,7 @@ label:not(.form-check-label):not(.custom-file-label) {
     }
 
     50% {
-        fill: #d014e4; /* Intermediate color */
+        fill: #06cfff; /* Intermediate color */
     }
 
     100% {
