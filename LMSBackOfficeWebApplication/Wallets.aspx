@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Wallets.aspx.cs" Inherits="LMSBackOfficeWebApplication.Wallets" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Wallets.aspx.cs" Inherits="LMSBackOfficeWebApplication.Wallets" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
@@ -113,7 +113,7 @@
                 <!-- Banner -->
                 <div class="banner wallets">
                     <div class="banner-caption">
-                        <h2 class="text-white">More Referrals, Huge Bonus!</h2>
+                        <h2 class="text-white">Greater Referrals, Substantial Bonus !</h2>
                         <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
                     </div>
                     <div class="leaf">
@@ -214,18 +214,18 @@
                 <!-- [ Main Content ] start -->
                 <ul class="nav nav-tabs mb-3" id="t_tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Credit Wallet</a>
+                        <a class="nav-link active text-uppercase" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Main Wallet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bonus Wallet</a>
+                        <a class="nav-link text-uppercase" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Incentive Wallet</a>
                     </li>
                 </ul>
                 <div class="tab-content pb-5" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Transfer Credit Wallet Points</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Credit Wallet to Bonus Wallet.</h6>
+                                <h5 class="card-title">Transfer Main Wallet Points</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Main Wallet to Incentive Wallet.</h6>
                                 <%-- <form>--%>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -262,7 +262,7 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Credit Wallet Transactions</h5>
+                                <h5 class="card-title">Main Wallet Transactions</h5>
                                 <div class="overflow-x-auto">
                                     <table id="" class="table table-striped table-hover" style="width: 100%">
                                         <thead>
@@ -301,8 +301,8 @@
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Transfer Bonus Wallet Points</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Bonus Wallet to Credit Wallet.</h6>
+                                <h5 class="card-title">Transfer Incentive Wallet Points</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">You can transfer from your Incentive Wallet to Main Wallet.</h6>
                                 <%--  <form>--%>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -339,13 +339,13 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Bonus Wallet Transactions</h5>
+                                <h5 class="card-title">Incentive Wallet Transactions</h5>
                                 <table id="" class="table table-striped" style="width: 100%">
                                     <thead>
                                         <tr>
                                             <th>Date</th>
-                                            <th>Credit Wallet Points</th>
-                                            <th>Bonus Wallet Points</th>
+                                            <th>Main Wallet Points</th>
+                                            <th>Incentive Wallet Points</th>
                                             <th>Total Points</th>
                                             <th>Description</th>
                                         </tr>
@@ -375,7 +375,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
