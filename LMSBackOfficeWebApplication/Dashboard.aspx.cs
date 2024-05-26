@@ -71,11 +71,11 @@ namespace LMSBackOfficeWebApplication
                             // Check network position and assign the code accordingly
                             if (networkPosition == 1)
                             {
-                                leftReferralCode = "https://tradiix.com/Register?referralcode=" + code;
+                                leftReferralCode = "https://Meta-Exchange.com/Register?referralcode=" + code;
                             }
                             else if (networkPosition == 2)
                             {
-                                rightReferralCode = "https://tradiix.com/Register?referralcode=" + code;
+                                rightReferralCode = "https://Meta-Exchange.com/Register?referralcode=" + code;
                             }
 
                             // Break the loop if both left and right referral codes are found
