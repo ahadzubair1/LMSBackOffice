@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
 });
 
 const text = `Your journey to a transformed financial future starts here.
-    Welcome to Tradiix, where possibilities become profits!`;
+    Welcome to Meta-Exchange, where possibilities become profits !`;
 
 let index = 0;
 let line = 0;
