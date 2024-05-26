@@ -1,4 +1,4 @@
-﻿
+
 using LMSBackOfficeDAL;
 using ServiceStack;
 using System;
@@ -186,7 +186,7 @@ namespace LMSBackOfficeWebApplication
                 if (updateSuccess)
                 {
                     ResponseMessage.Style.Add("display", "block");
-                    ResponseMessage.Style.Add("color", "#e012ee");
+                    ResponseMessage.Style.Add("color", "#06cfff");
                     // Display success message
                     ResponseMessage.InnerText = "Member details updated successfully.";
                     PopulateMember();
@@ -231,12 +231,12 @@ namespace LMSBackOfficeWebApplication
                     return "Content/images/Memberships/5.png";
                 case "Connector-X":
                      return "Content/images/Memberships/6.png";
-                case "Partner":
+                case "Comrade":
                     return "Content/images/Memberships/2.png";
                 case "Elite":
 
                     return "Content/images/Memberships/1.png";
-                case "Explorer":
+                case "Adventurer":
                     return "Content/images/Memberships/1.png";
                 default:
                     return "Content/images/Memberships/6.png";
