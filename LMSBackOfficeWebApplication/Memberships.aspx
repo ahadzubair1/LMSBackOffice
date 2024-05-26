@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships" EnableEventValidation="false" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Memberships.aspx.cs" Inherits="LMSBackOfficeWebApplication.Memberships" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <main>
      <style>
     .blink_me {
-        animation: blinker 1s linear infinite;
+        animation: blinker 1s linear Eternal;
     }
 
     @keyframes blinker {
@@ -121,8 +121,8 @@
                 <!-- Banner -->
                 <div class="banner memberships">
                     <div class="banner-caption">
-                        <h2 class="text-white">More Referrals, Huge Bonus!</h2>
-                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                        <h2 class="text-white">Additional Referrals, Big Rewards!</h2>
+                        <p class="m-0">Earn significant rewards with our latest promotion: More Referrals, Bigger Bonus! Invite your friends, colleagues, or contacts and enjoy the benefits of our generous bonus program</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -206,13 +206,13 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Products & Services</h2>
+                                    <h2 class="mb-0">Subscriptions</h2>
                                 </div>
                             </div>
                             <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Products & Services</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Subscriptions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -227,25 +227,25 @@
                             <div class="mbox">
                                 <img src="Content/images/Memberships/1.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Explorer</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Adventurer</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Monthly</span></div>
-                                                                        <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>50</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>50</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>0$</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">🌟 Qualifies for Direct Bonus only</span></div>
                                     <%--<div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>--%>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-flag="false" data-activation-fee="0" data-membership-code="MSP_EXPLORER" data-membership-name="Explorer">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="50" data-flag="false" data-activation-fee="0" data-membership-code="MSP_Adventurer" data-membership-name="Adventurer">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
                                 <img src="Content/images/Memberships/6.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>ConnectorX</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>NexusX</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>250</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>250</span></div>
@@ -254,15 +254,15 @@
                                     <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
                                     <!--<div class="d-flex align-items-center justify-content-between"><span class="font-bold"><font color="Yellow" class="blink_me">🌟 Promo Code Enabled Membership (NOT REQUIRED)</font></span></div>-->
                                     </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250"   data-activation-fee="50" data-flag="false" data-membership-code="MSP_CONNECTORX" data-membership-name="Connector-X">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="250"   data-activation-fee="50" data-flag="false" data-membership-code="MSP_NexusX" data-membership-name="Nexus-X">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
                                 <img src="Content/images/Memberships/2.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Partner</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Comrade</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>500</span></div>
@@ -271,52 +271,52 @@
                                         <div class="d-flex align-items-center justify-content-between"><span class="font-bold">&nbsp;</span></div>
         
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_PARTNER" data-membership-name="Partner">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="500" data-activation-fee="50" data-membership-code="MSP_Comrade" data-membership-name="Comrade">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
                                 <img src="Content/images/Memberships/3.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Pioneer</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Founder</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>750</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>750</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="750" data-activation-fee="50" data-membership-code="MSP_PIONEER" data-membership-name="Pioneer +">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="750" data-activation-fee="50" data-membership-code="MSP_Founder" data-membership-name="Founder +">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
                                 <img src="Content/images/Memberships/4.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Elite</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Supervisor</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1000</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>1000</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="50" data-membership-code="MSP_ELITE" data-membership-name="Elite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1000" data-activation-fee="50" data-membership-code="MSP_Supervisor" data-membership-name="Supervisor">Purchase Now</button>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mbox">
                                 <img src="Content/images/Memberships/5.png" class="img-fluid" alt="" />
                                 <div class="featurebox">
-                                    <h6 class="text-white">Product Features</h6>
-                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Infinite</span></div>
+                                    <h6 class="text-white">Subscription Characteristics</h6>
+                                    <div class="d-flex align-items-center justify-content-between"><span>Name:</span> <span>Eternal</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Type:</span> <span>Annual</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Rank Volume:</span> <span>1500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Network Volume:</span> <span>1500</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>AI Copy Trading Access:</span> <span>Yes</span></div>
                                     <div class="d-flex align-items-center justify-content-between"><span>Activation Cost:</span> <span>50$</span></div>
                                 </div>
-                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1500" data-activation-fee="50" data-membership-code="MSP_INFINITE" data-membership-name="Infinite">Purchase Now</button>
+                                <button type="button" class="btn btn-outline-light mt-3 membership-btn" data-bs-toggle="modal" data-bs-target="#membershipModal" data-amount="1500" data-activation-fee="50" data-membership-code="MSP_Eternal" data-membership-name="Eternal">Purchase Now</button>
                             </div>
                         </div>
                     </div>
@@ -473,7 +473,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
