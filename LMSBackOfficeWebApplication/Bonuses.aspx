@@ -152,7 +152,7 @@
                                     updateBannerCaption("Network Wallet Balance" + " : <%= headerTitleNetworkBonusAmount %>");
                                 }
                                 else {
-                                    updateBannerCaption("Direct Bonus Wallet Balance" + " : <%= headerTitleDirectBonusAmount %>");
+                                    updateBannerCaption("Direct Incentive Wallet Balance" + " : <%= headerTitleDirectBonusAmount %>");
                                 }
                             }
 
@@ -281,7 +281,7 @@
                 <div class="card mb-5 pb-5">
                     <div class="card-body">
                         <div class="tab-content pb-5" id="myTabContent">
-                            <div id="kycmessage" runat="server" class="alert alert-secondary small py-1" role="alert" style="color: #dd12ec"><i class="ti ti-alert-circle"></i>&nbsp;<strong>KYC Verification is Must Required for Bonus Withdrawal</strong></div>
+                            <div id="kycmessage" runat="server" class="alert alert-secondary small py-1" role="alert" style="color: #06cfff"><i class="ti ti-alert-circle"></i>&nbsp;<strong>KYC Verification is Must Required for Bonus Withdrawal</strong></div>
                             <div class="tab-pane fade show active" id="network-bonus" role="tabpanel" aria-labelledby="network-bonus-tab">
                                 <div class="table-responsive">
                                     <asp:GridView ID="gvNetworkBonus" runat="server" AutoGenerateColumns="False" DataKeyNames="Member_Id" AllowPaging="True" PageSize="10" OnPageIndexChanging="gvNetworkBonus_PageIndexChanging" Width="100%" CssClass="table table-striped table-hover">
@@ -297,7 +297,7 @@
                                     </asp:GridView>
                                     <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                         <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#networkbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                                     <span class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
+                                     <span class="text-dribbble"><font color="#06cfff"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
                                     </div>
                                 </div>
                             </div>
@@ -314,12 +314,12 @@
                                 </asp:GridView>
                                                           <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                               <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#directbonusmodal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Withdraw</button>
-                             <span class="text-dribbble"><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
+                             <span class="text-dribbble"><font color="#06cfff"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
                           </div>
                             </div>
 <%--                            <div class="bonus-withdraw d-flex align-items-center gap-3 flex-wrap">
                                 <button class="btn btn-tr no-hover d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button" type="button"><i class="fas fa-money-check-alt"></i>Initiate Withdraw</button>
-                                <span class="text-dribbble" ><font color="#DD12EC"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
+                                <span class="text-dribbble" ><font color="#06cfff"><strong>Note: The maximum withdrawal limit for a day is 5000 USD. 3% Fees would be deducted for each withdrawal.</strong></font></span>
                             </div>--%>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
