@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Networks.aspx.cs" Inherits="LMSBackOfficeWebApplication.Networks" %>
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Networks.aspx.cs" Inherits="LMSBackOfficeWebApplication.Networks" %>
 
 <asp:Content ID="NetworkContent1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -135,8 +135,8 @@
                 <!-- Banner -->
                 <div class="banner wallets">
                     <div class="banner-caption">
-                        <h2 class="text-white">More Referrals, Huge Bonus!</h2>
-                        <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
+                        <h2 class="text-white">Big Network, Big Bonus !</h2>
+                        <p class="m-0">Explore the Network Bonus Tree to uncover a web of exciting rewards and incentives awaiting you!</p>
                     </div>
                     <div class="leaf">
                         <div>
@@ -220,13 +220,13 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="page-header-title">
-                                    <h2 class="mb-0">Networks</h2>
+                                    <h2 class="mb-0">Network Hierarchy</h2>
                                 </div>
                             </div>
                             <div class="col-md-6 text-end">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Networks</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Network Hierarchy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -272,16 +272,16 @@
 
 
                                             <i class="fas fa-solid fa-arrow-left" style="transform: rotate(-45deg)"></i>
-                                            <span><strong>Far Left</strong></span>
+                                            <span><strong>Extreme Left</strong></span>
                                         </a>
 
                                         <a href="/networks" class="btn col start">
-                                            <span><strong>Top</strong></span>
+                                            <span><strong>Top of Tree</strong></span>
                                         </a>
 
                                         <a href="/networks?memberkey=<%= rightFarNodeId %>" class="btn col cancel">
                                             <i class="fas fa-solid fa-arrow-right" style="transform: rotate(45deg)"></i>
-                                            <span><strong>Far Right</strong></span>
+                                            <span><strong>Extreme Right</strong></span>
                                         </a>
                                     </div>
                                 </div>
@@ -306,14 +306,14 @@
                                                 CellPadding="3" AutoGenerateColumns="False" GridLines="Vertical" Width="100%" AllowPaging="True" OnPageIndexChanging="gvReferrelsTable_PageIndexChanging">
                                                 <AlternatingRowStyle BackColor="Gainsboro" />
                                                 <Columns>
-                                                    <asp:BoundField DataField="MemberFullName" HeaderText="Member Name" ControlStyle-CssClass="gvheader">
+                                                    <asp:BoundField DataField="MemberFullName" HeaderText="User Name" ControlStyle-CssClass="gvheader">
                                                         <ControlStyle Width="100px" />
                                                     </asp:BoundField>
                                                     <asp:BoundField DataField="Subscription" HeaderText="Subscription" ControlStyle-CssClass="gvheader">
                                                         <ControlStyle Width="100px" />
                                                     </asp:BoundField>
 
-                                                    <asp:BoundField DataField="PurchasedDate" HeaderText="Membership Expiry" ControlStyle-CssClass="gvheader">
+                                                    <asp:BoundField DataField="PurchasedDate" HeaderText="Subscription Expiry" ControlStyle-CssClass="gvheader">
                                                         <ControlStyle Width="250px" />
                                                     </asp:BoundField>
 
@@ -322,7 +322,7 @@
                                                     </asp:BoundField>
                                                 </Columns>
                                                 <EmptyDataTemplate>
-                                                    No record found<br />
+                                                    No Record Found<br />
                                                 </EmptyDataTemplate>
                                                 <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                                                 <HeaderStyle BackColor="#232f45" CssClass="gvheader" ForeColor="White" Height="45" />
@@ -354,7 +354,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
