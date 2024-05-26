@@ -124,10 +124,10 @@
                 <!-- Banner -->
                 <div class="banner">
                     <div class="banner-caption">
-                        <h2 class="text-white">Welcome!</h2>
-                        <p class="m-0">Unlock Rewards Now! Join our community and start experiencing the rewards immediately.</p>
-                        <font color="#06cfff" class="blink_me"><strong>Accelerate Your Earnings with Our Fast Track Bonus</strong></font>
-                        <div id="timer" class="partner rounded-5 mt-2 p-1"></div>
+                        <h2 class="text-white">Access Your Dashboard</h2>
+                        <p class="m-0">Discover Rewards Today ! Become a part of our community and unlock instant rewards.</p>
+                        <font color="#06cfff" class="blink_me"><strong>Accelerate Your Earnings with Our Express Bonus</strong></font>
+                        <div id="timer" class="Comrade rounded-5 mt-2 p-1"></div>
                     </div>
                     <div class="orbit">
     <div class="rocket">
@@ -235,7 +235,7 @@
                 <div class="row g-3">
 
                     <div class="col-md-3">
-                        <div class="card t-card membership" style="background-color: #FBAB7E; background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);">
+                        <div class="card t-card membership" style="background-color: #2DAB30; background-image: linear-gradient(62deg, #3BE18B 0%, #3BE18B 100%);">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -243,7 +243,7 @@
                                             <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
-                                                    stroke="#E58A00"
+                                                    stroke="#3BE18B"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -251,7 +251,7 @@
                                                 <path
                                                     opacity="0.6"
                                                     d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5"
-                                                    stroke="#E58A00"
+                                                    stroke="#3BE18B"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -259,7 +259,7 @@
                                                 <path
                                                     opacity="0.6"
                                                     d="M8 13H12"
-                                                    stroke="#E58A00"
+                                                    stroke="#3BE18B"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -267,7 +267,7 @@
                                                 <path
                                                     opacity="0.6"
                                                     d="M8 17H16"
-                                                    stroke="#E58A00"
+                                                    stroke="#3BE18B"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -276,14 +276,14 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Product</h6>
+                                        <h6 class="mb-0">Subscription</h6>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="row align-items-center">
                                         <div class="col-7">
                                             <h5 class="font-semibold m-0">
-                                                <asp:Label runat="server" Text="None" ID="lblMembership"></asp:Label></h5>
+                                                <asp:Label runat="server" Text="None" ID="lblMembership">Limitless</asp:Label></h5>
                                         </div>
                                         <div class="col-5 p-0">
                                             <h5 class="mb-1">&nbsp;</h5>
@@ -300,7 +300,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card t-card direct-bonus" style="background-color: #8EC5FC; background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);">
+                        <div class="card t-card direct-bonus" style="background-color: #E280ED; background-image: linear-gradient(62deg, #E280ED 0%, #E0C3FC 100%);">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -309,19 +309,19 @@
                                                 <path
                                                     opacity="0.4"
                                                     d="M13 9H7"
-                                                    stroke="#4680FF"
+                                                    stroke="#E280ED"
                                                     stroke-width="1.5"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     d="M22.0002 10.9702V13.0302C22.0002 13.5802 21.5602 14.0302 21.0002 14.0502H19.0402C17.9602 14.0502 16.9702 13.2602 16.8802 12.1802C16.8202 11.5502 17.0602 10.9602 17.4802 10.5502C17.8502 10.1702 18.3602 9.9502 18.9202 9.9502H21.0002C21.5602 9.9702 22.0002 10.4202 22.0002 10.9702Z"
-                                                    stroke="#4680FF"
+                                                    stroke="#E280ED"
                                                     stroke-width="1.5"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     d="M17.48 10.55C17.06 10.96 16.82 11.55 16.88 12.18C16.97 13.26 17.96 14.05 19.04 14.05H21V15.5C21 18.5 19 20.5 16 20.5H7C4 20.5 2 18.5 2 15.5V8.5C2 5.78 3.64 3.88 6.19 3.56C6.45 3.52 6.72 3.5 7 3.5H16C16.26 3.5 16.51 3.50999 16.75 3.54999C19.33 3.84999 21 5.76 21 8.5V9.95001H18.92C18.36 9.95001 17.85 10.17 17.48 10.55Z"
-                                                    stroke="#4680FF"
+                                                    stroke="#E280ED"
                                                     stroke-width="1.5"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
@@ -329,7 +329,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Direct Bonus</h6>
+                                        <h6 class="mb-0">Instant Benefit</h6>
                                     </div>
                                 </div>
                                 <div>
@@ -351,7 +351,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card t-card kyc-status" style="background-color: #FFDEE9; background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);">
+                        <div class="card t-card kyc-status" style="background-color: #F3AE6D; background-image: linear-gradient(0deg, #F3AE6D 0%, #F3AE6D 100%);">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -359,14 +359,14 @@
                                             <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M8 2V5"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     d="M16 2V5"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -374,14 +374,14 @@
                                                 <path
                                                     opacity="0.4"
                                                     d="M3.5 9.08984H20.5"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -389,42 +389,42 @@
                                                 <path
                                                     opacity="0.4"
                                                     d="M15.6947 13.7002H15.7037"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     opacity="0.4"
                                                     d="M15.6947 16.7002H15.7037"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     opacity="0.4"
                                                     d="M11.9955 13.7002H12.0045"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     opacity="0.4"
                                                     d="M11.9955 16.7002H12.0045"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     opacity="0.4"
                                                     d="M8.29431 13.7002H8.30329"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                                 <path
                                                     opacity="0.4"
                                                     d="M8.29395 16.7002H8.30293"
-                                                    stroke="#2ca87f"
+                                                    stroke="#F3AE6D"
                                                     stroke-width="2"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
@@ -432,7 +432,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0"  >Recent Network Bonus</h6>
+                                        <h6 class="mb-0"  >Team Bonus</h6>
                                           
 
                                     </div>
@@ -459,7 +459,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card t-card direct-referral" style="background-color: #FAACA8; background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);">
+                        <div class="card t-card direct-referral" style="background-color: darkred; background-image: linear-gradient(19deg, #68D6F5 0%, #68D6F5 100%);">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0">
@@ -467,7 +467,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                             <svg class="flip" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                                    stroke="#DC2626"
+                                                    stroke="#68D6F5"
                                                     stroke-width="1.5"
                                                     stroke-miterlimit="10"
                                                     stroke-linecap="round"
@@ -475,7 +475,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                                 <path
                                                     opacity="0.4"
                                                     d="M8.4707 10.7402L12.0007 14.2602L15.5307 10.7402"
-                                                    stroke="#DC2626"
+                                                    stroke="#68D6F5"
                                                     stroke-width="1.5"
                                                     stroke-linecap="round"
                                                     stroke-linejoin="round" />
@@ -483,7 +483,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Rank Achieved</h6>
+                                        <h6 class="mb-0">Current Level</h6>
                                     </div>
                                 </div>
                                 <div>
@@ -508,7 +508,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">Forex Trading Chart</h5>
+                                <h5 class="mb-0">Currency Trading Graph</h5>
                             </div>
                             <div class="card-body">
                                 <!-- TradingView Widget Container -->
@@ -565,7 +565,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Left Network</h6>
+                                        <h6 class="mb-0">Downline on Left</h6>
                                         <small class="text-muted">Total count of left network users</small>
                                     </div>
                                     <div class="dropdown">
@@ -608,7 +608,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
-                                        <h6 class="mb-0">Right Network</h6>
+                                        <h6 class="mb-0">Downline on Right</h6>
                                         <small class="text-muted">Total count of right network users</small>
                                     </div>
                                     <div class="dropdown">
@@ -647,7 +647,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                 <div class="card mb-4 h-100">
                                     <div class="card-body">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <h5 class="mb-0">Purchased Memberships</h5>
+                                            <h5 class="mb-0">Active Subscriptions</h5>
                                             <div class="dropdown">
                                                 <a
                                                     class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none"
@@ -690,7 +690,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                             <div class="col-md-12">
                                                 <div class="mt-3 d-grid">
                                                     <a href="Memberships.aspx" class="btn btn-tr no-hover d-flex align-items-center justify-content-center">
-                                                        <i class="ti ti-plus"></i>Purchase Membership</a>
+                                                        <i class="ti ti-plus"></i>Active Subscriptions</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -745,8 +745,8 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                                             </svg>
 
                                         </div>
-                                        <h6 class="text-white position-relative" style="background: #06cfff; padding: 5px 10px; border-radius: 70px;">Basic Rank: <span class="pill">Explorer</span></h6>
-                                        <h6 class="text-white position-relative" style="background: #232f45; padding: 5px 10px; border-radius: 70px;">Next Rank: <span class="pill">Connector-X</span></h6>
+                                        <h6 class="text-white position-relative" style="background: #06cfff; padding: 5px 10px; border-radius: 70px;">Basic Rank: <span class="pill">Adventurer</span></h6>
+                                        <h6 class="text-white position-relative" style="background: #232f45; padding: 5px 10px; border-radius: 70px;">Next Rank: <span class="pill">Nexus-X</span></h6>
                                         <div id="typewriter" class="text-center text-white position-relative" style="background: #232f45; padding: 5px 10px; border-radius: 70px;">
                                         </div>
                                     </div>
@@ -1053,7 +1053,7 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024 <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
@@ -1300,14 +1300,14 @@ Check the Bonuses Page for more details." Text="0$" ID="lblNetworkBonus"></asp:L
             const minutes = Math.floor((totalSeconds % 3600) / 60);
             const seconds = totalSeconds % 60;
 
-            document.getElementById('timer').textContent = `Time Until Next Bonus Dispersal: ${days} Day(s), ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+            //document.getElementById('timer').textContent = `Time Until Next Bonus Dispersal: ${days} Day(s), ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
 
             setTimeout(updateTimer, 1000);
         }
 
         // Start the timer
         if (!updateTimer()) {
-            document.getElementById('timer').textContent = "Network Bonus has been dispersed Today !";
+            document.getElementById('timer').textContent = "New Course has been Launched - Get Limitless Membership !";
         }
 
 
