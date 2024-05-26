@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BonusWithdrawalUpdate.aspx.cs" Inherits="LMSBackOfficeWebApplication.BonusWithdrawalUpdate" EnableEventValidation="false" %>
+<%@Page Title="Tradix : Learning Management BackOffice System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BonusWithdrawalUpdate.aspx.cs" Inherits="LMSBackOfficeWebApplication.BonusWithdrawalUpdate" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main>
 
         <div class="offcanvas pc-announcement-offcanvas offcanvas-end" tabindex="-1" id="announcement" aria-labelledby="announcementLabel">
@@ -135,34 +135,29 @@
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label for="currentDate" class="form-label">Current Date</label>
-                                            <input type="text" class="form-control mw-100" id="currentDate" name="" readonly value="07/05/2024" />
+                                            <input type="text" class="form-control mw-50" id="currentDate" name="currentDate" readonly value="" />
                                         </div>
-                                        <div class="form-group">
-                                            <label for="bonusType" class="form-label">Type of Bonus</label>
-                                            <select class="form-control mw-100" id="bonusType" name="bonusType">
-                                                <option value="Direct Bonus">Direct Bonus</option>
-                                                <option value="Network Bonus">Network Bonus</option>
-                                            </select>
-                                        </div>
+                                      
                                         <div class="form-group">
                                             <label for="upload" class="form-label">Upload Excel File</label>
                                             <%--<input type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="upload" required />--%>
-                                             <asp:FileUpload ID="fileUpload" runat="server" />
+                                             <asp:FileUpload ID="fileUpload" style="width:550px" runat="server"  />
                                         </div>
                                         <div class="form-group">
                                             <%--<input type="submit" name="submitWithdraw" value="Update Status" class="btn btn-tr no-hover" id="submitButton" />--%>
                                                 <asp:Button ID="btnUpload" runat="server" CausesValidation="false" Text="Upload" class="btn btn-tr no-hover" OnClick="btnUpload_Click" />
                                                 <asp:Button ID="btnCancel" runat="server" CausesValidation="false" Text="Cancel" class="btn btn-tr no-hover" OnClick="btnCancel_Click" />
-        </div>
-                                        <%--    <span class="btn btn-outline-danger m-l-10">Reset</span>--%>
+                                             </div>
+                                       
                                         </div>
+                                             <div class="col-md-4 text-center">
+                                             <img src="Content/images/withdraw.gif" width="170"   class="img-fluid" alt="" />
+                                            </div>
                                     </div>
-                                    <div class="col-md-4 text-center">
-                                        <img src="Content/images/withdraw.gif" width="170" class="img-fluid" alt="" />
-                                    </div>
+                                   
                                 </div>
                             </form>
-                            <div id="message"></div>
+                            <div id="message" style="color:#DD12EC;font-weight:bold"></div>
                         </div>
                     </div>
                 </div>
@@ -176,7 +171,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
@@ -191,12 +186,26 @@
             <script>
                 document.getElementById("bonusForm").addEventListener("submit", function (event) {
                     event.preventDefault(); // Prevent the form from submitting normally
-
+                    alert("INSIDE");
                     // Display message
                     document.getElementById("message").innerHTML = "Form submitted successfully!";
                 });
             </script>
         </footer>
     </main>
+
+        <script>
+
+            var todaydate = new Date();
+            var day = todaydate.getDate();
+            var month = todaydate.getMonth() + 1;
+            var year = todaydate.getFullYear();
+            var datestring = day + "/" + month + "/" + year;
+            window.onload = function () {
+                document.getElementById("currentDate").value = datestring;
+            }
+
+
+        </script>
 
 </asp:Content>
