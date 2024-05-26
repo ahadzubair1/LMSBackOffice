@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.cs" Inherits="LMSBackOfficeWebApplication.Transactions" %>
+<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Transactions.aspx.cs" Inherits="LMSBackOfficeWebApplication.Transactions" %>
 
 <asp:Content ID="TransactionContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -104,7 +104,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
