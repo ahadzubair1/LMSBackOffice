@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Register" Language="C#" CodeBehind="Register.aspx.cs" Inherits="LMSBackOfficeWebApplication.Register" %>
+<%@ Page Title="Register" Language="C#" CodeBehind="Register.aspx.cs" Inherits="LMSBackOfficeWebApplication.Register" %>
 
 <!DOCTYPE html>
 
@@ -172,7 +172,8 @@
                             </div>--%>
                             <div class="neon-wrap">
                                 <div class="sign">
-                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>with <span class="fast-flicker">Tradiix</span>
+                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>
+                                    <!--with <span class="fast-flicker">Tradiix</span>-->
                                 </div>
                             </div>
                             <div id="typewriter"></div>
