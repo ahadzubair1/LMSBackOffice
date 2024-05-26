@@ -33,14 +33,15 @@ body{
 .fa-eye-slash:before {
     content: "\f070";
 }
-.v-header{
-  background: rgba(0, 0, 0, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 22;
+.v-header {
+    background: rgba(0, 0, 0, 0.7);
+    /*background: rgb(11 71 176 / 70%);*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 22;
 }
 
 .v-header .header-nav ul li{
@@ -61,16 +62,16 @@ body{
   font-weight: 500;
 }
 .v-header .header-nav ul li a:hover{
-  color: #E012EE;
+  color: #06cfff;
 }
 .btn-primary{
-  background-color: #E012EE;
+  background-color: #06cfff;
 }
 .border-primary{
-  border: 2px solid #E012EE !important;
+  border: 2px solid #06cfff !important;
 }
 .btn-outline-primary:hover{
-  background-color: #E012EE;
+  background-color: #06cfff;
 }
 .btn-primary:hover{
   background-color: transparent;
@@ -81,7 +82,7 @@ body{
   color: #0E1116;
 }
 .btn-white:hover{
-  background-color: #E012EE;
+  background-color: #06cfff;
   color: #fff;
 }
 .btn-white:hover i{
@@ -104,7 +105,7 @@ body{
   margin-bottom: 1rem;
 }
 .playbox{
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -155,7 +156,7 @@ body{
   text-align: center;
 }
 .asgrid{
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -169,7 +170,7 @@ body{
 }
 .asgrid:hover{
   color: #fff;
-  background-color: #E012EE;
+  background-color: #06cfff;
 }
 .asgrid i{
   font-size: 3rem;
@@ -190,7 +191,7 @@ body{
   color: #fff;
   padding: 4rem;
   text-align: center;
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   display: flex;
   align-items: center;
 }
@@ -226,7 +227,7 @@ body{
   font-size: 40px;
 }
 .lmbox i:before{
-  color: #e012ee;
+  color: #06cfff;
 }
 .vcircles{
   position: absolute;
@@ -281,7 +282,7 @@ body{
   border-radius: 30px;
   padding: 15px 15px 20px 15px;
   color: #fff;
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   background: #232f457d;
   height: 100%;
   transition: all cubic-bezier(.68,0,.37,1.44) 0.3s;
@@ -290,7 +291,7 @@ body{
   background: transparent;
 }
 .course-grid:hover .btn{
-  background: #E012EE;
+  background: #06cfff;
   color: #fff;
 }
 .course-grid img{
@@ -369,7 +370,7 @@ body{
 }
 #v-fundamentals .fbox{
   border-radius: 20px;
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   overflow: hidden;
   padding: 15px;
   color: #fff;
@@ -390,7 +391,7 @@ body{
 .webinar-box{
   background-image: url(../img/webinar.png);
   background-size: cover;
-  border: 2px solid #E012EE;
+  border: 2px solid #06cfff;
   border-radius: 30px;
   padding: 10rem;
 }
@@ -671,7 +672,7 @@ marquee{
 
     .neon .gradient {
         position: absolute;
-        background: linear-gradient(45deg, #0db1f2, #e012ee, #ec1784, #e012ee, #1272ee);
+        background: linear-gradient(45deg, #0db1f2, #06cfff, #ec1784, #06cfff, #1272ee);
         top: 0;
         left: 0;
         right: 0;
@@ -709,14 +710,14 @@ marquee{
     font-style: normal;
     line-height: 1;
     color: #fff;
-    text-shadow: 0 0 0.6rem #E012EE, 0 0 1.5rem #E012EE, -0.2rem 0.1rem 1rem #E012EE, 0.2rem 0.1rem 1rem #E012EE, 0 -0.5rem 2rem #E012EE, 0 0.5rem 3rem #E012EE;
+    text-shadow: 0 0 0.6rem #06cfff, 0 0 1.5rem #06cfff, -0.2rem 0.1rem 1rem #06cfff, 0.2rem 0.1rem 1rem #06cfff, 0 -0.5rem 2rem #06cfff, 0 0.5rem 3rem #06cfff;
     animation: shine 2s forwards, flicker 3s infinite;
 }
 
 @keyframes blink {
     0%, 22%, 36%, 75% {
         color: #fff;
-        text-shadow: 0 0 0.6rem #E012EE, 0 0 1.5rem #E012EE, -0.2rem 0.1rem 1rem #E012EE, 0.2rem 0.1rem 1rem #E012EE, 0 -0.5rem 2rem #E012EE, 0 0.5rem 3rem #E012EE;
+        text-shadow: 0 0 0.6rem #06cfff, 0 0 1.5rem #06cfff, -0.2rem 0.1rem 1rem #06cfff, 0.2rem 0.1rem 1rem #06cfff, 0 -0.5rem 2rem #06cfff, 0 0.5rem 3rem #06cfff;
     }
 
     28%, 33% {
@@ -746,7 +747,7 @@ marquee{
 
     100% {
         color: #fff;
-        text-shadow: 0 0 0.6rem #E012EE, 0 0 1.5rem #E012EE, -0.2rem 0.1rem 1rem #E012EE, 0.2rem 0.1rem 1rem #E012EE, 0 -0.5rem 2rem #E012EE, 0 0.5rem 3rem #E012EE;
+        text-shadow: 0 0 0.6rem #06cfff, 0 0 1.5rem #06cfff, -0.2rem 0.1rem 1rem #06cfff, 0.2rem 0.1rem 1rem #06cfff, 0 -0.5rem 2rem #06cfff, 0 0.5rem 3rem #06cfff;
     }
 }
 
