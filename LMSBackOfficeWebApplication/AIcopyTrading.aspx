@@ -131,7 +131,7 @@
 
                 <ul class="nav nav-tabs mb-3" id="t_tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active text-uppercase" id="explorer-tab" data-bs-toggle="tab" href="#explorer" role="tab" aria-controls="explorer" aria-selected="true" style="font-weight:bold">Explorer AI Copy Trading</a>
+                        <a class="nav-link active text-uppercase" id="Adventurer-tab" data-bs-toggle="tab" href="#Adventurer" role="tab" aria-controls="Adventurer" aria-selected="true" style="font-weight:bold">Adventurer AI Copy Trading</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" id="pioneer-tab" data-bs-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer" aria-selected="false" style="font-weight:bold">Pioneer AI Copy Trading</a>
@@ -148,13 +148,13 @@
 
 
                 <div class="tab-content pb-5" id="myTabContent">
-                    <div class="tab-pane fade show active" id="explorer" role="tabpanel" aria-labelledby="explorer-tab">
+                    <div class="tab-pane fade show active" id="Adventurer" role="tabpanel" aria-labelledby="Adventurer-tab">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card p-4 mb-4">
                                     <div class="row g-3">
                                         <div class="col-md-3">
-                                            <img src="Content/images/Copy-Trading/Explorer-EA.png" class="img-fluid" alt="" />
+                                            <img src="Content/images/Copy-Trading/Adventurer-EA.png" class="img-fluid" alt="" />
                                         </div>
                                         <div class="col-md-4 d-flex flex-column">
                                             <div class="card h-100 mb-3">
@@ -170,7 +170,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p class="m-0">The Explorer EA is a trailblazer within the algorithmic trading industry. It is designed and managed by another of our 'Master Traders' and uses price action and Fibonacci retracements to enter trades, this unique algorithm also implements martingale trading to combat adverse volatility.</p>
+                                                    <p class="m-0">The Adventurer EA is a trailblazer within the algorithmic trading industry. It is designed and managed by another of our 'Master Traders' and uses price action and Fibonacci retracements to enter trades, this unique algorithm also implements martingale trading to combat adverse volatility.</p>
                                                     <br /><p class="m-0"><font color="red">*Note: The statistics shown are based on past performance and in no way act as a guarantee to future results and an independent financial advisor should be consulted.</font></p>
                                                     </div>
                                             </div>
@@ -301,7 +301,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p>The Adventurer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -362,7 +362,7 @@
                                             <div class="card h-100">
                                                 <div class="card-body">
                                                     <h5>Master Trader Details:</h5>
-                                                    <p>The Explorer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
+                                                    <p>The Adventurer EA is a revolutionary trading algorithm that has been actively profiting from the market for over 12 years. It is designed and managed by one of our "Master Traders" and uses concepts such as breakouts, false breakouts, pattern recognition and time based exits.</p>
                                                 </div>
                                             </div>
                                         </div>
