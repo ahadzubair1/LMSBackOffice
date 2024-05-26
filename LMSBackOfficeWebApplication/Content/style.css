@@ -10108,11 +10108,13 @@ textarea.is-invalid.dataTable-input {
     }
 
     [data-pc-direction=ltr] .bg-primary-subtle {
-        background-color: var(--bs-primary-bg-subtle) !important;
+        /*background-color: var(--bs-primary-bg-subtle) !important;*/
+        background-color: #a3ff8a !important;
     }
 
     [data-pc-direction=ltr] .bg-secondary-subtle {
-        background-color: var(--bs-secondary-bg-subtle) !important;
+        /*background-color: var(--bs-secondary-bg-subtle) !important;*/
+        background-color: #a3ff8a !important;
     }
 
     [data-pc-direction=ltr] .bg-success-subtle {
@@ -10124,7 +10126,8 @@ textarea.is-invalid.dataTable-input {
     }
 
     [data-pc-direction=ltr] .bg-warning-subtle {
-        background-color: var(--bs-warning-bg-subtle) !important;
+        /*background-color: var(--bs-warning-bg-subtle) !important;*/
+        background-color: #FF8AA8 !important;
     }
 
     [data-pc-direction=ltr] .bg-danger-subtle {
@@ -21402,7 +21405,7 @@ textarea.is-invalid.dataTable-input {
 }
 
 .bg-light-primary {
-    background: #edf2ff;
+    background: #E90E3D; /*#edf2ff;*/
     color: #4680ff;
 }
 
@@ -24115,7 +24118,7 @@ pre[class*=language-] {
             }
 
             .pc-sidebar .pc-navbar > .pc-item.active > .pc-link:after {
-                background: #de0eed;
+                background: #06cfff;
                 opacity: 1;
             }
 
