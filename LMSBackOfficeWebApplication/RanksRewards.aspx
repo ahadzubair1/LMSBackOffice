@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RanksRewards.aspx.cs" Inherits="LMSBackOfficeWebApplication.RanksRewards" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RanksRewards.aspx.cs" Inherits="LMSBackOfficeWebApplication.RanksRewards" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -30,39 +30,39 @@
 
 
         .table tbody tr:nth-child(2) {
-            background-color: #e1bee7;
+            background-color:#a2cde0;
         }
 
         .table tbody tr:nth-child(3) {
-            background-color: #ce93d8;
+            background-color:#85bed6;
         }
 
         .table tbody tr:nth-child(4) {
-            background-color: #ba68c8;
+            background-color: #629bb5;
         }
 
         .table tbody tr:nth-child(5) {
-            background-color: #ab47bc;
+            background-color: #588ea6;
         }
 
         .table tbody tr:nth-child(6) {
-            background-color: #9c27b0;
+            background-color: #488099;
         }
 
         .table tbody tr:nth-child(7) {
-            background-color: #8e24aa;
+            background-color: #3b738c;
         }
 
         .table tbody tr:nth-child(8) {
-            background-color: #7b1fa2;
+            background-color: #2f657d;
         }
 
         .table tbody tr:nth-child(9) {
-            background-color: #6a1b9a;
+            background-color: #255970;
         }
 
         .table tbody tr:nth-child(10) {
-            background-color: #4a148c;
+            background-color: #194d63;
         }
 
         .table tbody tr td:nth-child(2) {
@@ -218,7 +218,7 @@
                 <!-- Banner -->
                 <div class="banner ranks">
                     <div class="banner-caption">
-                        <h2 class="text-white">Ranks & Rewards</h2>
+                        <h2 class="text-white">Levels & Incentives</h2>
                         <p class="m-0">Unlock substantial rewards with our latest promotion: More Referrals, Huge Bonus! Refer your friends, colleagues, or connections and reap the benefits of our generous bonus program.</p>
                     </div>
                     <div class="leaf">
@@ -305,7 +305,7 @@
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Ranks & Rewards</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0)">Levels & Incentives</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -320,21 +320,21 @@
                                 <Columns>
                                     <asp:TemplateField HeaderText="">
                                         <ItemTemplate>
-                                            <img id="imgCurrentRank" class="flip m-auto" src="Content/images/Ranks/current-rank.gif" height="50" width="50" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
+                                           <!-- <img id="imgCurrentRank" class="flip m-auto" src="Content/images/Ranks/current-rank.gif" height="50" width="50" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>-->
                                             <%--<svg class="pc-icon mx-1 text-tr" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style='<%# Eval("IsCurrentRank").ToString() == "True" ? "display:inline-block;": "display:none;" %>'>
                                                 <use xlink:href="#custom-star-bold"></use>
                                             </svg>--%>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:BoundField DataField="Rank_Name" HeaderText="Rank Name" HeaderStyle-Font-Size="Larger" ItemStyle-Font-Size="Small" />
+                                    <asp:BoundField DataField="Rank_Name" HeaderText="Level Name" HeaderStyle-Font-Size="Larger" ItemStyle-Font-Size="Small" />
                                     <asp:BoundField DataField="Rank_Volume_Left" HeaderText="Left Volume" HeaderStyle-Font-Size="Larger" />
                                     <asp:BoundField DataField="Rank_Volume_Right" HeaderText="Right Volume" HeaderStyle-Font-Size="Larger" />
-                                    <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Membership Level" HeaderStyle-Font-Size="Larger" />
-                                    <asp:BoundField DataField="Reward" HeaderText="Reward" HeaderStyle-Font-Size="Larger" />
+                                    <asp:BoundField DataField="Rank_Minimum_Membership" HeaderText="Subscription Level" HeaderStyle-Font-Size="Larger" />
+                                    <asp:BoundField DataField="Reward" HeaderText="Incentive" HeaderStyle-Font-Size="Larger" />
                                 </Columns>
                                 <PagerStyle CssClass="custom-pagination" />
                             </asp:GridView>
-                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><strong>Terms & Conditions Apply</strong></div>
+                            <div class="alert alert-secondary small py-1" role="alert"><i class="ti ti-alert-circle"></i><small><strong>Terms & Conditions Apply</strong></small></div>
                         </div>
                     </div>
                 </div>
@@ -348,7 +348,7 @@
                 <div class="row flex-md-row flex-column">
                     <div class="col my-1">
                         <p class="m-0">
-                            Copyright &#169; 2024 <a href="https://tradiix.com/" target="_blank">Tradiix.com - A Global Education & Research Ltd</a>
+                            Copyright &#169; 2024  <a href="https://meta-exchange.com/" target="_blank">Meta-Exchange - A Global Learning Hub</a>
                         </p>
                     </div>
                     <div class="col-auto my-1">
