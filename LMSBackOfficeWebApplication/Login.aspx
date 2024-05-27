@@ -174,7 +174,7 @@
                             </div>--%>
                             <div class="neon-wrap">
                                 <div class="sign">
-                                    <span class="fast-flicker">Master </span>the <span class="fast-flicker">Art </span>of <span class="flicker">Trading </span>
+                                    <span class="fast-flicker">Become </span>a <span class="fast-flicker">Trading </span>Expert <span class="flicker">with Us </span>
                                     <!--with <span class="fast-flicker">Tradiix</span>-->
                                 </div>
                             </div>
